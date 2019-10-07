@@ -1,0 +1,8 @@
+// Config
+$theme-ghost-background-color: $color-palette-unique-white !default;
+
+// Ghost Theme
+// @group Themes
+.t-ghost {
+  background-color: $theme-ghost-background-color;
+}

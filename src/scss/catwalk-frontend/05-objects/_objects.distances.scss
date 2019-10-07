@@ -1,0 +1,27 @@
+.o-distance-xs {
+  margin-top: $spacing-stack-xs;
+}
+
+.o-distance-s {
+  margin-top: $spacing-stack-s;
+}
+
+.o-distance-m {
+  margin-top: $spacing-stack-m;
+}
+
+.o-distance-l {
+  margin-top: $spacing-stack-l;
+}
+
+.o-distance-xl {
+  margin-top: $spacing-stack-l;
+}
+
+.o-distance {
+  margin-top: $spacing-stack-l;
+
+  @media (min-width: $layout-breakpoint-l) {
+    margin-top: $spacing-stack-xl;
+  }
+}

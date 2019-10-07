@@ -1,0 +1,14 @@
+// Config
+
+// Object
+.o-chiplist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: auto;
+  margin-left: -$spacing-inline-s;
+
+  &__item {
+    margin-left: $spacing-inline-s;
+  }
+}

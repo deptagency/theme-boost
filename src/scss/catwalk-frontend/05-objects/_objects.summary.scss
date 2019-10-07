@@ -1,0 +1,13 @@
+// Config
+
+// @object Summary
+.o-summary {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: $layout-gutter-width;
+  grid-row-gap: $spacing-stack-s;
+
+  &__full-item {
+    grid-column: auto / span 2;
+  }
+}

@@ -1,0 +1,80 @@
+/* ==========================================================================
+   #CELL
+========================================================================== */
+
+.e-cell {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+}
+
+.e-cell--8 {
+    @media (min-width: $layout-breakpoint-l) {
+        width: 50%;
+    }
+    @media (min-width: $layout-breakpoint-xl) {
+        width: 66%;
+    }
+}
+
+.e-cell--6 {
+    @media (min-width: $layout-breakpoint-l) {
+        width: 50%;
+    }
+}
+
+.e-cell--4 {
+    @media (min-width: $layout-breakpoint-l) {
+        width: 33%;
+    }
+}
+
+.e-cell--8 + .e-cell--4 {
+    @media (min-width: $layout-breakpoint-l){
+        width: 50%;
+    }
+    @media (min-width: $layout-breakpoint-xl){
+        width: 33%;
+    }
+}
+
+.e-cell--3 {
+    width: 50%;
+
+    @media (min-width: $layout-breakpoint-l) {
+        width: 25%;
+    }
+}
+
+.e-cell--2 {
+    width: 100%;
+
+    @media (min-width: $layout-breakpoint-l) {
+        width: 16%;
+    }
+}
+
+.e-cell--hidden-hand {
+    @media (max-width: $layout-breakpoint-l) {
+        display: none;
+    }
+}
+
+.e-cell--hidden-lap {
+    @media (min-width: $layout-breakpoint-l) and (max-width: $layout-breakpoint-xl) {
+        display: none;
+    }
+}
+
+.e-cell--hidden-desk {
+    @media (min-width: $layout-breakpoint-xl) {
+        display: none;
+    }
+}

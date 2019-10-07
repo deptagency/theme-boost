@@ -1,0 +1,12 @@
+{
+    "tasticType": "catwalk-size-filter",
+    "name": "Catwalk Size Filter",
+    "icon": "menu",
+    "category": "catwalk",
+    "schema": [
+        {
+            "name": "Options",
+            "fields": []
+        }
+    ]
+}

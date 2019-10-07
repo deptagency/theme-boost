@@ -1,0 +1,56 @@
+// Config
+
+// Product
+/// @group Components
+.o-product {
+  &:hover {
+    .o-product__options {
+      @include box-shadow();
+      transform: translateX(0);
+    }
+  }
+}
+
+.o-product__options {
+  transform: translateX(120%);
+  transition: (transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow .3s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+}
+
+.o-product__header {
+  align-items: flex-start;
+  display: grid;
+  grid-gap: $layout-gutter-width;
+  grid-template-columns: 1fr auto max-content;
+  width: 100%;
+
+  .o-product__header__large-column {
+    grid-column: auto / span 2;
+  }
+
+  .o-product__header__offset {
+    text-align: right;
+  }
+}
+
+.o-product__body {
+  display: flex;
+  flex-direction: column;
+  grid-column: auto / span 2;
+  justify-content: space-between;
+}
+
+// Product Row
+// @group Objects
+.o-product--row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: $layout-gutter-width;
+
+  .o-product__asset {
+    grid-column: auto / span 2;
+  }
+
+  .o-product__footer {
+    text-align: right;
+  }
+}

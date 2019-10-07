@@ -1,0 +1,15 @@
+{# @var Response response #}
+{% spaceless %}
+    {% if response.status >= 400 and app.debug %}
+    <script type="text/javascript">
+        console.warn("Server Side Rendering failed", {{ response|json_encode()|raw() }})
+    </script>
+    {% endif %}
+    <div id="app">
+        {% if response.status < 400 %}{{ response.body.app|raw }}{% endif %}
+    </div>
+    <div id="appData"
+         data-props="{{ pageData|frontastic_json_serialize|json_encode }}"
+         data-app="{{ frontastic_context()|json_encode }}"
+     />
+{% endspaceless %}

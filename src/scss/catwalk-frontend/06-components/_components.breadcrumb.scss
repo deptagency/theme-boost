@@ -1,0 +1,20 @@
+// Config
+$breadcrumb-font-size: $font-size-s !default;
+$breadcrumb-active-font-color: $color-brand-secondary-base !default;
+
+// Component
+.c-breadcrumb {
+  font-size: $breadcrumb-font-size;
+
+  &__anchor {
+    text-decoration: none;
+    
+    &:hover {
+      color: $breadcrumb-active-font-color;
+    }
+    &.is-active {
+      color: $breadcrumb-active-font-color;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.o-guided-content {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $layout-breakpoint-l) {
+    flex-direction: row;
+  }
+
+  &__aside {
+    @media (min-width: $layout-breakpoint-l) {
+      flex-shrink: 0;
+      padding-right: $spacing-inline-xl;
+      width: 30%;
+    }
+  }
+  &__body {
+    margin-top: $spacing-stack-l;
+
+    @media (min-width: $layout-breakpoint-l) {
+      flex: 1;
+      margin-top: 0;
+      width: 70%;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+// Config
+$pagination-font-color: $font-color-primary !default;
+$pagination-active-font-color: $color-palette-unique-white !default;
+
+// Component
+.c-pagination {
+  display: flex;
+  flex-direction: row;
+  //flex-wrap: wrap;
+  margin-left: - $spacing-inline-s;
+}
+
+.c-pagination__item {
+  margin-left: $spacing-inline-s;
+  padding: $spacing-inset-m;
+  @include border();
+  border-radius: $border-radius-base;
+  color: $pagination-font-color;
+  line-height: .6;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover,
+  &.is-active {
+    border-color: $border-color-focus;
+    background-color: $border-color-focus;
+    color: $pagination-active-font-color;
+    font-weight: $font-weight-bold;
+  }
+}

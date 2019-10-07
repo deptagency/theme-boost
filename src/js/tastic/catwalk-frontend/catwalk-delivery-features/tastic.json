@@ -1,0 +1,12 @@
+{
+    "tasticType": "catwalk-delivery-features",
+    "name": "Catwalk Delivery Features",
+    "icon": "menu",
+    "category": "catwalk",
+    "schema": [
+        {
+            "name": "Options",
+            "fields": []
+        }
+    ]
+}

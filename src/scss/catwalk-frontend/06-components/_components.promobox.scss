@@ -1,0 +1,77 @@
+// Config
+
+// Promobox
+// Describe a box with a background image
+.c-promobox {
+  position: relative;
+  border-radius: $border-radius-base;
+}
+
+// Backdrop like an image
+// @component Promobox
+.c-promobox__backdrop {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: $border-radius-base;
+}
+
+// Overlay with content over the backdrop
+.c-promobox__overlay {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: $border-radius-base;
+  @include caption-shadow($position: 145deg);
+  
+  &__inner {
+    padding: $spacing-inset-s;
+    position: absolute;
+  }
+}
+
+// Position Overlay: Top-Right
+.c-promobox__overlay--top-right {
+  @include caption-shadow($position: -145deg);
+
+  .c-promobox__overlay__inner {
+    right: 0;
+    top: 0;
+  }
+}
+
+// Position Overlay: Bottom-Left
+.c-promobox__overlay--bottom-left {
+  @include caption-shadow($position: 45deg);
+
+  .c-promobox__overlay__inner {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+// Position Overlay: Bottom-Right
+.c-promobox__overlay--bottom-right {
+  @include caption-shadow($position: -45deg);
+
+  .c-promobox__overlay__inner {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+// Position Overlay: Middle
+.c-promobox__overlay--middle-center {
+  background: rgba($color-palette-unique-white, .2);
+
+  .c-promobox__overlay__inner {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

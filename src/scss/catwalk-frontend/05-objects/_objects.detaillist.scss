@@ -1,0 +1,11 @@
+// Config
+
+// Detaillist
+.o-detaillist {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-column-gap: $spacing-inline-s;
+  grid-row-gap: $spacing-stack-s;
+  align-items: flex-start;
+  justify-content: flex-start;
+}

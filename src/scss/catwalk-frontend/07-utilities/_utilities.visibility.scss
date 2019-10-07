@@ -1,0 +1,31 @@
+.u-hidden {
+  display: none;
+}
+
+.u-hidden-until-medium {
+  display: none;
+
+  @media (min-width: $layout-breakpoint-m) {
+    display: initial;
+  }
+}
+
+.u-hidden-until-large {
+  display: none;
+
+  @media (min-width: $layout-breakpoint-l) {
+    display: initial;
+  }
+}
+
+.u-hidden-medium-up {
+  @media (min-width: $layout-breakpoint-m) {
+    display: none;
+  }
+}
+
+.u-hidden-large-up {
+  @media (min-width: $layout-breakpoint-l) {
+    display: none;
+  }
+}

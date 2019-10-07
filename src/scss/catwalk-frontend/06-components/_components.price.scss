@@ -1,0 +1,10 @@
+// Config
+
+// Component
+.c-price {
+  font-weight: $font-weight-bold;
+  white-space: nowrap;
+}
+.c-price--old {
+  text-decoration: line-through;
+}

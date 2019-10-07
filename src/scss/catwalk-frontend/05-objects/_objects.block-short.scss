@@ -1,0 +1,21 @@
+/// @object Block Short
+.o-block-short {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align: left;
+}
+.o-block-short__short-item {
+  flex-grow: 0;
+  margin-right: $spacing-inline-s;
+}
+.o-block-short__body {
+  margin-top: $spacing-stack-xxs;
+}
+
+/// @object Block Short
+/// @variation Centered
+.o-block-short--centered {
+  align-items: center;
+}

@@ -1,0 +1,14 @@
+// Config
+
+// Divider
+.c-divider {
+  display: block;
+  height: $divider-base-height;
+  width: 100%;
+  background: $divider-base-color-background;
+}
+
+.c-divider--break {
+  height: $divider-break-height;
+  background: $divider-break-color-background;
+}

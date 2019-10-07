@@ -1,0 +1,38 @@
+// Config
+$badge-background-color: $color-semantic-success-base !default;
+$badge-font-color: $color-palette-unique-white !default;
+
+$badge-danger-background-color: $color-semantic-danger-base !default;
+
+$badge-quiet-background-color: transparent !default;
+$badge-quiet-border-color: $color-brand-primary-base !default;
+$badge-quiet-font-color: $color-brand-primary-base !default;
+
+$badge-spot-background-color: $color-brand-secondary-base !default;
+
+/// Badge Default
+/// @group badges
+.c-badge {
+  display: inline-block;
+  padding: $spacing-squish-m;
+  vertical-align: top;
+  @include border(transparent);
+  background-color: $badge-background-color;
+  color: $badge-font-color;
+  font-family: $font-family-spot;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+.c-badge--danger {
+  background-color: $badge-danger-background-color;
+}
+.c-badge--quiet {
+  border-color: $badge-quiet-border-color;
+  background-color: $badge-quiet-background-color;
+  color: $badge-quiet-font-color;
+}
+.c-badge--spot {
+  background-color: $badge-spot-background-color;
+}

@@ -1,0 +1,33 @@
+// Config
+$television-prevent-space: $spacing-inset-m !default;
+$television-boundless-space: $television-prevent-space * 2 !default;
+
+// @object television
+.o-television {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.o-television__bar {
+  align-items: center;
+  display: flex;
+  min-height: 60px;
+}
+
+.o-television__remote-control {
+  flex-shrink: 0;
+  grid-row: 3;
+  padding: $spacing-inset-s $television-prevent-space;
+}
+
+.o-television__display {
+  grid-row: 2;
+  overflow: auto;
+  padding: $spacing-inset-m $television-prevent-space;
+}
+.o-television__display__boundless {
+  margin-left: -$television-prevent-space;
+  width: calc(100% + #{$television-boundless-space});
+}

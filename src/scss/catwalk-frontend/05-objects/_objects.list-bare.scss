@@ -1,0 +1,22 @@
+.o-list-bare {
+  @include list-reset();
+
+  &__item {
+    margin-top: $spacing-stack-m;
+    line-height: 1;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.o-list-bare--tighty {
+  .o-list-bare__item {
+    margin-top: $spacing-stack-xs;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

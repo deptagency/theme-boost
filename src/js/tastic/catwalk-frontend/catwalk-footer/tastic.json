@@ -1,0 +1,12 @@
+{
+    "tasticType": "catwalk-footer",
+    "name": "Catwalk Footer",
+    "icon": "menu",
+    "category": "Catwalk Frontend",
+    "schema": [
+        {
+            "name": "Company Menu",
+            "fields": []
+        }
+    ]
+}

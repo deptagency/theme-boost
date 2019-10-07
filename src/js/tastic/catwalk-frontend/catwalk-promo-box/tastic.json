@@ -1,0 +1,55 @@
+{
+    "tasticType": "catwalk-promobox",
+    "name": "Catwalk Promo Box",
+    "icon": "menu",
+    "category": "Catwalk Promo Box",
+    "schema": [
+        {
+            "name": "Positions",
+            "fields": [
+                {
+                    "label": "Vertical Position",
+                    "field": "verticalPosition",
+                    "translatable": false,
+                    "type": "enum",
+                    "required": true,
+                    "values": [
+                        {
+                            "value": "top",
+                            "name": "Top"
+                        },
+                        {
+                            "value": "middle",
+                            "name": "Middle"
+                        },
+                        {
+                            "value": "bottom",
+                            "name": "Bottom"
+                        }
+                    ]
+                },
+                {
+                    "label": "Horisontal Position",
+                    "field": "horizontalPosition",
+                    "translatable": false,
+                    "type": "enum",
+                    "required": true,
+                    "values": [
+                        {
+                            "value": "left",
+                            "name": "Left"
+                        },
+                        {
+                            "value": "center",
+                            "name": "Center"
+                        },
+                        {
+                            "value": "right",
+                            "name": "Right"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

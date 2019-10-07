@@ -1,0 +1,55 @@
+input,
+textarea,
+select {
+  display: block;
+  margin: 0;
+  padding: $spacing-stretch-inset-s;
+  width: 100%;
+  border: $border-size-base solid $border-color-base;
+  border-radius: $border-radius-base;
+  background-color: $form-input-color-background;
+  color: $font-color-primary;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1;
+  transition: all .3s cubic-bezier(.64,0,.35,1);
+
+  &:hover {}
+
+  &:focus {
+    outline: transparent;
+    border-color: $border-color-focus;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: $form-input-color-disabled;
+  }
+}
+
+input[type="color"] {
+  padding: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+select {
+  cursor: pointer;
+}
+
+legend {
+  font-weight: $form-legend-weight;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+}

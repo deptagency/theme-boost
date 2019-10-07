@@ -1,0 +1,4 @@
+@mixin overlay() {
+  opacity: $overlay-opacity-base;
+  background-color: $overlay-color-base;
+}

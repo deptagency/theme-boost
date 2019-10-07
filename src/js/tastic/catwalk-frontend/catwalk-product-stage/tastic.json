@@ -1,0 +1,12 @@
+{
+    "tasticType": "catwalk-product-stage",
+    "name": "Catwalk Product Stage",
+    "icon": "menu",
+    "category": "Catwalk Product Stage",
+    "schema": [
+        {
+            "name": "Options",
+            "fields": []
+        }
+    ]
+}

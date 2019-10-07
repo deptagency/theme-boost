@@ -1,0 +1,32 @@
+{
+    "tasticType": "catwalk-product-list",
+    "name": "Catwalk Product List",
+    "icon": "menu",
+    "category": "Catwalk",
+    "schema": [
+        {
+            "name": "Title",
+            "fields": [
+                {
+                    "label": "title",
+                    "field": "title",
+                    "type": "string",
+                    "default": ""
+                },
+                {
+                    "label": "Desctiprion",
+                    "field": "description",
+                    "type": "string",
+                    "default": ""
+                },
+                {
+                    "label": "Stream",
+                    "field": "stream",
+                    "type": "stream",
+                    "streamType": "product-list",
+                    "default": null
+                }
+            ]
+        }
+    ]
+}

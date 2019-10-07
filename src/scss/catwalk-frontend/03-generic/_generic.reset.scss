@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+  background-color: $color-palette-unique-white;
+  font-size: 10px;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $font-color-primary;
+  font-family: $font-family-base;
+  font-size: $font-size-body;
+  font-weight: $font-weight-base;
+  line-height: $font-line-height-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

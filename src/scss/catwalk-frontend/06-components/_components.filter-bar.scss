@@ -1,0 +1,40 @@
+.c-filter-bar {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+
+  &__main {
+    display: none;
+
+    @media (min-width: $layout-breakpoint-m) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      flex-grow: 1;
+    }
+
+    &__item {
+      @media (min-width: $layout-breakpoint-m) {
+        margin-left: $spacing-inline-s;
+      }
+
+      &:first-child {
+        @media (min-width: $layout-breakpoint-m) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  &__offset {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+
+    @media (min-width: $layout-breakpoint-m) {
+      width: auto;
+    }
+  }
+}

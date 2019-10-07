@@ -1,0 +1,28 @@
+// @component Referal
+.c-referal {
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
+.c-referal__body {
+  padding-right: $spacing-inline-m;
+}
+.c-referal__icon {
+  flex-shrink: 0;
+}
+
+// @component Referal
+// @variation One-Liner
+.c-referal--one-liner {
+  .c-referal__body {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

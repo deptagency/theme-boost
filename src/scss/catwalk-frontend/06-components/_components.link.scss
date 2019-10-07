@@ -1,0 +1,49 @@
+/// Config
+$link-ghost-font-color: $color-palette-unique-white !default;
+$link-ghost-hover-font-color: rgba($color-palette-unique-white, .5) !default;
+
+/// Link
+/// @group Links
+.c-link {
+  cursor: pointer;
+  color: $link-color-base;
+  font-weight: normal;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-color-hover;
+  }
+}
+
+/// Do not change the color. Uniform means that is a class to reset styles to global.
+/// @group Links
+.c-link--uniform {
+  color: $font-color-primary;
+
+  &:hover,
+  &:focus {
+    color: $link-color-hover;
+  }
+}
+
+/// Ghost Link
+/// @group Links
+.c-link--ghost {
+  color: $link-ghost-font-color;
+
+  &:hover {
+    color: $link-ghost-hover-font-color;
+  }
+}
+
+/// Link
+/// @group Links
+.c-link--quiet {
+    color: $link-color-quiet-base;
+
+    &:hover,
+    &:focus {
+        color: $link-color-quiet-hover;
+    }
+}

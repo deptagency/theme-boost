@@ -1,0 +1,14 @@
+// Config
+$rating-font-color: $color-palette-gray-base !default;
+$rating-active-font-color: $color-palette-orange-base !default;
+
+/// Rating
+.c-rating {
+  &__symbol {
+    color: $rating-font-color;
+
+    &.is-active {
+      color: $rating-active-font-color;
+    }
+  }
+}

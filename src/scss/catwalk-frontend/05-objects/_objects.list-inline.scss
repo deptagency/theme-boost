@@ -1,0 +1,30 @@
+.o-list-inline {
+  @include list-reset();
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: - $spacing-inline-m;
+  margin-top: - $spacing-stack-m;
+
+  &__item {
+    display: inline-block;
+    margin-left: $spacing-inline-m;
+    margin-top: $spacing-stack-m;
+    vertical-align: middle;
+  }
+}
+
+.o-list-inline--xs {
+  margin-left: - $spacing-inline-xs;
+  margin-top: - $spacing-stack-xs;
+
+  .o-list-inline__item {
+    margin-left: $spacing-inline-xs;
+    margin-top: $spacing-stack-xs;
+  }
+}
+
+// Vertical Centered Inline List
+.o-list-inline--vertical-centered {
+  align-items: center;
+}

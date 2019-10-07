@@ -1,0 +1,58 @@
+/// @object Flex Base
+/// @group flex
+.o-flex {
+  display: flex;
+  flex-direction: row;
+
+  &__item {
+    margin-left: $spacing-inline-xs;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+/// @object Flex End
+/// @group flex
+.o-flex--end {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/// @object Flex Center
+/// @group flex
+.o-flex--center {
+  align-items: center;
+}
+
+/// @object Flex Justify Center
+/// @group flex
+.o-flex--justify-center {
+    justify-content: center;
+}
+
+/// @object Flex Justified
+/// @group flex
+.o-flex--justified {
+  justify-content: space-between;
+}
+
+/// @object Flex Justified Large Breakpoint
+/// @group flex
+.o-flex--large-justified {
+  flex-direction: column;
+
+  @media (min-width: $layout-breakpoint-l) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .o-flex__item {
+    margin-top: $spacing-stack-m;
+
+    @media (min-width: $layout-breakpoint-l) {
+      margin-top: 0;
+    }
+  }
+}

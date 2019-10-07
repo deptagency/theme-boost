@@ -1,0 +1,44 @@
+// Config
+
+// Aspect Ratio
+[class*="u-aspect-ratio"] {
+  &:before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+// 16x9
+.u-aspect-ratio-16x9 {
+  &:before {
+    @include aspect-ratio(16, 9);
+  }
+}
+
+// 21x9
+.u-aspect-ratio-21x9 {
+  &:before {
+    @include aspect-ratio(21, 9);
+  }
+}
+
+// 1x1
+.u-aspect-ratio-1x1 {
+  &:before {
+    @include aspect-ratio(1, 1);
+  }
+}
+
+// 4x3
+.u-aspect-ratio-4x3 {
+  &:before {
+    @include aspect-ratio(4, 3);
+  }
+}

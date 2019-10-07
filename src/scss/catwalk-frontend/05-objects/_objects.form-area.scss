@@ -1,0 +1,47 @@
+// Config
+$form-gutter-column: $spacing-inline-m !default;
+$form-gutter-row: $spacing-stack-m !default;
+$form-columns: 6 !default;
+
+// Form Area
+.o-form-area {
+  display: grid;
+  grid-template-columns: repeat(#{$form-columns}, 1fr);
+  column-gap: $form-gutter-column;
+  row-gap: $form-gutter-row;
+}
+
+// Form Area Column
+// Loop through the defined number of form columns
+@for $i from 1 through $form-columns {
+  .o-form-area__column-#{$i}-#{$form-columns} {
+    grid-column: auto / span #{$i};
+  }
+}
+@for $i from 1 through $form-columns {
+  @media screen and (min-width: #{$layout-breakpoint-s}) {
+    .o-form-area__column--breakpoint-s-#{$i}-#{$form-columns} {
+        grid-column: auto / span #{$i};
+    }
+  }
+}
+@for $i from 1 through $form-columns {
+    @media screen and (min-width: #{$layout-breakpoint-m}) {
+        .o-form-area__column--breakpoint-m-#{$i}-#{$form-columns} {
+            grid-column: auto / span #{$i};
+        }
+    }
+}
+@for $i from 1 through $form-columns {
+    @media screen and (min-width: #{$layout-breakpoint-l}) {
+        .o-form-area__column--breakpoint-l-#{$i}-#{$form-columns} {
+            grid-column: auto / span #{$i};
+        }
+    }
+}
+
+// Form Area New Row
+// Help elements to move to a new line
+.o-form-area__new-row {
+    grid-column-start: 1;
+}

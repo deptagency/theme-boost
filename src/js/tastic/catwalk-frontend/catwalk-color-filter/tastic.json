@@ -1,0 +1,12 @@
+{
+    "tasticType": "catwalk-color-filter",
+    "name": "Catwalk Color Filter",
+    "icon": "menu",
+    "category": "catwalk",
+    "schema": [
+        {
+            "name": "Options",
+            "fields": []
+        }
+    ]
+}

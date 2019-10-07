@@ -1,0 +1,3 @@
+@mixin box-shadow() {
+  box-shadow: $shadow-size-base rgba($shadow-color-base, $shadow-opacity-base);
+}

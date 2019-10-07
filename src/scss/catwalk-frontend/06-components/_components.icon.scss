@@ -1,0 +1,83 @@
+// Config
+$icon-size: 16px !default;
+$icon-xs-size: 12px !default;
+$icon-s-size: 24px !default;
+$icon-m-size: 32px !default;
+$icon-l-size: 48px !default;
+$icon-xl-size: 92px !default;
+
+// Component
+.c-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: $icon-size;
+  stroke-width: 0;
+  stroke: currentColor;
+  vertical-align: baseline;
+  width: $icon-size;
+}
+
+.c-icon-circle {
+  height: $icon-size; 
+  position: relative;
+  width: $icon-size;
+  border-radius: $border-radius-rounded;
+  background: $color-palette-unique-white;
+  color: $color-brand-primary-base;
+}
+.c-icon-circle__icon {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.c-icon-circle--xs {
+    height: $icon-xs-size;
+    width: $icon-xs-size;
+}
+
+.c-icon-circle--s {
+    height: $icon-s-size;
+    width: $icon-s-size;
+}
+
+.c-icon-circle--m {
+    height: $icon-m-size;
+    width: $icon-m-size;
+}
+
+.c-icon-circle--l {
+    height: $icon-l-size;
+    width: $icon-l-size;
+}
+
+.c-icon-circle--xl {
+    height: $icon-xl-size;
+    width: $icon-xl-size;
+}
+
+.c-icon--xs {
+  height: $icon-xs-size;
+  width: $icon-xs-size;
+}
+.c-icon--s {
+  height: $icon-s-size;
+  width: $icon-s-size;
+}
+.c-icon--m {
+    height: $icon-m-size;
+    width: $icon-m-size;
+}
+.c-icon--l {
+    height: $icon-l-size;
+    width: $icon-l-size;
+}
+.c-icon--xl {
+    height: $icon-xl-size;
+    width: $icon-xl-size;
+}
+
+.c-icon--outline {
+  fill: transparent;
+}

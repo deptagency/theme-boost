@@ -1,0 +1,39 @@
+{
+    "tasticType": "catwalk-header",
+    "name": "Catwalk Header",
+    "icon": "menu",
+    "category": "Catwalk Frontend",
+    "schema": [
+        {
+            "name": "Gender Nav",
+            "fields": [
+                {
+                    "label": "Gender Nav Entries",
+                    "field": "genderNavEntries",
+                    "type": "group",
+                    "itemLabelField": "name",
+                    "fields": [
+                        {
+                            "label": "Name",
+                            "field": "name",
+                            "translatable": false,
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "label": "Link",
+                            "field": "reference",
+                            "required": true,
+                            "type": "reference"
+                        },
+                        {
+                            "label": "Mobile Nav Background",
+                            "field": "mobileNavBackgroundImage",
+                            "type": "media"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

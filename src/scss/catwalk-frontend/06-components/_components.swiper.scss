@@ -1,0 +1,20 @@
+// Config
+$swiper-column-width: 8px;
+
+.o-swiper {
+  display: grid;
+  grid-column-gap: $spacing-inset-m;
+  grid-template-columns: $swiper-column-width;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(50% - var(--gutter) * 2);
+  overflow: auto;
+  scroll-snap-type: x proximity;
+  margin-left: -($swiper-column-width + $spacing-inset-m);
+  margin-right: -($swiper-column-width + $spacing-inset-m);
+
+  &:before,
+  &:after {
+    content: '';
+    width: $swiper-column-width;
+  }
+}

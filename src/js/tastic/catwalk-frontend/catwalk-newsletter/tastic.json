@@ -1,0 +1,12 @@
+{
+    "tasticType": "catwalk-newsletter",
+    "name": "Catwalk Newsletter",
+    "icon": "menu",
+    "category": "Catwalk Newsletter",
+    "schema": [
+        {
+            "name": "Options",
+            "fields": []
+        }
+    ]
+}

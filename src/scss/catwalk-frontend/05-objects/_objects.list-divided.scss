@@ -1,0 +1,16 @@
+.o-list-divided {
+  @include list-reset();
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__item {
+    &:before {
+      content: '/';
+      margin: 0 $spacing-inline-xs;
+    }
+    &:first-child:before {
+      display: none;
+    }
+  }
+}

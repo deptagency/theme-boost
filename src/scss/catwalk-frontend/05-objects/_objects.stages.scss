@@ -1,0 +1,16 @@
+.o-stage {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 250px;
+  padding: $spacing-inset-l;
+
+  @media (min-width: $layout-breakpoint-l) {
+    height: 450px;
+  }
+}
+
+.o-stage--accent {
+  height: auto;
+}

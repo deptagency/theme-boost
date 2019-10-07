@@ -1,0 +1,12 @@
+{
+    "tasticType": "catwalk-category-boxes",
+    "name": "Catwalk Category Boxes",
+    "icon": "menu",
+    "category": "Catwalk",
+    "schema": [
+        {
+            "name": "Boxes",
+            "fields": []
+        }
+    ]
+}

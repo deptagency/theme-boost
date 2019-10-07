@@ -1,0 +1,42 @@
+// Config
+
+/// Tag
+/// @group tags
+.c-chip {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: $spacing-inset-s;
+  @include border();
+  color: $color-brand-primary-base;
+  line-height: 1;
+  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &:hover {
+    border-color: $color-brand-primary-pastel;
+    background-color: $color-brand-primary-pastel;
+  }
+
+  &.is-active {
+    border-color: $color-brand-primary-base;
+    background-color: $color-brand-primary-base;
+    color: $color-palette-unique-white;
+
+    .c-chip__trigger {
+      color: $color-palette-unique-white;
+    }
+  }
+
+  &__trigger {
+    cursor: pointer;
+    margin-left: $spacing-inline-m;
+    line-height: 0;
+  }
+}
+
+.c-chip--selected {
+  cursor: default;
+}

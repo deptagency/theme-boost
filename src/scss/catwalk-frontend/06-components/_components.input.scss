@@ -1,0 +1,25 @@
+// Config
+$input-ghost-border-color: $color-palette-unique-white !default;
+$input-ghost-font-color: $color-palette-unique-white !default;
+$input-ghost-input-font-color: $color-palette-unique-white !default;
+
+// Component
+.c-input-ghost {
+  border: $border-size-base solid $input-ghost-border-color;
+  background-color: transparent;
+  color: $input-ghost-font-color;
+
+  @include placeholder() {
+    color: $input-ghost-input-font-color;
+  }
+
+  &:focus {
+    border-color: rgba($input-ghost-border-color, .6);
+  }
+}
+
+.c-input-search {
+  padding: $spacing-inset-s;
+  border: 0;
+  border-bottom: $border-size-base solid $border-color-base;
+}

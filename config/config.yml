@@ -1,0 +1,80 @@
+parameters:
+    env(smtp_host): "localhost"
+    env(smtp_port): 1025
+    env(smtp_user): ""
+    env(smtp_password): ""
+    env(smtp_encryption): "tls"
+    env(smtp_sender): "support@frontastic.io"
+
+imports:
+    - { resource: security.yml }
+    - { resource: doctrine.yml }
+
+services:
+    Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler:
+        arguments:
+            - 'mysql:dbname=%env(database_name)%; host=%env(database_host)%; port=%env(database_port)%'
+            - { db_table: 'http_session', db_username: '%env(database_user)%', db_password: '%env(database_password)%', lock_mode: 0 }
+
+framework:
+    secret:          "%env(secret)%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: false }
+    serializer:      { enable_annotations: false }
+    templating:
+        engines: ['twig']
+    default_locale:  "%env(locale)%"
+    trusted_hosts:   ~
+    session:
+        handler_id: Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler
+        name: 'FCSESSID0815'
+    fragments:       ~
+    http_method_override: true
+    assets: ~
+
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    exception_controller: Frontastic\Catwalk\FrontendBundle\Controller\ErrorController::errorAction
+
+swiftmailer:
+  # url:        "%env(mailer_url)%"
+    host:       "%env(smtp_host)%"
+    port:       "%env(smtp_port)%"
+    username:   "%env(smtp_user)%"
+    password:   "%env(smtp_password)%"
+    encryption: "%env(smtp_encryption)%"
+    spool: { type: memory }
+
+sensio_framework_extra:
+    router:
+        annotations: false
+    view:
+        annotations: false
+    request:
+        converters: true
+        auto_convert: true
+
+monolog:
+    handlers:
+        syslog:
+            type:                stream
+            path:                "%kernel.logs_dir%/frontend.log"
+            level:               ERROR
+            bubble:              false
+        main:
+            type:                fingers_crossed
+            action_level:        WARNING
+            buffer_size:         100
+            handler:             syslog
+
+doctrine:
+    orm:
+        filters:
+            undeleted:
+                class: "Frontastic\\Catwalk\\ApiCoreBundle\\Doctrine\\UndeletedFilter"
+                enabled: true

@@ -1,0 +1,18 @@
+// Config
+
+// Box
+.c-box {
+  display: block;
+  padding: $spacing-inset-m;
+  border-radius: $border-radius-base;
+  line-height: 1;
+}
+.c-box--s {
+  padding: $spacing-inset-s;
+}
+.c-box--l {
+  padding: $spacing-inset-l;
+}
+.c-box--xl {
+    padding: $spacing-inset-xl;
+}

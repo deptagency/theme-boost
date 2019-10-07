@@ -1,0 +1,64 @@
+// Config
+
+/// @component Form Radio
+/// @group form
+.c-form-radio {
+  position: relative;
+
+  &.is-active {
+    .c-form-radio__backdrop {
+      border-color: $color-brand-secondary-base;
+
+      &:after {
+        opacity: 1;
+        background-color: $color-brand-secondary-base;
+      }
+    }
+  }
+}
+
+.c-form-radio__input {
+    cursor: pointer;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    -webkit-appearance: none;
+    z-index: $index-layer-radio-input;
+
+    &:checked ~ .c-form-radio__backdrop {
+      border-color: $color-brand-secondary-base;
+
+      &:after {
+        opacity: 1;
+        background-color: $color-brand-secondary-base;
+      }
+    }
+  }
+  .c-form-radio__backdrop {
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    position: relative;
+    width: 24px;
+    @include border();
+    border-radius: $border-radius-rounded;
+    background: $color-palette-unique-white;
+    transition: all .3s cubic-bezier(.64,0,.35,1);
+
+    &:after {
+      content: '';
+      height: 8px;
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      width: 8px;
+      border-radius: $border-radius-rounded;
+      background-color: $color-palette-unique-white;
+      transform: translate(-50%, -50%);
+      transition: all .3s cubic-bezier(.64,0,.35,1);
+    }
+  }

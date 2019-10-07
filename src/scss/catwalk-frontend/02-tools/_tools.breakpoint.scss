@@ -1,0 +1,7 @@
+/// Breakpoint
+/// @group Tools
+@mixin breakpoint($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

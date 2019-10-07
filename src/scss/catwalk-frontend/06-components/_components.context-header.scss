@@ -1,0 +1,26 @@
+// Config
+
+// Context Header
+// Insert some User Interactions and shows the user where he / she is
+.c-context-header {
+  padding: $spacing-inset-s $layout-edge-width;
+  text-align: center;
+}
+
+.c-context-header__wrapper {
+  align-items: center;
+  column-gap: 24px;
+  display: grid;
+  grid-template-columns: 24px 1fr 24px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.c-context-header__middle {
+  grid-column: 2;
+  @include overflow-ellipsis;
+}
+
+.c-context-header__title {
+  @include overflow-ellipsis;
+}

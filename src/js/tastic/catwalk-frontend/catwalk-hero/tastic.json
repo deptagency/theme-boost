@@ -1,0 +1,12 @@
+{
+    "tasticType": "catwalk-hero",
+    "name": "Catwalk Hero",
+    "icon": "menu",
+    "category": "Catwalk Hero",
+    "schema": [
+        {
+            "name": "Hero Elements",
+            "fields": []
+        }
+    ]
+}

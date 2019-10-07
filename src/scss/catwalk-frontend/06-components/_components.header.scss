@@ -1,0 +1,12 @@
+// Config
+
+// Header
+.c-header {
+  padding: $spacing-inset-s $layout-edge-width;
+}
+.c-header__wrapper {
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}

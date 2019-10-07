@@ -1,0 +1,34 @@
+/// Config
+
+/// @object Media Block
+/// @group Objects
+.o-media-block {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: $layout-gutter-width;
+
+  .o-media-block__asset {
+    grid-column: auto / span 5;
+
+    @media (min-width: $layout-breakpoint-m) {
+      grid-column: auto / span 2;
+    }
+  }
+  .o-media-block__body {
+    grid-column: auto / span 5;
+
+    @media (min-width: $layout-breakpoint-m) {
+      grid-column: auto / span 3;
+    }
+  }
+}
+
+// @object Media Block Row
+// Always elements are in a row
+/// @group Objects
+.o-media-block--row {
+  .o-media-block__asset,
+  .o-media-block__body {
+    grid-column: auto / span 2;
+  }
+}

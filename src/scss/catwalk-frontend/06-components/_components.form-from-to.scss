@@ -1,0 +1,24 @@
+// Config
+$form-from-to-connector-height: 3px !default;
+$form-from-to-connector-width: $form-gutter-column !default;
+
+/// @component Form-From-to
+/// @group form
+.c-form-from-to {
+  display: grid;
+  grid-template-columns: 1fr $form-from-to-connector-width 1fr;
+}
+
+.c-form-from-to__item--connector {
+  align-items: center;
+  display: flex;
+  padding: 0 3px;
+
+  &:before {
+    content: '';
+    display: block;
+    width: $form-from-to-connector-width;
+    background: $border-color-base;
+    height: $form-from-to-connector-height;
+  }
+}

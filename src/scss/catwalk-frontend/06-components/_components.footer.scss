@@ -1,0 +1,31 @@
+.c-footer {
+  margin-top: $spacing-stack-xl;
+  padding: $spacing-inset-m;
+  border-radius: $border-radius-base;
+  text-align: center;
+
+  @include breakpoint($layout-breakpoint-m) {
+    padding: $spacing-inset-l;
+    text-align: left;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.c-footer__body {
+  margin-top: $spacing-stack-l;
+  padding-top: $spacing-inset-l;
+  border-top: $border-size-base solid rgba($border-color-base, .3);
+}
+
+.c-footer__section {
+  padding-top: $spacing-stack-m;
+  border-top: $border-size-base solid rgba($border-color-base, .3);
+
+  @include breakpoint($layout-breakpoint-m) {
+    padding-top: 0;
+    border-top: 0;
+  }
+}
