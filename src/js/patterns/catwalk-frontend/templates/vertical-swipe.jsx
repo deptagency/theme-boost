@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import Swipe from 'react-easy-swipe'
+// import Swipe from 'react-easy-swipe' // TODO Sanja
 import useWindowSize from '@rehooks/window-size'
 import { isNull } from 'lodash'
 
@@ -58,7 +58,7 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
 
     return (
         <div className='catwalk-vertical-swipe' ref={swiper}>
-            <Swipe
+            {/*<Swipe
                 className={getSliderId()}
                 allowMouseEvents={true}
                 onSwipeLeft={handleRightMove}
@@ -69,7 +69,7 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
                 }}
             >
                 {children}
-            </Swipe>
+            </Swipe>*/}
         </div>
     );
 };
