@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import Swipe from 'react-easy-swipe' // TODO Sanja
+import Swipe from 'react-easy-swipe'
 import useWindowSize from '@rehooks/window-size'
 import { isNull } from 'lodash'
 
