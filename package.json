@@ -1,6 +1,6 @@
 {
-    "name": "frontastic-catwalk",
-    "version": "0.1.0",
+    "name": "frontastic-theme-boost",
+    "version": "1.0.0-alpha",
     "private": true,
     "resolutions": {
         "unidragger": "2.2.3"
@@ -17,7 +17,7 @@
         "@rehooks/component-size": "^1.0.3",
         "@rehooks/window-size": "^1.0.2",
         "@storybook/addon-actions": "^5.1.1",
-        "@storybook/addon-info": "^5.1.1",frontastic/boost/src/js/patterns/catwalk-frontend/templates/vertical-swipe.jsx
+        "@storybook/addon-info": "^5.1.1",
         "@storybook/addon-knobs": "^5.1.1",
         "@storybook/addon-links": "^5.1.1",
         "@storybook/addon-viewport": "^5.1.1",
