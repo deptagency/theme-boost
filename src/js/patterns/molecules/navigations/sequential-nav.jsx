@@ -2,85 +2,85 @@ import React, { Component } from 'react'
 
 import ComponentInjector from '../../../app/injector'
 
-import AtomsButton from '../../atoms/buttons/button'
-import AtomsIcon from '../../atoms/icons/icon'
+import MoleculesButton from '../buttons/button'
+//import AtomsIcon from '../../atoms/icons/icon'
 
 class MoleculesSequentialNav extends Component {
-    render () {
-        return (<div className='c-overlay' data-ft-sequential-nav-overlay id='js-ft-sequential-nav-menu'>
-            <nav className='c-sequential-nav' data-ft-sequential-nav>
-                <div className='c-sequential-nav__panel c-sequential-nav__panel--level-1' id='ft-nav-menu-level-1'
-                    data-ft-sequential-nav-id='ft-nav-menu-level-1'>
-                    <div className='c-sequential-nav__header'>
-                        <AtomsButton className='c-sequential-nav__primary-action' data-ft-sequential-nav-dismiss>
-                            <AtomsIcon icon='cross' iconSize='base' />
-                        </AtomsButton>
-                    </div>
-                    <div className='c-sequential-nav__content'>
-                        <ul className='c-tableview'>
-                            <li className='c-tableview__cell'>
-                                <button className='c-tableview__link' aria-controls='' data-ft-sequential-nav-link=''>New</button>
+    render() {
+        return (
+            <nav role='navigation' className='c-sequential-navigation'>
+                <ul className='c-sequential-navigation__list'>
+                    <li className='c-sequential-navigation__list__item'>
+                        <a href='' title='' className='c-sequential-navigation__anchor'>
+                            <span>Bekleidung</span>
+                            <svg
+                                class='c-icon c-icon--s u-brand-color'
+                                version='1.1'
+                                xmlns='http://www.w3.org/2000/svg'
+                                width='24'
+                                height='24'
+                                viewBox='0 0 24 24'
+                            >
+                                <title>chevron-right</title>
+                                <path d='M15.7 11.3l-6-6c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5.3 5.3-5.3 5.3c-0.4 0.4-0.4 1 0 1.4 0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l6-6c0.4-0.4 0.4-1 0-1.4z' />
+                            </svg>
+                        </a>
+                        <ul className='c-sequential-navigation__subnav o-list-bare'>
+                            <li className='o-list-bare__item'>
+                                <a href='' title='' className='c-sequential-navigation__anchor'>
+                                    Anchor
+                                </a>
                             </li>
-                            <li className='c-tableview__cell'>
-                                <button className='c-tableview__link' aria-controls='ft-nav-menu-level-1-2'
-                                    data-ft-sequential-nav-link='ft-nav-menu-level-1-2'>Women
-                                </button>
+                            <li className='o-list-bare__item'>
+                                <a href='' title='' className='c-sequential-navigation__anchor'>
+                                    Anchor
+                                </a>
                             </li>
-                            <li className='c-tableview__cell'>
-                                <button className='c-tableview__link' data-ft-sequential-nav-link=''>Men</button>
+                            <li className='o-list-bare__item'>
+                                <a href='' title='' className='c-sequential-navigation__anchor'>
+                                    Anchor
+                                </a>
                             </li>
-                            <li className='c-tableview__cell'>
-                                <button className='c-tableview__link' data-ft-sequential-nav-link=''>Accessoires</button>
+                            <li className='o-list-bare__item'>
+                                <a href='' title='' className='c-sequential-navigation__anchor'>
+                                    Anchor
+                                </a>
                             </li>
-                            <li className='c-tableview__cell'>
-                                <button className='c-tableview__link' data-ft-sequential-nav-link=''>Brands</button>
-                            </li>
-                            <li className='c-tableview__cell'>
-                                <button className='c-tableview__link c-tableview__link--primary' data-ft-sequential-nav-link=''>Sale</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div className='c-sequential-nav__panel c-sequential-nav__panel--level-2' id='ft-nav-menu-level-1-2'
-                    data-ft-sequential-nav-id='ft-nav-menu-level-1-2'>
-                    <div className='c-sequential-nav__header'>
-                        <AtomsButton className='c-sequential-nav__secondary-action' data-ft-sequential-nav-link='ft-nav-menu-level-1'>
-                            <AtomsIcon icon='arrow-left' iconSize='base' />
-                        </AtomsButton>
-                        <h3 className='c-sequential-nav__title'>Woman</h3>
-                        <AtomsButton className='c-sequential-nav__primary-action' data-ft-sequential-nav-dismiss>
-                            <AtomsIcon icon='cross' iconSize='base' />
-                        </AtomsButton>
-                    </div>
-                    <div className='c-sequential-nav__content'>
-                        <ul className='c-tableview'>
-                            <li className='c-tableview__cell'>
-                                <a className='c-tableview__link is-active' href='#'>Women</a>
-                            </li>
-                            <li className='c-tableview__cell c-tableview__cell--nested'>
-                                <a className='c-tableview__link' href='#'>Men</a>
-                            </li>
-                            <li className='c-tableview__cell c-tableview__cell--nested'>
-                                <a className='c-tableview__link' href='#'>Accessoires</a>
-                            </li>
-                            <li className='c-tableview__cell c-tableview__cell--nested'>
-                                <a className='c-tableview__link' href='#'>Brands</a>
-                            </li>
-                            <li className='c-tableview__cell c-tableview__cell--nested'>
-                                <a className='c-tableview__link' href='#'>Sale</a>
+                            <li className='o-list-bare__item'>
+                                <a href='' title='' className='c-sequential-navigation__anchor'>
+                                    Anchor
+                                </a>
                             </li>
                         </ul>
-                    </div>
-                </div>
+                    </li>
+                    <li className='c-sequential-navigation__list__item'>
+                        <a href='' title='' className='c-sequential-navigation__anchor'>
+                            NEU
+                        </a>
+                    </li>
+                    <li className='c-sequential-navigation__list__item'>
+                        <a href='' title='' className='c-sequential-navigation__anchor'>
+                            SALE %
+                        </a>
+                    </li>
+                    <li className='c-sequential-navigation__list__item'>
+                        <a href='' title='' className='c-sequential-navigation__anchor'>
+                            Jacken
+                        </a>
+                    </li>
+                    <li className='c-sequential-navigation__list__item'>
+                        <a href='' title='' className='c-sequential-navigation__anchor'>
+                            Kleider
+                        </a>
+                    </li>
+                </ul>
             </nav>
-        </div>)
+        )
     }
 }
 
-MoleculesSequentialNav.propTypes = {
-}
+MoleculesSequentialNav.propTypes = {}
 
-MoleculesSequentialNav.defaultProps = {
-}
+MoleculesSequentialNav.defaultProps = {}
 
 export default ComponentInjector.return('MoleculesSequentialNav', MoleculesSequentialNav)

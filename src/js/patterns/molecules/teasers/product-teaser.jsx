@@ -8,8 +8,8 @@ import fixture from '../../fixture'
 
 import AtomsPrice from '../../atoms/prices/price'
 
-import NoImage from '../../../../layout/noImage.svg'
-import RemoteImage from '../../../remoteImage'
+import NoImage from '../../../../../layout/noImage.svg'
+import RemoteImage from '../../../../remoteImage'
 
 class MoleculesProductTeaser extends Component {
     render () {
@@ -40,7 +40,6 @@ class MoleculesProductTeaser extends Component {
                                 <div className='c-heading-teaser-subheading'>{variant.attributes.designer.label || variant.attributes.designer}</div>
                             : null}
                         </div>
-                        {variant.price &&
                         <div className='c-teaser__prices' itemScope itemType='http://schema.org/Offer'>
                             <AtomsPrice className='c-teaser__price'
                                 value={variant.discountedPrice || variant.price}
@@ -51,7 +50,7 @@ class MoleculesProductTeaser extends Component {
                             {variant.discountedPrice && this.props.showPercent ? <span className='c-highlight'>
                                 &nbsp;-&thinsp;{100 - Math.ceil(variant.discountedPrice / variant.price * 100)}&thinsp;%
                             </span> : null}
-                        </div>}
+                        </div>
                     </div>
                 </div>
             </Link>

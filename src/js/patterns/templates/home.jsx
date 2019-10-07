@@ -1,67 +1,51 @@
 import React, { Component, Fragment } from 'react'
 
-import fixture from '../fixture'
-
-import MoleculesHero from '../molecules/heros/hero'
-import MoleculesBlockTextImage from '../molecules/blocks/block-text-image'
 import MoleculesSequentialNav from '../molecules/navigations/sequential-nav'
 
-import OrganismsHead from '../organisms/base/head'
-import OrganismsProductSlider from '../organisms/components/product-slider'
+import OrganismsHead from '../organisms/base/header'
+import OrganismsStage from '../organisms/stages/stage'
+import OrganismsCategoryListing from '../organisms/listings/category-listing'
+import OrganismsCategoryListingHalf from '../organisms/listings/category-listing-half'
+import OrganismsProductListing from '../organisms/listings/product-listing'
+import OrganismsNewsletterBlock from '../organisms/blocks/newsletter'
 import OrganismsFoot from '../organisms/base/foot'
 
 class TemplatesHome extends Component {
-    render () {
-        return (<Fragment>
-            <OrganismsHead />
-            <main className='c-page-body'>
-                <div className='c-page-wrapper    o-wrapper'>
-                    <section>
-                        <div className='c-page-section'>
-                            <header>
-                                <h1 className='c-heading-alpha'>New Styles added!</h1>
-                                <div className='c-heading-subtitle'>Jetzt den Sommer genießen</div>
-                            </header>
-                        </div>
-
-                        <section className='c-page-section'>
-                            <MoleculesHero media={{ media: fixture.image.person, title: fixture.headline.short }} />
-                        </section>
-
-                        <div className='c-page-section    u-page-width@until-desk    u-margin-left-minus@desk'>
-                            <OrganismsProductSlider />
-                        </div>
+    render() {
+        return (
+            <Fragment>
+                <OrganismsHead />
+                <main role='main'>
+                    <section className='o-container o-distance-m'>
+                        <OrganismsStage />
                     </section>
-
-                    <section className='c-page-section'>
-                        <h2 className='c-heading-gamma'>Genieße die beste Jahreszeit</h2>
-                        <div className='o-layout'>
-                            <div className='o-layout__item    u-1/2@lap'>
-                                <MoleculesBlockTextImage media={fixture.image.person}>
-                                    {fixture.excerpt.medium}
-                                </MoleculesBlockTextImage>
-                            </div>
-                            <div className='o-layout__item    u-1/2@lap'>
-                                <MoleculesBlockTextImage className='o-block--media-reverse@until-lap' media={fixture.image.person}>
-                                    {fixture.excerpt.medium}
-                                </MoleculesBlockTextImage>
-                            </div>
-                        </div>
+                    <section className='o-container o-distance-s'>
+                        <OrganismsCategoryListing />
                     </section>
-                </div>
-            </main>
+                    <section className='o-container o-distance'>
+                        <OrganismsProductListing />
+                    </section>
+                    <section className='o-container o-distance'>
+                        <OrganismsBanner />
+                    </section>
+                    <section className='o-container o-distance'>
+                        <OrganismsCategoryListingHalf />
+                    </section>
+                    <section className='o-container o-distance'>
+                        <OrganismsProductListing />
+                    </section>
+                </main>
 
-            <MoleculesSequentialNav />
+                <MoleculesSequentialNav />
 
-            <OrganismsFoot />
-        </Fragment>)
+                <OrganismsFoot />
+            </Fragment>
+        )
     }
 }
 
-TemplatesHome.propTypes = {
-}
+TemplatesHome.propTypes = {}
 
-TemplatesHome.defaultProps = {
-}
+TemplatesHome.defaultProps = {}
 
 export default TemplatesHome
