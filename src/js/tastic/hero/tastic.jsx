@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import OrganismsHero from '../../patterns/organisms/stages/stage'
 
-class CatwalkHeroTastic extends Component {
+class HeroTastic extends Component {
     constructor(props) {
         super(props)
     }
@@ -13,11 +13,11 @@ class CatwalkHeroTastic extends Component {
     }
 }
 
-CatwalkHeroTastic.propTypes = {
+HeroTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkHeroTastic.defaultProps = {}
+HeroTastic.defaultProps = {}
 
-export default CatwalkHeroTastic
+export default HeroTastic

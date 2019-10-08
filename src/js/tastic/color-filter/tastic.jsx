@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import MoleculesColorsFilter from "../../patterns/molecules/colorsfilter/colors-filter";
 
-class CatwalkColorFilterTastic extends Component {
+class ColorFilterTastic extends Component {
     constructor(props) {
         super(props)
     }
@@ -20,11 +20,11 @@ class CatwalkColorFilterTastic extends Component {
     }
 }
 
-CatwalkColorFilterTastic.propTypes = {
+ColorFilterTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkColorFilterTastic.defaultProps = {}
+ColorFilterTastic.defaultProps = {}
 
-export default CatwalkColorFilterTastic
+export default ColorFilterTastic

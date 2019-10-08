@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import OrganismsDeliveryFeatures from "../../patterns/organisms/deliveryFeatures/delivery-features";
 
-class CatwalkDeliveryFeaturesTastic extends Component {
+class DeliveryFeaturesTastic extends Component {
     constructor(props) {
         super(props)
     }
@@ -14,11 +14,11 @@ class CatwalkDeliveryFeaturesTastic extends Component {
     }
 }
 
-CatwalkDeliveryFeaturesTastic.propTypes = {
+DeliveryFeaturesTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkDeliveryFeaturesTastic.defaultProps = {}
+DeliveryFeaturesTastic.defaultProps = {}
 
-export default CatwalkDeliveryFeaturesTastic
+export default DeliveryFeaturesTastic

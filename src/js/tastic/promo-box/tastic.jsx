@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import OrganismsPromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
 import MoleculesButton from "../../patterns/molecules/buttons/button";
 
-class CatwalkPromoBoxTastic extends Component {
+class PromoBoxTastic extends Component {
     constructor(props) {
         super(props)
     }
@@ -22,11 +22,11 @@ class CatwalkPromoBoxTastic extends Component {
     }
 }
 
-CatwalkPromoBoxTastic.propTypes = {
+PromoBoxTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkPromoBoxTastic.defaultProps = {}
+PromoBoxTastic.defaultProps = {}
 
-export default CatwalkPromoBoxTastic
+export default PromoBoxTastic

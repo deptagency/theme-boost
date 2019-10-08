@@ -5,7 +5,7 @@ import VerticalSwipe from "../../patterns/templates/vertical-swipe";
 import OrganismsPromoboxWithPositioning from "../../patterns/molecules/promobox/promobox-with-positioning";
 import MoleculesButton from "../../patterns/molecules/buttons/button";
 
-class CatwalkCategoryButtonBoxesTastic extends Component {
+class CategoryButtonBoxesTastic extends Component {
     constructor(props) {
         super(props)
     }
@@ -38,11 +38,11 @@ class CatwalkCategoryButtonBoxesTastic extends Component {
     }
 }
 
-CatwalkCategoryButtonBoxesTastic.propTypes = {
+CategoryButtonBoxesTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkCategoryButtonBoxesTastic.defaultProps = {}
+CategoryButtonBoxesTastic.defaultProps = {}
 
-export default CatwalkCategoryButtonBoxesTastic
+export default CategoryButtonBoxesTastic

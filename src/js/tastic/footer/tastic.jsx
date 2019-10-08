@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import OrganismsFoot from '../../patterns/organisms/base/foot.jsx'
 
-class CatwalkFooterTastic extends Component {
+class FooterTastic extends Component {
     constructor(props) {
         super(props)
     }
@@ -14,11 +14,11 @@ class CatwalkFooterTastic extends Component {
     }
 }
 
-CatwalkFooterTastic.propTypes = {
+FooterTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkFooterTastic.defaultProps = {}
+FooterTastic.defaultProps = {}
 
-export default CatwalkFooterTastic
+export default FooterTastic

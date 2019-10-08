@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import OrganismsCategoryListing from '../../patterns/organisms/listings/product-listing'
 
-class CatwalkCategoryListingTastic extends Component {
+class CategoryListingTastic extends Component {
     constructor(props) {
         super(props)
     }
@@ -13,11 +13,11 @@ class CatwalkCategoryListingTastic extends Component {
     }
 }
 
-CatwalkCategoryListingTastic.propTypes = {
+CategoryListingTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkCategoryListingTastic.defaultProps = {}
+CategoryListingTastic.defaultProps = {}
 
-export default CatwalkCategoryListingTastic
+export default CategoryListingTastic

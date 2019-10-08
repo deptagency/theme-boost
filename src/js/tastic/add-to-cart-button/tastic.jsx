@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import MoleculesButton from "../../patterns/molecules/buttons/button";
 
-class CatwalkAddToCartButtonTastic extends Component {
+class AddToCartButtonTastic extends Component {
     constructor(props) {
         super(props)
     }
@@ -18,11 +18,11 @@ class CatwalkAddToCartButtonTastic extends Component {
     }
 }
 
-CatwalkAddToCartButtonTastic.propTypes = {
+AddToCartButtonTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkAddToCartButtonTastic.defaultProps = {}
+AddToCartButtonTastic.defaultProps = {}
 
-export default CatwalkAddToCartButtonTastic
+export default AddToCartButtonTastic

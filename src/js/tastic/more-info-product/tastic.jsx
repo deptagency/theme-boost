@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import OrganismsMoreInfoProduct from "../../patterns/organisms/moreInfoProduct/more-info";
 
-class CatwalkMoreInfoProductTastic extends Component {
+class MoreInfoProductTastic extends Component {
     constructor(props) {
         super(props)
     }
@@ -14,11 +14,11 @@ class CatwalkMoreInfoProductTastic extends Component {
     }
 }
 
-CatwalkMoreInfoProductTastic.propTypes = {
+MoreInfoProductTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkMoreInfoProductTastic.defaultProps = {}
+MoreInfoProductTastic.defaultProps = {}
 
-export default CatwalkMoreInfoProductTastic
+export default MoreInfoProductTastic

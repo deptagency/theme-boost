@@ -14,7 +14,7 @@ import ReferencePropType from '../../component/reference'
 
 import Header from '../../patterns/organisms/base/header'
 
-class CatwalkHeaderTastic extends Component {
+class HeaderTastic extends Component {
     render () {
         // let customLogo = this.props.tastic.schema.get('logo') || null
         console.log(this.props.data)
@@ -23,7 +23,7 @@ class CatwalkHeaderTastic extends Component {
     }
 }
 
-CatwalkHeaderTastic.propTypes = {
+HeaderTastic.propTypes = {
     data: PropTypes.shape({
         genderNavEntries: PropTypes.arrayOf(
             PropTypes.shape({
@@ -35,6 +35,6 @@ CatwalkHeaderTastic.propTypes = {
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkHeaderTastic.defaultProps = {}
+HeaderTastic.defaultProps = {}
 
-export default CatwalkHeaderTastic
+export default HeaderTastic

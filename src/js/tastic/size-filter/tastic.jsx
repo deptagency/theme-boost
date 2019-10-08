@@ -4,7 +4,7 @@ import AtomsFormLabel from "../../patterns/atoms/forms/form-label";
 import VerticalSwipe from "../../patterns/templates/vertical-swipe";
 import OrganismsSizes from "../../patterns/organisms/sizes/sizes";
 
-class CatwalkSizeFilterTastic extends Component {
+class SizeFilterTastic extends Component {
     constructor(props) {
         super(props)
     }
@@ -21,11 +21,11 @@ class CatwalkSizeFilterTastic extends Component {
     }
 }
 
-CatwalkSizeFilterTastic.propTypes = {
+SizeFilterTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkSizeFilterTastic.defaultProps = {}
+SizeFilterTastic.defaultProps = {}
 
-export default CatwalkSizeFilterTastic
+export default SizeFilterTastic

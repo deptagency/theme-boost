@@ -6,7 +6,7 @@ import VerticalSwipe from "../../patterns/templates/vertical-swipe";
 import MoleculesProduct from "../../patterns/molecules/products/product";
 import Translatable from "../../component/translatable";
 
-class CatwalkCategoryProductListTastic extends Component {
+class ProductListTastic extends Component {
     constructor(props) {
         super(props)
     }
@@ -30,11 +30,11 @@ class CatwalkCategoryProductListTastic extends Component {
     }
 }
 
-CatwalkCategoryProductListTastic.propTypes = {
+ProductListTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkCategoryProductListTastic.defaultProps = {}
+ProductListTastic.defaultProps = {}
 
-export default CatwalkCategoryProductListTastic
+export default ProductListTastic

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import OrganismsNewsletterBlock from '../../patterns/organisms/blocks/newsletter'
 
-class CatwalkNewsletterTastic extends Component {
+class NewsletterTastic extends Component {
     constructor(props) {
         super(props)
     }
@@ -13,11 +13,11 @@ class CatwalkNewsletterTastic extends Component {
     }
 }
 
-CatwalkNewsletterTastic.propTypes = {
+NewsletterTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
 }
 
-CatwalkNewsletterTastic.defaultProps = {}
+NewsletterTastic.defaultProps = {}
 
-export default CatwalkNewsletterTastic
+export default NewsletterTastic
