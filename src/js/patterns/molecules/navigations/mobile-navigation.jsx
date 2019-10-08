@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import PropTypes from 'prop-types'
 import ComponentInjector from '../../../app/injector'
 
 import TopCategoryNavTabs from './gender-nav-tabs.jsx'
@@ -124,6 +124,7 @@ const navDamen = [
         ],
     },
 ]
+// eslint-disable-next-line no-unused-vars
 const navHerren = [
     {
         id: '1',
@@ -241,6 +242,7 @@ const navHerren = [
         ],
     },
 ]
+// eslint-disable-next-line no-unused-vars
 const navKinder = [
     {
         id: '1',
@@ -371,7 +373,15 @@ function MobileNavTree ({ items, onSelectItem, navPath, level = 0 }) {
     )
 }
 
+MobileNavTree.propTypes = {
+    items: PropTypes.array.isRequired,
+    level: PropTypes.number.isRequired,
+    navPath: PropTypes.string.isRequired,
+    onSelectItem: PropTypes.func.isRequired,
+}
+
 function MobileNavItem ({ item, level, navPath, onClick }) {
+    // eslint-disable-next-line no-console
     console.log('item', navPath, item)
     // helper to see if the current item is part of the path.
     const isItemInPath = (item) => {
@@ -400,6 +410,7 @@ function MobileNavItem ({ item, level, navPath, onClick }) {
         <li className={`c-navigation__item${isItemInPath(item) ? ' c-navigation__item--active' : ''}`}>
             <a
                 onClick={() => {
+                    // eslint-disable-next-line no-console
                     console.log('open URL')
                 }}
                 title='Startseite'
@@ -416,12 +427,23 @@ function MobileNavItem ({ item, level, navPath, onClick }) {
     )
 }
 
+MobileNavItem.propTypes = {
+    item: PropTypes.object.isRequired,
+    level: PropTypes.number.isRequired,
+    navPath: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+}
+
 function BackButton ({ onClick }) {
     return (
         <button className='c-mobile-navigation__header-back-button' onClick={onClick}>
             <img src={backArrow} alt='Back' />
         </button>
     )
+}
+
+BackButton.propTypes = {
+    onClick: PropTypes.func.isRequired,
 }
 
 function NavHeader ({ backButton, children }) {
@@ -431,6 +453,11 @@ function NavHeader ({ backButton, children }) {
             <p>{children}</p>
         </div>
     )
+}
+
+NavHeader.propTypes = {
+    backButton: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 }
 
 function MoleculesMobileNavigation ({ open, genderNavEntries }) {
@@ -614,8 +641,13 @@ function MoleculesMobileNavigation ({ open, genderNavEntries }) {
     )
 }
 
-MoleculesMobileNavigation.propTypes = {}
+MoleculesMobileNavigation.propTypes = {
+    open: PropTypes.bool.isRequired,
+    genderNavEntries: PropTypes.array.isRequired,
+}
 
-MoleculesMobileNavigation.defaultProps = {}
+MoleculesMobileNavigation.defaultProps = {
+    open: false,
+}
 
 export default ComponentInjector.return('MoleculesMobileNavigation', MoleculesMobileNavigation)

@@ -1,15 +1,10 @@
-import React, { useState, createPortal } from 'react'
+import React, { useState } from 'react'
 
 import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
-import { withInfo } from '@storybook/addon-info'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 
-import Grid from '../patterns/catwalk-frontend/atoms/grid/grid'
-import Cell from '../patterns/catwalk-frontend/atoms/grid/cell'
 import TemplatesHome from '../patterns/catwalk-frontend/templates/home'
 import VerticalSwipe from '../patterns/catwalk-frontend/templates/vertical-swipe'
-import Pagination from '../patterns/catwalk-frontend/molecules/paginations/pagination'
 import MoleculesProduct from '../patterns/catwalk-frontend/molecules/products/product'
 import MoleculesHeading from '../patterns/catwalk-frontend/molecules/headings/heading'
 

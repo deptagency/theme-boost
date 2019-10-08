@@ -2,8 +2,6 @@ import React, { Component, Fragment } from 'react'
 
 import ComponentInjector from '../../../app/injector'
 
-import MoleculesButton from '../../molecules/buttons/button'
-
 class OrganismsFilterBar extends Component {
     render () {
         return (

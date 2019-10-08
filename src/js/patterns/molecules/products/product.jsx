@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
-
+import PropTypes from 'prop-types'
 import ComponentInjector from '../../../app/injector'
 
 import MoleculesSticker from '../sticker/sticker'
 import MoleculesWishlist from '../wishlist/wishlist'
 import MoleculesColorSwatch from '../colorswatches/colorswatch'
-import MoleculesDetaillist from '../lists/detaillist'
 
 class MoleculesProduct extends Component {
     render () {
         const { width } = this.props
         let style = {}
-        if (typeof width !== undefined) { style = { width } }
+        if (typeof width !== 'undefined') { style = { width } }
 
         return (<div style={style}>
             <article className='o-product'>
@@ -53,6 +52,7 @@ class MoleculesProduct extends Component {
 }
 
 MoleculesProduct.propTypes = {
+    width: PropTypes.string,
 }
 
 MoleculesProduct.defaultProps = {

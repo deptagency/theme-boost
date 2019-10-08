@@ -7,10 +7,6 @@ import MoleculesProduct from '../../patterns/molecules/products/product'
 import Translatable from '../../component/translatable'
 
 class ProductListTastic extends Component {
-    constructor (props) {
-        super(props)
-    }
-
     render () {
         const { title, description } = this.props.data
 
@@ -32,7 +28,7 @@ class ProductListTastic extends Component {
 
 ProductListTastic.propTypes = {
     data: PropTypes.object.isRequired,
-    tastic: PropTypes.object.isRequired,
+    // tastic: PropTypes.object.isRequired,
 }
 
 ProductListTastic.defaultProps = {}

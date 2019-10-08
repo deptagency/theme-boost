@@ -18,7 +18,7 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
         setScrollLeft(0)
     }, [getSliderId, windowSize])
 
-    const getSliderId = useCallback(() => {
+    const getSliderId = useCallback(() => { // eslint-disable-line react-hooks/exhaustive-deps
         return `catwalk-vertical-swipe-${sliderId}`
     })
 

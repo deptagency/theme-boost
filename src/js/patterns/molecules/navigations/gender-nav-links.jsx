@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Reference from '../../../component/reference'
 
 const NavItem = ({ item, active = false }) => {
@@ -10,10 +11,20 @@ const NavItem = ({ item, active = false }) => {
         </li>
     )
 }
+
+NavItem.propTypes = {
+    item: PropTypes.object.isRequired,
+    active: PropTypes.bool.isRequired,
+}
+
 const MoleculesGenderNavLinks = ({ items }) => {
     return (
         <ul className='c-service-navigation o-list-inline'>{items && items.map((item) => { return <NavItem item={item} /> })}</ul>
     )
+}
+
+MoleculesGenderNavLinks.propTypes = {
+    items: PropTypes.array.isRequired,
 }
 
 export default MoleculesGenderNavLinks

@@ -1,16 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 import OrganismsProductListingInCart from '../../organisms/listings/product-listing-in-cart'
 import OrganismsPaymentListing from '../../organisms/listings/payment-listing'
 import OrganismsSummary from '../../organisms/blocks/summary'
 import MoleculesButton from '../../molecules/buttons/button'
-import { Scrollbars } from 'react-custom-scrollbars'
 
-const TemplatesFullCart = ({ setIsOpen }) => {
+const TemplatesFullCart = () => {
     return (
         <div>
-            {/* <OrganismsHeaderSlideIn setIsOpen={setIsOpen} title='Main Warenkorb' /> */}
             <div className='full-cart-content'>
                 <OrganismsProductListingInCart />
                 <div className='full-cart-payment-list'>
@@ -31,10 +27,6 @@ const TemplatesFullCart = ({ setIsOpen }) => {
             </div>
         </div>
     )
-}
-
-TemplatesFullCart.propTypes = {
-
 }
 
 export default TemplatesFullCart

@@ -7,7 +7,6 @@ import OrganismsStage from '../organisms/stages/stage'
 import OrganismsCategoryListing from '../organisms/listings/category-listing'
 import OrganismsCategoryListingHalf from '../organisms/listings/category-listing-half'
 import OrganismsProductListing from '../organisms/listings/product-listing'
-import OrganismsNewsletterBlock from '../organisms/blocks/newsletter'
 import OrganismsFoot from '../organisms/base/foot'
 
 class TemplatesHome extends Component {
@@ -24,9 +23,6 @@ class TemplatesHome extends Component {
                     </section>
                     <section className='o-container o-distance'>
                         <OrganismsProductListing />
-                    </section>
-                    <section className='o-container o-distance'>
-                        <OrganismsBanner />
                     </section>
                     <section className='o-container o-distance'>
                         <OrganismsCategoryListingHalf />

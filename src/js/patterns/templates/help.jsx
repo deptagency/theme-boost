@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from 'react'
 
-import OrganismsHead from '../organisms/base/header'
-import OrganismsFoot from '../organisms/base/foot'
 import MoleculesReferal from '../molecules/links/referal'
 
 class TemplatesHelp extends Component {

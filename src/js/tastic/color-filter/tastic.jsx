@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import MoleculesColorsFilter from '../../patterns/molecules/colorsfilter/colors-filter'
 
 class ColorFilterTastic extends Component {
-    constructor (props) {
-        super(props)
-    }
-
     render () {
         return (
             <div className='display-grid grid-justify-items--center'>
@@ -21,8 +17,8 @@ class ColorFilterTastic extends Component {
 }
 
 ColorFilterTastic.propTypes = {
-    data: PropTypes.object.isRequired,
-    tastic: PropTypes.object.isRequired,
+    // data: PropTypes.object.isRequired,
+    // tastic: PropTypes.object.isRequired,
 }
 
 ColorFilterTastic.defaultProps = {}

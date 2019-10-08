@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import AtomsFormLabel from '../../patterns/atoms/forms/form-label'
 import VerticalSwipe from '../../patterns/templates/vertical-swipe'
 import OrganismsSizes from '../../patterns/organisms/sizes/sizes'
 
 class SizeFilterTastic extends Component {
-    constructor (props) {
-        super(props)
-    }
-
     render () {
         return (
             <div className='filter-component display-grid'>
@@ -22,8 +18,8 @@ class SizeFilterTastic extends Component {
 }
 
 SizeFilterTastic.propTypes = {
-    data: PropTypes.object.isRequired,
-    tastic: PropTypes.object.isRequired,
+    // data: PropTypes.object.isRequired,
+    // tastic: PropTypes.object.isRequired,
 }
 
 SizeFilterTastic.defaultProps = {}

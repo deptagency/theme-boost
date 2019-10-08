@@ -5,10 +5,6 @@ import OrganismsPromoboxWithPositioning from '../../patterns/molecules/promobox/
 import MoleculesButton from '../../patterns/molecules/buttons/button'
 
 class PromoBoxTastic extends Component {
-    constructor (props) {
-        super(props)
-    }
-
     render () {
         const { verticalPosition, horizontalPosition } = this.props.data
 
@@ -24,7 +20,7 @@ class PromoBoxTastic extends Component {
 
 PromoBoxTastic.propTypes = {
     data: PropTypes.object.isRequired,
-    tastic: PropTypes.object.isRequired,
+    // tastic: PropTypes.object.isRequired,
 }
 
 PromoBoxTastic.defaultProps = {}

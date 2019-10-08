@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 
 import ComponentInjector from '../../../app/injector'
 
-import MoleculesButton from '../../molecules/buttons/button'
-// import AtomsIcon from '../../atoms/icons/icon'
-
 class Featurebox extends Component {
     render () {
         return (

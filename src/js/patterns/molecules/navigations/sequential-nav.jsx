@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 
 import ComponentInjector from '../../../app/injector'
 
-import MoleculesButton from '../buttons/button'
-// import AtomsIcon from '../../atoms/icons/icon'
-
 class MoleculesSequentialNav extends Component {
     render () {
         return (

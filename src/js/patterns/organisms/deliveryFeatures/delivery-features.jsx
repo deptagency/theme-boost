@@ -1,11 +1,10 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
 import deliveryTruck from '../../../../icons/delivery-truck.svg'
 import truckSmall from '../../../../icons/truck-small.svg'
 import billSmall from '../../../../icons/bill-small.svg'
 import packageSmall from '../../../../icons/package-small.svg'
 
-const DeliveryFeatures = props => {
+const DeliveryFeatures = () => {
     return (
         <Fragment>
             <div className='o-block-short margin-12 padding-top--10'>

@@ -2,7 +2,6 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { linkTo } from '@storybook/addon-links'
 
 import MoleculesButton from 'js/patterns/catwalk-frontend/molecules/buttons/button'
 import MoleculesIcon from 'js/patterns/catwalk-frontend/molecules/icons/icon'

@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import OrganismsDeliveryFeatures from '../../patterns/organisms/deliveryFeatures/delivery-features.jsx'
 
 class DeliveryFeaturesTastic extends Component {
-    constructor (props) {
-        super(props)
-    }
-
     render () {
         return (
             <OrganismsDeliveryFeatures />
@@ -15,8 +11,8 @@ class DeliveryFeaturesTastic extends Component {
 }
 
 DeliveryFeaturesTastic.propTypes = {
-    data: PropTypes.object.isRequired,
-    tastic: PropTypes.object.isRequired,
+    // data: PropTypes.object.isRequired,
+    // tastic: PropTypes.object.isRequired,
 }
 
 DeliveryFeaturesTastic.defaultProps = {}

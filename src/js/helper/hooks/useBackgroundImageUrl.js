@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react' // eslint-disable-line no-unused-vars
 import { useSelector } from 'react-redux'
 import useComponentSize from '@rehooks/component-size'
 import MediaApi from 'frontastic-common/src/js/mediaApi'

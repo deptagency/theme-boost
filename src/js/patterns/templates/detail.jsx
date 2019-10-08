@@ -96,7 +96,7 @@ class TemplatesDetail extends Component {
                                 </div>
                             </div>
                             <div className='o-media-block__asset'>
-                                <img src='https://mosaic03.ztat.net/vgs/media/pdp-zoom/NI/11/1A/08/4Q/12/NI111A084-Q12@9.jpg' />
+                                <img src='https://mosaic03.ztat.net/vgs/media/pdp-zoom/NI/11/1A/08/4Q/12/NI111A084-Q12@9.jpg' alt='' />
                             </div>
                         </div>
                     </div>

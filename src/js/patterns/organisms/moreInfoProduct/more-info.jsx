@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
 import arrowExpand from '../../../../icons/arrow-expand.svg'
 
-const OrganismsMoreInfoProduct = props => {
+const OrganismsMoreInfoProduct = () => {
     return (
         <Fragment>
             <div className='expansion-component margin-lr-16'>

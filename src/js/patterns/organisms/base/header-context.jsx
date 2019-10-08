@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-
 import ComponentInjector from '../../../app/injector'
-
-import logo from '../../../../layout/logo.svg'
 
 class OrganismsHeaderContext extends Component {
     render () {

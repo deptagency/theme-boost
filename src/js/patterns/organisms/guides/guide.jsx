@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import ComponentInjector from '../../../app/injector'
-import MoleculesColorSwatch from '../../molecules/colorswatches/colorswatch'
 import MoleculesFormFromTo from '../../molecules/forms/form-element-from-to'
 import MoleculesFormCheckboxList from '../../molecules/forms/form-checkbox-list'
 

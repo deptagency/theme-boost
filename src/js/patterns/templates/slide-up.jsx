@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import SlidingPane from 'react-sliding-pane'
 import 'react-sliding-pane/dist/react-sliding-pane.css'
@@ -51,6 +51,7 @@ TemplatesSlideUp.defaultProps = {
 TemplatesSlideUp.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     children: PropTypes.node.isRequired,
+    header: PropTypes.node.isRequired,
 }
 
 export default TemplatesSlideUp

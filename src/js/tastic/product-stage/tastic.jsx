@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 import OrganismsProductStage from '../../patterns/organisms/stages/stage-product'
 
 class ProductStageTastic extends Component {
-    constructor (props) {
-        super(props)
-    }
-
     render () {
         return (
             <OrganismsProductStage />
@@ -16,8 +12,8 @@ class ProductStageTastic extends Component {
 }
 
 ProductStageTastic.propTypes = {
-    data: PropTypes.object.isRequired,
-    tastic: PropTypes.object.isRequired,
+    // data: PropTypes.object.isRequired,
+    // tastic: PropTypes.object.isRequired,
 }
 
 ProductStageTastic.defaultProps = {}

@@ -1,8 +1,7 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 
-// import useBackgroundImageUrl from 'frontastic-catwalk/src/js/helper/hooks/useBackgroundImageUrl'
-import useBackgroundImageUrl from '../../../helper/hooks/useBackgroundImageUrl'
+import useBackgroundImageUrl from 'frontastic-theme-boost/src/js/helper/hooks/useBackgroundImageUrl'
 
 const NavItem = ({ item, onClick, isActive }) => {
     return (
@@ -12,6 +11,12 @@ const NavItem = ({ item, onClick, isActive }) => {
             </a>
         </li>
     )
+}
+
+NavItem.propTypes = {
+    item: PropTypes.object.isRequired,
+    onClick: PropTypes.func.isRequired,
+    isActive: PropTypes.bool.isRequired,
 }
 
 const TopCategoryNavTabs = ({ items, onCategorySelect, activeId = 0 }) => {
@@ -33,6 +38,12 @@ const TopCategoryNavTabs = ({ items, onCategorySelect, activeId = 0 }) => {
                 })}
         </ul>
     )
+}
+
+TopCategoryNavTabs.propTypes = {
+    items: PropTypes.array.isRequired,
+    onCategorySelect: PropTypes.func.isRequired,
+    activeId: PropTypes.number.isRequired,
 }
 
 export default TopCategoryNavTabs

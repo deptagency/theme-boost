@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import OrganismsHeaderSlideIn from '../organisms/base/header-slide-in'
 import { Scrollbars } from 'react-custom-scrollbars'
 
 const openStyles = {
@@ -65,6 +64,7 @@ TemplatesSlideIn.defaultProps = {
 TemplatesSlideIn.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     children: PropTypes.node.isRequired,
+    header: PropTypes.node.isRequired,
 }
 
 export default TemplatesSlideIn

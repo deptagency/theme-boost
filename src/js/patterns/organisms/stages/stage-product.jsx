@@ -4,12 +4,6 @@ import ComponentInjector from '../../../app/injector'
 
 import OrganismsGallery from '../galleries/gallery'
 import MoleculesRating from '../../molecules/ratings/rating'
-import OrganismsSizes from '../sizes/sizes'
-import AtomsFormLabel from '../../atoms/forms/form-label'
-import VerticalSwipe from '../../templates/vertical-swipe'
-import MoleculesColorsFilter from '../../molecules/colorsfilter/colors-filter'
-import MoleculesButton from '../../molecules/buttons/button'
-import deliveryTruck from '../../../../icons/delivery-truck.svg'
 
 class OrganismsProductStage extends Component {
     render () {

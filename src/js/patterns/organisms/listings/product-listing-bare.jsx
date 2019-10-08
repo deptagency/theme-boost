@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import ComponentInjector from '../../../app/injector'
 
 import MoleculesProductRow from '../../molecules/products/product-row'
-import MoleculesHeading from '../../molecules/headings/heading'
 
 class OrganismsProductListingCart extends Component {
     render () {

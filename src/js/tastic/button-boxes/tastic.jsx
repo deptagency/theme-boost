@@ -1,15 +1,10 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 import VerticalSwipe from '../../patterns/templates/vertical-swipe'
 import OrganismsPromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
 import MoleculesButton from '../../patterns/molecules/buttons/button'
 
 class CategoryButtonBoxesTastic extends Component {
-    constructor (props) {
-        super(props)
-    }
-
     render () {
         return (
             // TODO "o-grid  o-region" here?
@@ -39,8 +34,8 @@ class CategoryButtonBoxesTastic extends Component {
 }
 
 CategoryButtonBoxesTastic.propTypes = {
-    data: PropTypes.object.isRequired,
-    tastic: PropTypes.object.isRequired,
+    // data: PropTypes.object.isRequired,
+    // tastic: PropTypes.object.isRequired,
 }
 
 CategoryButtonBoxesTastic.defaultProps = {}

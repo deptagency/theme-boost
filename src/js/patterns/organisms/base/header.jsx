@@ -1,11 +1,7 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from '../../../app/injector'
-
-import logo from '../../../../layout/logo.svg'
-
-import MoleculesCart from '../../molecules/carts/cart'
 import MoleculesMobileNavigation from '../../molecules/navigations/mobile-navigation'
 import MoleculesGenderNavLinks from '../../molecules/navigations/gender-nav-links'
 import MoleculesUserIconNav from '../../molecules/navigations/user-icon-nav'

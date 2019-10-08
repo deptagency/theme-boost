@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-
 import ComponentInjector from '../../../app/injector'
-
-import logo from '../../../../layout/logo.svg'
 
 class OrganismsHeaderMobile extends Component {
     render () {
@@ -16,12 +13,16 @@ class OrganismsHeaderMobile extends Component {
                                     <path className='st0' d='M186.5,42.2h-173C6,42.2,0,36.1,0,28.7s6-13.5,13.5-13.5h173c7.5,0,13.5,6,13.5,13.5S194,42.2,186.5,42.2z' />
                                 </g>
                                 <g>
+                                    {/* eslint-disable */}
                                     <path className='st0' d='M186.5,113.2h-173C6,113.2,0,107.1,0,99.7s6-13.5,13.5-13.5h173c7.5,0,13.5,6,13.5,13.5
                     			S194,113.2,186.5,113.2z' />
+                                    {/* eslint-enable */}
                                 </g>
                                 <g>
+                                    {/* eslint-disable */}
                                     <path className='st0' d='M186.5,184.2h-173c-7.5,0-13.5-6-13.5-13.5s6-13.5,13.5-13.5h173c7.5,0,13.5,6,13.5,13.5
                     			S194,184.2,186.5,184.2z' />
+                                    {/* eslint-enable */}
                                 </g>
                             </g>
                         </svg>

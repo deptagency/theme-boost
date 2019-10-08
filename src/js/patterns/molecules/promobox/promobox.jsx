@@ -7,7 +7,7 @@ class OrganismsPromobox extends Component {
         return (<div>
             <h3>Default Promobox</h3>
             <div className='c-promobox u-aspect-ratio-16x9'>
-                <img src='https://images.unsplash.com/photo-1510598969022-c4c6c5d05769?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80' className='c-promobox__backdrop' />
+                <img src='https://images.unsplash.com/photo-1510598969022-c4c6c5d05769?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80' alt='' className='c-promobox__backdrop' />
                 <div className='c-promobox__overlay c-promobox__overlay--middle-center'>
                     <div className='c-promobox__overlay__inner'>
                         <a href='' title='Mützen' className='c-button'>Mützen</a>

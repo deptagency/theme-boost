@@ -7,8 +7,8 @@ class OrganismsPromoboxWithPositioning extends Component {
         const { children, vertical, horizontal, width, height } = this.props
 
         let style = {}
-        if (typeof width !== undefined) { style = { width } }
-        if (typeof height !== undefined) { style = { ...style, height } }
+        if (typeof width !== 'undefined') { style = { width } }
+        if (typeof height !== 'undefined') { style = { ...style, height } }
 
         return (<div style={style}>
             <div className='c-promobox t-spotlight u-aspect-ratio-16x9'>

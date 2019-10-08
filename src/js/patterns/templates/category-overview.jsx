@@ -1,10 +1,7 @@
 import React, { Component, Fragment } from 'react'
 
-import AtomsButton from '../atoms/buttons/button'
-
 import MoleculesFilterBar from '../molecules/navigations/filter-bar'
 import MoleculesProduct from '../molecules/products/product'
-import OrganismsProductListingHalf from '../organisms/listings/product-listing'
 import OrganismsBanner from '../organisms/banners/newsletter-banner'
 import OrganismsGuide from '../organisms/guides/guide'
 import MoleculesBreadcrumb from '../molecules/breadcrumbs/breadcrumb'

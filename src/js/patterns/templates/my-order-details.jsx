@@ -1,12 +1,8 @@
 import React, { Fragment } from 'react'
-import MoleculesBadge from '../molecules/badges/badge'
-import purpleArrowLeft from '../../../../icons/catwalk-frontend/purple-arrow-left.svg'
-import purpleArrowRight from '../../../../icons/catwalk-frontend/purple-arrow-right.svg'
-import blackBackArrow from '../../../../icons/catwalk-frontend/black-back-arrow.svg'
+import PropTypes from 'prop-types'
 import MoleculesArrowPanelBack from '../molecules/buttons/arrow-panel-back'
 import MoleculesButton from '../molecules/buttons/button'
 import OrganismsHeaderSlideIn from '../organisms/base/header-slide-in'
-import OrganismsProductListingBare from '../organisms/listings/product-listing-bare'
 import OrganismsSummary from '../organisms/blocks/summary'
 import MoleculesProductRow from '../molecules/products/product-row'
 
@@ -73,7 +69,7 @@ const TemplatesMyOrderDetails = ({ products }) => {
 }
 
 TemplatesMyOrderDetails.propTypes = {
-
+    products: PropTypes.array.isRequired,
 }
 
 export default TemplatesMyOrderDetails
