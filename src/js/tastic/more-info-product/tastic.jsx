@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
-import OrganismsMoreInfoProduct from '../../patterns/organisms/moreInfoProduct/more-info'
+import OrganismsMoreInfoProduct from '../../patterns/organisms/moreInfoProduct/more-info.jsx'
 
 class MoreInfoProductTastic extends Component {
     render () {
