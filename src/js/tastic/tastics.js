@@ -13,6 +13,9 @@ import CatwalkColorFilterTastic from './catwalk-color-filter/tastic'
 import CatwalkAddToCartButtonTastic from './catwalk-add-to-cart-button/tastic'
 import CatwalkDeliveryFeaturesTastic from './catwalk-delivery-features/tastic'
 import CatwalkMoreInfoProductTastic from './catwalk-more-info-product/tastic'
+import BrandContentfulTastic from './brand-contentful/tastic'
+import HorizontalSpacerTastic from './horisontal-spacer/tastic'
+
 
 export default (() => {
     return {
@@ -31,5 +34,7 @@ export default (() => {
         'catwalk-add-to-cart-button': CatwalkAddToCartButtonTastic,
         'catwalk-delivery-features': CatwalkDeliveryFeaturesTastic,
         'catwalk-more-info-product': CatwalkMoreInfoProductTastic,
+        'frontastic/boost/brand-contentful': BrandContentfulTastic,
+        'frontastic/boost/horizontal-spacer': HorizontalSpacerTastic,
     }
 })()
