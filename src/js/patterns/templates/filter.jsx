@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import AtomsFormLabel from "../atoms/forms/form-label";
-import OrganismsHeaderSlideIn from "../organisms/base/header-slide-in";
-import OrganismsSizes from "../organisms/sizes/sizes";
+import React from 'react'
+import PropTypes from 'prop-types'
+import AtomsFormLabel from '../atoms/forms/form-label'
+import OrganismsHeaderSlideIn from '../organisms/base/header-slide-in'
+import OrganismsSizes from '../organisms/sizes/sizes'
 import MoleculesFormFromTo from '../molecules/forms/form-element-from-to'
-import VerticalSwipe from "./vertical-swipe";
-import OrganismsSorting from "../organisms/sorting/sorting";
-import MoleculesButton from "../molecules/buttons/button";
-import MoleculesColorsFilter from "../molecules/colorsfilter/colors-filter";
-import arrowLeft from "../../../../icons/catwalk-frontend/arrow-left.svg"
+import VerticalSwipe from './vertical-swipe'
+import OrganismsSorting from '../organisms/sorting/sorting'
+import MoleculesButton from '../molecules/buttons/button'
+import MoleculesColorsFilter from '../molecules/colorsfilter/colors-filter'
+import arrowLeft from '../../../../icons/catwalk-frontend/arrow-left.svg'
 
-const TemplatesFilter = ({setIsOpen, count}) => {
+const TemplatesFilter = ({ setIsOpen, count }) => {
     return (
         <div className='filter-panel'>
             <OrganismsHeaderSlideIn setIsOpen={setIsOpen} title='Filter' />
@@ -37,12 +37,12 @@ const TemplatesFilter = ({setIsOpen, count}) => {
 
                 <div className='filter-component'>
                     <AtomsFormLabel className='filter-input-label' value='Marke' />
-                    <select className='extra-margin' id="" name="select">
+                    <select className='extra-margin' id='' name='select'>
                         <option>Bitte auswählen</option>
-                        <option value="Value A">Value A</option>
-                        <option value="Value B">Value B</option>
-                        <option value="Value C">Value C</option>
-                        <option value="Value D">Value D</option>
+                        <option value='Value A'>Value A</option>
+                        <option value='Value B'>Value B</option>
+                        <option value='Value C'>Value C</option>
+                        <option value='Value D'>Value D</option>
                     </select>
 
                 </div>
@@ -71,23 +71,22 @@ const TemplatesFilter = ({setIsOpen, count}) => {
                     <img src={arrowLeft} alt='arrow left' />
                 </div>
 
-
-                <MoleculesButton  className='button-show-filter-results' type='primary'>
+                <MoleculesButton className='button-show-filter-results' type='primary'>
                     {count} Ergebnisse anzeigen
                 </MoleculesButton>
             </div>
         </div>
-    );
-};
+    )
+}
 
 TemplatesFilter.defaultProps = {
     setIsOpen: () => {},
-    count: 429
+    count: 429,
 }
 
 TemplatesFilter.propTypes = {
     setIsOpen: PropTypes.func.isRequired,
-    count: PropTypes.number.isRequired
-};
+    count: PropTypes.number.isRequired,
+}
 
-export default TemplatesFilter;
+export default TemplatesFilter

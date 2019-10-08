@@ -8,19 +8,19 @@ class AtomsFormLabel extends Component {
         const { className, value } = this.props
 
         return (<div className={className}>
-          <label for=''>{value}</label>
+            <label htmlFor=''>{value}</label>
         </div>)
     }
 }
 
 AtomsFormLabel.propTypes = {
     value: PropTypes.string.isRequired,
-    className: PropTypes.string.isRequired
+    className: PropTypes.string.isRequired,
 }
 
 AtomsFormLabel.defaultProps = {
     value: 'Label',
-    className: ''
+    className: '',
 }
 
 export default ComponentInjector.return('AtomsFormLabel', AtomsFormLabel)

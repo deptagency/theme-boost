@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import OrganismsMoreInfoProduct from "../../patterns/organisms/moreInfoProduct/more-info";
+import OrganismsMoreInfoProduct from '../../patterns/organisms/moreInfoProduct/more-info'
 
 class MoreInfoProductTastic extends Component {
-    constructor(props) {
+    constructor (props) {
         super(props)
     }
 
-    render() {
+    render () {
         return (
             <OrganismsMoreInfoProduct />
         )

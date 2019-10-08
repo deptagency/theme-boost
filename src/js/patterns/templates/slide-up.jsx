@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import SlidingPane from 'react-sliding-pane';
-import 'react-sliding-pane/dist/react-sliding-pane.css';
+import SlidingPane from 'react-sliding-pane'
+import 'react-sliding-pane/dist/react-sliding-pane.css'
 import { Scrollbars } from 'react-custom-scrollbars'
 
 const TemplatesSlideUp = ({ isOpen, children, header }) => {
@@ -12,7 +12,7 @@ const TemplatesSlideUp = ({ isOpen, children, header }) => {
             isOpen={isOpen}
             from={'bottom'}
             width={'100%'}
-        >
+            >
             {header}
             <Scrollbars autoHide style={{
                 height: 'calc(100% - 48px)',
@@ -23,13 +23,12 @@ const TemplatesSlideUp = ({ isOpen, children, header }) => {
 
         </SlidingPane>
     )
-
 }
 
-/*.some-custom-class {
+/* .some-custom-class {
     margin: 0;
     height: 100%;
-}*/
+} */
 
 // ReactSlidingPane.propTypes = {
 //     isOpen: PropTypes.bool.isRequired,

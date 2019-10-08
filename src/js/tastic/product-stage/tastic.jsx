@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import OrganismsProductStage from '../../patterns/organisms/stages/stage-product'
 
 class ProductStageTastic extends Component {
-    constructor(props) {
+    constructor (props) {
         super(props)
     }
 
-    render() {
+    render () {
         return (
             <OrganismsProductStage />
         )

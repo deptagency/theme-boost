@@ -6,7 +6,7 @@ import _ from 'lodash'
 import ComponentInjector from '../../../app/injector'
 
 class MoleculesButton extends Component {
-    render() {
+    render () {
         const Component = this.props.component
 
         return (
@@ -19,7 +19,7 @@ class MoleculesButton extends Component {
                     this.props.type ? 'c-button--' + this.props.type : null,
                     this.props.size ? 'c-button--' + this.props.size : null
                 )}
-            >
+                >
                 {this.props.children}
             </Component>
         )

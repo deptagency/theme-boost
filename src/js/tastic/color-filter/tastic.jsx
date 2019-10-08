@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import MoleculesColorsFilter from "../../patterns/molecules/colorsfilter/colors-filter";
+import MoleculesColorsFilter from '../../patterns/molecules/colorsfilter/colors-filter'
 
 class ColorFilterTastic extends Component {
-    constructor(props) {
+    constructor (props) {
         super(props)
     }
 
-    render() {
+    render () {
         return (
             <div className='display-grid grid-justify-items--center'>
                 <dl className='o-detaillist'>

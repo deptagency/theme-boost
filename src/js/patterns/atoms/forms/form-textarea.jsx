@@ -5,7 +5,7 @@ import ComponentInjector from '../../../app/injector'
 class AtomsFormTextarea extends Component {
     render () {
         return (<div>
-          <textarea name="textarea" id="textarea"></textarea>
+            <textarea name='textarea' id='textarea' />
         </div>)
     }
 }

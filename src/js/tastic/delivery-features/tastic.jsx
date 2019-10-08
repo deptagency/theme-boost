@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import OrganismsDeliveryFeatures from "../../patterns/organisms/deliveryFeatures/delivery-features";
+import OrganismsDeliveryFeatures from '../../patterns/organisms/deliveryFeatures/delivery-features.jsx'
 
 class DeliveryFeaturesTastic extends Component {
-    constructor(props) {
+    constructor (props) {
         super(props)
     }
 
-    render() {
+    render () {
         return (
             <OrganismsDeliveryFeatures />
         )

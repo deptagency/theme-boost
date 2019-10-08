@@ -1,67 +1,67 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 import MoleculesBadge from '../molecules/badges/badge'
-import purpleArrowLeft from "../../../../icons/catwalk-frontend/purple-arrow-left.svg";
-import purpleArrowRight from "../../../../icons/catwalk-frontend/purple-arrow-right.svg";
-import blackBackArrow from "../../../../icons/catwalk-frontend/black-back-arrow.svg";
-import MoleculesArrowPanelBack from "../molecules/buttons/arrow-panel-back";
-import MoleculesButton from "../molecules/buttons/button";
-import OrganismsHeaderSlideIn from "../organisms/base/header-slide-in";
-import OrganismsProductListingBare from "../organisms/listings/product-listing-bare";
+import purpleArrowLeft from '../../../../icons/catwalk-frontend/purple-arrow-left.svg'
+import purpleArrowRight from '../../../../icons/catwalk-frontend/purple-arrow-right.svg'
+import blackBackArrow from '../../../../icons/catwalk-frontend/black-back-arrow.svg'
+import MoleculesArrowPanelBack from '../molecules/buttons/arrow-panel-back'
+import MoleculesButton from '../molecules/buttons/button'
+import OrganismsHeaderSlideIn from '../organisms/base/header-slide-in'
+import OrganismsProductListingBare from '../organisms/listings/product-listing-bare'
 import OrganismsSummary from '../organisms/blocks/summary'
-import MoleculesProductRow from "../molecules/products/product-row";
+import MoleculesProductRow from '../molecules/products/product-row'
 
-const TemplatesMyOrderDetails = ({products}) => {
+const TemplatesMyOrderDetails = ({ products }) => {
     return (
         <div className='organism-my-orders organism-my-orders--details'>
 
-            <OrganismsHeaderSlideIn setIsOpen={()=>{}} title='P22KI23IACV' />
+            <OrganismsHeaderSlideIn setIsOpen={() => {}} title='P22KI23IACV' />
 
-            <div className="mo-paid mod-margin">
-                <div className="mo-paid-title">
+            <div className='mo-paid mod-margin'>
+                <div className='mo-paid-title'>
                     Versendet an
                 </div>
 
-                <div className="mo-sent-to">
-                    <div className="mo-sent-name">
+                <div className='mo-sent-to'>
+                    <div className='mo-sent-name'>
                         Tim Hartmann
-                     </div>
-                    <div className="mo-sent-address">
+                    </div>
+                    <div className='mo-sent-address'>
                         Ewaldstr. 2
                         59174 Kamen
                         Deutschland</div>
                 </div>
 
-                <div className="mo-payment-type">
-                    <div className='margin-bottom--8'>Zahlungsmittel: <span className="font--bold-black">Rechnung</span></div>
+                <div className='mo-payment-type'>
+                    <div className='margin-bottom--8'>Zahlungsmittel: <span className='font--bold-black'>Rechnung</span></div>
                     <div>Rechnungsadresse entspricht Lieferanschrift</div>
                 </div>
 
             </div>
 
-            <div className="c-divider c-divider--break"></div>
+            <div className='c-divider c-divider--break' />
 
-            <div className="mo-product-list mod-margin">
+            <div className='mo-product-list mod-margin'>
                 {products.map((p, i) => {
                     return (
                         <Fragment>
                             <MoleculesProductRow
                                 showWishListIcon={false}
                                 showCloseIcon={false}
-                                showProductCount={true}
+                                showProductCount
                                 {...p}
                             />
-                            {(i+1 < products.length) && <div className="c-divider"></div>}
+                            {(i + 1 < products.length) && <div className='c-divider' />}
                         </Fragment>
                     )
                 })}
 
             </div>
 
-            <div className="c-divider c-divider--break"></div>
+            <div className='c-divider c-divider--break' />
 
             <OrganismsSummary className='mod-margin padding-top--10' />
 
-            <div className="padding--10">
+            <div className='padding--10'>
                 <MoleculesButton className='width--100 height--52px' type='quiet'>
                     Artikel zurückschicken
                 </MoleculesButton>
@@ -69,11 +69,11 @@ const TemplatesMyOrderDetails = ({products}) => {
 
             <MoleculesArrowPanelBack title='Zurück zu meinem Konto' />
         </div>
-    );
-};
+    )
+}
 
 TemplatesMyOrderDetails.propTypes = {
 
-};
+}
 
-export default TemplatesMyOrderDetails;
+export default TemplatesMyOrderDetails

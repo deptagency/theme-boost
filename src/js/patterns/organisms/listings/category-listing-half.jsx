@@ -5,7 +5,7 @@ import ComponentInjector from '../../../app/injector'
 import OrganismsPromobox from '../../molecules/promobox/promobox'
 
 class OrganismsCategoryListingHalf extends Component {
-    render() {
+    render () {
         return (
             <div className='o-grid o-grid--small-half'>
                 <OrganismsPromobox />

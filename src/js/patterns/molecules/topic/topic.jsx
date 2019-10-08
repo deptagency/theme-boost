@@ -5,7 +5,7 @@ import ComponentInjector from '../../../app/injector'
 class AtomsTopic extends Component {
     render () {
         return (<div>
-          <p className="c-topic">Exklusive Rabatte</p>
+            <p className='c-topic'>Exklusive Rabatte</p>
         </div>)
     }
 }

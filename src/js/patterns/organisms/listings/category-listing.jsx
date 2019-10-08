@@ -5,7 +5,7 @@ import ComponentInjector from '../../../app/injector'
 import MoleculesPromobox from '../../molecules/promobox/promobox'
 
 class OrganismsCategoryListing extends Component {
-    render() {
+    render () {
         return (
             <div>
                 <section className='o-distance'>

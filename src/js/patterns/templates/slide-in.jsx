@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import OrganismsHeaderSlideIn from "../organisms/base/header-slide-in";
+import OrganismsHeaderSlideIn from '../organisms/base/header-slide-in'
 import { Scrollbars } from 'react-custom-scrollbars'
 
 const openStyles = {
@@ -46,7 +46,7 @@ const TemplatesSlideIn = ({ isOpen, children, header }) => {
             style={isOpen ? openStyles : closedStyles}
             >
             {header}
-                {/*{children}*/}
+            {/* {children} */}
             <Scrollbars autoHide style={{
                 height: 'calc(100% - 48px)',
                 // height: '100%',
@@ -59,7 +59,7 @@ const TemplatesSlideIn = ({ isOpen, children, header }) => {
 }
 
 TemplatesSlideIn.defaultProps = {
-    isOpen: false
+    isOpen: false,
 }
 
 TemplatesSlideIn.propTypes = {

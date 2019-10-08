@@ -8,33 +8,33 @@ class FormElementFromTo extends Component {
         const { className } = this.props
 
         return (
-          <div className={`c-form-element ${className}`}>
-            <div className="c-form-from-to">
-              <div className="c-form-from-to__item">
-                <div className="c-form-unit">
-                  <input type="text" className="c-form-unit__input" id="inp-unit" />
-                  <div className="c-form-unit__type">€</div>
+            <div className={`c-form-element ${className}`}>
+                <div className='c-form-from-to'>
+                    <div className='c-form-from-to__item'>
+                        <div className='c-form-unit'>
+                            <input type='text' className='c-form-unit__input' id='inp-unit' />
+                            <div className='c-form-unit__type'>€</div>
+                        </div>
+                    </div>
+                    <div className='c-form-from-to__item c-form-from-to__item--connector' />
+                    <div className='c-form-from-to__item'>
+                        <div className='c-form-unit'>
+                            <input type='text' className='c-form-unit__input' id='inp-unit' />
+                            <div className='c-form-unit__type'>€</div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div className="c-form-from-to__item c-form-from-to__item--connector"></div>
-              <div className="c-form-from-to__item">
-                <div className="c-form-unit">
-                  <input type="text" className="c-form-unit__input" id="inp-unit" />
-                  <div className="c-form-unit__type">€</div>
-                </div>
-              </div>
             </div>
-          </div>
         )
     }
 }
 
 FormElementFromTo.propTypes = {
-    className: PropTypes.string
+    className: PropTypes.string,
 }
 
 FormElementFromTo.defaultProps = {
-    className: ''
+    className: '',
 }
 
 export default ComponentInjector.return('FormElementFromTo', FormElementFromTo)

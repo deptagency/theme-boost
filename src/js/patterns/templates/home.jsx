@@ -11,7 +11,7 @@ import OrganismsNewsletterBlock from '../organisms/blocks/newsletter'
 import OrganismsFoot from '../organisms/base/foot'
 
 class TemplatesHome extends Component {
-    render() {
+    render () {
         return (
             <Fragment>
                 <OrganismsHead />

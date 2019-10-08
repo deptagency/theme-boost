@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect, useRef, useCallback } from 'react'
+import PropTypes from 'prop-types'
 import Swipe from 'react-easy-swipe'
 import useWindowSize from '@rehooks/window-size'
 import { isNull } from 'lodash'
@@ -16,11 +16,11 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
         })
 
         setScrollLeft(0)
-    }, [windowSize])
+    }, [getSliderId, windowSize])
 
-    const getSliderId = () => {
+    const getSliderId = useCallback(() => {
         return `catwalk-vertical-swipe-${sliderId}`
-    }
+    })
 
     const shouldMoveRight = () => {
         return !!(scrollLeft <= getContainerDiff())
@@ -60,7 +60,7 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
         <div className='catwalk-vertical-swipe' ref={swiper}>
             <Swipe
                 className={getSliderId()}
-                allowMouseEvents={true}
+                allowMouseEvents
                 onSwipeLeft={handleRightMove}
                 onSwipeRight={handleLeftMove}
                 style={{
@@ -71,8 +71,8 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
                 {children}
             </Swipe>
         </div>
-    );
-};
+    )
+}
 
 VerticalSwipe.defaultProps = {
     slideOffset: 250,
@@ -81,7 +81,7 @@ VerticalSwipe.defaultProps = {
 VerticalSwipe.propTypes = {
     sliderId: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
-    slideOffset: PropTypes.number
-};
+    slideOffset: PropTypes.number,
+}
 
-export default VerticalSwipe;
+export default VerticalSwipe

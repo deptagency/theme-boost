@@ -5,10 +5,10 @@ import ComponentInjector from '../../../app/injector'
 class AtomsBlockquote extends Component {
     render () {
         return (<div>
-          <blockquote>
-            <p>lorem ipsum dolores</p>
-            <cite>Author</cite>
-          </blockquote>
+            <blockquote>
+                <p>lorem ipsum dolores</p>
+                <cite>Author</cite>
+            </blockquote>
         </div>)
     }
 }

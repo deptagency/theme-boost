@@ -8,20 +8,20 @@ class OrganismsSorting extends Component {
         const { values } = this.props
 
         return (<div className='organism-sorting'>
-              <div className="c-chip is-active min-width-160">Topseller</div>
-              {values.map((v) => {
-                  return <div className="c-chip min-width-160">{v}</div>
+            <div className='c-chip is-active min-width-160'>Topseller</div>
+            {values.map((v) => {
+                  return <div className='c-chip min-width-160'>{v}</div>
               })}
         </div>)
     }
 }
 
 OrganismsSorting.propTypes = {
-    values: PropTypes.array
+    values: PropTypes.array,
 }
 
 OrganismsSorting.defaultProps = {
-    values: ['Neu hinzugefügt', 'Niedrigster Preis', 'Hocher Presis']
+    values: ['Neu hinzugefügt', 'Niedrigster Preis', 'Hocher Presis'],
 }
 
 export default ComponentInjector.return('OrganismsSorting', OrganismsSorting)

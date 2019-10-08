@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import OrganismsCategoryBoxes from '../../patterns/organisms/listings/category-boxes'
 
 class CategoryBoxesTastic extends Component {
-    constructor(props) {
+    constructor (props) {
         super(props)
     }
 
-    render() {
+    render () {
         return <OrganismsCategoryBoxes />
     }
 }

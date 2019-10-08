@@ -6,7 +6,7 @@ import MoleculesProduct from '../../molecules/products/product'
 import MoleculesHeading from '../../molecules/headings/heading'
 
 class OrganismsProductListing extends Component {
-    render() {
+    render () {
         return (
             <div>
                 <section className='o-distance o-prevent-space'>

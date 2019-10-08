@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import OrganismsHeaderSlideIn from "../../organisms/base/header-slide-in";
-import MoleculesButton from "../../molecules/buttons/button";
-import emptyCart from "../../../../icons/empty_cart.svg"
+import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
+import MoleculesButton from '../../molecules/buttons/button'
+import emptyCart from '../../../../icons/empty_cart.svg'
 
-const TemplatesEmptyCart = ({setIsOpen}) => {
+const TemplatesEmptyCart = ({ setIsOpen }) => {
     return (
         <div>
             <div className='empty-cart-content'>
@@ -17,11 +17,11 @@ const TemplatesEmptyCart = ({setIsOpen}) => {
                 </MoleculesButton>
             </div>
         </div>
-    );
-};
+    )
+}
 
 TemplatesEmptyCart.propTypes = {
 
-};
+}
 
-export default TemplatesEmptyCart;
+export default TemplatesEmptyCart

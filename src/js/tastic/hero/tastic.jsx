@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import OrganismsHero from '../../patterns/organisms/stages/stage'
 
 class HeroTastic extends Component {
-    constructor(props) {
+    constructor (props) {
         super(props)
     }
 
-    render() {
+    render () {
         return <OrganismsHero />
     }
 }

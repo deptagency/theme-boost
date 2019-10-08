@@ -7,7 +7,7 @@ import OrganismsProductStage from '../organisms/stages/stage-product'
 // import OrganismsBanner from '../organisms/banners/newsletter-banner'
 
 class TemplatesDetail extends Component {
-    render() {
+    render () {
         return (
             <Fragment>
                 <OrganismsHead />
@@ -107,7 +107,7 @@ class TemplatesDetail extends Component {
                     </section>
                     <section className='o-container o-distance'>
                         <div className='o-container'>
-                            {/*<OrganismsBanner />*/}
+                            {/* <OrganismsBanner /> */}
                         </div>
                     </section>
                 </main>

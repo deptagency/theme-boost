@@ -5,7 +5,7 @@ import ComponentInjector from '../../../app/injector'
 import MoleculesButton from '../../molecules/buttons/button'
 
 class OrganismsFilterBar extends Component {
-    render() {
+    render () {
         return (
             <Fragment>
                 <div className='c-filter-bar'>
@@ -31,7 +31,7 @@ class OrganismsFilterBar extends Component {
                         </div>
                     </div>
                     <div className='c-filter-bar__offset'>
-                        <button class='c-button c-button--quite u-full-width'>
+                        <button className='c-button c-button--quite u-full-width'>
                             <span>Mehr Filter</span>
                         </button>
                     </div>

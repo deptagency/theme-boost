@@ -10,10 +10,10 @@ import { withKnobs, boolean } from '@storybook/addon-knobs'
 
 const debugDefault = true
 
-//const stories = storiesOf('Layout/Grid', module).addDecorator(withInfo)
-//stories.addDecorator(withKnobs)
+// const stories = storiesOf('Layout/Grid', module).addDecorator(withInfo)
+// stories.addDecorator(withKnobs)
 //
-//stories.add('Basic Grid', () => {
+// stories.add('Basic Grid', () => {
 //    return (
 //        <Grid debug={boolean('Debug', debugDefault)}>
 //            <Cell size={`1/1`}>1/1</Cell>
@@ -60,9 +60,9 @@ const debugDefault = true
 //            <Cell size={`1/2`}>1/2</Cell>
 //        </Grid>
 //    )
-//})
+// })
 //
-//stories.add('Full width Element', () => {
+// stories.add('Full width Element', () => {
 //    return (
 //        <Grid debug={boolean('Debug', debugDefault)}>
 //            <Cell>12 (default)</Cell>
@@ -71,9 +71,9 @@ const debugDefault = true
 //            <Cell size={6}>6</Cell>
 //        </Grid>
 //    )
-//})
+// })
 //
-//stories.add('Full width Element w/ slider', () => {
+// stories.add('Full width Element w/ slider', () => {
 //    return (
 //        <Grid debug={boolean('Debug', debugDefault)}>
 //            <Cell>12 (default)</Cell>
@@ -82,9 +82,9 @@ const debugDefault = true
 //            <Cell size={6}>6</Cell>
 //        </Grid>
 //    )
-//})
+// })
 //
-//stories.add('Hide Elements from devices', () => {
+// stories.add('Hide Elements from devices', () => {
 //    return (
 //        <Grid debug={boolean('Debug', debugDefault)}>
 //            <Cell hideOn={['lap', 'desk']}>Hand only</Cell>
@@ -93,5 +93,5 @@ const debugDefault = true
 //            <Cell hideOn={['hand', 'desk']}>Lap only</Cell>
 //        </Grid>
 //    )
-//})
+// })
 //

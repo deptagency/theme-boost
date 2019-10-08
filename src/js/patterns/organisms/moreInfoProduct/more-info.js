@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import arrowExpand from "../../../../icons/arrow-expand.svg";
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
+import arrowExpand from '../../../../icons/arrow-expand.svg'
 
 const OrganismsMoreInfoProduct = props => {
     return (
@@ -18,11 +18,11 @@ const OrganismsMoreInfoProduct = props => {
                 <img src={arrowExpand} alt='arrow expand' />
             </div>
         </Fragment>
-    );
-};
+    )
+}
 
 OrganismsMoreInfoProduct.propTypes = {
 
-};
+}
 
-export default OrganismsMoreInfoProduct;
+export default OrganismsMoreInfoProduct

@@ -8,21 +8,21 @@ class AtomsFormSelect extends Component {
         const { options } = this.props
 
         return (<div>
-          <select name='select' id='inp-select'>
-              {options.map((o) => {
+            <select name='select' id='inp-select'>
+                {options.map((o) => {
                   return <option value={o}>{o}</option>
               })}
-          </select>
+            </select>
         </div>)
     }
 }
 
 AtomsFormSelect.propTypes = {
-    options: PropTypes.array.isRequired
+    options: PropTypes.array.isRequired,
 }
 
 AtomsFormSelect.defaultProps = {
-    options: ['value', 'value', 'value']
+    options: ['value', 'value', 'value'],
 }
 
 export default ComponentInjector.return('AtomsFormSelect', AtomsFormSelect)

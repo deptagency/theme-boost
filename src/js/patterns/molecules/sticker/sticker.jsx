@@ -5,7 +5,7 @@ import ComponentInjector from '../../../app/injector'
 class MoleculesSticker extends Component {
     render () {
         return (<div>
-          <span className="c-sticker">20%</span>
+            <span className='c-sticker'>20%</span>
         </div>)
     }
 }

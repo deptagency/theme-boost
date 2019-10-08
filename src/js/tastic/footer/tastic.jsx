@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import OrganismsFoot from '../../patterns/organisms/base/foot.jsx'
 
 class FooterTastic extends Component {
-    constructor(props) {
+    constructor (props) {
         super(props)
     }
 
-    render() {
+    render () {
         return (
             <OrganismsFoot />
         )

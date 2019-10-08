@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 import ComponentInjector from '../../../app/injector'
 
 import MoleculesButton from '../buttons/button'
-//import AtomsIcon from '../../atoms/icons/icon'
+// import AtomsIcon from '../../atoms/icons/icon'
 
 class MoleculesSequentialNav extends Component {
-    render() {
+    render () {
         return (
             <nav role='navigation' className='c-sequential-navigation'>
                 <ul className='c-sequential-navigation__list'>
@@ -14,7 +14,7 @@ class MoleculesSequentialNav extends Component {
                         <a href='' title='' className='c-sequential-navigation__anchor'>
                             <span>Bekleidung</span>
                             <svg
-                                class='c-icon c-icon--s u-brand-color'
+                                className='c-icon c-icon--s u-brand-color'
                                 version='1.1'
                                 xmlns='http://www.w3.org/2000/svg'
                                 width='24'

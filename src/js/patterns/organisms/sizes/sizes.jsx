@@ -29,12 +29,12 @@ class OrganismsSizes extends Component {
 
 OrganismsSizes.propTypes = {
     values: PropTypes.array,
-    disabledValues: PropTypes.array
+    disabledValues: PropTypes.array,
 }
 
 OrganismsSizes.defaultProps = {
     values: [34, 36, 38, 40, 42, 44, 46, 48],
-    disabledValues: [40]
+    disabledValues: [40],
 }
 
 export default ComponentInjector.return('OrganismsSizes', OrganismsSizes)

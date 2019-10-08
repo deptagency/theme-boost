@@ -5,7 +5,7 @@ import ComponentInjector from '../../../app/injector'
 class MoleculesTitle extends Component {
     render () {
         return (<div>
-          <h2 className="c-title">Title</h2>
+            <h2 className='c-title'>Title</h2>
         </div>)
     }
 }

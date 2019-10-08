@@ -6,32 +6,32 @@ import MoleculesButton from 'js/patterns/catwalk-frontend/molecules/buttons/butt
 class OrganismsButtonBar extends Component {
     render () {
         return (<div>
-          <div className='o-buttonbar'>
-            <MoleculesButton type='primary' className='o-buttonbar__item'>
+            <div className='o-buttonbar'>
+                <MoleculesButton type='primary' className='o-buttonbar__item'>
               Primary Button
-            </MoleculesButton>
-            <MoleculesButton type='quiet' className='o-buttonbar__item'>
+                </MoleculesButton>
+                <MoleculesButton type='quiet' className='o-buttonbar__item'>
               Quiet Button
-            </MoleculesButton>
-          </div>
-          <h3 className='o-distance'>Buttonbar with full item</h3>
-          <div className='o-buttonbar'>
-            <MoleculesButton type='primary' className='o-buttonbar__item o-buttonbar__item--full'>
+                </MoleculesButton>
+            </div>
+            <h3 className='o-distance'>Buttonbar with full item</h3>
+            <div className='o-buttonbar'>
+                <MoleculesButton type='primary' className='o-buttonbar__item o-buttonbar__item--full'>
               Primary Button
-            </MoleculesButton>
-            <MoleculesButton type='quiet' className='o-buttonbar__item'>
+                </MoleculesButton>
+                <MoleculesButton type='quiet' className='o-buttonbar__item'>
               Quiet Button
-            </MoleculesButton>
-          </div>
-          <h3 className='o-distance'>Buttonbar Stacked</h3>
-          <div className='o-buttonbar o-buttonbar--stacked'>
-            <MoleculesButton type='primary' className='o-buttonbar__item o-buttonbar__item--full'>
+                </MoleculesButton>
+            </div>
+            <h3 className='o-distance'>Buttonbar Stacked</h3>
+            <div className='o-buttonbar o-buttonbar--stacked'>
+                <MoleculesButton type='primary' className='o-buttonbar__item o-buttonbar__item--full'>
               Primary Button
-            </MoleculesButton>
-            <MoleculesButton type='quiet' className='o-buttonbar__item'>
+                </MoleculesButton>
+                <MoleculesButton type='quiet' className='o-buttonbar__item'>
               Quiet Button
-            </MoleculesButton>
-          </div>
+                </MoleculesButton>
+            </div>
         </div>)
     }
 }

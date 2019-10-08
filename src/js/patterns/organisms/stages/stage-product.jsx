@@ -4,22 +4,22 @@ import ComponentInjector from '../../../app/injector'
 
 import OrganismsGallery from '../galleries/gallery'
 import MoleculesRating from '../../molecules/ratings/rating'
-import OrganismsSizes from "../sizes/sizes";
-import AtomsFormLabel from "../../atoms/forms/form-label";
-import VerticalSwipe from "../../templates/vertical-swipe";
-import MoleculesColorsFilter from "../../molecules/colorsfilter/colors-filter";
-import MoleculesButton from "../../molecules/buttons/button";
-import deliveryTruck from "../../../../icons/delivery-truck.svg";
+import OrganismsSizes from '../sizes/sizes'
+import AtomsFormLabel from '../../atoms/forms/form-label'
+import VerticalSwipe from '../../templates/vertical-swipe'
+import MoleculesColorsFilter from '../../molecules/colorsfilter/colors-filter'
+import MoleculesButton from '../../molecules/buttons/button'
+import deliveryTruck from '../../../../icons/delivery-truck.svg'
 
 class OrganismsProductStage extends Component {
-    render() {
+    render () {
         return (
             <div className='o-media-block'>
                 <div className='o-media-block__asset'>
                     <OrganismsGallery />
                 </div>
                 <div className='o-media-block__body margin-lr-16'>
-                    <div className="o-flex o-flex--justified o-distance-m">
+                    <div className='o-flex o-flex--justified o-distance-m'>
                         <div>
                             <div className='o-flex__item'>
                                 <h1 className='c-title-level-3'>Ashion Modern</h1>
@@ -46,16 +46,14 @@ class OrganismsProductStage extends Component {
                         </div>
                     </div>
 
-
-                    {/*<div className='filter-component'>
+                    {/* <div className='filter-component'>
                         <AtomsFormLabel className='filter-input-label text-align--center' value='Größe' />
                         <VerticalSwipe sliderId='swipe-sizes'>
                             <OrganismsSizes />
                         </VerticalSwipe>
-                    </div>*/}
+                    </div> */}
 
-
-                    {/*<div className='o-flex o-flex--center o-flex--large-justified'>
+                    {/* <div className='o-flex o-flex--center o-flex--large-justified'>
                         <dl className='o-detaillist'>
                             <dt className='t-text-quiet'>Farbe:</dt>
                             <dd className='u-text-strong'>Schwarz</dd>
@@ -64,9 +62,9 @@ class OrganismsProductStage extends Component {
                     </div>
                     <MoleculesButton className='c-button--full-width o-distance-m' type='primary'>
                         In den Warenkorb
-                    </MoleculesButton>*/}
+                    </MoleculesButton> */}
 
-                    {/*<div className='o-block-short o-distance-l'>
+                    {/* <div className='o-block-short o-distance-l'>
 
                         <img src={deliveryTruck} alt='delivery' />
 
@@ -76,13 +74,12 @@ class OrganismsProductStage extends Component {
                                 Bestelle in den nächsten sechs Stunden und du erhälsts deine Lieferung morgen.
                             </p>
                         </div>
-                    </div>*/}
+                    </div> */}
                 </div>
 
-
                 {/**/}
-                {/*<div className="o-flex">*/}
-               {/* <div className="delivery-features">
+                {/* <div className="o-flex"> */}
+                {/* <div className="delivery-features">
                     <div className="c-box">
                         <div className='o-block-short o-block-short--centered t-text-uniform'>
                         <svg className="c-icon c-icon--s o-block-short__short-item" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,8 +112,8 @@ class OrganismsProductStage extends Component {
                             Kostenloser Versand & Rückversand
                         </div>
                     </div>
-                </div>*/}
-                {/*</div>*/}
+                </div> */}
+                {/* </div> */}
 
                 {/*    */}
             </div>

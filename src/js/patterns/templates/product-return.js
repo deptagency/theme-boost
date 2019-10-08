@@ -1,14 +1,14 @@
-import React from 'react';
-import MoleculesButton from "../molecules/buttons/button";
-import MoleculesProductRow from "../molecules/products/product-row";
+import React from 'react'
+import MoleculesButton from '../molecules/buttons/button'
+import MoleculesProductRow from '../molecules/products/product-row'
 
 const TemplatesProductReturn = props => {
     return (
-        <div className="padding--10">
+        <div className='padding--10'>
             <MoleculesProductRow
                 showWishListIcon={false}
                 showCloseIcon={false}
-                showProductCount={true}
+                showProductCount
             />
 
             <div className='padding-top--10'>
@@ -24,10 +24,10 @@ const TemplatesProductReturn = props => {
             </div>
         </div>
     )
-};
+}
 
 TemplatesProductReturn.propTypes = {
 
-};
+}
 
-export default TemplatesProductReturn;
+export default TemplatesProductReturn

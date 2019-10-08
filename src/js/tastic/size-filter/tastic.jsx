@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import AtomsFormLabel from "../../patterns/atoms/forms/form-label";
-import VerticalSwipe from "../../patterns/templates/vertical-swipe";
-import OrganismsSizes from "../../patterns/organisms/sizes/sizes";
+import AtomsFormLabel from '../../patterns/atoms/forms/form-label'
+import VerticalSwipe from '../../patterns/templates/vertical-swipe'
+import OrganismsSizes from '../../patterns/organisms/sizes/sizes'
 
 class SizeFilterTastic extends Component {
-    constructor(props) {
+    constructor (props) {
         super(props)
     }
 
-    render() {
+    render () {
         return (
             <div className='filter-component display-grid'>
                 <AtomsFormLabel className='filter-input-label text-align--center' value='Größe' />

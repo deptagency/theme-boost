@@ -16,7 +16,6 @@ import MoreInfoProductTastic from './more-info-product/tastic'
 import BrandContentfulTastic from './brand-contentful/tastic'
 import HorizontalSpacerTastic from './horisontal-spacer/tastic'
 
-
 export default (() => {
     return {
         'frontastic/boost/header': HeaderTastic,

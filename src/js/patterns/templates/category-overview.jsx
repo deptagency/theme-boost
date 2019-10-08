@@ -14,7 +14,7 @@ import OrganismsHead from '../organisms/base/header'
 import OrganismsFoot from '../organisms/base/foot'
 
 class TemplatesCategoryOverview extends Component {
-    render() {
+    render () {
         return (
             <Fragment>
                 <OrganismsHead />

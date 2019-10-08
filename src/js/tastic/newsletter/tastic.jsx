@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import OrganismsNewsletterBlock from '../../patterns/organisms/blocks/newsletter'
 
 class NewsletterTastic extends Component {
-    constructor(props) {
+    constructor (props) {
         super(props)
     }
 
-    render() {
+    render () {
         return <OrganismsNewsletterBlock />
     }
 }

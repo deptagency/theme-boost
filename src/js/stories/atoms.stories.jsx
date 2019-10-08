@@ -13,29 +13,45 @@ import AtomsFormTextarea from 'js/patterns/catwalk-frontend/atoms/forms/form-tex
 import AtomsFormElements from 'js/patterns/catwalk-frontend/atoms/forms/form'
 
 storiesOf('1.Atoms|Text', module)
-  .add('Paragraph', () => (
-    <AtomsParagraph />
-  ))
-  .add('Blockquote', () => (
-    <AtomsBlockquote />
-  ))
-  .add('HTML Headlines', () => (
-    <AtomsHeadline />
-  ))
+    .add('Paragraph', () => {
+        return (
+            <AtomsParagraph />
+        )
+    })
+    .add('Blockquote', () => {
+        return (
+            <AtomsBlockquote />
+        )
+    })
+    .add('HTML Headlines', () => {
+        return (
+            <AtomsHeadline />
+        )
+    })
 
 storiesOf('1.Atoms|Form', module)
-  .add('Collection', () => ( 
-    <AtomsFormElements />
-  ))
-  .add('Label', () => (
-    <AtomsFormLabel />
-  ))
-  .add('Textarea', () => (
-    <AtomsFormTextarea />
-  ))
-  .add('Input', () => (
-    <AtomsFormInput />
-  ))
-  .add('Input', () => (
-    <AtomsFormInput />
-  ))
+    .add('Collection', () => {
+        return (
+            <AtomsFormElements />
+        )
+    })
+    .add('Label', () => {
+        return (
+            <AtomsFormLabel />
+        )
+    })
+    .add('Textarea', () => {
+        return (
+            <AtomsFormTextarea />
+        )
+    })
+    .add('Input', () => {
+        return (
+            <AtomsFormInput />
+        )
+    })
+    .add('Input', () => {
+        return (
+            <AtomsFormInput />
+        )
+    })
