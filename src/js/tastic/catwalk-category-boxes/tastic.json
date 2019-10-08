@@ -1,5 +1,5 @@
 {
-    "tasticType": "catwalk-category-boxes",
+    "tasticType": "frontastic/boost/category-boxes",
     "name": "Catwalk Category Boxes",
     "icon": "menu",
     "category": "Catwalk",

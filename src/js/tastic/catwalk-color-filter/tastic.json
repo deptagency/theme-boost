@@ -1,5 +1,5 @@
 {
-    "tasticType": "catwalk-color-filter",
+    "tasticType": "frontastic/boost/color-filter",
     "name": "Catwalk Color Filter",
     "icon": "menu",
     "category": "catwalk",

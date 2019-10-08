@@ -1,5 +1,5 @@
 {
-    "tasticType": "catwalk-hero",
+    "tasticType": "frontastic/boost/hero",
     "name": "Catwalk Hero",
     "icon": "menu",
     "category": "Catwalk Hero",

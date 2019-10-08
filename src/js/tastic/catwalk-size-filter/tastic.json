@@ -1,5 +1,5 @@
 {
-    "tasticType": "catwalk-size-filter",
+    "tasticType": "frontastic/boost/size-filter",
     "name": "Catwalk Size Filter",
     "icon": "menu",
     "category": "catwalk",

@@ -1,5 +1,5 @@
 {
-    "tasticType": "catwalk-cart",
+    "tasticType": "frontastic/boost/cart",
     "name": "Catwalk Cart",
     "icon": "cart",
     "category": "Catwalk",

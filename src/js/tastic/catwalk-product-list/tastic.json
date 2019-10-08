@@ -1,5 +1,5 @@
 {
-    "tasticType": "catwalk-product-list",
+    "tasticType": "frontastic/boost/product-list",
     "name": "Catwalk Product List",
     "icon": "menu",
     "category": "Catwalk",

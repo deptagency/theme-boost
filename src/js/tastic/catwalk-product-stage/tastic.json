@@ -1,5 +1,5 @@
 {
-    "tasticType": "catwalk-product-stage",
+    "tasticType": "frontastic/boost/product-stage",
     "name": "Catwalk Product Stage",
     "icon": "menu",
     "category": "Catwalk Product Stage",

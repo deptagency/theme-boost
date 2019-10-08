@@ -1,5 +1,5 @@
 {
-    "tasticType": "catwalk-newsletter",
+    "tasticType": "frontastic/boost/newsletter",
     "name": "Catwalk Newsletter",
     "icon": "menu",
     "category": "Catwalk Newsletter",

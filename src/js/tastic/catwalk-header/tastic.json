@@ -1,5 +1,5 @@
 {
-    "tasticType": "catwalk-header",
+    "tasticType": "frontastic/boost/header",
     "name": "Catwalk Header",
     "icon": "menu",
     "category": "Catwalk Frontend",

@@ -1,5 +1,5 @@
 {
-    "tasticType": "catwalk-promobox",
+    "tasticType": "frontastic/boost/promobox",
     "name": "Catwalk Promo Box",
     "icon": "menu",
     "category": "Catwalk Promo Box",
