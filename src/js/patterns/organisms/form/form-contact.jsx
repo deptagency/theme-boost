@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 import ComponentInjector from '../../../app/injector'
-import OrganismsChoice from 'js/patterns/catwalk-frontend/organisms/form/form-choice'
-import MoleculesFormFromTo from 'js/patterns/catwalk-frontend/molecules/forms/form-element-from-to'
+import OrganismsChoice from 'js/patterns/organisms/form/form-choice'
+import MoleculesFormFromTo from 'js/patterns/molecules/forms/form-element-from-to'
 
 class OrganismsFormContact extends Component {
     render () {
