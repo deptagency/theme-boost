@@ -6,7 +6,8 @@ import { withInfo } from '@storybook/addon-info'
 import { withFrontasticRedux } from '../src/js/helper/storybook/redux'
 
 import Container from './Container'
-import '../src/scss/catwalk-frontend/boost.scss'
+//import '../src/scss/catwalk-frontend/boost.scss'
+import '../src/scss/app.scss'
 
 addParameters({
     viewport: {
@@ -77,9 +78,5 @@ addDecorator(withFrontasticRedux)
 addDecorator((story) => <Container story={story} />)
 
 // automatically import all files ending in *.stories.js
-const req = require.context('../src/js/stories', true, /\.stories\.js$/)
-function loadStories() {
-    req.keys().forEach((filename) => req(filename))
-}
+configure(require.context('../src', true, /\.stories\.js$/), module);
 
-configure(loadStories, module)
