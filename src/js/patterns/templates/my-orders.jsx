@@ -1,7 +1,7 @@
 import React from 'react'
 import MoleculesBadge from '../molecules/badges/badge'
-import purpleArrowLeft from '../../../../icons/catwalk-frontend/purple-arrow-left.svg'
-import purpleArrowRight from '../../../../icons/catwalk-frontend/purple-arrow-right.svg'
+import purpleArrowLeft from '../../../../icons/purple-arrow-left.svg'
+import purpleArrowRight from '../../../../icons/purple-arrow-right.svg'
 import MoleculesButton from '../molecules/buttons/button'
 import MoleculesArrowPanelBack from '../molecules/buttons/arrow-panel-back'
 

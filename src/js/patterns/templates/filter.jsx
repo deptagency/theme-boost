@@ -8,7 +8,7 @@ import VerticalSwipe from './vertical-swipe'
 import OrganismsSorting from '../organisms/sorting/sorting'
 import MoleculesButton from '../molecules/buttons/button'
 import MoleculesColorsFilter from '../molecules/colorsfilter/colors-filter'
-import arrowLeft from '../../../../icons/catwalk-frontend/arrow-left.svg'
+import arrowLeft from '../../../../icons/arrow-left.svg'
 
 const TemplatesFilter = ({ setIsOpen, count }) => {
     return (
