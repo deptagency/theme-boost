@@ -1,8 +1,8 @@
 {
     "tasticType": "frontastic/boost/product-list",
-    "name": "Catwalk Product List",
+    "name": "Product List",
     "icon": "menu",
-    "category": "Catwalk",
+    "category": "Boost Theme",
     "schema": [
         {
             "name": "Title",

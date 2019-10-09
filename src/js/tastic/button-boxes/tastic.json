@@ -1,8 +1,8 @@
 {
     "tasticType": "frontastic/boost/category-button-boxes",
-    "name": "Catwalk Category Button Boxes",
+    "name": "Category Button Boxes",
     "icon": "menu",
-    "category": "Catwalk",
+    "category": "Boost Theme",
     "schema": [
         {
             "name": "Boxes",

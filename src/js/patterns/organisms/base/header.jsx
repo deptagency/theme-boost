@@ -8,7 +8,7 @@ import MoleculesUserIconNav from '../../molecules/navigations/user-icon-nav'
 import MobileMenuToggle from '../../molecules/buttons/mobile-menu-toggle'
 
 const OrganismsHead = ({ genderNavEntries }) => {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     return (
         <div className='o-header'>
             <div className='o-header__top'>

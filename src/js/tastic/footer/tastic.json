@@ -1,6 +1,6 @@
 {
     "tasticType": "frontastic/boost/footer",
-    "name": "Catwalk Footer",
+    "name": "Footer",
     "icon": "menu",
     "category": "Catwalk Frontend",
     "schema": [
