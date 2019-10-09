@@ -1,4 +1,4 @@
-import React, { useState, createPortal } from 'react'
+import React, { useState } from 'react'
 
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 
@@ -82,7 +82,7 @@ interactiveCart.story = {
 }
 
 export const cartSlideIn = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false) // eslint-disable-line react-hooks/rules-of-hooks
     const emptyCart = boolean('Empty cart', false)
 
     return [
@@ -113,7 +113,7 @@ cartSlideIn.story = {
 }
 
 export const cartSlideUp = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false) // eslint-disable-line react-hooks/rules-of-hooks
     const emptyCart = boolean('Empty cart', false)
 
     return [

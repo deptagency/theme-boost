@@ -23,7 +23,7 @@ export const media = () => {
         <div>
             <div className='o-media-block'>
                 <div className='o-media-block__asset'>
-                    <img src='https://images.unsplash.com/photo-1510598969022-c4c6c5d05769?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80' />
+                    <img src='https://images.unsplash.com/photo-1510598969022-c4c6c5d05769?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80' alt='' />
                 </div>
                 <div className='o-media-block__body'>
                     <p className='c-topic u-text-light'>Topic</p>
