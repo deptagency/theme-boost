@@ -5,7 +5,7 @@
     "category": "Boost Theme",
     "schema": [
         {
-            "name": "Title",
+            "name": "Stream Selection",
             "fields": [
                 {
                     "label": "title",
@@ -25,6 +25,12 @@
                     "type": "stream",
                     "streamType": "product-list",
                     "default": null
+                },
+                {
+                    "label": "# Products",
+                    "field": "productCount",
+                    "type": "integer",
+                    "default": 5
                 }
             ]
         }
