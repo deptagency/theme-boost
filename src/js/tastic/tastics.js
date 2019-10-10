@@ -15,6 +15,7 @@ import DeliveryFeaturesTastic from './delivery-features/tastic'
 import MoreInfoProductTastic from './more-info-product/tastic'
 import BrandContentfulTastic from './brand-contentful/tastic'
 import HorizontalSpacerTastic from './horisontal-spacer/tastic'
+import FrontasticHeaderTastic from './frontastic-header/tastic'
 
 export default (() => {
     return {
@@ -35,5 +36,6 @@ export default (() => {
         'frontastic/boost/more-info-product': MoreInfoProductTastic,
         'frontastic/boost/brand-contentful': BrandContentfulTastic,
         'frontastic/boost/horizontal-spacer': HorizontalSpacerTastic,
+        'frontastic/boost/frontastic-header': FrontasticHeaderTastic,
     }
 })()
