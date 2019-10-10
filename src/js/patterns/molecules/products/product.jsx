@@ -33,7 +33,8 @@ class MoleculesProduct extends Component {
                             backgroundImage: `url(${variants[0].images[0]})`,
                             backgroundSize: 'contain',
                             backgroundRepeat: 'no-repeat',
-                                width,
+                            backgroundPosition: 'center',
+                                // width,
                                 height: '256px',
                         }}
                         />
