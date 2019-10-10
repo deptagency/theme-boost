@@ -21,21 +21,28 @@ class MoleculesProduct extends Component {
         const discountedPrice = isNull(variants[0].discountedPrice) ? '24,95' : variants[0].discountedPrice // 24,95
         const designer = isNull(variants[0].designer) || isUndefined(variants[0].designer) ? 'Vero Moda' : variants[0].designer // Vero Moda
 
-
         let style = {}
         if (typeof width !== 'undefined') { style = { width } }
 
         return (<div className={className} style={style}>
             <article className='o-product'>
-                <div href='' className='o-product__asset' title=''>
+                <div className='o-product__asset' title=''>
                     <div className='o-head-up'>
-                        <img src={variants[0].images[0] || NoImage} alt='' className='' />
-                        {/* <div className='o-head-up__item o-head-up__item--top-left'>
+                        {/* <img src={variants[0].images[0] || NoImage} alt='' className='' /> */}
+                        <div style={{
+                            backgroundImage: `url(${variants[0].images[0]})`,
+                            backgroundSize: 'contain',
+                            backgroundRepeat: 'no-repeat',
+                                width,
+                                height: '256px',
+                        }}
+                        />
+                        <div className='o-head-up__item o-head-up__item--top-left'>
                             <MoleculesSticker />
                         </div>
                         <div className='o-head-up__item o-head-up__item--top-right'>
                             <MoleculesWishlist />
-                        </div> */}
+                        </div>
                         {/* <div className='o-head-up__item o-head-up__item--middle-right'>
                             <div className='o-product__options c-box t-ghost'>
                                 <MoleculesColorSwatch />
@@ -45,7 +52,8 @@ class MoleculesProduct extends Component {
                 </div>
                 <div className='o-product__header o-distance-s'>
                     <div className='o-product__header__large-column'>
-                        <h3 className='c-title-level-4 deee'>{name}</h3>
+                        {/* <p className='t-text-quiet'>{name}</p> */}
+                        <h3 className='c-title-level-4'>{name}</h3>
                         {designer && (<p className='t-text-quiet'>{designer}</p>)}
                     </div>
                     <div>

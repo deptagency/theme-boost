@@ -25,7 +25,7 @@ class ProductListTastic extends Component {
 
                 <div className='catwalk-product-list-tastic'>
                     {productsToShow.map((product) => {
-                        return <MoleculesProduct product={product} className='product-list-item' width='150px' />
+                        return <MoleculesProduct product={product} className='product-list-item' width='275px' />
                     })}
                 </div>
             </VerticalSwipe>
