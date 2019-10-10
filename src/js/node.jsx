@@ -101,7 +101,6 @@ class Node extends Component {
                     </ScrollContext.Provider>
                 </Scrollbars>
             : null}
-            <Loading large entity={this.props.data} />
         </div>)
     }
 }

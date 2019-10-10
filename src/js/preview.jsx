@@ -102,7 +102,6 @@ class Preview extends Component {
                     tastics={this.props.tastics.data}
                 />
             : null}
-            <Loading large entity={this.props.data} />
         </div>)
     }
 }
