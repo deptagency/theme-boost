@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import MoleculesHeading from '../../patterns/molecules/headings/heading'
 import VerticalSwipe from '../../patterns/templates/vertical-swipe'
-import Translatable from '../../component/translatable'
+import Translatable from 'frontastic-catwalk/src/js/component/translatable'
 import { take } from 'lodash'
 import MoleculesSticker from '../../patterns/molecules/sticker/sticker'
 import MoleculesWishlist from '../../patterns/molecules/wishlist/wishlist'

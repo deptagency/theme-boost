@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Reference from '../../../component/reference'
+import Reference from 'frontastic-catwalk/src/js/component/reference'
 
 const NavItem = ({ item, active = false }) => {
     return (

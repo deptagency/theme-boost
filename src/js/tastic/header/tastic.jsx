@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ReferencePropType from '../../component/reference'
+import ReferencePropType from 'frontastic-catwalk/src/js/component/reference'
 
 import Header from '../../patterns/organisms/base/header'
 
