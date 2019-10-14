@@ -2,7 +2,7 @@ import React from 'react'
 import { configure, addDecorator, addParameters } from '@storybook/react'
 import StoryRouter from 'storybook-react-router'
 import { create } from '@storybook/theming'
-import { withFrontasticRedux } from '../src/js/helper/storybook/redux'
+import { withFrontasticRedux } from 'frontastic-catwalk/src/js/helper/storybook/redux'
 
 import Container from './Container'
 import '../src/scss/app.scss'
