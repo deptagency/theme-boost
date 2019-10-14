@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
 import { getTranslation } from 'frontastic-common'
-import ComponentInjector from '../app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class Description extends Component {
     render () {

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import ComponentInjector from '../../../app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import fixture from '../../fixture'
 

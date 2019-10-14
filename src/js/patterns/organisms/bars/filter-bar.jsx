@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-import ComponentInjector from '../../../app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsFilterBar extends Component {
     render () {

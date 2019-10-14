@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-import ComponentInjector from '../../../app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsSizes extends Component {
     render () {

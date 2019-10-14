@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import ComponentInjector from '../../../app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import MoleculesProduct from '../../molecules/products/product'
 import MoleculesHeading from '../../molecules/headings/heading'

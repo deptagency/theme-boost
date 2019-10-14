@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import { Helmet } from 'react-helmet'
-import ComponentInjector from '../app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class Keywords extends Component {
     render () {

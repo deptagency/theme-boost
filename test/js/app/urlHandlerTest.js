@@ -1,7 +1,7 @@
 import _ from 'lodash'
 
-import UrlHandler from '../../../src/js/app/urlHandler'
-import UrlState from '../../../src/js/app/urlHandler/urlState'
+import UrlHandler from 'frontastic-catwalk/src/js/app/urlHandler'
+import UrlState from 'frontastic-catwalk/src/js/app/urlHandler/urlState'
 
 it('it creates new parameters', () => {
     const inputParameters = {
@@ -9,7 +9,7 @@ it('it creates new parameters', () => {
     }
     const originalInputParemeters = _.cloneDeep(inputParameters)
 
-    const routeMock = jest.genMockFromModule('../../../src/js/app/route').default
+    const routeMock = jest.genMockFromModule('frontastic-catwalk/src/js/app/route').default
     routeMock.query = inputParameters
 
     const handler = new UrlHandler(

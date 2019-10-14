@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import ComponentInjector from '../../../app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import OrganismsChoice from 'js/patterns/organisms/form/form-choice'
 import MoleculesFormFromTo from 'js/patterns/molecules/forms/form-element-from-to'
 

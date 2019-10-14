@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import ComponentInjector from '../../../app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class MoleculesFormUnit extends Component {
     render () {

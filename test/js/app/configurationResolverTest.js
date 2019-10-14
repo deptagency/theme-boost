@@ -1,6 +1,6 @@
 import { ConfigurationSchema } from 'frontastic-common'
 
-import configurationResolver from '../../../src/js/app/configurationResolver'
+import configurationResolver from 'frontastic-catwalk/src/js/app/configurationResolver'
 
 describe('configurationResolver', () => {
     it('resolves simple field values', () => {

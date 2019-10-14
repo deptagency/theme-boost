@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
 
-import ErrorBoundary from '../app/errorBoundary'
+import ErrorBoundary from 'frontastic-catwalk/src/js/app/errorBoundary'
 import tasticDataConnector from './tasticDataConnector'
 
 class Tastic extends Component {

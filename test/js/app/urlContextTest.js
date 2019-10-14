@@ -1,4 +1,4 @@
-import UrlContext from '../../../src/js/app/urlContext'
+import UrlContext from 'frontastic-catwalk/src/js/app/urlContext'
 
 it('it filters _ parameters', () => {
     expect(UrlContext.getActionParameters({

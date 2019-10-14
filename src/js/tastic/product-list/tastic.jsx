@@ -68,8 +68,8 @@ class ProductListTastic extends Component {
             <VerticalSwipe sliderId='swipe-content'>
 
                 <div className='catwalk-product-list-tastic'>
-                    {productsToShow.map((product) => {
-                        return <ProductItem product={product} className='product-list-item' width='246px' />
+                    {productsToShow.map((product, i) => {
+                        return <ProductItem key={i} product={product} className='product-list-item' width='246px' />
                     })}
                 </div>
             </VerticalSwipe>

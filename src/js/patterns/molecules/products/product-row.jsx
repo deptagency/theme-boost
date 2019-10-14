@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ComponentInjector from '../../../app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import wishlistHeart from '../../../../icons/wishlist-heart.svg'
 
 import MoleculesDetaillist from '../lists/detaillist'

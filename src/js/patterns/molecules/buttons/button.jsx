@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import _ from 'lodash'
 
-import ComponentInjector from '../../../app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class MoleculesButton extends Component {
     render () {

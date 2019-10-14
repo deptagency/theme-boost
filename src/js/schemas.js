@@ -1,6 +1,6 @@
 import { DefaultSchemas } from 'frontastic-common'
 
-import ComponentInjector from './app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 const schemes = {
     node: ComponentInjector.return(

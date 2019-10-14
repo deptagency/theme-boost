@@ -1,8 +1,8 @@
 import _ from 'lodash'
 
-import ParameterHandlerFactory from '../../../../src/js/app/urlHandler/parameterHandlerFactory'
-import ProductStreamParameters from '../../../../src/js/app/urlHandler/productStreamParameters'
-import UrlState from '../../../../src/js/app/urlHandler/urlState'
+import ParameterHandlerFactory from 'frontastic-catwalk/src/js/app/urlHandler/parameterHandlerFactory'
+import ProductStreamParameters from 'frontastic-catwalk/src/js/app/urlHandler/productStreamParameters'
+import UrlState from 'frontastic-catwalk/src/js/app/urlHandler/urlState'
 
 test('it creates stream parameters', () => {
     const urlState = new UrlState(

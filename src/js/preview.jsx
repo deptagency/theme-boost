@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import app from './app/app'
+import app from 'frontastic-catwalk/src/js/app/app'
 
 import Page from './page/page'
-import Loading from './app/loading'
+import Loading from 'frontastic-catwalk/src/js/app/loading'
 import emptyEntity from 'frontastic-catwalk/src/js/helper/emptyEntity'
 
 class Preview extends Component {

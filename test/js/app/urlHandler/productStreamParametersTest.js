@@ -1,4 +1,4 @@
-import ProductStreamParameters from '../../../../src/js/app/urlHandler/productStreamParameters'
+import ProductStreamParameters from 'frontastic-catwalk/src/js/app/urlHandler/productStreamParameters'
 
 test('is sets filter value correctly', () => {
     let parameters = new ProductStreamParameters({}, false)

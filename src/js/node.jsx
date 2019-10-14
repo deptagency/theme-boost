@@ -5,16 +5,16 @@ import { Scrollbars } from 'react-custom-scrollbars'
 import _ from 'lodash'
 import { ConfigurationSchema } from 'frontastic-common'
 
-import Entity from './app/entity'
+import Entity from 'frontastic-catwalk/src/js/app/entity'
 import emptyEntity from 'frontastic-catwalk/src/js/helper/emptyEntity'
-import Loading from './app/loading'
+import Loading from 'frontastic-catwalk/src/js/app/loading'
 import MetaData from './node/metaData'
 
 import Page from './page/page'
 
-import configurationResolver from './app/configurationResolver'
+import configurationResolver from 'frontastic-catwalk/src/js/app/configurationResolver'
 import schemas from './schemas'
-import { ScrollContext } from './app/scrollContext'
+import { ScrollContext } from 'frontastic-catwalk/src/js/app/scrollContext'
 
 class Node extends Component {
     scrollable = null

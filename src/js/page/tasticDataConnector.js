@@ -1,4 +1,4 @@
-import configurationResolver from '../app/configurationResolver'
+import configurationResolver from 'frontastic-catwalk/src/js/app/configurationResolver'
 
 export default (globalState, props) => {
     if (!props.tastic || !props.data) {

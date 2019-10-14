@@ -6,16 +6,16 @@ import { StaticRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import _ from 'lodash'
 
-import app from './app/app'
-import store from './app/store'
-import Context from './app/context'
-import FrontasticRoute from './app/route'
+import app from 'frontastic-catwalk/src/js/app/app'
+import store from 'frontastic-catwalk/src/js/app/store'
+import Context from 'frontastic-catwalk/src/js/app/context'
+import FrontasticRoute from 'frontastic-catwalk/src/js/app/route'
 
 import Preview from './preview'
 import Node from './node'
 
 import { Helmet } from 'react-helmet'
-import IntlProvider from './app/intlProvider'
+import IntlProvider from 'frontastic-catwalk/src/js/app/intlProvider'
 
 // @TODO: Fork: http://rowanmanning.com/posts/node-cluster-and-express/
 // @TODO: Supervise forks

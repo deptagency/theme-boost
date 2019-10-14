@@ -2,7 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 
 import { ConfigurationSchema } from 'frontastic-common'
-import configurationResolver from '../app/configurationResolver'
+import configurationResolver from 'frontastic-catwalk/src/js/app/configurationResolver'
 
 import Grid from '../patterns/atoms/grid/grid'
 import Row from '../patterns/atoms/grid/row'

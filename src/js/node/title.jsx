@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Helmet } from 'react-helmet'
 
-import ComponentInjector from '../app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import generateTitle from './generateTitle'
 
 class Title extends Component {

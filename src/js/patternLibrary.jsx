@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import _ from 'lodash'
 import QRCode from 'qrcode.react'
 
-import app from './app/app'
+import app from 'frontastic-catwalk/src/js/app/app'
 
 import patterns from './patternLibrary/patternList'
 import { displayName, isReactComponent } from './patternLibrary/functions'
