@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Wishlist from '../../domain/wishlist'
+import Wishlist from 'frontastic-catwalk/src/js/domain/wishlist'
 import app from '../app'
 import Entity from '../entity'
 import Message from '../message'

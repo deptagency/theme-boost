@@ -1,7 +1,7 @@
 import React from 'react'
 import _ from 'lodash'
 
-import Cart from '../../domain/cart'
+import Cart from 'frontastic-catwalk/src/js/domain/cart'
 import app from '../app'
 import Entity from '../entity'
 import Message from '../message'
