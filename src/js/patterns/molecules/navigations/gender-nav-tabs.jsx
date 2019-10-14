@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 
-import useBackgroundImageUrl from 'frontastic-theme-boost/src/js/helper/hooks/useBackgroundImageUrl'
+import useBackgroundImageUrl from 'frontastic-catwalk/src/js/helper/hooks/useBackgroundImageUrl'
 
 const NavItem = ({ item, onClick, isActive }) => {
     return (

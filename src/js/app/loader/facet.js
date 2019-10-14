@@ -1,5 +1,5 @@
 import Entity from '../entity'
-import emptyEntity from '../../helper/emptyEntity'
+import emptyEntity from 'frontastic-catwalk/src/js/helper/emptyEntity'
 import _ from 'lodash'
 
 import { ConfigurationSchema, FacetTypeSchemaMap } from 'frontastic-common'

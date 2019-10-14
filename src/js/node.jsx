@@ -6,7 +6,7 @@ import _ from 'lodash'
 import { ConfigurationSchema } from 'frontastic-common'
 
 import Entity from './app/entity'
-import emptyEntity from './helper/emptyEntity'
+import emptyEntity from 'frontastic-catwalk/src/js/helper/emptyEntity'
 import Loading from './app/loading'
 import MetaData from './node/metaData'
 

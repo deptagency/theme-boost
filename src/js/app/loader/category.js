@@ -1,5 +1,5 @@
 import Entity from '../entity'
-import emptyEntity from '../../helper/emptyEntity'
+import emptyEntity from 'frontastic-catwalk/src/js/helper/emptyEntity'
 
 /**
  * Loader classes like this consolidate all loading monitors for a domain

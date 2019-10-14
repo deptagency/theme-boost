@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { translateTasticData } from '../helper/translateTasticData'
+import { translateTasticData } from 'frontastic-catwalk/src/js/helper/translateTasticData'
 import PropTypes from 'prop-types'
 
 /**

@@ -1,4 +1,4 @@
-import emptyEntity from '../../helper/emptyEntity'
+import emptyEntity from 'frontastic-catwalk/src/js/helper/emptyEntity'
 
 const connector = (globalState) => {
     return {

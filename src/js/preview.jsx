@@ -6,7 +6,7 @@ import app from './app/app'
 
 import Page from './page/page'
 import Loading from './app/loading'
-import emptyEntity from './helper/emptyEntity'
+import emptyEntity from 'frontastic-catwalk/src/js/helper/emptyEntity'
 
 class Preview extends Component {
     constructor (props) {
