@@ -10,6 +10,7 @@ import OrganismsFormRegister from 'js/patterns/organisms/form/form-register'
 import OrganismsFormCreditCard from 'js/patterns/organisms/form/form-credit-card'
 import OrganismsFormSepa from 'js/patterns/organisms/form/form-sepa'
 import OrganismsFormAddress from 'js/patterns/organisms/form/form-address'
+import OrganismsFormAddressChange from 'js/patterns/organisms/form/form-address-change'
 import OrganismsFormPasswordReset from 'js/patterns/organisms/form/form-password-reset'
 
 export default {
@@ -118,4 +119,14 @@ export const address = () => {
 
 address.story = {
     name: 'Address',
+}
+
+export const addressChange = () => {
+    return (
+        <OrganismsFormAddressChange />
+    )
+}
+
+addressChange.story = {
+    name: 'Address Change',
 }
