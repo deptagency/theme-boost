@@ -28,6 +28,14 @@
   grid-gap: $layout-gutter-width;
 }
 
+.o-grid--side-by-side {
+  grid-template-columns: 1fr auto;
+}
+
+.o-grid--half {
+  grid-template-columns: 1fr 1fr;
+}
+
 .o-grid--small-half {
   grid-template-columns: 1fr;
 
