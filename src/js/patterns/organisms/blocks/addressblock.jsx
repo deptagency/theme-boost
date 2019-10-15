@@ -8,11 +8,11 @@ class OrganismsAddressblock extends Component {
       <div>
         <div className="o-grid o-grid--side-by-side">
           <address>
-          <span className='u-text-strong'>Tim Hartmann</span> <br/>
-          Ewaldstr. 2 <br/>
-          59174 Kamen <br/>
-          Deutschland
-        </address>
+            <span className='u-text-strong'>Tim Hartmann</span> <br/>
+            Ewaldstr. 2 <br/>
+            59174 Kamen <br/>
+            Deutschland
+          </address>
           <a href='' className='c-link o-block-short'>
             <svg className='c-icon o-block-short__short-item u-line-height-fix-tiny' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
