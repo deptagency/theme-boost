@@ -2,13 +2,16 @@
 $swiper-column-width: 8px;
 
 .o-swiper {
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.o-swiper__holder {
   display: grid;
   grid-column-gap: $spacing-inset-m;
   grid-template-columns: $swiper-column-width;
   grid-auto-flow: column;
   grid-auto-columns: calc(50% - var(--gutter) * 2);
-  overflow: auto;
-  scroll-snap-type: x proximity;
   margin-left: -($swiper-column-width + $spacing-inset-m);
   margin-right: -($swiper-column-width + $spacing-inset-m);
 
@@ -17,4 +20,27 @@ $swiper-column-width: 8px;
     content: '';
     width: $swiper-column-width;
   }
+}
+
+.o-swiper__item {
+  position: relative;
+  scroll-snap-align: start;
+
+  &.is-active,
+  &:hover {
+    &:before {
+      content: '';
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      background: $color-brand-secondary-base;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.o-swiper__image {
+  max-width: none;
 }
