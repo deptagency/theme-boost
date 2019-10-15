@@ -4,6 +4,7 @@ import OrganismsPromobox from 'js/patterns/molecules/promobox/promobox'
 import OrganismsChoice from 'js/patterns/organisms/form/form-choice'
 import OrganismsProductListing from 'js/patterns/organisms/listings/product-listing'
 import OrganismsProductListingBare from 'js/patterns/organisms/listings/product-listing-bare'
+import OrganismsPaymentListingIcons from 'js/patterns/organisms/listings/payment-listing-icons'
 import OrganismsPaymentListing from 'js/patterns/organisms/listings/payment-listing'
 import OrganismsFeaturebox from 'js/patterns/organisms/featurebox/featurebox'
 import OrganismsCategoryBoxes from 'js/patterns/organisms/listings/category-boxes'
@@ -30,6 +31,16 @@ export const productlistingBare = () => {
 
 productlistingBare.story = {
     name: 'Productlisting Bare',
+}
+
+export const paymentlistingIcons = () => {
+    return (
+        <OrganismsPaymentListingIcons />
+    )
+}
+
+paymentlistingIcons.story = {
+    name: 'Paymentlisting Icons',
 }
 
 export const paymentlisting = () => {
