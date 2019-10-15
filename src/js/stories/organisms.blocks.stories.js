@@ -3,6 +3,7 @@ import React from 'react'
 import OrganismsNewsletterBlock from 'js/patterns/organisms/blocks/newsletter'
 import OrganismsSummary from 'js/patterns/organisms/blocks/summary'
 import OrganismsCreditCard from 'js/patterns/organisms/blocks/creditcard'
+import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
 
 export default {
     title: '3.Organisms|Blocks',
@@ -57,4 +58,14 @@ export const summary = () => {
 
 summary.story = {
     name: 'Summary',
+}
+
+export const addressblock = () => {
+    return (
+        <OrganismsAddressblock />
+    )
+}
+
+addressblock.story = {
+    name: 'Addressblock',
 }
