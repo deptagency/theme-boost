@@ -11,6 +11,7 @@ import OrganismsFormCreditCard from 'js/patterns/organisms/form/form-credit-card
 import OrganismsFormSepa from 'js/patterns/organisms/form/form-sepa'
 import OrganismsFormAddress from 'js/patterns/organisms/form/form-address'
 import OrganismsFormAddressChange from 'js/patterns/organisms/form/form-address-change'
+import OrganismsFormMailChange from 'js/patterns/organisms/form/form-mail-change'
 import OrganismsFormPasswordReset from 'js/patterns/organisms/form/form-password-reset'
 
 export default {
@@ -129,4 +130,14 @@ export const addressChange = () => {
 
 addressChange.story = {
     name: 'Address Change',
+}
+
+export const mailChange = () => {
+    return (
+        <OrganismsFormMailChange />
+    )
+}
+
+mailChange.story = {
+    name: 'Mail Change',
 }
