@@ -1,0 +1,24 @@
+.c-image-thumb {
+    position: relative;
+
+    &:before {
+        content: '';
+        bottom: 0;
+        display: block;
+        height: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        background: $color-brand-secondary-base;
+        @include transition();
+        will-change: height;
+        z-index: 1;
+    }
+
+    &.is-active,
+    &:hover {
+        &:before {
+          height: 5px;
+        }
+    }
+}

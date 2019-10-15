@@ -9,28 +9,44 @@ class OrganismsImageColorSwiper extends Component {
               <div className='o-swiper'>
                   <div className='o-swiper__holder'>
                     <div className='o-swiper__item'> 
-                        <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        <div className='c-image-thumb'>
+                            <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        </div>
                     </div>
                     <div className='o-swiper__item'> 
-                        <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt="" />
+                        <div className='c-image-thumb'>
+                            <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt="" />
+                        </div>
                     </div>
                     <div className='o-swiper__item'> 
-                        <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        <div className='c-image-thumb'>
+                            <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        </div>
                     </div>
                     <div className='o-swiper__item'> 
-                        <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        <div className='c-image-thumb'>
+                            <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        </div>
                     </div>
                     <div className='o-swiper__item'> 
-                        <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        <div className='c-image-thumb'>
+                            <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        </div>
                     </div>
                     <div className='o-swiper__item'> 
-                        <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        <div className='c-image-thumb'>
+                            <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        </div>
                     </div>
                     <div className='o-swiper__item'> 
-                        <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        <div className='c-image-thumb'>
+                            <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        </div>
                     </div>
                     <div className='o-swiper__item'> 
-                        <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        <div className='c-image-thumb'>
+                            <img className='o-swiper__image' src="https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg" width="100px" alt=""/>
+                        </div>
                     </div>
                   </div>
               </div>

@@ -24,20 +24,22 @@ class MoleculesColorSwatch extends Component {
             </div>
             <h3 className='o-distance'>Colorswatch Inline</h3>
             <div className='c-colorswatch'>
-                <ul className='o-list-inline'>
-                    <li className='o-list-inline__item'>
-                        <button className='c-colorswatch__item' />
-                    </li>
-                    <li className='o-list-inline__item'>
-                        <button className='c-colorswatch__item is-active' />
-                    </li>
-                    <li className='o-list-inline__item'>
-                        <button className='c-colorswatch__item' />
-                    </li>
-                    <li className='o-list-inline__item'>
-                        <button className='c-colorswatch__item' />
-                    </li>
-                </ul>
+                <div className='o-swiper'>
+                    <div className="o-swiper__holder">
+                        <div className='o-swiper__item'>
+                            <button className='c-colorswatch__item' />
+                        </div>
+                        <div className='o-swiper__item'>
+                            <button className='c-colorswatch__item is-active' />
+                        </div>
+                        <div className='o-swiper__item'>
+                            <button className='c-colorswatch__item' />
+                        </div>
+                        <div className='o-swiper__item'>
+                            <button className='c-colorswatch__item' />
+                        </div>
+                    </div>
+                </div>
             </div>
             <h3 className='o-distance'>Colorswatch with small items</h3>
             <div className='c-colorswatch'>
