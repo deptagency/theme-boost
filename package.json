@@ -140,7 +140,8 @@
         "check": "node node_modules/.bin/eslint --ext .js --ext .jsx -c ../../../integration/eslint.config.json src/js/ test/js/",
         "fix": "node node_modules/.bin/eslint --fix --ext .js --ext .jsx -c ../../../integration/eslint.config.json src/js/ test/js/",
         "server:start": "NODE_ENV=development nodemon --legacy-watch --watch src/js/ bin/devServer.js --exec babel-node --presets env,react-app",
-        "storybook": "start-storybook -p 6006",
+        "storybook": "yarn style-dictionary:watch | start-storybook -p 9001 -c ../.storybook",
+        "style-dictionary:watch": "cd style-dictionary && yarn watch",
         "build-storybook": "build-storybook"
     },
     "babel": {
