@@ -30,7 +30,7 @@ class OrganismsFormSepa extends Component {
                                     <div className='o-block-short'>
                                         <div className='o-block-short__short-item'>
                                             <div className='c-form-radio'>
-                                                <input type='radio' id='inp-radio-02' name='radio' className='c-form-radio__input' />
+                                                <input type='radio' id='inp-radio-02' name='radio' className='c-form-radio__input' checked />
                                                 <span className='c-form-radio__backdrop' />
                                             </div>
                                         </div>
@@ -48,6 +48,9 @@ class OrganismsFormSepa extends Component {
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-iban' className='c-form-label'>IBAN</label>
                             <input type='text' className='o-distance-xs' id='inp-iban' />
+                        </div>
+                        <div className='o-form-area__column-6-6 o-form-area__new-row'>
+                          <p className='u-text-s t-text-quiet'>Ich erteile der frontastic GmbH, Berlin ein SEPA-Lastschriftmandat für obiges Bankkonto. Ich kann die Erstattung einer Lastschrift innerhalb von 8 Wochen verlangen, nachdem der Betrag belastet wurde.</p>
                         </div>
                     </div>
                 </fieldset>
