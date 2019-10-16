@@ -20,11 +20,11 @@
         "base": { "value": "#ffce18" }
       },
       "gray": {
-        "lightest": { "value": "#f6f8fc" },
-        "lighter": { "value": "#e0e0e2" },
-        "light": { "value": "#c1c2c5" },
-        "base": { "value": "#98999f" },
-        "dark": { "value": "#31333e" }
+        "lightest": { "value": "#F6FAFF" },
+        "lighter": { "value": "#F1F6FC" },
+        "light": { "value": "#D8E0EC" },
+        "base": { "value": "#8C9BB0" },
+        "dark": { "value": "#424F62" }
       }
     }
   }
