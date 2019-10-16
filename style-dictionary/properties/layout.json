@@ -1,0 +1,15 @@
+{
+  "layout": {
+    "breakpoint": {
+      "s": { "value": "480px" },
+      "m": { "value": "600px" },
+      "l": { "value": "767px" },
+      "xl": { "value": "1023px" },
+      "xxl": { "value": "1160px" }
+    },
+    "wrapper-width": { "value": "1000px" },
+    "gutter-width": { "value": "{spacing.inline.m.value}" },
+    "edge-width": { "value": "{spacing.inset.m.value}" },
+    "columns": { "value": "12" }
+  }
+}

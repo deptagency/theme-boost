@@ -1,0 +1,21 @@
+{
+  "form": {
+    "input": {
+      "color": {
+        "background": { "value": "{color.palette.unique.white.value}" },
+        "placeholder": { "value": "{color.palette.gray.light.value}" },
+        "disabled": { "value": "{color.palette.gray.base.value}" }
+      }
+    },
+    "label": {
+      "color": {
+        "base": { "value": "{color.palette.gray.dark.value}" }
+      },
+      "weight": { "value": "{font.weight.base.value}" },
+      "size": { "value": "{font.size.s.value}" }
+    },
+    "legend": {
+      "weight": { "value": "{font.weight.bold.value}" }
+    }
+  }
+}

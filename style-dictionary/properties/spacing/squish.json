@@ -1,0 +1,9 @@
+{
+  "spacing": {
+    "squish": {
+      "s": { "value": "4px 8px" },
+      "m": { "value": "8px 16px" },
+      "l": { "value": "12px 28px" }
+    }
+  }
+}

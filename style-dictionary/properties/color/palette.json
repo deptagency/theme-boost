@@ -1,0 +1,31 @@
+{
+  "color": {
+    "palette": {
+      "unique": {
+        "white": { "value": "#ffffff" },
+        "black": { "value": "#000000" }
+      },
+      "blue": {
+        "lighter": { "value": "#ebecfe" },
+        "light": { "value": "898EF7" },
+        "base": { "value": "#3a42f1" }
+      },
+      "green": {
+        "light": { "value": "#f5fcf1" },
+        "base": { "value": "#98e076" }
+      },
+      "orange": {
+        "lighter": { "value": "#FFF7DC"},
+        "light": { "value": "#FFE274" },
+        "base": { "value": "#ffce18" }
+      },
+      "gray": {
+        "lightest": { "value": "#f6f8fc" },
+        "lighter": { "value": "#e0e0e2" },
+        "light": { "value": "#c1c2c5" },
+        "base": { "value": "#98999f" },
+        "dark": { "value": "#31333e" }
+      }
+    }
+  }
+}

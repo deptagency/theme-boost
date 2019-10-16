@@ -1,0 +1,10 @@
+{
+  "overlay": {
+    "color": {
+      "base": { "value": "{color.palette.unique.black.value}" }
+    },
+    "opacity": { 
+      "base": { "value": ".7" }
+    }
+  }
+}

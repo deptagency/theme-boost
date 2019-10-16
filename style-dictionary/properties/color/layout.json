@@ -1,0 +1,22 @@
+{
+  "color": {
+    "layout": {
+      "ghost": {
+        "base": { "value": "{color.palette.unique.white.value}" },
+        "gradation": { "value": "{color.palette.gray.base.value}" },
+        "inverse": { "value": "{color.palette.gray.dark.value}" }
+      },
+      "universe": {
+        "base": { "value": "{color.palette.gray.dark.value}" },
+        "gradation": { "value": "{color.palette.gray.base.value}" },
+        "pastel": { "value": "{color.palette.gray.light.value}" },
+        "inverse": { "value": "{color.palette.unique.white.value}" }
+      },
+      "spot": {
+        "base": { "value": "{color.brand.primary.base.value}" },
+        "gradation": { "value": "{color.brand.primary.gradation.value}" },
+        "pastel": { "value": "{color.brand.primary.pastel.value}" }
+      }
+    }
+  }
+}

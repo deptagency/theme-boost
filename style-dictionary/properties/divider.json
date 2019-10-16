@@ -1,0 +1,22 @@
+{
+  "divider": {
+    "base": {
+      "color": {
+        "background": {
+          "value": "{color.palette.gray.lighter.value}"
+        }
+      },
+      "height": { "value": "1px" }
+    },
+    "break": {
+      "color": {
+        "background": {
+          "value": "{color.palette.gray.lightest.value}"
+        }
+      },
+      "height": {
+        "value": "5px"
+      }
+    }
+  }
+}

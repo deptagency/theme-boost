@@ -1,0 +1,12 @@
+{
+  "link": {
+    "color": {
+      "base": { "value": "{color.brand.primary.base.value}" },
+      "hover": { "value": "{color.brand.primary.gradation.value}" },
+      "quiet": {
+        "base": { "value": "{font.color.secondary.value}" },
+        "hover": { "value": "{color.brand.primary.base}" }
+      }
+    }
+  }
+}
