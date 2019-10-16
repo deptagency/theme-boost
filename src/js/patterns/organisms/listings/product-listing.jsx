@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import MoleculesProduct from '../../molecules/products/product'
+import OrganismsProduct from '../products/product'
 import MoleculesHeading from '../../molecules/headings/heading'
 
 class OrganismsProductListing extends Component {
@@ -12,10 +12,10 @@ class OrganismsProductListing extends Component {
                 <section className='o-distance o-prevent-space'>
                     <MoleculesHeading />
                     <div className='o-grid o-grid--large-forth'>
-                        <MoleculesProduct />
-                        <MoleculesProduct />
-                        <MoleculesProduct />
-                        <MoleculesProduct />
+                        <OrganismsProduct />
+                        <OrganismsProduct />
+                        <OrganismsProduct />
+                        <OrganismsProduct />
                     </div>
                 </section>
             </div>

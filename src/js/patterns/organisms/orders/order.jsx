@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
-import OrganismsProductListingBare from 'js/patterns/organisms/listings/product-listing-bare'
+import OrganismsBundleListing from 'js/patterns/organisms/listings/bundle-listing'
 import OrganismsFormCoupon from 'js/patterns/organisms/form/form-coupon'
 import OrganismsSummary from 'js/patterns/organisms/blocks/summary'
 import MoleculesButton from 'js/patterns/molecules/buttons/button'
@@ -72,7 +72,7 @@ class OrganismsOrder extends Component {
                 <section className='o-distance'>
                   <h2 className='c-title-level-3'>Artikel</h2>
                   <div className="o-distance-m">
-                    <OrganismsProductListingBare />
+                    <OrganismsBundleListing />
                   </div>
                 </section>
                 <span className="c-divider c-divider--break o-distance"></span>

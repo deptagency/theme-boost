@@ -3,7 +3,7 @@ import React from 'react'
 import OrganismsPromobox from 'js/patterns/molecules/promobox/promobox'
 import OrganismsChoice from 'js/patterns/organisms/form/form-choice'
 import OrganismsProductListing from 'js/patterns/organisms/listings/product-listing'
-import OrganismsProductListingBare from 'js/patterns/organisms/listings/product-listing-bare'
+import OrganismsBundleListing from 'js/patterns/organisms/listings/bundle-listing'
 import OrganismsPaymentListingIcons from 'js/patterns/organisms/listings/payment-listing-icons'
 import OrganismsPaymentListing from 'js/patterns/organisms/listings/payment-listing'
 import OrganismsFeaturebox from 'js/patterns/organisms/featurebox/featurebox'
@@ -23,14 +23,14 @@ productlisting.story = {
     name: 'Productlisting',
 }
 
-export const productlistingBare = () => {
+export const bundlelisting = () => {
     return (
-        <OrganismsProductListingBare />
+        <OrganismsBundleListing />
     )
 }
 
-productlistingBare.story = {
-    name: 'Productlisting Bare',
+bundlelisting.story = {
+    name: 'Bundle Listing',
 }
 
 export const paymentlistingIcons = () => {
@@ -98,44 +98,6 @@ export const categoryBoxes = () => {
 
 categoryBoxes.story = {
     name: 'Category Boxes',
-}
-
-export const chiplist = () => {
-    return (
-        <div className='o-chiplist'>
-            <div className='c-chip o-chiplist__item'>
-                <span>Blau</span>
-                <button className='c-chip__trigger'>
-                    <svg className='c-icon c-icon--s' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-                        <title>cross</title>
-                        <path d='M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z' />
-                    </svg>
-                </button>
-            </div>
-            <div className='c-chip o-chiplist__item'>
-                <span>Tommy Hilfiger</span>
-                <button className='c-chip__trigger'>
-                    <svg className='c-icon c-icon--s' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-                        <title>cross</title>
-                        <path d='M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z' />
-                    </svg>
-                </button>
-            </div>
-            <div className='c-chip o-chiplist__item is-active'>
-                <span>Größe 46</span>
-                <button className='c-chip__trigger'>
-                    <svg className='c-icon c-icon--s' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-                        <title>cross</title>
-                        <path d='M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z' />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    )
-}
-
-chiplist.story = {
-    name: 'Chiplist',
 }
 
 export const choices = () => {

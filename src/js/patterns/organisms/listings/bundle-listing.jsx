@@ -2,27 +2,27 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import MoleculesProductRow from '../../molecules/products/product-row'
+import OrganismsBundle from '../bundles/bundle'
 
-class OrganismsProductListingCart extends Component {
+class OrganismsBundleListing extends Component {
     render () {
         return (
             <div>
                 <section className='o-list-bare'>
                     <div className='o-list-bare__item'>
-                        <MoleculesProductRow />
+                        <OrganismsBundle />
                     </div>
                     <span className='c-divider o-list-bare__item' />
                     <div className='o-list-bare__item'>
-                        <MoleculesProductRow />
+                        <OrganismsBundle />
                     </div>
                     <span className='c-divider o-list-bare__item' />
                     <div className='o-list-bare__item'>
-                        <MoleculesProductRow />
+                        <OrganismsBundle />
                     </div>
                     <span className='c-divider o-list-bare__item' />
                     <div className='o-list-bare__item'>
-                        <MoleculesProductRow />
+                        <OrganismsBundle />
                     </div>
                 </section>
             </div>
@@ -30,8 +30,8 @@ class OrganismsProductListingCart extends Component {
     }
 }
 
-OrganismsProductListingCart.propTypes = {}
+OrganismsBundleListing.propTypes = {}
 
-OrganismsProductListingCart.defaultProps = {}
+OrganismsBundleListing.defaultProps = {}
 
-export default ComponentInjector.return('OrganismsProductListingCart', OrganismsProductListingCart)
+export default ComponentInjector.return('OrganismsBundleListing', OrganismsBundleListing)

@@ -3,7 +3,7 @@ $swiper-column-width: 8px;
 
 .o-swiper {
   overflow: auto;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
 }
 
 .o-swiper__holder {
@@ -14,6 +14,7 @@ $swiper-column-width: 8px;
   grid-auto-columns: calc(50% - var(--gutter) * 2);
   margin-left: -($swiper-column-width + $spacing-inset-m);
   margin-right: -($swiper-column-width + $spacing-inset-m);
+  padding-left: $spacing-inset-m;
 
   &:before,
   &:after {

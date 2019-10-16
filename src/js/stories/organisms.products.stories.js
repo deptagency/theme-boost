@@ -1,6 +1,6 @@
 import React from 'react'
 
-import MoleculesProduct from 'js/patterns/molecules/products/product'
+import OrganismsProduct from 'js/patterns/organisms/products/product'
 
 export default {
     title: '3.Organisms|Products',
@@ -8,7 +8,7 @@ export default {
 
 export const product = () => {
     return (
-        <MoleculesProduct />
+        <OrganismsProduct />
     )
 }
 
