@@ -13,5 +13,5 @@ export const order = () => {
 }
 
 order.story = {
-    name: 'Order Sepa',
+    name: 'Order All',
 }

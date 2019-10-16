@@ -67,6 +67,17 @@ class OrganismsOrder extends Component {
                       <dd>DE 28 1234 5678 9876 52</dd>
                     </dl>
                   </div>
+                  <div className="c-frame t-spotlight-border o-distance-m">
+                    <p className='c-title-level-4'>Kreditkarte</p>
+                    <dl className='o-distance-m'>
+                      <dt className='o-distance-s t-text-quiet'>Visa:</dt> 
+                      <dd>1234 XXXX XXXX XXXX</dd>
+                    </dl>
+                  </div>
+                  <div className="c-frame t-spotlight-border o-distance-m">
+                    <p className='c-title-level-4'>Rechnung</p>
+                    <p className='o-distance-s'>Bitte das Geld innerhalb von 14 Tagen überweisen.</p>
+                  </div>
                 </section>
                 <span className="c-divider c-divider--break o-distance"></span>
                 <section className='o-distance'>
