@@ -50,7 +50,7 @@ MoleculesChip.defaultProps = {
   className: '',
   active: null,
   selected: null,
-  deleteabeld: null,
+  deleteable: null,
   title: "Chip",
   htmlType: null,
 }
