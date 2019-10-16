@@ -1,7 +1,7 @@
 {
   "border": {
     "color": {
-      "base": { "value": "{color.palette.gray.lighter.value}" },
+      "base": { "value": "{color.palette.gray.light.value}" },
       "focus": { "value": "{color.brand.primary.base.value}" }
     },
     "radius": {
