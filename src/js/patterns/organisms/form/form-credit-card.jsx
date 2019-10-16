@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 
+import OrganismsCreditCard from '../blocks/creditcard'
+
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsFormCreditCard extends Component {
     render () {
         return (<div>
             <form method=''>
+                <OrganismsCreditCard />
                 <fieldset>
                     <div className='o-form-area o-distance-m'>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>

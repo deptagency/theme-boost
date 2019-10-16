@@ -6,7 +6,6 @@ import OrganismsProductListing from 'js/patterns/organisms/listings/product-list
 import OrganismsBundleListing from 'js/patterns/organisms/listings/bundle-listing'
 import OrganismsPaymentListingIcons from 'js/patterns/organisms/listings/payment-listing-icons'
 import OrganismsPaymentListing from 'js/patterns/organisms/listings/payment-listing'
-import OrganismsFeaturebox from 'js/patterns/organisms/featurebox/featurebox'
 import OrganismsCategoryBoxes from 'js/patterns/organisms/listings/category-boxes'
 
 export default {
@@ -121,18 +120,4 @@ export const choices = () => {
 
 choices.story = {
     name: 'Choices',
-}
-
-export const features = () => {
-    return (
-        <div className='o-grid o-grid--small-half'>
-            <OrganismsFeaturebox />
-            <OrganismsFeaturebox />
-            <OrganismsFeaturebox />
-        </div>
-    )
-}
-
-features.story = {
-    name: 'Features',
 }

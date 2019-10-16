@@ -4,6 +4,8 @@ import OrganismsNewsletterBlock from 'js/patterns/organisms/blocks/newsletter'
 import OrganismsSummary from 'js/patterns/organisms/blocks/summary'
 import OrganismsCreditCard from 'js/patterns/organisms/blocks/creditcard'
 import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
+import OrganismsDeliveryBlock from 'js/patterns/organisms/blocks/delivery'
+import OrganismsDeliveryFeatures from 'js/patterns/organisms/blocks/delivery-features'
 
 export default {
     title: '3.Organisms|Blocks',
@@ -68,4 +70,14 @@ export const addressblock = () => {
 
 addressblock.story = {
     name: 'Addressblock',
+}
+
+export const deliveryBlock = () => {
+    return (
+        <OrganismsDeliveryFeatures />
+    )
+}
+
+deliveryBlock.story = {
+    name: 'Delivery Block',
 }
