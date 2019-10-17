@@ -9,9 +9,7 @@ import ProductListTastic from './product-list/tastic.jsx'
 import NewsletterTastic from './newsletter/tastic'
 import ProductStageTastic from './product-stage/tastic'
 import SizeFilterTastic from './size-filter/tastic'
-import ColorFilterTastic from './color-filter/tastic'
 import AddToCartButtonTastic from './add-to-cart-button/tastic'
-import DeliveryFeaturesTastic from './delivery-features/tastic'
 import MoreInfoProductTastic from './more-info-product/tastic'
 import BrandContentfulTastic from './brand-contentful/tastic'
 import HorizontalSpacerTastic from './horisontal-spacer/tastic'
@@ -30,9 +28,7 @@ export default (() => {
         'frontastic/boost/newsletter': NewsletterTastic,
         'frontastic/boost/product-stage': ProductStageTastic,
         'frontastic/boost/size-filter': SizeFilterTastic,
-        'frontastic/boost/color-filter': ColorFilterTastic,
         'frontastic/boost/add-to-cart-button': AddToCartButtonTastic,
-        'frontastic/boost/delivery-features': DeliveryFeaturesTastic,
         'frontastic/boost/more-info-product': MoreInfoProductTastic,
         'frontastic/boost/brand-contentful': BrandContentfulTastic,
         'frontastic/boost/horizontal-spacer': HorizontalSpacerTastic,
