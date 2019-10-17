@@ -1,10 +1,7 @@
 import React, { Fragment } from 'react'
 import deliveryTruck from '../../../../icons/delivery-truck.svg'
-import truckSmall from '../../../../icons/truck-small.svg'
-import billSmall from '../../../../icons/bill-small.svg'
-import packageSmall from '../../../../icons/package-small.svg'
 
-import OrganismsFeatureListing from 'js/patterns/organisms/listings/feature-listing'
+import OrganismsFeatureListing from '../listings/feature-listing'
 
 const OrganismsDeliveryFeatures = () => {
     return (

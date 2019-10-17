@@ -16,6 +16,7 @@ import HorizontalSpacerTastic from './horisontal-spacer/tastic'
 import FrontasticHeaderTastic from './frontastic-header/tastic'
 import CheckOrderTastic from './check-order/tastic'
 import OrderConfirmationTastic from './order-confirmation/tastic'
+import DeliveryFeaturesTastic from './delivery-details/tastic'
 
 export default (() => {
     return {
@@ -37,5 +38,6 @@ export default (() => {
         'frontastic/boost/frontastic-header': FrontasticHeaderTastic,
         'frontastic/boost/check-order': CheckOrderTastic,
         'frontastic/boost/order-confirmation': OrderConfirmationTastic,
+        'frontastic/boost/delivery-features': DeliveryFeaturesTastic,
     }
 })()
