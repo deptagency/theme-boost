@@ -19,7 +19,7 @@ class OrganismsListingFeatures extends Component {
 }
 
 OrganismsListingFeatures.propTypes = {
-    
+
 }
 
 OrganismsListingFeatures.defaultProps = {

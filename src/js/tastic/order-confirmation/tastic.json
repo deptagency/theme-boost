@@ -1,6 +1,6 @@
 {
     "tasticType": "frontastic/boost/order-confirmation",
-    "name": "Check Order",
+    "name": "Order Confirmation",
     "icon": "menu",
     "category": "Boost Theme",
     "schema": [

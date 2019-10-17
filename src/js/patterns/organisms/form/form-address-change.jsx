@@ -69,37 +69,37 @@ class OrganismsFormAddressChange extends Component {
                             </select>
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <ul class="o-list-bare">
-                              <li class="o-list-bare__item">
-                                <div class="o-block-short">
-                                  <div class="o-block-short__short-item">
-                                    <div class="c-form-checkbox">
-                                      <input type="checkbox" id="inp-checkbox-02" name="checkbox" class="c-form-checkbox__input" checked />
-                                      <span class="c-form-checkbox__backdrop"></span>
-                                      <svg class="c-form-checkbox__icon" x="0px" y="0px" viewBox="0 0 200 200"><path id="Check" class="st0" d="M189.3,18.4c-10-6.6-23.4-4.6-31.1,4.7L81.1,127.9L37.2,95.6c-10.4-7.7-25-5.4-32.7,4.9 c-7.7,10.4-5.4,25,4.9,32.7l0,0l60,44.2c5.7,4.2,13,5.6,19.9,3.7c6.7-0.4,13.1-3.5,17.4-9.3l89.2-121 C203,40.1,200.1,25.5,189.3,18.4z"></path></svg>
+                            <ul className='o-list-bare'>
+                                <li className='o-list-bare__item'>
+                                    <div className='o-block-short'>
+                                        <div className='o-block-short__short-item'>
+                                            <div className='c-form-checkbox'>
+                                                <input type='checkbox' id='inp-checkbox-02' name='checkbox' className='c-form-checkbox__input' checked />
+                                                <span className='c-form-checkbox__backdrop' />
+                                                <svg className='c-form-checkbox__icon' x='0px' y='0px' viewBox='0 0 200 200'><path id='Check' className='st0' d='M189.3,18.4c-10-6.6-23.4-4.6-31.1,4.7L81.1,127.9L37.2,95.6c-10.4-7.7-25-5.4-32.7,4.9 c-7.7,10.4-5.4,25,4.9,32.7l0,0l60,44.2c5.7,4.2,13,5.6,19.9,3.7c6.7-0.4,13.1-3.5,17.4-9.3l89.2-121 C203,40.1,200.1,25.5,189.3,18.4z' /></svg>
+                                            </div>
+                                        </div>
+                                        <div className='o-block-short__body'>
+                                            <label htmlFor='inp-checkbox-02' className='c-form-label'>Lieferadresse</label>
+                                        </div>
                                     </div>
-                                  </div>
-                                  <div class="o-block-short__body">
-                                    <label for="inp-checkbox-02" class="c-form-label">Lieferadresse</label>
-                                  </div>
-                                </div>
-                              </li>
-                              <li class="o-list-bare__item">
-                                <div class="o-block-short">
-                                  <div class="o-block-short__short-item">
-                                    <div class="c-form-checkbox">
-                                      <input type="checkbox" id="inp-checkbox-02" name="checkbox" class="c-form-checkbox__input" />
-                                      <span class="c-form-checkbox__backdrop"></span>
-                                      <svg class="c-form-checkbox__icon" x="0px" y="0px" viewBox="0 0 200 200">
-                                        <path id="Check" class="st0" d="M189.3,18.4c-10-6.6-23.4-4.6-31.1,4.7L81.1,127.9L37.2,95.6c-10.4-7.7-25-5.4-32.7,4.9 c-7.7,10.4-5.4,25,4.9,32.7l0,0l60,44.2c5.7,4.2,13,5.6,19.9,3.7c6.7-0.4,13.1-3.5,17.4-9.3l89.2-121 C203,40.1,200.1,25.5,189.3,18.4z"></path>
-                                      </svg>
+                                </li>
+                                <li className='o-list-bare__item'>
+                                    <div className='o-block-short'>
+                                        <div className='o-block-short__short-item'>
+                                            <div className='c-form-checkbox'>
+                                                <input type='checkbox' id='inp-checkbox-02' name='checkbox' className='c-form-checkbox__input' />
+                                                <span className='c-form-checkbox__backdrop' />
+                                                <svg className='c-form-checkbox__icon' x='0px' y='0px' viewBox='0 0 200 200'>
+                                                    <path id='Check' className='st0' d='M189.3,18.4c-10-6.6-23.4-4.6-31.1,4.7L81.1,127.9L37.2,95.6c-10.4-7.7-25-5.4-32.7,4.9 c-7.7,10.4-5.4,25,4.9,32.7l0,0l60,44.2c5.7,4.2,13,5.6,19.9,3.7c6.7-0.4,13.1-3.5,17.4-9.3l89.2-121 C203,40.1,200.1,25.5,189.3,18.4z' />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div className='o-block-short__body'>
+                                            <label htmlFor='inp-checkbox-02' className='c-form-label'>Rechnungsadresse</label>
+                                        </div>
                                     </div>
-                                  </div>
-                                  <div class="o-block-short__body">
-                                    <label for="inp-checkbox-02" class="c-form-label">Rechnungsadresse</label>
-                                  </div>
-                                </div>
-                              </li>
+                                </li>
                             </ul>
                         </div>
                     </div>

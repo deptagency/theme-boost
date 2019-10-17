@@ -7,27 +7,27 @@ export default {
 }
 
 export const Deleteable = () => {
-  return (
-    <MoleculesChip deleteable="true" />
-  )
+    return (
+        <MoleculesChip deleteable='true' />
+    )
 }
 export const ActiveDeleteable = () => {
-  return (
-    <MoleculesChip active="true" deleteable="true" />
-  )
+    return (
+        <MoleculesChip active='true' deleteable='true' />
+    )
 }
 export const SelectedDeleteable = () => {
-  return (
-    <MoleculesChip selected="true" deleteable="true" />
-  )
+    return (
+        <MoleculesChip selected='true' deleteable='true' />
+    )
 }
 export const Default = () => {
-  return (
-    <MoleculesChip component="button" />
-  )
+    return (
+        <MoleculesChip component='button' />
+    )
 }
 export const Active = () => {
-  return (
-    <MoleculesChip component="button" active="true" />
-  )
+    return (
+        <MoleculesChip component='button' active='true' />
+    )
 }
