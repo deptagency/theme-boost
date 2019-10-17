@@ -1,15 +1,24 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
-import OrganismsBundleListing from 'js/patterns/organisms/listings/bundle-listing'
-import OrganismsFormCoupon from 'js/patterns/organisms/form/form-coupon'
-import OrganismsSummary from 'js/patterns/organisms/blocks/summary'
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
+import OrganismsAddressblock from '../blocks/addressblock'
+import OrganismsBundleListing from '../listings/bundle-listing'
+import OrganismsFormCoupon from '../form/form-coupon'
+import OrganismsSummary from '../blocks/summary'
 
+import MoleculesButton from '../../molecules/buttons/button'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
+
+const paymentType = {
+    directDebit: 'direct-debit',
+    creditCard: 'credit-card',
+    invoice: 'invoice',
+}
 
 class OrganismsOrder extends Component {
     render () {
+        const { paymentType: pt } = this.props
+
         return (
             <div>
                 <OrganismsAddressblock />
@@ -57,27 +66,27 @@ class OrganismsOrder extends Component {
                       <span className='o-block-short__body'>Ändern</span>
                     </a>
                   </div>
-                  <div className="c-frame t-spotlight-border o-distance-m">
+                  {pt === paymentType.directDebit && <div className="c-frame t-spotlight-border o-distance-m">
                     <p className='c-title-level-4'>SEPA-Lastschrift</p>
                     <p className='o-distance-s'>Das Geld wird in den nächsten fünf Tagen von Ihrem angegebenen Konto abgebucht.</p>
                     <dl className='o-distance-m'>
-                      <dt className='t-text-quiet'>Kontoinhaber:</dt> 
+                      <dt className='t-text-quiet'>Kontoinhaber:</dt>
                       <dd>Max Mustermann</dd>
-                      <dt className='o-distance-s t-text-quiet'>IBAN:</dt> 
+                      <dt className='o-distance-s t-text-quiet'>IBAN:</dt>
                       <dd>DE 28 1234 5678 9876 52</dd>
                     </dl>
-                  </div>
-                  <div className="c-frame t-spotlight-border o-distance-m">
+                  </div>}
+                  {pt === paymentType.creditCard && <div className="c-frame t-spotlight-border o-distance-m">
                     <p className='c-title-level-4'>Kreditkarte</p>
                     <dl className='o-distance-m'>
-                      <dt className='o-distance-s t-text-quiet'>Visa:</dt> 
+                      <dt className='o-distance-s t-text-quiet'>Visa:</dt>
                       <dd>1234 XXXX XXXX XXXX</dd>
                     </dl>
-                  </div>
-                  <div className="c-frame t-spotlight-border o-distance-m">
+                  </div>}
+                  {pt === paymentType.invoice && <div className="c-frame t-spotlight-border o-distance-m">
                     <p className='c-title-level-4'>Rechnung</p>
                     <p className='o-distance-s'>Bitte das Geld innerhalb von 14 Tagen überweisen.</p>
-                  </div>
+                  </div>}
                 </section>
                 <span className="c-divider c-divider--break o-distance"></span>
                 <section className='o-distance'>
@@ -104,6 +113,7 @@ class OrganismsOrder extends Component {
 }
 
 OrganismsOrder.propTypes = {
+    paymentType: PropTypes.oneOf(paymentType.directDebit, paymentType.creditCard, paymentType.invoice).isRequired
 }
 
 OrganismsOrder.defaultProps = {
