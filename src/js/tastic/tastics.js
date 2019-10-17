@@ -17,6 +17,7 @@ import FrontasticHeaderTastic from './frontastic-header/tastic'
 import CheckOrderTastic from './check-order/tastic'
 import OrderConfirmationTastic from './order-confirmation/tastic'
 import DeliveryFeaturesTastic from './delivery-details/tastic'
+import DirectDebitLoginTastic from './direct-debit-login/tastic'
 
 export default (() => {
     return {
@@ -39,5 +40,6 @@ export default (() => {
         'frontastic/boost/check-order': CheckOrderTastic,
         'frontastic/boost/order-confirmation': OrderConfirmationTastic,
         'frontastic/boost/delivery-features': DeliveryFeaturesTastic,
+        'frontastic/boost/direct-debit-login': DirectDebitLoginTastic,
     }
 })()
