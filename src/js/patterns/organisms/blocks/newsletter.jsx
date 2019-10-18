@@ -4,8 +4,8 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsNewsletterBlock extends Component {
     render () {
-        return (<div>
-            <div className='c-box t-spotlight margin-12'>
+        return (
+            <div className='c-box t-spotlight'>
                 <div className='o-grid o-grid--medium-half'>
                     <div>
                         <p className='c-topic t-text-ghost'>Exklusive Rabatte</p>
@@ -22,7 +22,7 @@ class OrganismsNewsletterBlock extends Component {
                     </div>
                 </div>
             </div>
-        </div>)
+        )
     }
 }
 

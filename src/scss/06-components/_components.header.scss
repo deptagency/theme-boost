@@ -3,6 +3,7 @@
 // Header
 .c-header {
   padding: $spacing-inset-s $layout-edge-width;
+  border-bottom: 1px solid $border-color-base;
 }
 .c-header__wrapper {
   align-items: center;

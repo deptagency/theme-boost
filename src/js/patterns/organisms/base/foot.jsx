@@ -5,7 +5,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 class OrganismsFooter extends Component {
     render () {
         return (
-            <footer className='o-footer c-footer t-universe margin-12' role='contentinfo'>
+            <footer className='o-footer c-footer t-universe' role='contentinfo'>
                 <div className='o-container'>
                     <div className='o-footer__top c-footer__top'>
                         <div className='c-box t-quietlight o-footer__top__item'>

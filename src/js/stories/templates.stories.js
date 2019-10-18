@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 
 import TemplatesOrderBilling from '../patterns/templates/order/order-billing'
+import TemplatesEmptyCart from '../patterns/templates/cart/empty-cart'
 
 // import TemplatesHome from '../patterns/templates/home'
 // import VerticalSwipe from '../patterns/templates/vertical-swipe'
@@ -35,6 +36,14 @@ export const orderBilling = () => {
 
 orderBilling.story = {
     name: 'Order Billing',
+}
+
+export const templateEmptyCart = () => {
+  return  <TemplatesEmptyCart />
+}
+
+templateEmptyCart.story = {
+    name: 'Cart Empty',
 }
 
 // export const home = () => { return <TemplatesHome /> }
