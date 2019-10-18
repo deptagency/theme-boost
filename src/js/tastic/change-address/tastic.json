@@ -1,0 +1,12 @@
+{
+    "tasticType": "frontastic/boost/change-address",
+    "name": "Change Address",
+    "icon": "menu",
+    "category": "Boost Theme",
+    "schema": [
+        {
+            "name": "Company Menu",
+            "fields": []
+        }
+    ]
+}

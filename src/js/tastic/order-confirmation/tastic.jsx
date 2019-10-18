@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import OrganismsOrder from '../../patterns/organisms/orders/order.jsx'
+import OrganismsOrderConfirmation from '../../patterns/organisms/orders/order-confirmation.jsx'
 
-class CheckOrderTastic extends Component {
+class OrderConfirmationTastic extends Component {
     render () {
         const { data: { paymentType } } = this.props
 
         return (
-            <OrganismsOrder paymentType={paymentType} />
+            <OrganismsOrderConfirmation paymentType={paymentType} />
         )
     }
 }
 
-CheckOrderTastic.propTypes = {
+OrderConfirmationTastic.propTypes = {
     data: PropTypes.object.isRequired,
     // tastic: PropTypes.object.isRequired,
 }
 
-CheckOrderTastic.defaultProps = {}
+OrderConfirmationTastic.defaultProps = {}
 
-export default CheckOrderTastic
+export default OrderConfirmationTastic

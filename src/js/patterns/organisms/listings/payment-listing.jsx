@@ -8,10 +8,10 @@ class OrganismsPaymentListing extends Component {
     render () {
         return (
             <div className='o-grid o-grid--half'>
-                <MoleculesChip title="PayPal" />
-                <MoleculesChip title="SEPA-Lastschrift" />
-                <MoleculesChip title="Kreditkarte" active="true" />
-                <MoleculesChip title="Rechnung" />
+                <MoleculesChip title='PayPal' />
+                <MoleculesChip title='SEPA-Lastschrift' />
+                <MoleculesChip title='Kreditkarte' active='true' />
+                <MoleculesChip title='Rechnung' />
             </div>
         )
     }

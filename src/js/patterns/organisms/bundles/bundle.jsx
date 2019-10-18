@@ -23,7 +23,7 @@ class OrganismBundle extends Component {
                         <p className='t-text-quiet'>Ballkleid</p>
                     </div>
                     <button>
-                        {showCloseIcon && <svg width="20" height="20" class="c-icon c-icon--s c-icon--outline t-text-quiet" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        {showCloseIcon && <svg width='20' height='20' className='c-icon c-icon--s c-icon--outline t-text-quiet' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
                             {/* eslint-disable */}
                                 <path d="M1.25 3.75H18.75" stroke="#97A5BA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 <path d="M11.875 1.25H8.125C7.79348 1.25 7.47554 1.3817 7.24112 1.61612C7.0067 1.85054 6.875 2.16848 6.875 2.5V3.75H13.125V2.5C13.125 2.16848 12.9933 1.85054 12.7589 1.61612C12.5245 1.3817 12.2065 1.25 11.875 1.25Z" stroke="#97A5BA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -37,19 +37,19 @@ class OrganismBundle extends Component {
                 <div className='o-bundle__body'>
                     <MoleculesDetaillist />
                     {this.props.showChangeCounter ?
-                        <select name="" id="" className='o-distance-s'>
-                          <option value="36">36</option>
-                          <option value="38">38</option>
-                          <option value="40">40</option>
-                          <option value="42">42</option>
-                          <option value="44">44</option>
+                        <select name='' id='' className='o-distance-s'>
+                            <option value='36'>36</option>
+                            <option value='38'>38</option>
+                            <option value='40'>40</option>
+                            <option value='42'>42</option>
+                            <option value='44'>44</option>
                         </select>
                     : null }
                 </div>
                 <div className='o-bundle__footer'>
-                  <span className='c-price'>39,95 €</span>
-                  {this.props.showWishlistButton ?
-                      <p><a href="" className='c-link c-link--quiet u-text-s'>Auf den Wunschzettel</a></p>
+                    <span className='c-price'>39,95 €</span>
+                    {this.props.showWishlistButton ?
+                        <p><a href='' className='c-link c-link--quiet u-text-s'>Auf den Wunschzettel</a></p>
                   : null }
                 </div>
             </article>
@@ -61,14 +61,14 @@ OrganismBundle.propTypes = {
     showWishListIcon: PropTypes.bool,
     showCloseIcon: PropTypes.bool,
     showChangeCounter: PropTypes.bool,
-    showWishlistButton: PropTypes.bool
+    showWishlistButton: PropTypes.bool,
 }
 
 OrganismBundle.defaultProps = {
     showWishListIcon: false,
     showCloseIcon: true,
     showChangeCounter: false,
-    showWishlistButton: false
+    showWishlistButton: false,
 }
 
 export default ComponentInjector.return('OrganismBundle', OrganismBundle)
