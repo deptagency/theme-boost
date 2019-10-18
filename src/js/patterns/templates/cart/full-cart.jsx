@@ -1,30 +1,42 @@
 import React from 'react'
-import OrganismsProductListingInCart from '../../organisms/listings/product-listing-in-cart'
-import OrganismsPaymentListing from '../../organisms/listings/payment-listing'
+import OrganismsPaymentListingIcons from '../../organisms/listings/payment-listing-icons'
 import OrganismsSummary from '../../organisms/blocks/summary'
 import MoleculesButton from '../../molecules/buttons/button'
+import OrganismsBundleListing from '../../organisms/listings/bundle-listing'
+import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
+import OrganismsFooter from 'js/patterns/organisms/base/foot'
 
 const TemplatesFullCart = () => {
     return (
         <div>
-            <div className='full-cart-content'>
-                <OrganismsProductListingInCart />
-                <div className='full-cart-payment-list'>
-                    <h4>Bezahlarten</h4>
-
-                    <OrganismsPaymentListing />
+            <OrganismsHeaderMobile />
+            <section className='o-container o-prevent-space o-distance'>
+                <h1 className='c-title-level-3'>Mein Warenkorb</h1>
+                <div className='o-distance'>
+                    <OrganismsBundleListing />
                 </div>
-
-                <OrganismsSummary />
-
-                <p className='u-text-s t-text-quiet full-cart-coupons-info'>
-                    Gutscheincodes können Sie im letzten Schritt der Bestellung eingeben.
-                </p>
-
-                <MoleculesButton size='full-width' type='primary'>
-                    ZUR KASSE
+            </section>
+            <span className='c-divider c-divider--break o-distance'></span>
+            <section className='o-container o-prevent-space o-distance'>
+                <h2 className='c-title-level-3'>Bezahlarten</h2>
+                <OrganismsPaymentListingIcons />
+            </section>
+            <span className='c-divider c-divider--break o-distance'></span>
+            <section className='o-container o-prevent-space o-distance'>
+                <h2 className='c-title-level-3'>Gesamtsumme</h2>
+                <div className="o-distance-s">
+                    <OrganismsSummary />
+                    <p className='o-distance-m u-text-s t-text-quiet'>
+                        Gutscheincodes können Sie im letzten Schritt der Bestellung eingeben.
+                    </p>
+                </div>
+            </section>
+            <div className='o-container o-prevent-space o-distance'>
+                <MoleculesButton size='boss' type='primary'>
+                    Zur Kasse
                 </MoleculesButton>
             </div>
+            <OrganismsFooter />
         </div>
     )
 }
