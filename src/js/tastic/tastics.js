@@ -15,6 +15,16 @@ import BrandContentfulTastic from './brand-contentful/tastic'
 import HorizontalSpacerTastic from './horisontal-spacer/tastic'
 import FrontasticHeaderTastic from './frontastic-header/tastic'
 import CheckOrderTastic from './check-order/tastic'
+import OrderConfirmationTastic from './order-confirmation/tastic'
+import DeliveryFeaturesTastic from './delivery-details/tastic'
+import DirectDebitLoginTastic from './direct-debit-login/tastic'
+import AddAddressTastic from './add-address/tastic'
+import AddAddressOnCheckoutTastic from './add-address-on-checkout/tastic'
+import CreditCardTastic from './credit-card/tastic'
+import ProductColorFilterTastic from './product-color-filter/tastic'
+import ChangeEmailTastic from './change-email/tastic'
+import ChangeAddressTastic from './change-address/tastic'
+import ChangePasswordTastic from './change-password/tastic'
 
 export default (() => {
     return {
@@ -35,5 +45,15 @@ export default (() => {
         'frontastic/boost/horizontal-spacer': HorizontalSpacerTastic,
         'frontastic/boost/frontastic-header': FrontasticHeaderTastic,
         'frontastic/boost/check-order': CheckOrderTastic,
+        'frontastic/boost/order-confirmation': OrderConfirmationTastic,
+        'frontastic/boost/delivery-features': DeliveryFeaturesTastic,
+        'frontastic/boost/direct-debit-login': DirectDebitLoginTastic,
+        'frontastic/boost/add-address': AddAddressTastic,
+        'frontastic/boost/add-address-on-checkout': AddAddressOnCheckoutTastic,
+        'frontastic/boost/credit-card': CreditCardTastic,
+        'frontastic/boost/product-color-filter': ProductColorFilterTastic,
+        'frontastic/boost/change-email': ChangeEmailTastic,
+        'frontastic/boost/change-address': ChangeAddressTastic,
+        'frontastic/boost/change-password': ChangePasswordTastic,
     }
 })()
