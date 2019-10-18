@@ -19,6 +19,7 @@ import OrderConfirmationTastic from './order-confirmation/tastic'
 import DeliveryFeaturesTastic from './delivery-details/tastic'
 import DirectDebitLoginTastic from './direct-debit-login/tastic'
 import AddAddressTastic from './add-address/tastic'
+import AddAddressOnCheckoutTastic from './add-address-on-checkout/tastic'
 import CreditCardTastic from './credit-card/tastic'
 import ProductColorFilterTastic from './product-color-filter/tastic'
 import ChangeEmailTastic from './change-email/tastic'
@@ -48,6 +49,7 @@ export default (() => {
         'frontastic/boost/delivery-features': DeliveryFeaturesTastic,
         'frontastic/boost/direct-debit-login': DirectDebitLoginTastic,
         'frontastic/boost/add-address': AddAddressTastic,
+        'frontastic/boost/add-address-on-checkout': AddAddressOnCheckoutTastic,
         'frontastic/boost/credit-card': CreditCardTastic,
         'frontastic/boost/product-color-filter': ProductColorFilterTastic,
         'frontastic/boost/change-email': ChangeEmailTastic,
