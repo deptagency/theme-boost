@@ -22,6 +22,7 @@ import AddAddressTastic from './add-address/tastic'
 import CreditCardTastic from './credit-card/tastic'
 import ProductColorFilterTastic from './product-color-filter/tastic'
 import ChangeEmailTastic from './change-email/tastic'
+import ChangeAddressTastic from './change-address/tastic'
 
 export default (() => {
     return {
@@ -49,5 +50,6 @@ export default (() => {
         'frontastic/boost/credit-card': CreditCardTastic,
         'frontastic/boost/product-color-filter': ProductColorFilterTastic,
         'frontastic/boost/change-email': ChangeEmailTastic,
+        'frontastic/boost/change-address': ChangeAddressTastic,
     }
 })()
