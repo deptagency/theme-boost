@@ -42,6 +42,6 @@ export default (() => {
         'frontastic/boost/order-confirmation': OrderConfirmationTastic,
         'frontastic/boost/delivery-features': DeliveryFeaturesTastic,
         'frontastic/boost/direct-debit-login': DirectDebitLoginTastic,
-        'frontastic/boost/add-adress': AddAddressTastic,
+        'frontastic/boost/add-address': AddAddressTastic,
     }
 })()
