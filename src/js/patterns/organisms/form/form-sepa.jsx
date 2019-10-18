@@ -43,15 +43,19 @@ class OrganismsFormSepa extends Component {
                                 </li>
                             </ul>
                         </div>
-                        <OrganismsFormBanking />
+                        <div className='o-form-area__column-6-6 o-form-area__new-row'>
+                            <label htmlFor='inp-bank-owner' className='c-form-label'>Kontoinhaber</label>
+                            <input type='text' className='o-distance-xs' id='inp-bank-owner' />
+                        </div>
+                        <div className='o-form-area__column-6-6 o-form-area__new-row'>
+                            <label htmlFor='inp-iban' className='c-form-label'>IBAN</label>
+                            <input type='text' className='o-distance-xs' id='inp-iban' />
+                        </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <p className='u-text-s t-text-quiet'>Ich erteile der frontastic GmbH, Berlin ein SEPA-Lastschriftmandat für obiges Bankkonto. Ich kann die Erstattung einer Lastschrift innerhalb von 8 Wochen verlangen, nachdem der Betrag belastet wurde.</p>
                         </div>
                     </div>
                 </fieldset>
-                <div className='o-distance-l'>
-                    <button type='submit' className='c-button c-button--primary c-button--boss'>Speichern</button>
-                </div>
             </form>
         </div>)
     }

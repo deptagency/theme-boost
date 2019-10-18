@@ -2,12 +2,13 @@
 $theme-spotlight-main-color: $color-brand-primary-base !default;
 $theme-spotlight-font-color: $color-palette-unique-white !default;
 
-// Theme
+// @theme Spotlight
 .t-spotlight {
   background-color: $theme-spotlight-main-color;
   color: $theme-spotlight-font-color;
 }
 
+// @theme Spotlight Border
 .t-spotlight-border {
   border-color: $theme-spotlight-main-color;
 }

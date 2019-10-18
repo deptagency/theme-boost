@@ -1,19 +1,28 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsHeaderSlideIn extends Component {
     render () {
+        const Component = this.props.component
         const { title, setIsOpen } = this.props
 
         return (
-            <header role='contentinfo' className='c-context-header t-spotlight'>
+            <Component
+              {..._.omit(this.props, ['children', 'component', 'className', 'theme', 'title', 'setIsOpen'])}
+              className={classnames(
+                  'c-context-header',
+                  this.props.className,
+                  this.props.theme
+              )}
+              >
                 <div className='o-container c-context-header__wrapper'>
 
                     <div className='c-context-header__middle'>
                         <div className='o-flex o-flex--justify-center'>
-                            <h1 className='c-title-level-4 c-context-header__title o-flex__item'>
+                            <h1 className='c-title-level-3 c-context-header__title o-flex__item'>
                                 {title}
                             </h1>
                         </div>
@@ -24,18 +33,24 @@ class OrganismsHeaderSlideIn extends Component {
                         </svg>
                     </button>
                 </div>
-            </header>
+            </Component>
         )
     }
 }
 
 OrganismsHeaderSlideIn.propTypes = {
+    children: PropTypes.node.isRequired,
+    component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    className: PropTypes.string,
     title: PropTypes.string.isRequired,
-    setIsOpen: PropTypes.func.isRequired,
+    setIsOpen: PropTypes.func.isRequired
 }
 
 OrganismsHeaderSlideIn.defaultProps = {
-    title: '',
+    component: 'header',
+    theme: 't-spotlight',
+    className: '',
+    title: ''
 }
 
 export default ComponentInjector.return('OrganismsHeaderSlideIn', OrganismsHeaderSlideIn)
