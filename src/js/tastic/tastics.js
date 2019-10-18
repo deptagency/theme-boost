@@ -23,6 +23,7 @@ import CreditCardTastic from './credit-card/tastic'
 import ProductColorFilterTastic from './product-color-filter/tastic'
 import ChangeEmailTastic from './change-email/tastic'
 import ChangeAddressTastic from './change-address/tastic'
+import ChangePasswordTastic from './change-password/tastic'
 
 export default (() => {
     return {
@@ -51,5 +52,6 @@ export default (() => {
         'frontastic/boost/product-color-filter': ProductColorFilterTastic,
         'frontastic/boost/change-email': ChangeEmailTastic,
         'frontastic/boost/change-address': ChangeAddressTastic,
+        'frontastic/boost/change-password': ChangePasswordTastic,
     }
 })()
