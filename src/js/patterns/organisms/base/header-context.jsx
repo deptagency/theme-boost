@@ -4,7 +4,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 class OrganismsHeaderContext extends Component {
     render () {
         return (
-            <header role='contentinfo' className='c-context-header t-spotlight'>
+            <header role='contentinfo' className='c-context-header'>
                 <div className='o-container c-context-header__wrapper'>
                     <button>
                         <svg className='c-icon c-icon--m' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>

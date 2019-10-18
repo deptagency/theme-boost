@@ -4,6 +4,7 @@
 // Insert some User Interactions and shows the user where he / she is
 .c-context-header {
   padding: $spacing-inset-s $layout-edge-width;
+  border-bottom: 1px solid $border-color-base;
   text-align: center;
 }
 
