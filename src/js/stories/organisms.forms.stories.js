@@ -14,6 +14,7 @@ import OrganismsFormAddressChange from 'js/patterns/organisms/form/form-address-
 import OrganismsFormMailChange from 'js/patterns/organisms/form/form-mail-change'
 import OrganismsFormPasswordReset from 'js/patterns/organisms/form/form-password-reset'
 import OrganismsFormCoupon from 'js/patterns/organisms/form/form-coupon'
+import OrganismsFormBanking from 'js/patterns/organisms/form/form-banking'
 
 export default {
     title: '3.Organisms|Forms',
@@ -101,6 +102,16 @@ export const sepaForm = () => {
 
 sepaForm.story = {
     name: 'SEPA Form',
+}
+
+export const bankingForm = () => {
+    return (
+        <OrganismsFormBanking />
+    )
+}
+
+bankingForm.story = {
+    name: 'Banking Form',
 }
 
 export const passwordResetForm = () => {

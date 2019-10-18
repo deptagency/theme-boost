@@ -73,6 +73,14 @@ class OrganismsOrderConfirmation extends Component {
                   <div className='c-frame t-spotlight-border o-distance-m'>
                     <p className='c-title-level-4'>Rechnung</p>
                     <p className='o-distance-s'>Bitte das Geld innerhalb von 14 Tagen überweisen.</p>
+                    <dl className='o-distance-m'>
+                      <dt className='t-text-quiet'>Zahlungsempfänger</dt> 
+                      <dd>Catwalk</dd>
+                      <dt className='o-distance-s t-text-quiet'>IBAN:</dt> 
+                      <dd>DE 28 1234 5678 9876 52</dd>
+                      <dt className='o-distance-s t-text-quiet'>Verwendungszweck:</dt> 
+                      <dd>123456789</dd>
+                    </dl>
                   </div>
                 </section>
             </div>
