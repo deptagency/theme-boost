@@ -26,3 +26,18 @@
     white-space: nowrap;
   }
 }
+
+// @component Referal
+// @variation Bordered
+.c-referal--bordered {
+  padding: $spacing-inset-m;
+  border-bottom: 1px solid $border-color-base;
+  border-top: 1px solid $border-color-base;
+  text-transform: uppercase;
+
+  .c-referal__body {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

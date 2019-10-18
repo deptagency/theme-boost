@@ -2,6 +2,7 @@ import React from 'react'
 
 import MoleculesReferal from 'js/patterns/molecules/links/referal'
 import MoleculesReferalOneLiner from 'js/patterns/molecules/links/referal-one-liner'
+import MoleculesReferalBordered from 'js/patterns/molecules/links/referal-bordered'
 
 export default {
     title: '2.Molecules|Links',
@@ -51,4 +52,12 @@ export const referalOneLiner = () => {
 
 referalOneLiner.story = {
     name: 'Referal One Liner',
+}
+
+export const referalBordered = () => {
+    return <MoleculesReferalBordered />
+}
+
+referalBordered.story = {
+    name: 'Referal Bordered',
 }
