@@ -5,6 +5,8 @@ import { withKnobs, boolean } from '@storybook/addon-knobs'
 import TemplatesOrderBilling from '../patterns/templates/order/order-billing'
 import TemplatesEmptyCart from '../patterns/templates/cart/empty-cart'
 import TemplatesFullCart from '../patterns/templates/cart/full-cart'
+import TemplatesEmptyWishlist from '../patterns/templates/cart/empty-wishlist'
+import TemplatesFullWishlist from '../patterns/templates/cart/full-wishlist'
 
 // import TemplatesHome from '../patterns/templates/home'
 // import VerticalSwipe from '../patterns/templates/vertical-swipe'
@@ -53,6 +55,22 @@ export const templateFullCart = () => {
 
 templateFullCart.story = {
     name: 'Full Cart',
+}
+
+export const templateEmptyWishlist = () => {
+  return  <TemplatesEmptyWishlist />
+}
+
+templateEmptyWishlist.story = {
+    name: 'Wishlist Empty',
+}
+
+export const templateFullWishlist = () => {
+  return  <TemplatesFullWishlist />
+}
+
+templateFullWishlist.story = {
+    name: 'Full Wishlist',
 }
 
 // export const home = () => { return <TemplatesHome /> }
