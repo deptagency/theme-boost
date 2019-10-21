@@ -75,7 +75,7 @@ $button-control-size: 48px !default;
 /// Quite Button
 /// @group Buttons
 .c-button--quiet {
-  border-color: $button-quiet-border-color;
+  @include border($button-quiet-border-color);
   background-color: $button-quiet-background-color;
   color: $button-quiet-font-color;
 
@@ -88,7 +88,7 @@ $button-control-size: 48px !default;
 /// Destructive Button
 /// @group Buttons
 .c-button--destructive {
-  border-color: $color-semantic-danger-base;
+  @include border($color-semantic-danger-base);
   background-color: $color-semantic-danger-base;
   color: $color-palette-unique-white;
 
@@ -102,7 +102,7 @@ $button-control-size: 48px !default;
 /// Ghost Button
 /// @group Buttons
 .c-button--ghost {
-  border-color: $button-ghost-border-color;
+  @include border($button-ghost-border-color);
   background-color: $button-ghost-background-color;
   color: $button-ghost-font-color;
 
@@ -115,7 +115,7 @@ $button-control-size: 48px !default;
 /// Plain Button
 /// @group Buttons
 .c-button--plain {
-  border-color: $button-plain-border-color;
+  @include border($button-plain-border-color);
   background-color: $button-plain-background-color;
   color: $button-plain-font-color;
 }

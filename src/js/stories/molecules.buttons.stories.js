@@ -39,6 +39,11 @@ export const allButtons = () => {
                     Minion Button
                 </MoleculesButton>
             </p>
+            <p>
+                <MoleculesButton type="quiet" icon='true' onClick={action('clicked')}>
+                    Button with Icon
+                </MoleculesButton>
+            </p>
         </div>
     )
 }
