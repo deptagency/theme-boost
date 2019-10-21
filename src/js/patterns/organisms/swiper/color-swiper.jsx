@@ -9,7 +9,7 @@ const OrganismsColorSwiper = ({ colors, className }) => {
         <div className={`${className} o-swiper filter-colors`}>
             <div className='o-swiper__holder'>
                 {colors.map((c, i) => {
-                    return <div className='o-swiper__item'>
+                    return <div className='o-swiper__item u-text-center'>
                         <button
                             className={classnames({
                                 'c-colorswatch__item': true,
@@ -17,6 +17,7 @@ const OrganismsColorSwiper = ({ colors, className }) => {
                             })}
                             style={{ background: `${c}` }}
                          />
+                         <span className='u-text-xs'>{c}</span>
                     </div>
                 })}
             </div>

@@ -9,12 +9,22 @@
   &:hover {
     color: $link-color-hover;
   }
+
+  // Active Item includes a selected value
+  &.is-active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .c-referal__body {
   padding-right: $spacing-inline-m;
 }
 .c-referal__icon {
   flex-shrink: 0;
+}
+.c-referal__offset {
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 // @component Referal

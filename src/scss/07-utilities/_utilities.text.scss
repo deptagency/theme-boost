@@ -48,3 +48,13 @@
 .u-icon-line-height {
   line-height: 0 !important;
 }
+
+.u-text-nowrap {
+  white-space: nowrap;
+}
+
+.u-text-one-liner {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

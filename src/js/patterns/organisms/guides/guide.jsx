@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import MoleculesFormFromTo from '../../molecules/forms/form-element-from-to'
 import MoleculesFormCheckboxList from '../../molecules/forms/form-checkbox-list'
 import OrganismsColorSwiper from '../../organisms/swiper/color-swiper'
 import OrganismsSizeSwiper from '../../organisms/swiper/size-swiper'
+import OrganismsSortingSwiper from '../../organisms/swiper/sorting-swiper'
+import MoleculesReferalBordered from '../../molecules/links/referal-bordered'
 
 class OrganismsGuide extends Component {
     render () {
@@ -39,7 +42,7 @@ class OrganismsGuide extends Component {
                     </header>
                     <div className='o-television__display'>
                         <section>
-                            <label htmlFor='' className='c-title-level-4'>Größe</label>
+                            <label htmlFor='' className='c-title-level-4'>Sizes</label>
                             <div className='o-television__display__boundless o-distance-s'>
                                 <OrganismsSizeSwiper />
                             </div>
@@ -47,8 +50,17 @@ class OrganismsGuide extends Component {
                         <div className='o-television__display__boundless'>
                             <span className='c-divider c-divider--break o-distance-m' />
                         </div>
+                        <section className="o-distance-m">
+                          <label htmlFor='' className='c-title-level-4'>Sorting</label>
+                          <div className='o-television__display__boundless o-distance-s'>
+                              <OrganismsSortingSwiper />
+                          </div>
+                        </section>
+                        <div className='o-television__display__boundless'>
+                            <span className='c-divider c-divider--break o-distance-m' />
+                        </div>
                         <section className='o-distance-m'>
-                            <label htmlFor='' className='c-title-level-4'>Farbe</label>
+                            <label htmlFor='' className='c-title-level-4'>Colors</label>
                             <div className='o-television__display__boundless o-distance-s'>
                                 <OrganismsColorSwiper />
                             </div>
@@ -57,27 +69,23 @@ class OrganismsGuide extends Component {
                             <span className='c-divider c-divider--break o-distance-m' />
                         </div>
                         <section className='o-distance-m'>
-                            <label htmlFor=''>Preis</label>
+                            <label htmlFor='' className='c-title-level-4'>Price</label>
                             <input type='range' className='o-distance-s' />
                             <MoleculesFormFromTo />
                         </section>
-                        <div className='o-television__display__boundless'>
-                            <span className='c-divider c-divider--break o-distance-m' />
+                        <section className='o-television__display__boundless o-distance-m'>
+                            <MoleculesReferalBordered title='Brand' />
+                            <MoleculesReferalBordered title='Material' />
+                            <MoleculesReferalBordered title='Patterns' />
+                            <MoleculesReferalBordered title='Newness' />
+                        </section>
+                        <div className="c-holder o-television__display__boundless c-box t-quietlight">
+                          <a href='' className='c-logo' title='Catwalk'>
+                              Catwalk
+                          </a>
                         </div>
-                        <section className='o-distance-m'>
-                            <label htmlFor='sel-brand' className='c-title-level-4'>Marke</label>
-                            <select name='' id='sel-brand' className='o-distance-s'>
-                                <option value=''>Bitte auswählen</option>
-                                <option value=''>Esprit</option>
-                                <option value=''>Jack&Jones</option>
-                                <option value=''>Tommy Hilfiger</option>
-                            </select>
-                        </section>
-                        <section className='o-distance-m'>
-                            <MoleculesFormCheckboxList />
-                        </section>
                     </div>
-                    <div className='o-television__remote-control'>
+                    <div className='o-television__remote-control t-quietlight'>
                         <div className='o-buttonbar o-buttonbar--stacked'>
                             <div className='o-buttonbar__item'>
                                 <button type='submit' className='c-button c-button--primary c-button--boss'>429 Ergebnisse anzeigen</button>

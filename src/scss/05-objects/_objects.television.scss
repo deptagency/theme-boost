@@ -26,7 +26,13 @@ $television-boundless-space: $television-prevent-space * 2 !default;
 .o-television__display {
   grid-row: 2;
   overflow: auto;
-  padding: $spacing-inset-m $television-prevent-space;
+  padding: $spacing-inset-m $television-prevent-space 0;
+
+  &__header {
+    position: sticky;
+    top: -$television-prevent-space;
+    z-index: 100;
+  }
 }
 .o-television__display__boundless {
   margin-left: -$television-prevent-space;

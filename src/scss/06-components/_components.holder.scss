@@ -1,0 +1,8 @@
+// @component Holder
+// @description Holder for scrollable content to visualize that there is nothing more to scroll
+.c-holder {
+  display: flex;
+  padding: $spacing-inset-xl $spacing-inset-m;
+  flex-direction: row;
+  justify-content: center;
+}
