@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-import OrganismsFormBanking from 'js/patterns/organisms/form/form-banking'
-
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsFormSepa extends Component {

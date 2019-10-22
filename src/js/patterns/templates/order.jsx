@@ -117,8 +117,8 @@ class TemplatesOrder extends Component {
                         </section>
                     </div>
                     <div className='o-television__remote-control'>
-                      <OrganismsSummary />
-                      <MoleculesButton type='primary' size='boss' className='o-distance-s'>Zahlungspflicht bestellen</MoleculesButton>
+                        <OrganismsSummary />
+                        <MoleculesButton type='primary' size='boss' className='o-distance-s'>Zahlungspflicht bestellen</MoleculesButton>
                     </div>
                 </div>
             </Fragment>
@@ -127,6 +127,7 @@ class TemplatesOrder extends Component {
 }
 
 TemplatesOrder.propTypes = {
+    paymentType: PropTypes.any, // FIXME: What type is it?
 }
 
 TemplatesOrder.defaultProps = {

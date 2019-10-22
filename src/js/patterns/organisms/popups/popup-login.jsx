@@ -9,11 +9,11 @@ class OrganismsPopupLogin extends Component {
     render () {
         return (
             <div className='o-popup c-box u-box-shadow t-ghost is-active'>
-              <div className='o-popup__holder'>
-                <h2 className='c-title'>Anmelden</h2>
-                <OrganismsFormLogin />
-                <MoleculesButton type='primary' size='boss' className='o-distance'>Anmelden</MoleculesButton>
-              </div>
+                <div className='o-popup__holder'>
+                    <h2 className='c-title'>Anmelden</h2>
+                    <OrganismsFormLogin />
+                    <MoleculesButton type='primary' size='boss' className='o-distance'>Anmelden</MoleculesButton>
+                </div>
             </div>
         )
     }

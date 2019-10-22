@@ -40,7 +40,7 @@ export const allButtons = () => {
                 </MoleculesButton>
             </p>
             <p>
-                <MoleculesButton type="quiet" icon='true' onClick={action('clicked')}>
+                <MoleculesButton type='quiet' icon='true' onClick={action('clicked')}>
                     Button with Icon
                 </MoleculesButton>
             </p>

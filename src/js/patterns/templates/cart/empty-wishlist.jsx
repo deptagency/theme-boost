@@ -12,18 +12,18 @@ const TemplatesEmptyWishlist = () => {
     return (
         <Fragment>
             <OrganismsHeaderMobile />
-            <section className="o-distance o-prevent-space">
+            <section className='o-distance o-prevent-space'>
                 <img src={emptyCart} alt='Empty cart' className='o-image-center' />
-                <div className="o-distance-m">
+                <div className='o-distance-m'>
                     <p className='u-text-center'>Der Warenkorb ist noch leer.</p>
                     <MoleculesButton size='boss' type='primary' className='o-distance-s'>Jetzt anmelden</MoleculesButton>
                 </div>
             </section>
-            <section className="o-distance o-prevent-space">
-              <MoleculesHeading title="Zuletzt angesehen" description="Könnte etwas für deine Wunschliste sein" />
-              <OrganismsProductSwiper />
+            <section className='o-distance o-prevent-space'>
+                <MoleculesHeading title='Zuletzt angesehen' description='Könnte etwas für deine Wunschliste sein' />
+                <OrganismsProductSwiper />
             </section>
-            <section className="o-distance o-prevent-space">
+            <section className='o-distance o-prevent-space'>
                 <OrganismsNewsletterBlock />
              </section>
             <div className='o-prevent-space'>

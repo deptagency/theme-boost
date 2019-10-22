@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import _ from 'lodash'
 
 import OrganismsListingFeatures from 'js/patterns/organisms/listings/feature-listing'
 
@@ -8,17 +9,17 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsFooter extends Component {
     render () {
-      const Component = this.props.component
+        const Component = this.props.component
 
-      return (
-        <Component
-          {..._.omit(this.props, ['children', 'component', 'className', 'theme'])}
-          className={classnames(
-            'o-footer c-footer o-distance-xl',
-            this.props.className,
-            this.props.theme
-          )}
-        >
+        return (
+            <Component
+                {..._.omit(this.props, ['children', 'component', 'className', 'theme'])}
+                className={classnames(
+                    'o-footer c-footer o-distance-xl',
+                    this.props.className,
+                    this.props.theme
+                )}
+                >
                 <div className='o-container o-prevent-space'>
                     <div className='o-footer__top c-footer__top'>
                         <OrganismsListingFeatures />
@@ -149,15 +150,16 @@ class OrganismsFooter extends Component {
 }
 
 OrganismsFooter.propTypes = {
-  children: PropTypes.node.isRequired,
-  component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  className: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    className: PropTypes.string,
+    theme: PropTypes.string,
 }
 
 OrganismsFooter.defaultProps = {
-  component: 'footer',
-  theme: 't-universe',
-  className: '',
+    component: 'footer',
+    theme: 't-universe',
+    className: '',
 }
 
 export default ComponentInjector.return('OrganismsFooter', OrganismsFooter)

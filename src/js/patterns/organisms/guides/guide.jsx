@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import MoleculesFormFromTo from '../../molecules/forms/form-element-from-to'
-import MoleculesFormCheckboxList from '../../molecules/forms/form-checkbox-list'
 import OrganismsColorSwiper from '../../organisms/swiper/color-swiper'
 import OrganismsSizeSwiper from '../../organisms/swiper/size-swiper'
 import OrganismsSortingSwiper from '../../organisms/swiper/sorting-swiper'
@@ -50,11 +48,11 @@ class OrganismsGuide extends Component {
                         <div className='o-television__display__boundless'>
                             <span className='c-divider c-divider--break o-distance-m' />
                         </div>
-                        <section className="o-distance-m">
-                          <label htmlFor='' className='c-title-level-4'>Sorting</label>
-                          <div className='o-television__display__boundless o-distance-s'>
-                              <OrganismsSortingSwiper />
-                          </div>
+                        <section className='o-distance-m'>
+                            <label htmlFor='' className='c-title-level-4'>Sorting</label>
+                            <div className='o-television__display__boundless o-distance-s'>
+                                <OrganismsSortingSwiper />
+                            </div>
                         </section>
                         <div className='o-television__display__boundless'>
                             <span className='c-divider c-divider--break o-distance-m' />
@@ -79,10 +77,10 @@ class OrganismsGuide extends Component {
                             <MoleculesReferalBordered title='Patterns' />
                             <MoleculesReferalBordered title='Newness' />
                         </section>
-                        <div className="c-holder o-television__display__boundless c-box t-quietlight">
-                          <a href='' className='c-logo' title='Catwalk'>
+                        <div className='c-holder o-television__display__boundless c-box t-quietlight'>
+                            <a href='' className='c-logo' title='Catwalk'>
                               Catwalk
-                          </a>
+                            </a>
                         </div>
                     </div>
                     <div className='o-television__remote-control t-quietlight'>

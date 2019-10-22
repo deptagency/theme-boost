@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import _ from 'lodash'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -11,13 +12,13 @@ class OrganismsHeaderSlideIn extends Component {
 
         return (
             <Component
-              {..._.omit(this.props, ['children', 'component', 'className', 'theme', 'title', 'setIsOpen'])}
-              className={classnames(
+                {..._.omit(this.props, ['children', 'component', 'className', 'theme', 'title', 'setIsOpen'])}
+                className={classnames(
                   'c-context-header',
                   this.props.className,
                   this.props.theme
               )}
-              >
+                >
                 <div className='o-container c-context-header__wrapper'>
 
                     <div className='c-context-header__middle'>
@@ -42,15 +43,16 @@ OrganismsHeaderSlideIn.propTypes = {
     children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
+    theme: PropTypes.string,
     title: PropTypes.string.isRequired,
-    setIsOpen: PropTypes.func.isRequired
+    setIsOpen: PropTypes.func.isRequired,
 }
 
 OrganismsHeaderSlideIn.defaultProps = {
     component: 'header',
     theme: 't-spotlight',
     className: '',
-    title: ''
+    title: '',
 }
 
 export default ComponentInjector.return('OrganismsHeaderSlideIn', OrganismsHeaderSlideIn)

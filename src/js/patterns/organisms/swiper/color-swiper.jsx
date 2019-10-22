@@ -17,7 +17,7 @@ const OrganismsColorSwiper = ({ colors, className }) => {
                             })}
                             style={{ background: `${c}` }}
                          />
-                         <span className='u-text-xs'>{c}</span>
+                        <span className='u-text-xs'>{c}</span>
                     </div>
                 })}
             </div>

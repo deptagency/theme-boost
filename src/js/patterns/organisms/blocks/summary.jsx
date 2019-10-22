@@ -9,18 +9,18 @@ class OrganismsSummary extends Component {
             <div>
                 <div className='o-summary'>
                     {this.props.subtotal ?
-                    <Fragment>
-                        <div className='o-summary__item'>
-                            <p className='u-text-s u-text-strong'>
+                        <Fragment>
+                            <div className='o-summary__item'>
+                                <p className='u-text-s u-text-strong'>
                           Zwischensumme
-                            </p>
-                        </div>
-                        <div className='o-summary__item'>
-                            <p className='u-text-s u-text-strong cart-summary--right'>
+                                </p>
+                            </div>
+                            <div className='o-summary__item'>
+                                <p className='u-text-s u-text-strong cart-summary--right'>
                           84,85 €
-                            </p>
-                        </div>
-                    </Fragment>
+                                </p>
+                            </div>
+                        </Fragment>
                     : null}
                     <p className='o-summary__item u-text-s'>Versandkosten</p>
                     <p className='o-summary__item u-text-s cart-summary--right'>gratis</p>
@@ -41,11 +41,11 @@ class OrganismsSummary extends Component {
 }
 
 OrganismsSummary.propTypes = {
-    subtotal: PropTypes.Bool
+    subtotal: PropTypes.bool,
 }
 
 OrganismsSummary.defaultProps = {
-    subtotal: ''
+    subtotal: '',
 }
 
 export default ComponentInjector.return('OrganismsSummary', OrganismsSummary)
