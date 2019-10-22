@@ -11,13 +11,13 @@ class OrganismsHeaderSlideIn extends Component {
 
         return (
             <Component
-              {..._.omit(this.props, ['children', 'component', 'className', 'theme', 'title', 'setIsOpen'])}
-              className={classnames(
+                {..._.omit(this.props, ['children', 'component', 'className', 'theme', 'title', 'setIsOpen'])}
+                className={classnames(
                   'c-context-header',
                   this.props.className,
                   this.props.theme
               )}
-              >
+                >
                 <div className='o-container c-context-header__wrapper'>
 
                     <div className='c-context-header__middle'>
@@ -43,14 +43,14 @@ OrganismsHeaderSlideIn.propTypes = {
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     title: PropTypes.string.isRequired,
-    setIsOpen: PropTypes.func.isRequired
+    setIsOpen: PropTypes.func.isRequired,
 }
 
 OrganismsHeaderSlideIn.defaultProps = {
     component: 'header',
     theme: 't-spotlight',
     className: '',
-    title: ''
+    title: '',
 }
 
 export default ComponentInjector.return('OrganismsHeaderSlideIn', OrganismsHeaderSlideIn)

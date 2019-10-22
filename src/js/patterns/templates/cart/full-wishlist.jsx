@@ -13,10 +13,10 @@ const TemplatesFullWishlist = () => {
             <section className='o-container o-prevent-space o-distance'>
                 <h1 className='c-title-level-3'>Mein Warenkorb</h1>
                 <div className='o-grid o-grid--half o-grid--large-forth o-distance'>
-                  <OrganismsProduct />
-                  <OrganismsProduct />
-                  <OrganismsProduct />
-                  <OrganismsProduct />
+                    <OrganismsProduct />
+                    <OrganismsProduct />
+                    <OrganismsProduct />
+                    <OrganismsProduct />
                 </div>
             </section>
             <OrganismsFooter />

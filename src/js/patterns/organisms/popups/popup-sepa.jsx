@@ -10,13 +10,13 @@ class OrganismsPopupSepa extends Component {
     render () {
         return (
             <div className='o-popup c-box u-box-shadow t-ghost is-active'>
-              <div className="o-popup__header">
-                  <OrganismsHeaderSlideIn title="Sepa-Lastschrift" />
-               </div>
-              <div className='o-popup__holder'>
-                  <OrganismsFormSepa />
-                  <MoleculesButton type="primary" size="boss" className="o-distance">Speichern</MoleculesButton>
-              </div>
+                <div className='o-popup__header'>
+                    <OrganismsHeaderSlideIn title='Sepa-Lastschrift' />
+                </div>
+                <div className='o-popup__holder'>
+                    <OrganismsFormSepa />
+                    <MoleculesButton type='primary' size='boss' className='o-distance'>Speichern</MoleculesButton>
+                </div>
             </div>
         )
     }

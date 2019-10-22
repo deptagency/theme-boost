@@ -10,13 +10,13 @@ class OrganismsHeaderMobile extends Component {
 
         return (
             <Component
-              {..._.omit(this.props, ['children', 'component', 'className', 'theme'])}
-              className={classnames(
+                {..._.omit(this.props, ['children', 'component', 'className', 'theme'])}
+                className={classnames(
                 'c-header',
                 this.props.className,
                 this.props.theme
               )}
-            >
+                >
                 <div className='o-container c-header__wrapper'>
                     <div className='o-list-inline o-list-inline--vertical-centered'>
                         <svg className='c-icon c-icon--s o-list-inline__item' x='0px' y='0px' viewBox='0 0 200 200'>
@@ -67,15 +67,15 @@ class OrganismsHeaderMobile extends Component {
 }
 
 OrganismsHeaderMobile.propTypes = {
-  children: PropTypes.node.isRequired,
-  component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  className: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    className: PropTypes.string,
 }
 
 OrganismsHeaderMobile.defaultProps = {
-  component: 'header',
-  theme: '',
-  className: '',
+    component: 'header',
+    theme: '',
+    className: '',
 }
 
 export default ComponentInjector.return('OrganismsHeaderMobile', OrganismsHeaderMobile)

@@ -9,13 +9,11 @@ class OrganismsTelevisionCartEmpty extends Component {
     render () {
         return (
             <div className='o-television'>
-              <OrganismsHeaderSlideIn title="Mein Warenkorb" className='o-television__bar' />
-              <div className='o-television__display'>
-                  
-              </div>
-              <div className="o-television__remote-control">
-                  <MoleculesButton type="primary" size="boss">Jetzt anmelden</MoleculesButton>
-              </div>
+                <OrganismsHeaderSlideIn title='Mein Warenkorb' className='o-television__bar' />
+                <div className='o-television__display' />
+                <div className='o-television__remote-control'>
+                    <MoleculesButton type='primary' size='boss'>Jetzt anmelden</MoleculesButton>
+                </div>
             </div>
         )
     }

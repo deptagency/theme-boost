@@ -8,30 +8,30 @@ const MoleculesReferalBordered = ({ selected, title }) => {
     return (
         <div>
             <a href='' title='' className='c-referal c-referal--bordered is-active'>
-              <h3 className='c-title-level-4 c-referal__body u-text-bold'>{title}</h3>
-              <div className='c-referal__offset'>
-                <span class="u-text-xs u-text-one-liner t-text-quiet">
-                  {selected.map((item, i) => {
+                <h3 className='c-title-level-4 c-referal__body u-text-bold'>{title}</h3>
+                <div className='c-referal__offset'>
+                    <span className='u-text-xs u-text-one-liner t-text-quiet'>
+                        {selected.map((item, i) => {
                       return <span>{item}, </span>
                   })}
-                </span>
-                <svg className='c-icon c-icon--s c-referal__icon t-text-quiet' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                  <path d='M15.7 11.3l-6-6c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5.3 5.3-5.3 5.3c-0.4 0.4-0.4 1 0 1.4 0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l6-6c0.4-0.4 0.4-1 0-1.4z' />
-                </svg>
-              </div>
+                    </span>
+                    <svg className='c-icon c-icon--s c-referal__icon t-text-quiet' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                        <path d='M15.7 11.3l-6-6c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5.3 5.3-5.3 5.3c-0.4 0.4-0.4 1 0 1.4 0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l6-6c0.4-0.4 0.4-1 0-1.4z' />
+                    </svg>
+                </div>
             </a>
         </div>
     )
 }
 
 MoleculesReferalBordered.propTypes = {
-  title: PropTypes.string,
-  selected: PropTypes.array
+    title: PropTypes.string,
+    selected: PropTypes.array,
 }
 
 MoleculesReferalBordered.defaultProps = {
-  title: 'Nav Item',
-  selected: ['Abercrombie', 'Jack&Jones', 'Esprit', 'Tommy Hilfiger']
+    title: 'Nav Item',
+    selected: ['Abercrombie', 'Jack&Jones', 'Esprit', 'Tommy Hilfiger'],
 }
 
 export default ComponentInjector.return('MoleculesReferalBordered', MoleculesReferalBordered)

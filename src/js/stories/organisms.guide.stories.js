@@ -20,7 +20,6 @@ defaultStory.story = {
     name: 'Default',
 }
 
-
 export const guideBrand = () => {
     return (
         <OrganismsGuideBrand />

@@ -38,7 +38,7 @@ export default {
 }
 
 export const orderBilling = () => {
-  return  <TemplatesOrderBilling />
+    return <TemplatesOrderBilling />
 }
 
 orderBilling.story = {
@@ -46,7 +46,7 @@ orderBilling.story = {
 }
 
 export const templateEmptyCart = () => {
-  return  <TemplatesEmptyCart />
+    return <TemplatesEmptyCart />
 }
 
 templateEmptyCart.story = {
@@ -54,7 +54,7 @@ templateEmptyCart.story = {
 }
 
 export const templateFullCart = () => {
-  return  <TemplatesFullCart />
+    return <TemplatesFullCart />
 }
 
 templateFullCart.story = {
@@ -62,7 +62,7 @@ templateFullCart.story = {
 }
 
 export const templateEmptyWishlist = () => {
-  return  <TemplatesEmptyWishlist />
+    return <TemplatesEmptyWishlist />
 }
 
 templateEmptyWishlist.story = {
@@ -70,7 +70,7 @@ templateEmptyWishlist.story = {
 }
 
 export const templateFullWishlist = () => {
-  return  <TemplatesFullWishlist />
+    return <TemplatesFullWishlist />
 }
 
 templateFullWishlist.story = {
@@ -78,7 +78,7 @@ templateFullWishlist.story = {
 }
 
 export const templatePasswortResetAddMail = () => {
-  return  <TemplatesPassworResetAddMail />
+    return <TemplatesPassworResetAddMail />
 }
 
 templatePasswortResetAddMail.story = {
@@ -86,7 +86,7 @@ templatePasswortResetAddMail.story = {
 }
 
 export const templateNewPassword = () => {
-  return  <TemplatesNewPassword />
+    return <TemplatesNewPassword />
 }
 
 templateNewPassword.story = {
@@ -94,7 +94,7 @@ templateNewPassword.story = {
 }
 
 export const templatePasswordResetConfirmation = () => {
-  return  <TemplatesPasswordResetConfirmation />
+    return <TemplatesPasswordResetConfirmation />
 }
 
 templatePasswordResetConfirmation.story = {
@@ -102,7 +102,7 @@ templatePasswordResetConfirmation.story = {
 }
 
 export const templateLogin = () => {
-  return  <TemplatesLogin />
+    return <TemplatesLogin />
 }
 
 templateLogin.story = {
@@ -110,7 +110,7 @@ templateLogin.story = {
 }
 
 export const templatesRegister = () => {
-  return  <TemplatesRegister />
+    return <TemplatesRegister />
 }
 
 templatesRegister.story = {
@@ -118,7 +118,7 @@ templatesRegister.story = {
 }
 
 export const templatesOrderConfirmation = () => {
-  return  <TemplatesOrderConfirmation />
+    return <TemplatesOrderConfirmation />
 }
 
 templatesOrderConfirmation.story = {
@@ -126,7 +126,7 @@ templatesOrderConfirmation.story = {
 }
 
 export const templatesOrder = () => {
-  return  <TemplatesOrder />
+    return <TemplatesOrder />
 }
 
 templatesOrder.story = {

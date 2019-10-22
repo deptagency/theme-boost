@@ -16,15 +16,15 @@ const TemplatesFullCart = () => {
                     <OrganismsBundleListing />
                 </div>
             </section>
-            <span className='c-divider c-divider--break o-distance'></span>
+            <span className='c-divider c-divider--break o-distance' />
             <section className='o-container o-prevent-space o-distance'>
                 <h2 className='c-title-level-3'>Bezahlarten</h2>
                 <OrganismsPaymentListingIcons />
             </section>
-            <span className='c-divider c-divider--break o-distance'></span>
+            <span className='c-divider c-divider--break o-distance' />
             <section className='o-container o-prevent-space o-distance'>
                 <h2 className='c-title-level-3'>Gesamtsumme</h2>
-                <div className="o-distance-s">
+                <div className='o-distance-s'>
                     <OrganismsSummary />
                     <p className='o-distance-m u-text-s t-text-quiet'>
                         Gutscheincodes können Sie im letzten Schritt der Bestellung eingeben.

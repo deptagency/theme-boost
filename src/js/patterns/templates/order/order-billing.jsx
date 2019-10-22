@@ -10,25 +10,25 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 class TemplatesOrderBilling extends Component {
     render () {
         return (
-            <div className="o-television">
-              <div className="o-television__bar">
-              <OrganismsHeaderContext />
-              </div>
-              <div className="o-television__display">
-                  <OrganismsAddressblock editable="true" />
-                  <div className="o-television__display__boundless o-distance">
-                      <span className="c-divider c-divider--break"></span>
-                  </div>
-                  <div className="o-distance">
-                      <h2 className="c-title-level-3">Zahlungsmethode wählen</h2>
-                      <div className='o-distance-m'>
-                          <OrganismsPaymentListing />
-                      </div>
-                  </div>
-              </div>
-              <div className="o-television__remote-control">
-                  <MoleculesButton type="primary" size="boss" className="o-distance">Weiter</MoleculesButton>
-              </div>
+            <div className='o-television'>
+                <div className='o-television__bar'>
+                    <OrganismsHeaderContext />
+                </div>
+                <div className='o-television__display'>
+                    <OrganismsAddressblock editable='true' />
+                    <div className='o-television__display__boundless o-distance'>
+                        <span className='c-divider c-divider--break' />
+                    </div>
+                    <div className='o-distance'>
+                        <h2 className='c-title-level-3'>Zahlungsmethode wählen</h2>
+                        <div className='o-distance-m'>
+                            <OrganismsPaymentListing />
+                        </div>
+                    </div>
+                </div>
+                <div className='o-television__remote-control'>
+                    <MoleculesButton type='primary' size='boss' className='o-distance'>Weiter</MoleculesButton>
+                </div>
             </div>
         )
     }

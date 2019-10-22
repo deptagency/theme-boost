@@ -10,13 +10,13 @@ class OrganismsTelevisionSepa extends Component {
     render () {
         return (
             <div className='o-television'>
-              <OrganismsHeaderSlideIn title="SEPA-Lastschrift" className='o-television__bar' />
-              <div className='o-television__display'>
-                  <OrganismsFormSepa />
-              </div>
-              <div className="o-television__remote-control">
-                  <MoleculesButton type="primary" size="boss">Speichern</MoleculesButton>
-              </div>
+                <OrganismsHeaderSlideIn title='SEPA-Lastschrift' className='o-television__bar' />
+                <div className='o-television__display'>
+                    <OrganismsFormSepa />
+                </div>
+                <div className='o-television__remote-control'>
+                    <MoleculesButton type='primary' size='boss'>Speichern</MoleculesButton>
+                </div>
             </div>
         )
     }

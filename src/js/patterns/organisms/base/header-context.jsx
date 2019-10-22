@@ -8,14 +8,14 @@ class OrganismsHeaderContext extends Component {
     render () {
         const Component = this.props.component
         return (
-          <Component
-            {..._.omit(this.props, ['children', 'component', 'className', 'theme'])}
-            className={classnames(
+            <Component
+                {..._.omit(this.props, ['children', 'component', 'className', 'theme'])}
+                className={classnames(
               'c-context-header',
               this.props.className,
               this.props.theme
             )}
-          >
+                >
                 <div className='o-container c-context-header__wrapper'>
                     <button>
                         <svg className='c-icon c-icon--m' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
@@ -51,15 +51,15 @@ class OrganismsHeaderContext extends Component {
 }
 
 OrganismsHeaderContext.propTypes = {
-  children: PropTypes.node.isRequired,
-  component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  className: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    className: PropTypes.string,
 }
 
 OrganismsHeaderContext.defaultProps = {
-  component: 'header',
-  theme: '',
-  className: '',
+    component: 'header',
+    theme: '',
+    className: '',
 }
 
 export default ComponentInjector.return('OrganismsHeaderContext', OrganismsHeaderContext)
