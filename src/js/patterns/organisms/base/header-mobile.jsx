@@ -1,10 +1,22 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import classnames from 'classnames'
+
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsHeaderMobile extends Component {
     render () {
+        const Component = this.props.component
+
         return (
-            <header role='contentinfo' className='c-header'>
+            <Component
+              {..._.omit(this.props, ['children', 'component', 'className', 'theme'])}
+              className={classnames(
+                'c-header',
+                this.props.className,
+                this.props.theme
+              )}
+            >
                 <div className='o-container c-header__wrapper'>
                     <div className='o-list-inline o-list-inline--vertical-centered'>
                         <svg className='c-icon c-icon--s o-list-inline__item' x='0px' y='0px' viewBox='0 0 200 200'>
@@ -49,13 +61,21 @@ class OrganismsHeaderMobile extends Component {
                         </a>
                     </div>
                 </div>
-            </header>
+            </Component>
         )
     }
 }
 
-OrganismsHeaderMobile.propTypes = {}
+OrganismsHeaderMobile.propTypes = {
+  children: PropTypes.node.isRequired,
+  component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  className: PropTypes.string,
+}
 
-OrganismsHeaderMobile.defaultProps = {}
+OrganismsHeaderMobile.defaultProps = {
+  component: 'header',
+  theme: '',
+  className: '',
+}
 
 export default ComponentInjector.return('OrganismsHeaderMobile', OrganismsHeaderMobile)

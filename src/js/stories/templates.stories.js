@@ -7,6 +7,7 @@ import TemplatesEmptyCart from '../patterns/templates/cart/empty-cart'
 import TemplatesFullCart from '../patterns/templates/cart/full-cart'
 import TemplatesEmptyWishlist from '../patterns/templates/cart/empty-wishlist'
 import TemplatesFullWishlist from '../patterns/templates/cart/full-wishlist'
+import TemplatesPassworResetAddMail from '../patterns/templates/passwort-reset/passwort-reset-add-mail'
 
 // import TemplatesHome from '../patterns/templates/home'
 // import VerticalSwipe from '../patterns/templates/vertical-swipe'
@@ -71,6 +72,14 @@ export const templateFullWishlist = () => {
 
 templateFullWishlist.story = {
     name: 'Full Wishlist',
+}
+
+export const templatePasswortResetAddMail = () => {
+  return  <TemplatesPassworResetAddMail />
+}
+
+templatePasswortResetAddMail.story = {
+    name: 'Passwort Reset Add Mail',
 }
 
 // export const home = () => { return <TemplatesHome /> }
