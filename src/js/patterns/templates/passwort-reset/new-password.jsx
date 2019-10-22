@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 
+import OrganismsFormPasswortReset from 'js/patterns/organisms/form/form-password-reset'
 import MoleculesButton from 'js/patterns/molecules/buttons/button'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class TemplatesPasswortResetAddMail extends Component {
+class TemplatesNewPassword extends Component {
     render () {
         return (
             <div className="o-television">
@@ -20,21 +21,12 @@ class TemplatesPasswortResetAddMail extends Component {
                           </svg>
                         </div>
                         <div className="o-block-short__body">
-                          <h2 className="c-title-level-3">Neues Passwort anfordern</h2>
+                          <h2 className="c-title-level-3">Neues Passwort eingeben</h2>
                         </div>
                       </div>
-                      <p className="u-text-s t-text-quiet">Bitte gib Deine E-Mail-Adresse ein. Wir werden Dir eine E-Mail zusenden, damit Du Dein Passwort zurücksetzen kannst.</p>
+                      <p className="u-text-s t-text-quiet">Bitte gib ein neues Passwort ein, damit du wieder Zugang zu deinem Benutzerkonto erhältst.</p>
                   </div>
-                  <form method=''>
-                      <fieldset>
-                          <div className='o-form-area o-distance-m'>
-                              <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                                  <label htmlFor='inp-bank-owner' className='c-form-label'>E-Mail-Address</label>
-                                  <input type='text' className='o-distance-xs' id='inp-bank-owner' />
-                              </div>
-                          </div>
-                      </fieldset>
-                  </form>
+                  <OrganismsFormPasswortReset />
               </div>
               <div className="o-television__remote-control">
                   <MoleculesButton type="primary" size="boss">Neues Passwort anfordern</MoleculesButton>
@@ -44,10 +36,10 @@ class TemplatesPasswortResetAddMail extends Component {
     }
 }
 
-TemplatesPasswortResetAddMail.propTypes = {
+TemplatesNewPassword.propTypes = {
 }
 
-TemplatesPasswortResetAddMail.defaultProps = {
+TemplatesNewPassword.defaultProps = {
 }
 
-export default ComponentInjector.return('TemplatesPasswortResetAddMail', TemplatesPasswortResetAddMail)
+export default ComponentInjector.return('TemplatesNewPassword', TemplatesNewPassword)

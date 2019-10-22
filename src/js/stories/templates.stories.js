@@ -8,6 +8,8 @@ import TemplatesFullCart from '../patterns/templates/cart/full-cart'
 import TemplatesEmptyWishlist from '../patterns/templates/cart/empty-wishlist'
 import TemplatesFullWishlist from '../patterns/templates/cart/full-wishlist'
 import TemplatesPassworResetAddMail from '../patterns/templates/passwort-reset/passwort-reset-add-mail'
+import TemplatesNewPassword from '../patterns/templates/passwort-reset/new-password'
+import TemplatesPasswordResetConfirmation from '../patterns/templates/passwort-reset/password-reset-confirmation'
 
 // import TemplatesHome from '../patterns/templates/home'
 // import VerticalSwipe from '../patterns/templates/vertical-swipe'
@@ -80,6 +82,22 @@ export const templatePasswortResetAddMail = () => {
 
 templatePasswortResetAddMail.story = {
     name: 'Passwort Reset Add Mail',
+}
+
+export const templateNewPassword = () => {
+  return  <TemplatesNewPassword />
+}
+
+templateNewPassword.story = {
+    name: 'New Passwort Setup',
+}
+
+export const templatePasswordResetConfirmation = () => {
+  return  <TemplatesPasswordResetConfirmation />
+}
+
+templatePasswordResetConfirmation.story = {
+    name: 'Password Reset Confirmation',
 }
 
 // export const home = () => { return <TemplatesHome /> }
