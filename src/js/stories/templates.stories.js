@@ -10,6 +10,7 @@ import TemplatesFullWishlist from '../patterns/templates/cart/full-wishlist'
 import TemplatesPassworResetAddMail from '../patterns/templates/passwort-reset/passwort-reset-add-mail'
 import TemplatesNewPassword from '../patterns/templates/passwort-reset/new-password'
 import TemplatesPasswordResetConfirmation from '../patterns/templates/passwort-reset/password-reset-confirmation'
+import TemplatesLogin from '../patterns/templates/login'
 
 // import TemplatesHome from '../patterns/templates/home'
 // import VerticalSwipe from '../patterns/templates/vertical-swipe'
@@ -98,6 +99,14 @@ export const templatePasswordResetConfirmation = () => {
 
 templatePasswordResetConfirmation.story = {
     name: 'Password Reset Confirmation',
+}
+
+export const templateLogin = () => {
+  return  <TemplatesLogin />
+}
+
+templateLogin.story = {
+    name: 'Login',
 }
 
 // export const home = () => { return <TemplatesHome /> }
