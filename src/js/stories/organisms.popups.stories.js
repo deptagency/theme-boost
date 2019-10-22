@@ -1,6 +1,5 @@
 import React from 'react'
 
-import OrganismsOrder from 'js/patterns/organisms/orders/order'
 import OrganismsPopupLogin from 'js/patterns/organisms/popups/popup-login'
 import OrganismsPopupSepa from 'js/patterns/organisms/popups/popup-sepa'
 

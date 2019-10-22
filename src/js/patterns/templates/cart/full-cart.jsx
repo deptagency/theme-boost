@@ -36,7 +36,9 @@ const TemplatesFullCart = () => {
                     Zur Kasse
                 </MoleculesButton>
             </div>
-            <OrganismsFooter />
+            <div className='o-prevent-space'>
+                <OrganismsFooter />
+            </div>
         </div>
     )
 }

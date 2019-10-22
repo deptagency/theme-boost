@@ -4,10 +4,9 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsFormRegister extends Component {
     render () {
-        return (<div>
+        return (
             <form method=''>
                 <fieldset>
-                    <legend>Kostenloses Benutzerkonto erstellen</legend>
                     <div className='o-form-area o-distance-m'>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <ul className='o-list-inline'>
@@ -89,11 +88,8 @@ class OrganismsFormRegister extends Component {
                         </div>
                     </div>
                 </fieldset>
-                <div className='o-distance-l'>
-                    <button type='submit' className='c-button c-button--primary c-button--boss'>Jetzt registrieren</button>
-                </div>
             </form>
-        </div>)
+        )
     }
 }
 

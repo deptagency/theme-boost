@@ -11,15 +11,15 @@ import TemplatesPassworResetAddMail from '../patterns/templates/passwort-reset/p
 import TemplatesNewPassword from '../patterns/templates/passwort-reset/new-password'
 import TemplatesPasswordResetConfirmation from '../patterns/templates/passwort-reset/password-reset-confirmation'
 import TemplatesLogin from '../patterns/templates/login'
+import TemplatesRegister from '../patterns/templates/register'
+import TemplatesOrderConfirmation from '../patterns/templates/order-confirmation'
+import TemplatesOrder from '../patterns/templates/order'
 
 // import TemplatesHome from '../patterns/templates/home'
 // import VerticalSwipe from '../patterns/templates/vertical-swipe'
 // import MoleculesProduct from '../patterns/organisms/products/product'
 // import MoleculesHeading from '../patterns/molecules/headings/heading'
 
-// import TemplatesFullCart from '../patterns/templates/cart/full-cart'
-// import TemplatesEmptyCart from '../patterns/templates/cart/empty-cart'
-// import MoleculesCart from '../patterns/molecules/carts/cart'
 // import TemplatesSlideIn from '../patterns/templates/slide-in'
 // import TemplatesSlideUp from '../patterns/templates/slide-up'
 // import TemplatesFilter from '../patterns/templates/filter'
@@ -107,6 +107,30 @@ export const templateLogin = () => {
 
 templateLogin.story = {
     name: 'Login',
+}
+
+export const templatesRegister = () => {
+  return  <TemplatesRegister />
+}
+
+templatesRegister.story = {
+    name: 'Register',
+}
+
+export const templatesOrderConfirmation = () => {
+  return  <TemplatesOrderConfirmation />
+}
+
+templatesOrderConfirmation.story = {
+    name: 'Order Confirmation',
+}
+
+export const templatesOrder = () => {
+  return  <TemplatesOrder />
+}
+
+templatesOrder.story = {
+    name: 'Order Overview',
 }
 
 // export const home = () => { return <TemplatesHome /> }

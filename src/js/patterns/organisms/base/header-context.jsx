@@ -1,10 +1,21 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import classnames from 'classnames'
+
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsHeaderContext extends Component {
     render () {
+        const Component = this.props.component
         return (
-            <header role='contentinfo' className='c-context-header'>
+          <Component
+            {..._.omit(this.props, ['children', 'component', 'className', 'theme'])}
+            className={classnames(
+              'c-context-header',
+              this.props.className,
+              this.props.theme
+            )}
+          >
                 <div className='o-container c-context-header__wrapper'>
                     <button>
                         <svg className='c-icon c-icon--m' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
@@ -34,13 +45,21 @@ class OrganismsHeaderContext extends Component {
                         </svg>
                     </button>
                 </div>
-            </header>
+            </Component>
         )
     }
 }
 
-OrganismsHeaderContext.propTypes = {}
+OrganismsHeaderContext.propTypes = {
+  children: PropTypes.node.isRequired,
+  component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  className: PropTypes.string,
+}
 
-OrganismsHeaderContext.defaultProps = {}
+OrganismsHeaderContext.defaultProps = {
+  component: 'header',
+  theme: '',
+  className: '',
+}
 
 export default ComponentInjector.return('OrganismsHeaderContext', OrganismsHeaderContext)
