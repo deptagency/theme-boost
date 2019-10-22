@@ -9,7 +9,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 class OrganismsPopupSepa extends Component {
     render () {
         return (
-            <div className='o-popup c-box u-box-shadow t-ghost'>
+            <div className='o-popup c-box u-box-shadow t-ghost is-active'>
               <div className="o-popup__header">
                   <OrganismsHeaderSlideIn title="Sepa-Lastschrift" />
                </div>
