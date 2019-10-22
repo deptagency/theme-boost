@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-import OrganismsFormPasswortReset from 'js/patterns/organisms/form/form-password-reset'
 import MoleculesButton from 'js/patterns/molecules/buttons/button'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
 

@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import { thisTypeAnnotation } from '../../../../../../../../../../../Library/Caches/typescript/3.6/node_modules/@babel/types/lib'
 
 const MoleculesReferalBordered = ({ selected, title }) => {
     return (

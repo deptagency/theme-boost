@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import { withKnobs, boolean } from '@storybook/addon-knobs'
+import { withKnobs } from '@storybook/addon-knobs'
 
 import TemplatesOrderBilling from '../patterns/templates/order/order-billing'
 import TemplatesEmptyCart from '../patterns/templates/cart/empty-cart'

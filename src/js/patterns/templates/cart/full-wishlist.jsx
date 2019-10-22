@@ -1,7 +1,5 @@
 import React from 'react'
-import OrganismsPaymentListingIcons from '../../organisms/listings/payment-listing-icons'
-import OrganismsSummary from '../../organisms/blocks/summary'
-import MoleculesButton from '../../molecules/buttons/button'
+
 import OrganismsProduct from '../../organisms/products/product'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
 import OrganismsFooter from 'js/patterns/organisms/base/foot'

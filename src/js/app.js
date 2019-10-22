@@ -10,7 +10,6 @@ import Context from 'frontastic-catwalk/src/js/app/context'
 
 import Preview from './preview'
 import Node from './node'
-import Node2 from './head'
 
 export default (mountNode, dataNode, tastics = null) => {
     if (!mountNode || !dataNode) {

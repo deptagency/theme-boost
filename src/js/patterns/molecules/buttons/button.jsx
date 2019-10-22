@@ -45,6 +45,7 @@ MoleculesButton.propTypes = {
     type: PropTypes.oneOf([null, 'primary', 'quiet', 'ghost', 'plain', 'destructive']),
     size: PropTypes.oneOf([null, 'minion', 'boss']),
     htmlType: PropTypes.string,
+    icon: PropTypes.bool,
 }
 
 MoleculesButton.defaultProps = {

@@ -40,9 +40,10 @@ MoleculesChip.propTypes = {
     className: PropTypes.string,
     active: PropTypes.bool,
     selected: PropTypes.bool,
-    deleteabled: PropTypes.bool,
+    deleteable: PropTypes.bool,
     title: PropTypes.string,
     htmlType: PropTypes.string,
+    onClick: PropTypes.func,
 }
 
 MoleculesChip.defaultProps = {

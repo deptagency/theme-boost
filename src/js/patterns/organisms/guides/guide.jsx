@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import MoleculesFormFromTo from '../../molecules/forms/form-element-from-to'
-import MoleculesFormCheckboxList from '../../molecules/forms/form-checkbox-list'
 import OrganismsColorSwiper from '../../organisms/swiper/color-swiper'
 import OrganismsSizeSwiper from '../../organisms/swiper/size-swiper'
 import OrganismsSortingSwiper from '../../organisms/swiper/sorting-swiper'

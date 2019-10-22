@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import _ from 'lodash'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -54,6 +55,7 @@ OrganismsHeaderContext.propTypes = {
     children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
+    theme: PropTypes.string,
 }
 
 OrganismsHeaderContext.defaultProps = {

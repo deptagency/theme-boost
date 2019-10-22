@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
-
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import _ from 'lodash'
-
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
-import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
-import OrganismsFormLogin from 'js/patterns/organisms/form/form-login'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 

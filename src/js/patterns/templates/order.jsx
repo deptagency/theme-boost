@@ -127,6 +127,7 @@ class TemplatesOrder extends Component {
 }
 
 TemplatesOrder.propTypes = {
+    paymentType: PropTypes.any, // FIXME: What type is it?
 }
 
 TemplatesOrder.defaultProps = {

@@ -41,7 +41,7 @@ class OrganismsSummary extends Component {
 }
 
 OrganismsSummary.propTypes = {
-    subtotal: PropTypes.Bool,
+    subtotal: PropTypes.bool,
 }
 
 OrganismsSummary.defaultProps = {
