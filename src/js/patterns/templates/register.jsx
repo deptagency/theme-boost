@@ -25,9 +25,7 @@ class TemplatesRegister extends Component {
                           <h2 className='c-title-level-3 u-text-center'>Melde dich jetzt an</h2>
                           <MoleculesButton type='quiet' size='boss' className='o-distance-m'>Anmelden</MoleculesButton>
                         </section>
-                        <div className='o-prevent-space'>
-                            <OrganismsFooter />
-                        </div>
+                        <OrganismsFooter />
                     </div>
                 </div>
             </Fragment>

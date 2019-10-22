@@ -12,7 +12,7 @@ class TemplatesOrderBilling extends Component {
         return (
             <div className="o-television">
               <div className="o-television__bar">
-              <OrganismsHeaderContext />
+                  <OrganismsHeaderContext />
               </div>
               <div className="o-television__display">
                   <OrganismsAddressblock editable="true" />

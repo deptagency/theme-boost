@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component, Fragment } from 'react'
 
 import MoleculesButton from '../../molecules/buttons/button'
 import emptyCart from '../../../../icons/empty_cart.svg'
@@ -10,7 +10,7 @@ import MoleculesHeading from 'js/patterns/molecules/headings/heading'
 
 const TemplatesEmptyWishlist = () => {
     return (
-        <div>
+        <Fragment>
             <OrganismsHeaderMobile />
             <section className="o-distance o-prevent-space">
                 <img src={emptyCart} alt='Empty cart' className='o-image-center' />
@@ -26,8 +26,10 @@ const TemplatesEmptyWishlist = () => {
             <section className="o-distance o-prevent-space">
                 <OrganismsNewsletterBlock />
              </section>
-            <OrganismsFooter />
-        </div>
+            <div className='o-prevent-space'>
+                <OrganismsFooter />
+            </div>
+        </Fragment>
     )
 }
 

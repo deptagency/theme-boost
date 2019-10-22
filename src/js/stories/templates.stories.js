@@ -27,7 +27,7 @@ import TemplatesOrder from '../patterns/templates/order'
 // import OrganismsHeaderSlideIn from '../patterns/organisms/base/header-slide-in'
 // import OrganismsDeliveryFeatures from '../patterns/organisms/deliveryFeatures/delivery-features'
 // import OrganismsMoreInfoProduct from '../patterns/organisms/moreInfoProduct/more-info'
-// import TemplatesMyOrders from '../patterns/templates/my-orders'
+import TemplatesMyOrders from '../patterns/templates/my-orders'
 // import TemplatesMyOrderDetails from '../patterns/templates/my-order-details'
 // import TemplatesProductReturn from '../patterns/templates/product-return'
 // import TemplatesOrderSuccess from '../patterns/templates/order-success'
@@ -280,17 +280,17 @@ templatesOrder.story = {
 //     name: 'More info product',
 // }
 
-// export const myOrders = () => {
-//     return (
-//         <div className='fit-view'>
-//             <TemplatesMyOrders />
-//         </div>
-//     )
-// }
+export const myOrders = () => {
+    return (
+        <div className='fit-view'>
+            <TemplatesMyOrders />
+        </div>
+    )
+}
 
-// myOrders.story = {
-//     name: 'My Orders',
-// }
+myOrders.story = {
+    name: 'My Orders',
+}
 
 // export const myOrdersDetails = () => {
 //     return (

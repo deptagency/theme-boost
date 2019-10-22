@@ -25,9 +25,7 @@ class TemplatesLogin extends Component {
                           <h2 className="c-title-level-3 u-text-center">Kostenloses Benutzerkonto</h2>
                           <MoleculesButton type="quiet" size="boss" className='o-distance-m'>Ich bin neu hier</MoleculesButton>
                         </section>
-                        <div className='o-prevent-space'>
-                            <OrganismsFooter />
-                        </div>
+                        <OrganismsFooter />
                     </div>
                 </div>
                 

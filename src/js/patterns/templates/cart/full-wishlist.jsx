@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment, Component} from 'react'
 import OrganismsPaymentListingIcons from '../../organisms/listings/payment-listing-icons'
 import OrganismsSummary from '../../organisms/blocks/summary'
 import MoleculesButton from '../../molecules/buttons/button'
@@ -8,7 +8,7 @@ import OrganismsFooter from 'js/patterns/organisms/base/foot'
 
 const TemplatesFullWishlist = () => {
     return (
-        <div>
+        <Fragment>
             <OrganismsHeaderMobile />
             <section className='o-container o-prevent-space o-distance'>
                 <h1 className='c-title-level-3'>Mein Warenkorb</h1>
@@ -19,8 +19,10 @@ const TemplatesFullWishlist = () => {
                   <OrganismsProduct />
                 </div>
             </section>
-            <OrganismsFooter />
-        </div>
+            <div className='o-prevent-space'>
+                <OrganismsFooter />
+            </div>
+        </Fragment>
     )
 }
 

@@ -1,0 +1,14 @@
+.o-order-detail {
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__body {
+    margin-top: $spacing-stack-m;
+  }
+  &__footer {
+    margin-top: $spacing-stack-m;
+  }
+}

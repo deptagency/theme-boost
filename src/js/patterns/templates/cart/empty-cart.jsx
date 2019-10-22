@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import MoleculesButton from '../../molecules/buttons/button'
 import emptyCart from '../../../../icons/empty_cart.svg'
@@ -26,7 +26,9 @@ const TemplatesEmptyCart = () => {
             <section className="o-distance o-prevent-space">
                 <OrganismsNewsletterBlock />
              </section>
-            <OrganismsFooter />
+             <div className='o-prevent-space'>
+                <OrganismsFooter />
+            </div>
         </div>
     )
 }
