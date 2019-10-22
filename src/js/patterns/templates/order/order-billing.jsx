@@ -20,7 +20,10 @@ class TemplatesOrderBilling extends Component {
                       <span className="c-divider c-divider--break"></span>
                   </div>
                   <div className="o-distance">
-                      <OrganismsPaymentListing />
+                      <h2 className="c-title-level-3">Zahlungsmethode wählen</h2>
+                      <div className='o-distance-m'>
+                          <OrganismsPaymentListing />
+                      </div>
                   </div>
               </div>
               <div className="o-television__remote-control">
