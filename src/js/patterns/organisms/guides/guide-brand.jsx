@@ -14,8 +14,8 @@ class OrganismsGuideBrand extends Component {
     render () {
         return (
             <div>
-                <div className='o-television is-active'>
-                    <OrganismsHeaderSlideIn title="Filter" />
+                <div className='o-television'>
+                    <OrganismsHeaderSlideIn title="Marke" />
                     <div className='o-television__display'>
                         <form action="" className='o-television__display__header o-television__display__boundless t-ghost'>
                             <div className="c-box">
@@ -58,24 +58,70 @@ class OrganismsGuideBrand extends Component {
                                 <div className="o-distance-s">
                                     <ul className="o-list-bare">
                                         <li className="o-list-bare__item">
-                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform is-active'>
+                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
                                               <button>
                                                 Abercrombie & Fitch
                                               </button>
-                                              <svg className='c-icon c-icon--s is-hidden' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                              <svg className='c-icon c-icon--s u-hidden' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                                     <title>Checkmark</title>
                                                     <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
                                               </svg>
                                           </div>
                                         </li>
                                         <li className="o-list-bare__item">
-                                            <button className="c-link c-link--uniform">Absorba</button>
+                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
+                                              <button>
+                                                Abercrombie & Fitch
+                                              </button>
+                                              <svg className='c-icon c-icon--s u-hidden' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <title>Checkmark</title>
+                                                    <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
+                                              </svg>
+                                          </div>
                                         </li>
                                         <li className="o-list-bare__item">
-                                            <button className="c-link c-link--uniform">Abercrombie & Fitch</button>
+                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
+                                              <button>
+                                                Abercrombie & Fitch
+                                              </button>
+                                              <svg className='c-icon c-icon--s u-hidden' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <title>Checkmark</title>
+                                                    <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
+                                              </svg>
+                                          </div>
                                         </li>
                                         <li className="o-list-bare__item">
-                                            <button className="c-link c-link--uniform">Absorba</button>
+                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
+                                              <button>
+                                                Abercrombie & Fitch
+                                              </button>
+                                              <svg className='c-icon c-icon--s u-hidden' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <title>Checkmark</title>
+                                                    <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
+                                              </svg>
+                                          </div>
+                                        </li>
+                                        <li className="o-list-bare__item">
+                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
+                                              <button>
+                                                Abercrombie & Fitch
+                                              </button>
+                                              <svg className='c-icon c-icon--s u-hidden' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <title>Checkmark</title>
+                                                    <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
+                                              </svg>
+                                          </div>
+                                        </li>
+                                        <li className="o-list-bare__item">
+                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform is-active'>
+                                              <button>
+                                                Abercrombie & Fitch
+                                              </button>
+                                              <svg className='c-icon c-icon--s' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <title>Checkmark</title>
+                                                    <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
+                                              </svg>
+                                          </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -86,16 +132,70 @@ class OrganismsGuideBrand extends Component {
                                 <div className="o-distance-s">
                                     <ul className="o-list-bare">
                                         <li className="o-list-bare__item">
-                                            <button className="c-link c-link--uniform">Abercrombie & Fitch</button>
+                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform is-active'>
+                                              <button>
+                                                Abercrombie & Fitch
+                                              </button>
+                                              <svg className='c-icon c-icon--s' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <title>Checkmark</title>
+                                                    <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
+                                              </svg>
+                                          </div>
                                         </li>
                                         <li className="o-list-bare__item">
-                                            <button className="c-link c-link--uniform">Absorba</button>
+                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform is-active'>
+                                              <button>
+                                                Abercrombie & Fitch
+                                              </button>
+                                              <svg className='c-icon c-icon--s' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <title>Checkmark</title>
+                                                    <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
+                                              </svg>
+                                          </div>
                                         </li>
                                         <li className="o-list-bare__item">
-                                            <button className="c-link c-link--uniform">Abercrombie & Fitch</button>
+                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
+                                              <button>
+                                                Abercrombie & Fitch
+                                              </button>
+                                              <svg className='c-icon c-icon--s u-hidden' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <title>Checkmark</title>
+                                                    <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
+                                              </svg>
+                                          </div>
                                         </li>
                                         <li className="o-list-bare__item">
-                                            <button className="c-link c-link--uniform">Absorba</button>
+                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
+                                              <button>
+                                                Abercrombie & Fitch
+                                              </button>
+                                              <svg className='c-icon c-icon--s u-hidden' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <title>Checkmark</title>
+                                                    <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
+                                              </svg>
+                                          </div>
+                                        </li>
+                                        <li className="o-list-bare__item">
+                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
+                                              <button>
+                                                Abercrombie & Fitch
+                                              </button>
+                                              <svg className='c-icon c-icon--s u-hidden' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <title>Checkmark</title>
+                                                    <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
+                                              </svg>
+                                          </div>
+                                        </li>
+                                        <li className="o-list-bare__item">
+                                          <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
+                                              <button>
+                                                Abercrombie & Fitch
+                                              </button>
+                                              <svg className='c-icon c-icon--s u-hidden' version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                    <title>Checkmark</title>
+                                                    <path d="M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z"></path>
+                                              </svg>
+                                          </div>
                                         </li>
                                     </ul>
                                 </div>

@@ -10,7 +10,7 @@ const MoleculesReferalBordered = ({ selected, title }) => {
             <a href='' title='' className='c-referal c-referal--bordered is-active'>
               <h3 className='c-title-level-4 c-referal__body u-text-bold'>{title}</h3>
               <div className='c-referal__offset'>
-                <span class="u-text-s u-text-one-liner t-text-quiet">
+                <span class="u-text-xs u-text-one-liner t-text-quiet">
                   {selected.map((item, i) => {
                       return <span>{item}, </span>
                   })}

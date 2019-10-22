@@ -6,6 +6,14 @@
   margin-left: $spacing-inset-m;
   margin-right: $spacing-inset-m;
   margin-top: $spacing-stack-l;
+
+  &__contact-details {
+    justify-content: center;
+
+    @include breakpoint($layout-breakpoint-m) {
+      justify-content: flex-start;
+    }
+  }
   
   &__top {
     display: flex;
@@ -32,6 +40,10 @@
       align-items: flex-start;
       flex-direction: row;
       justify-content: space-between;
+    }
+
+    &__navigation {
+      justify-content: center;
     }
   }
 }
