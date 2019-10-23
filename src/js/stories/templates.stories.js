@@ -14,23 +14,8 @@ import TemplatesLogin from '../patterns/templates/login'
 import TemplatesRegister from '../patterns/templates/register'
 import TemplatesOrderConfirmation from '../patterns/templates/order-confirmation'
 import TemplatesOrder from '../patterns/templates/order'
-
-// import TemplatesHome from '../patterns/templates/home'
-// import VerticalSwipe from '../patterns/templates/vertical-swipe'
-// import MoleculesProduct from '../patterns/organisms/products/product'
-// import MoleculesHeading from '../patterns/molecules/headings/heading'
-
-// import TemplatesSlideIn from '../patterns/templates/slide-in'
-// import TemplatesSlideUp from '../patterns/templates/slide-up'
-// import TemplatesFilter from '../patterns/templates/filter'
-// import TemplatesHelp from '../patterns/templates/help'
-// import OrganismsHeaderSlideIn from '../patterns/organisms/base/header-slide-in'
-// import OrganismsDeliveryFeatures from '../patterns/organisms/deliveryFeatures/delivery-features'
-// import OrganismsMoreInfoProduct from '../patterns/organisms/moreInfoProduct/more-info'
 import TemplatesMyOrders from '../patterns/templates/my-orders'
-// import TemplatesMyOrderDetails from '../patterns/templates/my-order-details'
-// import TemplatesProductReturn from '../patterns/templates/product-return'
-// import TemplatesOrderSuccess from '../patterns/templates/order-success'
+import TemplatesMyOrderDetails from '../patterns/templates/my-order-details'
 
 export default {
     title: '4.Templates|All',
@@ -132,6 +117,27 @@ export const templatesOrder = () => {
 templatesOrder.story = {
     name: 'Order Overview',
 }
+
+export const myOrders = () => {
+    return (
+        <div className='fit-view'>
+            <TemplatesMyOrders />
+        </div>
+    )
+}
+
+myOrders.story = {
+    name: 'My Orders',
+}
+
+export const templatesMyOrderDetails = () => {
+    return <TemplatesMyOrderDetails />
+}
+
+templatesMyOrderDetails.story = {
+    name: 'My Order Detailview',
+}
+
 
 // export const home = () => { return <TemplatesHome /> }
 
@@ -279,18 +285,6 @@ templatesOrder.story = {
 // moreInfoProduct.story = {
 //     name: 'More info product',
 // }
-
-export const myOrders = () => {
-    return (
-        <div className='fit-view'>
-            <TemplatesMyOrders />
-        </div>
-    )
-}
-
-myOrders.story = {
-    name: 'My Orders',
-}
 
 // export const myOrdersDetails = () => {
 //     return (

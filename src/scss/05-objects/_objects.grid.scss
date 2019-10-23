@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+.o-box-center {
+  justify-content: center;
+}
+
 .o-prevent-space {
   padding-left: $layout-edge-width;
   padding-right: $layout-edge-width;
@@ -94,4 +98,20 @@
 .o-image-center {
   margin-left: auto;
   margin-right: auto;
+}
+
+
+.o-stacked {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  &__item {
+    margin-left: - $spacing-inline-s;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }

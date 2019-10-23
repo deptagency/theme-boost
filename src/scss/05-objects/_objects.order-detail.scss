@@ -6,7 +6,18 @@
     justify-content: space-between;
   }
   &__body {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
     margin-top: $spacing-stack-m;
+
+    &__item {
+      padding-left: $spacing-inline-m;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
   }
   &__footer {
     margin-top: $spacing-stack-m;

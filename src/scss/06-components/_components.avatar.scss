@@ -1,0 +1,15 @@
+// @component Avatar
+.c-avatar {
+  height: 54px;
+  width: 54px;
+  border: 3px solid;
+  border-radius: $border-radius-base;
+}
+
+.c-avatar--counter {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: $color-brand-primary-base;
+}
