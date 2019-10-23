@@ -75,7 +75,7 @@ const TemplatesMyOrders = props => {
                 </article>
 
                 <section className='o-distance'>
-                    <nav role="navigation">
+                    <nav role='navigation'>
                         <MoleculesReferalBordered title='Bestellungen' />
                         <MoleculesReferalBordered title='Rücksendungen' />
                         <MoleculesReferalBordered title='Benutzerdaten' />
