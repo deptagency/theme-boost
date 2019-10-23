@@ -25,15 +25,10 @@ const TemplatesEmptyCart = () => {
             </section>
             <section className='o-distance o-prevent-space'>
                 <OrganismsNewsletterBlock />
-<<<<<<< HEAD
              </section>
              <div className='o-prevent-space'>
                 <OrganismsFooter />
             </div>
-=======
-            </section>
-            <OrganismsFooter />
->>>>>>> dc93d08e0f7112549684af7b12724a8da646a114
         </div>
     )
 }
