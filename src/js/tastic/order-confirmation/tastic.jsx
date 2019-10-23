@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import OrganismsOrderConfirmation from '../../patterns/organisms/orders/order-confirmation.jsx'
+// Deactivated due to compiler error
+// import OrganismsOrderConfirmation from '../../patterns/organisms/orders/order-confirmation.jsx'
 
 class OrderConfirmationTastic extends Component {
     render () {
         const { data: { paymentType } } = this.props
 
         return (
-            <OrganismsOrderConfirmation paymentType={paymentType} />
+            // Deactivated due to compiler error
+            // <OrganismsOrderConfirmation paymentType={paymentType} />
+            null
         )
     }
 }

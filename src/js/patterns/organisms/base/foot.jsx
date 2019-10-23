@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import _ from 'lodash'
 
-import OrganismsListingFeatures from 'js/patterns/organisms/listings/feature-listing'
+import OrganismsListingFeatures from '../listings/feature-listing'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
