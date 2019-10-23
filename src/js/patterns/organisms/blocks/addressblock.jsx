@@ -12,9 +12,9 @@ class OrganismsAddressblock extends Component {
                 <div className='o-grid o-grid--side-by-side'>
                     <address>
                         <span className='u-text-strong'>Tim Hartmann</span> <br />
-            Ewaldstr. 2 <br />
-            59174 Kamen <br />
-            Deutschland
+                        Ewaldstr. 2 <br />
+                        59174 Kamen <br />
+                        Deutschland
                     </address>
                     {this.props.editable ?
                         <a href='' className='c-link o-block-short'>
@@ -35,8 +35,9 @@ class OrganismsAddressblock extends Component {
                         </a>
           : null}
                 </div>
-
-                <p className='o-distance-m u-text-s t-text-quiet'>Rechnungsadresse entspricht Lieferanschrift</p>
+                {this.props.sameAddress ?
+                    <p className='o-distance-m u-text-s t-text-quiet'>Rechnungsadresse entspricht Lieferanschrift</p>
+                : null }
             </Component>
         )
     }
@@ -45,11 +46,13 @@ class OrganismsAddressblock extends Component {
 OrganismsAddressblock.propTypes = {
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     editable: PropTypes.bool,
+    sameAddress: PropTypes.bool,
 }
 
 OrganismsAddressblock.defaultProps = {
     component: 'div',
     editable: null,
+    sameAddress: false
 }
 
 export default ComponentInjector.return('OrganismsAddressblock', OrganismsAddressblock)

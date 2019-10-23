@@ -3,7 +3,7 @@
     "base": {
       "color": {
         "background": {
-          "value": "{color.palette.gray.lighter.value}"
+          "value": "{border.color.base.value}"
         }
       },
       "height": { "value": "1px" }

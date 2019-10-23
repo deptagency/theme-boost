@@ -2,10 +2,10 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
-import MoleculesButton from '../molecules/buttons/button'
-import OrganismsHeaderSlideIn from '../organisms/base/header-slide-in'
-import OrganismsSummary from '../organisms/blocks/summary'
-import OrganismsBundleListing from '../organisms/listings/bundle-listing'
+import MoleculesButton from 'js/patterns/molecules/buttons/button'
+import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
+import OrganismsSummary from 'js/patterns/organisms/blocks/summary'
+import OrganismsBundleListing from 'js/patterns/organisms/listings/bundle-listing'
 
 const TemplatesMyOrderDetails = ({ products }) => {
     return (

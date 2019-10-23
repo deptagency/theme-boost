@@ -14,8 +14,9 @@ import TemplatesLogin from '../patterns/templates/login'
 import TemplatesRegister from '../patterns/templates/register'
 import TemplatesOrderConfirmation from '../patterns/templates/order-confirmation'
 import TemplatesOrder from '../patterns/templates/order'
-import TemplatesMyOrders from '../patterns/templates/my-orders'
-import TemplatesMyOrderDetails from '../patterns/templates/my-order-details'
+import TemplatesMyOrders from '../patterns/templates/my-account/my-orders'
+import TemplatesMyOrderDetails from '../patterns/templates/my-account/my-order-details'
+import TemplatesMyAddresses from '../patterns/templates/my-account/my-addresses'
 
 export default {
     title: '4.Templates|All',
@@ -136,6 +137,14 @@ export const templatesMyOrderDetails = () => {
 
 templatesMyOrderDetails.story = {
     name: 'My Order Detailview',
+}
+
+export const templatesMyAddresses = () => {
+    return <TemplatesMyAddresses />
+}
+
+templatesMyAddresses.story = {
+    name: 'My Addresses',
 }
 
 
