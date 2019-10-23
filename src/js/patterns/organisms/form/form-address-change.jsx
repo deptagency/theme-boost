@@ -104,9 +104,6 @@ class OrganismsFormAddressChange extends Component {
                         </div>
                     </div>
                 </fieldset>
-                <div className='o-distance-l'>
-                    <button type='submit' className='c-button c-button--primary c-button--boss'>Jetzt speichern</button>
-                </div>
             </form>
         </div>)
     }

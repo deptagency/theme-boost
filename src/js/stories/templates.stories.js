@@ -17,6 +17,7 @@ import TemplatesOrder from '../patterns/templates/order'
 import TemplatesMyOrders from '../patterns/templates/my-account/my-orders'
 import TemplatesMyOrderDetails from '../patterns/templates/my-account/my-order-details'
 import TemplatesMyAddresses from '../patterns/templates/my-account/my-addresses'
+import TemplatesMyAddressChange from '../patterns/templates/my-account/my-address-change'
 
 export default {
     title: '4.Templates|All',
@@ -145,6 +146,14 @@ export const templatesMyAddresses = () => {
 
 templatesMyAddresses.story = {
     name: 'My Addresses',
+}
+
+export const templatesMyAddressChange = () => {
+    return <TemplatesMyAddressChange />
+}
+
+templatesMyAddressChange.story = {
+    name: 'Address Change',
 }
 
 
