@@ -18,6 +18,9 @@ import TemplatesMyOrders from '../patterns/templates/my-account/my-orders'
 import TemplatesMyOrderDetails from '../patterns/templates/my-account/my-order-details'
 import TemplatesMyAddresses from '../patterns/templates/my-account/my-addresses'
 import TemplatesMyAddressChange from '../patterns/templates/my-account/my-address-change'
+import TemplatesMyUserData from '../patterns/templates/my-account/my-user-data'
+import TemplatesMyEmailChange from '../patterns/templates/my-account/my-email-change'
+import TemplatesMyPasswordChange from '../patterns/templates/my-account/my-password-change'
 
 export default {
     title: '4.Templates|All',
@@ -154,6 +157,30 @@ export const templatesMyAddressChange = () => {
 
 templatesMyAddressChange.story = {
     name: 'Address Change',
+}
+
+export const templatesMyUserData = () => {
+    return <TemplatesMyUserData />
+}
+
+templatesMyUserData.story = {
+    name: 'User Data',
+}
+
+export const templatesMyEmailChange = () => {
+    return <TemplatesMyEmailChange />
+}
+
+templatesMyEmailChange.story = {
+    name: 'Email Change',
+}
+
+export const templatesMyPasswordChange = () => {
+    return <TemplatesMyPasswordChange />
+}
+
+templatesMyPasswordChange.story = {
+    name: 'Password Change',
 }
 
 

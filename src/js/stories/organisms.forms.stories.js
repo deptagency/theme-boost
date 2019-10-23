@@ -15,6 +15,8 @@ import OrganismsFormMailChange from 'js/patterns/organisms/form/form-mail-change
 import OrganismsFormPasswordReset from 'js/patterns/organisms/form/form-password-reset'
 import OrganismsFormCoupon from 'js/patterns/organisms/form/form-coupon'
 import OrganismsFormBanking from 'js/patterns/organisms/form/form-banking'
+import OrganismsFormEmailChange from 'js/patterns/organisms/form/form-email-change'
+import OrganismsFormPasswordChange from 'js/patterns/organisms/form/form-password-change'
 
 export default {
     title: '3.Organisms|Forms',
@@ -162,4 +164,25 @@ export const coupon = () => {
 
 coupon.story = {
     name: 'Coupon',
+}
+
+export const formEmailChange = () => {
+    return (
+        <OrganismsFormEmailChange />
+    )
+}
+
+formEmailChange.story = {
+    name: 'Form Mail Change',
+}
+
+
+export const formPasswordChange = () => {
+    return (
+        <OrganismsFormPasswordChange />
+    )
+}
+
+formPasswordChange.story = {
+    name: 'Form Password Change',
 }
