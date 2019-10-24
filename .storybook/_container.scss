@@ -11,6 +11,16 @@
         margin-top: 0;
     }
 }
+.sb-show-main {
+    height: 100%;
+}
+
+#storybook-preview-iframe,
+.css-ncyfta,
+#storybook-preview-iframe html,
+#storybook-preview-iframe body {
+    height: 100%;
+}
 
 .fit-view {
     display: flex;

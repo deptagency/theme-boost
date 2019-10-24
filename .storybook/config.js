@@ -73,8 +73,14 @@ addParameters({
 
 addDecorator(StoryRouter())
 addDecorator(withFrontasticRedux)
-addDecorator((story) => <Container story={story} />)
+// When the Story is rendered as a React component, and not
+// a function (which is the default) you can use react
+// features inside stories, state or hooks for example.
+addDecorator((Story) => (
+    <Container>
+        <Story />
+    </Container>
+))
 
 // automatically import all files ending in *.stories.js
-configure(require.context('../src', true, /\.stories\.js$/), module);
-
+configure(require.context('../src', true, /\.stories\.js$/), module)

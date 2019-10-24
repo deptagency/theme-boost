@@ -5,7 +5,6 @@ import OrganismsHeader from 'js/patterns/organisms/base/header'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
 import OrganismsHeaderContext from 'js/patterns/organisms/base/header-context'
 import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
-import TopCategoryNavTabs from 'js/patterns/molecules/navigations/gender-nav-tabs'
 
 export default {
     title: '3.Organisms|Base',
@@ -69,16 +68,4 @@ export const slideInHeader = () => {
 
 slideInHeader.story = {
     name: 'Slide In Header',
-}
-
-export const contextSwitcherHeader = () => {
-    return (
-        <div>
-            <TopCategoryNavTabs />
-        </div>
-    )
-}
-
-contextSwitcherHeader.story = {
-    name: 'Context Switcher Header',
 }
