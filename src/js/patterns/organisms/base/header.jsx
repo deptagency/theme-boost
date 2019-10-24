@@ -2,18 +2,22 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from '../../../app/injector'
-import MoleculesMobileNavigation from '../../molecules/navigations/mobile-navigation'
-import MoleculesGenderNavLinks from '../../molecules/navigations/gender-nav-links'
+import MoleculesMobileNavigation from '../../molecules/navigations/mobileNavigation'
+import { topCategoryType } from '../../molecules/navigations/mobileNavigation/types'
+import MoleculesTopCategoryNavLinks from '../../molecules/navigations/topCategoryNavLinks'
 import MoleculesUserIconNav from '../../molecules/navigations/user-icon-nav'
 import MobileMenuToggle from '../../molecules/buttons/mobile-menu-toggle'
 
-const OrganismsHead = ({ genderNavEntries }) => {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true)
+const OrganismsHead = ({ topCategories }) => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+    if (!topCategories) { return null }
+
     return (
         <div className='o-header'>
             <div className='o-header__top'>
                 <div className='o-header__top-left'>
-                    <MoleculesGenderNavLinks items={genderNavEntries} />
+                    <MoleculesTopCategoryNavLinks items={topCategories} />
                 </div>
                 <MobileMenuToggle
                     isMenuOpen={isMobileMenuOpen}
@@ -27,13 +31,16 @@ const OrganismsHead = ({ genderNavEntries }) => {
                 </a>
                 <MoleculesUserIconNav open />
             </div>
-            <MoleculesMobileNavigation open={isMobileMenuOpen} genderNavEntries={genderNavEntries} />
+            <MoleculesMobileNavigation
+                open={isMobileMenuOpen}
+                topCategories={topCategories}
+            />
         </div>
     )
 }
 
 OrganismsHead.propTypes = {
-    genderNavEntries: PropTypes.arrayOf(PropTypes.object),
+    topCategories: PropTypes.arrayOf(topCategoryType),
 }
 
 OrganismsHead.defaultProps = {}
