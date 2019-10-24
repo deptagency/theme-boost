@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import ComponentInjector from '../../../app/injector'
-import MoleculesButton from 'js/patterns/catwalk-frontend/molecules/buttons/button'
+import MoleculesButton from 'js/patterns/molecules/buttons/button'
 
 class OrganismsButtonBar extends Component {
     render () {
