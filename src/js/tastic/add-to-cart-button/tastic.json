@@ -1,8 +1,8 @@
 {
     "tasticType": "frontastic/boost/add-to-cart-button",
-    "name": "Catwalk Add To Cart Button",
+    "name": "Add To Cart Button",
     "icon": "menu",
-    "category": "catwalk",
+    "category": "Boost Theme",
     "schema": [
         {
             "name": "Options",

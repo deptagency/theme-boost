@@ -1,8 +1,8 @@
 {
     "tasticType": "frontastic/boost/color-filter",
-    "name": "Catwalk Color Filter",
+    "name": "Color Filter",
     "icon": "menu",
-    "category": "catwalk",
+    "category": "Boost Theme",
     "schema": [
         {
             "name": "Options",

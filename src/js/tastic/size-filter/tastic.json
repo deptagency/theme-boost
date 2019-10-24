@@ -1,8 +1,8 @@
 {
     "tasticType": "frontastic/boost/size-filter",
-    "name": "Catwalk Size Filter",
+    "name": "Size Filter",
     "icon": "menu",
-    "category": "catwalk",
+    "category": "Boost Theme",
     "schema": [
         {
             "name": "Options",

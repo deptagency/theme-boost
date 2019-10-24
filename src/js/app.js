@@ -10,6 +10,7 @@ import Context from './app/context'
 
 import Preview from './preview'
 import Node from './node'
+import Node2 from './head'
 
 export default (mountNode, dataNode, tastics = null) => {
     if (!mountNode || !dataNode) {

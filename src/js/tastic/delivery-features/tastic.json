@@ -1,8 +1,8 @@
 {
     "tasticType": "frontastic/boost/delivery-features",
-    "name": "Catwalk Delivery Features",
+    "name": "Delivery Features",
     "icon": "menu",
-    "category": "catwalk",
+    "category": "Boost Theme",
     "schema": [
         {
             "name": "Options",

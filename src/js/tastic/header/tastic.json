@@ -1,8 +1,8 @@
 {
     "tasticType": "frontastic/boost/header",
-    "name": "Catwalk Header",
+    "name": "Header",
     "icon": "menu",
-    "category": "Catwalk Frontend",
+    "category": "Boost Theme",
     "schema": [
         {
             "name": "Top Categories",

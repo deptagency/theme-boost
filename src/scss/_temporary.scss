@@ -361,9 +361,11 @@
 }
 
 .catwalk-product-list-tastic {
-  display: grid;
-  grid-gap: 8px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+
+    .product-list-item {
+        margin: 16px;
+    }
 }
 
 .o-heading__title {

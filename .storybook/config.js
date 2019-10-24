@@ -2,11 +2,9 @@ import React from 'react'
 import { configure, addDecorator, addParameters } from '@storybook/react'
 import StoryRouter from 'storybook-react-router'
 import { create } from '@storybook/theming'
-import { withInfo } from '@storybook/addon-info'
 import { withFrontasticRedux } from '../src/js/helper/storybook/redux'
 
 import Container from './Container'
-//import '../src/scss/catwalk-frontend/boost.scss'
 import '../src/scss/app.scss'
 
 addParameters({

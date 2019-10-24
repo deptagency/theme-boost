@@ -1,11 +1,11 @@
 {
     "tasticType": "frontastic/boost/product-list",
-    "name": "Catwalk Product List",
+    "name": "Product List",
     "icon": "menu",
-    "category": "Catwalk",
+    "category": "Boost Theme",
     "schema": [
         {
-            "name": "Title",
+            "name": "Stream Selection",
             "fields": [
                 {
                     "label": "title",
@@ -25,6 +25,12 @@
                     "type": "stream",
                     "streamType": "product-list",
                     "default": null
+                },
+                {
+                    "label": "# Products",
+                    "field": "productCount",
+                    "type": "integer",
+                    "default": 5
                 }
             ]
         }

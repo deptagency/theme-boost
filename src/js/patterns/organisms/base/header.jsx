@@ -11,7 +11,9 @@ import MobileMenuToggle from '../../molecules/buttons/mobile-menu-toggle'
 const OrganismsHead = ({ topCategories }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-    if (!topCategories) { return null }
+    if (!topCategories) {
+        return null
+    }
 
     return (
         <div className='o-header'>
@@ -31,10 +33,7 @@ const OrganismsHead = ({ topCategories }) => {
                 </a>
                 <MoleculesUserIconNav open />
             </div>
-            <MoleculesMobileNavigation
-                open={isMobileMenuOpen}
-                topCategories={topCategories}
-            />
+            <MoleculesMobileNavigation open={isMobileMenuOpen} topCategories={topCategories} />
         </div>
     )
 }
