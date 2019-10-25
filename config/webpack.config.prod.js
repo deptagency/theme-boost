@@ -85,6 +85,7 @@ const mainConfig = {
             paths.appNodeModules,
             path.resolve(__dirname, '../node_modules'),
             path.resolve(__dirname, '../../../node_modules'),
+            path.resolve(__dirname, '../src'),
         ].concat(
             // It is guaranteed to exist because we tweak it in `env.js`
             process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
@@ -221,7 +222,6 @@ const mainConfig = {
                         loader: require.resolve('sass-loader'), // compiles Sass to CSS
                         options: {
                             sourceMap: true, // resolve-url-loader requires a sourceMap, will be skipped afterwards
-                            sourceMapContents: false,
                         },
                     },
                 ],
@@ -382,14 +382,14 @@ let serverConfig = {
         }),
 
         new webpack.ProvidePlugin({
-            'document': 'min-document',
+            document: 'min-document',
             'Element.prototype': 'node-noop',
-            'hostname': 'node-noop',
-            'location': 'node-noop',
+            hostname: 'node-noop',
+            location: 'node-noop',
             'navigator.userAgent': 'empty-string',
             'navigator.userAgent': 'empty-string',
             'self.navigator.userAgent': 'empty-string',
-            'self': 'node-noop',
+            self: 'node-noop',
             'window.Element.prototype': 'empty-string',
             'window.location.href': 'empty-string',
             'window.location': 'node-noop',
