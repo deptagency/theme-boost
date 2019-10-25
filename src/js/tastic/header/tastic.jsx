@@ -4,7 +4,7 @@ import ReferencePropType from 'frontastic-catwalk/src/js/component/reference'
 
 // import Link from '../../app/link'
 
-import { ReferencePropType } from '../../../component/reference'
+// import { ReferencePropType } from '../../../component/reference'
 
 // import logo from '../../../layout/logo.svg'
 //
@@ -13,9 +13,9 @@ import { ReferencePropType } from '../../../component/reference'
 // import Sequential from './sequential'
 // import SvgIcon from '../../patterns/atoms/icons/icon'
 
-import Header from '../../../patterns/organisms/base/header'
+import Header from '../../patterns/organisms/base/header'
 
-function addProperDataTrees(cats, trees) {
+function addProperDataTrees (cats, trees) {
     return cats.map((c, i) => {
         return { ...c, tree: trees[i] }
     })

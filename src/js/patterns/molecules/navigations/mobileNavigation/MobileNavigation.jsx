@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import useBackgroundImageUrl from 'js/helper/hooks/useBackgroundImageUrl'
+import useBackgroundImageUrl from '../../../../helper/hooks/useBackgroundImageUrl'
 
 // TODO: Icon system
-import backArrow from 'icons/arrow_back.svg'
-import closeX from 'icons/close_x_mobile.svg'
+import backArrow from '../../../../../icons/arrow_back.svg'
+import closeX from '../../../../../icons/close_x_mobile.svg'
 
 import { MobileNavTree } from './components/MobileNavTree'
 import { TopCategoryNavTabs } from './components/TopCategoryNavTabs'

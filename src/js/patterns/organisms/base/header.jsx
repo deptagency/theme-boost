@@ -1,12 +1,21 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import ComponentInjector from '../../../app/injector'
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import MoleculesMobileNavigation from '../../molecules/navigations/mobileNavigation'
 import { topCategoryType } from '../../molecules/navigations/mobileNavigation/types'
 import MoleculesTopCategoryNavLinks from '../../molecules/navigations/topCategoryNavLinks'
 import MoleculesUserIconNav from '../../molecules/navigations/user-icon-nav'
 import MobileMenuToggle from '../../molecules/buttons/mobile-menu-toggle'
+import MoleculesButton from '../../molecules/buttons/button'
+
+const ctaLoggedIn = () => {
+    return (
+        <MoleculesButton type='quiet' onClick={() => console.log('yea')}>
+            Meine Bestellungen ansehen
+        </MoleculesButton>
+    )
+}
 
 const OrganismsHead = ({ topCategories }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -33,7 +42,11 @@ const OrganismsHead = ({ topCategories }) => {
                 </a>
                 <MoleculesUserIconNav open />
             </div>
-            <MoleculesMobileNavigation open={isMobileMenuOpen} topCategories={topCategories} />
+            <MoleculesMobileNavigation
+                calltoAction={ctaLoggedIn()}
+                open={isMobileMenuOpen}
+                topCategories={topCategories}
+            />
         </div>
     )
 }
