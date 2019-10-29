@@ -18,6 +18,7 @@ NavItem.propTypes = {
 }
 
 const MoleculesGenderNavLinks = ({ items }) => {
+    console.log('MoleculesGenderNavLinks', items)
     return (
         <ul className='c-service-navigation o-list-inline'>{items && items.map((item) => { return <NavItem item={item} /> })}</ul>
     )
