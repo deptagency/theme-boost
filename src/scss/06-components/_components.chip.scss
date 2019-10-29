@@ -9,7 +9,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding: $spacing-inset-s;
+  padding: $spacing-inset-m;
   @include border();
   color: $color-brand-primary-base;
   line-height: 1;
@@ -35,6 +35,10 @@
     margin-left: $spacing-inline-m;
     line-height: 0;
   }
+}
+
+.c-chip--small {
+  padding: $spacing-inset-s;
 }
 
 .c-chip--selected {

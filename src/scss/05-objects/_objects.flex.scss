@@ -42,10 +42,12 @@
 /// @group flex
 .o-flex--large-justified {
   flex-direction: column;
+  margin-top: -$spacing-stack-m;
 
   @media (min-width: $layout-breakpoint-l) {
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 0;
   }
 
   .o-flex__item {

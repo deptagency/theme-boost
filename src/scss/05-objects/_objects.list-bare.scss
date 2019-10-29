@@ -2,7 +2,7 @@
   @include list-reset();
 
   &__item {
-    margin-top: $spacing-stack-m;
+    margin-top: $spacing-stack-s;
 
     &:first-child {
       margin-top: 0;

@@ -6,10 +6,10 @@ class Featurebox extends Component {
     render () {
         return (
             <div className='c-box t-quietlight'>
-                <div className='o-block-short'>
+                <div className='o-block-short o-block-short--centered'>
                     <div className='o-block-short__short-item u-line-height-fix-tiny'>
                         <svg
-                            className='c-icon'
+                            className='c-icon c-icon--m'
                             width='24'
                             height='24'
                             viewBox='0 0 24 24'

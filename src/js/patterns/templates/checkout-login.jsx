@@ -16,7 +16,7 @@ class TemplatesLogin extends Component {
                     <OrganismsHeaderMobile className='o-television__bar' />
                     <div className='o-television__display'>
                         <OrganismsPageHeader title='Anmelden' />
-                        <h2 className='c-title-level-3 o-distance'>Melde dich an oder erstelle ein Konto</h2>
+                        <h2 className='c-title-level-3 o-distance-m'>Melde dich an oder erstelle ein Konto</h2>
                         <div className='o-buttonbar o-distance-s'>
                           <MoleculesButton type='primary' className='o-buttonbar__item'>Anmelden</MoleculesButton>
                           <MoleculesButton type='primary' className='o-buttonbar__item'>Registrieren</MoleculesButton>

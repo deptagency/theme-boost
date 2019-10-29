@@ -4,7 +4,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class MoleculesDetaillist extends Component {
     render () {
-        return (<div>
+        return (
             <dl className='o-detaillist o-distance-s'>
                 <dt className='t-text-quiet'>Farbe:</dt>
                 <dd className='u-text-strong'>Olive</dd>
@@ -13,7 +13,7 @@ class MoleculesDetaillist extends Component {
                 <dt className='t-text-quiet'>Anzahl:</dt>
                 <dd className='u-text-strong'>2</dd>
             </dl>
-        </div>)
+        )
     }
 }
 

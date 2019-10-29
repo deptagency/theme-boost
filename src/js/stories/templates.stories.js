@@ -22,6 +22,10 @@ import TemplatesMyUserData from '../patterns/templates/my-account/my-user-data'
 import TemplatesMyEmailChange from '../patterns/templates/my-account/my-email-change'
 import TemplatesMyPasswordChange from '../patterns/templates/my-account/my-password-change'
 import TemplatesCheckoutLogin from '../patterns/templates/checkout-login'
+import TemplatesHome from '../patterns/templates/home'
+import TemplatesHelp from '../patterns/templates/help'
+import TemplatesHelpDetail from '../patterns/templates/help-detail'
+import TemplatesProductDetail from '../patterns/templates/detail'
 
 export default {
     title: '4.Templates|All',
@@ -190,6 +194,38 @@ export const templatesCheckoutLogin = () => {
 
 templatesCheckoutLogin.story = {
     name: 'Checkout Login',
+}
+
+export const templatesHome = () => {
+    return <TemplatesHome />
+}
+
+templatesHome.story = {
+    name: 'Home',
+}
+
+export const templatesHelp = () => {
+    return <TemplatesHelp />
+}
+
+templatesHelp.story = {
+    name: 'Help',
+}
+
+export const templatesHelpDetail = () => {
+    return <TemplatesHelpDetail />
+}
+
+templatesHelpDetail.story = {
+    name: 'Help Detail',
+}
+
+export const templatesProductDetail = () => {
+    return <TemplatesProductDetail />
+}
+
+templatesProductDetail.story = {
+    name: 'Product Detail',
 }
 
 

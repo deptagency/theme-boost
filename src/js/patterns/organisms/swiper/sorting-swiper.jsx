@@ -8,7 +8,7 @@ const OrganismsSortingSwiper = ({ sorting }) => {
         <div className='o-swiper'>
             <div className='o-swiper__holder'>
                 {sorting.map((c) => {
-                  return <button className='o-swiper__item c-chip u-text-nowrap'>{c}</button>
+                  return <button className='o-swiper__item c-chip c-chip--small u-text-nowrap'>{c}</button>
               })}
             </div>
         </div >

@@ -7,8 +7,8 @@
   text-align: left;
 }
 .o-block-short__short-item {
-  flex-grow: 0;
-  margin-right: $spacing-inline-s;
+  flex: 0 0 auto;
+  margin-right: $spacing-inline-m;
 }
 .o-block-short__body {
   margin-top: $spacing-stack-xxs;

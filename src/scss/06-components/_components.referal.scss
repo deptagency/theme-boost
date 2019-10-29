@@ -15,9 +15,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  &.is-focused {
+    color: $link-color-hover;
+    
+    .c-referal__body {
+      font-weight: bold;
+    }
+  }
 }
 .c-referal__body {
   padding-right: $spacing-inline-m;
+  font-weight: normal;
 }
 .c-referal__icon {
   flex-shrink: 0;

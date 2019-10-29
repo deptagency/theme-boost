@@ -12,8 +12,8 @@ class OrganismsProductStage extends Component {
                 <div className='o-media-block__asset'>
                     <OrganismsGallery />
                 </div>
-                <div className='o-media-block__body margin-lr-16'>
-                    <div className='o-flex o-flex--justified o-distance-m'>
+                <div className='o-media-block__body o-prevent-space'>
+                    <div className='o-flex o-flex--justified'>
                         <div>
                             <div className='o-flex__item'>
                                 <h1 className='c-title-level-3'>Ashion Modern</h1>
