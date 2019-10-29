@@ -21,6 +21,7 @@ import TemplatesMyAddressChange from '../patterns/templates/my-account/my-addres
 import TemplatesMyUserData from '../patterns/templates/my-account/my-user-data'
 import TemplatesMyEmailChange from '../patterns/templates/my-account/my-email-change'
 import TemplatesMyPasswordChange from '../patterns/templates/my-account/my-password-change'
+import TemplatesCheckoutLogin from '../patterns/templates/checkout-login'
 
 export default {
     title: '4.Templates|All',
@@ -181,6 +182,14 @@ export const templatesMyPasswordChange = () => {
 
 templatesMyPasswordChange.story = {
     name: 'Password Change',
+}
+
+export const templatesCheckoutLogin = () => {
+    return <TemplatesCheckoutLogin />
+}
+
+templatesCheckoutLogin.story = {
+    name: 'Checkout Login',
 }
 
 
