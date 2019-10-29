@@ -22,6 +22,7 @@ import TemplatesMyUserData from '../patterns/templates/my-account/my-user-data'
 import TemplatesMyEmailChange from '../patterns/templates/my-account/my-email-change'
 import TemplatesMyPasswordChange from '../patterns/templates/my-account/my-password-change'
 import TemplatesCheckoutLogin from '../patterns/templates/checkout-login'
+import TemplatesCheckoutRegister from '../patterns/templates/checkout-register'
 import TemplatesHome from '../patterns/templates/home'
 import TemplatesHelp from '../patterns/templates/help'
 import TemplatesHelpDetail from '../patterns/templates/help-detail'
@@ -194,6 +195,13 @@ export const templatesCheckoutLogin = () => {
 
 templatesCheckoutLogin.story = {
     name: 'Checkout Login',
+}
+export const templatesCheckoutRegister = () => {
+    return <TemplatesCheckoutRegister />
+}
+
+templatesCheckoutRegister.story = {
+    name: 'Checkout Register',
 }
 
 export const templatesHome = () => {
