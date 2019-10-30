@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { MobileNavItem } from '../MobileNavItem'
 import { categoryTreeType } from '../../types'
 
-export function MobileNavTree ({ items, onSelectItem, navPath, level = 0 }) {
+export function MobileNavTree({ items, onSelectItem, navPath, level = 0 }) {
     return (
         <div className={`c-navigation__tree c-navigation__tree--level-${level}`}>
             <ul className='c-navigation__list'>
@@ -24,7 +24,15 @@ export function MobileNavTree ({ items, onSelectItem, navPath, level = 0 }) {
                 )}
 
                 {items.map((item, i) => {
-                    return <MobileNavItem key={item.nodeId} item={item} navPath={navPath} level={level} onClick={onSelectItem} />
+                    return (
+                        <MobileNavItem
+                            key={item.nodeId}
+                            item={item}
+                            navPath={navPath}
+                            level={level}
+                            onClick={onSelectItem}
+                        />
+                    )
                 })}
             </ul>
         </div>

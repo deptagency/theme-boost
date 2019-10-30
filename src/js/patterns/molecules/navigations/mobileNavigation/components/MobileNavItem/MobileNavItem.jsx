@@ -8,11 +8,11 @@ import forwardArrow from '../../../../../../../icons/arrow_forward.svg'
 import { MobileNavTree } from '../MobileNavTree'
 import { categoryTreeType } from '../../types'
 
-export function MobileNavItem ({ item, level, navPath, onClick }) {
+export function MobileNavItem({ item, level, navPath, onClick }) {
     // helper to see if the current item is part of the path.
     const isItemInPath = (item) => {
-        return navPath.some((e) => {
-            return e.id === item.id
+        return navPath.find((e) => {
+            return e.nodeId === item.nodeId
         })
     }
     const hasSubLevel = (item) => {
@@ -27,7 +27,7 @@ export function MobileNavItem ({ item, level, navPath, onClick }) {
                 }}
                 title='Startseite'
                 className='c-navigation__next-level-button'
-                >
+            >
                 <img src={forwardArrow} alt='Startseite' />
             </a>
         )

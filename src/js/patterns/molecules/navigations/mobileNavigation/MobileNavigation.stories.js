@@ -13,7 +13,9 @@ export default {
 
 const ctaLoggedIn = () => {
     return (
-        <MoleculesButton type='quiet' onClick={action('go to orders')}>Meine Bestellungen ansehen</MoleculesButton>
+        <MoleculesButton type='quiet' onClick={action('go to orders')}>
+            Meine Bestellungen ansehen
+        </MoleculesButton>
     )
 }
 

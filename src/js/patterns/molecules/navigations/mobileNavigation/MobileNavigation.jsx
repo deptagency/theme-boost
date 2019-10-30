@@ -16,7 +16,7 @@ import { topCategoryType } from './types'
 /* Helper Component
    <BackButton onClick={} />
 */
-function BackButton ({ onClick }) {
+function BackButton({ onClick }) {
     return (
         <button className='c-mobile-navigation__header-back-button' onClick={onClick}>
             <img src={backArrow} alt='Back' />
@@ -30,7 +30,7 @@ BackButton.propTypes = {
 /* Helper Component
    <CloseButton onClick={} />
 */
-function CloseButton ({ onClick }) {
+function CloseButton({ onClick }) {
     return (
         <button className='c-mobile-navigation__header-close-button' onClick={onClick}>
             <img src={closeX} alt='Close' />
@@ -47,7 +47,7 @@ CloseButton.propTypes = {
  * see PropTypes for prop documentation
  *
  */
-function MoleculesMobileNavigation ({ open, topCategories, onClose, callToAction }) {
+function MoleculesMobileNavigation({ open, topCategories, onClose, callToAction }) {
     // currentTopCategoy is the array ID that determines which tree is being rendered
     const [currentTopCategory, setCurrentTopCategory] = useState(0)
     // the current level of nesting.

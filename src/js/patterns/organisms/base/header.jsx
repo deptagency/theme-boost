@@ -44,6 +44,9 @@ const OrganismsHead = ({ topCategories }) => {
             </div>
             <MoleculesMobileNavigation
                 calltoAction={ctaLoggedIn()}
+                onClose={() => {
+                    return setIsMobileMenuOpen(false)
+                }}
                 open={isMobileMenuOpen}
                 topCategories={topCategories}
             />
