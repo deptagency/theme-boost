@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react'
 
 import MoleculesButton from 'js/patterns/molecules/buttons/button'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
-import OrganismsFormLogin from 'js/patterns/organisms/form/form-login'
 import OrganismsPageHeader from 'js/patterns/organisms/base/header-page'
 import OrganismsFooter from 'js/patterns/organisms/base/foot'
 

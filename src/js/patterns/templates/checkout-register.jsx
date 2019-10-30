@@ -3,7 +3,6 @@ import React, { Component, Fragment } from 'react'
 import MoleculesButton from 'js/patterns/molecules/buttons/button'
 import OrganismsHeaderContext from 'js/patterns/organisms/base/header-context'
 import OrganismsFormRegister from 'js/patterns/organisms/form/form-register'
-import OrganismsPageHeader from 'js/patterns/organisms/base/header-page'
 import OrganismsFooter from 'js/patterns/organisms/base/foot'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'

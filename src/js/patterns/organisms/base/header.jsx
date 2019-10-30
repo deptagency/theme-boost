@@ -11,7 +11,7 @@ import MoleculesButton from '../../molecules/buttons/button'
 
 const ctaLoggedIn = () => {
     return (
-        <MoleculesButton type='quiet' onClick={() => { return console.log('yea') }}>
+        <MoleculesButton type='quiet' onClick={() => { /* return console.log('yea') */ }}>
             Meine Bestellungen ansehen
         </MoleculesButton>
     )

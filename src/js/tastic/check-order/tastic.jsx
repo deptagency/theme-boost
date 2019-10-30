@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 // Deativated due to compiler error
+// import PropTypes from 'prop-types'
 // import OrganismsOrder from '../../patterns/organisms/orders/order.jsx'
 
 class CheckOrderTastic extends Component {
     render () {
-        const { data: { paymentType } } = this.props
+        // const { data: { paymentType } } = this.props
 
         return (
             // Deativated due to compiler error
             // <OrganismsOrder paymentType={paymentType} />
-            null
+            <div />
         )
     }
 }
 
 CheckOrderTastic.propTypes = {
-    data: PropTypes.object.isRequired,
+    // data: PropTypes.object.isRequired,
     // tastic: PropTypes.object.isRequired,
 }
 

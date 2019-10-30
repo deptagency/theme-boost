@@ -1,7 +1,6 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
-import OrganismFormAddressChange from 'js/patterns/organisms/form/form-address-change'
 import MoleculesButton from 'js/patterns/molecules/buttons/button'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
 import OrganismsPageHeader from 'js/patterns/organisms/base/header-page'
@@ -21,7 +20,7 @@ const TemplatesMyUserData = ({ products }) => {
                                     <path d='M199.6,33.6L134.2,99l65.8,65.8V36.2C200,35.3,199.8,34.4,199.6,33.6z' />
                                     <path d='M90.9,109.3c4.4,4.4,11.9,4.4,16.3,0l82.5-82.5H9.4c-0.3,0-0.6,0.1-0.9,0.1L90.9,109.3z' />
                                     <path d='M125.8,107.4l-10.3,10.3c-4.4,4.4-10.3,6.8-16.5,6.8c-6.2,0-12.1-2.4-16.5-6.8l-7.8-7.8L7.9,176.7
-                                		c0.5,0.1,1,0.2,1.5,0.2h181.3c1.4,0,2.6-0.3,3.8-0.8L125.8,107.4z' />
+                                        c0.5,0.1,1,0.2,1.5,0.2h181.3c1.4,0,2.6-0.3,3.8-0.8L125.8,107.4z' />
                                     <path d='M0.1,35.3c0,0.3-0.1,0.6-0.1,0.9v131.2c0,0.1,0,0.2,0,0.3l66.3-66.3L0.1,35.3z' />
                                 </g>
                             </svg>
@@ -49,7 +48,7 @@ const TemplatesMyUserData = ({ products }) => {
                                     <path className='st0' d='M199.6,33.6L134.2,99l65.8,65.8V36.2C200,35.3,199.8,34.4,199.6,33.6z' />
                                     <path className='st0' d='M90.9,109.3c4.4,4.4,11.9,4.4,16.3,0l82.5-82.5H9.4c-0.3,0-0.6,0.1-0.9,0.1L90.9,109.3z' />
                                     <path className='st0' d='M125.8,107.4l-10.3,10.3c-4.4,4.4-10.3,6.8-16.5,6.8c-6.2,0-12.1-2.4-16.5-6.8l-7.8-7.8L7.9,176.7
-                                		c0.5,0.1,1,0.2,1.5,0.2h181.3c1.4,0,2.6-0.3,3.8-0.8L125.8,107.4z' />
+                                        c0.5,0.1,1,0.2,1.5,0.2h181.3c1.4,0,2.6-0.3,3.8-0.8L125.8,107.4z' />
                                     <path className='st0' d='M0.1,35.3c0,0.3-0.1,0.6-0.1,0.9v131.2c0,0.1,0,0.2,0,0.3l66.3-66.3L0.1,35.3z' />
                                 </g>
                             </svg>
@@ -72,7 +71,7 @@ const TemplatesMyUserData = ({ products }) => {
                                     <path className='st0' d='M199.6,33.6L134.2,99l65.8,65.8V36.2C200,35.3,199.8,34.4,199.6,33.6z' />
                                     <path className='st0' d='M90.9,109.3c4.4,4.4,11.9,4.4,16.3,0l82.5-82.5H9.4c-0.3,0-0.6,0.1-0.9,0.1L90.9,109.3z' />
                                     <path className='st0' d='M125.8,107.4l-10.3,10.3c-4.4,4.4-10.3,6.8-16.5,6.8c-6.2,0-12.1-2.4-16.5-6.8l-7.8-7.8L7.9,176.7
-                                		c0.5,0.1,1,0.2,1.5,0.2h181.3c1.4,0,2.6-0.3,3.8-0.8L125.8,107.4z' />
+                                        c0.5,0.1,1,0.2,1.5,0.2h181.3c1.4,0,2.6-0.3,3.8-0.8L125.8,107.4z' />
                                     <path className='st0' d='M0.1,35.3c0,0.3-0.1,0.6-0.1,0.9v131.2c0,0.1,0,0.2,0,0.3l66.3-66.3L0.1,35.3z' />
                                 </g>
                             </svg>

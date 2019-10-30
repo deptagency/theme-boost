@@ -1,7 +1,6 @@
 import React from 'react'
 import OrganismsOrderDetail from 'js/patterns/organisms/blocks/order-detail'
 import MoleculesButton from 'js/patterns/molecules/buttons/button'
-import MoleculesArrowPanelBack from 'js/patterns/molecules/buttons/arrow-panel-back'
 import MoleculesBadge from 'js/patterns/molecules/badges/badge'
 import OrganismsPageHeader from 'js/patterns/organisms/base/header-page'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
@@ -9,8 +8,6 @@ import OrganismsFooter from 'js/patterns/organisms/base/foot'
 import MoleculesReferalBordered from 'js/patterns/molecules/links/referal-bordered'
 
 const TemplatesMyOrders = props => {
-    const orderImageUrl = 'https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg'
-
     return (
         <div className='o-television'>
             <OrganismsHeaderMobile className='o-television__bar' />

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
@@ -47,8 +47,8 @@ const TemplatesMyOrderDetails = ({ products }) => {
                                 <g>
                                     <circle className='st0' cx='102.2' cy='25.5' r='25.5' />
                                     <path className='st0' d='M59.9,65.3h54.7c6.8,0,11.9,6.2,10.6,12.9l-16.1,84c0,0-7.6,26.5,18.6,14.6c15.3-6.9,15.6-1.8,11.7,4.1
-                      		c-7.3,11-19.5,18.1-32.6,19c-10.1,0.7-22.7,0.5-35.6-10.7c0,0-13.9-8.7-3.7-51.6c4.1-17.2,6.2-28.5,7.2-36
-                      		c1-8.1-3.3-15.9-10.7-19.4l-7.1-3.4c-2.4-1.2-4-3.6-4-6.3v0C52.9,68.4,56.1,65.3,59.9,65.3z' />
+                            c-7.3,11-19.5,18.1-32.6,19c-10.1,0.7-22.7,0.5-35.6-10.7c0,0-13.9-8.7-3.7-51.6c4.1-17.2,6.2-28.5,7.2-36
+                            c1-8.1-3.3-15.9-10.7-19.4l-7.1-3.4c-2.4-1.2-4-3.6-4-6.3v0C52.9,68.4,56.1,65.3,59.9,65.3z' />
                                 </g>
                             </svg>
                             <div className='o-block-short__body'>
