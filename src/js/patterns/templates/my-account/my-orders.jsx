@@ -20,56 +20,56 @@ const TemplatesMyOrders = props => {
                 <article className='o-distance'>
                     <p className='c-title-level-4'>Letzte Bestellung</p>
                     <div className='o-order-detail o-distance-m'>
-                    <div className='o-order-detail__header'>
-                        <div>
-                            <p itemProp='price' className='c-price'>59,95 €</p>
-                            <p className='u-text-s t-text-quiet'>12. Mai 2019</p>
-                        </div>
-                        <MoleculesBadge type='quiet' color='red'>
+                        <div className='o-order-detail__header'>
+                            <div>
+                                <p itemProp='price' className='c-price'>59,95 €</p>
+                                <p className='u-text-s t-text-quiet'>12. Mai 2019</p>
+                            </div>
+                            <MoleculesBadge type='quiet' color='red'>
                             Storniert
-                        </MoleculesBadge>
-                    </div>
-                    <div className='o-order-detail__body o-box-center'>
-                        <div className='o-stacked o-order-detail__body__item'>
-                          <div className='o-stacked__item'>
-                              <img src='https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80' alt='' className='c-avatar o-stacked__item t-ghost-border' />
-                          </div>
-                          <div className='o-stacked__item'>
-                              <img src='https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80' alt='' className='c-avatar o-stacked__item t-ghost-border' />
-                          </div>
-                          <div className='c-avatar c-avatar--counter t-quietlight t-ghost-border u-text-center o-stacked__item'>
-                              <span class='c-avatar__holder'>+6</span>
-                          </div>
+                            </MoleculesBadge>
                         </div>
-                        <div className='o-order-detail__body__item'>
-                            <p className='u-text-s t-text-quiet'>8. Artikel</p>
-                            <p className='u-text-s t-text-quiet'>P22KI23IACV</p>
+                        <div className='o-order-detail__body o-box-center'>
+                            <div className='o-stacked o-order-detail__body__item'>
+                                <div className='o-stacked__item'>
+                                    <img src='https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80' alt='' className='c-avatar o-stacked__item t-ghost-border' />
+                                </div>
+                                <div className='o-stacked__item'>
+                                    <img src='https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80' alt='' className='c-avatar o-stacked__item t-ghost-border' />
+                                </div>
+                                <div className='c-avatar c-avatar--counter t-quietlight t-ghost-border u-text-center o-stacked__item'>
+                                    <span className='c-avatar__holder'>+6</span>
+                                </div>
+                            </div>
+                            <div className='o-order-detail__body__item'>
+                                <p className='u-text-s t-text-quiet'>8. Artikel</p>
+                                <p className='u-text-s t-text-quiet'>P22KI23IACV</p>
+                            </div>
+                        </div>
+                        <div className='o-order-detail__footer u-text-center'>
+                            <MoleculesButton type='primary'>Bestellung ansehen</MoleculesButton>
                         </div>
                     </div>
-                    <div className='o-order-detail__footer u-text-center'>
-                        <MoleculesButton type='primary'>Bestellung ansehen</MoleculesButton>
-                    </div>
-                  </div>
                 </article>
                 <div className='o-television__display__boundless'>
-                    <span className='c-divider c-divider--break o-distance-l'></span>
+                    <span className='c-divider c-divider--break o-distance-l' />
                 </div>
 
                 <article className='o-distance'>
                     <p className='c-title-level-4'>April 2019</p>
                     <div className='o-distance-m'>
                         <div className='o-list-bare'>
-                          <div className='o-list-bare__item'>
-                              <OrganismsOrderDetail />
-                          </div>
-                          <span className='c-divider o-list-bare__item' />
-                          <div className='o-list-bare__item'>
-                              <OrganismsOrderDetail />
-                          </div>
-                          <span className='c-divider o-list-bare__item' />
-                          <div className='o-list-bare__item'>
-                              <OrganismsOrderDetail />
-                          </div>
+                            <div className='o-list-bare__item'>
+                                <OrganismsOrderDetail />
+                            </div>
+                            <span className='c-divider o-list-bare__item' />
+                            <div className='o-list-bare__item'>
+                                <OrganismsOrderDetail />
+                            </div>
+                            <span className='c-divider o-list-bare__item' />
+                            <div className='o-list-bare__item'>
+                                <OrganismsOrderDetail />
+                            </div>
                         </div>
                     </div>
                 </article>

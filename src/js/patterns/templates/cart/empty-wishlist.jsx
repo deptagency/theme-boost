@@ -25,7 +25,7 @@ const TemplatesEmptyWishlist = () => {
             </section>
             <section className='o-distance o-prevent-space'>
                 <OrganismsNewsletterBlock />
-             </section>
+            </section>
             <div className='o-prevent-space'>
                 <OrganismsFooter />
             </div>

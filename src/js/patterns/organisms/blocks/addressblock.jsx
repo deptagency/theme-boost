@@ -52,7 +52,7 @@ OrganismsAddressblock.propTypes = {
 OrganismsAddressblock.defaultProps = {
     component: 'div',
     editable: null,
-    sameAddress: false
+    sameAddress: false,
 }
 
 export default ComponentInjector.return('OrganismsAddressblock', OrganismsAddressblock)

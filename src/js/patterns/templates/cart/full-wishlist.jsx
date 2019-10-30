@@ -1,4 +1,4 @@
-import React, {Fragment, Component} from 'react'
+import React, { Fragment, Component } from 'react'
 import OrganismsPaymentListingIcons from '../../organisms/listings/payment-listing-icons'
 import OrganismsSummary from '../../organisms/blocks/summary'
 import MoleculesButton from '../../molecules/buttons/button'

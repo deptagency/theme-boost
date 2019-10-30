@@ -13,10 +13,9 @@ const TemplatesMyAddressChange = ({ products }) => {
                 <OrganismFormAddressChange />
             </div>
             <div className='o-television__remote-control'>
-              <MoleculesButton type='primary' size='boss'>Speichern</MoleculesButton>
+                <MoleculesButton type='primary' size='boss'>Speichern</MoleculesButton>
             </div>
 
-            
         </div>
     )
 }

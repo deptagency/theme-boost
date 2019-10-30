@@ -236,7 +236,6 @@ templatesProductDetail.story = {
     name: 'Product Detail',
 }
 
-
 // export const home = () => { return <TemplatesHome /> }
 
 // home.story = {

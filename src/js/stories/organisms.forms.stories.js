@@ -176,7 +176,6 @@ formEmailChange.story = {
     name: 'Form Mail Change',
 }
 
-
 export const formPasswordChange = () => {
     return (
         <OrganismsFormPasswordChange />
