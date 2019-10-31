@@ -15,13 +15,13 @@ import ReferencePropType from 'frontastic-catwalk/src/js/component/reference'
 
 import Header from '../../patterns/organisms/base/header'
 
-function addProperDataTrees (cats, trees) {
+function addProperDataTrees(cats, trees) {
     return cats.map((c, i) => {
         return { ...c, tree: trees[i] }
     })
 }
 
-const CatwalkHeaderTastic = (props) => {
+const HeaderTastic = (props) => {
     const { data } = props
     // Temporary fix, until trees in groups are working again.
     const trees = [data.treeWomen, data.treeMen, data.treeKids]
@@ -30,7 +30,7 @@ const CatwalkHeaderTastic = (props) => {
     return <Header topCategories={topCategories} />
 }
 
-CatwalkHeaderTastic.propTypes = {
+HeaderTastic.propTypes = {
     data: PropTypes.shape({
         topCategories: PropTypes.arrayOf(
             PropTypes.shape({
@@ -45,6 +45,6 @@ CatwalkHeaderTastic.propTypes = {
     // tastic: PropTypes.object.isRequired,
 }
 
-CatwalkHeaderTastic.defaultProps = {}
+HeaderTastic.defaultProps = {}
 
-export default CatwalkHeaderTastic
+export default HeaderTastic
