@@ -29,6 +29,7 @@ import HelpSectionTastic from './help-section/tastic'
 import CheckoutRegisterTastic from './checkout-register/tastic'
 import ProductViewTastic from './product-view/tastic'
 import TemplatesOrderBilling from './order-billing/tastic'
+import DirectDebitTastic from './direct-debit/tastic'
 
 export default (() => {
     return {
@@ -63,5 +64,6 @@ export default (() => {
         'frontastic/boost/checkout-register': CheckoutRegisterTastic,
         'frontastic/boost/product-view': ProductViewTastic,
         'frontastic/boost/order-billing': TemplatesOrderBilling,
+        'frontastic/boost/direct-debit': DirectDebitTastic,
     }
 })()

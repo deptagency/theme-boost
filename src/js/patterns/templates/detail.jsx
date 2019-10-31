@@ -1,18 +1,13 @@
 import React, { Component, Fragment } from 'react'
 
 import MoleculesHeading from '../molecules/headings/heading'
-import MoleculesButton from '../molecules/buttons/button'
 import OrganismsHead from '../organisms/base/header'
 import OrganismsFoot from '../organisms/base/foot'
-import OrganismsProductStage from '../organisms/stages/stage-product'
 import OrganismsProductSwiper from '../organisms/swiper/product-swiper'
-import OrganismsSizeSwiper from '../organisms/swiper/size-swiper'
-import OrganismsImageColorSwiper from '../organisms/swiper/image-color-swiper'
 import OrganismsListingFeatures from '../organisms/listings/feature-listing'
 import OrganismsNewsletterBlock from '../organisms/blocks/newsletter'
 import OrganismsMoreInfoProduct from '../organisms/products/more-info'
-import OrganismsProductView from "../organisms/products/product-view";
-// import OrganismsBanner from '../organisms/banners/newsletter-banner'
+import OrganismsProductView from '../organisms/products/product-view'
 
 class TemplatesDetail extends Component {
     render () {

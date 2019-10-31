@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import OrganismsProductStage from "../stages/stage-product";
-import OrganismsSizeSwiper from "../swiper/size-swiper";
-import OrganismsImageColorSwiper from "../swiper/image-color-swiper";
-import MoleculesButton from "../../molecules/buttons/button";
+import React from 'react'
+// import PropTypes from 'prop-types'
+import OrganismsProductStage from '../stages/stage-product'
+import OrganismsSizeSwiper from '../swiper/size-swiper'
+import OrganismsImageColorSwiper from '../swiper/image-color-swiper'
+import MoleculesButton from '../../molecules/buttons/button'
 
 const OrganismsProductView = props => {
     return (
@@ -21,11 +21,11 @@ const OrganismsProductView = props => {
                 <MoleculesButton type='primary' size='boss'>In den Warenkorb</MoleculesButton>
             </div>
         </div>
-    );
-};
+    )
+}
 
 OrganismsProductView.propTypes = {
 
-};
+}
 
-export default OrganismsProductView;
+export default OrganismsProductView

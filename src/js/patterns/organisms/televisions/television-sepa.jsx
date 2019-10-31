@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import OrganismsFormSepa from 'js/patterns/organisms/form/form-sepa'
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
-import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
+import OrganismsFormSepa from '../../organisms/form/form-sepa'
+import MoleculesButton from '../../molecules/buttons/button'
+import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
