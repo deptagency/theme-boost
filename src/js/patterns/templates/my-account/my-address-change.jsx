@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import OrganismFormAddressChange from 'js/patterns/organisms/form/form-address-change'
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
-import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
+import OrganismFormAddressChange from '../../organisms/form/form-address-change'
+import MoleculesButton from '../../molecules/buttons/button'
+import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 
 const TemplatesMyAddressChange = ({ products }) => {
     return (

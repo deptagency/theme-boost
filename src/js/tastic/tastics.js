@@ -39,6 +39,8 @@ import UserRegistrationFormTastic from './user-registration-form/tastic'
 import UserRegistrationOnCheckoutFormTastic from './user-registration-on-checkout-form/tastic'
 import SortTastic from './sort/tastic'
 import ChangeEmailFromProfileTastic from './change-email-from-profile/tastic'
+import ChangeAddressFromProfileTastic from './change-address-from-profile/tastic'
+import ProfileTastic from './profile/tastic'
 
 export default (() => {
     return {
@@ -83,5 +85,7 @@ export default (() => {
         'frontastic/boost/user-registration-on-checkout-form': UserRegistrationOnCheckoutFormTastic,
         'frontastic/boost/sort': SortTastic,
         'frontastic/boost/change-email-from-profile': ChangeEmailFromProfileTastic,
+        'frontastic/boost/change-address-from-profile': ChangeAddressFromProfileTastic,
+        'frontastic/boost/profile': ProfileTastic,
     }
 })()
