@@ -33,6 +33,7 @@ import DirectDebitTastic from './direct-debit/tastic'
 import CartTastic from './cart/tastic'
 import GuideBrandTastic from './guide-brand/tastic'
 import GuideMaterialTastic from './guide-material/tastic'
+import GuidePatternsTastic from './guide-patterns/tastic'
 
 export default (() => {
     return {
@@ -71,5 +72,6 @@ export default (() => {
         'frontastic/boost/cart': CartTastic,
         'frontastic/boost/guide-brand': GuideBrandTastic,
         'frontastic/boost/guide-material': GuideMaterialTastic,
+        'frontastic/boost/guide-patterns': GuidePatternsTastic,
     }
 })()
