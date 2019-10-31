@@ -35,6 +35,7 @@ import GuideBrandTastic from './guide-brand/tastic'
 import GuideMaterialTastic from './guide-material/tastic'
 import GuidePatternsTastic from './guide-patterns/tastic'
 import PasswordResetTastic from './password-reset/tastic'
+import UserRegistrationFormTastic from './user-registration-form/tastic'
 
 export default (() => {
     return {
@@ -75,5 +76,6 @@ export default (() => {
         'frontastic/boost/guide-material': GuideMaterialTastic,
         'frontastic/boost/guide-patterns': GuidePatternsTastic,
         'frontastic/boost/password-reset': PasswordResetTastic,
+        'frontastic/boost/user-registration-form': UserRegistrationFormTastic,
     }
 })()
