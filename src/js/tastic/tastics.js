@@ -25,6 +25,7 @@ import ProductColorFilterTastic from './product-color-filter/tastic'
 import ChangeEmailTastic from './change-email/tastic'
 import ChangeAddressTastic from './change-address/tastic'
 import ChangePasswordTastic from './change-password/tastic'
+import HelpSectionTastic from './help-section/tastic'
 
 export default (() => {
     return {
@@ -55,5 +56,6 @@ export default (() => {
         'frontastic/boost/change-email': ChangeEmailTastic,
         'frontastic/boost/change-address': ChangeAddressTastic,
         'frontastic/boost/change-password': ChangePasswordTastic,
+        'frontastic/boost/help-section': HelpSectionTastic,
     }
 })()
