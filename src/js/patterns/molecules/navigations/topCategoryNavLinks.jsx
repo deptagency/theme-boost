@@ -4,7 +4,7 @@ import Reference from 'frontastic-catwalk/src/js/component/reference'
 
 const NavItem = ({ item, active = false }) => {
     return (
-        <li className='c-service-navigation o-list-inline__item'>
+        <li key={item.nodeId} className='c-service-navigation o-list-inline__item'>
             <Reference reference={item.reference} className={`c-service-navigation__anchor ${active && 'is-active'}`}>
                 {item.name}
             </Reference>
@@ -17,15 +17,15 @@ NavItem.propTypes = {
     active: PropTypes.bool.isRequired,
 }
 
-const MoleculesGenderNavLinks = ({ items }) => {
+const MoleculesTopCategoryNavLinks = ({ items }) => {
     console.log('MoleculesGenderNavLinks', items)
     return (
         <ul className='c-service-navigation o-list-inline'>{items && items.map((item) => { return <NavItem item={item} /> })}</ul>
     )
 }
 
-MoleculesGenderNavLinks.propTypes = {
+MoleculesTopCategoryNavLinks.propTypes = {
     items: PropTypes.array.isRequired,
 }
 
-export default MoleculesGenderNavLinks
+export default MoleculesTopCategoryNavLinks
