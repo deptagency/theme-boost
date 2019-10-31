@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-import OrganismsFormPasswortReset from 'js/patterns/organisms/form/form-password-reset'
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
-import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
-import OrganismsPageHeader from 'js/patterns/organisms/base/header-page'
+import OrganismsFormPasswortReset from '../../organisms/form/form-password-reset'
+import MoleculesButton from '../../molecules/buttons/button'
+import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
+import OrganismsPageHeader from '../../organisms/base/header-page'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
