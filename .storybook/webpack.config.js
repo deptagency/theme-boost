@@ -6,7 +6,7 @@ module.exports = async ({ config, mode }) => {
         path.resolve(__dirname, '../'),
         path.resolve(__dirname, '../src'),
         path.resolve(__dirname, '../node_modules'),
-        path.resolve(__dirname, '../../../../../node_modules'),
+        path.resolve(__dirname, '../../../../../node_modules')
     )
     config.module.rules.push(
         {
@@ -15,8 +15,8 @@ module.exports = async ({ config, mode }) => {
             use: {
                 loader: 'babel-loader',
                 options: {
-                    rootMode: "upward"
-                }
+                    rootMode: 'upward',
+                },
             },
         },
 
@@ -39,7 +39,7 @@ module.exports = async ({ config, mode }) => {
                     loader: 'sass-loader',
                     options: {
                         sourceMap: true,
-                        sourceMapContents: false,
+                        //sourceMapContents: false,
                     },
                 },
             ],
