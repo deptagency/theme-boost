@@ -26,6 +26,9 @@ import ChangeEmailTastic from './change-email/tastic'
 import ChangeAddressTastic from './change-address/tastic'
 import ChangePasswordTastic from './change-password/tastic'
 import HelpSectionTastic from './help-section/tastic'
+import CheckoutRegisterTastic from './checkout-register/tastic'
+import ProductViewTastic from './product-view/tastic'
+import TemplatesOrderBilling from './order-billing/tastic'
 
 export default (() => {
     return {
@@ -57,5 +60,8 @@ export default (() => {
         'frontastic/boost/change-address': ChangeAddressTastic,
         'frontastic/boost/change-password': ChangePasswordTastic,
         'frontastic/boost/help-section': HelpSectionTastic,
+        'frontastic/boost/checkout-register': CheckoutRegisterTastic,
+        'frontastic/boost/product-view': ProductViewTastic,
+        'frontastic/boost/order-billing': TemplatesOrderBilling,
     }
 })()

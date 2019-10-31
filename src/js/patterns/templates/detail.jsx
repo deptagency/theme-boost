@@ -11,6 +11,7 @@ import OrganismsImageColorSwiper from '../organisms/swiper/image-color-swiper'
 import OrganismsListingFeatures from '../organisms/listings/feature-listing'
 import OrganismsNewsletterBlock from '../organisms/blocks/newsletter'
 import OrganismsMoreInfoProduct from '../organisms/products/more-info'
+import OrganismsProductView from "../organisms/products/product-view";
 // import OrganismsBanner from '../organisms/banners/newsletter-banner'
 
 class TemplatesDetail extends Component {
@@ -20,18 +21,7 @@ class TemplatesDetail extends Component {
                 <OrganismsHead />
                 <main role='main'>
                     <div className='o-container o-distance'>
-                        <OrganismsProductStage />
-                        <h3 className='c-title-level-3 o-distance-m o-prevent-space'>Größe</h3>
-                        <div className='o-distance-s'>
-                            <OrganismsSizeSwiper />
-                        </div>
-                        <h3 className='c-title-level-3 o-distance-m o-prevent-space'>Farbe: Olive</h3>
-                        <div className='o-distance-s'>
-                            <OrganismsImageColorSwiper />
-                        </div>
-                        <div className='o-distance-l o-prevent-space'>
-                            <MoleculesButton type='primary' size='boss'>In den Warenkorb</MoleculesButton>
-                        </div>
+                        <OrganismsProductView />
                         <div className='o-distance-l o-prevent-space'>
                             <div className='o-block-short'>
                                 <svg className='c-icon c-icon--m o-block-short__short-item' width='36' height='30' viewBox='0 0 36 30' fill='none' xmlns='http://www.w3.org/2000/svg'>
