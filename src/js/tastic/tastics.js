@@ -36,6 +36,9 @@ import GuideMaterialTastic from './guide-material/tastic'
 import GuidePatternsTastic from './guide-patterns/tastic'
 import PasswordResetTastic from './password-reset/tastic'
 import UserRegistrationFormTastic from './user-registration-form/tastic'
+import UserRegistrationOnCheckoutFormTastic from './user-registration-on-checkout-form/tastic'
+import SortTastic from './sort/tastic'
+import ChangeEmailFromProfileTastic from './change-email-from-profile/tastic'
 
 export default (() => {
     return {
@@ -77,5 +80,8 @@ export default (() => {
         'frontastic/boost/guide-patterns': GuidePatternsTastic,
         'frontastic/boost/password-reset': PasswordResetTastic,
         'frontastic/boost/user-registration-form': UserRegistrationFormTastic,
+        'frontastic/boost/user-registration-on-checkout-form': UserRegistrationOnCheckoutFormTastic,
+        'frontastic/boost/sort': SortTastic,
+        'frontastic/boost/change-email-from-profile': ChangeEmailFromProfileTastic,
     }
 })()

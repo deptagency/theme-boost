@@ -1,0 +1,12 @@
+{
+    "tasticType": "frontastic/boost/user-registration-on-checkout-form",
+    "name": "User Registration Form (On Checkout)",
+    "icon": "menu",
+    "category": "Boost Theme",
+    "schema": [
+        {
+            "name": "Company Menu",
+            "fields": []
+        }
+    ]
+}
