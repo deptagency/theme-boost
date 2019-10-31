@@ -5,41 +5,8 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import useBackgroundImageUrl from '../../../../helper/hooks/useBackgroundImageUrl'
 
-// TODO: Icon system
-import backArrow from '../../../../../icons/arrow_back.svg'
-import closeX from '../../../../../icons/close_x_mobile.svg'
-
-import { MobileNavTree } from './components/MobileNavTree'
-import { TopCategoryNavTabs } from './components/TopCategoryNavTabs'
+import { MobileNavTree, TopCategoryNavTabs, BackButton, CloseButton } from './components'
 import { topCategoryType } from './types'
-
-/* Helper Component
-   <BackButton onClick={} />
-*/
-function BackButton({ onClick }) {
-    return (
-        <button className='c-mobile-navigation__header-back-button' onClick={onClick}>
-            <img src={backArrow} alt='Back' />
-        </button>
-    )
-}
-BackButton.propTypes = {
-    onClick: PropTypes.func,
-}
-
-/* Helper Component
-   <CloseButton onClick={} />
-*/
-function CloseButton({ onClick }) {
-    return (
-        <button className='c-mobile-navigation__header-close-button' onClick={onClick}>
-            <img src={closeX} alt='Close' />
-        </button>
-    )
-}
-CloseButton.propTypes = {
-    onClick: PropTypes.func,
-}
 
 /*
  * Main Component for Mobile Navigation
