@@ -1,0 +1,12 @@
+{
+    "tasticType": "frontastic/boost/profile",
+    "name": "Profile",
+    "icon": "menu",
+    "category": "Boost Theme",
+    "schema": [
+        {
+            "name": "Company Menu",
+            "fields": []
+        }
+    ]
+}

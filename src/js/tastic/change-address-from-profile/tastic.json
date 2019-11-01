@@ -1,0 +1,12 @@
+{
+    "tasticType": "frontastic/boost/change-address-from-profile",
+    "name": "Change Address (From Profile)",
+    "icon": "menu",
+    "category": "Boost Theme",
+    "schema": [
+        {
+            "name": "Company Menu",
+            "fields": []
+        }
+    ]
+}

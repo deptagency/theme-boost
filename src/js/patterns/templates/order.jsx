@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
-import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
-import OrganismsBundleListing from 'js/patterns/organisms/listings/bundle-listing'
-import OrganismsFormCoupon from 'js/patterns/organisms/form/form-coupon'
-import OrganismsSummary from 'js/patterns/organisms/blocks/summary'
-import OrganismsHeaderContext from 'js/patterns/organisms/base/header-context'
+import MoleculesButton from '../molecules/buttons/button'
+import OrganismsAddressblock from '../organisms/blocks/addressblock'
+import OrganismsBundleListing from '../organisms/listings/bundle-listing'
+import OrganismsFormCoupon from '../organisms/form/form-coupon'
+import OrganismsSummary from '../organisms/blocks/summary'
+import OrganismsHeaderContext from '../organisms/base/header-context'
 
 import PaymentType from '../../../constants/payment-types'
 

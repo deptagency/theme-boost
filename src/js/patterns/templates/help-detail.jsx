@@ -3,8 +3,8 @@ import React, { Component, Fragment } from 'react'
 import MoleculesReferal from '../molecules/links/referal'
 import OrganismsHead from '../organisms/base/header'
 import OrganismsFoot from '../organisms/base/foot'
-import OrganismsPageHeader from 'js/patterns/organisms/base/header-page'
-import OrganismsNewsletterBlock from 'js/patterns/organisms/blocks/newsletter'
+import OrganismsPageHeader from '../organisms/base/header-page'
+import OrganismsNewsletterBlock from '../organisms/blocks/newsletter'
 
 class TemplatesHelpDetail extends Component {
     render () {

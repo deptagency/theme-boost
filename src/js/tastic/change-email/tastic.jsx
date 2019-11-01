@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
 import OrganismsFormMailChange from '../../patterns/organisms/form/form-mail-change.jsx'
 
-class CreditCardTastic extends Component {
+class ChangeEmailTastic extends Component {
     render () {
         return (
             <OrganismsFormMailChange />
@@ -10,11 +10,11 @@ class CreditCardTastic extends Component {
     }
 }
 
-CreditCardTastic.propTypes = {
+ChangeEmailTastic.propTypes = {
     // data: PropTypes.object.isRequired,
     // tastic: PropTypes.object.isRequired,
 }
 
-CreditCardTastic.defaultProps = {}
+ChangeEmailTastic.defaultProps = {}
 
-export default CreditCardTastic
+export default ChangeEmailTastic

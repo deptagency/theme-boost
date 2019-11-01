@@ -25,6 +25,22 @@ import ProductColorFilterTastic from './product-color-filter/tastic'
 import ChangeEmailTastic from './change-email/tastic'
 import ChangeAddressTastic from './change-address/tastic'
 import ChangePasswordTastic from './change-password/tastic'
+import HelpSectionTastic from './help-section/tastic'
+import CheckoutRegisterTastic from './checkout-register/tastic'
+import ProductViewTastic from './product-view/tastic'
+import TemplatesOrderBilling from './order-billing/tastic'
+import DirectDebitTastic from './direct-debit/tastic'
+import CartTastic from './cart/tastic'
+import GuideBrandTastic from './guide-brand/tastic'
+import GuideMaterialTastic from './guide-material/tastic'
+import GuidePatternsTastic from './guide-patterns/tastic'
+import PasswordResetTastic from './password-reset/tastic'
+import UserRegistrationFormTastic from './user-registration-form/tastic'
+import UserRegistrationOnCheckoutFormTastic from './user-registration-on-checkout-form/tastic'
+import SortTastic from './sort/tastic'
+import ChangeEmailFromProfileTastic from './change-email-from-profile/tastic'
+import ChangeAddressFromProfileTastic from './change-address-from-profile/tastic'
+import ProfileTastic from './profile/tastic'
 
 export default (() => {
     return {
@@ -55,5 +71,21 @@ export default (() => {
         'frontastic/boost/change-email': ChangeEmailTastic,
         'frontastic/boost/change-address': ChangeAddressTastic,
         'frontastic/boost/change-password': ChangePasswordTastic,
+        'frontastic/boost/help-section': HelpSectionTastic,
+        'frontastic/boost/checkout-register': CheckoutRegisterTastic,
+        'frontastic/boost/product-view': ProductViewTastic,
+        'frontastic/boost/order-billing': TemplatesOrderBilling,
+        'frontastic/boost/direct-debit': DirectDebitTastic,
+        'frontastic/boost/cart': CartTastic,
+        'frontastic/boost/guide-brand': GuideBrandTastic,
+        'frontastic/boost/guide-material': GuideMaterialTastic,
+        'frontastic/boost/guide-patterns': GuidePatternsTastic,
+        'frontastic/boost/password-reset': PasswordResetTastic,
+        'frontastic/boost/user-registration-form': UserRegistrationFormTastic,
+        'frontastic/boost/user-registration-on-checkout-form': UserRegistrationOnCheckoutFormTastic,
+        'frontastic/boost/sort': SortTastic,
+        'frontastic/boost/change-email-from-profile': ChangeEmailFromProfileTastic,
+        'frontastic/boost/change-address-from-profile': ChangeAddressFromProfileTastic,
+        'frontastic/boost/profile': ProfileTastic,
     }
 })()

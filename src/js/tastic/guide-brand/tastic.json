@@ -1,0 +1,12 @@
+{
+    "tasticType": "frontastic/boost/guide-brand",
+    "name": "Guide Brand",
+    "icon": "menu",
+    "category": "Boost Theme",
+    "schema": [
+        {
+            "name": "Company Menu",
+            "fields": []
+        }
+    ]
+}
