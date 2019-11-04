@@ -59,13 +59,11 @@ class ProductSliderTastic extends Component {
         return (
             <div className='margin-12'>
                 <MoleculesHeading
-                title={<Translatable value={title} />}
-                description={<Translatable value={description} />}
+                    title={<Translatable value={title} />}
+                    description={<Translatable value={description} />}
                 />
             <Slider>
-                {productsToShow.map((product, i) => {
-                return <ProductItem key={i} product={product} />
-                })}
+                {productsToShow.map((product, i) =>  <ProductItem key={i} product={product} />)}
             </Slider>
         </div>
         )

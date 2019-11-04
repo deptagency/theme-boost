@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 import TinySlider from 'tiny-slider-react'
 
 const sliderSettings = {
@@ -28,11 +28,11 @@ const Slider = ({children}) => {
         <TinySlider settings={sliderSettings}>
             {children}
         </TinySlider>
-    );
-};
+    )
+}
 
 Slider.propTypes = {
     children: PropTypes.node.isRequired
-};
+}
 
-export default Slider;
+export default Slider
