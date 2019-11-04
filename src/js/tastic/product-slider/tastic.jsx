@@ -2,30 +2,26 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import MoleculesHeading from '../../patterns/molecules/headings/heading'
-import VerticalSwipe from '../../patterns/templates/vertical-swipe'
+import Slider from '../../patterns/templates/slider'
 import Translatable from 'frontastic-catwalk/src/js/component/translatable'
 import { take } from 'lodash'
 import MoleculesSticker from '../../patterns/molecules/sticker/sticker'
 import MoleculesWishlist from '../../patterns/molecules/wishlist/wishlist'
 
-const ProductItem = ({ product, width, className }) => {
+const ProductItem = ({ product }) => {
     const { name, variants } = product
     const designer = variants[0] ? variants[0].designer : false
 
-    let style = {}
-    if (typeof width !== 'undefined') { style = { width } }
-
-    return (<div className={className} style={style}>
+    return (
         <article className='o-product'>
             <div className='o-product__asset' title=''>
                 <div className='o-head-up'>
-                    <div style={{
-                        backgroundImage: `url(${variants[0].images[0]})`,
-                        backgroundSize: 'contain',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center',
-                        height: '246px',
-                    }}
+                    <img
+                        className='tns-lazy'
+                        src={variants[0].images[0]}
+                        data-src={variants[0].images[0]}
+                        alt={name}
+                        style={{height: '246px', margin: '0 auto'}}
                     />
                     <div className='o-head-up__item o-head-up__item--top-left'>
                         <MoleculesSticker />
@@ -42,16 +38,14 @@ const ProductItem = ({ product, width, className }) => {
                 </div>
             </div>
         </article>
-    </div>)
+    )
 }
 
 ProductItem.propTypes = {
     product: PropTypes.object.isRequired,
-    width: PropTypes.string.isRequired,
-    className: PropTypes.string.isRequired,
 }
 
-class ProductListTastic extends Component {
+class ProductSliderTastic extends Component {
     render () {
         const { title, description } = this.props.data
 
@@ -62,27 +56,28 @@ class ProductListTastic extends Component {
 
         let productsToShow = take(productList.items, this.props.tastic.schema.get('productCount'))
 
-        // TODO "o-grid  o-region" here?
-        return <div className='o-grid  o-region margin-12'>
-            <MoleculesHeading title={<Translatable value={title} />} description={<Translatable value={description} />} />
-            <VerticalSwipe sliderId='swipe-content'>
-
-                <div className='catwalk-product-list-tastic'>
-                    {productsToShow.map((product, i) => {
-                        return <ProductItem key={i} product={product} className='product-list-item' width='246px' />
-                    })}
-                </div>
-            </VerticalSwipe>
+        return (
+            <div className='margin-12'>
+                <MoleculesHeading
+                title={<Translatable value={title} />}
+                description={<Translatable value={description} />}
+                />
+            <Slider>
+                {productsToShow.map((product, i) => {
+                return <ProductItem key={i} product={product} />
+                })}
+            </Slider>
         </div>
+        )
     }
 }
 
-ProductListTastic.propTypes = {
+ProductSliderTastic.propTypes = {
     data: PropTypes.object.isRequired,
     tastic: PropTypes.object.isRequired,
     rawData: PropTypes.object.isRequired,
 }
 
-ProductListTastic.defaultProps = {}
+ProductSliderTastic.defaultProps = {}
 
-export default ProductListTastic
+export default ProductSliderTastic

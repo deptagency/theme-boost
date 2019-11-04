@@ -1,6 +1,6 @@
 {
-    "tasticType": "frontastic/boost/product-list",
-    "name": "Product List",
+    "tasticType": "frontastic/boost/product-slider",
+    "name": "Product Slider",
     "icon": "menu",
     "category": "Boost Theme",
     "schema": [

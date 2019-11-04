@@ -5,7 +5,7 @@ import CategoryListingTastic from './category-listing/tastic.jsx'
 import PromoBoxTastic from './promo-box/tastic.jsx'
 import CategoryBoxesTastic from './category-boxes/tastic.jsx'
 import CategoryButtonBoxesTastic from './button-boxes/tastic.jsx'
-import ProductListTastic from './product-list/tastic.jsx'
+import ProductSliderTastic from './product-slider/tastic.jsx'
 import NewsletterTastic from './newsletter/tastic'
 import ProductStageTastic from './product-stage/tastic'
 import SizeFilterTastic from './size-filter/tastic'
@@ -51,7 +51,7 @@ export default (() => {
         'frontastic/boost/promobox': PromoBoxTastic,
         'frontastic/boost/category-boxes': CategoryBoxesTastic,
         'frontastic/boost/category-button-boxes': CategoryButtonBoxesTastic,
-        'frontastic/boost/product-list': ProductListTastic,
+        'frontastic/boost/product-slider': ProductSliderTastic,
         'frontastic/boost/newsletter': NewsletterTastic,
         'frontastic/boost/product-stage': ProductStageTastic,
         'frontastic/boost/size-filter': SizeFilterTastic,
