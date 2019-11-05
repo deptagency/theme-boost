@@ -1,5 +1,5 @@
 {
-    "tasticType": "frontastic/boost/login",
+    "tasticType": "react-easy-swipe",
     "name": "Login",
     "icon": "menu",
     "category": "Boost Theme",

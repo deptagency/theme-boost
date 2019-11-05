@@ -4,7 +4,7 @@ import Swipe from 'react-easy-swipe'
 import useWindowSize from '@rehooks/window-size'
 import { isNull } from 'lodash'
 
-const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
+const Swiper = ({ sliderId, children, slideOffset }) => {
     let [scrollLeft, setScrollLeft] = useState(0)
     let [swiperContent, setSwiperContent] = useState(undefined)
     let swiper = useRef('swiper')
@@ -19,7 +19,7 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
     }, [getSliderId, windowSize])
 
     const getSliderId = useCallback(() => { // eslint-disable-line react-hooks/exhaustive-deps
-        return `catwalk-vertical-swipe-${sliderId}`
+        return `swiper-${sliderId}`
     })
 
     const shouldMoveRight = () => {
@@ -57,7 +57,7 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
     }
 
     return (
-        <div className='catwalk-vertical-swipe' ref={swiper}>
+        <div className='swiper' ref={swiper}>
             <Swipe
                 className={getSliderId()}
                 allowMouseEvents
@@ -74,14 +74,14 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
     )
 }
 
-VerticalSwipe.defaultProps = {
+Swiper.defaultProps = {
     slideOffset: 250,
 }
 
-VerticalSwipe.propTypes = {
+Swiper.propTypes = {
     sliderId: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
     slideOffset: PropTypes.number,
 }
 
-export default VerticalSwipe
+export default Swiper

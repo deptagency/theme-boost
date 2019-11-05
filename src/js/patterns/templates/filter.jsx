@@ -4,7 +4,7 @@ import AtomsFormLabel from '../atoms/forms/form-label'
 import OrganismsHeaderSlideIn from '../organisms/base/header-slide-in'
 import OrganismsSizes from '../organisms/sizes/sizes'
 import MoleculesFormFromTo from '../molecules/forms/form-element-from-to'
-import VerticalSwipe from './vertical-swipe'
+import Swiper from './swiper'
 import OrganismsSorting from '../organisms/sorting/sorting'
 import MoleculesButton from '../molecules/buttons/button'
 import MoleculesColorsFilter from '../molecules/colorsfilter/colors-filter'
@@ -18,16 +18,16 @@ const TemplatesFilter = ({ setIsOpen, count }) => {
 
                 <div className='filter-component'>
                     <AtomsFormLabel className='filter-input-label' value='Größe' />
-                    <VerticalSwipe sliderId='swipe-sizes'>
+                    <Swiper sliderId='swipe-sizes'>
                         <OrganismsSizes />
-                    </VerticalSwipe>
+                    </Swiper>
                 </div>
 
                 <div className='filter-component'>
                     <AtomsFormLabel className='filter-input-label' value='Sortierung' />
-                    <VerticalSwipe sliderId='swipe-sorting'>
+                    <Swiper sliderId='swipe-sorting'>
                         <OrganismsSorting />
-                    </VerticalSwipe>
+                    </Swiper>
                 </div>
 
                 <div className='filter-component'>
@@ -49,9 +49,9 @@ const TemplatesFilter = ({ setIsOpen, count }) => {
 
                 <div className='filter-component'>
                     <AtomsFormLabel className='filter-input-label' value='Farbe' />
-                    <VerticalSwipe sliderId='swipe-colors'>
+                    <Swiper sliderId='swipe-colors'>
                         <MoleculesColorsFilter />
-                    </VerticalSwipe>
+                    </Swiper>
                 </div>
 
                 <div className='filter-component filter-component--collapsed'>
