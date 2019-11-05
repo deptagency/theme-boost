@@ -42,6 +42,7 @@ import ChangeEmailFromProfileTastic from './change-email-from-profile/tastic'
 import ChangeAddressFromProfileTastic from './change-address-from-profile/tastic'
 import ProfileTastic from './profile/tastic'
 import FilterTastic from './filter/tastic'
+import LoginTastic from './login/tastic'
 
 export default (() => {
     return {
@@ -89,5 +90,6 @@ export default (() => {
         'frontastic/boost/change-address-from-profile': ChangeAddressFromProfileTastic,
         'frontastic/boost/profile': ProfileTastic,
         'frontastic/boost/filter': FilterTastic,
+        'frontastic/boost/login': LoginTastic,
     }
 })()
