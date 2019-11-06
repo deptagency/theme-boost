@@ -4,11 +4,15 @@ import Swipe from 'react-easy-swipe'
 import useWindowSize from '@rehooks/window-size'
 import { isNull } from 'lodash'
 
-const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
+const MobileSwipe = ({ sliderId, children, slideOffset }) => {
     let [scrollLeft, setScrollLeft] = useState(0)
     let [swiperContent, setSwiperContent] = useState(undefined)
     let swiper = useRef('swiper')
     let windowSize = useWindowSize()
+
+    let [isMoving, setIsMoving] = useState(false)
+    let [shouldSnapLeftBack, setShouldSnapLeftBack] = useState(false)
+    let [shouldSnapRightBack, setShouldSnapRightBack] = useState(false)
 
     useEffect(() => {
         setSwiperContent({
@@ -18,26 +22,57 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
         setScrollLeft(0)
     }, [getSliderId, windowSize])
 
+    const onSwipeMove = (position) => {
+        if(!isMoving && position.x > 0) {
+            setIsMoving(true)
+            handleLeftMove()
+        }
+
+        if(!isMoving && position.x < 0) {
+            setIsMoving(true)
+            handleRightMove()
+        }
+    }
+
+    const onSwipeEnd = () => {
+        setIsMoving(false)
+
+        if(shouldSnapLeftBack) {
+            setTimeout(function(){
+                setScrollLeft(0)
+                setShouldSnapLeftBack(false)
+            }, 500);
+        }
+
+        if(shouldSnapRightBack) {
+            setTimeout(function(){
+                setScrollLeft(getContainerDiff())
+                setShouldSnapRightBack(false)
+            }, 500);
+        }
+    }
+
     const getSliderId = useCallback(() => { // eslint-disable-line react-hooks/exhaustive-deps
-        return `catwalk-vertical-swipe-${sliderId}`
+        return `catwalk-mobile-swipe-${sliderId}`
     })
 
     const shouldMoveRight = () => {
-        return !!(scrollLeft <= getContainerDiff())
+        return !!(scrollLeft <= getContainerDiff() + 150)
     }
 
     const shouldMoveLeft = () => {
-        return !!(scrollLeft > 0)
+        return !!(scrollLeft > -100)
     }
 
     const handleRightMove = () => {
         let newRight = scrollLeft + slideOffset
-        const containerDiff = getContainerDiff()
+        const containerDiff = getContainerDiff() + 150
 
         const almostEnd = newRight > containerDiff
 
         if (shouldMoveRight()) {
             const position = almostEnd ? containerDiff : newRight
+            setShouldSnapRightBack(almostEnd)
             setScrollLeft(position)
         }
     }
@@ -45,9 +80,10 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
     const handleLeftMove = () => {
         if (shouldMoveLeft()) {
             const newLeft = scrollLeft - slideOffset
-            const position = newLeft < slideOffset ? 0 : newLeft
+            const position = shouldSnapLeftBack ? -100 : newLeft
 
             setScrollLeft(position)
+            setShouldSnapLeftBack(position < slideOffset)
         }
     }
 
@@ -57,12 +93,12 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
     }
 
     return (
-        <div className='catwalk-vertical-swipe' ref={swiper}>
+        <div className='catwalk-mobile-swipe' ref={swiper}>
             <Swipe
                 className={getSliderId()}
                 allowMouseEvents
-                onSwipeLeft={handleRightMove}
-                onSwipeRight={handleLeftMove}
+                onSwipeMove={onSwipeMove}
+                onSwipeEnd={onSwipeEnd}
                 style={{
                     transform: `translateX(${-scrollLeft}px)`,
                     transition: 'transform ease-out 0.45s',
@@ -74,14 +110,14 @@ const VerticalSwipe = ({ sliderId, children, slideOffset }) => {
     )
 }
 
-VerticalSwipe.defaultProps = {
+MobileSwipe.defaultProps = {
     slideOffset: 250,
 }
 
-VerticalSwipe.propTypes = {
+MobileSwipe.propTypes = {
     sliderId: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
     slideOffset: PropTypes.number,
 }
 
-export default VerticalSwipe
+export default MobileSwipe

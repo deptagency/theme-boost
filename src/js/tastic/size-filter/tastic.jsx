@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
 import AtomsFormLabel from '../../patterns/atoms/forms/form-label'
-import VerticalSwipe from '../../patterns/templates/vertical-swipe'
+import MobileSwipe from '../../patterns/templates/mobile-swipe'
 import OrganismsSizes from '../../patterns/organisms/sizes/sizes'
 
 class SizeFilterTastic extends Component {
@@ -9,9 +9,9 @@ class SizeFilterTastic extends Component {
         return (
             <div className='filter-component display-grid'>
                 <AtomsFormLabel className='filter-input-label text-align--center' value='Größe' />
-                <VerticalSwipe sliderId='swipe-sizes'>
+                <MobileSwipe sliderId='swipe-sizes'>
                     <OrganismsSizes />
-                </VerticalSwipe>
+                </MobileSwipe>
             </div>
         )
     }
