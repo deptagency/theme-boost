@@ -12,18 +12,18 @@ const sliderSettings = {
     center: true,
     responsive: {
         660: {
-            items: 3
+            items: 3,
         },
         935: {
-            items: 4
+            items: 4,
         },
         1200: {
-            items: 5
-        }
-    }
+            items: 5,
+        },
+    },
 }
 
-const Slider = ({children}) => {
+const Slider = ({ children }) => {
     return (
         <TinySlider settings={sliderSettings}>
             {children}
@@ -32,7 +32,7 @@ const Slider = ({children}) => {
 }
 
 Slider.propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
 }
 
 export default Slider

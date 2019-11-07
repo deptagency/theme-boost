@@ -21,7 +21,7 @@ const ProductItem = ({ product }) => {
                         src={variants[0].images[0]}
                         data-src={variants[0].images[0]}
                         alt={name}
-                        style={{height: '246px', margin: '0 auto'}}
+                        style={{ height: '246px', margin: '0 auto' }}
                     />
                     <div className='o-head-up__item o-head-up__item--top-left'>
                         <MoleculesSticker />
@@ -62,10 +62,10 @@ class ProductSliderTastic extends Component {
                     title={<Translatable value={title} />}
                     description={<Translatable value={description} />}
                 />
-            <Slider>
-                {productsToShow.map((product, i) =>  <ProductItem key={i} product={product} />)}
-            </Slider>
-        </div>
+                <Slider>
+                    {productsToShow.map((product, i) => { return <ProductItem key={i} product={product} /> })}
+                </Slider>
+            </div>
         )
     }
 }

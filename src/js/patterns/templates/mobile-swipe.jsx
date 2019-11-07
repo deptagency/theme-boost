@@ -23,12 +23,12 @@ const MobileSwipe = ({ sliderId, children, slideOffset }) => {
     }, [getSliderId, windowSize])
 
     const onSwipeMove = (position) => {
-        if(!isMoving && position.x > 0) {
+        if (!isMoving && position.x > 0) {
             setIsMoving(true)
             handleLeftMove()
         }
 
-        if(!isMoving && position.x < 0) {
+        if (!isMoving && position.x < 0) {
             setIsMoving(true)
             handleRightMove()
         }
@@ -37,18 +37,18 @@ const MobileSwipe = ({ sliderId, children, slideOffset }) => {
     const onSwipeEnd = () => {
         setIsMoving(false)
 
-        if(shouldSnapLeftBack) {
-            setTimeout(function(){
+        if (shouldSnapLeftBack) {
+            setTimeout(function () {
                 setScrollLeft(0)
                 setShouldSnapLeftBack(false)
-            }, 500);
+            }, 500)
         }
 
-        if(shouldSnapRightBack) {
-            setTimeout(function(){
+        if (shouldSnapRightBack) {
+            setTimeout(function () {
                 setScrollLeft(getContainerDiff())
                 setShouldSnapRightBack(false)
-            }, 500);
+            }, 500)
         }
     }
 
