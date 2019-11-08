@@ -32,13 +32,13 @@ const MoleculesUserIconNav = () => {
                             fill='black'
                         />
                     </svg>
-                    <span>Wunschliste</span>
+                    {/* <span>Wunschliste</span> */}
                 </a>
             </li>
             <li className='o-list-inline__item'>
-                <a href='#'>
+                <a href='/checkout/cart'>
                     <MoleculesCart />
-                    <span>Warenkorb</span>
+                    {/* <span>Warenkorb</span> */}
                 </a>
             </li>
         </ul>

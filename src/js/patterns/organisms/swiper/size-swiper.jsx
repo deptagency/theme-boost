@@ -2,16 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
+import Slider from '../../../patterns/templates/slider'
 
 const OrganismsSizeSwiper = ({ sizes }) => {
     return (
-        <div className='o-swiper'>
-            <div className='o-swiper__holder'>
+        <div className='o-swiper display-grid'>
+            <Slider options={{ fixedWidth: '150px' }}>
                 {sizes.map((c) => {
                   return <button className='o-swiper__item c-chip'>{c}</button>
               })}
-            </div>
-        </div >
+            </Slider>
+        </div>
     )
 }
 

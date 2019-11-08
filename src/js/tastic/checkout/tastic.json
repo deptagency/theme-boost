@@ -1,6 +1,6 @@
 {
-    "tasticType": "frontastic/boost/checkout-register",
-    "name": "Register On Checkout",
+    "tasticType": "frontastic/boost/checkout",
+    "name": "Checkout",
     "icon": "menu",
     "category": "Boost Theme",
     "schema": [

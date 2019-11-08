@@ -1,9 +1,7 @@
 import React, { Component, Fragment } from 'react'
 
 import MoleculesButton from '../molecules/buttons/button'
-import OrganismsHeaderMobile from '../organisms/base/header-mobile'
 import OrganismsPageHeader from '../organisms/base/header-page'
-import OrganismsFooter from '../organisms/base/foot'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -12,13 +10,12 @@ class TemplatesLogin extends Component {
         return (
             <Fragment>
                 <div className='o-television'>
-                    <OrganismsHeaderMobile className='o-television__bar' />
                     <div className='o-television__display'>
                         <OrganismsPageHeader title='Anmelden' />
                         <h2 className='c-title-level-3 o-distance-m'>Melde dich an oder erstelle ein Konto</h2>
                         <div className='o-buttonbar o-distance-s'>
-                            <MoleculesButton type='primary' className='o-buttonbar__item'>Anmelden</MoleculesButton>
-                            <MoleculesButton type='primary' className='o-buttonbar__item'>Registrieren</MoleculesButton>
+                            <MoleculesButton type='primary' size='boss' className='o-buttonbar__item'>Anmelden</MoleculesButton>
+                            <MoleculesButton type='primary' size='boss' className='o-buttonbar__item'>Registrieren</MoleculesButton>
                         </div>
                         <div className='o-television__display__boundless'>
                             <span className='c-divider c-divider--break o-distance-m' />
@@ -31,7 +28,6 @@ class TemplatesLogin extends Component {
                             </form>
                             <MoleculesButton type='primary' size='boss' className='o-distance-m'>Als Gast zur Kasse</MoleculesButton>
                         </section>
-                        <OrganismsFooter />
                     </div>
                 </div>
 

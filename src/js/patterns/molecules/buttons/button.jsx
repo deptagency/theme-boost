@@ -19,6 +19,7 @@ class MoleculesButton extends Component {
                     this.props.type ? 'c-button--' + this.props.type : null,
                     this.props.size ? 'c-button--' + this.props.size : null
                 )}
+                href={this.props.href}
                 >
                 {this.props.icon ?
                     <div className='o-block-short'>
@@ -46,6 +47,7 @@ MoleculesButton.propTypes = {
     size: PropTypes.oneOf([null, 'minion', 'boss']),
     htmlType: PropTypes.string,
     icon: PropTypes.bool,
+    href: PropTypes.bool,
 }
 
 MoleculesButton.defaultProps = {
@@ -53,6 +55,7 @@ MoleculesButton.defaultProps = {
     className: '',
     type: null,
     htmlType: null,
+    href: '',
 }
 
 export default ComponentInjector.return('MoleculesButton', MoleculesButton)

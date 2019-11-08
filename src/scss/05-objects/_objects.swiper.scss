@@ -2,19 +2,25 @@
 $swiper-column-width: 8px;
 
 .o-swiper {
-  overflow: auto;
-  scroll-snap-type: x proximity;
+  margin: 0 -10px;
+  overflow: hidden;
+  //scroll-snap-type: x proximity;
 }
 
 .o-swiper__holder {
   display: grid;
-  grid-column-gap: $spacing-inset-m;
-  grid-template-columns: $swiper-column-width;
   grid-auto-flow: column;
-  grid-auto-columns: calc(50% - var(--gutter) * 2);
-  margin-left: -($swiper-column-width + $spacing-inset-m);
-  margin-right: -($swiper-column-width + $spacing-inset-m);
-  padding-left: $spacing-inset-m;
+  grid-gap: 16px;
+  //grid-gap: $spacing-inset-m;
+
+  //display: grid;
+  //grid-column-gap: $spacing-inset-m;
+  //grid-template-columns: $swiper-column-width;
+  //grid-auto-flow: column;
+  //grid-auto-columns: calc(50% - var(--gutter) * 2);
+  //margin-left: -($swiper-column-width + $spacing-inset-m);
+  //margin-right: -($swiper-column-width + $spacing-inset-m);
+  //padding-left: $spacing-inset-m;
 
   &:before,
   &:after {
@@ -26,6 +32,7 @@ $swiper-column-width: 8px;
 .o-swiper__item {
   position: relative;
   scroll-snap-align: start;
+  margin: 0 4px;
 }
 
 .o-swiper__image {

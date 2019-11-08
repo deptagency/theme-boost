@@ -10,6 +10,7 @@ const sliderSettings = {
     controls: false,
     items: 2,
     center: true,
+    nav: false,
     responsive: {
         660: {
             items: 3,
@@ -23,16 +24,21 @@ const sliderSettings = {
     },
 }
 
-const Slider = ({ children }) => {
+const Slider = ({ children, options }) => {
     return (
-        <TinySlider settings={sliderSettings}>
+        <TinySlider settings={{ ...sliderSettings, ...options }}>
             {children}
         </TinySlider>
     )
 }
 
+Slider.defaultProps = {
+    options: {},
+}
+
 Slider.propTypes = {
     children: PropTypes.node.isRequired,
+    options: PropTypes.object,
 }
 
 export default Slider

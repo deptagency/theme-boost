@@ -7,7 +7,7 @@ import MoleculesDetaillist from '../../molecules/lists/detaillist'
 
 class OrganismBundle extends Component {
     render () {
-        const { showWishListIcon, showCloseIcon } = this.props
+        const { showWishListIcon, showCloseIcon, image } = this.props
 
         return (<div className='c-product-row'>
             <article className='o-bundle'>
@@ -15,7 +15,7 @@ class OrganismBundle extends Component {
                     <span className='o-head-up__item o-head-up__item--top-right'>
                         {showWishListIcon && <button><img src={wishlistHeart} width='24' height='24' alt='add to wish list' /></button>}
                     </span>
-                    <img src='https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg' alt='' />
+                    <img src={image} alt='' />
                 </div>
                 <div className='o-bundle__header'>
                     <div>
@@ -62,6 +62,7 @@ OrganismBundle.propTypes = {
     showCloseIcon: PropTypes.bool,
     showChangeCounter: PropTypes.bool,
     showWishlistButton: PropTypes.bool,
+    image: PropTypes.string,
 }
 
 OrganismBundle.defaultProps = {
