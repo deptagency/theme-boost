@@ -1,0 +1,12 @@
+{
+    "tasticType": "frontastic/boost/my-orders",
+    "name": "My Orders",
+    "icon": "menu",
+    "category": "Boost Theme",
+    "schema": [
+        {
+            "name": "Options",
+            "fields": []
+        }
+    ]
+}
