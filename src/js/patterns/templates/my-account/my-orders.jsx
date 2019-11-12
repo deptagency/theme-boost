@@ -1,11 +1,11 @@
 import React from 'react'
-import OrganismsOrderDetail from 'js/patterns/organisms/blocks/order-detail'
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
-import MoleculesBadge from 'js/patterns/molecules/badges/badge'
-import OrganismsPageHeader from 'js/patterns/organisms/base/header-page'
-import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
-import OrganismsFooter from 'js/patterns/organisms/base/foot'
-import MoleculesReferalBordered from 'js/patterns/molecules/links/referal-bordered'
+import OrganismsOrderDetail from '../../organisms/blocks/order-detail'
+import MoleculesButton from '../../molecules/buttons/button'
+import MoleculesBadge from '../../molecules/badges/badge'
+import OrganismsPageHeader from '../../organisms/base/header-page'
+import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
+import OrganismsFooter from '../../organisms/base/foot'
+import MoleculesReferalBordered from '../../molecules/links/referal-bordered'
 
 const TemplatesMyOrders = props => {
     return (
