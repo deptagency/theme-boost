@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 
 import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
 // TODO: that path hurts! resolve into webpack or something like that
-import forwardArrow from '../../../../../../../icons/arrow_forward.svg'
+import forwardArrowSrc, { ReactComponent as ForwardIcon } from './../../../../../../../icons/arrow_forward.svg'
 
 import { MobileNavTree } from '../MobileNavTree'
 import { categoryTreeType } from '../../types'
 
 export function MobileNavItem({ item, level, navPath, onClick }) {
+    //console.log(forwardArrowSrc)
     // helper to see if the current item is part of the path.
     const isItemInPath = (item) => {
         return navPath.find((e) => {
@@ -28,7 +29,8 @@ export function MobileNavItem({ item, level, navPath, onClick }) {
                 title='Startseite'
                 className='c-navigation__next-level-button'
             >
-                <img src={forwardArrow} alt='Startseite' />
+                {/* img src={forwardArrowSrc} /> */}
+                <ForwardIcon />
             </a>
         )
     }

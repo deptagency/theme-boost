@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import backArrow from '../../../../../../../icons/arrow_back.svg'
+import { ReactComponent as BackArrow } from './../../../../../../../icons/arrow_back.svg'
 
 /* Helper Component
    <BackButton onClick={} />
@@ -9,7 +9,7 @@ import backArrow from '../../../../../../../icons/arrow_back.svg'
 export function BackButton({ onClick }) {
     return (
         <button className='c-mobile-navigation__header-back-button' onClick={onClick}>
-            <img src={backArrow} alt='Back' />
+            <BackArrow />
         </button>
     )
 }
