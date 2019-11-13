@@ -1,17 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import ReferencePropType from 'frontastic-catwalk/src/js/component/reference'
-
-// import Link from '../../app/link'
-
-// import { ReferencePropType } from '../../../component/reference'
-
-// import logo from '../../../layout/logo.svg'
-//
-// import LanguageSelector from './languageSelector'
-// import MiniCart from './miniCart'
-// import Sequential from './sequential'
-// import SvgIcon from '../../patterns/atoms/icons/icon'
 
 import Header from '../../patterns/organisms/base/header'
 
@@ -21,8 +11,7 @@ function addProperDataTrees(cats, trees) {
     })
 }
 
-const HeaderTastic = (props) => {
-    const { data } = props
+function HeaderTastic({ data }) {
     // Temporary fix, until trees in groups are working again.
     const trees = [data.treeWomen, data.treeMen, data.treeKids]
     const topCategories = addProperDataTrees(data.topCategories, trees)
