@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
-import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
-import OrganismsPageHeader from 'js/patterns/organisms/base/header-page'
+import MoleculesButton from '../../molecules/buttons/button'
+import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
+import OrganismsPageHeader from '../../organisms/base/header-page'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 

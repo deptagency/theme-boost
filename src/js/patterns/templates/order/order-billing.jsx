@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
-import OrganismsPaymentListing from 'js/patterns/organisms/listings/payment-listing'
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
-import OrganismsHeaderContext from 'js/patterns/organisms/base/header-context'
+import OrganismsAddressblock from '../../organisms/blocks/addressblock'
+import OrganismsPaymentListing from '../../organisms/listings/payment-listing'
+import MoleculesButton from '../../molecules/buttons/button'
+import OrganismsHeaderContext from '../../organisms/base/header-context'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 

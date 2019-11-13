@@ -3,8 +3,8 @@ import OrganismsPaymentListingIcons from '../../organisms/listings/payment-listi
 import OrganismsSummary from '../../organisms/blocks/summary'
 import MoleculesButton from '../../molecules/buttons/button'
 import OrganismsBundleListing from '../../organisms/listings/bundle-listing'
-import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
-import OrganismsFooter from 'js/patterns/organisms/base/foot'
+import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
+import OrganismsFooter from '../../organisms/base/foot'
 
 const TemplatesFullCart = () => {
     return (

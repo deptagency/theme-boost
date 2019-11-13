@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react'
 
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
-import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
-import OrganismsFormRegister from 'js/patterns/organisms/form/form-register'
-import OrganismsPageHeader from 'js/patterns/organisms/base/header-page'
-import OrganismsFooter from 'js/patterns/organisms/base/foot'
+import MoleculesButton from '../molecules/buttons/button'
+import OrganismsHeaderMobile from '../organisms/base/header-mobile'
+import OrganismsFormRegister from '../organisms/form/form-register'
+import OrganismsPageHeader from '../organisms/base/header-page'
+import OrganismsFooter from '../organisms/base/foot'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 

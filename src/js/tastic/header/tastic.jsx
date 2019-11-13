@@ -5,7 +5,7 @@ import ReferencePropType from 'frontastic-catwalk/src/js/component/reference'
 
 import Header from '../../patterns/organisms/base/header'
 
-function addProperDataTrees(cats, trees) {
+function addProperDataTrees (cats, trees) {
     return cats.map((c, i) => {
         return { ...c, tree: trees[i] }
     })

@@ -6,7 +6,7 @@ import { ReactComponent as BackArrow } from './../../../../../../../icons/arrow_
 /* Helper Component
    <BackButton onClick={} />
 */
-export function BackButton({ onClick }) {
+export function BackButton ({ onClick }) {
     return (
         <button className='c-mobile-navigation__header-back-button' onClick={onClick}>
             <BackArrow />

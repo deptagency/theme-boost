@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import MoleculesChip from 'js/patterns/molecules/chips/chip'
+import MoleculesChip from '../../molecules/chips/chip'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 

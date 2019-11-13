@@ -1,0 +1,12 @@
+{
+    "tasticType": "frontastic/boost/help-section",
+    "name": "Help Section",
+    "icon": "menu",
+    "category": "Boost Theme",
+    "schema": [
+        {
+            "name": "Company Menu",
+            "fields": []
+        }
+    ]
+}

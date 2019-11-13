@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
+import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 
 const OrganismsGuideSorting = ({ sortItems }) => {
     return (

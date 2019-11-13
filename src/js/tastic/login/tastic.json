@@ -1,0 +1,12 @@
+{
+    "tasticType": "react-easy-swipe",
+    "name": "Login",
+    "icon": "menu",
+    "category": "Boost Theme",
+    "schema": [
+        {
+            "name": "Company Menu",
+            "fields": []
+        }
+    ]
+}

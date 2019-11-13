@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import VerticalSwipe from '../../patterns/templates/vertical-swipe'
+import MobileSwipe from '../../patterns/templates/mobile-swipe'
 import OrganismsPromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
 import MoleculesButton from '../../patterns/molecules/buttons/button'
 
@@ -9,7 +9,7 @@ class CategoryButtonBoxesTastic extends Component {
         return (
             // TODO "o-grid  o-region" here?
             <div className='o-grid  o-region'>
-                <VerticalSwipe sliderId='swipe-category-boxes'>
+                <MobileSwipe sliderId='swipe-category-boxes'>
                     <div className='catwalk-category-button-boxes-tastic'>
                         <OrganismsPromoboxWithPositioning key='1' width='306px' height='204px' vertical='middle' horizontal='center'>
                             <MoleculesButton type='primary'>
@@ -27,7 +27,7 @@ class CategoryButtonBoxesTastic extends Component {
                             </MoleculesButton>
                         </OrganismsPromoboxWithPositioning>
                     </div>
-                </VerticalSwipe>
+                </MobileSwipe>
             </div>
         )
     }

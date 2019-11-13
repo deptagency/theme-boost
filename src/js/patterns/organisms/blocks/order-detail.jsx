@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-import MoleculesBadge from 'js/patterns/molecules/badges/badge'
+import MoleculesBadge from '../../molecules/badges/badge'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 

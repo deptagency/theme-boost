@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
+import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 
 class OrganismsGuideBrand extends Component {
     render () {

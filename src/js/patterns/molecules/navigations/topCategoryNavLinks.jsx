@@ -17,7 +17,6 @@ NavItem.propTypes = {
     active: PropTypes.bool.isRequired,
 }
 
-
 const MoleculesTopCategoryNavLinks = ({ items }) => {
     return (
         <ul className='c-service-navigation o-list-inline'>
