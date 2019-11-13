@@ -22,6 +22,7 @@
         "@storybook/addon-knobs": "^5.2.5",
         "@storybook/addon-links": "^5.2.5",
         "@storybook/addon-viewport": "^5.2.5",
+        "@storybook/addon-docs": "^5.2.6",
         "@storybook/addons": "^5.2.5",
         "@storybook/react": "^5.2.5",
         "autoprefixer": "9.6.0",
@@ -143,7 +144,7 @@
         "check": "node node_modules/.bin/eslint --ext .js --ext .jsx -c ../../../../paas/integration/eslint.config.json src/js/ test/js/",
         "fix": "node node_modules/.bin/eslint --fix --ext .js --ext .jsx -c ../../../../paas/integration/eslint.config.json src/js/ test/js/",
         "server:start": "NODE_ENV=development nodemon --legacy-watch --watch src/js/ bin/devServer.js --exec babel-node --presets env,react-app",
-        "storybook": "yarn style-dictionary:watch | start-storybook -p 9001",
+        "storybook": "yarn style-dictionary:watch | start-storybook -s ./public -p 9001",
         "style-dictionary:watch": "cd style-dictionary && yarn watch",
         "build-storybook": "build-storybook"
     },

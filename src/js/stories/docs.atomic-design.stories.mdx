@@ -1,0 +1,32 @@
+<Meta title='5.Docs|Atomic Design'/>
+
+# Component Structure with Atomic Design
+We are using the popular principle by Brad Frost and use it as the way to structure our components in frontend. It is important that we don't use it for CSS Structure.
+
+
+**Basic Atomic Design Structure**
+````
+|- atoms/
+|- molecules/
+|- organisms/
+|- templates
+````
+
+![Atomic Design](http://atomicdesign.bradfrost.com/images/content/atomic-design-process.png)
+
+## The types in Detail
+
+### 1. Atoms
+These are the smallest building blocks of your project. All these elements cannot be divided into smaller parts without losing any use.
+
+### 2. Molecules 
+Those are more complex entities consisting of several atoms. They need to be a part of an organism, to truly have a value.
+
+### 3. Organisms  
+Functional parts of a page, made from groups of atoms and molecules. Many organisms function on their own, without relying on other elements on the page.
+
+### 4. Templates  
+Those are pages without real content and combine organisms into a proper website layout.
+
+### 5. Pages
+Take a template and add some real content to get a page. *We do not use this level in production*

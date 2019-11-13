@@ -1,0 +1,32 @@
+<Meta title='5.Docs|ClassNaming'/>
+
+# Naming Convention
+Our framework use the BEM-Convention to write readable classes. One of the best approach we think. **Take care that you don't interlace a lot.**
+
+**Block**  
+````scss
+.c-button {}
+````
+**Element**
+````scss
+.c-button__element {}
+````
+
+**Modifier**  
+````scss
+.c-button--danger {}
+````
+
+### States
+The principle has a lot of more ways how to write CSS, but Catwalk uses only two of that. The handling with states and ordering of properties in styling rule.
+
+**States**  
+We separate the normal styling rules from handling states like **`active`** or **`disabled`**. Please take care to put it in the end of the component.
+
+````scss
+.c-button {
+  &.is-disabled {
+    background-color: $color-gray;
+  }
+}
+````
