@@ -1,0 +1,70 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+
+<Meta title='5.Docs|Objects'/>
+
+# Objects
+They are very useful for structuring components in a view.
+
+## Head Up
+Use this object to put elements on different places in a container.
+
+<Preview> 
+    <Story name='Head Up'>
+        <div>
+            <div className='o-head-up' style={{ minHeight: '200px', border: '2px solid' }}>
+                <p className='o-head-up__item o-head-up__item--bottom-left'>Bottom Left</p>
+                <p className='o-head-up__item o-head-up__item--bottom-right'>Bottom Right</p>
+                <p className='o-head-up__item o-head-up__item--middle'>Middle</p>
+                <p className='o-head-up__item o-head-up__item--top-left'>Top Left</p>
+                <p className='o-head-up__item o-head-up__item--top-right'>Top Right</p>
+            </div>
+        </div>
+    </Story>
+</Preview>
+
+    <div>
+        <div className='o-head-up' style={{ minHeight: '200px', border: '2px solid' }}>
+            <p className='o-head-up__item o-head-up__item--bottom-left'>Bottom Left</p>
+            <p className='o-head-up__item o-head-up__item--bottom-right'>Bottom Right</p>
+            <p className='o-head-up__item o-head-up__item--middle'>Middle</p>
+            <p className='o-head-up__item o-head-up__item--top-left'>Top Left</p>
+            <p className='o-head-up__item o-head-up__item--top-right'>Top Right</p>
+        </div>
+    </div>
+
+
+## List Inline
+Show items in a line
+
+    <div>
+        <ul className='o-list-inline'>
+            <li className='o-list-inline__item'>Item</li>
+            <li className='o-list-inline__item'>Item</li>
+            <li className='o-list-inline__item'>Item</li>
+        </ul>
+    </div>
+
+## List Bare
+Show items among themselves
+
+    <div>
+        <ul className='o-list-bare'>
+              <li className='o-list-bare__item'>Item</li>
+              <li className='o-list-bare__item'>Item</li>
+              <li className='o-list-bare__item'>Item</li>
+        </ul>
+    </div>
+
+## List Bare Divided
+Show items among themselves with divider
+
+    <div>
+        <ul className='o-list-bare'>
+              <li className='o-list-bare__item'>Item</li>
+              <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
+              <li className='o-list-bare__item'>Item</li>
+              <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
+              <li className='o-list-bare__item'>Item</li>
+              <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
+          </ul>
+    </div>

@@ -1,0 +1,122 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import imgTheming from './images/theming.jpg'
+
+<Meta title='5.Docs|Theming'/>
+
+# Theming
+
+<img src={imgTheming} />
+
+**Don't**
+````scss
+.c-header {
+  background: $color-blue;
+  color: $color-white;
+}
+````
+````html
+<header role="banner" class="c-header">
+  <h1>Title</h1>
+</header>
+````
+
+**Do**
+````scss
+// _components.header.scss
+.c-header {
+  padding: 20px;
+}
+
+// _themes.spotlight.scss
+.t-spotlight {
+  background: $color-blue;
+  color: $color-white;
+}
+````
+````html
+<header role="banner" class="c-header t-spotlight">
+  <h1>Title</h1>
+</header>
+````
+
+## Available Themes
+    .t-quietlight {}
+    .t-spotlight {}
+    .t-universe {}
+
+### Quietlight Theme
+<Preview>
+    <Story name='Quietlight'>
+        <div className='t-quietlight'>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa nesciunt molestiae officiis asperiores amet eveniet voluptates voluptate libero vero dignissimos maxime, ad, soluta optio cum recusandae nam corporis dolores ut.</p>
+        </div>
+    </Story>
+</Preview>
+
+### Spotlight Theme
+<Preview>
+    <Story name='Spotlight'>
+        <div className='t-spotlight'>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa nesciunt molestiae officiis asperiores amet eveniet voluptates voluptate libero vero dignissimos maxime, ad, soluta optio cum recusandae nam corporis dolores ut.</p>
+        </div>
+    </Story>
+</Preview>
+
+### Universe Theme
+<Preview>
+    <Story name='Universe'>
+        <div className='t-universe'>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa nesciunt molestiae officiis asperiores amet eveniet voluptates voluptate libero vero dignissimos maxime, ad, soluta optio cum recusandae nam corporis dolores ut.</p>
+        </div>
+    </Story>
+</Preview>
+
+## Text
+    .t-text-quiet
+    .t-text-ghost
+    .t-text-danger
+    .t-text-focus
+    .t-text-uniform
+
+### Quiet Text
+Mostly for additional and not so important information
+<Preview>
+    <Story name='Quiet Text'>
+        <p className='t-text-quiet'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+    </Story>
+</Preview>
+
+### Ghost Text
+Should be lightest color in the project
+
+<Preview>
+    <Story name='Ghost Text'>
+        <p className='t-text-ghost'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+    </Story>
+</Preview>
+
+### Danger Text
+Show some really important messages like warnings, errors etc.
+
+<Preview>
+    <Story name='Danger Text'>
+        <p className='t-text-danger'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+    </Story>
+</Preview>
+
+### Focus Text
+Show some highlights in your content
+
+<Preview>
+    <Story name='Focus Text'>
+        <p className='t-text-focus'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+    </Story>
+</Preview>
+
+### Uniform Text
+This text theme wear the same color like the base font color.
+<Preview>
+    <Story name='Uniform Text'>
+        <p className='t-text-uniform'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+    </Story>
+</Preview>
