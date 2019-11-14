@@ -50,6 +50,51 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Image",
+            "fields": [
+                {
+                    "label": "Topic",
+                    "field": "topic",
+                    "type": "string",
+                    "default": ""
+                },
+                {
+                    "label": "Title",
+                    "field": "title",
+                    "type": "string",
+                    "default": ""
+                },
+                {
+                    "label": "Image",
+                    "field": "image",
+                    "translatable": false,
+                    "type": "media",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "Button",
+            "fields": [
+                {
+                    "label": "Text",
+                    "field": "buttonText",
+                    "translatable": false,
+                    "type": "string",
+                    "required": true,
+                    "default": "Jetzt shoppen"
+                },
+                {
+                    "label": "Link",
+                    "field": "buttonLink",
+                    "translatable": false,
+                    "required": false,
+                    "type": "reference",
+                    "default": null
+                }
+            ]
         }
     ]
 }

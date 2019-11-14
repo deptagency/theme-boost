@@ -10,19 +10,15 @@ class OrganismsBundleListing extends Component {
             <div>
                 <section className='o-list-bare'>
                     <div className='o-list-bare__item'>
-                        <OrganismsBundle />
+                        <OrganismsBundle image='https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/072617_1_medium.jpg' />
                     </div>
                     <span className='c-divider o-list-bare__item' />
                     <div className='o-list-bare__item'>
-                        <OrganismsBundle />
+                        <OrganismsBundle image='https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/073315_1_large.jpg' />
                     </div>
                     <span className='c-divider o-list-bare__item' />
                     <div className='o-list-bare__item'>
-                        <OrganismsBundle />
-                    </div>
-                    <span className='c-divider o-list-bare__item' />
-                    <div className='o-list-bare__item'>
-                        <OrganismsBundle />
+                        <OrganismsBundle image='https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/085576_1_large.jpg' />
                     </div>
                 </section>
             </div>

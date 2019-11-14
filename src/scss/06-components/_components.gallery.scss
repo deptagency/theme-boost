@@ -1,6 +1,12 @@
 .c-gallery {
   position: relative;
 
+  .tns-nav {
+    /* implementing slider,
+     * hiding empty div from the plug in */
+    display: none;
+  }
+
   &__control {
     position: absolute;
     top: 50%;

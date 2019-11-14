@@ -1,6 +1,6 @@
 {
-    "tasticType": "frontastic/boost/category-boxes",
-    "name": "Category Boxes",
+    "tasticType": "frontastic/boost/category-button-boxes",
+    "name": "Category Button Boxes",
     "icon": "menu",
     "category": "Boost Theme",
     "schema": [
@@ -8,16 +8,22 @@
             "name": "First Box",
             "fields": [
                 {
-                    "label": "First Label",
-                    "field": "firstLabel",
+                    "label": "First Image",
+                    "field": "firstImage",
+                    "type": "media",
+                    "required": true
+                },
+                {
+                    "label": "First Button Label",
+                    "field": "firstButtonLabel",
                     "translatable": false,
                     "type": "string",
                     "required": true,
                     "default": ""
                 },
                 {
-                    "label": "First Link",
-                    "field": "firstLink",
+                    "label": "First Button Link",
+                    "field": "firstButtonLink",
                     "translatable": false,
                     "required": false,
                     "type": "reference",
@@ -29,16 +35,22 @@
             "name": "Second Box",
             "fields": [
                 {
-                    "label": "Second Label",
-                    "field": "secondLabel",
+                    "label": "Second Image",
+                    "field": "secondImage",
+                    "type": "media",
+                    "required": true
+                },
+                {
+                    "label": "Second Button Label",
+                    "field": "secondButtonLabel",
                     "translatable": false,
                     "type": "string",
                     "required": true,
                     "default": ""
                 },
                 {
-                    "label": "Second Link",
-                    "field": "secondLink",
+                    "label": "Second Button Link",
+                    "field": "secondButtonLink",
                     "translatable": false,
                     "required": false,
                     "type": "reference",
@@ -50,16 +62,22 @@
             "name": "Third Box",
             "fields": [
                 {
-                    "label": "Third Label",
-                    "field": "thirdLabel",
+                    "label": "Third Image",
+                    "field": "thirdImage",
+                    "type": "media",
+                    "required": true
+                },
+                {
+                    "label": "Third Button Label",
+                    "field": "thirdButtonLabel",
                     "translatable": false,
                     "type": "string",
                     "required": true,
                     "default": ""
                 },
                 {
-                    "label": "Third Link",
-                    "field": "thirdLink",
+                    "label": "Third Button Link",
+                    "field": "thirdButtonLink",
                     "translatable": false,
                     "required": false,
                     "type": "reference",

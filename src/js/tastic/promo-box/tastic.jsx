@@ -3,18 +3,32 @@ import PropTypes from 'prop-types'
 
 import OrganismsPromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
 import MoleculesButton from '../../patterns/molecules/buttons/button'
+import Translatable from 'frontastic-catwalk/src/js/component/translatable'
 
 class PromoBoxTastic extends Component {
     render () {
-        const { verticalPosition, horizontalPosition } = this.props.data
+        // eslint-disable-next-line no-unused-vars
+        const { verticalPosition, horizontalPosition, buttonLink, buttonText, image, title, topic } = this.props.data
 
-        return <OrganismsPromoboxWithPositioning vertical={verticalPosition} horizontal={horizontalPosition}>
-            <p className='c-topic'>Jetzt für den Sommer</p>
-            <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
-            <MoleculesButton type='primary'>
-                Jetzt shoppen
-            </MoleculesButton>
-        </OrganismsPromoboxWithPositioning>
+        return (
+            <OrganismsPromoboxWithPositioning
+                vertical={verticalPosition}
+                horizontal={horizontalPosition}
+                image={image}
+                >
+                <p className='c-topic'><Translatable value={topic} /></p>
+                <h1 className='c-title'><Translatable value={title} /></h1>
+
+                {/* // TODO Implement reference properly */}
+                <MoleculesButton
+                    // component='a'
+                    // href={buttonLink.target}
+                    type='primary'
+                >
+                    {buttonText}
+                </MoleculesButton>
+            </OrganismsPromoboxWithPositioning>
+        )
     }
 }
 

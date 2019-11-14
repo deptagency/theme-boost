@@ -44,7 +44,7 @@ const OrganismsHead = ({ topCategories }) => {
                     }}
                 />
 
-                <a href='' className='c-logo' title='Catwalk'>
+                <a href='/' className='c-logo' title='Catwalk'>
                     Catwalk
                 </a>
                 <MoleculesUserIconNav open />

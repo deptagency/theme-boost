@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import Link from 'frontastic-catwalk/src/js/app/link'
 import MoleculesHeading from '../../patterns/molecules/headings/heading'
 import Slider from '../../patterns/templates/slider'
 import Translatable from 'frontastic-catwalk/src/js/component/translatable'
@@ -15,21 +16,23 @@ const ProductItem = ({ product }) => {
     return (
         <article className='o-product'>
             <div className='o-product__asset' title=''>
-                <div className='o-head-up'>
-                    <img
-                        className='tns-lazy'
-                        src={variants[0].images[0]}
-                        data-src={variants[0].images[0]}
-                        alt={name}
-                        style={{ height: '246px', margin: '0 auto' }}
-                    />
-                    <div className='o-head-up__item o-head-up__item--top-left'>
-                        <MoleculesSticker />
+                <Link itemProp='url' to={product._url || ''}>
+                    <div className='o-head-up'>
+                        <img
+                            className='tns-lazy'
+                            src={variants[0].images[0]}
+                            data-src={variants[0].images[0]}
+                            alt={name}
+                            style={{ height: '246px', margin: '0 auto' }}
+                        />
+                        <div className='o-head-up__item o-head-up__item--top-left'>
+                            <MoleculesSticker />
+                        </div>
+                        <div className='o-head-up__item o-head-up__item--top-right'>
+                            <MoleculesWishlist />
+                        </div>
                     </div>
-                    <div className='o-head-up__item o-head-up__item--top-right'>
-                        <MoleculesWishlist />
-                    </div>
-                </div>
+                </Link>
             </div>
             <div className='o-product__header o-distance-s'>
                 <div className='o-product__header__large-column'>

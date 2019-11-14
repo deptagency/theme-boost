@@ -4,7 +4,7 @@ import Swipe from 'react-easy-swipe'
 import useWindowSize from '@rehooks/window-size'
 import { isNull } from 'lodash'
 
-const MobileSwipe = ({ sliderId, children, slideOffset }) => {
+const MobileSwipe = ({ sliderId, children, slideOffset, className }) => {
     let [scrollLeft, setScrollLeft] = useState(0)
     let [swiperContent, setSwiperContent] = useState(undefined)
     let swiper = useRef('swiper')
@@ -93,9 +93,9 @@ const MobileSwipe = ({ sliderId, children, slideOffset }) => {
     }
 
     return (
-        <div className='catwalk-mobile-swipe' ref={swiper}>
+        <div className='catwalk-mobile-swipe user-select--disabled' ref={swiper}>
             <Swipe
-                className={getSliderId()}
+                className={`${getSliderId()} ${className}`}
                 allowMouseEvents
                 onSwipeMove={onSwipeMove}
                 onSwipeEnd={onSwipeEnd}
@@ -112,12 +112,14 @@ const MobileSwipe = ({ sliderId, children, slideOffset }) => {
 
 MobileSwipe.defaultProps = {
     slideOffset: 250,
+    className: '',
 }
 
 MobileSwipe.propTypes = {
     sliderId: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
     slideOffset: PropTypes.number,
+    className: PropTypes.string,
 }
 
 export default MobileSwipe

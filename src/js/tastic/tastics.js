@@ -4,7 +4,7 @@ import HeroTastic from './hero/tastic.jsx'
 import CategoryListingTastic from './category-listing/tastic.jsx'
 import PromoBoxTastic from './promo-box/tastic.jsx'
 import CategoryBoxesTastic from './category-boxes/tastic.jsx'
-import CategoryButtonBoxesTastic from './button-boxes/tastic.jsx'
+import CategoryButtonBoxesTastic from './category-button-boxes/tastic.jsx'
 import ProductSliderTastic from './product-slider/tastic.jsx'
 import NewsletterTastic from './newsletter/tastic'
 import ProductStageTastic from './product-stage/tastic'
@@ -26,7 +26,7 @@ import ChangeEmailTastic from './change-email/tastic'
 import ChangeAddressTastic from './change-address/tastic'
 import ChangePasswordTastic from './change-password/tastic'
 import HelpSectionTastic from './help-section/tastic'
-import CheckoutRegisterTastic from './checkout-register/tastic'
+import CheckoutTastic from './checkout/tastic'
 import ProductViewTastic from './product-view/tastic'
 import TemplatesOrderBilling from './order-billing/tastic'
 import DirectDebitTastic from './direct-debit/tastic'
@@ -43,6 +43,7 @@ import ChangeAddressFromProfileTastic from './change-address-from-profile/tastic
 import ProfileTastic from './profile/tastic'
 import FilterTastic from './filter/tastic'
 import LoginTastic from './login/tastic'
+import ProductPageViewTastic from './product-page-view/tastic'
 import MyOrders from './my-orders/tastic'
 
 export default (() => {
@@ -75,7 +76,7 @@ export default (() => {
         'frontastic/boost/change-address': ChangeAddressTastic,
         'frontastic/boost/change-password': ChangePasswordTastic,
         'frontastic/boost/help-section': HelpSectionTastic,
-        'frontastic/boost/checkout-register': CheckoutRegisterTastic,
+        'frontastic/boost/checkout': CheckoutTastic,
         'frontastic/boost/product-view': ProductViewTastic,
         'frontastic/boost/order-billing': TemplatesOrderBilling,
         'frontastic/boost/direct-debit': DirectDebitTastic,
@@ -92,6 +93,7 @@ export default (() => {
         'frontastic/boost/profile': ProfileTastic,
         'frontastic/boost/filter': FilterTastic,
         'frontastic/boost/login': LoginTastic,
+        'frontasic/boost/product-page-view': ProductPageViewTastic,
         'frontastic/boost/my-orders': MyOrders
     }
 })()
