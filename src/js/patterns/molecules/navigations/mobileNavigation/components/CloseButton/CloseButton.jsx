@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // TODO: Icon system
-import { ReactComponent as CloseX } from './../../../../../../../icons/close_x_mobile.svg'
+import { ReactComponent as CloseX } from './../../../../../../../icons/close-x-mobile.svg'
 
 /* Helper Component
    <CloseButton onClick={} />

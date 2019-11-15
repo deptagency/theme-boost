@@ -1,7 +1,7 @@
 import React from 'react'
 
 import MoleculesButton from '../../molecules/buttons/button'
-import emptyCart from '../../../../icons/empty_cart.svg'
+import emptyCart from '../../../../icons/empty-cart.svg'
 
 const TemplatesEmptyCart = () => {
     return (

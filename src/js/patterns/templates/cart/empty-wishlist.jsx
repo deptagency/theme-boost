@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 
 import MoleculesButton from '../../molecules/buttons/button'
-import emptyCart from '../../../../icons/empty_cart.svg'
+import emptyCart from '../../../../icons/empty-cart.svg'
 import OrganismsNewsletterBlock from 'js/patterns/organisms/blocks/newsletter'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
 import OrganismsProductSwiper from 'js/patterns/organisms/swiper/product-swiper'

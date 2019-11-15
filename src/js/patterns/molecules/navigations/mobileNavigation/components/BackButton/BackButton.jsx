@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { ReactComponent as BackArrow } from './../../../../../../../icons/arrow_back.svg'
+import { ReactComponent as BackArrow } from './../../../../../../../icons/arrow-back.svg'
 
 /* Helper Component
    <BackButton onClick={} />
