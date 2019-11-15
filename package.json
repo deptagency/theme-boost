@@ -164,7 +164,7 @@
             "<rootDir>/src/js/**/*.{js,jsx}"
         ],
         "setupFiles": [
-            "<rootDir>/config/polyfills.js"
+            "<rootDir>/../../../catwalk/config/polyfills.js"
         ],
         "testMatch": [
             "<rootDir>/test/js/**/*.js?(x)"
@@ -173,8 +173,8 @@
         "testURL": "http://localhost",
         "transform": {
             "^.+\\.(js|jsx)$": "babel-jest",
-            "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-            "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+            "^.+\\.css$": "<rootDir>/../../../catwalk/config/jest/cssTransform.js",
+            "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/../../../catwalk/config/jest/fileTransform.js"
         },
         "transformIgnorePatterns": [
             "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
