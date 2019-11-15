@@ -1,37 +1,35 @@
-import React, { Component } from 'react'
+import React, { Fragment, Component } from 'react'
 
 import OrganismsAddressblock from '../../organisms/blocks/addressblock'
 import OrganismsPaymentListing from '../../organisms/listings/payment-listing'
 import MoleculesButton from '../../molecules/buttons/button'
 import OrganismsHeaderContext from '../../organisms/base/header-context'
+import OrganismsFooter from 'js/patterns/organisms/base/foot'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class TemplatesOrderBilling extends Component {
     render () {
         return (
-            <div className='o-television'>
-                <OrganismsHeaderContext className='o-television__bar' />
-                <div className='o-television__display'>
-                    <div className='o-container-small'>
-                        <OrganismsAddressblock editable='true' />
-                        <div className='o-television__display__boundless o-distance'>
-                            <span className='c-divider c-divider--break' />
-                        </div>
-                        <div className='o-distance'>
-                            <h2 className='c-title-level-3'>Zahlungsmethode wählen</h2>
-                            <div className='o-distance-m'>
-                                <OrganismsPaymentListing />
-                            </div>
+            <Fragment>
+                <OrganismsHeaderContext />
+                <div className='o-container-small o-prevent-space o-distance'>
+                    <OrganismsAddressblock editable='true' />
+                    <div className='o-television__display__boundless o-distance'>
+                        <span className='c-divider c-divider--break' />
+                    </div>
+                    <div className='o-distance'>
+                        <h2 className='c-title-level-3'>Zahlungsmethode wählen</h2>
+                        <div className='o-distance-m'>
+                            <OrganismsPaymentListing />
                         </div>
                     </div>
+                    <MoleculesButton type='primary' size='boss' className='o-distance'>Weiter</MoleculesButton>
                 </div>
-                <div className='o-television__remote-control'>
-                    <div className='o-container-small'>
-                        <MoleculesButton type='primary' size='boss' className='o-distance'>Weiter</MoleculesButton>
-                    </div>
+                <div className='o-prevent-space'>
+                    <OrganismsFooter />
                 </div>
-            </div>
+            </Fragment>
         )
     }
 }

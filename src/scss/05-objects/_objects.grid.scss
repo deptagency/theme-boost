@@ -35,10 +35,10 @@
   padding-left: $layout-edge-width;
   padding-right: $layout-edge-width;
 
-  @media (min-width: $layout-breakpoint-xl) {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  // @media (min-width: $layout-breakpoint-xl) {
+  //   padding-left: 0;
+  //   padding-right: 0;
+  // }
 }
 
 .o-grid {

@@ -15,7 +15,7 @@ class OrganismsFooter extends Component {
             <Component
                 {..._.omit(this.props, ['children', 'component', 'className', 'theme'])}
                 className={classnames(
-                    'o-footer c-footer o-distance-xl o-container',
+                    'o-footer c-footer o-distance-xl',
                     this.props.className,
                     this.props.theme
                 )}

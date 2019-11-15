@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react'
 
 import MoleculesButton from '../molecules/buttons/button'
 import OrganismsPageHeader from '../organisms/base/header-page'
+import OrganismsHeaderMobile from '../organisms/base/header-mobile'
+import OrganismsFooter from '../organisms/base/foot'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -10,6 +12,7 @@ class TemplatesLogin extends Component {
         return (
             <Fragment>
                 <div className='o-television'>
+                    <OrganismsHeaderMobile className='o-television__bar' />
                     <div className='o-television__display'>
                         <div className='o-container-small'>
                             <OrganismsPageHeader title='Anmelden' />
@@ -30,6 +33,7 @@ class TemplatesLogin extends Component {
                                 <MoleculesButton type='primary' size='boss' className='o-distance-m'>Als Gast zur Kasse</MoleculesButton>
                             </section>
                         </div>
+                        <OrganismsFooter />
                     </div>
                 </div>
 

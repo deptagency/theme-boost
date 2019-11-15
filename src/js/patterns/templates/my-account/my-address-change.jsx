@@ -15,7 +15,9 @@ const TemplatesMyAddressChange = ({ products }) => {
                 </div>
             </div>
             <div className='o-television__remote-control'>
-                <MoleculesButton type='primary' size='boss'>Speichern</MoleculesButton>
+                <div className='o-container-small'>
+                    <MoleculesButton type='primary' size='boss'>Speichern</MoleculesButton>
+                </div>
             </div>
 
         </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import MoleculesButton from '../../molecules/buttons/button'
-import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
+import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -9,7 +9,7 @@ class TemplatesPasswordResetConfirmation extends Component {
     render () {
         return (
             <div className='o-television'>
-                <OrganismsHeaderMobile className='o-television__bar' />
+                <OrganismsHeaderSlideIn setIsOpen={() => {}} title='Bestätigung' className='o-television__bar' />
                 <div className='o-television__display'>
                     <div className='o-container-small'>
                         <div className='u-text-center'>

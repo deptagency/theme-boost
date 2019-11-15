@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 
 import MoleculesButton from '../../molecules/buttons/button'
 import emptyCart from '../../../../icons/empty-cart.svg'
+import { ReactComponent as WishlistIcon } from 'icons/wishlist-heart.svg'
 import OrganismsNewsletterBlock from 'js/patterns/organisms/blocks/newsletter'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
 import OrganismsProductSwiper from 'js/patterns/organisms/swiper/product-swiper'
@@ -13,7 +14,9 @@ const TemplatesEmptyWishlist = () => {
         <Fragment>
             <OrganismsHeaderMobile />
             <section className='o-container-small o-distance o-prevent-space'>
-                <img src={emptyCart} alt='Empty cart' className='o-image-center' />
+                <div className='u-text-center'>
+                  <WishlistIcon className='c-icon c-icon--xl t-text-quiet' />
+                </div>
                 <div className='o-distance-m'>
                     <p className='u-text-center'>Der Warenkorb ist noch leer.</p>
                     <MoleculesButton size='boss' type='primary' className='o-distance-s'>Jetzt anmelden</MoleculesButton>
