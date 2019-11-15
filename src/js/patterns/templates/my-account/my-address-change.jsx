@@ -10,7 +10,9 @@ const TemplatesMyAddressChange = ({ products }) => {
         <div className='o-television'>
             <OrganismsHeaderSlideIn setIsOpen={() => {}} title='Adresse ändern' className='o-television__bar' />
             <div className='o-television__display'>
-                <OrganismFormAddressChange />
+                <div className='o-container-small'>
+                    <OrganismFormAddressChange />
+                </div>
             </div>
             <div className='o-television__remote-control'>
                 <MoleculesButton type='primary' size='boss'>Speichern</MoleculesButton>

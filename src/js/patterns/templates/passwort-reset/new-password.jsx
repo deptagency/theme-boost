@@ -13,13 +13,15 @@ class TemplatesNewPassword extends Component {
             <div className='o-television'>
                 <OrganismsHeaderMobile className='o-television__bar' />
                 <div className='o-television__display'>
-                    <div>
-                        <OrganismsPageHeader title='Neues Passwort' />
-                        <p className='u-text-s t-text-quiet'>Bitte gib ein neues Passwort ein, damit du wieder Zugang zu deinem Benutzerkonto erhältst.</p>
+                    <div className='o-container-small'>
+                        <div>
+                            <OrganismsPageHeader title='Neues Passwort' />
+                            <p className='u-text-s t-text-quiet'>Bitte gib ein neues Passwort ein, damit du wieder Zugang zu deinem Benutzerkonto erhältst.</p>
+                        </div>
+                        <OrganismsFormPasswortReset />
                     </div>
-                    <OrganismsFormPasswortReset />
                 </div>
-                <div className='o-television__remote-control'>
+                <div className='o-television__remote-control o-container-small'>
                     <MoleculesButton type='primary' size='boss'>Neues Passwort anfordern</MoleculesButton>
                 </div>
             </div>
