@@ -19,7 +19,7 @@ import OrganismsFormEmailChange from 'js/patterns/organisms/form/form-email-chan
 import OrganismsFormPasswordChange from 'js/patterns/organisms/form/form-password-change'
 
 export default {
-    title: '3.Organisms|Forms',
+    title: '4.Organisms|Forms',
 }
 
 export const inputRange = () => {

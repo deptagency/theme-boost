@@ -3,7 +3,7 @@ import React from 'react'
 import OrganismsGallery from 'js/patterns/organisms/galleries/gallery'
 
 export default {
-    title: '3.Organisms|Galleries',
+    title: '4.Organisms|Galleries',
 }
 
 export const defaultStory = () => {

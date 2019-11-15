@@ -8,7 +8,7 @@ import MoleculesButton from 'js/patterns/molecules/buttons/button'
 import topCategories from './topCategories.json'
 
 export default {
-    title: '3.Organisms|Navigations|Mobile',
+    title: '4.Organisms|Navigations|Mobile',
 }
 
 const ctaLoggedIn = () => {

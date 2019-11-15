@@ -39,7 +39,7 @@ import { ReactComponent as ZoomInIcon } from 'icons/zoom-in.svg'
 import { ReactComponent as ZoomOutIcon } from 'icons/zoom-out.svg'
 
 export default {
-    title: '1.Atoms|Icons',
+    title: '2.Atoms|Icons',
 }
 
 export const cart = () => { return <CartIcon /> }

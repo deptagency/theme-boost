@@ -4,7 +4,7 @@ import OrganismsStage from 'js/patterns/organisms/stages/stage'
 import OrganismsProductStage from 'js/patterns/organisms/stages/stage-product'
 
 export default {
-    title: '3.Organisms|Stages',
+    title: '4.Organisms|Stages',
 }
 
 export const defaultStage = () => {

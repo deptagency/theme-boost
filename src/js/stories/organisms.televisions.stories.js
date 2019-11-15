@@ -3,7 +3,7 @@ import React from 'react'
 import OrganismsTelevisionSepa from 'js/patterns/organisms/televisions/television-sepa'
 
 export default {
-    title: '3.Organisms|Televisions',
+    title: '4.Organisms|Televisions',
 }
 
 export const televisionSepa = () => {

@@ -3,7 +3,7 @@ import React from 'react'
 import MoleculesBadge from 'js/patterns/molecules/badges/badge'
 
 export default {
-    title: '2.Molecules|Badges',
+    title: '3.Molecules|Badges',
 }
 
 export const allBadges = () => {

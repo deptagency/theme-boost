@@ -4,7 +4,7 @@ import OrganismsPopupLogin from 'js/patterns/organisms/popups/popup-login'
 import OrganismsPopupSepa from 'js/patterns/organisms/popups/popup-sepa'
 
 export default {
-    title: '3.Organisms|Popups',
+    title: '4.Organisms|Popups',
 }
 
 export const popupLogin = () => {

@@ -6,7 +6,7 @@ import AtomsFormTextarea from 'js/patterns/atoms/forms/form-textarea'
 import AtomsFormElements from 'js/patterns/atoms/forms/form'
 
 export default {
-    title: '1.Atoms|Form',
+    title: '2.Atoms|Form',
 }
 
 export const collection = () => {

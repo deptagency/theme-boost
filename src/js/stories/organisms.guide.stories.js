@@ -7,7 +7,7 @@ import OrganismsGuidePatterns from 'js/patterns/organisms/guides/guide-patterns'
 import OrganismsGuideSorting from 'js/patterns/organisms/guides/guide-sorting'
 
 export default {
-    title: '3.Organisms|Guide',
+    title: '4.Organisms|Guide',
 }
 
 export const defaultStory = () => {

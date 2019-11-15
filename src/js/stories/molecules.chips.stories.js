@@ -3,7 +3,7 @@ import React from 'react'
 import MoleculesChip from 'js/patterns/molecules/chips/chip'
 
 export default {
-    title: '2.Molecules|Chips',
+    title: '3.Molecules|Chips',
 }
 
 export const Deleteable = () => {

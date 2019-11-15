@@ -3,7 +3,7 @@ import React from 'react'
 import MoleculesTitle from 'js/patterns/molecules/title/title'
 
 export default {
-    title: '2.Molecules|Titles',
+    title: '3.Molecules|Titles',
 }
 
 export const all = () => {

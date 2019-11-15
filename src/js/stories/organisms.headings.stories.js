@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default {
-    title: '3.Organisms|Headings',
+    title: '4.Organisms|Headings',
 }
 
 export const defaultStory = () => {
