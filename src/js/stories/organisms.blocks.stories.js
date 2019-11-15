@@ -7,7 +7,7 @@ import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
 import OrganismsDeliveryFeatures from 'js/patterns/organisms/blocks/delivery-features'
 
 export default {
-    title: '3.Organisms|Blocks',
+    title: '4.Organisms|Blocks',
 }
 
 export const creditcard = () => {

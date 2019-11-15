@@ -3,7 +3,7 @@ import React from 'react'
 import MoleculesPagination from 'js/patterns/molecules/paginations/pagination'
 
 export default {
-    title: '2.Molecules|Paginations',
+    title: '3.Molecules|Paginations',
 }
 
 export const defaultStory = () => {

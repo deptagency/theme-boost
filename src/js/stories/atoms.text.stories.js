@@ -5,7 +5,7 @@ import AtomsHeadline from 'js/patterns/atoms/text/headlines'
 import AtomsBlockquote from 'js/patterns/atoms/text/blockquote'
 
 export default {
-    title: '1.Atoms|Text',
+    title: '2.Atoms|Text',
 }
 
 export const paragraph = () => {

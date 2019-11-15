@@ -3,7 +3,7 @@ import React from 'react'
 import MoleculesBreadcrumb from 'js/patterns/molecules/breadcrumbs/breadcrumb'
 
 export default {
-    title: '2.Molecules|Breadcrumbs',
+    title: '3.Molecules|Breadcrumbs',
 }
 
 export const defaultStory = () => {

@@ -5,7 +5,7 @@ import MoleculesReferalOneLiner from 'js/patterns/molecules/links/referal-one-li
 import MoleculesReferalBordered from 'js/patterns/molecules/links/referal-bordered'
 
 export default {
-    title: '2.Molecules|Links',
+    title: '3.Molecules|Links',
 }
 
 export const links = () => {

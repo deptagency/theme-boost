@@ -29,7 +29,7 @@ import TemplatesHelpDetail from '../patterns/templates/help-detail'
 import TemplatesProductDetail from '../patterns/templates/detail'
 
 export default {
-    title: '4.Templates|All',
+    title: '5.Templates|All',
     decorators: [withKnobs],
 }
 

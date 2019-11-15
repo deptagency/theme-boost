@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions'
 import MoleculesButton from 'js/patterns/molecules/buttons/button'
 
 export default {
-    title: '2.Molecules|Buttons',
+    title: '3.Molecules|Buttons',
 }
 
 export const allButtons = () => {

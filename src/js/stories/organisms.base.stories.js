@@ -7,7 +7,7 @@ import OrganismsHeaderContext from 'js/patterns/organisms/base/header-context'
 import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
 
 export default {
-    title: '3.Organisms|Base',
+    title: '4.Organisms|Base',
 }
 
 export const footer = () => {

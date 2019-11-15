@@ -3,7 +3,7 @@ import React from 'react'
 import MoleculesCart from 'js/patterns/molecules/carts/cart'
 
 export default {
-    title: '2.Molecules|Cart',
+    title: '3.Molecules|Cart',
 }
 
 export const defaultStory = () => {

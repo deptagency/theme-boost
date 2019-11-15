@@ -8,7 +8,7 @@ import OrganismsPromoboxWithPositioning from 'js/patterns/molecules/promobox/pro
 import OrganismsFeaturebox from 'js/patterns/organisms/featurebox/featurebox'
 
 export default {
-    title: '3.Organisms|Boxes',
+    title: '4.Organisms|Boxes',
 }
 
 export const promobox = () => {

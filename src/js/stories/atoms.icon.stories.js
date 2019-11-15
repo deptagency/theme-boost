@@ -17,13 +17,13 @@ import { ReactComponent as FacebookIcon } from 'icons/facebook.svg'
 import { ReactComponent as InstagramIcon } from 'icons/instagram.svg'
 import { ReactComponent as TwitterIcon } from 'icons/twitter.svg'
 import { ReactComponent as FilterIcon } from 'icons/filter.svg'
-import { ReactComponent as InformationCircleIcon } from 'icons/information-circle.svg'
+// import { ReactComponent as InformationCircleIcon } from 'icons/information-circle.svg'
 import { ReactComponent as MastercardIcon } from 'icons/mastercard.svg'
 import { ReactComponent as MenuIcon } from 'icons/menu.svg'
 import { ReactComponent as PackageSmallIcon } from 'icons/package-small.svg'
 import { ReactComponent as PaypalIcon } from 'icons/paypal.svg'
 import { ReactComponent as PencilCircleIcon } from 'icons/pencil-circle.svg'
-import { ReactComponent as PhoneIcon } from 'icons/phone.svg'
+// import { ReactComponent as PhoneIcon } from 'icons/phone.svg'
 import { ReactComponent as PurpleArrowLeftIcon } from 'icons/purple-arrow-left.svg'
 import { ReactComponent as PurpleArrowRightIcon } from 'icons/purple-arrow-right.svg'
 import { ReactComponent as RatingStarFilledIcon } from 'icons/rating-star-filled.svg'
@@ -39,7 +39,7 @@ import { ReactComponent as ZoomInIcon } from 'icons/zoom-in.svg'
 import { ReactComponent as ZoomOutIcon } from 'icons/zoom-out.svg'
 
 export default {
-    title: '1.Atoms|Icons',
+    title: '2.Atoms|Icons',
 }
 
 export const cart = () => { return <CartIcon /> }
@@ -149,5 +149,3 @@ zoomInIcon.story = {}
 
 export const zoomOutIcon = () => { return <ZoomOutIcon /> }
 zoomOutIcon.story = {}
-
-

@@ -9,7 +9,7 @@ import OrganismsPaymentListing from 'js/patterns/organisms/listings/payment-list
 import OrganismsCategoryBoxes from 'js/patterns/organisms/listings/category-boxes'
 
 export default {
-    title: '3. Organisms|Listings',
+    title: '4.Organisms|Listings',
 }
 
 export const productlisting = () => {

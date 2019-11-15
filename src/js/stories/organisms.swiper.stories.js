@@ -7,7 +7,7 @@ import OrganismsSizeSwiper from 'js/patterns/organisms/swiper/size-swiper'
 import OrganismsCategorySwiper from 'js/patterns/organisms/swiper/category-swiper'
 
 export default {
-    title: '3.Organisms|Swiper',
+    title: '4.Organisms|Swiper',
 }
 
 export const imageColorSwiper = () => {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
 // TODO: that path hurts! resolve into webpack or something like that
-import forwardArrowSrc, { ReactComponent as ForwardIcon } from './../../../../../../../icons/arrow_forward.svg'
+import { ReactComponent as ForwardIcon } from './../../../../../../../icons/arrow-forward.svg'
 
 import { MobileNavTree } from '../MobileNavTree'
 import { categoryTreeType } from '../../types'
