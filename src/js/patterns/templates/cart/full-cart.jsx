@@ -11,8 +11,8 @@ const TemplatesFullCart = () => {
     // const { cartItems } = this.props
 
     return (
-        <div>
-            <section className='o-container o-prevent-space o-distance'>
+        <div className='o-container-medium o-prevent-space o-distance'>
+            <section>
                 <h1 className='c-title-level-3'>Mein Warenkorb</h1>
                 <div className='o-distance'>
                     <OrganismsBundleListing />

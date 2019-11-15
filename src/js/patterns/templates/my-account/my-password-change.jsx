@@ -10,10 +10,12 @@ const TemplatesMyPasswordChange = ({ products }) => {
         <div className='o-television'>
             <OrganismsHeaderSlideIn setIsOpen={() => {}} title='Passwort ändern' className='o-television__bar' />
             <div className='o-television__display'>
-                <p className='u-text-s '>Zu deiner Sicherheit kannst du das Passwort jederzeit ändern.'</p>
-                <div className='o-distance'>
-                    <OrganismsFormPasswordChange />
-                    <MoleculesButton type='primary' size='boss' className='o-distance-m'>Speichern</MoleculesButton>
+                <div className='o-container-small'>
+                    <p className='u-text-s '>Zu deiner Sicherheit kannst du das Passwort jederzeit ändern.'</p>
+                    <div className='o-distance'>
+                        <OrganismsFormPasswordChange />
+                        <MoleculesButton type='primary' size='boss' className='o-distance-m'>Speichern</MoleculesButton>
+                    </div>
                 </div>
             </div>
             <div className='o-television__remote-control' />
