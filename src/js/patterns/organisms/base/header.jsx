@@ -4,14 +4,19 @@ import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import MobileNavigation from '../../molecules/navigations/mobileNavigation'
 import { topCategoryType } from '../../molecules/navigations/mobileNavigation/types'
-import TopCategoryNavLinks from '../../molecules/navigations/topCategoryNavLinks'
+import TopCategoryNav from '../../molecules/navigations/topCategoryNav'
 import MoleculesUserIconNav from '../../molecules/navigations/user-icon-nav'
 import MobileMenuToggle from '../../molecules/buttons/mobile-menu-toggle'
 import MoleculesButton from '../../molecules/buttons/button'
 
 const ctaLoggedIn = () => {
     return (
-        <MoleculesButton type='quiet' onClick={() => { /* return console.log('yea') */ }}>
+        <MoleculesButton
+            type='quiet'
+            onClick={() => {
+                /* return console.log('yea') */
+            }}
+        >
             Meine Bestellungen ansehen
         </MoleculesButton>
     )
@@ -28,7 +33,7 @@ const OrganismsHead = ({ topCategories }) => {
         <div className='o-header'>
             <div className='o-header__top'>
                 <div className='o-header__top-left u-hidden-until-medium'>
-                    <TopCategoryNavLinks items={topCategories} />
+                    <TopCategoryNav items={topCategories} />
                 </div>
                 {/*
                     Although <MobileMenuToggle /> and <MobileNavigation />

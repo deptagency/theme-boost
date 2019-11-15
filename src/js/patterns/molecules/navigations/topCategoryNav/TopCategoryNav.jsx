@@ -17,7 +17,7 @@ NavItem.propTypes = {
     active: PropTypes.bool.isRequired,
 }
 
-const MoleculesTopCategoryNavLinks = ({ items }) => {
+export const TopCategoryNav = ({ items }) => {
     return (
         <ul className='c-service-navigation o-list-inline'>
             {items &&
@@ -28,8 +28,6 @@ const MoleculesTopCategoryNavLinks = ({ items }) => {
     )
 }
 
-MoleculesTopCategoryNavLinks.propTypes = {
+TopCategoryNav.propTypes = {
     items: PropTypes.array.isRequired,
 }
-
-export default MoleculesTopCategoryNavLinks
