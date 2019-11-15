@@ -4,7 +4,7 @@ import IconButton from './'
 import { ReactComponent as CartIcon } from '../../../../../icons/cart.svg'
 
 export default {
-    title: '3.Molecules|Buttons|IconButton',
+    title: '2.Atoms|Buttons|IconButton',
 }
 
 export const iconButtonStory = () => {

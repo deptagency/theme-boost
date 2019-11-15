@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-import MoleculesButton from '../molecules/buttons/button'
+import Button from '../atoms/buttons/button'
 import OrganismsHeaderMobile from '../organisms/base/header-mobile'
 import OrganismsFormLogin from '../organisms/form/form-login'
 import OrganismsPageHeader from '../organisms/base/header-page'
@@ -18,13 +18,13 @@ class TemplatesLogin extends Component {
                         <div className='o-container-small'>
                             <OrganismsPageHeader />
                             <OrganismsFormLogin />
-                            <MoleculesButton type='primary' size='boss' className='o-distance-m'>Anmelden</MoleculesButton>
+                            <Button type='primary' size='boss' className='o-distance-m'>Anmelden</Button>
                             <div className='o-television__display__boundless'>
                                 <span className='c-divider c-divider--break o-distance-m' />
                             </div>
                             <section className='o-distance-m'>
                                 <h2 className='c-title-level-3 u-text-center'>Kostenloses Benutzerkonto</h2>
-                                <MoleculesButton type='quiet' size='boss' className='o-distance-m'>Ich bin neu hier</MoleculesButton>
+                                <Button type='quiet' size='boss' className='o-distance-m'>Ich bin neu hier</Button>
                             </section>
                         </div>
                         <OrganismsFooter />

@@ -6,19 +6,19 @@ import MobileNavigation from '../../molecules/navigations/mobileNavigation'
 import { topCategoryType } from '../../molecules/navigations/mobileNavigation/types'
 import TopCategoryNav from '../../molecules/navigations/topCategoryNav'
 import MoleculesUserIconNav from '../../molecules/navigations/user-icon-nav'
-import MobileMenuToggle from '../../molecules/buttons/mobile-menu-toggle'
-import MoleculesButton from '../../molecules/buttons/button'
+import MobileMenuToggle from '../../atoms/buttons/mobile-menu-toggle'
+import Button from '../../atoms/buttons/button'
 
 const ctaLoggedIn = () => {
     return (
-        <MoleculesButton
+        <Button
             type='quiet'
             onClick={() => {
                 /* return console.log('yea') */
             }}
         >
             Meine Bestellungen ansehen
-        </MoleculesButton>
+        </Button>
     )
 }
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import OrganismsPaymentListingIcons from '../../organisms/listings/payment-listing-icons'
 import OrganismsSummary from '../../organisms/blocks/summary'
-import MoleculesButton from '../../molecules/buttons/button'
+import Button from '../../atoms/buttons/button'
 import OrganismsBundleListing from '../../organisms/listings/bundle-listing'
 import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
 import OrganismsFooter from '../../organisms/base/foot'
@@ -38,9 +38,9 @@ const TemplatesFullCart = () => {
                     </div>
                 </section>
                 <div className='o-container o-prevent-space o-distance'>
-                    <MoleculesButton component='a' href='/checkout/checkout' size='boss' type='primary'>
+                    <Button component='a' href='/checkout/checkout' size='boss' type='primary'>
                         Zur Kasse
-                    </MoleculesButton>
+                    </Button>
                 </div>
             </div>
             <div className='o-prevent-space'>

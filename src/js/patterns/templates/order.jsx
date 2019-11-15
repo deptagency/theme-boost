@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-import MoleculesButton from '../molecules/buttons/button'
+import Button from '../atoms/buttons/button'
 import OrganismsAddressblock from '../organisms/blocks/addressblock'
 import OrganismsBundleListing from '../organisms/listings/bundle-listing'
 import OrganismsFormCoupon from '../organisms/form/form-coupon'
@@ -112,7 +112,7 @@ class TemplatesOrder extends Component {
                             <section className='o-distance'>
                                 <div className='c-box t-quietlight'>
                                     <OrganismsSummary />
-                                    <MoleculesButton type='primary' size='boss' className='o-distance-s'>Zahlungspflichtig bestellen</MoleculesButton>
+                                    <Button type='primary' size='boss' className='o-distance-s'>Zahlungspflichtig bestellen</Button>
                                 </div>
                                 <p className='u-text-s t-text-quiet o-distance-m'>Mit deiner Bestellung erklärst du dich mit unseren Datenschutzbestimmungen, AGB und Widerrufsbestimmungen einverstanden. Als Kunde von frontastic erhältst du Produktempfehlungen per Mail, von denen du dich jederzeit über einen Link in der Mail abmelden kannst.</p>
                             </section>
@@ -121,7 +121,7 @@ class TemplatesOrder extends Component {
                     <div className='o-television__remote-control'>
                         <div className='o-container-medium'>
                             <OrganismsSummary />
-                            <MoleculesButton type='primary' size='boss' className='o-distance-s'>Zahlungspflicht bestellen</MoleculesButton>
+                            <Button type='primary' size='boss' className='o-distance-s'>Zahlungspflicht bestellen</Button>
                         </div>
                     </div>
                 </div>

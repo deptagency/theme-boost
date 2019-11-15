@@ -1,9 +1,9 @@
 import React from 'react'
-import MoleculesButton from '../../molecules/buttons/button'
+import Button from '../../atoms/buttons/button'
 import OrganismsPageHeader from '../../organisms/base/header-page'
 import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
 import OrganismsFooter from '../../organisms/base/foot'
-import MoleculesReferalBordered from '../../molecules/links/referal-bordered'
+import ReferalBordered from '../../atoms/links/referal-bordered'
 import OrganismsAddressblock from '../../organisms/blocks/addressblock'
 
 const TemplatesMyAddresses = props => {
@@ -58,7 +58,7 @@ const TemplatesMyAddresses = props => {
                                             <path d='M15.7208 17.6033C15.6949 17.9159 15.5524 18.2073 15.3216 18.4197C15.0909 18.6321 14.7887 18.75 14.475 18.75H5.52583C5.21218 18.75 4.90998 18.6321 4.6792 18.4197C4.44842 18.2073 4.30593 17.9159 4.28 17.6033L3.125 3.75H16.875L15.7208 17.6033Z' stroke='#31333E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
                                         </svg>
                                     </button>
-                                    <MoleculesButton type='quiet' className='o-buttonbar__item'>Bearbeiten</MoleculesButton>
+                                    <Button type='quiet' className='o-buttonbar__item'>Bearbeiten</Button>
                                 </div>
                             </div>
                             <span className='c-divider o-list-bare__item' />
@@ -77,7 +77,7 @@ const TemplatesMyAddresses = props => {
                                             <path d='M15.7208 17.6033C15.6949 17.9159 15.5524 18.2073 15.3216 18.4197C15.0909 18.6321 14.7887 18.75 14.475 18.75H5.52583C5.21218 18.75 4.90998 18.6321 4.6792 18.4197C4.44842 18.2073 4.30593 17.9159 4.28 17.6033L3.125 3.75H16.875L15.7208 17.6033Z' stroke='#31333E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
                                         </svg>
                                     </button>
-                                    <MoleculesButton type='quiet' className='o-buttonbar__item'>Bearbeiten</MoleculesButton>
+                                    <Button type='quiet' className='o-buttonbar__item'>Bearbeiten</Button>
                                 </div>
                             </div>
                         </div>
@@ -86,10 +86,10 @@ const TemplatesMyAddresses = props => {
 
                 <section className='o-distance'>
                     <nav role='navigation'>
-                        <MoleculesReferalBordered title='Bestellungen' />
-                        <MoleculesReferalBordered title='Rücksendungen' />
-                        <MoleculesReferalBordered title='Benutzerdaten' />
-                        <MoleculesReferalBordered title='Adressen' />
+                        <ReferalBordered title='Bestellungen' />
+                        <ReferalBordered title='Rücksendungen' />
+                        <ReferalBordered title='Benutzerdaten' />
+                        <ReferalBordered title='Adressen' />
                     </nav>
                 </section>
                 <OrganismsFooter />

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import OrganismsFormPasswortReset from '../../organisms/form/form-password-reset'
-import MoleculesButton from '../../molecules/buttons/button'
+import Button from '../../atoms/buttons/button'
 import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
 import OrganismsPageHeader from '../../organisms/base/header-page'
 
@@ -22,7 +22,7 @@ class TemplatesNewPassword extends Component {
                     </div>
                 </div>
                 <div className='o-television__remote-control o-container-small'>
-                    <MoleculesButton type='primary' size='boss'>Neues Passwort anfordern</MoleculesButton>
+                    <Button type='primary' size='boss'>Neues Passwort anfordern</Button>
                 </div>
             </div>
         )

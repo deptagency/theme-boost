@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
+import Button from 'js/patterns/atoms/buttons/button'
 import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
 import OrganismsFormPasswordChange from 'js/patterns/organisms/form/form-password-change'
 
@@ -14,7 +14,7 @@ const TemplatesMyPasswordChange = ({ products }) => {
                     <p className='u-text-s '>Zu deiner Sicherheit kannst du das Passwort jederzeit ändern.'</p>
                     <div className='o-distance'>
                         <OrganismsFormPasswordChange />
-                        <MoleculesButton type='primary' size='boss' className='o-distance-m'>Speichern</MoleculesButton>
+                        <Button type='primary' size='boss' className='o-distance-m'>Speichern</Button>
                     </div>
                 </div>
             </div>

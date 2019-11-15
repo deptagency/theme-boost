@@ -5,7 +5,7 @@ import _ from 'lodash'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class MoleculesBadge extends Component {
+class Badge extends Component {
     render () {
         const Component = this.props.component
 
@@ -25,7 +25,7 @@ class MoleculesBadge extends Component {
     }
 }
 
-MoleculesBadge.propTypes = {
+Badge.propTypes = {
     children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
@@ -33,11 +33,11 @@ MoleculesBadge.propTypes = {
     color: PropTypes.oneOf([null, 'green', 'blue', 'yellow']),
 }
 
-MoleculesBadge.defaultProps = {
+Badge.defaultProps = {
     component: 'span',
     className: '',
     type: null,
     color: null,
 }
 
-export default ComponentInjector.return('MoleculesBadge', MoleculesBadge)
+export default ComponentInjector.return('Badge', Badge)

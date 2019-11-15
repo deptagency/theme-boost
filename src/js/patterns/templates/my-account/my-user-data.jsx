@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
+import Button from 'js/patterns/atoms/buttons/button'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
 import OrganismsPageHeader from 'js/patterns/organisms/base/header-page'
 import OrganismsFooter from 'js/patterns/organisms/base/foot'
@@ -37,7 +37,7 @@ const TemplatesMyUserData = ({ products }) => {
                                 </dd>
                             </div>
                         </div>
-                        <MoleculesButton type='quiet' className='o-distance-m'>Bearbeiten</MoleculesButton>
+                        <Button type='quiet' className='o-distance-m'>Bearbeiten</Button>
                     </article>
 
                     <span className='c-divider o-distance' />
@@ -61,7 +61,7 @@ const TemplatesMyUserData = ({ products }) => {
                                 </dd>
                             </div>
                         </div>
-                        <MoleculesButton type='quiet' className='o-distance-m'>Bearbeiten</MoleculesButton>
+                        <Button type='quiet' className='o-distance-m'>Bearbeiten</Button>
                     </article>
                     <span className='c-divider o-distance' />
                     <article className='o-distance'>
@@ -84,7 +84,7 @@ const TemplatesMyUserData = ({ products }) => {
                                 </dd>
                             </div>
                         </div>
-                        <MoleculesButton type='quiet' className='o-distance-m'>Bearbeiten</MoleculesButton>
+                        <Button type='quiet' className='o-distance-m'>Bearbeiten</Button>
                     </article>
                 </div>
                 <OrganismsFooter />

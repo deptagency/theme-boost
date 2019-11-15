@@ -1,11 +1,11 @@
 import React from 'react'
 import OrganismsOrderDetail from '../../organisms/blocks/order-detail'
-import MoleculesButton from '../../molecules/buttons/button'
-import MoleculesBadge from '../../molecules/badges/badge'
+import Button from '../../atoms/buttons/button'
+import Badge from '../../atoms/badges/badge'
 import OrganismsPageHeader from '../../organisms/base/header-page'
 import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
 import OrganismsFooter from '../../organisms/base/foot'
-import MoleculesReferalBordered from '../../molecules/links/referal-bordered'
+import ReferalBordered from '../../atoms/links/referal-bordered'
 
 const TemplatesMyOrders = props => {
     return (
@@ -23,9 +23,9 @@ const TemplatesMyOrders = props => {
                                     <p itemProp='price' className='c-price'>59,95 €</p>
                                     <p className='u-text-s t-text-quiet'>12. Mai 2019</p>
                                 </div>
-                                <MoleculesBadge type='quiet' color='red'>
+                                <Badge type='quiet' color='red'>
                                 Storniert
-                                </MoleculesBadge>
+                                </Badge>
                             </div>
                             <div className='o-order-detail__body o-box-center'>
                                 <div className='o-stacked o-order-detail__body__item'>
@@ -45,7 +45,7 @@ const TemplatesMyOrders = props => {
                                 </div>
                             </div>
                             <div className='o-order-detail__footer u-text-center'>
-                                <MoleculesButton type='primary'>Bestellung ansehen</MoleculesButton>
+                                <Button type='primary'>Bestellung ansehen</Button>
                             </div>
                         </div>
                     </article>
@@ -74,10 +74,10 @@ const TemplatesMyOrders = props => {
 
                     <section className='o-distance'>
                         <nav role='navigation'>
-                            <MoleculesReferalBordered title='Bestellungen' />
-                            <MoleculesReferalBordered title='Rücksendungen' />
-                            <MoleculesReferalBordered title='Benutzerdaten' />
-                            <MoleculesReferalBordered title='Adressen' />
+                            <ReferalBordered title='Bestellungen' />
+                            <ReferalBordered title='Rücksendungen' />
+                            <ReferalBordered title='Benutzerdaten' />
+                            <ReferalBordered title='Adressen' />
                         </nav>
                     </section>
                 </div>

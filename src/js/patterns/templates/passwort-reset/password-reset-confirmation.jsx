@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import MoleculesButton from '../../molecules/buttons/button'
+import Button from '../../atoms/buttons/button'
 import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
@@ -22,7 +22,7 @@ class TemplatesPasswordResetConfirmation extends Component {
                 </div>
                 <div className='o-television__remote-control'>
                     <div className='o-container-small'>
-                        <MoleculesButton type='primary' size='boss'>Zur Anmeldung</MoleculesButton>
+                        <Button type='primary' size='boss'>Zur Anmeldung</Button>
                     </div>
                 </div>
             </div>

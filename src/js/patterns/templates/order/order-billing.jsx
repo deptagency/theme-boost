@@ -2,7 +2,7 @@ import React, { Fragment, Component } from 'react'
 
 import OrganismsAddressblock from '../../organisms/blocks/addressblock'
 import OrganismsPaymentListing from '../../organisms/listings/payment-listing'
-import MoleculesButton from '../../molecules/buttons/button'
+import Button from '../../atoms/buttons/button'
 import OrganismsHeaderContext from '../../organisms/base/header-context'
 import OrganismsFooter from 'js/patterns/organisms/base/foot'
 
@@ -24,7 +24,7 @@ class TemplatesOrderBilling extends Component {
                             <OrganismsPaymentListing />
                         </div>
                     </div>
-                    <MoleculesButton type='primary' size='boss' className='o-distance'>Weiter</MoleculesButton>
+                    <Button type='primary' size='boss' className='o-distance'>Weiter</Button>
                 </div>
                 <div className='o-prevent-space'>
                     <OrganismsFooter />

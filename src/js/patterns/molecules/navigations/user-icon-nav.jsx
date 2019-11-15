@@ -1,6 +1,6 @@
 import React from 'react'
 
-import IconButton from '../../molecules/buttons/IconButton'
+import IconButton from '../../atoms/buttons/IconButton'
 import { ReactComponent as CartIcon } from '../../../../icons/cart.svg'
 import { ReactComponent as WishlistIcon } from '../../../../icons/wishlist-favorite.svg'
 import { ReactComponent as SearchIcon } from '../../../../icons/search.svg'

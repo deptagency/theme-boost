@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-import MoleculesReferal from '../molecules/links/referal'
+import Referal from '../atoms/links/referal'
 import OrganismsHead from '../organisms/base/header'
 import OrganismsFoot from '../organisms/base/foot'
 import OrganismsPageHeader from '../organisms/base/header-page'
@@ -19,13 +19,13 @@ class TemplatesHelp extends Component {
                             <div className='o-distance'>
                                 <h2 className='c-title-level-3'>Finde Antworten nach Themen</h2>
                                 <nav role='navigation' className='o-distance-m'>
-                                    <MoleculesReferal />
+                                    <Referal />
                                     <span className='c-divider o-distance-m' />
-                                    <div className='o-distance-m'><MoleculesReferal /></div>
+                                    <div className='o-distance-m'><Referal /></div>
                                     <span className='c-divider o-distance-m' />
-                                    <div className='o-distance-m'><MoleculesReferal /></div>
+                                    <div className='o-distance-m'><Referal /></div>
                                     <span className='c-divider o-distance-m' />
-                                    <div className='o-distance-m'><MoleculesReferal /></div>
+                                    <div className='o-distance-m'><Referal /></div>
                                     <span className='c-divider o-distance-m' />
                                 </nav>
                             </div>

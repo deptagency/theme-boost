@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import MoleculesButton from '../../molecules/buttons/button'
+import Button from '../../atoms/buttons/button'
 import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 import OrganismsFormEmailChange from '../../organisms/form/form-email-change'
 
@@ -18,7 +18,7 @@ const TemplatesMyEmailChange = ({ products }) => {
                     </div>
                     <div className='o-distance'>
                         <OrganismsFormEmailChange />
-                        <MoleculesButton type='primary' size='boss' className='o-distance-m'>Speichern</MoleculesButton>
+                        <Button type='primary' size='boss' className='o-distance-m'>Speichern</Button>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@ import OrganismsProductStage from '../stages/stage-product'
 import OrganismsSizeSwiper from '../swiper/size-swiper'
 // eslint-disable-next-line no-unused-vars
 import OrganismsImageColorSwiper from '../swiper/image-color-swiper'
-import MoleculesButton from '../../molecules/buttons/button'
+import Button from '../../atoms/buttons/button'
 import app from 'frontastic-catwalk/src/js/app/app'
 
 const OrganismsProductView = ({ images, name, variant, sizes }) => {
@@ -26,7 +26,7 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
                 <OrganismsImageColorSwiper />
             </div> */}
             <div className='o-distance-l o-prevent-space'>
-                <MoleculesButton
+                <Button
                     type='primary'
                     size='boss'
                     onClick={() => {
@@ -34,7 +34,7 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
                     }}
                 >
                     In den Warenkorb
-                </MoleculesButton>
+                </Button>
             </div>
         </div>
     )

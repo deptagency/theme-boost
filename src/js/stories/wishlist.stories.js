@@ -1,13 +1,13 @@
 import React from 'react'
 
-import MoleculesPrice from 'js/patterns/molecules/prices/price'
+import Wishlist from 'js/patterns/atoms/wishlist/wishlist'
 
 export default {
-    title: '3.Molecules|Price',
+    title: '2.Atoms|Wishlist',
 }
 
 export const defaultStory = () => {
-    return <MoleculesPrice />
+    return <Wishlist />
 }
 
 defaultStory.story = {

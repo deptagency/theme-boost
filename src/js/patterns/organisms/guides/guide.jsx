@@ -5,7 +5,7 @@ import MoleculesFormFromTo from '../../molecules/forms/form-element-from-to'
 import OrganismsColorSwiper from '../../organisms/swiper/color-swiper'
 import OrganismsSizeSwiper from '../../organisms/swiper/size-swiper'
 import OrganismsSortingSwiper from '../../organisms/swiper/sorting-swiper'
-import MoleculesReferalBordered from '../../molecules/links/referal-bordered'
+import ReferalBordered from '../../atoms/links/referal-bordered'
 
 class OrganismsGuide extends Component {
     render () {
@@ -72,10 +72,10 @@ class OrganismsGuide extends Component {
                             <MoleculesFormFromTo />
                         </section>
                         <section className='o-television__display__boundless o-distance-m'>
-                            <MoleculesReferalBordered title='Brand' />
-                            <MoleculesReferalBordered title='Material' />
-                            <MoleculesReferalBordered title='Patterns' />
-                            <MoleculesReferalBordered title='Newness' />
+                            <ReferalBordered title='Brand' />
+                            <ReferalBordered title='Material' />
+                            <ReferalBordered title='Patterns' />
+                            <ReferalBordered title='Newness' />
                         </section>
                         <div className='c-holder o-television__display__boundless c-box t-quietlight'>
                             <a href='' className='c-logo' title='Catwalk'>

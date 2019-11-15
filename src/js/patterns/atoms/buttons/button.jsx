@@ -5,7 +5,7 @@ import _ from 'lodash'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class MoleculesButton extends Component {
+class Button extends Component {
     render () {
         const Component = this.props.component
 
@@ -39,7 +39,7 @@ class MoleculesButton extends Component {
     }
 }
 
-MoleculesButton.propTypes = {
+Button.propTypes = {
     children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
@@ -50,7 +50,7 @@ MoleculesButton.propTypes = {
     href: PropTypes.bool,
 }
 
-MoleculesButton.defaultProps = {
+Button.defaultProps = {
     component: 'button',
     className: '',
     type: null,
@@ -58,4 +58,4 @@ MoleculesButton.defaultProps = {
     href: '',
 }
 
-export default ComponentInjector.return('MoleculesButton', MoleculesButton)
+export default ComponentInjector.return('Button', Button)

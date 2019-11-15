@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import OrganismsFormSepa from 'js/patterns/organisms/form/form-sepa'
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
+import Button from 'js/patterns/atoms/buttons/button'
 import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
@@ -15,7 +15,7 @@ class OrganismsPopupSepa extends Component {
                 </div>
                 <div className='o-popup__holder'>
                     <OrganismsFormSepa />
-                    <MoleculesButton type='primary' size='boss' className='o-distance'>Speichern</MoleculesButton>
+                    <Button type='primary' size='boss' className='o-distance'>Speichern</Button>
                 </div>
             </div>
         )

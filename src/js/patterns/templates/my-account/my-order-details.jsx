@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
+import Button from 'js/patterns/atoms/buttons/button'
 import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
 import OrganismsSummary from 'js/patterns/organisms/blocks/summary'
 import OrganismsBundleListing from 'js/patterns/organisms/listings/bundle-listing'
@@ -113,7 +113,7 @@ const TemplatesMyOrderDetails = ({ products }) => {
                             <OrganismsAddressblock />
                         </div>
                     </div>
-                    <MoleculesButton type='quiet' size='boss' className='o-distance'>Return Products</MoleculesButton>
+                    <Button type='quiet' size='boss' className='o-distance'>Return Products</Button>
                 </div>
             </div>
             <div className='o-television__remote-control' />

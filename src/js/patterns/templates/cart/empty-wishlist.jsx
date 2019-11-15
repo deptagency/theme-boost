@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-import MoleculesButton from '../../molecules/buttons/button'
+import Button from '../../atoms/buttons/button'
 import emptyCart from '../../../../icons/empty-cart.svg'
 import { ReactComponent as WishlistIcon } from 'icons/wishlist-heart.svg'
 import OrganismsNewsletterBlock from 'js/patterns/organisms/blocks/newsletter'
@@ -19,7 +19,7 @@ const TemplatesEmptyWishlist = () => {
                 </div>
                 <div className='o-distance-m'>
                     <p className='u-text-center'>Der Warenkorb ist noch leer.</p>
-                    <MoleculesButton size='boss' type='primary' className='o-distance-s'>Jetzt anmelden</MoleculesButton>
+                    <Button size='boss' type='primary' className='o-distance-s'>Jetzt anmelden</Button>
                 </div>
             </section>
             <section className='o-container o-distance o-prevent-space'>

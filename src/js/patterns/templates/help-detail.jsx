@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-import MoleculesReferal from '../molecules/links/referal'
+import Referal from '../atoms/links/referal'
 import OrganismsHead from '../organisms/base/header'
 import OrganismsFoot from '../organisms/base/foot'
 import OrganismsPageHeader from '../organisms/base/header-page'
@@ -52,13 +52,13 @@ class TemplatesHelpDetail extends Component {
                                 <p className='u-text-s o-distance-s'>Dein Artikel ist mangelhaft? Das tut uns leid. Gerne prüfen wir deine Reklamation. Bitte gib uns folgende Informationen durch...</p>
                             </div>
                             <nav role='navigation' className='o-distance'>
-                                <div><MoleculesReferal /></div>
+                                <div><Referal /></div>
                                 <span className='c-divider o-distance-m' />
-                                <div className='o-distance-m'><MoleculesReferal /></div>
+                                <div className='o-distance-m'><Referal /></div>
                                 <span className='c-divider o-distance-m' />
-                                <div className='o-distance-m'><MoleculesReferal /></div>
+                                <div className='o-distance-m'><Referal /></div>
                                 <span className='c-divider o-distance-m' />
-                                <div className='o-distance-m'><MoleculesReferal /></div>
+                                <div className='o-distance-m'><Referal /></div>
                                 <span className='c-divider o-distance-m' />
                             </nav>
                             <div className='o-distance'>

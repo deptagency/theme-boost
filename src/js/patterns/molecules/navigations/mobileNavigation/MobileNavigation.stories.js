@@ -3,7 +3,7 @@ import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 import MoleculesMobileNavigation from './'
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
+import Button from 'js/patterns/atoms/buttons/button'
 
 import topCategories from './topCategories.json'
 
@@ -13,9 +13,9 @@ export default {
 
 const ctaLoggedIn = () => {
     return (
-        <MoleculesButton type='quiet' onClick={action('go to orders')}>
+        <Button type='quiet' onClick={action('go to orders')}>
             Meine Bestellungen ansehen
-        </MoleculesButton>
+        </Button>
     )
 }
 

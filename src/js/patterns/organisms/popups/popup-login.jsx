@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import OrganismsFormLogin from 'js/patterns/organisms/form/form-login'
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
+import Button from 'js/patterns/atoms/buttons/button'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -12,7 +12,7 @@ class OrganismsPopupLogin extends Component {
                 <div className='o-popup__holder'>
                     <h2 className='c-title'>Anmelden</h2>
                     <OrganismsFormLogin />
-                    <MoleculesButton type='primary' size='boss' className='o-distance'>Anmelden</MoleculesButton>
+                    <Button type='primary' size='boss' className='o-distance'>Anmelden</Button>
                 </div>
             </div>
         )

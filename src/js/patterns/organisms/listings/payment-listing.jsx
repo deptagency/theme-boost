@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import MoleculesChip from '../../molecules/chips/chip'
+import Chip from '../../atoms/chips/chip'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -8,10 +8,10 @@ class OrganismsPaymentListing extends Component {
     render () {
         return (
             <div className='o-grid o-grid--half'>
-                <MoleculesChip component='button' title='PayPal' />
-                <MoleculesChip component='button' title='SEPA-Lastschrift' />
-                <MoleculesChip component='button' title='Kreditkarte' active='true' />
-                <MoleculesChip component='button' title='Rechnung' />
+                <Chip component='button' title='PayPal' />
+                <Chip component='button' title='SEPA-Lastschrift' />
+                <Chip component='button' title='Kreditkarte' active='true' />
+                <Chip component='button' title='Rechnung' />
             </div>
         )
     }

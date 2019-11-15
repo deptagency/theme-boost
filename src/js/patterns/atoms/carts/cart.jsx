@@ -4,7 +4,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import { ReactComponent as CartIcon } from './../../../../icons/cart.svg'
 
-class MoleculesCart extends Component {
+class Chart extends Component {
     render () {
         return (
             <React.Fragment>
@@ -19,8 +19,8 @@ class MoleculesCart extends Component {
     }
 }
 
-MoleculesCart.propTypes = {}
+Chart.propTypes = {}
 
-MoleculesCart.defaultProps = {}
+Chart.defaultProps = {}
 
-export default ComponentInjector.return('MoleculesCart', MoleculesCart)
+export default ComponentInjector.return('Chart', Chart)

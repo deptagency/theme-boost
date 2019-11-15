@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import OrganismFormAddressChange from '../../organisms/form/form-address-change'
-import MoleculesButton from '../../molecules/buttons/button'
+import Button from '../../atoms/buttons/button'
 import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 
 const TemplatesMyAddressChange = ({ products }) => {
@@ -16,7 +16,7 @@ const TemplatesMyAddressChange = ({ products }) => {
             </div>
             <div className='o-television__remote-control'>
                 <div className='o-container-small'>
-                    <MoleculesButton type='primary' size='boss'>Speichern</MoleculesButton>
+                    <Button type='primary' size='boss'>Speichern</Button>
                 </div>
             </div>
 

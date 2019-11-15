@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
+import Button from 'js/patterns/atoms/buttons/button'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
 
 import PaymentType from '../../../constants/payment-types'
@@ -100,7 +100,7 @@ class TemplatesOrderConfirmation extends Component {
                     </div>
                 </div>
                 <div className='o-television__remote-control o-container-small'>
-                    <MoleculesButton type='primary' size='boss'>Weitershoppen</MoleculesButton>
+                    <Button type='primary' size='boss'>Weitershoppen</Button>
                 </div>
             </div>
         )

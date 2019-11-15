@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-import MoleculesButton from '../molecules/buttons/button'
+import Button from '../atoms/buttons/button'
 import OrganismsPageHeader from '../organisms/base/header-page'
 import OrganismsHeaderMobile from '../organisms/base/header-mobile'
 import OrganismsFooter from '../organisms/base/foot'
@@ -18,8 +18,8 @@ class TemplatesLogin extends Component {
                             <OrganismsPageHeader title='Anmelden' />
                             <h2 className='c-title-level-3 o-distance-m'>Melde dich an oder erstelle ein Konto</h2>
                             <div className='o-buttonbar o-distance-s'>
-                                <MoleculesButton type='primary' size='boss' className='o-buttonbar__item'>Anmelden</MoleculesButton>
-                                <MoleculesButton type='primary' size='boss' className='o-buttonbar__item'>Registrieren</MoleculesButton>
+                                <Button type='primary' size='boss' className='o-buttonbar__item'>Anmelden</Button>
+                                <Button type='primary' size='boss' className='o-buttonbar__item'>Registrieren</Button>
                             </div>
                             <div className='o-television__display__boundless'>
                                 <span className='c-divider c-divider--break o-distance-m' />
@@ -30,7 +30,7 @@ class TemplatesLogin extends Component {
                                     <label htmlFor='' className='c-label'>E-Mail-Adresse</label>
                                     <input type='email' name='' id='' className='o-distance-xs' />
                                 </form>
-                                <MoleculesButton type='primary' size='boss' className='o-distance-m'>Als Gast zur Kasse</MoleculesButton>
+                                <Button type='primary' size='boss' className='o-distance-m'>Als Gast zur Kasse</Button>
                             </section>
                         </div>
                         <OrganismsFooter />
