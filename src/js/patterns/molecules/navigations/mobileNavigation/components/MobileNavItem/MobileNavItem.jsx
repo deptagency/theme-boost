@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
-import { ReactComponent as ForwardIcon } from './../../../../../../../icons/arrow_forward.svg'
+import {ReactComponent as ForwardIcon} from './../../../../../../../icons/arrow_forward.svg'
 
-import { MobileNavTree } from '../MobileNavTree'
-import { categoryTreeType } from '../../types'
+import {MobileNavTree} from '../MobileNavTree'
+import {categoryTreeType} from '../../types'
 
-export function MobileNavItem({ item, level, navPath, onClick }) {
+export function MobileNavItem({item, level, navPath, onClick}) {
     // helper to see if the current item is part of the path.
     const isItemInPath = (item) => {
         return navPath.find((e) => {
@@ -25,8 +25,7 @@ export function MobileNavItem({ item, level, navPath, onClick }) {
                     return onClick(item, level)
                 }}
                 title='Startseite'
-                className='c-navigation__next-level-button'
-            >
+                className='c-navigation__next-level-button'>
                 <ForwardIcon />
             </button>
         )
@@ -42,8 +41,7 @@ export function MobileNavItem({ item, level, navPath, onClick }) {
                     }
                 }}
                 title='Startseite'
-                className='c-navigation__anchor'
-            >
+                className='c-navigation__anchor'>
                 {item.name}
             </NodeLink>
             {hasSubLevel(item) && <NextButton />}
