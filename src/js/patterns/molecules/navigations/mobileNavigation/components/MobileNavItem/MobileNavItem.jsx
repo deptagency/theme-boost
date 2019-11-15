@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 
 import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
 // TODO: that path hurts! resolve into webpack or something like that
-import forwardArrowSrc, {ReactComponent as ForwardIcon} from './../../../../../../../icons/arrow-forward.svg'
+import forwardArrowSrc, { ReactComponent as ForwardIcon } from './../../../../../../../icons/arrow_forward.svg'
 
-import {MobileNavTree} from '../MobileNavTree'
-import {categoryTreeType} from '../../types'
+import { MobileNavTree } from '../MobileNavTree'
+import { categoryTreeType } from '../../types'
 
-export function MobileNavItem({item, level, navPath, onClick}) {
+export function MobileNavItem ({ item, level, navPath, onClick }) {
     // helper to see if the current item is part of the path.
     const isItemInPath = (item) => {
         return navPath.find((e) => {
