@@ -5,7 +5,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import { ReactComponent as CartIcon } from './../../../../icons/cart.svg'
 
 class MoleculesCart extends Component {
-    render() {
+    render () {
         return (
             <React.Fragment>
                 <div>

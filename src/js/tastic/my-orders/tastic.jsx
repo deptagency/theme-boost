@@ -4,12 +4,12 @@ import React, { Component } from 'react'
 import TemplatesMyOrders from '../../patterns/templates/my-account/my-orders'
 
 class MyOrdersTastic extends Component {
-  render () {
-    return (
-        <div className='fit-view'>
-            <TemplatesMyOrders />
-        </div>
-    )
+    render () {
+        return (
+            <div className='fit-view'>
+                <TemplatesMyOrders />
+            </div>
+        )
     }
 }
 

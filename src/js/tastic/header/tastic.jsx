@@ -11,7 +11,7 @@ function addProperDataTrees (cats, trees) {
     })
 }
 
-function HeaderTastic({ data }) {
+function HeaderTastic ({ data }) {
     // Temporary fix, until trees in groups are working again.
     const trees = [data.treeWomen, data.treeMen, data.treeKids]
     const topCategories = addProperDataTrees(data.topCategories, trees)
