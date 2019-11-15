@@ -21,15 +21,14 @@ export function MobileNavItem({item, level, navPath, onClick}) {
 
     const NextButton = () => {
         return (
-            <a
+            <button
                 onClick={() => {
                     return onClick(item, level)
                 }}
                 title='Startseite'
                 className='c-navigation__next-level-button'>
-                {/* img src={forwardArrowSrc} /> */}
                 <ForwardIcon />
-            </a>
+            </button>
         )
     }
     return (

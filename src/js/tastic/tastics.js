@@ -94,6 +94,6 @@ export default (() => {
         'frontastic/boost/filter': FilterTastic,
         'frontastic/boost/login': LoginTastic,
         'frontasic/boost/product-page-view': ProductPageViewTastic,
-        'frontastic/boost/my-orders': MyOrders
+        'frontastic/boost/my-orders': MyOrders,
     }
 })()
