@@ -7,7 +7,7 @@ import Slider from '../../patterns/templates/slider'
 import Translatable from 'frontastic-catwalk/src/js/component/translatable'
 import { take } from 'lodash'
 import MoleculesSticker from '../../patterns/molecules/sticker/sticker'
-import MoleculesWishlist from '../../patterns/molecules/wishlist/wishlist'
+import Wishlist from '../../patterns/atoms/wishlist/wishlist'
 
 const ProductItem = ({ product }) => {
     const { name, variants } = product
@@ -29,7 +29,7 @@ const ProductItem = ({ product }) => {
                             <MoleculesSticker />
                         </div>
                         <div className='o-head-up__item o-head-up__item--top-right'>
-                            <MoleculesWishlist />
+                            <Wishlist />
                         </div>
                     </div>
                 </Link>

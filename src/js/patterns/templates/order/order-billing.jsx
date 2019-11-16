@@ -4,7 +4,7 @@ import OrganismsAddressblock from '../../organisms/blocks/addressblock'
 import OrganismsPaymentListing from '../../organisms/listings/payment-listing'
 import Button from '../../atoms/buttons/button'
 import OrganismsHeaderContext from '../../organisms/base/header-context'
-import OrganismsFooter from 'js/patterns/organisms/base/foot'
+import OrganismsFooter from '../../organisms/base/foot'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 

@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 
 import Button from '../../atoms/buttons/button'
-import { ReactComponent as EmptyCartIcon } from 'icons/empty-cart.svg'
+import { ReactComponent as EmptyCartIcon } from '../../../../icons/empty-cart.svg'
 import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
 import OrganismsFooter from '../../organisms/base/foot'
 
