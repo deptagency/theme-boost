@@ -16,7 +16,7 @@ const ctaLoggedIn = () => {
             onClick={() => {
                 /* return console.log('yea') */
             }}
-        >
+            >
             Meine Bestellungen ansehen
         </Button>
     )

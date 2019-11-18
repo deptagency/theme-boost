@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 
 import Button from '../../atoms/buttons/button'
 import { ReactComponent as EmptyCartIcon } from '../../../../icons/empty-cart.svg'

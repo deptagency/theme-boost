@@ -15,7 +15,7 @@ const TemplatesEmptyWishlist = () => {
             <OrganismsHeaderMobile />
             <section className='o-container-small o-distance o-prevent-space'>
                 <div className='u-text-center'>
-                  <WishlistIcon className='c-icon c-icon--xl t-text-quiet' />
+                    <WishlistIcon className='c-icon c-icon--xl t-text-quiet' />
                 </div>
                 <div className='o-distance-m'>
                     <p className='u-text-center'>Der Warenkorb ist noch leer.</p>

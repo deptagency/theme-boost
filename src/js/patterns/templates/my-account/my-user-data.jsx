@@ -11,7 +11,7 @@ const TemplatesMyUserData = ({ products }) => {
         <div className='o-television'>
             <OrganismsHeaderMobile className='o-television__bar' />
             <div className='o-television__display'>
-                <div className="o-container-medium">
+                <div className='o-container-medium'>
                     <OrganismsPageHeader title='Meine Benutzerdaten' />
                     <article className='o-distance'>
                         <div className='o-block-short'>
