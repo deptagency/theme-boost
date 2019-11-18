@@ -30,7 +30,7 @@ Badge.propTypes = {
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     type: PropTypes.oneOf([null, 'danger', 'quiet', 'spot']),
-    color: PropTypes.oneOf([null, 'green', 'blue', 'yellow']),
+    color: PropTypes.oneOf([null, 'green', 'blue', 'yellow', 'red']),
 }
 
 Badge.defaultProps = {

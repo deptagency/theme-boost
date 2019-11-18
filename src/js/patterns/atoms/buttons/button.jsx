@@ -47,7 +47,7 @@ Button.propTypes = {
     size: PropTypes.oneOf([null, 'minion', 'boss']),
     htmlType: PropTypes.string,
     icon: PropTypes.bool,
-    href: PropTypes.bool,
+    href: PropTypes.string,
 }
 
 Button.defaultProps = {

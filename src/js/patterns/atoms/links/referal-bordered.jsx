@@ -10,7 +10,7 @@ const MoleculesReferalBordered = ({ selected, title }) => {
             <div className='c-referal__offset'>
                 <span className='u-text-xs u-text-one-liner t-text-quiet'>
                     {selected.map((item, i) => {
-                        return <span>{item}, </span>
+                        return <span key={i}>{item}, </span>
                     })}
                 </span>
                 <svg className='c-icon c-icon--s c-referal__icon t-text-quiet' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>

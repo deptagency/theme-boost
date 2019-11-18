@@ -21,8 +21,8 @@ class Featurebox extends Component {
 }
 
 Featurebox.propTypes = {
-    description: PropTypes.oneOf(['string', 'node']).isRequired,
-    icon: PropTypes.oneOf(['node']).isRequired,
+    description: PropTypes.object.isRequired,
+    icon: PropTypes.object.isRequired,
 }
 
 Featurebox.defaultProps = {}
