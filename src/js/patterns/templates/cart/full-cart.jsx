@@ -45,8 +45,9 @@ const TemplatesFullCart = ({ cartItems, sum, currency }) => {
 }
 
 TemplatesFullCart.propTypes = {
-    // eslint-disable-next-line react/no-unused-prop-types
     cartItems: PropTypes.array.isRequired,
+    currency: PropTypes.string.isRequired,
+    sum: PropTypes.number.isRequired,
 }
 
 export default TemplatesFullCart

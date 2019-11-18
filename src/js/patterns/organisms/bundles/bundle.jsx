@@ -67,6 +67,13 @@ OrganismBundle.propTypes = {
     showChangeCounter: PropTypes.bool,
     showWishlistButton: PropTypes.bool,
     image: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    designer: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    count: PropTypes.number.isRequired,
+    color: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+    size: PropTypes.string.isRequired,
 }
 
 OrganismBundle.defaultProps = {

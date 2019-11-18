@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-
+import React from 'react'
+import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 const MoleculesDetaillist = ({ color, size, count }) => {
@@ -16,6 +16,9 @@ const MoleculesDetaillist = ({ color, size, count }) => {
 }
 
 MoleculesDetaillist.propTypes = {
+    count: PropTypes.number.isRequired,
+    color: PropTypes.string.isRequired,
+    size: PropTypes.string.isRequired,
 }
 
 MoleculesDetaillist.defaultProps = {

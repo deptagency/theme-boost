@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
@@ -40,6 +40,8 @@ const OrganismsSummary = ({ sum, currency, subtotal }) => {
 
 OrganismsSummary.propTypes = {
     subtotal: PropTypes.bool,
+    sum: PropTypes.number.isRequired,
+    currency: PropTypes.string.isRequired,
 }
 
 OrganismsSummary.defaultProps = {

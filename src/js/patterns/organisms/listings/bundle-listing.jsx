@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react'
-
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import OrganismsBundle from '../bundles/bundle'
@@ -35,7 +35,10 @@ const OrganismsBundleListing = ({ cartItems, currency }) => {
     )
 }
 
-OrganismsBundleListing.propTypes = {}
+OrganismsBundleListing.propTypes = {
+    cartItems: PropTypes.array.isRequired,
+    currency: PropTypes.string.isRequired,
+}
 
 OrganismsBundleListing.defaultProps = {}
 
