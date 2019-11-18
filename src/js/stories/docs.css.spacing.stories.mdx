@@ -1,25 +1,85 @@
 import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
 import imgSpacing from './images/spacing-system.jpg';
+import imgSpacingInset from './images/spacing-inset.jpg';
+import imgSpacingInline from './images/spacing-inline.jpg';
+import imgSpacingStack from './images/spacing-stack.jpg';
+import imgSpacingOverview from './images/spacing-overview.jpg';
+import imgSpacingStretchInset from './images/spacing-stretch-inset.jpg';
+import imgSpacingSquishInset from './images/spacing-squish-inset.jpg';
 
 <Meta title='1.Docs|08-Spacing System'/>
 
 # Spacing System
+CSS use properties like margin, padding and absolute positioning to separate objects. We think that Spacing should have an own concept like the color section. Sometimes you need a padding for a box, a space to the item left or a distance to the next row. So we should separate this into different categories.
 
-<img src={imgSpacing} />
+<img src={imgSpacingOverview} />
 
 **Separation in these categories:**
 * Inset
 * Inline
 * Stack
-* Squish
-* Stretch
+* Squish Inset
+* Stretch Inset
 
-## Inset
+## Scaling
+It always helps to use a value system for the creation of spacing. So we use a non-linear System. Starting from the base, we’ll go in both directions to stops smaller (16, 8, 4, 2) and larger (16, 32, 64, and… that’s about it) on the scale.
+<img src={imgSpacing} />
 
-## Inline
+## Categories in Detail
 
-## Stack
+### Inset
+A inset spacing offers indent spacing like boxes or a photo frame on a wall.
+<img src={imgSpacingInset} />
+<br/>
 
-## Squish
+### Inline
+We put elements in a row like a list of chips. So wee need a space between these elements.
+<img src={imgSpacingInline} />
+<br/>
 
-## Stretch
+### Stack
+In the general case you scroll vertically through the user interface. So we stack elements like a heading on a data table.
+<img src={imgSpacingStack} />
+<br/>
+
+### Squish Inset
+The squish inset reduces the space top and bottom. It is mostly used in **buttons and listitems.**
+<img src={imgSpacingSquishInset} />
+<br/>
+
+### Stretch Inset
+The stretch inset reduces the space left and right. It is mostly used in **textboxes, textareas and other form elements.**
+<img src={imgSpacingStretchInset} />
+
+## Technical Quickview
+You can use each value in your component. The spacing items are available as JSON or Scss. 
+
+You can see an example of the inline concept here:
+
+```json
+style-dictionary/properties/spacing/inline.json
+
+{
+  "spacing": {
+    "inline": {
+      "xxs": { "value": "2px" },
+      "xs": { "value": "4px" },
+      "s": { "value": "8px" },
+      "m": { "value": "16px" },
+      "l": { "value": "32px" },
+      "xl": { "value": "64px" }
+    }
+  }
+}
+```
+
+```scss
+// scss/01-settings/_settings.tokens.scss
+
+$spacing-inline-xxs: 2px;
+$spacing-inline-xs: 4px;
+$spacing-inline-s: 8px;
+$spacing-inline-m: 16px;
+$spacing-inline-l: 32px;
+$spacing-inline-xl: 64px;
+```
