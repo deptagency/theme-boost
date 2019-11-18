@@ -11,20 +11,21 @@ class CartTastic extends Component {
         // eslint-disable-next-line no-unused-vars
         const { cart } = this.props
 
-        return (
-            <TemplatesFullCart />
-        )
+        if (cart.data && cart.data.lineItems.length > 0) {
+            const { lineItems, sum, currency } = cart.data
 
-        /* Cementing out until I find proper data to display chart */
-        /* if (cart.data && cart.data.lineItems > 0) {
             return (
-                <TemplatesFullCart cartItems={cart.data.lineItems} />
+                <TemplatesFullCart
+                    cartItems={lineItems}
+                    sum={sum}
+                    currency={currency}
+                />
             )
         } else {
             return (
                 <TemplatesEmptyCart />
             )
-        } */
+        }
     }
 }
 

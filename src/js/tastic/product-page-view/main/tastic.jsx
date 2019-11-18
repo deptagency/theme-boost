@@ -1,11 +1,12 @@
-import React, { PureComponent } from 'react'
+import React, { Component, PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import productConnector from 'frontastic-catwalk/src/js/tastic/product/connector'
 import OrganismsProductView from '../../../patterns/organisms/products/product-view'
 
-class Main extends PureComponent {
+// class Main extends PureComponent {
+class Main extends Component {
     render () {
         const { product, variant: propsVariant, route } = this.props
 
