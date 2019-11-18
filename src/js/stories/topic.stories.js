@@ -1,13 +1,13 @@
 import React from 'react'
 
-import MoleculesCart from 'js/patterns/molecules/carts/cart'
+import Topic from 'js/patterns/atoms/topic/topic'
 
 export default {
-    title: '3.Molecules|Cart',
+    title: '2.Atoms|Topic',
 }
 
 export const defaultStory = () => {
-    return <MoleculesCart />
+    return <Topic />
 }
 
 defaultStory.story = {

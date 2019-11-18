@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import OrganismsPromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
-import MoleculesButton from '../../patterns/molecules/buttons/button'
+import Button from '../../patterns/atoms/buttons/button'
 import Slider from '../../patterns/templates/slider'
 
 class CategoryButtonBoxesTastic extends Component {
@@ -23,27 +23,27 @@ class CategoryButtonBoxesTastic extends Component {
                         image={firstImage}
                         {... options}
                     >
-                        <MoleculesButton type='primary'>
+                        <Button type='primary'>
                             {firstButtonLabel}
-                        </MoleculesButton>
+                        </Button>
                     </OrganismsPromoboxWithPositioning>
                     <OrganismsPromoboxWithPositioning
                         key='2'
                         image={secondImage}
                         {... options}
                     >
-                        <MoleculesButton type='primary'>
+                        <Button type='primary'>
                             {secondButtonLabel}
-                        </MoleculesButton>
+                        </Button>
                     </OrganismsPromoboxWithPositioning>
                     <OrganismsPromoboxWithPositioning
                         key='3'
                         image={thirdImage}
                         {... options}
                     >
-                        <MoleculesButton type='primary'>
+                        <Button type='primary'>
                             {thirdButtonLabel}
-                        </MoleculesButton>
+                        </Button>
                     </OrganismsPromoboxWithPositioning>
                 </Slider>
             </div>

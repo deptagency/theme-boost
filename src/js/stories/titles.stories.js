@@ -1,9 +1,9 @@
 import React from 'react'
 
-import MoleculesTitle from 'js/patterns/molecules/title/title'
+import Title from 'js/patterns/atoms/title/title'
 
 export default {
-    title: '3.Molecules|Titles',
+    title: '2.Atoms|Titles',
 }
 
 export const all = () => {
@@ -16,7 +16,7 @@ export const all = () => {
             <p className='c-title-level-4'>Title Level 4</p>
             <p className='c-category-title'>Category Title</p>
             <p className='c-topic'>Topic</p>
-            <MoleculesTitle />
+            <Title />
         </div>
     )
 }

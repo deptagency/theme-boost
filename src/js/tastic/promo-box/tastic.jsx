@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import OrganismsPromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
-import MoleculesButton from '../../patterns/molecules/buttons/button'
+import Button from '../../patterns/atoms/buttons/button'
 import Translatable from 'frontastic-catwalk/src/js/component/translatable'
 
 class PromoBoxTastic extends Component {
@@ -20,13 +20,13 @@ class PromoBoxTastic extends Component {
                 <h1 className='c-title'><Translatable value={title} /></h1>
 
                 {/* // TODO Implement reference properly */}
-                <MoleculesButton
+                <Button
                     // component='a'
                     // href={buttonLink.target}
                     type='primary'
                 >
                     {buttonText}
-                </MoleculesButton>
+                </Button>
             </OrganismsPromoboxWithPositioning>
         )
     }

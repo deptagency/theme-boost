@@ -1,25 +1,25 @@
 import React from 'react'
 
-import MoleculesBadge from 'js/patterns/molecules/badges/badge'
+import Badge from 'js/patterns/atoms/badges/badge'
 
 export default {
-    title: '3.Molecules|Badges',
+    title: '2.Atoms|Badges',
 }
 
 export const allBadges = () => {
     return (
         <div>
             <p className='o-distance-m'>
-                <MoleculesBadge>Neu</MoleculesBadge>
+                <Badge>Neu</Badge>
             </p>
             <p className='o-distance-m'>
-                <MoleculesBadge type='quiet'>Neu</MoleculesBadge>
+                <Badge type='quiet'>Neu</Badge>
             </p>
             <p className='o-distance-m'>
-                <MoleculesBadge type='spot'>Neu</MoleculesBadge>
+                <Badge type='spot'>Neu</Badge>
             </p>
             <p className='o-distance-m'>
-                <MoleculesBadge type='danger'>Sale</MoleculesBadge>
+                <Badge type='danger'>Sale</Badge>
             </p>
         </div>
     )

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import MoleculesButton from 'js/patterns/molecules/buttons/button'
+import Button from 'js/patterns/atoms/buttons/button'
 
 import OrganismsPromobox from 'js/patterns/molecules/promobox/promobox'
 import OrganismsPromoboxWithPositioning from 'js/patterns/molecules/promobox/promobox-with-positioning'
@@ -39,30 +39,30 @@ export const contentPromoboxWithPositioning = () => {
             <OrganismsPromoboxWithPositioning vertical='top' horizontal='right' >
                 <p className='c-topic'>Jetzt für den Sommer</p>
                 <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
-                <MoleculesButton type='primary'>
+                <Button type='primary'>
                 Jetzt shoppen
-                </MoleculesButton>
+                </Button>
             </OrganismsPromoboxWithPositioning>
             <OrganismsPromoboxWithPositioning vertical='bottom' horizontal='left' >
                 <p className='c-topic'>Jetzt für den Sommer</p>
                 <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
-                <MoleculesButton type='primary'>
+                <Button type='primary'>
               Jetzt shoppen
-                </MoleculesButton>
+                </Button>
             </OrganismsPromoboxWithPositioning>
             <OrganismsPromoboxWithPositioning vertical='middle' horizontal='center' >
                 <p className='c-topic'>Jetzt für den Sommer</p>
                 <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
-                <MoleculesButton type='primary'>
+                <Button type='primary'>
               Jetzt shoppen
-                </MoleculesButton>
+                </Button>
             </OrganismsPromoboxWithPositioning>
             <OrganismsPromoboxWithPositioning >
                 <p className='c-topic'>Jetzt für den Sommer</p>
                 <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
-                <MoleculesButton type='primary'>
+                <Button type='primary'>
               Jetzt shoppen
-                </MoleculesButton>
+                </Button>
             </OrganismsPromoboxWithPositioning>
         </div>
     )

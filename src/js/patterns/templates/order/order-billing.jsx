@@ -1,20 +1,19 @@
-import React, { Component } from 'react'
+import React, { Fragment, Component } from 'react'
 
 import OrganismsAddressblock from '../../organisms/blocks/addressblock'
 import OrganismsPaymentListing from '../../organisms/listings/payment-listing'
-import MoleculesButton from '../../molecules/buttons/button'
+import Button from '../../atoms/buttons/button'
 import OrganismsHeaderContext from '../../organisms/base/header-context'
+import OrganismsFooter from '../../organisms/base/foot'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class TemplatesOrderBilling extends Component {
     render () {
         return (
-            <div className='o-television'>
-                <div className='o-television__bar'>
-                    <OrganismsHeaderContext />
-                </div>
-                <div className='o-television__display'>
+            <Fragment>
+                <OrganismsHeaderContext />
+                <div className='o-container-small o-prevent-space o-distance'>
                     <OrganismsAddressblock editable='true' />
                     <div className='o-television__display__boundless o-distance'>
                         <span className='c-divider c-divider--break' />
@@ -25,11 +24,12 @@ class TemplatesOrderBilling extends Component {
                             <OrganismsPaymentListing />
                         </div>
                     </div>
+                    <Button type='primary' size='boss' className='o-distance'>Weiter</Button>
                 </div>
-                <div className='o-television__remote-control'>
-                    <MoleculesButton type='primary' size='boss' className='o-distance'>Weiter</MoleculesButton>
+                <div className='o-prevent-space'>
+                    <OrganismsFooter />
                 </div>
-            </div>
+            </Fragment>
         )
     }
 }

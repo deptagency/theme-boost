@@ -5,7 +5,7 @@ import _ from 'lodash'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class MoleculesChip extends Component {
+class Chip extends Component {
     render () {
         const Component = this.props.component
 
@@ -34,7 +34,7 @@ class MoleculesChip extends Component {
     }
 }
 
-MoleculesChip.propTypes = {
+Chip.propTypes = {
     children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
@@ -46,7 +46,7 @@ MoleculesChip.propTypes = {
     onClick: PropTypes.func,
 }
 
-MoleculesChip.defaultProps = {
+Chip.defaultProps = {
     component: 'div',
     className: '',
     active: null,
@@ -56,4 +56,4 @@ MoleculesChip.defaultProps = {
     htmlType: null,
 }
 
-export default ComponentInjector.return('MoleculesChip', MoleculesChip)
+export default ComponentInjector.return('Chip', Chip)

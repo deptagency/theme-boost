@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-import MoleculesBadge from '../../molecules/badges/badge'
+import Badge from '../../atoms/badges/badge'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -14,9 +14,9 @@ class OrganismsOrderDetail extends Component {
                             <p itemProp='price' className='c-price'>59,95 €</p>
                             <p className='u-text-s t-text-quiet'>12. Mai 2019</p>
                         </div>
-                        <MoleculesBadge type='quiet' color='red'>
+                        <Badge type='quiet' color='red'>
                             Storniert
-                        </MoleculesBadge>
+                        </Badge>
                     </div>
                     <div className='o-order-detail__body'>
                         <div className='o-order-detail__counter'>

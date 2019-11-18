@@ -1,11 +1,11 @@
 import React from 'react'
 
-import MoleculesReferal from 'js/patterns/molecules/links/referal'
-import MoleculesReferalOneLiner from 'js/patterns/molecules/links/referal-one-liner'
-import MoleculesReferalBordered from 'js/patterns/molecules/links/referal-bordered'
+import Referal from 'js/patterns/atoms/links/referal'
+import ReferalOneLiner from 'js/patterns/atoms/links/referal-one-liner'
+import ReferalBordered from 'js/patterns/atoms/links/referal-bordered'
 
 export default {
-    title: '3.Molecules|Links',
+    title: '2.Atoms|Links',
 }
 
 export const links = () => {
@@ -23,7 +23,7 @@ links.story = {
 }
 
 export const referal = () => {
-    return <MoleculesReferal />
+    return <Referal />
 }
 
 referal.story = {
@@ -31,7 +31,7 @@ referal.story = {
 }
 
 export const referalOneLiner = () => {
-    return <MoleculesReferalOneLiner />
+    return <ReferalOneLiner />
 }
 
 referalOneLiner.story = {
@@ -39,7 +39,7 @@ referalOneLiner.story = {
 }
 
 export const referalBordered = () => {
-    return <MoleculesReferalBordered />
+    return <ReferalBordered />
 }
 
 referalBordered.story = {

@@ -1,13 +1,13 @@
 import React from 'react'
 
-import MoleculesTopic from 'js/patterns/molecules/topic/topic'
+import MoleculesPrice from 'js/patterns/atoms/prices/price'
 
 export default {
-    title: '3.Molecules|Topic',
+    title: '2.Atoms|Price',
 }
 
 export const defaultStory = () => {
-    return <MoleculesTopic />
+    return <MoleculesPrice />
 }
 
 defaultStory.story = {

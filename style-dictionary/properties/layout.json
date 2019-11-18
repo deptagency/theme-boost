@@ -8,6 +8,8 @@
       "xxl": { "value": "1160px" }
     },
     "wrapper-width": { "value": "1000px" },
+    "wrapper-width-medium": { "value": "640px" },
+    "wrapper-width-small": { "value": "480px" },
     "gutter-width": { "value": "{spacing.inline.m.value}" },
     "edge-width": { "value": "{spacing.inset.m.value}" },
     "columns": { "value": "12" }

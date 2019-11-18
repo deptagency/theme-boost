@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import MoleculesSticker from '../../molecules/sticker/sticker'
-import MoleculesWishlist from '../../molecules/wishlist/wishlist'
+import Wishlist from '../../atoms/wishlist/wishlist'
 
 class OrganismsProduct extends Component {
     render () {
@@ -23,7 +23,7 @@ class OrganismsProduct extends Component {
                         : null }
                         <div className='o-head-up__item o-head-up__item--top-right'>
                             {this.props.addable ?
-                                <MoleculesWishlist />
+                                <Wishlist />
                           :
                                 <button className='u-icon-line-height'>
                                     <svg className='c-icon c-icon--xs' version='1.1' id='Ebene_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'

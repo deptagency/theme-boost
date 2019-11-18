@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
-import MoleculesButton from '../../patterns/molecules/buttons/button'
+import Button from '../../patterns/atoms/buttons/button'
 
 class AddToCartButtonTastic extends Component {
     render () {
         return (
             <div className='margin-12'>
-                <MoleculesButton className='c-button--full-width o-distance-m display-grid' type='primary'>
+                <Button className='c-button--full-width o-distance-m display-grid' type='primary'>
                     In den Warenkorb
-                </MoleculesButton>
+                </Button>
             </div>
         )
     }
