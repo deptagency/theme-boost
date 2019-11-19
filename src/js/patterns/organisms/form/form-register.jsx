@@ -1,8 +1,35 @@
 import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
+import app from 'frontastic-catwalk/src/js/app/app'
+import classnames from 'classnames'
+import Button from '../../atoms/buttons/button'
 
 class OrganismsFormRegister extends Component {
+    constructor (props) {
+        super(props)
+
+         this.state = {
+            register_salutation: '',
+            register_firstName: '',
+            register_lastName: '',
+            register_email: '',
+            register_password: '',
+            register_tos: false,
+        }
+    }
+
+    hasAllRequired = () => {
+        return !!(
+            this.state.register_salutation &&
+            this.state.register_firstName &&
+            this.state.register_lastName &&
+            this.state.register_email &&
+            this.state.register_password &&
+            this.state.register_tos
+        )
+    }
+
     render () {
         return (
             <form method=''>
@@ -10,11 +37,15 @@ class OrganismsFormRegister extends Component {
                     <div className='o-form-area o-distance-m'>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <ul className='o-list-inline'>
-                                <li className='o-list-inline__item'>
+                                <li className='o-list-inline__item' onClick={() => { return this.setState({ register_salutation: 'Frau' }) }}>
                                     <div className='o-block-short'>
                                         <div className='o-block-short__short-item'>
-                                            <div className='c-form-radio'>
-                                                <input type='radio' id='inp-radio-02' name='radio' className='c-form-radio__input' />
+                                            <div className={classnames({
+                                                'c-form-radio': true,
+                                                'is-active': this.state.register_salutation === 'Frau',
+
+                                            })}>
+                                                <input type='radio' id='inp-radio-02' name='salutation_frau' className='c-form-radio__input' />
                                                 <span className='c-form-radio__backdrop' />
                                             </div>
                                         </div>
@@ -23,11 +54,15 @@ class OrganismsFormRegister extends Component {
                                         </div>
                                     </div>
                                 </li>
-                                <li className='o-list-inline__item'>
+                                <li className='o-list-inline__item' onClick={() => { return this.setState({ register_salutation: 'Herr' }) }}>
                                     <div className='o-block-short'>
                                         <div className='o-block-short__short-item'>
-                                            <div className='c-form-radio'>
-                                                <input type='radio' id='inp-radio-02' name='radio' className='c-form-radio__input' />
+                                            <div className={classnames({
+                                                'c-form-radio': true,
+                                                'is-active': this.state.register_salutation === 'Herr',
+
+                                            })}>
+                                                <input type='radio' id='inp-radio-02' name='salutation_herr' className='c-form-radio__input' />
                                                 <span className='c-form-radio__backdrop' />
                                             </div>
                                         </div>
@@ -40,21 +75,50 @@ class OrganismsFormRegister extends Component {
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='' className='c-form-label'>Firstname</label>
-                            <input type='text' className='o-distance-xs' />
+                            <input
+                                type='text'
+                                className='o-distance-xs'
+                                value={this.state.register_firstName}
+                                onChange={(event) => {
+                                    this.setState({ register_firstName: event.target.value })
+                                }}
+                            />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='' className='c-form-label'>Lastname</label>
-                            <input type='text' className='o-distance-xs' />
+                            <input
+                                type='text'
+                                className='o-distance-xs'
+                                value={this.state.register_lastName}
+                                onChange={(event) => {
+                                    this.setState({ register_lastName: event.target.value })
+                                }}
+                            />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-mail' className='c-form-label'>E-Mail Adresse</label>
-                            <input type='email' id='inp-mail' className='o-distance-s' />
+                            <input
+                                type='email'
+                                id='inp-mail'
+                                className='o-distance-xs'
+                                value={this.state.register_email}
+                                onChange={(event) => {
+                                    this.setState({ register_email: event.target.value })
+                                }}
+                            />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-password' className='c-form-label'>Passwort</label>
                             <div className='c-form-unit o-distance-s'>
-                                <input type='password' className='c-form-unit__input c-form-unit__input--connected' id='inp-password' />
-                                <button className='c-form-unit__type c-link c-link--quiet'>Zeigen</button>
+                                <input
+                                    type='password'
+                                    className='o-distance-xs'
+                                    id='inp-password'
+                                    value={this.state.register_password}
+                                    onChange={(event) => {
+                                        this.setState({ register_password: event.target.value })
+                                    }}
+                                />
                             </div>
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
@@ -63,10 +127,14 @@ class OrganismsFormRegister extends Component {
                                     <div className='c-form-checkbox'>
                                         <input
                                             type='checkbox'
+                                            checked={this.state.register_tos}
                                             id='inp-checkbox-02'
                                             name='checkbox'
                                             className='c-form-checkbox__input'
-                            />
+                                            onClick={(event) => {
+                                                this.setState({ register_tos: event.target.checked })
+                                            }}
+                                        />
                                         <span className='c-form-checkbox__backdrop' />
                                         <svg className='c-form-checkbox__icon' x='0px' y='0px' viewBox='0 0 200 200'>
                                             <path
@@ -87,6 +155,27 @@ class OrganismsFormRegister extends Component {
                             </div>
                         </div>
                     </div>
+                    <Button
+                        type='primary'
+                        size='boss'
+                        className='o-distance-m'
+                        disabled={!this.hasAllRequired()}
+                        onClick={(event) => {
+                            event.preventDefault()
+                            event.stopPropagation()
+
+                            app.getLoader('context').register({
+                                salutation: this.state.register_salutation,
+                                firstName: this.state.register_firstName,
+                                lastName: this.state.register_lastName,
+                                email: this.state.register_email,
+                                password: this.state.register_password,
+                                tos: this.state.register_tos,
+                            })
+                        }}
+                    >
+                        Jetzt registrieren
+                    </Button>
                 </fieldset>
             </form>
         )

@@ -1,4 +1,5 @@
 import React from 'react'
+import app from 'frontastic-catwalk/src/js/app/app'
 
 import IconButton from '../../atoms/buttons/IconButton'
 import { ReactComponent as CartIcon } from '../../../../icons/cart.svg'
@@ -15,9 +16,12 @@ const MoleculesUserIconNav = () => {
                 <IconButton icon={<WishlistIcon />}>Wunschliste</IconButton>
             </li>
             <li className='o-list-inline__item'>
-                <a href='/checkout/cart'>
-                    <IconButton icon={<CartIcon />}>Warenkorb</IconButton>
-                </a>
+                <IconButton
+                    icon={<CartIcon />}
+                    onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}
+                >
+                    Warenkorb
+                </IconButton>
             </li>
         </ul>
     )

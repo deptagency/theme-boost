@@ -37,6 +37,7 @@ OrganismsPageHeader.propTypes = {
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     title: PropTypes.string,
+    onClick: PropTypes.func,
 }
 
 OrganismsPageHeader.defaultProps = {

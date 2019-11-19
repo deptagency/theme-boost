@@ -461,9 +461,20 @@
 .size-swiper {
     display: grid;
     grid-auto-flow: column;
-    //grid-gap: 16px;
 }
 
 .category-boxes {
+  font-size: 12px;
+}
+
+.button-login-register {
+  margin: 12px 10px 3px;
+  width: fill-available;
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+
+.profile-greet {
+  margin: 0 10px;
   font-size: 12px;
 }
