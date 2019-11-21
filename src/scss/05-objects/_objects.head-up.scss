@@ -3,6 +3,7 @@ $head-up-spacing-inner: $spacing-inset-m !default;
 
 // Object
 .o-head-up {
+  display: block;
   overflow: hidden;
   position: relative;
 
