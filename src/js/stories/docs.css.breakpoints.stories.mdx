@@ -4,10 +4,28 @@
 Our framework is based on the mobile first approach and use a mixin for the creation of the breakpoint.
 
 **Values:**
-`style-dictionary/properties/layout.json`
+```json
+style-dictionary/properties/layout.json
+
+"breakpoint": {
+  "s": { "value": "480px" },
+  "m": { "value": "600px" },
+  "l": { "value": "767px" },
+  "xl": { "value": "1023px" },
+  "xxl": { "value": "1160px" }
+}
+```
 
 **Mixin:**
-`src/scss/tools/_tools.breakpoint.scss`
+```scss
+// scss/02-tools/_tools.breakpoint.scss
+
+@mixin breakpoint($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+```
 
 ## Practice
 **Don't**

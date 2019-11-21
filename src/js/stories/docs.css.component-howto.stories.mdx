@@ -1,0 +1,73 @@
+import howtoMarkup from './images/howto-markup.jpg'
+import howtoStyle from './images/howto-style.jpg'
+import howtoDistances from './images/howto-distances.jpg'
+
+<Meta title='1.Docs|15-How to write a component'/>
+
+# How to write a visual component with CSS Classes
+Let's start with some practice and build a teaser component.
+
+## 1. Start with the Skelleton
+```html
+<div>
+  <a href='' title=''>
+    <img src='https://images.unsplash.com/photo-1574001473855-2ce8646a3c94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80' alt='' />
+  </a>
+  <p>News</p>
+  <h3>
+    <a href='' title=''>We extend your development</a>
+  </h3>
+  <p>Our framework is based on to be flexible and scalable. If you want to extend it, you can do it. Feel free to contact us...</p>
+  <p>
+    <a href='' title=''>Read more</a>
+  </p>
+</div>
+```
+<div style={{maxWidth: "300px"}}>
+<img src={howtoMarkup} />
+</div>
+
+## 2. Add Styling and Hierarchy
+```html
+<div>
+  <a href='' title=''>
+    <img src='https://images.unsplash.com/photo-1574001473855-2ce8646a3c94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80' alt='' />
+  </a>
+  <p className='u-text-s t-text-quiet'>News</p>
+  <h3 className='c-title-level-2'>
+    <a href='' title='' className='c-link c-link--uniform'>We extend your development</a>
+  </h3>
+  <p>Our framework is based on to be flexible and scalable. If you want to extend it, you can do it. Feel free to contact us...</p>
+  <p>
+    <a href='' title='' className='c-link'>Read more</a>
+  </p>
+</div>
+```
+<div style={{maxWidth: "300px"}}>
+  <img src={howtoStyle} />
+</div>
+
+## 3. Add Spacing
+```html
+<div>
+  <a href='' title=''>
+    <img src='https://images.unsplash.com/photo-1574001473855-2ce8646a3c94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80' alt='' />
+  </a>
+  <p className='u-text-s t-text-quiet o-distance-s'>News</p>
+  <h3 className='c-title-level-2 o-distance-s'>
+    <a href='' title='' className='c-link c-link--uniform'>We extend your development</a>
+  </h3>
+  <p className='o-distance-xs'>Our framework is based on to be flexible and scalable. If you want to extend it, you can do it. Feel free to contact us...</p>
+  <p className='o-distance-m'>
+    <a href='' title='' className='c-link'>Read more</a>
+  </p>
+</div>
+```
+
+<div style={{maxWidth: "300px"}}>
+  <img src={howtoDistances} />
+</div>
+
+
+
+**You never see a teaser classname in this component.** You don't need this specific class. There are some reasons to use a more specific class, but then you will have some more functionality in it.
