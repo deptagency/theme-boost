@@ -1,5 +1,5 @@
 // Config
-$logo-source: "../../layout/logoCatwalk.svg" !default;
+$logo-source: './../../layout/logoCatwalk.svg' !default;
 $logo-height: 19px !default;
 $logo-height-bp-m: 42px !default;
 $logo-width: 100px !default;
@@ -7,17 +7,17 @@ $logo-width-bp-m: 176px !default;
 
 // Component
 .c-logo {
-  display: block;
-  height: $logo-height;
-  width: $logo-width;
-  background: url(#{$logo-source}) no-repeat center;
-  background-size: 100%;
-  color: transparent;
-  font-size: 0;
-  line-height: 0;
+    display: block;
+    height: $logo-height;
+    width: $logo-width;
+    background: url(#{$logo-source}) no-repeat center;
+    background-size: 100%;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
 
-  @media (min-width: $layout-breakpoint-m) {
-    height: $logo-height-bp-m;
-    width: $logo-width-bp-m;
-  }
+    @media (min-width: $layout-breakpoint-m) {
+        height: $logo-height-bp-m;
+        width: $logo-width-bp-m;
+    }
 }
