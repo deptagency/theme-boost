@@ -10,3 +10,7 @@ $theme-ghost-main-color: $color-palette-unique-white !default;
 .t-ghost-border {
   border-color: $theme-ghost-main-color;
 }
+
+.t-ghost-color {
+  color: $theme-ghost-main-color;
+}
