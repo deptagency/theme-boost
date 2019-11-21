@@ -36,11 +36,11 @@ class OrganismsCategoryBoxes extends Component {
 
 OrganismsCategoryBoxes.propTypes = {
     firstLabel: PropTypes.string.isRequired,
-    firstLink: PropTypes.string.isRequired,
+    firstLink: PropTypes.object.isRequired,
     secondLabel: PropTypes.string.isRequired,
-    secondLink: PropTypes.string.isRequired,
+    secondLink: PropTypes.object.isRequired,
     thirdLabel: PropTypes.string.isRequired,
-    thirdLink: PropTypes.string.isRequired,
+    thirdLink: PropTypes.object.isRequired,
 }
 
 OrganismsCategoryBoxes.defaultProps = {

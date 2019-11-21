@@ -15,7 +15,9 @@ const MoleculesUserIconNav = () => {
                 <IconButton icon={<WishlistIcon />}>Wunschliste</IconButton>
             </li>
             <li className='o-list-inline__item'>
-                <IconButton icon={<CartIcon />}>Warenkorb</IconButton>
+                <a href='/checkout/cart'>
+                    <IconButton icon={<CartIcon />}>Warenkorb</IconButton>
+                </a>
             </li>
         </ul>
     )

@@ -1,32 +1,44 @@
-import React, { Component } from 'react'
-
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import OrganismsBundle from '../bundles/bundle'
+import { map } from 'lodash'
 
-class OrganismsBundleListing extends Component {
-    render () {
-        return (
-            <div>
-                <section className='o-list-bare'>
-                    <div className='o-list-bare__item'>
-                        <OrganismsBundle image='https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/072617_1_medium.jpg' />
-                    </div>
-                    <span className='c-divider o-list-bare__item' />
-                    <div className='o-list-bare__item'>
-                        <OrganismsBundle image='https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/073315_1_large.jpg' />
-                    </div>
-                    <span className='c-divider o-list-bare__item' />
-                    <div className='o-list-bare__item'>
-                        <OrganismsBundle image='https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/085576_1_large.jpg' />
-                    </div>
-                </section>
-            </div>
-        )
-    }
+const OrganismsBundleListing = ({ cartItems, currency }) => {
+    return (
+        <div>
+            <section className='o-list-bare'>
+                {map(cartItems, (item, index) => {
+                    // TODO attributes.**.label - make it more robust
+                    return (
+                        <Fragment>
+                            <div className='o-list-bare__item'>
+                                <OrganismsBundle
+                                    name={item.name}
+                                    designer={item.variant.attributes.designer.label}
+                                    image={item.variant.images[0]}
+                                    count={item.count}
+                                    price={item.price}
+                                    color={item.variant.attributes.color.label}
+                                    size={item.variant.attributes.size}
+                                    currency={currency}
+                                />
+                            </div>
+                            {cartItems.length - 1 > index && <span className='c-divider o-list-bare__item' />}
+                        </Fragment>
+
+                    )
+                })}
+            </section>
+        </div>
+    )
 }
 
-OrganismsBundleListing.propTypes = {}
+OrganismsBundleListing.propTypes = {
+    cartItems: PropTypes.array.isRequired,
+    currency: PropTypes.string.isRequired,
+}
 
 OrganismsBundleListing.defaultProps = {}
 

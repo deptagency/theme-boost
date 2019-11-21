@@ -1,23 +1,24 @@
-import React, { Component } from 'react'
-
+import React from 'react'
+import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class MoleculesDetaillist extends Component {
-    render () {
-        return (
-            <dl className='o-detaillist o-distance-s'>
-                <dt className='t-text-quiet'>Farbe:</dt>
-                <dd className='u-text-strong'>Olive</dd>
-                <dt className='t-text-quiet'>Größe:</dt>
-                <dd className='u-text-strong'>36</dd>
-                <dt className='t-text-quiet'>Anzahl:</dt>
-                <dd className='u-text-strong'>2</dd>
-            </dl>
-        )
-    }
+const MoleculesDetaillist = ({ color, size, count }) => {
+    return (
+        <dl className='o-detaillist o-distance-s'>
+            <dt className='t-text-quiet'>Farbe:</dt>
+            <dd className='u-text-strong'>{color}</dd>
+            <dt className='t-text-quiet'>Größe:</dt>
+            <dd className='u-text-strong'>{size}</dd>
+            <dt className='t-text-quiet'>Anzahl:</dt>
+            <dd className='u-text-strong'>{count}</dd>
+        </dl>
+    )
 }
 
 MoleculesDetaillist.propTypes = {
+    count: PropTypes.number.isRequired,
+    color: PropTypes.string.isRequired,
+    size: PropTypes.string.isRequired,
 }
 
 MoleculesDetaillist.defaultProps = {

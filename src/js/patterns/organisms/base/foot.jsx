@@ -150,7 +150,7 @@ class OrganismsFooter extends Component {
 }
 
 OrganismsFooter.propTypes = {
-    children: PropTypes.node.isRequired,
+    // children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     theme: PropTypes.string,

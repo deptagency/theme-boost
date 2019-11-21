@@ -7,7 +7,7 @@ import MoleculesDetaillist from '../../molecules/lists/detaillist'
 
 class OrganismBundle extends Component {
     render () {
-        const { showWishListIcon, showCloseIcon, image } = this.props
+        const { showWishListIcon, showCloseIcon, image, name, designer, count, price, color, size, currency } = this.props
 
         return (<div className='c-product-row'>
             <article className='o-bundle'>
@@ -19,8 +19,8 @@ class OrganismBundle extends Component {
                 </div>
                 <div className='o-bundle__header'>
                     <div>
-                        <h3 className='c-title-level-4'>Vero Moda</h3>
-                        <p className='t-text-quiet'>Ballkleid</p>
+                        <h3 className='c-title-level-4'>{name}</h3>
+                        <p className='t-text-quiet'>{designer}</p>
                     </div>
                     <button>
                         {showCloseIcon && <svg width='20' height='20' className='c-icon c-icon--s c-icon--outline t-text-quiet' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -35,7 +35,11 @@ class OrganismBundle extends Component {
                     </button>
                 </div>
                 <div className='o-bundle__body'>
-                    <MoleculesDetaillist />
+                    <MoleculesDetaillist
+                        color={color}
+                        size={size}
+                        count={count}
+                    />
                     {this.props.showChangeCounter ?
                         <select name='' id='' className='o-distance-s'>
                             <option value='36'>36</option>
@@ -47,7 +51,7 @@ class OrganismBundle extends Component {
                     : null }
                 </div>
                 <div className='o-bundle__footer'>
-                    <span className='c-price'>39,95 €</span>
+                    <span className='c-price'>{currency} {price}</span>
                     {this.props.showWishlistButton ?
                         <p><a href='' className='c-link c-link--quiet u-text-s'>Auf den Wunschzettel</a></p>
                   : null }
@@ -63,6 +67,13 @@ OrganismBundle.propTypes = {
     showChangeCounter: PropTypes.bool,
     showWishlistButton: PropTypes.bool,
     image: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    designer: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    count: PropTypes.number.isRequired,
+    color: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+    size: PropTypes.string.isRequired,
 }
 
 OrganismBundle.defaultProps = {

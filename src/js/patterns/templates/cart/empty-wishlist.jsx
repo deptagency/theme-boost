@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 
 import Button from '../../atoms/buttons/button'
-import emptyCart from '../../../../icons/empty-cart.svg'
 import { ReactComponent as WishlistIcon } from 'icons/wishlist-heart.svg'
 import OrganismsNewsletterBlock from 'js/patterns/organisms/blocks/newsletter'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
@@ -15,7 +14,7 @@ const TemplatesEmptyWishlist = () => {
             <OrganismsHeaderMobile />
             <section className='o-container-small o-distance o-prevent-space'>
                 <div className='u-text-center'>
-                  <WishlistIcon className='c-icon c-icon--xl t-text-quiet' />
+                    <WishlistIcon className='c-icon c-icon--xl t-text-quiet' />
                 </div>
                 <div className='o-distance-m'>
                     <p className='u-text-center'>Der Warenkorb ist noch leer.</p>
