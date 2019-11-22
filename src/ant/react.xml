@@ -30,106 +30,32 @@
         </exec>
     </target>
 
-    <target name="-check-is-project" unless="${production}">
-        <condition property="is-project">
-            <and>
-                <available property="is-project" file="${basedir}/config/project.yml" />
-                <not>
-                    <contains string="${basedir}" substring="_developer"/>
-                </not>
-            </and>
-        </condition>
-    </target>
-
-    <target name="react:package" depends="-check-is-project" if="${is-project}" extensionOf="-package:before~hook">
+    <target name="react:package" extensionOf="-package:before~hook">
         <tool-exists executable="yarn" />
 
         <exec executable="yarn" failonerror="true" dir="${basedir}">
             <env key="CI" value="false" />
 
             <arg value="run" />
-            <arg value="build" />
-            <arg value="main" />
+            <arg value="build-storybook" />
         </exec>
 
         <exec executable="git" failonerror="false" dir="${basedir}">
             <arg value="rm" />
             <arg value="-r" />
             <arg value="--force" />
-            <arg value="${basedir}/public/service-worker.js" />
-            <arg value="${basedir}/public/assets/js/*" />
-            <arg value="${basedir}/public/assets/css/*" />
-            <arg value="${basedir}/public/assets/media/*" />
+            <arg value="${basedir}/../../../landingpage/public/docs/boost/storybook/*" />
         </exec>
 
-        <copy todir="${basedir}/public/assets/" >
-            <fileset dir="${builddir}/assets" includes="**"/>
+        <copy todir="${basedir}/../../../landingpage/public/docs/boost/storybook/" >
+            <fileset dir="${basedir}/storybook-static/" includes="**"/>
         </copy>
 
-        <copy todir="${basedir}/public/" >
-            <fileset dir="${builddir}" includes="service-worker.js"/>
-        </copy>
-
-        <foreach target="-inject-into-layout" param="asset">
-            <fileset dir="${builddir}/assets">
-                <include name="**/main.*.js" />
-                <include name="**/*~main.*.chunk.js" />
-                <include name="**/main.*.css" />
-                <include name="**/*~main.*.css" />
-            </fileset>
-        </foreach>
+        <delete dir="${basedir}/storybook-static/" />
 
         <exec executable="git" failonerror="true" dir="${basedir}">
             <arg value="add" />
-            <arg value="${basedir}/public/service-worker.js" />
-            <arg value="${basedir}/public/assets/js/*" />
-            <arg value="${basedir}/public/assets/css/*" />
-            <arg value="${basedir}/public/assets/media/*" />
-            <arg value="${basedir}/templates/layout.html.twig" />
+            <arg value="${basedir}/../../../landingpage/public/docs/boost/storybook/*" />
         </exec>
-
-        <exec executable="yarn" failonerror="true" dir="${basedir}">
-            <env key="CI" value="false" />
-
-            <arg value="run" />
-            <arg value="build" />
-            <arg value="server" />
-        </exec>
-
-        <copy todir="${basedir}/bin/" >
-            <fileset dir="${builddir}/assets/js" includes="server.js"/>
-        </copy>
-
-        <exec executable="git" failonerror="true" dir="${basedir}">
-            <arg value="add" />
-            <arg value="${basedir}/bin/server.js" />
-        </exec>
-    </target>
-
-    <target name="-inject-into-layout">
-        <pathconvert property="asset-local-path">
-            <path location="${asset}"/>
-            <globmapper from="${builddir}/*" to="/*" />
-        </pathconvert>
-
-        <!-- Create a regular expression from the asset path to match any asset
-             hash and use that later to find the old asset (hash) in the layout
-             and replace it -->
-        <loadresource property="asset-regexp">
-            <propertyresource name="asset-local-path"/>
-            <filterchain>
-                <tokenfilter>
-                    <filetokenizer/>
-                    <replaceregex pattern="\.[0-9a-f]{8}\." replace="\.[0-9a-f]{8}\." />
-                </tokenfilter>
-            </filterchain>
-        </loadresource>
-
-        <echo>Inject asset: ${asset-local-path}</echo>
-
-        <replaceregexp
-            file="${basedir}/templates/layout.html.twig"
-            match="${asset-regexp}"
-            replace="${asset-local-path}" />
     </target>
 </project>
