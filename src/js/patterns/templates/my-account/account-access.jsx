@@ -36,7 +36,7 @@ class AccountAccessForms extends Component {
                 <Grow in={(this.state.form === 'register')}>
                     <TemplatesRegister />
                     <section className='o-television o-television__display o-container-small o-distance-m'>
-                        <h2 className='c-title-level-3 u-text-center aaa'>Melde dich jetzt an</h2>
+                        <h2 className='c-title-level-3 u-text-center'>Melde dich jetzt an</h2>
                         <Button
                             type='quiet'
                             size='boss'
