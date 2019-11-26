@@ -9,7 +9,7 @@ class OrganismsFormRegister extends Component {
     constructor (props) {
         super(props)
 
-         this.state = {
+        this.state = {
             register_salutation: '',
             register_firstName: '',
             register_lastName: '',

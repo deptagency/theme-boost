@@ -5,7 +5,7 @@ import app from 'frontastic-catwalk/src/js/app/app'
 import AccountAccessForms from '../../../patterns/templates/my-account/account-access'
 import { ReactComponent as ArrowLeftIcon } from '../../../../icons/arrow-left.svg'
 
-const AccountItem = ({ name, onClick }) => {
+const AccountItem = ({ name, onClick, showLeftArrow = true }) => {
     return (
         <div className='c-navigation__item'>
             <a
@@ -14,7 +14,7 @@ const AccountItem = ({ name, onClick }) => {
             >
                 {name}
             </a>
-            <ArrowLeftIcon />
+            {showLeftArrow && <ArrowLeftIcon />}
         </div>
     )
 }
@@ -22,6 +22,7 @@ const AccountItem = ({ name, onClick }) => {
 AccountItem.propTypes = {
     name: PropTypes.string.isRequired,
     onClick: PropTypes.func,
+    showLeftArrow: PropTypes.bool,
 }
 
 const AccountProfileTastic = ({ context }) => {
@@ -44,6 +45,7 @@ const AccountProfileTastic = ({ context }) => {
                 <AccountItem
                     name='Logout'
                     onClick={() => { app.getLoader('context').logout() }}
+                    showLeftArrow={false}
                 />
             </div>
         </Fragment>
