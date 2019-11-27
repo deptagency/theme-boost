@@ -1,6 +1,5 @@
 import React from 'react'
 
-import OrganismsFoot from 'js/patterns/organisms/base/foot'
 import OrganismsHeader from 'js/patterns/organisms/base/header'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
 import OrganismsHeaderContext from 'js/patterns/organisms/base/header-context'
@@ -8,18 +7,6 @@ import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
 
 export default {
     title: '4.Organisms|Base',
-}
-
-export const footer = () => {
-    return (
-        <div>
-            <OrganismsFoot />
-        </div>
-    )
-}
-
-footer.story = {
-    name: 'Footer',
 }
 
 export const header = () => {

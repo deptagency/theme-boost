@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
-import OrganismsFoot from '../../patterns/organisms/base/foot.jsx'
+import PageFooter from '../../patterns/organisms/pageFooter'
 
 class FooterTastic extends Component {
-    render () {
-        return (
-            <OrganismsFoot />
-        )
+    render() {
+        return <PageFooter />
     }
 }
 
