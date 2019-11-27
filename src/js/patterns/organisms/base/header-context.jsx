@@ -28,8 +28,8 @@ class OrganismsHeaderContext extends Component {
                     }
 
                     <div className='c-context-header__middle'>
-                        {this.props.subtitle && <p className='u-text-s'>{this.props.subtitle}</p>} 
-                            
+                        {this.props.subtitle && <p className='u-text-s'>{this.props.subtitle}</p>}
+
                         <div className='o-flex o-flex--center'>
                             <h1 className='c-title-level-3 c-context-header__title o-flex__item'>
                                 {this.props.title}
@@ -67,7 +67,7 @@ OrganismsHeaderContext.propTypes = {
     subtitle: PropTypes.string,
     backButton: PropTypes.bool,
     closeButton: PropTypes.bool,
-    removeSearchValue: PropTypes.bool
+    removeSearchValue: PropTypes.bool,
 }
 
 OrganismsHeaderContext.defaultProps = {
@@ -78,7 +78,7 @@ OrganismsHeaderContext.defaultProps = {
     subtitle: '',
     backButton: false,
     closeButton: false,
-    removeSearchValue: false
+    removeSearchValue: false,
 }
 
 export default ComponentInjector.return('OrganismsHeaderContext', OrganismsHeaderContext)
