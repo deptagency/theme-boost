@@ -15,6 +15,7 @@ class OrganismsPageHeader extends Component {
                 className={classnames(
                     this.props.className,
                 )}
+                onClick={this.props.handleClick}
                 >
                 <div className='o-block-short o-block-short--centered'>
                     <button className='o-block-short__short-item c-link c-link--uniform'>
@@ -37,7 +38,7 @@ OrganismsPageHeader.propTypes = {
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     title: PropTypes.string,
-    onClick: PropTypes.func,
+    handleClick: PropTypes.func,
 }
 
 OrganismsPageHeader.defaultProps = {

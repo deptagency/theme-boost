@@ -12,7 +12,7 @@ class TemplatesRegister extends Component {
             <div className='o-television o-television__display o-container-small'>
                 <OrganismsPageHeader
                     title='Benutzerkonto erstellen'
-                    onClick={() => { app.getRouter().history.replace('/') }}
+                    handleClick={() => { app.getRouter().history.replace('/') }}
                 />
                 <OrganismsFormRegister />
             </div>

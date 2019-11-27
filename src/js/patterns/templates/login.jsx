@@ -21,7 +21,7 @@ class TemplatesLogin extends Component {
             <div className='o-television o-television__display o-container-small'>
                 <OrganismsPageHeader
                     title='Anmelden'
-                    onClick={() => { app.getRouter().history.replace('/') }}
+                    handleClick={() => { app.getRouter().history.replace('/') }}
                 />
                 <div className='o-form-area o-distance-m'>
                     <div className='o-form-area__column-6-6 o-form-area__new-row'>
