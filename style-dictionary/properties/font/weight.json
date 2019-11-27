@@ -1,9 +1,0 @@
-{
-  "font": {
-    "weight": {
-      "light": { "value": "200" },
-      "base": { "value": "400" },
-      "bold": { "value": "700" }
-    }
-  }
-}
