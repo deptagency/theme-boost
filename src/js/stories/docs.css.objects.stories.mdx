@@ -1,5 +1,8 @@
 import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
 
+import imgPreventSpace from './images/prevent-space.jpg';
+import imgContainer from './images/container.jpg';
+
 <Meta title='1.Docs|09-Objects'/>
 
 # Objects
@@ -7,6 +10,15 @@ They are very useful for structuring components in a view.
 
 ## Head Up
 Use this object to put elements on different places in a container.
+
+| Class        | Description    
+| ------------- |:-------------:
+| `.o-head-up`      | Create an object with stacking elements like overlays or a head-up display in a car.
+| `.o-list-inline`      | Put items in a row with distance between each items
+| `.o-list-bare` | Put items among themselves with distance between each items
+| `.o-television` | Create an object with full viewport height and fixed header and footer. The inner content is scrollable.
+| `.t-spotlight-color` | Create a spot text.
+| `.t-universe` | Create a real dark background
 
 <Preview> 
     <Story name='Head Up'>
@@ -68,3 +80,46 @@ Show items among themselves with divider
               <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
           </ul>
     </div>
+
+
+## Distances
+There are a lot of classes to handle distances between items. **Distances used margin-top.**
+
+| Class         | Default value | Description    
+| ------------- |:-------------:
+| `.o-distance` | 32px | Standard space. Mostly use between rows or sections.
+| `.o-distance-xs` | 4px | Create the smallest space.
+| `.o-distance-s` | 8px | Create a small space.
+| `.o-distance-m` | 16px | Create a medium space
+| `.o-distance-l` | 32px | Create a large space
+| `.o-distance-xl` | 64px | Create a x-large space
+
+## Flexbox
+There are a lot of classes to handle distances between items. **Distances used margin-top.**
+
+| Class         | Description    
+| ------------- |:-------------:
+| `.o-flex` | Put items in a row
+| `.o-flex--end` | Align items and justify content to the end
+| `.o-flex--center` | Align items to center
+| `.o-flex--justify-center` | Justify content to center
+| `.o-flex--justified` | Justify items to space-between
+| `.o-flex--large-justified` | Justify item to space-between from large breakpoint to up
+
+## Container
+
+| Class         | Default width | Description    
+| ------------- |:-------------:
+| `.o-container` | 1000px | The default center container for putting elements in
+| `.o-container-medium` | 640px | The medium center container for putting elements in
+| `.o-container-small` | 480px | The small center container for putting elements in
+
+<img src={imgContainer} />
+
+## Prevent space
+
+| Class         | Default value | Description    
+| ------------- |:-------------:
+| `.o-prevent-space` | 16px | Prevent items to be on the left and right edge of the browser.
+
+<img src={imgPreventSpace} />
