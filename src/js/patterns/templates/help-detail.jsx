@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 
 import Referal from '../atoms/links/referal'
-import OrganismsHead from '../organisms/base/header'
+import OrganismsHeaderMobile from '../organisms/base/header-mobile'
 import OrganismsFoot from '../organisms/base/foot'
 import OrganismsPageHeader from '../organisms/base/header-page'
 import OrganismsNewsletterBlock from '../organisms/blocks/newsletter'
@@ -11,7 +11,7 @@ class TemplatesHelpDetail extends Component {
         return (
             <Fragment>
                 <div className='o-television'>
-                    <OrganismsHead />
+                    <OrganismsHeaderMobile />
                     <div className='o-television__display'>
                         <div className='o-container-medium'>
                             <OrganismsPageHeader title='Rücksendung & Erstattung' />
