@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import _ from 'lodash'
 
-
 import { ReactComponent as SingleNeutralCircleIcon } from '../../../../icons/single-neutral-circle.svg'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
