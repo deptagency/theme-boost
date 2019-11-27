@@ -6,14 +6,7 @@
     "schema": [
         {
             "name": "Content",
-            "fields": [
-                {
-                    "label": "Show SomeField",
-                    "field": "showSomeField",
-                    "type": "boolean",
-                    "default": true
-                }
-            ]
+            "fields": []
         }
     ]
 }
