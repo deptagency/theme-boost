@@ -1,8 +1,17 @@
+
+// @name Font Family
+// @description Handle different type of families
 $font-family-base: Helvetica, sans-serif;
 $font-family-handwritten: Lust, serif;
 $font-family-spot: Roboto Condensed, sans-serif;
 $font-family-spot-light: Roboto Condensed Light, sans-serif;
+
+// @name Line Height
+// @description 
 $font-line-height-base: 1.45;
+
+// @name Font Size
+// @description Available options for using font sizes
 $font-size-xxs: 1rem;
 $font-size-xs: 1.2rem;
 $font-size-s: 1.5rem;
@@ -11,23 +20,43 @@ $font-size-l: 2.4rem;
 $font-size-xl: 3rem;
 $font-size-xxl: 3.6rem;
 $font-size-xxxl: 4.8rem;
+
+// @name Font Size Body (REM)
+// @description Global font size on something like body or html tag (REM Value)
 $font-size-base: 1.8rem;
-$font-size-body: 18px; /* Catwalk use a concept by handling sizes with rem values. Please use a pixel value for the body element here. */
+
+// @name Font Size Body (Pixel)
+// @description Catwalk use a concept by handling sizes with rem values. Please use a pixel value for the body element here.
+$font-size-body: 18px;
+
+// @name Titles
+// @description  Different sizes for titles
 $font-size-alpha: 3rem;
 $font-size-beta: 2.4rem;
 $font-size-gamma: 2.4rem;
 $font-size-delta: 1.8rem;
 $font-size-title: 3rem;
+
+// @name Subtitle
+// @description Important message, but not so important like a title
 $font-size-subtitle: 3rem;
+$font-color-subtitle: #8c9bb0;
+
+// @name Meta
+// @description For something like sitenotes. Not so important content
 $font-size-meta: 1.2rem;
+$font-color-meta: #8c9bb0;
+
+// @name Weight
+// @description Available options for weights
 $font-weight-light: 200;
 $font-weight-base: 400;
 $font-weight-bold: 700;
 
+// @name Color
+// @description Available Colors for fonts
 $font-color-primary: #424f62;
 $font-color-secondary: #8c9bb0;
 $font-color-tertiary: #d8e0ec;
 $font-color-quaternary: #f1f6fc;
 $font-color-ghost: #ffffff;
-$font-color-meta: #8c9bb0;
-$font-color-subtitle: #8c9bb0;

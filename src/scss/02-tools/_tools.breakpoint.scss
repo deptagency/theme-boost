@@ -1,5 +1,5 @@
-/// Breakpoint
-/// @group Tools
+// @name Breakpoint
+// @description A shorthand for using mediaqueries
 @mixin breakpoint($breakpoint) {
   @media (min-width: $breakpoint) {
     @content;

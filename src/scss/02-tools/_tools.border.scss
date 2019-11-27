@@ -1,3 +1,5 @@
+// @name Border
+// @description Using standard border the easy way
 @mixin border($color: $border-color-base, $size: $border-size-base) {
   border: $size solid $color;
   border-radius: $border-radius-base;
