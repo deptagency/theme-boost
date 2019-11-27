@@ -3,22 +3,13 @@ import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
 import imgPreventSpace from './images/prevent-space.jpg';
 import imgContainer from './images/container.jpg';
 
-<Meta title='1.Docs|09-Objects'/>
+<Meta title='1.Docs|09-Layout'/>
 
-# Objects
+# Layout
 They are very useful for structuring components in a view.
 
 ## Head Up
 Use this object to put elements on different places in a container.
-
-| Class        | Description    
-| ------------- |:-------------:
-| `.o-head-up`      | Create an object with stacking elements like overlays or a head-up display in a car.
-| `.o-list-inline`      | Put items in a row with distance between each items
-| `.o-list-bare` | Put items among themselves with distance between each items
-| `.o-television` | Create an object with full viewport height and fixed header and footer. The inner content is scrollable.
-| `.t-spotlight-color` | Create a spot text.
-| `.t-universe` | Create a real dark background
 
 <Preview> 
     <Story name='Head Up'>
@@ -44,43 +35,119 @@ Use this object to put elements on different places in a container.
         </div>
     </div>
 
+## Container
+A simple container center your content horizontally
+
+| Class         | Default width | Description    
+| ------------- |:-------------:
+| `.o-container` | 1000px | The default center container for putting elements in
+| `.o-container-medium` | 640px | The medium center container for putting elements in
+| `.o-container-small` | 480px | The small center container for putting elements in
+
+### Default Container
+<Preview> 
+    <Story name='Container'>
+        <div className='o-container' style={{ minHeight: '200px', background: '#EBCA9E', textAlign: 'center'}}>Container</div>
+    </Story>
+</Preview>
+
+```html
+<div className='o-container'>Container</div>
+```
+
+### Medium Container
+<Preview> 
+    <Story name='Container Medium'>
+        <div className='o-container-medium' style={{ minHeight: '200px', background: '#EBCA9E', textAlign: 'center'}}>Container</div>
+    </Story>
+</Preview>
+
+```html
+<div className='o-container-medium'>Container</div>
+```
+
+### Small Container
+<Preview> 
+    <Story name='Container Small'>
+        <div className='o-container-small' style={{ minHeight: '200px', background: '#EBCA9E', textAlign: 'center'}}>Container</div>
+    </Story>
+</Preview>
+
+```html
+<div className='o-container-small'>Container</div>
+```
 
 ## List Inline
 Show items in a line
+<Preview> 
+    <Story name='List Inline'>
+        <div>
+            <ul className='o-list-inline'>
+                <li className='o-list-inline__item'>Item</li>
+                <li className='o-list-inline__item'>Item</li>
+                <li className='o-list-inline__item'>Item</li>
+            </ul>
+        </div>
+    </Story>
+</Preview>
 
-    <div>
-        <ul className='o-list-inline'>
-            <li className='o-list-inline__item'>Item</li>
-            <li className='o-list-inline__item'>Item</li>
-            <li className='o-list-inline__item'>Item</li>
-        </ul>
-    </div>
+```html
+<ul className='o-list-inline'>
+    <li className='o-list-inline__item'>Item</li>
+    <li className='o-list-inline__item'>Item</li>
+    <li className='o-list-inline__item'>Item</li>
+</ul>
+```
 
 ## List Bare
 Show items among themselves
 
-    <div>
-        <ul className='o-list-bare'>
-              <li className='o-list-bare__item'>Item</li>
-              <li className='o-list-bare__item'>Item</li>
-              <li className='o-list-bare__item'>Item</li>
-        </ul>
-    </div>
+<Preview> 
+    <Story name='List Bare'>
+        <div>
+            <ul className='o-list-bare'>
+                <li className='o-list-bare__item'>Item</li>
+                <li className='o-list-bare__item'>Item</li>
+                <li className='o-list-bare__item'>Item</li>
+            </ul>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<ul className='o-list-bare'>
+    <li className='o-list-bare__item'>Item</li>
+    <li className='o-list-bare__item'>Item</li>
+    <li className='o-list-bare__item'>Item</li>
+</ul>
+```
 
 ## List Bare Divided
 Show items among themselves with divider
 
-    <div>
+<Preview> 
+    <Story name='List Bare Divided'>
         <ul className='o-list-bare'>
-              <li className='o-list-bare__item'>Item</li>
-              <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
-              <li className='o-list-bare__item'>Item</li>
-              <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
-              <li className='o-list-bare__item'>Item</li>
-              <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
-          </ul>
-    </div>
+            <li className='o-list-bare__item'>Item</li>
+            <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
+            <li className='o-list-bare__item'>Item</li>
+            <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
+            <li className='o-list-bare__item'>Item</li>
+            <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
+        </ul>
+    </Story>
+</Preview>
 
+```html
+<ul className='o-list-bare'>
+    <li className='o-list-bare__item'>Item</li>
+    <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
+    <li className='o-list-bare__item'>Item</li>
+    <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
+    <li className='o-list-bare__item'>Item</li>
+    <li className='o-list-bare__item' aria-hidden='true'><span className='c-divider' /></li>
+</ul>
+```
 
 ## Distances
 There are a lot of classes to handle distances between items. **Distances used margin-top.**
@@ -106,20 +173,23 @@ There are a lot of classes to handle distances between items. **Distances used m
 | `.o-flex--justified` | Justify items to space-between
 | `.o-flex--large-justified` | Justify item to space-between from large breakpoint to up
 
-## Container
-
-| Class         | Default width | Description    
-| ------------- |:-------------:
-| `.o-container` | 1000px | The default center container for putting elements in
-| `.o-container-medium` | 640px | The medium center container for putting elements in
-| `.o-container-small` | 480px | The small center container for putting elements in
-
-<img src={imgContainer} />
-
 ## Prevent space
+Prevent elements to move on the left or right edge of the browser window.
 
 | Class         | Default value | Description    
 | ------------- |:-------------:
 | `.o-prevent-space` | 16px | Prevent items to be on the left and right edge of the browser.
 
-<img src={imgPreventSpace} />
+<Preview> 
+    <Story name='Prevent Space'>
+      <div style={{display: 'flex'}}>
+          <div style={{width: '16px', height: '40px', background: '#EBCA9E'}}></div>
+          <div style={{width: '100%', height: '40px', background: '#f2f2f2'}}></div>
+          <div style={{width: '16px', height: '40px', background: '#EBCA9E'}}></div>
+      </div>
+    </Story>
+</Preview>
+
+```html
+<div className='o-prevent-space'></div>
+```
