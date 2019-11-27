@@ -30,6 +30,7 @@ import { ReactComponent as RatingStarFilledIcon } from 'icons/rating-star-filled
 import { ReactComponent as RatingStarOutlineIcon } from 'icons/rating-star-outline.svg'
 import { ReactComponent as SearchIcon } from 'icons/search.svg'
 import { ReactComponent as ShipmentInTransitIcon } from 'icons/shipment-in-transit.svg'
+import { ReactComponent as SingleNeutralCircleIcon } from 'icons/single-neutral-circle.svg'
 import { ReactComponent as TruckSmallIcon } from 'icons/truck-small.svg'
 import { ReactComponent as VisaIcon } from 'icons/visa.svg'
 import { ReactComponent as WishlistFillIcon } from 'icons/wishlist-fill.svg'
@@ -133,6 +134,9 @@ export const shipmentInTransitIcon = () => { return <ShipmentInTransitIcon /> }
 shipmentInTransitIcon.story = {}
 
 export const truckSmallIcon = () => { return <TruckSmallIcon /> }
+truckSmallIcon.story = {}
+
+export const singleNeutralCircleIcon = () => { return <SingleNeutralCircleIcon /> }
 truckSmallIcon.story = {}
 
 export const wishlistFillIcon = () => { return <WishlistFillIcon /> }
