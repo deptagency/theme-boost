@@ -23,7 +23,7 @@ export function MobileNavTree ({ items, onSelectItem, navPath, level = 0 }) {
                     />
                 )}
 
-                {items.map((item, i) => {
+                {items && items.map((item, i) => {
                     return (
                         <MobileNavItem
                             key={item.nodeId}

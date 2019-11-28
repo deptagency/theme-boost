@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import app from 'frontastic-catwalk/src/js/app/app'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import MobileNavigation from '../../molecules/navigations/mobileNavigation'
@@ -9,24 +10,26 @@ import MoleculesUserIconNav from '../../molecules/navigations/user-icon-nav'
 import MobileMenuToggle from '../../atoms/buttons/mobile-menu-toggle'
 import Button from '../../atoms/buttons/button'
 
-const ctaLoggedIn = () => {
-    return (
-        <Button
-            type='quiet'
-            onClick={() => {
-                /* return console.log('yea') */
-            }}
-            >
-            Meine Bestellungen ansehen
-        </Button>
-    )
-}
-
-const OrganismsHead = ({ topCategories }) => {
+const OrganismsHead = ({ topCategories, loggedIn }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     if (!topCategories) {
         return null
+    }
+
+    const ctaLoggedIn = () => {
+        return (
+            <Button
+                className='button-login-register'
+                type='quiet'
+                onClick={() => {
+                    app.getRouter().push('Frontastic.Frontend.Master.Account.profile')
+                    setIsMobileMenuOpen(false)
+                }}
+                >
+                {loggedIn ? 'Meine bEstellungen ansehen' : 'Melde dich jetzt an'}
+            </Button>
+        )
     }
 
     return (
@@ -56,7 +59,7 @@ const OrganismsHead = ({ topCategories }) => {
             </div>
             <MobileNavigation
                 className='u-hidden-medium-up'
-                calltoAction={ctaLoggedIn()}
+                callToAction={ctaLoggedIn()}
                 onClose={() => {
                     return setIsMobileMenuOpen(false)
                 }}
@@ -69,8 +72,11 @@ const OrganismsHead = ({ topCategories }) => {
 
 OrganismsHead.propTypes = {
     topCategories: PropTypes.arrayOf(topCategoryType),
+    loggedIn: PropTypes.bool.isRequired,
 }
 
-OrganismsHead.defaultProps = {}
+OrganismsHead.defaultProps = {
+    loggedIn: false,
+}
 
 export default ComponentInjector.return('OrganismsHead', OrganismsHead)
