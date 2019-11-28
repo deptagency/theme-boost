@@ -17,6 +17,18 @@
     }
   }
 
+  &__top-right {
+    .my-profile--desktop {
+      display: none;
+    }
+
+    @media (min-width: $layout-breakpoint-l) {
+      .my-profile--desktop {
+        display: block;
+      }
+    }
+  }
+
   &__top {
     align-items: center;
     display: flex;
