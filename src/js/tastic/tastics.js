@@ -45,6 +45,10 @@ import FilterTastic from './filter/tastic'
 import LoginTastic from './login/tastic'
 import ProductPageViewTastic from './product-page-view/tastic'
 import MyOrders from './my-orders/tastic'
+import ShowcaseTextTastic from './showcase-text/tastic'
+import AccountAccessTastic from './account/access/tastic'
+import AccountConfirmTastic from './account/confirm/tastic'
+import AccountProfileTastic from './account/profile/tastic'
 
 export default (() => {
     return {
@@ -95,5 +99,9 @@ export default (() => {
         'frontastic/boost/login': LoginTastic,
         'frontasic/boost/product-page-view': ProductPageViewTastic,
         'frontastic/boost/my-orders': MyOrders,
+        'frontastic/boost/showcase-text': ShowcaseTextTastic,
+        'frontastic/boost/account-access': AccountAccessTastic,
+        'frontastic/boost/account-confirm': AccountConfirmTastic,
+        'frontastic/boost/account-profile': AccountProfileTastic,
     }
 })()

@@ -7,7 +7,6 @@ class OrganismsFormLogin extends Component {
         return (<div>
             <form method=''>
                 <fieldset>
-                    {/* <legend>Melde dich jetzt an</legend> */}
                     <div className='o-form-area o-distance-m'>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-mail' className='c-form-label'>E-Mail Address</label>
