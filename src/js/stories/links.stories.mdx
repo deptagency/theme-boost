@@ -1,0 +1,51 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import Referal from 'js/patterns/atoms/links/referal'
+import ReferalOneLiner from 'js/patterns/atoms/links/referal-one-liner'
+import ReferalBordered from 'js/patterns/atoms/links/referal-bordered'
+
+<Meta title='2. Atoms | Links' />
+
+# Links
+
+## Default
+<Preview withToolbar>
+    <Story name='Default'>
+        <p className='c-link'>Link</p>
+    </Story>
+</Preview>
+
+## Ghost
+<Preview withToolbar>
+    <Story name='Ghost'>
+        <p className='c-link c-link--ghost'>Link</p>
+    </Story>
+</Preview>
+
+## Uniform
+<Preview withToolbar>
+    <Story name='Uniform'>
+        <p className='c-link c-link--uniform'>Link</p>
+    </Story>
+</Preview>
+
+## Referal
+<Preview withToolbar>
+    <Story name='Referal'>
+        <Referal />
+    </Story>
+</Preview>
+
+## Referal One Liner
+<Preview withToolbar>
+    <Story name='Referal One Liner'>
+        <ReferalOneLiner />
+    </Story>
+</Preview>
+
+## Referal Bordered
+<Preview withToolbar>
+    <Story name='Referal Bordered'>
+        <ReferalBordered />
+    </Story>
+</Preview>

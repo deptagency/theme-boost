@@ -1,4 +1,4 @@
-import React from 'react'
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 
 import AtomsFormLabel from 'js/patterns/atoms/forms/form-label'
 import AtomsFormInput from 'js/patterns/atoms/forms/form-input'
@@ -18,163 +18,125 @@ import OrganismsFormBanking from 'js/patterns/organisms/form/form-banking'
 import OrganismsFormEmailChange from 'js/patterns/organisms/form/form-email-change'
 import OrganismsFormPasswordChange from 'js/patterns/organisms/form/form-password-change'
 
-export default {
-    title: '4.Organisms|Forms',
-}
+<Meta title='4.Organisms|Forms' />
 
-export const inputRange = () => {
-    return (
+# Forms
+
+## FromTo
+<Preview withToolbar>
+    <Story name='FromTo'>
         <MoleculesFormFromTo />
-    )
-}
+    </Story>
+</Preview>
 
-inputRange.story = {
-    name: 'Input Range',
-}
-
-export const choice = () => {
-    return (
+## Choice
+<Preview withToolbar>
+    <Story name='Choice'>
         <OrganismsChoice />
-    )
-}
+    </Story>
+</Preview>
 
-choice.story = {
-    name: 'Choice',
-}
-
-export const row = () => {
-    return (
+## Row
+<Preview withToolbar>
+    <Story name='Row'>
         <div className='c-form-row'>
             <AtomsFormLabel />
             <AtomsFormInput />
             <a href='' className='c-link c-link--quiet o-flex o-flex--end'>Passwort vergessen?</a>
         </div>
-    )
-}
+    </Story>
+</Preview>
 
-row.story = {
-    name: 'Row',
-}
-
-export const contactForm = () => {
-    return (
+## Contact Form
+<Preview withToolbar>
+    <Story name='Contact Form'>
         <OrganismsFormContact />
-    )
-}
+    </Story>
+</Preview>
 
-contactForm.story = {
-    name: 'Contact Form',
-}
-
-export const loginForm = () => {
-    return (
+## Login Form
+<Preview withToolbar>
+    <Story name='Login Form'>
         <OrganismsFormLogin />
-    )
-}
+    </Story>
+</Preview>
 
-loginForm.story = {
-    name: 'Login Form',
-}
-
-export const registerForm = () => {
-    return (
+## Register Form
+<Preview withToolbar>
+    <Story name='Register Form'>
         <OrganismsFormRegister />
-    )
-}
+    </Story>
+</Preview>
 
-registerForm.story = {
-    name: 'Register Form',
-}
-
-export const creditCardForm = () => {
-    return (
+## CreditCard Form
+<Preview withToolbar>
+    <Story name='CreditCard Form'>
         <OrganismsFormCreditCard />
-    )
-}
+    </Story>
+</Preview>
 
-creditCardForm.story = {
-    name: 'Credit Card Form',
-}
-
-export const sepaForm = () => {
-    return (
+## Sepa Form
+<Preview withToolbar>
+    <Story name='Sepa Form'>
         <OrganismsFormSepa />
-    )
-}
+    </Story>
+</Preview>
 
-sepaForm.story = {
-    name: 'SEPA Form',
-}
-
-export const bankingForm = () => {
-    return (
+## Banking Form
+<Preview withToolbar>
+    <Story name='Banking Form'>
         <OrganismsFormBanking />
-    )
-}
+    </Story>
+</Preview>
 
-bankingForm.story = {
-    name: 'Banking Form',
-}
-
-export const passwordResetForm = () => {
-    return (
+## Password Reset Form
+<Preview withToolbar>
+    <Story name='Password Reset Form'>
         <OrganismsFormPasswordReset />
-    )
-}
+    </Story>
+</Preview>
 
-passwordResetForm.story = {
-    name: 'Password Reset Form',
-}
-
-export const address = () => {
-    return (
+## Address Form
+<Preview withToolbar>
+    <Story name='Address Form'>
         <OrganismsFormAddress />
-    )
-}
+    </Story>
+</Preview>
 
-address.story = {
-    name: 'Address',
-}
-
-export const addressChange = () => {
-    return (
+## Address Form Change
+<Preview withToolbar>
+    <Story name='Address Form Change'>
         <OrganismsFormAddressChange />
-    )
-}
+    </Story>
+</Preview>
 
-addressChange.story = {
-    name: 'Address Change',
-}
-
-export const mailChange = () => {
-    return (
+## Mail Change Form
+<Preview withToolbar>
+    <Story name='Mail Change Form'>
         <OrganismsFormMailChange />
-    )
-}
+    </Story>
+</Preview>
 
-mailChange.story = {
-    name: 'Mail Change',
-}
-
-export const coupon = () => {
-    return (
+## Coupon Form
+<Preview withToolbar>
+    <Story name='Coupon Form'>
         <OrganismsFormCoupon />
-    )
-}
+    </Story>
+</Preview>
 
-coupon.story = {
-    name: 'Coupon',
-}
-
-export const formEmailChange = () => {
-    return (
+## Email Change Form
+<Preview withToolbar>
+    <Story name='Email Change Form'>
         <OrganismsFormEmailChange />
-    )
-}
+    </Story>
+</Preview>
 
-formEmailChange.story = {
-    name: 'Form Mail Change',
-}
+## Password Change Form
+<Preview withToolbar>
+    <Story name='Password Change Form'>
+        <OrganismsFormPasswordChange />
+    </Story>
+</Preview>
 
 export const formPasswordChange = () => {
     return (

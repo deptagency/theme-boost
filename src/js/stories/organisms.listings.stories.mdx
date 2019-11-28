@@ -1,4 +1,4 @@
-import React from 'react'
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 
 import OrganismsPromobox from 'js/patterns/molecules/promobox/promobox'
 import OrganismsChoice from 'js/patterns/organisms/form/form-choice'
@@ -8,52 +8,34 @@ import OrganismsPaymentListingIcons from 'js/patterns/organisms/listings/payment
 import OrganismsPaymentListing from 'js/patterns/organisms/listings/payment-listing'
 import OrganismsCategoryBoxes from 'js/patterns/organisms/listings/category-boxes'
 
-export default {
-    title: '4.Organisms|Listings',
-}
+<Meta title='4.Organisms|Listings' />
 
-export const productlisting = () => {
-    return (
+# Listings
+
+## Product Listing
+<Preview withToolbar>
+    <Story name='Product Listing'>
         <OrganismsProductListing />
-    )
-}
+    </Story>
+</Preview>
 
-productlisting.story = {
-    name: 'Productlisting',
-}
-
-export const bundlelisting = () => {
-    return (
+## Bundle Listing
+<Preview withToolbar>
+    <Story name='Bundle Listing'>
         <OrganismsBundleListing />
-    )
-}
+    </Story>
+</Preview>
 
-bundlelisting.story = {
-    name: 'Bundle Listing',
-}
+## Payment Icons Listing
+<Preview withToolbar>
+    <Story name='Payment Icons Listing'>
+        <OrganismsBundleListing />
+    </Story>
+</Preview>
 
-export const paymentlistingIcons = () => {
-    return (
-        <OrganismsPaymentListingIcons />
-    )
-}
-
-paymentlistingIcons.story = {
-    name: 'Paymentlisting Icons',
-}
-
-export const paymentlisting = () => {
-    return (
-        <OrganismsPaymentListing />
-    )
-}
-
-paymentlisting.story = {
-    name: 'Paymentlisting',
-}
-
-export const categories = () => {
-    return (
+## Categories Listing
+<Preview withToolbar>
+    <Story name='Categories Listing'>
         <div>
             <section className='o-distance'>
                 <div className='o-grid o-grid--medium-third'>
@@ -82,25 +64,19 @@ export const categories = () => {
                 </div>
             </section>
         </div>
-    )
-}
+    </Story>
+</Preview>
 
-categories.story = {
-    name: 'Categories',
-}
-
-export const categoryBoxes = () => {
-    return (
+## Category Boxes Listing
+<Preview withToolbar>
+    <Story name='Category Boxes Listing'>
         <OrganismsCategoryBoxes />
-    )
-}
+    </Story>
+</Preview>
 
-categoryBoxes.story = {
-    name: 'Category Boxes',
-}
-
-export const choices = () => {
-    return (
+## Choices Listing
+<Preview withToolbar>
+    <Story name='Choices Listing'>
         <ul className='o-list-inline'>
             <li className='o-list-inline__item'>
                 <OrganismsChoice />
@@ -115,9 +91,5 @@ export const choices = () => {
                 <OrganismsChoice />
             </li>
         </ul>
-    )
-}
-
-choices.story = {
-    name: 'Choices',
-}
+    </Story>
+</Preview>
