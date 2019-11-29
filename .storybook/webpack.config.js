@@ -45,8 +45,28 @@ module.exports = async ({ config, mode }) => {
      * */
     config.module.rules.push({
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'],
-        include: path.resolve(__dirname, '../'),
+        oneOf: [
+            {
+                include: /(js)/,
+                use: [
+                    'style-loader',
+                    { loader: 'css-loader', options: { modules: true } },
+                    'resolve-url-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sassOptions: (loaderContext) => {
+                                return { includePaths: ['src/scss'] }
+                            },
+                        },
+                    },
+                ],
+            },
+            {
+                use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'],
+            },
+        ],
+        //include: path.resolve(__dirname, '../'),
     })
 
     // This is specific to storybook and does not make sense to extract

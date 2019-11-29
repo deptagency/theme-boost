@@ -23,6 +23,10 @@ export const TopCategoryNavTabs = ({ items, onCategorySelect, activeId = 0 }) =>
         <ul className='c-top-category-tab-nav'>
             {items &&
                 items.map((item, i) => {
+                    if (!item.tree) {
+                        return
+                    }
+
                     return (
                         <TabItem
                             onClick={() => {
