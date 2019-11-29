@@ -91,11 +91,11 @@ function MoleculesMobileNavigation ({ open, topCategories, onClose, callToAction
                     className='c-mobile-navigation__scrollcontainer'
                     style={{ transform: `translateX(${level * -100}%)` }}
                 >
-                    <MobileNavTree
+                    {topCategories[currentTopCategory].tree && <MobileNavTree
                         items={topCategories[currentTopCategory].tree.children}
                         navPath={navPath}
                         onSelectItem={handleSelectNavItem}
-                    />
+                    />}
                 </div>
             </div>
         </nav>
