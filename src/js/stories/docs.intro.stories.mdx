@@ -45,3 +45,34 @@ We are using some kind of standards for writing scalable and maintainable styles
 * ITCSS (https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
 * OOCSS (http://oocss.org/)
 * Atomic Design (http://atomicdesign.bradfrost.com/chapter-2/)
+
+# Naming Convention
+Our framework use the BEM-Convention to write readable classes. One of the best approach we think. **Take care that you don't interlace a lot.**
+
+**Block**  
+````scss
+.c-button {}
+````
+**Element**
+````scss
+.c-button__element {}
+````
+
+**Modifier**  
+````scss
+.c-button--danger {}
+````
+
+### States
+The principle has a lot of more ways how to write CSS, but Catwalk uses only two of that. The handling with states and ordering of properties in styling rule.
+
+**States**  
+We separate the normal styling rules from handling states like **`active`** or **`disabled`**. Please take care to put it in the end of the component.
+
+````scss
+.c-button {
+  &.is-disabled {
+    background-color: $color-gray;
+  }
+}
+````
