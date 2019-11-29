@@ -1,0 +1,39 @@
+// @name Border Default
+// @description A collection of default styles for border
+.u-border-default {
+  border-color: $border-color-base;
+  border-width: $border-size-base;
+  border-style: $border-style-base;
+}
+
+.u-border-width-default {
+  border-width: $border-size-base;
+}
+
+.u-border-color-default {
+  border-color: $border-color-base;
+}
+
+.u-border-color-ghost {
+  border-color: $color-palette-unique-white;
+}
+
+.u-border-color-dark {
+  border-color: $color-palette-gray-dark;
+}
+
+.u-border-color-primary {
+  border-color: $color-brand-primary-base;
+}
+
+.u-border-color-secondary {
+  border-color: $color-brand-secondary-base;
+}
+
+.u-border-color-danger {
+  border-color: $color-semantic-danger-base;
+}
+
+.u-border-color-success {
+  border-color: $color-semantic-success-base;
+}
