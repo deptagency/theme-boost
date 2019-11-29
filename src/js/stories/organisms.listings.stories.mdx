@@ -1,0 +1,95 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import OrganismsPromobox from 'js/patterns/molecules/promobox/promobox'
+import OrganismsChoice from 'js/patterns/organisms/form/form-choice'
+import OrganismsProductListing from 'js/patterns/organisms/listings/product-listing'
+import OrganismsBundleListing from 'js/patterns/organisms/listings/bundle-listing'
+import OrganismsPaymentListingIcons from 'js/patterns/organisms/listings/payment-listing-icons'
+import OrganismsPaymentListing from 'js/patterns/organisms/listings/payment-listing'
+import OrganismsCategoryBoxes from 'js/patterns/organisms/listings/category-boxes'
+
+<Meta title='4.Organisms|Listings' />
+
+# Listings
+
+## Product Listing
+<Preview withToolbar>
+    <Story name='Product Listing'>
+        <OrganismsProductListing />
+    </Story>
+</Preview>
+
+## Bundle Listing
+<Preview withToolbar>
+    <Story name='Bundle Listing'>
+        <OrganismsBundleListing />
+    </Story>
+</Preview>
+
+## Payment Icons Listing
+<Preview withToolbar>
+    <Story name='Payment Icons Listing'>
+        <OrganismsBundleListing />
+    </Story>
+</Preview>
+
+## Categories Listing
+<Preview withToolbar>
+    <Story name='Categories Listing'>
+        <div>
+            <section className='o-distance'>
+                <div className='o-grid o-grid--medium-third'>
+                    <OrganismsPromobox />
+                    <OrganismsPromobox />
+                    <OrganismsPromobox />
+                </div>
+            </section>
+            <section className='o-distance'>
+                <div className='o-grid o-grid--medium-third'>
+                    <div className='c-chip u-aspect-ratio-1x1 o-head-up'>
+                        <div className='o-head-up__item o-head-up__item--middle'>
+                            <a href='' title='' className='c-link'>Mütze</a>
+                        </div>
+                    </div>
+                    <div className='c-chip u-aspect-ratio-1x1 o-head-up'>
+                        <div className='o-head-up__item o-head-up__item--middle'>
+                            <a href='' title='' className='c-link'>Mütze</a>
+                        </div>
+                    </div>
+                    <a href='' title='' className='c-chip u-aspect-ratio-1x1 o-head-up'>
+                        <div className='o-head-up__item o-head-up__item--middle'>
+                            <span className='c-link'>Mütze</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </Story>
+</Preview>
+
+## Category Boxes Listing
+<Preview withToolbar>
+    <Story name='Category Boxes Listing'>
+        <OrganismsCategoryBoxes />
+    </Story>
+</Preview>
+
+## Choices Listing
+<Preview withToolbar>
+    <Story name='Choices Listing'>
+        <ul className='o-list-inline'>
+            <li className='o-list-inline__item'>
+                <OrganismsChoice />
+            </li>
+            <li className='o-list-inline__item'>
+                <OrganismsChoice />
+            </li>
+            <li className='o-list-inline__item'>
+                <OrganismsChoice />
+            </li>
+            <li className='o-list-inline__item'>
+                <OrganismsChoice />
+            </li>
+        </ul>
+    </Story>
+</Preview>

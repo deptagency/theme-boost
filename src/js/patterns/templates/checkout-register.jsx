@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 
 import Button from '../atoms/buttons/button'
-import OrganismsHeaderContext from '../organisms/base/header-context'
+import OrganismsHeaderMobile from '../organisms/base/header-mobile'
 import OrganismsFormRegister from '../organisms/form/form-register'
 import OrganismsFooter from '../organisms/base/foot'
 
@@ -12,7 +12,7 @@ class TemplatesCheckoutRegister extends Component {
         return (
             <Fragment>
                 <div className='o-television'>
-                    <OrganismsHeaderContext className='o-television__bar' />
+                    <OrganismsHeaderMobile />
                     <div className='o-television__display'>
                         <div className='o-container-small'>
                             <OrganismsFormRegister />

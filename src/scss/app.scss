@@ -1,5 +1,16 @@
 // Settings
-@import '01-settings/settings.tokens';
+@import '01-settings/settings.color';
+@import '01-settings/settings.breakpoint';
+@import '01-settings/settings.layout';
+@import '01-settings/settings.spacing';
+@import '01-settings/settings.font';
+@import '01-settings/settings.divider';
+@import '01-settings/settings.link';
+@import '01-settings/settings.form';
+@import '01-settings/settings.border';
+@import '01-settings/settings.overlay';
+@import '01-settings/settings.shadow';
+@import '01-settings/settings.indecies';
 
 // Tools
 @import '02-tools/tools.border';
@@ -123,4 +134,8 @@
 
 @import '~flickity/dist/flickity';
 
+// utilities form Catwalk
+@import 'utilities/utilities.transitions';
 @import 'temporary';
+
+

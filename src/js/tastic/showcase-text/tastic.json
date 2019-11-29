@@ -1,0 +1,20 @@
+{
+    "tasticType": "frontastic/boost/showcase-text",
+    "name": "Showcase Text",
+    "icon": "menu",
+    "category": "Boost Theme",
+    "schema": [
+        {
+            "name": "Showcase Text",
+            "fields": [
+                {
+                    "label": "Showcase text",
+                    "field": "showcaseText",
+                    "type": "string",
+                    "translatable": false,
+                    "default": ""
+                }
+            ]
+        }
+    ]
+}

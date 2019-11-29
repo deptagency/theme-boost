@@ -1,37 +1,68 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
+import app from 'frontastic-catwalk/src/js/app/app'
 
 import Button from '../atoms/buttons/button'
-import OrganismsHeaderMobile from '../organisms/base/header-mobile'
-import OrganismsFormLogin from '../organisms/form/form-login'
 import OrganismsPageHeader from '../organisms/base/header-page'
-import OrganismsFooter from '../organisms/base/foot'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class TemplatesLogin extends Component {
+    constructor (props) {
+        super(props)
+
+        this.state = {
+            login_email: '',
+            login_password: '',
+        }
+    }
+
     render () {
         return (
-            <Fragment>
-                <div className='o-television'>
-                    <OrganismsHeaderMobile className='o-television__bar' />
-                    <div className='o-television__display'>
-                        <div className='o-container-small'>
-                            <OrganismsPageHeader />
-                            <OrganismsFormLogin />
-                            <Button type='primary' size='boss' className='o-distance-m'>Anmelden</Button>
-                            <div className='o-television__display__boundless'>
-                                <span className='c-divider c-divider--break o-distance-m' />
-                            </div>
-                            <section className='o-distance-m'>
-                                <h2 className='c-title-level-3 u-text-center'>Kostenloses Benutzerkonto</h2>
-                                <Button type='quiet' size='boss' className='o-distance-m'>Ich bin neu hier</Button>
-                            </section>
-                        </div>
-                        <OrganismsFooter />
+            <div className='o-television o-television__display o-container-small'>
+                <OrganismsPageHeader
+                    title='Anmelden'
+                    handleClick={() => { app.getRouter().history.replace('/') }}
+                />
+                <div className='o-form-area o-distance-m'>
+                    <div className='o-form-area__column-6-6 o-form-area__new-row'>
+                        <label htmlFor='inp-mail' className='c-form-label'>E-Mail Address</label>
+                        <input
+                            type='email'
+                            className='o-distance-s'
+                            value={this.state.login_email}
+                            onChange={(event) => {
+                                this.setState({ login_email: event.target.value })
+                            }}
+                        />
+                    </div>
+                    <div className='o-form-area__column-6-6 o-form-area__new-row'>
+                        <label htmlFor='inp-password' className='c-form-label'>Password</label>
+                        <input
+                            type='password'
+                            className='c-form-unit o-distance-s'
+                            value={this.state.login_password}
+                            onChange={(event) => {
+                                this.setState({ login_password: event.target.value })
+                            }}
+                        />
                     </div>
                 </div>
+                <Button
+                    type='primary'
+                    size='boss'
+                    className='o-distance-m'
+                    disabled={!this.state.login_email || !this.state.login_password}
+                    onClick={(event) => {
+                        event.preventDefault()
+                        event.stopPropagation()
 
-            </Fragment>
+                        app.getLoader('context').login(this.state.login_email, this.state.login_password)
+                    }}
+                >
+                    Anmelden
+                </Button>
+                <div className='o-television__display__boundless c-divider c-divider--break o-distance-m' />
+            </div>
         )
     }
 }

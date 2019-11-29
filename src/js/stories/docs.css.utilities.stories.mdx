@@ -4,95 +4,245 @@ import imgTheming from './images/theming.jpg'
 <Meta title='1.Docs|13-Utilities'/>
 
 # Utilities
+You can use a utility on any element to modifiy text, element placement
 
 ## Text Sizes
-    .u-text-xs
-    .u-text-s
-    .u-text-m
-    .u-text-l
-    .u-text-xl
+
+| Class        | Default value | Description    
+| ------------- |:-------------:
+| `.u-text-xxs` | 1rem      | Modify the text size to xxs
+| `.u-text-xs` | 1.2rem      | Modify the text size to xs
+| `.u-text-s` | 1.5rem | Modify the text size to s
+| `.u-text-m` | 1.8rem | Modify the text size to m
+| `.u-text-l` | 2.4rem | Modify the text size to l
+| `.u-text-xl` | 3rem | Modify the text size to xl
+| `.u-text-xxl` | 3.6rem | Modify the text size to xxl
+| `.u-text-xxxl` | 4.8rem | Modify the text size to xxxl
+
+### Text size XXS
+<Preview>
+    <Story name='Text Size: XXS'>
+        <div>
+            <p className='u-text-xxs'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<p className='u-text-xxs'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+```
+
 
 ### Text size XS
 <Preview>
-    <Story name='Text Size XS'>
+    <Story name='Text Size: XS'>
         <div>
             <p className='u-text-xs'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
         </div>
     </Story>
 </Preview>
 
+```html
+<p className='u-text-xs'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+```
+
 ### Text size S
 <Preview>
-    <Story name='Text Size S'>
+    <Story name='Text Size: S'>
         <div>
             <p className='u-text-s'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
         </div>
     </Story>
 </Preview>
 
+```html
+<p className='u-text-s'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+```
+
 ### Text size M
 <Preview>
-    <Story name='Text Size M'>
+    <Story name='Text Size: M'>
         <div>
             <p className='u-text-m'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
         </div>
     </Story>
 </Preview>
 
+```html
+<p className='u-text-m'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+```
+
 ### Text size L
 <Preview>
-    <Story name='Text Size L'>
+    <Story name='Text Size: L'>
         <div>
             <p className='u-text-l'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
         </div>
     </Story>
 </Preview>
 
+```html
+<p className='u-text-l'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+```
+
 ### Text size XL
 <Preview>
-    <Story name='Text Size XL'>
+    <Story name='Text Size: XL'>
         <div>
             <p className='u-text-xl'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
         </div>
     </Story>
 </Preview>
 
+```html
+<p className='u-text-xl'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+```
+
+## Other Text Properties
+
+| Class        | Description    
+| ------------- |:-------------:
+| `.u-text-normal`      | Normal font weight for text
+| `.u-text-strong`      | Strong font weight for text
+| `.u-text-center` | Align text to center
+| `.u-text-nowrap` | Nowrap text
+| `.u-text-one-liner` | Put a text in only one line without a break and add dots to the end
+| `.u-text-uppercase` | Uppercase text
+| `.u-line-height-reset` | Reset the line-height to 1
+
+<Preview>
+    <Story name='Text Normal'>
+        <div>
+            <p className='u-text-normal'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<p className='u-text-normal'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+```
+
+<Preview>
+    <Story name='Text Strong'>
+        <div>
+            <p className='u-text-strong'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<p className='u-text-strong'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+```
+<Preview>
+    <Story name='Text Center'>
+        <div>
+            <p className='u-text-center'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<p className='u-text-center'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+```
+
+<Preview>
+    <Story name='Text One Liner'>
+        <div>
+            <p className='u-text-one-liner'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<p className='u-text-one-liner'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+```
+
+<Preview>
+    <Story name='Text Uppercase'>
+        <div>
+            <p className='u-text-uppercase'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<p className='u-text-uppercase'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+```
+
+<Preview>
+    <Story name='Line Height Reset'>
+        <div>
+            <p className='u-line-height-reset'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<p className='u-line-height-reset'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, quibusdam dignissimos. Fugit commodi earum mollitia iste illum repellendus, explicabo, odio recusandae, est rem dolorem consequuntur saepe reprehenderit ad perferendis dolorum.</p>
+```
+
 ## Aspect Ratios
-    .u-aspect-ratio-16x9
-    .u-aspect-ratio-21x9
-    .u-aspect-ratio-1x1
-    .u-aspect-ratio-4x3
+
+| Class        | Description    
+| ------------- |:-------------:
+| `.u-aspect-ratio-16x9`      | Create an element with aspect ratio of 16x9
+| `.u-aspect-ratio-21x9`      | Create an element with aspect ratio of 21x9
+| `.u-aspect-ratio-1x1` | Create an element with aspect ratio of 1x1
+| `.u-aspect-ratio-4x3` | Create an element with aspect ratio of 4x3
+
 
 ### 16x9
 <Preview>
-    <Story name='16x9'>
+    <Story name='Aspect Ratio: 16x9'>
         <div className='u-aspect-ratio-16x9' style={{ border: '3px solid #000'}}>16x9</div>
     </Story>
 </Preview>
 
+```html
+<div className='u-aspect-ratio-16x9'>16x9</div>
+```
+
 ### 21x9
 <Preview>
-    <Story name='21x9'>
+    <Story name='Aspect Ratio: 21x9'>
         <div className='u-aspect-ratio-21x9' style={{ border: '3px solid #000'}}>21x9</div>
     </Story>
 </Preview>
 
+```html
+<div className='u-aspect-ratio-21x9'>21x9</div>
+```
+
 ### 1x1
 <Preview>
-    <Story name='1x1'>
+    <Story name='Aspect Ratio: 1x1'>
         <div className='u-aspect-ratio-1x1' style={{ border: '3px solid #000'}}>1x1</div>
     </Story>
 </Preview>
 
+```html
+<div className='u-aspect-ratio-1x1'>1x1</div>
+```
+
 ### 4x3
 <Preview>
-    <Story name='4x3'>
+    <Story name='Aspect Ratio: 4x3'>
         <div className='u-aspect-ratio-4x3' style={{ border: '3px solid #000'}}>4x3</div>
     </Story>
 </Preview>
 
+```html
+<div className='u-aspect-ratio-4x3'>4x3</div>
+```
+
 ## Shadow
 So let's handle the standard shadow via class
+
+
+| Class        | Description    
+| ------------- |:-------------:
+| `.u-box-shadow`      | Use the standard box shadow on an element
+
 <Preview>
     <Story name='Box Shadow'>
         <div className='u-box-shadow'>
@@ -100,3 +250,9 @@ So let's handle the standard shadow via class
         </div>
     </Story>
 </Preview>
+
+```html
+<div className='u-box-shadow'>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+</div>
+```

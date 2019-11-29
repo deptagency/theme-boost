@@ -3,11 +3,13 @@ import OrganismsOrderDetail from '../../organisms/blocks/order-detail'
 import Button from '../../atoms/buttons/button'
 import Badge from '../../atoms/badges/badge'
 import OrganismsPageHeader from '../../organisms/base/header-page'
+import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
 import ReferalBordered from '../../atoms/links/referal-bordered'
 
 const TemplatesMyOrders = props => {
     return (
         <div className='o-television'>
+            <OrganismsHeaderMobile />
             <div className='o-television__display'>
                 <div className='o-container-medium'>
                     <OrganismsPageHeader title='Bestellungen' />

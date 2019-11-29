@@ -1,3 +1,5 @@
+// @name Clearfix
+// @description Clear floats the right way
 @mixin clearfix() {
   &:after {
     content: "";

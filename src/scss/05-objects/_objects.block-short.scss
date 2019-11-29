@@ -8,10 +8,11 @@
 }
 .o-block-short__short-item {
   flex: 0 0 auto;
-  margin-right: $spacing-inline-m;
+  margin-right: $spacing-inline-s;
+  line-height: 0;
 }
 .o-block-short__body {
-  margin-top: $spacing-stack-xxs;
+  
 }
 
 /// @object Block Short

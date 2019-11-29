@@ -28,6 +28,15 @@ It always helps to use a value system for the creation of spacing. So we use a n
 ## Categories in Detail
 
 ### Inset
+
+| Variable  | Default Value
+| ------------- |:-------------:
+| `$spacing-inset-xs` | 4px
+| `$spacing-inset-s` | 8px
+| `$spacing-inset-m` | 16px
+| `$spacing-inset-l` | 32px
+| `$spacing-inset-xl` | 64px
+
 A inset spacing offers indent spacing like boxes or a photo frame on a wall.
 <img src={imgSpacingInset} />
 <br/>
@@ -52,30 +61,11 @@ The stretch inset reduces the space left and right. It is mostly used in **textb
 <img src={imgSpacingStretchInset} />
 
 ## Technical Quickview
-You can use each value in your component. The spacing items are available as JSON or Scss. 
+You can use each value in your component You can see an example of the inline concept here:
 
-You can see an example of the inline concept here:
-
-```json
-style-dictionary/properties/spacing/inline.json
-
-{
-  "spacing": {
-    "inline": {
-      "xxs": { "value": "2px" },
-      "xs": { "value": "4px" },
-      "s": { "value": "8px" },
-      "m": { "value": "16px" },
-      "l": { "value": "32px" },
-      "xl": { "value": "64px" }
-    }
-  }
-}
-```
+`01-settings/_settings.spacing.scss`
 
 ```scss
-// scss/01-settings/_settings.tokens.scss
-
 $spacing-inline-xxs: 2px;
 $spacing-inline-xs: 4px;
 $spacing-inline-s: 8px;

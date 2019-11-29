@@ -146,8 +146,7 @@
         "check": "node node_modules/.bin/eslint --ext .js --ext .jsx -c ../../../../paas/integration/eslint.config.json src/js/ test/js/",
         "fix": "node node_modules/.bin/eslint --fix --ext .js --ext .jsx -c ../../../../paas/integration/eslint.config.json src/js/ test/js/",
         "server:start": "NODE_ENV=development nodemon --legacy-watch --watch src/js/ bin/devServer.js --exec babel-node --presets env,react-app",
-        "storybook": "yarn style-dictionary:watch | start-storybook -s ./public -p 9001",
-        "style-dictionary:watch": "cd style-dictionary && yarn watch",
+        "storybook": "start-storybook -s ./public -p 9001",
         "build-storybook": "build-storybook"
     },
     "babel": {

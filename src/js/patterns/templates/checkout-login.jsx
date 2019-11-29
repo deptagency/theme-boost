@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 
 import Button from '../atoms/buttons/button'
 import OrganismsPageHeader from '../organisms/base/header-page'
-
+import OrganismsHeaderMobile from '../organisms/base/header-mobile'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class TemplatesLogin extends Component {
     render () {
         return (
             <div className='o-television'>
+                <OrganismsHeaderMobile />
                 <div className='o-television__display'>
                     <div className='o-container-small'>
                         <OrganismsPageHeader title='Anmelden' />

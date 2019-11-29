@@ -1,3 +1,5 @@
+// @name Placeholder
+// @description Using placeholder for different browsers
 @mixin placeholder() {
   &::-webkit-input-placeholder {
     @content

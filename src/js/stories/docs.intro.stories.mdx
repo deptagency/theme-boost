@@ -8,21 +8,38 @@ Our CSS Approach is writtend based on some principles. It is flexibale and scala
 <img src={imgIntro} />
 <br/>
 
-## Table of Contents
-1. [Design Tokens](#design-tokens)
-2. [React Component Structure](#react-structure)
-3. [Atomic Design](#atomic-design)
-4. [Folderstructure](#folderstructure)
-5. [Component Structure](#component-structure)
-6. [Importing Files](#importing-files)
-7. [Handling Variables](#handling-variables)
-8. [Naming Convention](#naming-convention)
-9. [General Styleguide](#general-styleguide)
-10. [Systems](#systems)
+## How to start
 
-## Mobile First
+### 1. Change the basic colors
+`01-settings/_settings.color.scss`
+
+### 2. Change the basic font styles like size, weight and family
+`01-settings/_settings.font.scss`
+
+### 3. Change the size of the container
+`01-settings/_settings.layout.scss`
+
+### 4. Change the spacings
+`01-settings/_settings.spacing.scss`
+
+## Responsiveness
+The boost theme is mobile-first framework. So we start on smaller screens and add styles for larger screens.
+
+## Box-sizing
+We switch the global `box-sizing` value from `content-box` to `border-box`. Rarely you need to override it, use something like the following:
+
+```scss
+.selector {
+  box-sizing: content-box;
+}
+```
+
+## Browsers and Devices
+We support the latest, stable releases of all **major browsers and platforms.**
 
 ## CSS-Principles
+We are using some kind of standards for writing scalable and maintainable styles.
+
 * BEM (http://getbem.com/introduction/)
 * SMACSS (https://smacss.com/)
 * ITCSS (https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)

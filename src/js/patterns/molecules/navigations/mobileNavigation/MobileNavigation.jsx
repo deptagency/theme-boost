@@ -80,7 +80,9 @@ function MoleculesMobileNavigation ({ open, topCategories, onClose, callToAction
                     )}
                 </div>
 
-                {/** Optional Call to Action Button.  */}
+                {/** Optional Call to Action Button.
+                        Example: Sign up, My account, ...
+                 */}
                 {callToAction && <div className='c-mobile-navigation__cta-wrapper'>{callToAction}</div>}
 
                 {/** Scrollable menu wrapper + MobileNavTree */}

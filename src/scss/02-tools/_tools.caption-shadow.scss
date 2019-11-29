@@ -1,4 +1,5 @@
-// Caption Shadow
+// @name Caption Shadow
+// @description Default shadow for captions on images etc.
 @mixin caption-shadow($background: $color-palette-unique-black, $size: 106.19%, $position: 58deg) {
   @content;
   background: linear-gradient($position, $background 0%, rgba(196, 196, 196, 0) $size);
