@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
+import { FormattedMessage } from 'react-intl'
 
 import OrganismsPaymentListingIcons from '../../organisms/listings/payment-listing-icons'
 import OrganismsSummary from '../../organisms/blocks/summary'
@@ -14,32 +15,32 @@ const TemplatesFullCart = ({ cartItems, sum, currency }) => {
             <OrganismsHeaderMobile />
             <div className='o-container-medium o-prevent-space o-distance'>
                 <section>
-                    <h1 className='c-title-level-3'>Mein Warenkorb</h1>
+                    <h1 className='c-title-level-3'><FormattedMessage id='cart.myCart'/></h1>
                     <div className='o-distance'>
-                        <OrganismsBundleListing cartItems={cartItems} currency={currency} />
+                        <OrganismsBundleListing cartItems={cartItems} currency={currency}/>
                     </div>
                 </section>
                 <span className='c-divider c-divider--break o-distance' />
                 <section className='o-container o-distance'>
-                    <h2 className='c-title-level-3'>Bezahlarten</h2>
+                    <h2 className='c-title-level-3'><FormattedMessage id='cart.paymentMethods'/></h2>
                     <OrganismsPaymentListingIcons image={''} />
                 </section>
                 <span className='c-divider c-divider--break o-distance' />
                 <section className='o-container o-distance'>
-                    <h2 className='c-title-level-3'>Gesamtsumme</h2>
+                    <h2 className='c-title-level-3'><FormattedMessage id='cart.totalSum'/></h2>
                     <div className='o-distance-s'>
                         <OrganismsSummary
                             currency={currency}
                             sum={sum}
                         />
                         <p className='o-distance-m u-text-s t-text-quiet'>
-                            Gutscheincodes können Sie im letzten Schritt der Bestellung eingeben.
+                            <FormattedMessage id='cart.enterVouchers'/>
                         </p>
                     </div>
                 </section>
                 <div className='o-container o-distance'>
                     <Button component='a' href='/checkout/checkout' size='boss' type='primary'>
-                        Zur Kasse
+                        <FormattedMessage id='cart.checkout' />
                     </Button>
                 </div>
             </div>
