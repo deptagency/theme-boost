@@ -1,18 +1,16 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
+import { ReactComponent as ChevronDown } from '../../../../icons/chevronDown.svg'
 
 const OrganismsMoreInfoProduct = props => {
     return (
         <nav role='navigation' className='o-distance-m o-prevent-space'>
             <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
-                <a href='' title='' className='c-referal is-focused'>
+                <div title='' className='c-referal is-focused aaaHead'>
                     <h3 className='c-title-level-4 c-referal__body'>Beschreibung</h3>
-                    <svg className='c-icon c-referal__icon t-text-quiet' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-                        <title>chevron-down</title>
-                        <path d='M18.7 8.3c-0.4-0.4-1-0.4-1.4 0l-5.3 5.3-5.3-5.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l6 6c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3l6-6c0.4-0.4 0.4-1 0-1.4z' />
-                    </svg>
-                </a>
+                    <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
+                </div>
                 <div className='o-distance'>
                     <h2 className='c-title-level-2'>Beschreibung</h2>
                     <dl className='o-detaillist o-distance-m'>
@@ -38,10 +36,7 @@ const OrganismsMoreInfoProduct = props => {
             <div className='o-distance-m'>
                 <a href='' title='' className='c-referal is-focused'>
                     <h3 className='c-title-level-4 c-referal__body'>Versand</h3>
-                    <svg className='c-icon c-referal__icon t-text-quiet' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-                        <title>chevron-down</title>
-                        <path d='M18.7 8.3c-0.4-0.4-1-0.4-1.4 0l-5.3 5.3-5.3-5.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l6 6c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3l6-6c0.4-0.4 0.4-1 0-1.4z' />
-                    </svg>
+                    <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                 </a>
                 <div className='o-distance'>
                     <div className='o-list-bare'>
@@ -89,10 +84,7 @@ const OrganismsMoreInfoProduct = props => {
             <div className='o-distance-m'>
                 <a href='' title='' className='c-referal'>
                     <h3 className='c-title-level-4 c-referal__body'>Bewertungen (62)</h3>
-                    <svg className='c-icon c-referal__icon t-text-quiet' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-                        <title>chevron-down</title>
-                        <path d='M18.7 8.3c-0.4-0.4-1-0.4-1.4 0l-5.3 5.3-5.3-5.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l6 6c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3l6-6c0.4-0.4 0.4-1 0-1.4z' />
-                    </svg>
+                    <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                 </a>
             </div>
             <span className='c-divider o-distance-m' />
