@@ -42,7 +42,7 @@
   width: 24px;
   @include border();
   border-radius: $border-radius-checkbox;
-  background: $color-palette-unique-white;
+  background: $color-palette-white;
   transition: all .3s cubic-bezier(.64,0,.35,1);
 }
 

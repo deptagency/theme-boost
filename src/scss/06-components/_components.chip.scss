@@ -23,10 +23,10 @@
   &.is-active {
     border-color: $color-brand-primary-base;
     background-color: $color-brand-primary-base;
-    color: $color-palette-unique-white;
+    color: $color-palette-white;
 
     .c-chip__trigger {
-      color: $color-palette-unique-white;
+      color: $color-palette-white;
     }
   }
 

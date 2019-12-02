@@ -4,7 +4,7 @@
 // @group Navigations
 .c-navigation {
     @include list-reset();
-    background: $color-palette-unique-white;
+    background: $color-palette-white;
     height: 100%;
     left: 0;
     position: fixed;
@@ -69,7 +69,7 @@
 
     &__megamenu {
         @include box-shadow();
-        background: $color-palette-unique-white;
+        background: $color-palette-white;
         border-radius: $border-radius-base;
         display: none;
         font-size: $font-size-base;
@@ -95,7 +95,7 @@
             content: '';
 
             @media (min-width: $layout-breakpoint-l) {
-                border-bottom: 8px solid $color-palette-unique-white;
+                border-bottom: 8px solid $color-palette-white;
                 border-left: 8px solid transparent;
                 border-right: 8px solid transparent;
                 left: 16px;
