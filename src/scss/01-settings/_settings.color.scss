@@ -25,16 +25,16 @@ $color-palette-gray-900: #192333 !default;
 // @name Color Brand
 // @description The key colors for your brand and making the platform more personal
 $color-brand-primary-base: $color-palette-blue-600 !default;
-$color-brand-primary-gradation: $color-palette-blue-400 !default;
-$color-brand-primary-pastel: $color-palette-blue-100 !default;
+$color-brand-primary-light: $color-palette-blue-400 !default;
+$color-brand-primary-lighter: $color-palette-blue-100 !default;
 
 $color-brand-secondary-base: $color-palette-orange-600 !default;
-$color-brand-secondary-gradation: $color-palette-orange-400 !default;
-$color-brand-secondary-pastel: $color-palette-orange-200 !default;
+$color-brand-secondary-light: $color-palette-orange-400 !default;
+$color-brand-secondary-lighter: $color-palette-orange-200 !default;
 
 // @name Color Semantic
 // @description Meaningful colors for something like error or success messages
 $color-semantic-success-base: $color-palette-green-400 !default;
-$color-semantic-success-gradation: $color-palette-green-200 !default;
+$color-semantic-success-light: $color-palette-green-200 !default;
 $color-semantic-danger-base: $color-palette-red-400 !default;
-$color-semantic-danger-gradation: $color-palette-red-200 !default;
+$color-semantic-danger-light: $color-palette-red-200 !default;

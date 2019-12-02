@@ -11,11 +11,11 @@ $button-ghost-border-color: $color-palette-white !default;
 $button-ghost-background-color: $color-palette-white !default;
 $button-ghost-font-color: $color-brand-primary-base !default;
 
-$button-quiet-border-color: $color-brand-primary-pastel !default;
-$button-quiet-background-color: $color-brand-primary-pastel !default;
+$button-quiet-border-color: $color-brand-primary-lighter !default;
+$button-quiet-background-color: $color-brand-primary-lighter !default;
 $button-quiet-font-color: $color-brand-primary-base !default;
 
-$button-quiet-hover-border-color: $color-brand-primary-gradation !default;
+$button-quiet-hover-border-color: $color-brand-primary-light !default;
 $button-quiet-hover-background-color: transparent !default;
 $button-quiet-hover-font-color: $color-brand-primary-base !default;
 
@@ -80,7 +80,7 @@ $button-control-size: 48px !default;
   color: $button-quiet-font-color;
 
   &:hover {
-    border-color: $color-brand-primary-gradation;
+    border-color: $color-brand-primary-light;
     background-color: transparent;
   }
 }
