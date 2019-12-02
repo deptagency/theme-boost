@@ -36,7 +36,7 @@ module.exports = async ({ config, mode }) => {
     /**
      * The sass-loader is in here for two reasons:
      *
-     * 1) `webpack-merge` doesn't work well with teh way
+     * 1) `webpack-merge` doesn't work well with the way
      *    Storybook adds loaders (`rules.push()`) which makes
      *    our regular config not usable.
      * 2) There is a simple preset available (`@storybook/preset-scss`)
@@ -45,28 +45,23 @@ module.exports = async ({ config, mode }) => {
      * */
     config.module.rules.push({
         test: /\.scss$/,
-        oneOf: [
+        use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'],
+    })
+    config.module.rules.push({
+        test: /\.module\.s?css$/,
+        use: [
+            'style-loader',
+            { loader: 'css-loader', options: { modules: true } },
+            'resolve-url-loader',
             {
-                include: /(js)/,
-                use: [
-                    'style-loader',
-                    { loader: 'css-loader', options: { modules: true } },
-                    'resolve-url-loader',
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sassOptions: (loaderContext) => {
-                                return { includePaths: ['src/scss'] }
-                            },
-                        },
+                loader: 'sass-loader',
+                options: {
+                    sassOptions: (loaderContext) => {
+                        return { includePaths: ['src/scss'] }
                     },
-                ],
-            },
-            {
-                use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'],
+                },
             },
         ],
-        //include: path.resolve(__dirname, '../'),
     })
 
     // This is specific to storybook and does not make sense to extract
