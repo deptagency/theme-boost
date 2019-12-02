@@ -1,17 +1,47 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 import { ReactComponent as ChevronDown } from '../../../../icons/chevronDown.svg'
+import Collapsible from 'react-collapsible';
 
 const OrganismsMoreInfoProduct = props => {
     return (
         <nav role='navigation' className='o-distance-m o-prevent-space'>
             <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
-                <div title='' className='c-referal is-focused aaaHead'>
+                <Collapsible
+                    trigger={
+                        <div title='' className='c-referal is-focused aaaHead'>
+                            <h3 className='c-title-level-4 c-referal__body'>Beschreibung</h3>
+                            <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
+                        </div>
+                    }
+                >
+                    <div className='o-distance'>
+                        <h2 className='c-title-level-2'>Beschreibung</h2>
+                        <dl className='o-detaillist o-distance-m'>
+                            <dt className='t-text-quiet'>Material Oberstoff:</dt>
+                            <dd className='u-text-strong'>100% Viskose</dd>
+                            <dt className='t-text-quiet'>Futter:</dt>
+                            <dd className='u-text-strong'>100% Viskose</dd>
+                        </dl>
+                        <h3 className='c-title-level-3 o-distance'>Mehr zu diesem Produkt</h3>
+                        <dl className='o-detaillist o-distance-m'>
+                            <dt className='t-text-quiet'>Ausschnitt:</dt>
+                            <dd className='u-text-strong'>100% Viskose</dd>
+                            <dt className='t-text-quiet'>Verschluss:</dt>
+                            <dd className='u-text-strong'>Schnürung</dd>
+                            <dt className='t-text-quiet'>Muster:</dt>
+                            <dd className='u-text-strong'>Print</dd>
+                            <dt className='t-text-quiet'>Artikelnummer:</dt>
+                            <dd className='u-text-strong'>M523C012-K23</dd>
+                        </dl>
+                    </div>
+                </Collapsible>
+               {/* <div title='' className='c-referal is-focused aaaHead'>
                     <h3 className='c-title-level-4 c-referal__body'>Beschreibung</h3>
                     <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
-                </div>
-                <div className='o-distance'>
+                </div>*/}
+                {/*<div className='o-distance'>
                     <h2 className='c-title-level-2'>Beschreibung</h2>
                     <dl className='o-detaillist o-distance-m'>
                         <dt className='t-text-quiet'>Material Oberstoff:</dt>
@@ -30,7 +60,7 @@ const OrganismsMoreInfoProduct = props => {
                         <dt className='t-text-quiet'>Artikelnummer:</dt>
                         <dd className='u-text-strong'>M523C012-K23</dd>
                     </dl>
-                </div>
+                </div>*/}
             </div>
             <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>

@@ -7,6 +7,7 @@
     },
     "dependencies": {
         "babel-polyfill": "^6.26.0",
+        "react-collapsible": "^2.6.2",
         "tiny-slider-react": "^0.4.0"
     },
     "devDependencies": {
