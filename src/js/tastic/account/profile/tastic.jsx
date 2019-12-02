@@ -39,7 +39,7 @@ const AccountProfileTastic = ({ context }) => {
                 <FormattedMessage
                     id='account.greet'
                     values={{
-                        name: `${ session.account.firstName } ${ session.account.lastName }`
+                        name: `${session.account.firstName} ${session.account.lastName}`,
                     }}
                 />
             </div>

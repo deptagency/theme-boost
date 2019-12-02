@@ -24,7 +24,7 @@ export const TopCategoryNavTabs = ({ items, onCategorySelect, activeId = 0 }) =>
             {items &&
                 items.map((item, i) => {
                     if (!item.tree) {
-                        return
+                        return null
                     }
 
                     return (
