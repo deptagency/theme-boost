@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import app from 'frontastic-catwalk/src/js/app/app'
+import { FormattedMessage } from 'react-intl'
 
 import Button from '../atoms/buttons/button'
 import OrganismsPageHeader from '../organisms/base/header-page'
@@ -20,12 +21,14 @@ class TemplatesLogin extends Component {
         return (
             <div className='o-television o-television__display o-container-small'>
                 <OrganismsPageHeader
-                    title='Anmelden'
+                    title={<FormattedMessage id='account.login.login' />}
                     handleClick={() => { app.getRouter().history.replace('/') }}
                 />
                 <div className='o-form-area o-distance-m'>
                     <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                        <label htmlFor='inp-mail' className='c-form-label'>E-Mail Address</label>
+                        <label htmlFor='inp-mail' className='c-form-label'> 
+                            <FormattedMessage id='account.login.emailAddress' />
+                        </label>
                         <input
                             type='email'
                             className='o-distance-s'
@@ -36,7 +39,9 @@ class TemplatesLogin extends Component {
                         />
                     </div>
                     <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                        <label htmlFor='inp-password' className='c-form-label'>Password</label>
+                        <label htmlFor='inp-password' className='c-form-label'>
+                            <FormattedMessage id='account.login.password' />
+                        </label>
                         <input
                             type='password'
                             className='c-form-unit o-distance-s'
@@ -59,7 +64,7 @@ class TemplatesLogin extends Component {
                         app.getLoader('context').login(this.state.login_email, this.state.login_password)
                     }}
                 >
-                    Anmelden
+                    <FormattedMessage id='account.login.login' />
                 </Button>
                 <div className='o-television__display__boundless c-divider c-divider--break o-distance-m' />
             </div>
