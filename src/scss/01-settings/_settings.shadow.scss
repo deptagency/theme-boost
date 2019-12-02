@@ -1,5 +1,5 @@
 // @name Shadow
 // @description Default options for shadow
-$shadow-color-base: $color-palette-unique-black;
-$shadow-size-base: 0 0 20px;
-$shadow-opacity-base: .25;
+$shadow-color-base: $color-palette-unique-black !default;
+$shadow-size-base: 0 0 20px !default;
+$shadow-opacity-base: .25 !default;

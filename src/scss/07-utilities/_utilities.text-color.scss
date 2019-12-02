@@ -37,7 +37,7 @@
 
 // @name Text Color Success
 .u-text-color-success {
-    color: $color-semantic-success-base !important;
+  color: $color-semantic-success-base !important;
 }
 
 // Helper to create the text color like the normal body text
@@ -47,25 +47,29 @@
 
 // Standard Text Colors mostly in different types of grays
 .u-text-color-800 {
-  color: $color-palette-gray-dark;
+  color: $color-palette-gray-800;
 }
 
 .u-text-color-600 {
-  color: $color-palette-gray-base;
+  color: $color-palette-gray-600;
 }
 
 .u-text-color-300 {
-  color: $color-palette-gray-light;
+  color: $color-palette-gray-300;
 }
 
 .u-text-color-200 {
-  color: $color-palette-gray-lighter;
+  color: $color-palette-gray-200;
 }
 
 .u-text-color-100 {
-  color: $color-palette-gray-lightest;
+  color: $color-palette-gray-100;
 }
 
 .u-text-color-ghost {
   color: $color-palette-unique-white;
+}
+
+.u-text-quiet {
+  color: $color-palette-gray-500 !important;
 }

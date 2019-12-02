@@ -1,4 +1,4 @@
 // @name Overlay
 // @description Options for the overlay like in popups or modals
-$overlay-color-base: $color-palette-unique-black;
-$overlay-opacity-base: .7;
+$overlay-color-base: $color-palette-unique-black !default;
+$overlay-opacity-base: .7 !default;
