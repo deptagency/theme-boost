@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 // import PropTypes from 'prop-types'
 import TemplatesSlideUp from '../../templates/slide-up'
 import { ReactComponent as ChevronDown } from '../../../../icons/chevronDown.svg'
-import Collapsible from 'react-collapsible';
-import style,  { aaa } from './more-info.module.scss'
+import Collapsible from 'react-collapsible'
+import style, { aaa } from './more-info.module.scss'
 
 const OrganismsMoreInfoProduct = props => {
-    console.log('**e*',style,  aaa)
+    console.log('**e*', style, aaa)
 
     const [reviewsOpen, setReviewsOpen] = useState(false)
 
@@ -119,7 +119,7 @@ const OrganismsMoreInfoProduct = props => {
                         Nam pellentesque diam vitae enim varius, sit amet luctus ex faucibus. Nulla facilisi. Nunc a nisl tempor, ullamcorper quam nec, dictum dui. In scelerisque malesuada lectus id dignissim. Praesent non luctus turpis. Nunc venenatis felis a hendrerit laoreet. Etiam tempor neque eget magna commodo fringilla. Proin nec dolor consectetur, congue nulla in, dictum quam. Vestibulum eu sollicitudin tellus. Nunc nec dictum lectus. Quisque volutpat justo velit, vel mattis justo posuere at. Donec pretium in odio et rhoncus. Vestibulum placerat, leo non pellentesque ultricies, est ipsum interdum lectus, id sollicitudin libero orci non urna. Suspendisse a ante vel odio tempor fermentum nec non orci. Pellentesque pharetra facilisis ipsum, at facilisis ligula dignissim sit amet.
                         Nam pellentesque diam vitae enim varius, sit amet luctus ex faucibus. Nulla facilisi. Nunc a nisl tempor, ullamcorper quam nec, dictum dui. In scelerisque malesuada lectus id dignissim. Praesent non luctus turpis. Nunc venenatis felis a hendrerit laoreet. Etiam tempor neque eget magna commodo fringilla. Proin nec dolor consectetur, congue nulla in, dictum quam. Vestibulum eu sollicitudin tellus. Nunc nec dictum lectus. Quisque volutpat justo velit, vel mattis justo posuere at. Donec pretium in odio et rhoncus. Vestibulum placerat, leo non pellentesque ultricies, est ipsum interdum lectus, id sollicitudin libero orci non urna. Suspendisse a ante vel odio tempor fermentum nec non orci. Pellentesque pharetra facilisis ipsum, at facilisis ligula dignissim sit amet.
                     </TemplatesSlideUp>
-                   </div>
+                </div>
             </div>
             <span className='c-divider o-distance-m' />
         </nav>
