@@ -124,13 +124,12 @@
 @import '07-utilities/utilities.width';
 @import '07-utilities/utilities.shadow';
 @import '07-utilities/utilities.aspect-ratio';
-
-@import '08-themes/themes.spotlight';
-@import '08-themes/themes.quietlight';
-@import '08-themes/themes.universe';
-@import '08-themes/themes.ghost';
-@import '08-themes/themes.text';
-@import '08-themes/themes.box-shadow';
+@import '07-utilities/utilities.spotlight';
+@import '07-utilities/utilities.quietlight';
+@import '07-utilities/utilities.universe';
+@import '07-utilities/utilities.ghost';
+@import '07-utilities/utilities.text-color';
+@import '07-utilities/utilities.box-shadow';
 
 @import '~flickity/dist/flickity';
 

@@ -1,0 +1,8 @@
+.t-box-shadow {
+  @include box-shadow();
+}
+
+// Blocks for the way how we want to handle it in the future
+.u-box-shadow-default {
+  @include box-shadow();
+}
