@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react'
-import deliveryTruck from '../../../../icons/delivery-truck.svg'
-
 import OrganismsFeatureListing from '../listings/feature-listing'
+import { ReactComponent as DeliveryTruck } from '../../../../icons/delivery-truck.svg'
 
 const OrganismsDeliveryFeatures = () => {
     return (
         <Fragment>
             <div className='o-block-short margin-12 padding-top--10'>
-                <img src={deliveryTruck} alt='delivery' />
+                <DeliveryTruck className='c-icon c-icon--l t-text-quiet' />
 
                 <div className='padding-left--16'>
                     <strong className='u-text-strong'>Expres Lieferung:</strong>
