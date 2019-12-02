@@ -40,12 +40,12 @@ $font-size-title: 3rem;
 // @name Subtitle
 // @description Important message, but not so important like a title
 $font-size-subtitle: 3rem;
-$font-color-subtitle: #8c9bb0;
+$font-color-subtitle: $color-palette-gray-500;
 
 // @name Meta
 // @description For something like sitenotes. Not so important content
 $font-size-meta: 1.2rem;
-$font-color-meta: #8c9bb0;
+$font-color-meta: $color-palette-gray-500;
 
 // @name Weight
 // @description Available options for weights
@@ -55,8 +55,8 @@ $font-weight-bold: 700;
 
 // @name Color
 // @description Available Colors for fonts
-$font-color-primary: #424f62;
-$font-color-secondary: #8c9bb0;
-$font-color-tertiary: #d8e0ec;
-$font-color-quaternary: #f1f6fc;
-$font-color-ghost: #ffffff;
+$font-color-primary: $color-palette-gray-700;
+$font-color-secondary: $color-palette-gray-500;
+$font-color-tertiary: $color-palette-gray-300;
+$font-color-quaternary: $color-palette-gray-200;
+$font-color-ghost: $color-palette-unique-white;

@@ -1,5 +1,6 @@
 // @name Color Palette
 // @description Basic palette of all available colors
+// @deprecated
 $color-palette-unique-white: #ffffff;
 $color-palette-unique-black: #000000;
 $color-palette-blue-lighter: #ebecfe;
@@ -18,25 +19,25 @@ $color-palette-gray-dark: #424f62;
 
 // @name Color Brand
 // @description The key colors for your brand and making the platform more personal
-$color-brand-primary-base: #3a42f1;
-$color-brand-primary-gradation: #898ef7;
-$color-brand-primary-pastel: #ebecfe;
-$color-brand-secondary-base: #ffce18;
-$color-brand-secondary-gradation: #ffe274;
-$color-brand-secondary-pastel: #fff7dc;
+$color-brand-primary-base: $color-palette-blue-base;
+$color-brand-primary-gradation: $color-palette-blue-light;
+$color-brand-primary-pastel: $color-palette-blue-lighter;
+$color-brand-secondary-base: $color-palette-orange-base;
+$color-brand-secondary-gradation: $color-palette-orange-light;
+$color-brand-secondary-pastel: $color-palette-orange-lighter;
 
 // @name Color Layout
 // @description For Usage of backgrounds, font colors etc.
-$color-layout-ghost-base: #ffffff;
-$color-layout-ghost-gradation: #8c9bb0;
-$color-layout-ghost-inverse: #424f62;
-$color-layout-universe-base: #424f62;
-$color-layout-universe-gradation: #8c9bb0;
-$color-layout-universe-pastel: #d8e0ec;
-$color-layout-universe-inverse: #ffffff;
-$color-layout-spot-base: #3a42f1;
-$color-layout-spot-gradation: #898ef7;
-$color-layout-spot-pastel: #ebecfe;
+$color-layout-ghost-base: $color-palette-unique-white;
+$color-layout-ghost-gradation: $color-palette-gray-base;
+$color-layout-ghost-inverse: $color-palette-gray-dark;
+$color-layout-universe-base: $color-palette-gray-dark;
+$color-layout-universe-gradation: $color-palette-gray-base;
+$color-layout-universe-pastel: $color-palette-gray-light;
+$color-layout-universe-inverse: $color-palette-unique-white;
+$color-layout-spot-base: $color-brand-primary-base;
+$color-layout-spot-gradation: $color-brand-secondary-gradation;
+$color-layout-spot-pastel: $color-brand-secondary-pastel;
 
 // @name Color Semantic
 // @description Meaningful colors for something like error or success messages
@@ -44,3 +45,22 @@ $color-semantic-success-base: #98c674;
 $color-semantic-success-gradation: #f0faea;
 $color-semantic-danger-base: #e07676;
 $color-semantic-danger-gradation: #faeaea;
+
+// New Names for colors
+$color-palette-blue-200: #ebecfe;
+$color-palette-blue-400: #898ef7;
+$color-palette-blue-600: #3a42f1;
+$color-palette-green-200: #f5fcf1;
+$color-palette-green-400: #98e076;
+$color-palette-orange-200: #fff7dc;
+$color-palette-orange-400: #ffe274;
+$color-palette-orange-600: #ffce18;
+$color-palette-gray-100: #f6faff;
+$color-palette-gray-200: #f1f6fc;
+$color-palette-gray-300: #d8e0ec;
+$color-palette-gray-400: #c5cdd7;
+$color-palette-gray-500: #8c9bb0;
+$color-palette-gray-600: #697587;
+$color-palette-gray-700: #424f62;
+$color-palette-gray-800: #313E51;
+$color-palette-gray-900: #192333;

@@ -1,14 +1,14 @@
 // @name Form Input
 // @description Options for standard form inputs and textareas
-$form-input-color-background: #ffffff;
-$form-input-color-placeholder: #d8e0ec;
-$form-input-color-disabled: #8c9bb0;
+$form-input-color-background: $color-palette-unique-white;
+$form-input-color-placeholder: $color-palette-gray-300;
+$form-input-color-disabled: $color-palette-gray-500;
 
 // @name Form Label
 // @description Options for standard form labels
-$form-label-color-base: #424f62;
+$form-label-color-base: $color-palette-gray-700;
 $form-label-weight: 400;
-$form-label-size: 1.5rem;
+$form-label-size: $font-size-s;
 
 // @name Form Legend
 // @description Options for standard form legends
