@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import Button from '../../atoms/buttons/button'
 import { ReactComponent as WishlistIcon } from 'icons/wishlist-heart.svg'
@@ -17,7 +18,9 @@ const TemplatesEmptyWishlist = () => {
                     <WishlistIcon className='c-icon c-icon--xl t-text-quiet' />
                 </div>
                 <div className='o-distance-m'>
-                    <p className='u-text-center'>Der Warenkorb ist noch leer.</p>
+                    <p className='u-text-center'>
+                        <FormattedMessage id='cart.emptyCart'/>
+                    </p>
                     <Button size='boss' type='primary' className='o-distance-s'>Jetzt anmelden</Button>
                 </div>
             </section>
