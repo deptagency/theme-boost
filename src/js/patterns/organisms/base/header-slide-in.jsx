@@ -23,9 +23,9 @@ class OrganismsHeaderSlideIn extends Component {
 
                     <div className='c-context-header__middle'>
                         <div className='o-flex o-flex--justify-center'>
-                            <h1 className='c-title-level-3 c-context-header__title o-flex__item'>
+                            <h3 className='c-title-level-3 c-context-header__title o-flex__item'>
                                 {title}
-                            </h1>
+                            </h3>
                         </div>
                     </div>
                     <button onClick={() => { setIsOpen(false) }}>
@@ -53,6 +53,7 @@ OrganismsHeaderSlideIn.defaultProps = {
     theme: 't-spotlight',
     className: '',
     title: '',
+    setIsOpen: () => {},
 }
 
 export default ComponentInjector.return('OrganismsHeaderSlideIn', OrganismsHeaderSlideIn)

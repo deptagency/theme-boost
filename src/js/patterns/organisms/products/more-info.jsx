@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 // import PropTypes from 'prop-types'
 import TemplatesSlideUp from '../../templates/slide-up'
+import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 import { ReactComponent as ChevronDown } from '../../../../icons/chevronDown.svg'
 import Collapsible from 'react-collapsible'
 import style, { aaa } from './more-info.module.scss'
+import { FormattedMessage } from 'react-intl'
 
 const OrganismsMoreInfoProduct = props => {
     console.log('**e*', style, aaa)
@@ -106,7 +108,10 @@ const OrganismsMoreInfoProduct = props => {
                 <div className={`o-distance reviews-content ${aaa}`}>
                     <TemplatesSlideUp
                         isOpen={reviewsOpen}
-                        header={<div onClick={() => { setReviewsOpen(false) }}>xXx</div>}
+                        header={<OrganismsHeaderSlideIn
+                            setIsOpen={setReviewsOpen}
+                            title={<FormattedMessage id={'reviews'} />}
+                        />}
                     >
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus urna ac mattis dapibus. Sed ut dolor eu nisi egestas iaculis. Donec mattis leo non nisi dapibus egestas. Morbi ultrices libero vulputate, pulvinar turpis eu, molestie sapien. Pellentesque in eros dui. Etiam ornare ex non quam rhoncus elementum eleifend eu risus. Phasellus fringilla lectus ac feugiat condimentum. Fusce bibendum facilisis lectus, a tincidunt enim. Vestibulum bibendum ornare ex eu aliquet.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus urna ac mattis dapibus. Sed ut dolor eu nisi egestas iaculis. Donec mattis leo non nisi dapibus egestas. Morbi ultrices libero vulputate, pulvinar turpis eu, molestie sapien. Pellentesque in eros dui. Etiam ornare ex non quam rhoncus elementum eleifend eu risus. Phasellus fringilla lectus ac feugiat condimentum. Fusce bibendum facilisis lectus, a tincidunt enim. Vestibulum bibendum ornare ex eu aliquet.
