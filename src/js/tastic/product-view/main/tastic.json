@@ -1,11 +1,11 @@
 {
-    "tasticType": "frontasic/boost/product-page-view",
-    "name": "Product Page View",
-    "category": "Boost Theme",
+    "tasticType": "frontasic/boost/product-view-main",
+    "name": "Main Section of Product Detail",
+    "category": "Product",
     "icon": "card_giftcard",
     "schema": [
         {
-            "name": "Main Configuration",
+            "name": "Product Main Section",
             "fields": [
                 {
                     "label": "Stream",
@@ -13,11 +13,6 @@
                     "type": "stream",
                     "streamType": "product",
                     "default": null
-                },
-                {
-                    "label": "TOIS Overview Node",
-                    "field": "toisOverviewNode",
-                    "type": "node"
                 }
             ]
         }

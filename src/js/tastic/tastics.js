@@ -43,7 +43,6 @@ import ChangeAddressFromProfileTastic from './change-address-from-profile/tastic
 import ProfileTastic from './profile/tastic'
 import FilterTastic from './filter/tastic'
 import LoginTastic from './login/tastic'
-import ProductPageViewTastic from './product-page-view/tastic'
 import MyOrders from './my-orders/tastic'
 import ShowcaseTextTastic from './showcase-text/tastic'
 import AccountAccessTastic from './account/access/tastic'
@@ -97,7 +96,6 @@ export default (() => {
         'frontastic/boost/profile': ProfileTastic,
         'frontastic/boost/filter': FilterTastic,
         'frontastic/boost/login': LoginTastic,
-        'frontasic/boost/product-page-view': ProductPageViewTastic,
         'frontastic/boost/my-orders': MyOrders,
         'frontastic/boost/showcase-text': ShowcaseTextTastic,
         'frontastic/boost/account-access': AccountAccessTastic,
