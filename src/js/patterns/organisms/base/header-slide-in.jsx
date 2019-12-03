@@ -46,9 +46,9 @@ OrganismsHeaderSlideIn.propTypes = {
     theme: PropTypes.string,
     title: PropTypes.string.isRequired,
     setIsOpen: PropTypes.func.isRequired,
-    icon: PropTypes.node, // showLeftBackIcon, showRightCloseIcon,
-    showLeftBackIcon: PropTypes.bool, // showLeftBackIcon, showRightCloseIcon,
-    showRightCloseIcon: PropTypes.bool, // showLeftBackIcon, showRightCloseIcon,
+    icon: PropTypes.node,
+    showLeftBackIcon: PropTypes.bool,
+    showRightCloseIcon: PropTypes.bool,
 }
 
 OrganismsHeaderSlideIn.defaultProps = {

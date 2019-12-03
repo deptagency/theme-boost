@@ -8,13 +8,12 @@ import { ReactComponent as ChevronDown } from '../../../../icons/chevronDown.svg
 // import Collapsible from 'react-collapsible'
 import style, { aaa } from './more-info.module.scss'
 import MoleculesRating from '../../molecules/ratings/rating'
+import Reviews from '../../organisms/products/panels/reviews'
 
 const OrganismsMoreInfoProduct = props => {
     console.log('**e*', style, aaa)
 
-    // const [reviewsOpen, setReviewsOpen] = useState(false)
     const [reviewsOpen, setReviewsOpen] = useState(false)
-    const [reviewFromOpen, setReviewFormOpen] = useState(false)
 
     return (
         <nav role='navigation' className='o-distance-m o-prevent-space'>
@@ -109,62 +108,15 @@ const OrganismsMoreInfoProduct = props => {
                     <h3 className='c-title-level-4 c-referal__body'>Bewertungen (62)</h3>
                     <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                 </div>
-                {/*<div className={`o-distance reviews-content ${aaa}`}>
-
-                </div>*/}
             </div>
             <span className='c-divider o-distance-m' />
 
 
-            <TemplatesSlideInPanel
+            <Reviews
                 isOpen={reviewsOpen}
-                header={<OrganismsHeaderSlideIn
-                    setIsOpen={setReviewsOpen}
-                    title={<FormattedMessage id={'reviews'} />}
-                    showLeftBackIcon={false}
-                />}
-            >
+                onClose={() => setReviewsOpen(false)}
+            />
 
-                {/* reviews panel */}
-                <div className='c-box'>
-                    <div className='u-text-strong'>
-                        {/* Translate this */}
-                        Dieses Produkt hat Bewertungen. Möchten Sie das Produkt bewerten?
-                    </div>
-                    <Button type='quiet' className='o-distance-m' size='boss' onClick={() => { setReviewFormOpen(true) }}>
-                        Bewertung abgeben
-                    </Button>
-
-                    {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => {
-                        return <div className='u-text-strong o-distance-l'>
-                            Beatrice
-                            <MoleculesRating className='o-distance-xs' />
-                            <div className='u-text-normal o-distance-xs'>
-                                Tolles Kleid, es sieht sehr elegant aus. Ich bin zur Zeit schwanger und das Kleid passt trotzdem perfekt.
-                            </div>
-                        </div>
-                    })}
-
-                    <Button type='quiet' className='o-distance-l' size='boss' onClick={() => { setReviewFormOpen(true) }}>
-                        Bewertung abgeben
-                    </Button>
-                </div>
-                {/* end of reviews panel */}
-            </TemplatesSlideInPanel>
-
-            {/*    review form   */}
-            <TemplatesSlideInPanel
-                isOpen={reviewFromOpen}
-                from='right'
-                header={<OrganismsHeaderSlideIn
-                    setIsOpen={setReviewFormOpen}
-                    title={<FormattedMessage id='writeReview' />}
-                    showRightCloseIcon={false}
-            />}
-        >
-            aaaaaaaaaaaaAaaa
-            </TemplatesSlideInPanel>
-            {/*    end of review form   */}
         </nav>
     )
 }
