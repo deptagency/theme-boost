@@ -1,5 +1,9 @@
 import React from 'react'
 import { configure, addDecorator, addParameters } from '@storybook/react'
+import { setIntlConfig, withIntl } from 'storybook-addon-intl';
+import { addLocaleData } from 'react-intl';
+import enLocaleData from 'react-intl/locale-data/en';
+import deLocaleData from 'react-intl/locale-data/de';
 import StoryRouter from 'storybook-react-router'
 import { create } from '@storybook/theming'
 import { withFrontasticRedux } from 'frontastic-catwalk/src/js/helper/storybook/redux'
@@ -85,6 +89,27 @@ addDecorator((Story) => (
         <Story />
     </Container>
 ))
+
+// SETTING UP TRANSLATIONS
+addLocaleData(enLocaleData);
+addLocaleData(deLocaleData);
+
+// Provide your messages -- TODO - get real files here
+const messages = {
+    'en': { 'submit': 'submit' },
+    'de': { 'submit': 'ansenden' }
+};
+
+const getMessages = (locale) => messages[locale];
+
+setIntlConfig({
+    locales: ['en', 'de'],
+    defaultLocale: 'en',
+    getMessages,
+});
+
+addDecorator(withIntl);
+// END OF SETTING UP TRANSLATIONS
 
 // automatically import all files ending in *.stories.js
 configure(require.context('../src', true, /\.stories\.(js|mdx)$/), module)
