@@ -9,7 +9,7 @@ $head-up-spacing-inner: $spacing-inset-m !default;
 
   &__item {
     position: absolute;
-    z-index: 5;
+    z-index: 1;
   }
   &__item--top-left {
     left: 0;

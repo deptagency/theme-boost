@@ -1,21 +1,25 @@
 import React, { useState } from 'react'
 // import PropTypes from 'prop-types'
-import TemplatesSlideUp from '../../templates/slide-up'
+import { FormattedMessage } from 'react-intl'
+import TemplatesSlideInPanel from '../../templates/slide-in-panel'
+import Button from '../../atoms/buttons/button'
 import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 import { ReactComponent as ChevronDown } from '../../../../icons/chevronDown.svg'
-import Collapsible from 'react-collapsible'
+// import Collapsible from 'react-collapsible'
 import style, { aaa } from './more-info.module.scss'
-import { FormattedMessage } from 'react-intl'
+import MoleculesRating from '../../molecules/ratings/rating'
 
 const OrganismsMoreInfoProduct = props => {
     console.log('**e*', style, aaa)
 
+    // const [reviewsOpen, setReviewsOpen] = useState(false)
     const [reviewsOpen, setReviewsOpen] = useState(false)
+    const [reviewFromOpen, setReviewFormOpen] = useState(false)
 
     return (
         <nav role='navigation' className='o-distance-m o-prevent-space'>
             <span className='c-divider o-distance-m' />
-            <div className='o-distance-m'>
+            {/* <div className='o-distance-m'>
                 <Collapsible
                     trigger={
                         <div title='' className='c-referal is-focused aaaHead'>
@@ -98,41 +102,74 @@ const OrganismsMoreInfoProduct = props => {
                         </div>
                     </div>
                 </Collapsible>
-            </div>
+            </div> */}
             <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
                 <div className='c-referal' onClick={() => { setReviewsOpen(true) }}>
                     <h3 className='c-title-level-4 c-referal__body'>Bewertungen (62)</h3>
                     <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                 </div>
-                <div className={`o-distance reviews-content ${aaa}`}>
-                    <TemplatesSlideUp
-                        isOpen={reviewsOpen}
-                        header={<OrganismsHeaderSlideIn
-                            setIsOpen={setReviewsOpen}
-                            title={<FormattedMessage id={'reviews'} />}
-                        />}
-                    >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus urna ac mattis dapibus. Sed ut dolor eu nisi egestas iaculis. Donec mattis leo non nisi dapibus egestas. Morbi ultrices libero vulputate, pulvinar turpis eu, molestie sapien. Pellentesque in eros dui. Etiam ornare ex non quam rhoncus elementum eleifend eu risus. Phasellus fringilla lectus ac feugiat condimentum. Fusce bibendum facilisis lectus, a tincidunt enim. Vestibulum bibendum ornare ex eu aliquet.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus urna ac mattis dapibus. Sed ut dolor eu nisi egestas iaculis. Donec mattis leo non nisi dapibus egestas. Morbi ultrices libero vulputate, pulvinar turpis eu, molestie sapien. Pellentesque in eros dui. Etiam ornare ex non quam rhoncus elementum eleifend eu risus. Phasellus fringilla lectus ac feugiat condimentum. Fusce bibendum facilisis lectus, a tincidunt enim. Vestibulum bibendum ornare ex eu aliquet.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus urna ac mattis dapibus. Sed ut dolor eu nisi egestas iaculis. Donec mattis leo non nisi dapibus egestas. Morbi ultrices libero vulputate, pulvinar turpis eu, molestie sapien. Pellentesque in eros dui. Etiam ornare ex non quam rhoncus elementum eleifend eu risus. Phasellus fringilla lectus ac feugiat condimentum. Fusce bibendum facilisis lectus, a tincidunt enim. Vestibulum bibendum ornare ex eu aliquet.
-                        Nam pellentesque diam vitae enim varius, sit amet luctus ex faucibus. Nulla facilisi. Nunc a nisl tempor, ullamcorper quam nec, dictum dui. In scelerisque malesuada lectus id dignissim. Praesent non luctus turpis. Nunc venenatis felis a hendrerit laoreet. Etiam tempor neque eget magna commodo fringilla. Proin nec dolor consectetur, congue nulla in, dictum quam. Vestibulum eu sollicitudin tellus. Nunc nec dictum lectus. Quisque volutpat justo velit, vel mattis justo posuere at. Donec pretium in odio et rhoncus. Vestibulum placerat, leo non pellentesque ultricies, est ipsum interdum lectus, id sollicitudin libero orci non urna. Suspendisse a ante vel odio tempor fermentum nec non orci. Pellentesque pharetra facilisis ipsum, at facilisis ligula dignissim sit amet.
-                        Nam pellentesque diam vitae enim varius, sit amet luctus ex faucibus. Nulla facilisi. Nunc a nisl tempor, ullamcorper quam nec, dictum dui. In scelerisque malesuada lectus id dignissim. Praesent non luctus turpis. Nunc venenatis felis a hendrerit laoreet. Etiam tempor neque eget magna commodo fringilla. Proin nec dolor consectetur, congue nulla in, dictum quam. Vestibulum eu sollicitudin tellus. Nunc nec dictum lectus. Quisque volutpat justo velit, vel mattis justo posuere at. Donec pretium in odio et rhoncus. Vestibulum placerat, leo non pellentesque ultricies, est ipsum interdum lectus, id sollicitudin libero orci non urna. Suspendisse a ante vel odio tempor fermentum nec non orci. Pellentesque pharetra facilisis ipsum, at facilisis ligula dignissim sit amet.
-                        Nam pellentesque diam vitae enim varius, sit amet luctus ex faucibus. Nulla facilisi. Nunc a nisl tempor, ullamcorper quam nec, dictum dui. In scelerisque malesuada lectus id dignissim. Praesent non luctus turpis. Nunc venenatis felis a hendrerit laoreet. Etiam tempor neque eget magna commodo fringilla. Proin nec dolor consectetur, congue nulla in, dictum quam. Vestibulum eu sollicitudin tellus. Nunc nec dictum lectus. Quisque volutpat justo velit, vel mattis justo posuere at. Donec pretium in odio et rhoncus. Vestibulum placerat, leo non pellentesque ultricies, est ipsum interdum lectus, id sollicitudin libero orci non urna. Suspendisse a ante vel odio tempor fermentum nec non orci. Pellentesque pharetra facilisis ipsum, at facilisis ligula dignissim sit amet.
-                        Nam pellentesque diam vitae enim varius, sit amet luctus ex faucibus. Nulla facilisi. Nunc a nisl tempor, ullamcorper quam nec, dictum dui. In scelerisque malesuada lectus id dignissim. Praesent non luctus turpis. Nunc venenatis felis a hendrerit laoreet. Etiam tempor neque eget magna commodo fringilla. Proin nec dolor consectetur, congue nulla in, dictum quam. Vestibulum eu sollicitudin tellus. Nunc nec dictum lectus. Quisque volutpat justo velit, vel mattis justo posuere at. Donec pretium in odio et rhoncus. Vestibulum placerat, leo non pellentesque ultricies, est ipsum interdum lectus, id sollicitudin libero orci non urna. Suspendisse a ante vel odio tempor fermentum nec non orci. Pellentesque pharetra facilisis ipsum, at facilisis ligula dignissim sit amet.
-                        Nam pellentesque diam vitae enim varius, sit amet luctus ex faucibus. Nulla facilisi. Nunc a nisl tempor, ullamcorper quam nec, dictum dui. In scelerisque malesuada lectus id dignissim. Praesent non luctus turpis. Nunc venenatis felis a hendrerit laoreet. Etiam tempor neque eget magna commodo fringilla. Proin nec dolor consectetur, congue nulla in, dictum quam. Vestibulum eu sollicitudin tellus. Nunc nec dictum lectus. Quisque volutpat justo velit, vel mattis justo posuere at. Donec pretium in odio et rhoncus. Vestibulum placerat, leo non pellentesque ultricies, est ipsum interdum lectus, id sollicitudin libero orci non urna. Suspendisse a ante vel odio tempor fermentum nec non orci. Pellentesque pharetra facilisis ipsum, at facilisis ligula dignissim sit amet.
-                        Nam pellentesque diam vitae enim varius, sit amet luctus ex faucibus. Nulla facilisi. Nunc a nisl tempor, ullamcorper quam nec, dictum dui. In scelerisque malesuada lectus id dignissim. Praesent non luctus turpis. Nunc venenatis felis a hendrerit laoreet. Etiam tempor neque eget magna commodo fringilla. Proin nec dolor consectetur, congue nulla in, dictum quam. Vestibulum eu sollicitudin tellus. Nunc nec dictum lectus. Quisque volutpat justo velit, vel mattis justo posuere at. Donec pretium in odio et rhoncus. Vestibulum placerat, leo non pellentesque ultricies, est ipsum interdum lectus, id sollicitudin libero orci non urna. Suspendisse a ante vel odio tempor fermentum nec non orci. Pellentesque pharetra facilisis ipsum, at facilisis ligula dignissim sit amet.
-                        Nam pellentesque diam vitae enim varius, sit amet luctus ex faucibus. Nulla facilisi. Nunc a nisl tempor, ullamcorper quam nec, dictum dui. In scelerisque malesuada lectus id dignissim. Praesent non luctus turpis. Nunc venenatis felis a hendrerit laoreet. Etiam tempor neque eget magna commodo fringilla. Proin nec dolor consectetur, congue nulla in, dictum quam. Vestibulum eu sollicitudin tellus. Nunc nec dictum lectus. Quisque volutpat justo velit, vel mattis justo posuere at. Donec pretium in odio et rhoncus. Vestibulum placerat, leo non pellentesque ultricies, est ipsum interdum lectus, id sollicitudin libero orci non urna. Suspendisse a ante vel odio tempor fermentum nec non orci. Pellentesque pharetra facilisis ipsum, at facilisis ligula dignissim sit amet.
-                    </TemplatesSlideUp>
-                </div>
+                {/*<div className={`o-distance reviews-content ${aaa}`}>
+
+                </div>*/}
             </div>
             <span className='c-divider o-distance-m' />
+
+
+            <TemplatesSlideInPanel
+                isOpen={reviewsOpen}
+                header={<OrganismsHeaderSlideIn
+                    setIsOpen={setReviewsOpen}
+                    title={<FormattedMessage id={'reviews'} />}
+                    showLeftBackIcon={false}
+                />}
+            >
+
+                {/* reviews panel */}
+                <div className='c-box'>
+                    <div className='u-text-strong'>
+                        {/* Translate this */}
+                        Dieses Produkt hat Bewertungen. Möchten Sie das Produkt bewerten?
+                    </div>
+                    <Button type='quiet' className='o-distance-m' size='boss' onClick={() => { setReviewFormOpen(true) }}>
+                        Bewertung abgeben
+                    </Button>
+
+                    {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => {
+                        return <div className='u-text-strong o-distance-l'>
+                            Beatrice
+                            <MoleculesRating className='o-distance-xs' />
+                            <div className='u-text-normal o-distance-xs'>
+                                Tolles Kleid, es sieht sehr elegant aus. Ich bin zur Zeit schwanger und das Kleid passt trotzdem perfekt.
+                            </div>
+                        </div>
+                    })}
+
+                    <Button type='quiet' className='o-distance-l' size='boss' onClick={() => { setReviewFormOpen(true) }}>
+                        Bewertung abgeben
+                    </Button>
+                </div>
+                {/* end of reviews panel */}
+            </TemplatesSlideInPanel>
+
+            {/*    review form   */}
+            <TemplatesSlideInPanel
+                isOpen={reviewFromOpen}
+                from='right'
+                header={<OrganismsHeaderSlideIn
+                    setIsOpen={setReviewFormOpen}
+                    title={<FormattedMessage id='writeReview' />}
+                    showRightCloseIcon={false}
+            />}
+        >
+            aaaaaaaaaaaaAaaa
+            </TemplatesSlideInPanel>
+            {/*    end of review form   */}
         </nav>
     )
 }
 
 OrganismsMoreInfoProduct.propTypes = {
-
 }
 
 export default OrganismsMoreInfoProduct

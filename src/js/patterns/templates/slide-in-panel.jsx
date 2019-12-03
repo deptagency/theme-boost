@@ -4,13 +4,13 @@ import SlidingPane from 'react-sliding-pane'
 import 'react-sliding-pane/dist/react-sliding-pane.css'
 import { Scrollbars } from 'react-custom-scrollbars'
 
-const TemplatesSlideUp = ({ isOpen, children, header }) => {
+const TemplatesSlideInPanel = ({ isOpen, children, header, from }) => {
     return (
         <SlidingPane
             className='slide-up-panel'
             overlayClassName='some-custom-overlay-class'
             isOpen={isOpen}
-            from={'bottom'}
+            from={from}
             width={'100%'}
             >
             {header}
@@ -44,14 +44,16 @@ const TemplatesSlideUp = ({ isOpen, children, header }) => {
 //     closeIcon: PropTypes.any
 // };
 
-TemplatesSlideUp.defaultProps = {
+TemplatesSlideInPanel.defaultProps = {
     isOpen: false,
+    from: 'bottom',
 }
 
-TemplatesSlideUp.propTypes = {
+TemplatesSlideInPanel.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     children: PropTypes.node.isRequired,
     header: PropTypes.node.isRequired,
+    from: PropTypes.string.isRequired,
 }
 
-export default TemplatesSlideUp
+export default TemplatesSlideInPanel
