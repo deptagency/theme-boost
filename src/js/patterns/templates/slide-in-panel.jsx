@@ -4,6 +4,10 @@ import SlidingPane from 'react-sliding-pane'
 import 'react-sliding-pane/dist/react-sliding-pane.css'
 import { Scrollbars } from 'react-custom-scrollbars'
 
+// needed for console warnings
+import Modal from 'react-modal'
+Modal.setAppElement(document.getElementById('app'))
+
 const TemplatesSlideInPanel = ({ isOpen, children, header, from }) => {
     return (
         <SlidingPane
@@ -24,25 +28,6 @@ const TemplatesSlideInPanel = ({ isOpen, children, header, from }) => {
         </SlidingPane>
     )
 }
-
-/* .some-custom-class {
-    margin: 0;
-    height: 100%;
-} */
-
-// ReactSlidingPane.propTypes = {
-//     isOpen: PropTypes.bool.isRequired,
-//     title: PropTypes.any,
-//     subtitle: PropTypes.any,
-//     onRequestClose: PropTypes.func,
-//     onAfterOpen: PropTypes.func,
-//     children: PropTypes.any.isRequired,
-//     className: PropTypes.string,
-//     overlayClassName: PropTypes.string,
-//     from: PropTypes.oneOf(['left', 'right', 'bottom']),
-//     width: PropTypes.string,
-//     closeIcon: PropTypes.any
-// };
 
 TemplatesSlideInPanel.defaultProps = {
     isOpen: false,

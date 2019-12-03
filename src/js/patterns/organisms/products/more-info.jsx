@@ -1,14 +1,9 @@
 import React, { useState } from 'react'
 // import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
-import TemplatesSlideInPanel from '../../templates/slide-in-panel'
-import Button from '../../atoms/buttons/button'
-import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 import { ReactComponent as ChevronDown } from '../../../../icons/chevronDown.svg'
 // import Collapsible from 'react-collapsible'
 import style, { aaa } from './more-info.module.scss'
-import MoleculesRating from '../../molecules/ratings/rating'
-import Reviews from '../../organisms/products/panels/reviews'
+import ReviewsPanle from '../../organisms/products/panels/reviews-panel'
 
 const OrganismsMoreInfoProduct = props => {
     console.log('**e*', style, aaa)
@@ -111,10 +106,9 @@ const OrganismsMoreInfoProduct = props => {
             </div>
             <span className='c-divider o-distance-m' />
 
-
-            <Reviews
+            <ReviewsPanle
                 isOpen={reviewsOpen}
-                onClose={() => setReviewsOpen(false)}
+                onClose={() => { return setReviewsOpen(false) }}
             />
 
         </nav>
