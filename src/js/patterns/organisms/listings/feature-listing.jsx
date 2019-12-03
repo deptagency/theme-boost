@@ -4,7 +4,6 @@ import { FormattedMessage } from 'react-intl'
 import OrganismsFeaturebox from '../featurebox/featurebox'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import Translatable from 'frontastic-catwalk/src/js/component/translatable'
 
 class OrganismsListingFeatures extends Component {
     render () {

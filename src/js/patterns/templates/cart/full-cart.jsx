@@ -15,26 +15,26 @@ const TemplatesFullCart = ({ cartItems, sum, currency }) => {
             <OrganismsHeaderMobile />
             <div className='o-container-medium o-prevent-space o-distance'>
                 <section>
-                    <h1 className='c-title-level-3'><FormattedMessage id='cart.myCart'/></h1>
+                    <h1 className='c-title-level-3'><FormattedMessage id='cart.myCart' /></h1>
                     <div className='o-distance'>
-                        <OrganismsBundleListing cartItems={cartItems} currency={currency}/>
+                        <OrganismsBundleListing cartItems={cartItems} currency={currency} />
                     </div>
                 </section>
                 <span className='c-divider c-divider--break o-distance' />
                 <section className='o-container o-distance'>
-                    <h2 className='c-title-level-3'><FormattedMessage id='cart.paymentMethods'/></h2>
+                    <h2 className='c-title-level-3'><FormattedMessage id='cart.paymentMethods' /></h2>
                     <OrganismsPaymentListingIcons image={''} />
                 </section>
                 <span className='c-divider c-divider--break o-distance' />
                 <section className='o-container o-distance'>
-                    <h2 className='c-title-level-3'><FormattedMessage id='cart.totalSum'/></h2>
+                    <h2 className='c-title-level-3'><FormattedMessage id='cart.totalSum' /></h2>
                     <div className='o-distance-s'>
                         <OrganismsSummary
                             currency={currency}
                             sum={sum}
                         />
                         <p className='o-distance-m u-text-s t-text-quiet'>
-                            <FormattedMessage id='cart.enterVouchers'/>
+                            <FormattedMessage id='cart.enterVouchers' />
                         </p>
                     </div>
                 </section>

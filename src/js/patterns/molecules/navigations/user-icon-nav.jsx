@@ -20,7 +20,7 @@ const MoleculesUserIconNav = () => {
                 <IconButton
                     icon={<MyProfile />}
                     onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }}>
-                        <FormattedMessage id='header.myAccount' />
+                    <FormattedMessage id='header.myAccount' />
                 </IconButton>
             </li>
             <li className='o-list-inline__item'>
@@ -32,7 +32,7 @@ const MoleculesUserIconNav = () => {
                 <IconButton
                     icon={<CartIcon />}
                     onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}>
-                        <FormattedMessage id='header.cart' />
+                    <FormattedMessage id='header.cart' />
                 </IconButton>
             </li>
         </ul>

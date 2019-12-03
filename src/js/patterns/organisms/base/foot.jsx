@@ -27,7 +27,7 @@ class OrganismsFooter extends Component {
                     </div>
                     <div className='c-footer__body o-grid o-grid--small-half o-grid--large-forth'>
                         <div>
-                            <p className='c-category-title t-text-ghost'><FormattedMessage id='footer.contact'/></p>
+                            <p className='c-category-title t-text-ghost'><FormattedMessage id='footer.contact' /></p>
                             <div className='o-distance-m'>
                                 <div className='o-block-short o-block-short--centered o-footer__contact-details'>
                                     <svg className='o-block-short__short-item' width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -35,19 +35,19 @@ class OrganismsFooter extends Component {
                                     </svg>
                                     <div>
                                         <strong className='u-text-strong t-text-ghost'>02300 77 77 5</strong> <br />
-                                        <span className='u-text-s'><FormattedMessage id='footer.serviceHour'/></span>
+                                        <span className='u-text-s'><FormattedMessage id='footer.serviceHour' /></span>
                                     </div>
                                 </div>
                             </div>
                             <div className='o-distance-m'>
                                 <p>
-                                    <span className='u-text-s'><FormattedMessage id='footer.writeUs'/></span> <br />
-                                    <a href='' title='' className='c-link c-link--ghost'><strong><FormattedMessage id='footer.emailContact'/></strong></a>
+                                    <span className='u-text-s'><FormattedMessage id='footer.writeUs' /></span> <br />
+                                    <a href='' title='' className='c-link c-link--ghost'><strong><FormattedMessage id='footer.emailContact' /></strong></a>
                                 </p>
                             </div>
                         </div>
                         <div className='c-footer__section'>
-                            <p className='c-category-title t-text-ghost'><FormattedMessage id='footer.paymentTerms'/></p>
+                            <p className='c-category-title t-text-ghost'><FormattedMessage id='footer.paymentTerms' /></p>
                             <ul className='o-list-inline o-distance-m'>
                                 <li className='o-list-inline__item'>
                                     <svg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -71,39 +71,39 @@ class OrganismsFooter extends Component {
                             </ul>
                         </div>
                         <div className='c-footer__section'>
-                            <p className='c-category-title t-text-ghost'><FormattedMessage id='footer.company'/></p>
+                            <p className='c-category-title t-text-ghost'><FormattedMessage id='footer.company' /></p>
                             <nav className='o-distance-m'>
                                 <ul className='o-list-bare'>
                                     <li className='o-list-bare__item'>
-                                        <a href='' title='Über uns'><FormattedMessage id='footer.aboutUs'/></a>
+                                        <a href='' title='Über uns'><FormattedMessage id='footer.aboutUs' /></a>
                                     </li>
                                     <li className='o-list-bare__item'>
-                                        <a href='' title='Partnerschaften'><FormattedMessage id='footer.partnerships'/></a>
+                                        <a href='' title='Partnerschaften'><FormattedMessage id='footer.partnerships' /></a>
                                     </li>
                                     <li className='o-list-bare__item'>
-                                        <a href='' title='Karriere'><FormattedMessage id='footer.career'/></a>
+                                        <a href='' title='Karriere'><FormattedMessage id='footer.career' /></a>
                                     </li>
                                     <li className='o-list-bare__item'>
-                                        <a href='' title='Presse'><FormattedMessage id='footer.press'/></a>
+                                        <a href='' title='Presse'><FormattedMessage id='footer.press' /></a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                         <div className='c-footer__section'>
-                            <p className='c-category-title t-text-ghost'><FormattedMessage id='footer.service'/></p>
+                            <p className='c-category-title t-text-ghost'><FormattedMessage id='footer.service' /></p>
                             <nav className='o-distance-m'>
                                 <ul className='o-list-bare'>
                                     <li className='o-list-bare__item'>
-                                        <a href='' title='Bestellung nachverfolgen'><FormattedMessage id='footer.track'/></a>
+                                        <a href='' title='Bestellung nachverfolgen'><FormattedMessage id='footer.track' /></a>
                                     </li>
                                     <li className='o-list-bare__item'>
-                                        <a href='' title='FAQ'><FormattedMessage id='footer.faq'/></a>
+                                        <a href='' title='FAQ'><FormattedMessage id='footer.faq' /></a>
                                     </li>
                                     <li className='o-list-bare__item'>
-                                        <a href='' title='Lieferung'><FormattedMessage id='footer.delivery'/></a>
+                                        <a href='' title='Lieferung'><FormattedMessage id='footer.delivery' /></a>
                                     </li>
                                     <li className='o-list-bare__item'>
-                                        <a href='' title='Rücksendung'><FormattedMessage id='footer.return'/></a>
+                                        <a href='' title='Rücksendung'><FormattedMessage id='footer.return' /></a>
                                     </li>
                                 </ul>
                             </nav>
@@ -130,16 +130,16 @@ class OrganismsFooter extends Component {
                         <nav>
                             <ul className='o-list-inline o-footer__bottom__navigation'>
                                 <li className='o-list-inline__item'>
-                                    <a href='' title='Jobs' className='u-text-s'><FormattedMessage id='footer.jobs'/></a>
+                                    <a href='' title='Jobs' className='u-text-s'><FormattedMessage id='footer.jobs' /></a>
                                 </li>
                                 <li className='o-list-inline__item'>
-                                    <a href='' title='AGB' className='u-text-s'><FormattedMessage id='footer.tc'/></a>
+                                    <a href='' title='AGB' className='u-text-s'><FormattedMessage id='footer.tc' /></a>
                                 </li>
                                 <li className='o-list-inline__item'>
-                                    <a href='' title='Impressum' className='u-text-s'><FormattedMessage id='footer.imprint'/></a>
+                                    <a href='' title='Impressum' className='u-text-s'><FormattedMessage id='footer.imprint' /></a>
                                 </li>
                                 <li className='o-list-inline__item'>
-                                    <a href='' title='Datenschutz' className='u-text-s'><FormattedMessage id='footer.privacy'/></a>
+                                    <a href='' title='Datenschutz' className='u-text-s'><FormattedMessage id='footer.privacy' /></a>
                                 </li>
                             </ul>
                         </nav>

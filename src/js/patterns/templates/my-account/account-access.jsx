@@ -32,7 +32,7 @@ class AccountAccessForms extends Component {
                                 this.setState({ form: 'register' })
                             }}
                         >
-                                <FormattedMessage id='account.newHere' />
+                            <FormattedMessage id='account.newHere' />
                         </Button>
                     </section>
                 </Grow>

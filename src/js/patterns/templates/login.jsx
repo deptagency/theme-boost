@@ -26,7 +26,7 @@ class TemplatesLogin extends Component {
                 />
                 <div className='o-form-area o-distance-m'>
                     <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                        <label htmlFor='inp-mail' className='c-form-label'> 
+                        <label htmlFor='inp-mail' className='c-form-label'>
                             <FormattedMessage id='account.login.emailAddress' />
                         </label>
                         <input
