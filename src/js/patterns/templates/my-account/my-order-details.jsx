@@ -10,7 +10,7 @@ import OrganismsBundleListing from 'js/patterns/organisms/listings/bundle-listin
 const TemplatesMyOrderDetails = ({ products }) => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderSlideIn setIsOpen={() => {}} title='Meine Bestellung' className='o-television__bar' />
+            <OrganismsHeaderSlideIn title='Meine Bestellung' className='o-television__bar' />
             <div className='o-television__display'>
                 <div className='o-container-small'>
                     <div>

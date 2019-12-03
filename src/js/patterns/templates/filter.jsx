@@ -13,7 +13,7 @@ import arrowLeft from '../../../../icons/arrow-left.svg'
 const TemplatesFilter = ({ setIsOpen, count }) => {
     return (
         <div className='filter-panel'>
-            <OrganismsHeaderSlideIn setIsOpen={setIsOpen} title='Filter' />
+            <OrganismsHeaderSlideIn title='Filter' />
             <div className='filter-content'>
 
                 <div className='filter-component'>

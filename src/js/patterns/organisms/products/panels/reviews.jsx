@@ -11,10 +11,12 @@ const Reviews = ({isOpen, onClose}) => {
 
     return [
         <TemplatesSlideInPanel
+            // {..._.omit(props, ['children', 'component', 'className', 'theme', 'title', 'setIsOpen'])}
+            //
             key='1'
             isOpen={isOpen}
             header={<OrganismsHeaderSlideIn
-                setIsOpen={onClose}
+                onClose={onClose}
                 title={<FormattedMessage id={'reviews'} />}
                 showLeftBackIcon={false}
             />}
@@ -52,7 +54,7 @@ const Reviews = ({isOpen, onClose}) => {
             isOpen={reviewFromOpen}
             from='right'
             header={<OrganismsHeaderSlideIn
-                setIsOpen={setReviewFormOpen}
+                onClose={() => setReviewFormOpen(false)}
                 title={<FormattedMessage id='writeReview' />}
                 showRightCloseIcon={false}
             />}

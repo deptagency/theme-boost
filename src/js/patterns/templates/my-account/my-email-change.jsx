@@ -8,7 +8,7 @@ import OrganismsFormEmailChange from '../../organisms/form/form-email-change'
 const TemplatesMyEmailChange = ({ products }) => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderSlideIn setIsOpen={() => {}} title='E-Mail-Adresse ändern' className='o-television__bar' />
+            <OrganismsHeaderSlideIn title='E-Mail-Adresse ändern' className='o-television__bar' />
             <div className='o-television__display'>
                 <div className='o-container-small'>
                     <p className='u-text-s'>Wir stellen sicher, dass alle E-Mails von Boost an deine neue E-Mail-Adresse geschickt werden.</p>

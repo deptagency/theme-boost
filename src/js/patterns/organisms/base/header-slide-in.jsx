@@ -8,10 +8,10 @@ import { ReactComponent as ArrowLeftWhite } from '../../../../icons/arrow-left-w
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 const OrganismsHeaderSlideIn = (props) => {
-    const { component: Component, title, setIsOpen, showLeftBackIcon, showRightCloseIcon, className, theme } = props
+    const { component: Component, title, onClose, showLeftBackIcon, showRightCloseIcon, className, theme } = props
     return (
         <Component
-            {..._.omit(props, ['children', 'component', 'className', 'theme', 'title', 'setIsOpen'])}
+            {..._.omit(props, ['children', 'component', 'className', 'theme', 'title', 'onClose'])}
             className={classnames(
               'c-context-header',
               className,
@@ -20,7 +20,7 @@ const OrganismsHeaderSlideIn = (props) => {
             >
             <div className='o-container c-context-header__wrapper'>
 
-                {showLeftBackIcon && <button onClick={() => { setIsOpen(false) }}>
+                {showLeftBackIcon && <button onClick={onClose}>
                     <ArrowLeftWhite />
                 </button>}
 
@@ -31,7 +31,7 @@ const OrganismsHeaderSlideIn = (props) => {
                         </h3>
                     </div>
                 </div>
-                {showRightCloseIcon && <button onClick={() => { setIsOpen(false) }}>
+                {showRightCloseIcon && <button onClick={onClose}>
                     <CloseMobile />
                 </button>}
             </div>
@@ -45,7 +45,7 @@ OrganismsHeaderSlideIn.propTypes = {
     className: PropTypes.string,
     theme: PropTypes.string,
     title: PropTypes.string.isRequired,
-    setIsOpen: PropTypes.func.isRequired,
+    onClose: PropTypes.func.isRequired,
     icon: PropTypes.node,
     showLeftBackIcon: PropTypes.bool,
     showRightCloseIcon: PropTypes.bool,
@@ -56,7 +56,7 @@ OrganismsHeaderSlideIn.defaultProps = {
     theme: 't-spotlight',
     className: '',
     title: '',
-    setIsOpen: () => {},
+    onClose: () => {},
     showLeftBackIcon: true,
     showRightCloseIcon: true,
 }

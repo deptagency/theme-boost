@@ -8,7 +8,7 @@ import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 const TemplatesMyAddressChange = ({ products }) => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderSlideIn setIsOpen={() => {}} title='Adresse ändern' className='o-television__bar' />
+            <OrganismsHeaderSlideIn title='Adresse ändern' className='o-television__bar' />
             <div className='o-television__display'>
                 <div className='o-container-small'>
                     <OrganismFormAddressChange />

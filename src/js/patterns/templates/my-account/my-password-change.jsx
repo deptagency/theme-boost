@@ -8,7 +8,7 @@ import OrganismsFormPasswordChange from 'js/patterns/organisms/form/form-passwor
 const TemplatesMyPasswordChange = ({ products }) => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderSlideIn setIsOpen={() => {}} title='Passwort ändern' className='o-television__bar' />
+            <OrganismsHeaderSlideIn title='Passwort ändern' className='o-television__bar' />
             <div className='o-television__display'>
                 <div className='o-container-small'>
                     <p className='u-text-s '>Zu deiner Sicherheit kannst du das Passwort jederzeit ändern.'</p>
