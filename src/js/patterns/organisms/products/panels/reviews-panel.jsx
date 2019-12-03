@@ -10,6 +10,17 @@ import WriteReviewPanel from './write-review-panel'
 const ReviewsPanel = ({ isOpen, onClose }) => {
     const [reviewFormOpen, setReviewFormOpen] = useState(false)
 
+    const SubmitReviewButton = () => (
+        <Button
+            type='quiet'
+            className='o-distance-l'
+            size='boss'
+            onClick={() => { setReviewFormOpen(true) }}
+        >
+            <FormattedMessage id='writeReview' />
+        </Button>
+    )
+
     return [
         <TemplatesSlideInPanel
             key='1'
@@ -20,30 +31,17 @@ const ReviewsPanel = ({ isOpen, onClose }) => {
                 showLeftBackIcon={false}
             />}
             >
-
-            {/* reviews panel */}
             <div className='c-box'>
-                <div className='u-text-strong'>
-                    {/* Translate this */}
-                    Dieses Produkt hat Bewertungen. Möchten Sie das Produkt bewerten?
-                </div>
-                <Button type='quiet' className='o-distance-m' size='boss' onClick={() => { setReviewFormOpen(true) }}>
-                    Bewertung abgeben
-                </Button>
-
+                <div className='u-text-strong'><FormattedMessage id='ratingQuestion' /></div>
+                <SubmitReviewButton />
                 <ReviewsList />
-
-                <Button type='quiet' className='o-distance-l' size='boss' onClick={() => { setReviewFormOpen(true) }}>
-                    Bewertung abgeben
-                </Button>
+                <SubmitReviewButton />
             </div>
-            {/* end of reviews panel */}
         </TemplatesSlideInPanel>,
         <WriteReviewPanel key='2'
             isOpen={reviewFormOpen}
             onClose={() => { setReviewFormOpen(false) }}
-        />,
-
+        />
     ]
 }
 
