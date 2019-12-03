@@ -11,6 +11,10 @@ import { withFrontasticRedux } from 'frontastic-catwalk/src/js/helper/storybook/
 import Container from './Container'
 import '../src/scss/app.scss'
 
+// Webpack?
+import en from '../../../../catwalk/src/js/app/i18n/en'
+import de from '../../../../catwalk/src/js/app/i18n/de'
+
 addParameters({
     viewport: {
         viewports: {
@@ -94,12 +98,7 @@ addDecorator((Story) => (
 addLocaleData(enLocaleData);
 addLocaleData(deLocaleData);
 
-// Provide your messages -- TODO - get real files here
-const messages = {
-    'en': { 'submit': 'submit' },
-    'de': { 'submit': 'ansenden' }
-};
-
+const messages = { en, de };
 const getMessages = (locale) => messages[locale];
 
 setIntlConfig({
