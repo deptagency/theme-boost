@@ -40,12 +40,12 @@
     display: block;
     padding: $spacing-squish-m;
     border-radius: $border-radius-rounded;
-    background: $color-brand-primary-pastel;
+    background: $color-brand-primary-lighter;
     color: $color-brand-primary-base;
     line-height: 1;
     white-space: nowrap;
     text-decoration: none;
-    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    @include transition();
 
     @media (min-width: $layout-breakpoint-l) {
       align-items: center;
@@ -62,7 +62,7 @@
     &:hover,
     &.is-active {
       background-color: $color-brand-primary-base;
-      color: $color-palette-unique-white;
+      color: $color-palette-white;
 
       @media (min-width: $layout-breakpoint-l) {
         background-color: transparent;

@@ -1,9 +1,9 @@
 // @name Link
 // @description Options for the standard link
-$link-color-base: #3a42f1;
-$link-color-hover: #898ef7;
+$link-color-base: $color-brand-primary-base !default;
+$link-color-hover: $color-brand-primary-light !default;
 
 // @name Quiet Link
 // @description Options for the quiet (secondary) link
-$link-color-quiet-base: #8c9bb0;
-$link-color-quiet-hover: [object Object];
+$link-color-quiet-base: $color-palette-gray-500 !default;
+$link-color-quiet-hover: $color-palette-gray-300 !default;

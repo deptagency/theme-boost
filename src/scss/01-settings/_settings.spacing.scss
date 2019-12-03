@@ -1,37 +1,37 @@
 // @name Spacing Inline
 // @description Spacing between items in a row
-$spacing-inline-xxs: 2px;
-$spacing-inline-xs: 4px;
-$spacing-inline-s: 8px;
-$spacing-inline-m: 16px;
-$spacing-inline-l: 32px;
-$spacing-inline-xl: 64px;
+$spacing-inline-xxs: 2px !default;
+$spacing-inline-xs: 4px !default;
+$spacing-inline-s: 8px !default;
+$spacing-inline-m: 16px !default;
+$spacing-inline-l: 32px !default;
+$spacing-inline-xl: 64px !default;
 
 // @name Spacing Inset
 // @description Spacing for inner paddings like in boxes
-$spacing-inset-xs: 4px;
-$spacing-inset-s: 8px;
-$spacing-inset-m: 16px;
-$spacing-inset-l: 32px;
-$spacing-inset-xl: 64px;
+$spacing-inset-xs: 4px !default;
+$spacing-inset-s: 8px !default;
+$spacing-inset-m: 16px !default;
+$spacing-inset-l: 32px !default;
+$spacing-inset-xl: 64px !default;
 
 // @name Spacing Squish
 // @description Spacing for items like buttons
-$spacing-squish-s: 4px 8px;
-$spacing-squish-m: 8px 16px;
-$spacing-squish-l: 12px 28px;
+$spacing-squish-s: 4px 8px !default;
+$spacing-squish-m: 8px 16px !default;
+$spacing-squish-l: 12px 28px !default;
 
 // @name Spacing Stack
 // @description Spacing for vertical distances between containers and rows
-$spacing-stack-xxs: 2px;
-$spacing-stack-xs: 4px;
-$spacing-stack-s: 8px;
-$spacing-stack-m: 16px;
-$spacing-stack-l: 32px;
-$spacing-stack-xl: 64px;
+$spacing-stack-xxs: 2px !default;
+$spacing-stack-xs: 4px !default;
+$spacing-stack-s: 8px !default;
+$spacing-stack-m: 16px !default;
+$spacing-stack-l: 32px !default;
+$spacing-stack-xl: 64px !default;
 
 // @name Spacing Stretch Inset
 // @description Spacing for form inputs and textareas
-$spacing-stretch-inset-s: 12px 8px;
-$spacing-stretch-inset-m: 16px 12px;
-$spacing-stretch-inset-l: 24px 16px;
+$spacing-stretch-inset-s: 12px 8px !default;
+$spacing-stretch-inset-m: 16px 12px !default;
+$spacing-stretch-inset-l: 24px 16px !default;

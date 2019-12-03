@@ -1,7 +1,7 @@
 // @name Breakpoint
 // @description A list of all available breakpoints
-$layout-breakpoint-s: 480px;
-$layout-breakpoint-m: 600px;
-$layout-breakpoint-l: 767px;
-$layout-breakpoint-xl: 1023px;
-$layout-breakpoint-xxl: 1160px;
+$layout-breakpoint-s: 480px !default;
+$layout-breakpoint-m: 600px !default;
+$layout-breakpoint-l: 767px !default;
+$layout-breakpoint-xl: 1023px !default;
+$layout-breakpoint-xxl: 1160px !default;
