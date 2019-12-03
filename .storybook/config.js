@@ -11,9 +11,8 @@ import { withFrontasticRedux } from 'frontastic-catwalk/src/js/helper/storybook/
 import Container from './Container'
 import '../src/scss/app.scss'
 
-// Webpack?
-import en from '../../../../catwalk/src/js/app/i18n/en'
-import de from '../../../../catwalk/src/js/app/i18n/de'
+import en from 'catwalk/src/js/app/i18n/en'
+import de from 'catwalk/src/js/app/i18n/de'
 
 addParameters({
     viewport: {

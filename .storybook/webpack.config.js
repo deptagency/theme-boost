@@ -5,7 +5,8 @@ module.exports = async ({ config, mode }) => {
     // This is specific to storybook and does not make sense to extract
     config.resolve.modules.push(
         path.resolve(__dirname, '../'),
-        path.resolve(__dirname, '../src')
+        path.resolve(__dirname, '../src'),
+        path.resolve(__dirname, '../../../../')
         //path.resolve(__dirname, './../../../../../node_modules'),
         //path.resolve(__dirname, '../node_modules')
         //'node_modules'
