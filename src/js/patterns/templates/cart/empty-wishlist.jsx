@@ -21,7 +21,7 @@ const TemplatesEmptyWishlist = () => {
                     <p className='u-text-center'>
                         <FormattedMessage id='cart.emptyCart'/>
                     </p>
-                    <Button size='boss' type='primary' className='o-distance-s'>Jetzt anmelden</Button>
+                    <Button size='boss' type='primary' className='o-distance-s'><FormattedMessage id='cart.registerNow'/></Button>
                 </div>
             </section>
             <section className='o-container o-distance o-prevent-space'>

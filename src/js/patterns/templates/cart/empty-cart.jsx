@@ -15,7 +15,9 @@ const TemplatesEmptyCart = () => {
                     <EmptyCartIcon className='c-icon c-icon--xl t-text-quiet' />
                 </div>
                 <div className='o-distance-m'>
-                    <p className='u-text-center'><FormattedMessage id='cart.emptyCart'/></p>
+                    <p className='u-text-center'>
+                        <FormattedMessage id='cart.emptyCart'/>
+                    </p>
                     <Button size='boss' type='primary' className='o-distance-s'>
                         <FormattedMessage id='cart.registerNow'/>
                     </Button>

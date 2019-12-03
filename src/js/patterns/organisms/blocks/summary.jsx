@@ -26,13 +26,17 @@ const OrganismsSummary = ({ sum, currency, subtotal }) => {
                 <p className='o-summary__item u-text-s'>
                     <FormattedMessage id='cart.shippingCosts'/>
                 </p>
-                <p className='o-summary__item u-text-s cart-summary--right'>gratis</p>
+                <p className='o-summary__item u-text-s cart-summary--right'>
+                    <FormattedMessage id='cart.gratis'/>
+                </p>
                 <span className='o-summary__full-item c-divider' />
                 <div className='o-summary__item'>
                     <p className='u-text-strong'>
                         <FormattedMessage id='cart.totalAmount'/>
                     </p>
-                    <p className='u-text-s t-text-quiet'><FormattedMessage id='cart.inclVat'/></p>
+                    <p className='u-text-s t-text-quiet'>
+                        <FormattedMessage id='cart.inclVat'/>
+                    </p>
                 </div>
                 <div className='o-summary__item'>
                     <p className='u-text-m u-text-strong cart-summary--right'>{currency} {sum}</p>
