@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { FormattedMessage } from 'react-intl'
 
 import Button from 'js/patterns/atoms/buttons/button'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
@@ -27,17 +28,23 @@ const TemplatesMyUserData = ({ products }) => {
                                 </svg>
                             </div>
                             <div className='o-block-short__body'>
-                                <dt className='u-text-s t-text-quiet'>Name:</dt>
+                                <dt className='u-text-s t-text-quiet'>
+                                    <FormattedMessage id='account.user.name'/>
+                                </dt>
                                 <dd className='u-text-s u-text-strong'>
                                   John Doe
                                 </dd>
-                                <dt className='u-text-s t-text-quiet o-distance-s'>Geschlecht:</dt>
+                                <dt className='u-text-s t-text-quiet o-distance-s'>
+                                    <FormattedMessage id='account.user.gender'/>
+                                </dt>
                                 <dd className='u-text-s u-text-strong'>
                                   Männlich
                                 </dd>
                             </div>
                         </div>
-                        <Button type='quiet' className='o-distance-m'>Bearbeiten</Button>
+                        <Button type='quiet' className='o-distance-m'>
+                            <FormattedMessage id='account.edit'/>
+                        </Button>
                     </article>
 
                     <span className='c-divider o-distance' />
@@ -55,13 +62,17 @@ const TemplatesMyUserData = ({ products }) => {
                                 </svg>
                             </div>
                             <div className='o-block-short__body'>
-                                <dt className='u-text-s t-text-quiet'>E-Mail-Adresse</dt>
+                                <dt className='u-text-s t-text-quiet'>
+                                    <FormattedMessage id='account.login.emailAddress'/>
+                                </dt>
                                 <dd className='u-text-s u-text-strong'>
                                   John.Doe@gmail.com
                                 </dd>
                             </div>
                         </div>
-                        <Button type='quiet' className='o-distance-m'>Bearbeiten</Button>
+                        <Button type='quiet' className='o-distance-m'>
+                            <FormattedMessage id='account.edit'/>
+                        </Button>
                     </article>
                     <span className='c-divider o-distance' />
                     <article className='o-distance'>
@@ -78,13 +89,17 @@ const TemplatesMyUserData = ({ products }) => {
                                 </svg>
                             </div>
                             <div className='o-block-short__body'>
-                                <dt className='u-text-s t-text-quiet'>Passwort</dt>
+                                <dt className='u-text-s t-text-quiet'>
+                                    <FormattedMessage id='account.login.password'/>
+                                </dt>
                                 <dd className='u-text-s u-text-strong'>
                                   **********
                                 </dd>
                             </div>
                         </div>
-                        <Button type='quiet' className='o-distance-m'>Bearbeiten</Button>
+                        <Button type='quiet' className='o-distance-m'>
+                            <FormattedMessage id='account.edit'/>
+                        </Button>
                     </article>
                 </div>
                 <OrganismsFooter />

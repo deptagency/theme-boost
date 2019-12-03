@@ -1,11 +1,12 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
+
 import Button from '../../atoms/buttons/button'
 import OrganismsPageHeader from '../../organisms/base/header-page'
 import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
 import OrganismsFooter from '../../organisms/base/foot'
 import ReferalBordered from '../../atoms/links/referal-bordered'
 import OrganismsAddressblock from '../../organisms/blocks/addressblock'
-import { FormattedMessage } from 'react-intl'
 
 const TemplatesMyAddresses = props => {
     return (
@@ -94,10 +95,10 @@ const TemplatesMyAddresses = props => {
 
                 <section className='o-distance'>
                     <nav role='navigation'>
-                        <ReferalBordered title='Bestellungen' />
-                        <ReferalBordered title='Rücksendungen' />
-                        <ReferalBordered title='Benutzerdaten' />
-                        <ReferalBordered title='Adressen' />
+                        <ReferalBordered title={<FormattedMessage id='account.orders'/>} />
+                        <ReferalBordered title={<FormattedMessage id='account.returns'/>} />
+                        <ReferalBordered title={<FormattedMessage id='account.userInfo'/>} />
+                        <ReferalBordered title={<FormattedMessage id='account.addresses'/>}/>
                     </nav>
                 </section>
                 <OrganismsFooter />

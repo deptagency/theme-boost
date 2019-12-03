@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { FormattedMessage } from 'react-intl'
 
 import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
 import Button from 'js/patterns/atoms/buttons/button'
@@ -10,31 +11,43 @@ import OrganismsBundleListing from 'js/patterns/organisms/listings/bundle-listin
 const TemplatesMyOrderDetails = ({ products }) => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderSlideIn setIsOpen={() => {}} title='Meine Bestellung' className='o-television__bar' />
+            <OrganismsHeaderSlideIn setIsOpen={() => {}} title={<FormattedMessage id='order.myOrder'/>} className='o-television__bar' />
             <div className='o-television__display'>
                 <div className='o-container-small'>
                     <div>
                         <div className='o-grid o-grid--half'>
                             <div>
-                                <dt className='u-text-s t-text-quiet'>Bestellnummer:</dt>
+                                <dt className='u-text-s t-text-quiet'>
+                                    <FormattedMessage id='order.number'/>
+                                </dt>
                                 <dd className='u-text-s u-text-strong'>23139012412</dd>
                             </div>
                             <div>
-                                <dt className='u-text-s t-text-quiet'>Bestelldatum:</dt>
+                                <dt className='u-text-s t-text-quiet'>
+                                    <FormattedMessage id='order.date'/>
+                                </dt>
                                 <dd className='u-text-s u-text-strong'>
                                     <time>Mi, 10.09.2019</time>
                                 </dd>
                             </div>
                             <div>
-                                <dt className='u-text-s t-text-quiet'>Zahlungsart:</dt>
-                                <dd className='u-text-s u-text-strong'>Rechnung</dd>
+                                <dt className='u-text-s t-text-quiet'>
+                                    <FormattedMessage id='order.paymentMethod'/>
+                                </dt>
+                                <dd className='u-text-s u-text-strong'>
+                                    <FormattedMessage id='order.invoice'/>
+                                </dd>
                             </div>
                         </div>
                         <div className='o-distance-m'>
                             <a href='' className='c-link o-block-short' title=''>
-                                <span className='o-block-short__body'>Artikel stornieren</span>
+                                <span className='o-block-short__body'>
+                                    <FormattedMessage id='order.cancelItem'/>
+                                </span>
                                 <svg className='c-icon c-icon--s o-block-short__short-item' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-                                    <title>Artikel stornieren</title>
+                                    <title>
+                                      <FormattedMessage id='order.cancelItem'/>
+                                    </title>
                                     <path d='M15.7 11.3l-6-6c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5.3 5.3-5.3 5.3c-0.4 0.4-0.4 1 0 1.4 0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l6-6c0.4-0.4 0.4-1 0-1.4z' />
                                 </svg>
                             </a>
@@ -53,23 +66,27 @@ const TemplatesMyOrderDetails = ({ products }) => {
                                     </g>
                                 </svg>
                                 <div className='o-block-short__body'>
-                                    <p className='u-text-s'>Offener Betrag für diese Bestellung von 55,95 €</p>
+                                    <p className='u-text-s'>
+                                        <FormattedMessage id='order.openOrder'/>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className='o-distance'>
-                        <p className='u-text-strong'>Details zur Zahlung</p>
+                        <p className='u-text-strong'>
+                            <FormattedMessage id='order.paymentDetails'/>
+                        </p>
                         <div className='o-detaillist o-distance-m'>
-                            <dt className='u-text-s t-text-quiet'>Zahlungsempfänger:</dt>
+                            <dt className='u-text-s t-text-quiet'><FormattedMessage id='order.payee'/></dt>
                             <dd className='u-text-s u-text-strong'>Zalando SE</dd>
-                            <dt className='u-text-s t-text-quiet'>IBAN:</dt>
+                            <dt className='u-text-s t-text-quiet'><FormattedMessage id='order.iban'/></dt>
                             <dd className='u-text-s u-text-strong'>DE86 2054 4123 3123 21</dd>
-                            <dt className='u-text-s t-text-quiet'>BIC:</dt>
+                            <dt className='u-text-s t-text-quiet'><FormattedMessage id='order.bic'/></dt>
                             <dd className='u-text-s u-text-strong'>DEUT1242Das</dd>
-                            <dt className='u-text-s t-text-quiet'>Bank:</dt>
+                            <dt className='u-text-s t-text-quiet'><FormattedMessage id='order.bank'/></dt>
                             <dd className='u-text-s u-text-strong'>Deutsche Bank</dd>
-                            <dt className='u-text-s t-text-quiet'>Verwendungszweck:</dt>
+                            <dt className='u-text-s t-text-quiet'><FormattedMessage id='order.paymentReason'/></dt>
                             <dd className='u-text-s u-text-strong'>10123141515214</dd>
                         </div>
                     </div>
@@ -77,13 +94,17 @@ const TemplatesMyOrderDetails = ({ products }) => {
                         <span className='c-divider c-divider--break' />
                     </div>
                     <div className='o-distance'>
-                        <h2 className='c-title-level-3'>Verschickt am Do., 11.09.2019</h2>
+                        <h2 className='c-title-level-3'>
+                        Verschickt am Do., 11.09.2019
+                        </h2>
                         <div className='o-distance-m'>
                             <OrganismsBundleListing />
                         </div>
                     </div>
                     <div className='o-distance'>
-                        <h2 className='c-title-level-3'>Storniert</h2>
+                        <h2 className='c-title-level-3'>
+                            <FormattedMessage id='account.cancel'/>
+                        </h2>
                         <div className='o-distance-m o-disabled-area'>
                             <div className='t-ghost o-disabled-area__overlay' />
                             <OrganismsBundleListing />
@@ -93,7 +114,9 @@ const TemplatesMyOrderDetails = ({ products }) => {
                         <span className='c-divider c-divider--break' />
                     </div>
                     <div className='o-distance'>
-                        <h2 className='c-title-level-3'>Total</h2>
+                        <h2 className='c-title-level-3'>
+                            <FormattedMessage id='order.total'/>
+                        </h2>
                         <div className='o-distance-m'>
                             <OrganismsSummary />
                         </div>
@@ -102,18 +125,24 @@ const TemplatesMyOrderDetails = ({ products }) => {
                         <span className='c-divider c-divider--break' />
                     </div>
                     <div className='o-distance'>
-                        <h2 className='c-title-level-3'>Delivery Address</h2>
+                        <h2 className='c-title-level-3'>
+                            <FormattedMessage id='account.address.delivery'/>
+                        </h2>
                         <div className='o-distance-m'>
                             <OrganismsAddressblock />
                         </div>
                     </div>
                     <div className='o-distance'>
-                        <h2 className='c-title-level-3'>Invoice Address</h2>
+                        <h2 className='c-title-level-3'>                            
+                            <FormattedMessage id='account.address.invoiceAddress'/>
+                        </h2>
                         <div className='o-distance-m'>
                             <OrganismsAddressblock />
                         </div>
                     </div>
-                    <Button type='quiet' size='boss' className='o-distance'>Return Products</Button>
+                    <Button type='quiet' size='boss' className='o-distance'>
+                        <FormattedMessage id='order.returnProducts'/>
+                    </Button>
                 </div>
             </div>
             <div className='o-television__remote-control' />
