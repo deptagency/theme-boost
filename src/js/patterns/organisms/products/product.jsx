@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import MoleculesSticker from '../../molecules/sticker/sticker'
 import Wishlist from '../../atoms/wishlist/wishlist'
 

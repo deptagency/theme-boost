@@ -1,4 +1,6 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
+
 import OrganismsOrderDetail from '../../organisms/blocks/order-detail'
 import Button from '../../atoms/buttons/button'
 import Badge from '../../atoms/badges/badge'
@@ -15,15 +17,17 @@ const TemplatesMyOrders = props => {
                     <OrganismsPageHeader title='Bestellungen' />
 
                     <article className='o-distance'>
-                        <p className='c-title-level-4'>Letzte Bestellung</p>
+                        <p className='c-title-level-4'>
+                            <FormattedMessage id='order.lastOrder'/>
+                        </p>
                         <div className='o-order-detail o-distance-m'>
                             <div className='o-order-detail__header'>
                                 <div>
-                                    <p itemProp='price' className='c-price'>59,95 €</p>
+                                    <p itemProp='price' className='c-price'> 59,95 € </p>
                                     <p className='u-text-s t-text-quiet'>12. Mai 2019</p>
                                 </div>
                                 <Badge type='quiet' color='red'>
-                                Storniert
+                                    <FormattedMessage id='account.cancel'/>
                                 </Badge>
                             </div>
                             <div className='o-order-detail__body o-box-center'>
@@ -44,7 +48,9 @@ const TemplatesMyOrders = props => {
                                 </div>
                             </div>
                             <div className='o-order-detail__footer u-text-center'>
-                                <Button type='primary'>Bestellung ansehen</Button>
+                                <Button type='primary'>
+                                    <FormattedMessage id='order.viewOrder'/>
+                                </Button>
                             </div>
                         </div>
                     </article>
@@ -73,10 +79,10 @@ const TemplatesMyOrders = props => {
 
                     <section className='o-distance'>
                         <nav role='navigation'>
-                            <ReferalBordered title='Bestellungen' />
-                            <ReferalBordered title='Rücksendungen' />
-                            <ReferalBordered title='Benutzerdaten' />
-                            <ReferalBordered title='Adressen' />
+                        <ReferalBordered title={<FormattedMessage id='account.orders'/>} />
+                        <ReferalBordered title={<FormattedMessage id='account.returns'/>} />
+                        <ReferalBordered title={<FormattedMessage id='account.userInfo'/>} />
+                        <ReferalBordered title={<FormattedMessage id='account.addresses'/>}/>
                         </nav>
                     </section>
                 </div>
