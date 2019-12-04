@@ -2,8 +2,7 @@ import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-
-import useBackgroundImageUrl from '../../../../helper/hooks/useBackgroundImageUrl'
+import useBackgroundImageUrl from 'frontastic-catwalk/src/js/helper/hooks/useBackgroundImageUrl'
 
 import { MobileNavTree, TopCategoryNavTabs, BackButton, CloseButton } from './components'
 import { topCategoryType } from './types'
