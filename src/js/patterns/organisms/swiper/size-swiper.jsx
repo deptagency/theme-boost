@@ -8,8 +8,8 @@ const OrganismsSizeSwiper = ({ sizes }) => {
     return (
         <div className='o-swiper display-grid'>
             <Slider options={{ fixedWidth: '150px' }}>
-                {sizes.map((c) => {
-                  return <button className='o-swiper__item c-chip'>{c}</button>
+                {sizes.map((c, i) => {
+                  return <button key={i} className='o-swiper__item c-chip'>{c}</button>
               })}
             </Slider>
         </div>

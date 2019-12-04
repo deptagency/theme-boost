@@ -14,15 +14,15 @@ const NavItem = ({ item, active = false }) => {
 
 NavItem.propTypes = {
     item: PropTypes.object.isRequired,
-    active: PropTypes.bool.isRequired,
+    active: PropTypes.bool,
 }
 
 export const TopCategoryNav = ({ items }) => {
     return (
         <ul className='c-service-navigation o-list-inline'>
             {items &&
-                items.map((item) => {
-                    return <NavItem item={item} />
+                items.map((item, i) => {
+                    return <NavItem key={i} item={item} />
                 })}
         </ul>
     )

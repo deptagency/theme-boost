@@ -11,7 +11,7 @@ const OrganismsHeaderSlideIn = (props) => {
     const { component: Component, title, onClose, showLeftBackIcon, showRightCloseIcon, className, theme } = props
     return (
         <Component
-            {..._.omit(props, ['children', 'component', 'className', 'theme', 'title', 'onClose', 'showLeftBackIcon', 'showRightCloseIcon'])}
+            {..._.omit(props, ['component', 'className', 'theme', 'title', 'onClose', 'showLeftBackIcon', 'showRightCloseIcon'])}
             className={classnames(
               'c-context-header',
               className,
@@ -40,11 +40,10 @@ const OrganismsHeaderSlideIn = (props) => {
 }
 
 OrganismsHeaderSlideIn.propTypes = {
-    children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     theme: PropTypes.string,
-    title: PropTypes.string.isRequired,
+    title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
     onClose: PropTypes.func.isRequired,
     showLeftBackIcon: PropTypes.bool,
     showRightCloseIcon: PropTypes.bool,

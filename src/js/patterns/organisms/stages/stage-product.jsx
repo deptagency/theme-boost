@@ -120,7 +120,7 @@ class OrganismsProductStage extends Component {
 OrganismsProductStage.propTypes = {
     images: PropTypes.array.isRequired,
     name: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
+    price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     discountedPrice: PropTypes.string.isRequired,
 }
 
