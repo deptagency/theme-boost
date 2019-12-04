@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { ReactComponent as ChevronDown } from '../../../../icons/chevronDown.svg'
 import Collapsible from 'react-collapsible'
 import style, { aaa } from './more-info.module.scss'
-import ReviewsPanle from '../../organisms/products/panels/reviews-panel'
+import ReviewsPanel from '../../organisms/products/panels/reviews-panel'
 
 const OrganismsMoreInfoProduct = props => {
     console.log('**e*', style, aaa)
@@ -106,7 +106,7 @@ const OrganismsMoreInfoProduct = props => {
             </div>
             <span className='c-divider o-distance-m' />
 
-            <ReviewsPanle
+            <ReviewsPanel
                 isOpen={reviewsOpen}
                 onClose={() => { return setReviewsOpen(false) }}
             />
