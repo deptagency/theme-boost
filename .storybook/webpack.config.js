@@ -44,7 +44,7 @@ module.exports = async ({ config, mode }) => {
      *    which we need when we want to reference assets from scss partials.
      * */
     config.module.rules.push({
-        test: /\.scss$/,
+        test: /(?<!\.module)\.scss$/,
         use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'],
     })
     config.module.rules.push({
