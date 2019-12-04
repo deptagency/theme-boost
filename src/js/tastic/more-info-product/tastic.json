@@ -5,8 +5,16 @@
     "category": "Boost Theme",
     "schema": [
         {
-            "name": "Options",
-            "fields": []
+            "name": "Main Configuration",
+            "fields": [
+                {
+                    "label": "Stream",
+                    "field": "stream",
+                    "type": "stream",
+                    "streamType": "product",
+                    "default": null
+                }
+            ]
         }
     ]
 }

@@ -26,9 +26,9 @@ const OrganismsHeaderSlideIn = (props) => {
 
                 <div className='c-context-header__middle'>
                     <div className='o-flex o-flex--justify-center'>
-                        <h3 className='c-title-level-3 c-context-header__title o-flex__item'>
+                        <h4 className='c-title-level-4 c-context-header__title o-flex__item'>
                             {title}
-                        </h3>
+                        </h4>
                     </div>
                 </div>
                 {showRightCloseIcon && <button onClick={onClose}>

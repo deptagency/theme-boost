@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { ReactComponent as ChevronDown } from '../../../../icons/chevronDown.svg'
 import Collapsible from 'react-collapsible'
 import ReviewsPanel from '../../organisms/products/panels/reviews-panel'
 
-const OrganismsMoreInfoProduct = props => {
+const OrganismsMoreInfoProduct = ({ product }) => {
     const [reviewsOpen, setReviewsOpen] = useState(false)
 
     return (
@@ -106,6 +106,7 @@ const OrganismsMoreInfoProduct = props => {
             <ReviewsPanel
                 isOpen={reviewsOpen}
                 onClose={() => { return setReviewsOpen(false) }}
+                product={product}
             />
 
         </nav>
@@ -113,6 +114,7 @@ const OrganismsMoreInfoProduct = props => {
 }
 
 OrganismsMoreInfoProduct.propTypes = {
+    product: PropTypes.object.isRequired,
 }
 
 export default OrganismsMoreInfoProduct

@@ -7,7 +7,7 @@ import TemplatesSlideInPanel from '../../../templates/slide-in-panel'
 import ReviewsList from '../reviews-list'
 import WriteReviewPanel from './write-review-panel'
 
-const ReviewsPanel = ({ isOpen, onClose }) => {
+const ReviewsPanel = ({ isOpen, onClose, product }) => {
     const [reviewFormOpen, setReviewFormOpen] = useState(false)
 
     const SubmitReviewButton = () => {
@@ -43,6 +43,7 @@ const ReviewsPanel = ({ isOpen, onClose }) => {
         <WriteReviewPanel key='2'
             isOpen={reviewFormOpen}
             onClose={() => { setReviewFormOpen(false) }}
+            product={product}
         />,
     ]
 }
@@ -50,6 +51,7 @@ const ReviewsPanel = ({ isOpen, onClose }) => {
 ReviewsPanel.propTypes = {
     isOpen: PropTypes.bool,
     onClose: PropTypes.func,
+    product: PropTypes.object.isRequired,
 }
 
 WriteReviewPanel.defaultProps = {
