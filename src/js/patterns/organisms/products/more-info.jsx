@@ -16,7 +16,7 @@ const OrganismsMoreInfoProduct = props => {
             <div className='o-distance-m'>
                 <Collapsible
                     trigger={
-                        <div title='' className='c-referal is-focused aaaHead'>
+                        <div title='' className='c-referal is-focused'>
                             <h3 className='c-title-level-4 c-referal__body'>Beschreibung</h3>
                             <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                         </div>
