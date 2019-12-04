@@ -10,16 +10,18 @@ import WriteReviewPanel from './write-review-panel'
 const ReviewsPanel = ({ isOpen, onClose }) => {
     const [reviewFormOpen, setReviewFormOpen] = useState(false)
 
-    const SubmitReviewButton = () => (
-        <Button
-            type='quiet'
-            className='o-distance-l'
-            size='boss'
-            onClick={() => { setReviewFormOpen(true) }}
-        >
-            <FormattedMessage id='writeReview' />
-        </Button>
-    )
+    const SubmitReviewButton = () => {
+        return (
+            <Button
+                type='quiet'
+                className='o-distance-l'
+                size='boss'
+                onClick={() => { setReviewFormOpen(true) }}
+                >
+                <FormattedMessage id='writeReview' />
+            </Button>
+        )
+    }
 
     return [
         <TemplatesSlideInPanel
@@ -41,7 +43,7 @@ const ReviewsPanel = ({ isOpen, onClose }) => {
         <WriteReviewPanel key='2'
             isOpen={reviewFormOpen}
             onClose={() => { setReviewFormOpen(false) }}
-        />
+        />,
     ]
 }
 

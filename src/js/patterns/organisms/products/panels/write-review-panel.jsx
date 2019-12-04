@@ -16,7 +16,7 @@ const WriteReviewPanel = ({ isOpen, onClose }) => {
                 showRightCloseIcon={false}
             />}
             >
-            bbbbbbb
+            WriteReviewPanel
         </TemplatesSlideInPanel>
     )
 }
