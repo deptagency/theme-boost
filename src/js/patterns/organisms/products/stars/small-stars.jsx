@@ -14,7 +14,7 @@ const SmallStars = ({ saveRating }) => {
     }
 
     return (
-        <div className='stars' >
+        <div className='stars o-distance-xs'>
             {[1, 2, 3, 4, 5].map((s, i) => {
                 const fill = i < ratingHighlighted ? '#FFCE18' : 'none'
                 return (
