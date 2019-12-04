@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import app from 'frontastic-catwalk/src/js/app/app'
@@ -50,7 +51,9 @@ class OrganismsFormRegister extends Component {
                                             </div>
                                         </div>
                                         <div className='o-block-short__body'>
-                                            <label htmlFor='inp-radio-02' className='c-form-label'>Frau</label>
+                                            <label htmlFor='inp-radio-02' className='c-form-label'>
+                                                <FormattedMessage id='account.register.genderFemale' />
+                                            </label>
                                         </div>
                                     </div>
                                 </li>
@@ -67,14 +70,18 @@ class OrganismsFormRegister extends Component {
                                             </div>
                                         </div>
                                         <div className='o-block-short__body'>
-                                            <label htmlFor='inp-radio-02' className='c-form-label'>Herr</label>
+                                            <label htmlFor='inp-radio-02' className='c-form-label'>
+                                                <FormattedMessage id='account.register.genderMale' />
+                                            </label>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <label htmlFor='' className='c-form-label'>Firstname</label>
+                            <label htmlFor='' className='c-form-label'>
+                                <FormattedMessage id='account.register.firstName' />
+                            </label>
                             <input
                                 type='text'
                                 className='o-distance-xs'
@@ -85,7 +92,9 @@ class OrganismsFormRegister extends Component {
                             />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <label htmlFor='' className='c-form-label'>Lastname</label>
+                            <label htmlFor='' className='c-form-label'>
+                                <FormattedMessage id='account.register.lastName' />
+                            </label>
                             <input
                                 type='text'
                                 className='o-distance-xs'
@@ -96,7 +105,9 @@ class OrganismsFormRegister extends Component {
                             />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <label htmlFor='inp-mail' className='c-form-label'>E-Mail Adresse</label>
+                            <label htmlFor='inp-mail' className='c-form-label'>
+                                <FormattedMessage id='account.login.emailAddress' />
+                            </label>
                             <input
                                 type='email'
                                 id='inp-mail'
@@ -108,7 +119,9 @@ class OrganismsFormRegister extends Component {
                             />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <label htmlFor='inp-password' className='c-form-label'>Passwort</label>
+                            <label htmlFor='inp-password' className='c-form-label'>
+                                <FormattedMessage id='account.login.password' />
+                            </label>
                             <div className='c-form-unit o-distance-s'>
                                 <input
                                     type='password'
@@ -149,7 +162,7 @@ class OrganismsFormRegister extends Component {
                                 </div>
                                 <div className='o-block-short__body'>
                                     <label htmlFor='inp-checkbox-02' className='c-form-label'>
-                            Ja, ich stimme den AGB und den Datenschutzbestimmungen von frontastic zu.
+                                        <FormattedMessage id='account.register.tcAgree' />
                                     </label>
                                 </div>
                             </div>
@@ -174,7 +187,7 @@ class OrganismsFormRegister extends Component {
                             })
                         }}
                     >
-                        Jetzt registrieren
+                        <FormattedMessage id='account.register.registerNow' />
                     </Button>
                 </fieldset>
             </form>

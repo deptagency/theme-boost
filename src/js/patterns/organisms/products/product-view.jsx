@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 import PropTypes from 'prop-types'
 import OrganismsProductStage from '../stages/stage-product'
 import OrganismsSizeSwiper from '../swiper/size-swiper'
@@ -16,7 +17,7 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
                 price={variant.price}
                 dicountedPrice={variant.discountedPrice}
             />
-            <h3 className='c-title-level-3 o-distance-m o-prevent-space'>Größe</h3>
+            <h3 className='c-title-level-3 o-distance-m o-prevent-space'><FormattedMessage id='sizeProduct' /></h3>
             <div className='o-distance-s display-grid'>
                 <OrganismsSizeSwiper sizes={sizes} />
             </div>
@@ -33,7 +34,7 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
                         app.getLoader('cart').add(null, variant, 1, null)
                     }}
                 >
-                    In den Warenkorb
+                    <FormattedMessage id='inCartProduct' />
                 </Button>
             </div>
         </div>

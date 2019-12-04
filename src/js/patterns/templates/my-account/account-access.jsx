@@ -4,6 +4,7 @@ import TemplatesRegister from '../../../patterns/templates/register'
 import TemplatesLogin from '../../../patterns/templates/login'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import Button from '../../../patterns/atoms/buttons/button'
+import { FormattedMessage } from 'react-intl'
 
 class AccountAccessForms extends Component {
     constructor (props) {
@@ -20,7 +21,9 @@ class AccountAccessForms extends Component {
                 <Grow in={(this.state.form === 'login')}>
                     <TemplatesLogin />
                     <section className='o-television o-television__display o-container-small o-distance-m'>
-                        <h2 className='c-title-level-3 u-text-center'>Kostenloses Benutzerkonto</h2>
+                        <h2 className='c-title-level-3 u-text-center'>
+                            <FormattedMessage id='account.freeAccount' />
+                        </h2>
                         <Button
                             type='quiet'
                             size='boss'
@@ -29,14 +32,16 @@ class AccountAccessForms extends Component {
                                 this.setState({ form: 'register' })
                             }}
                         >
-                            Ich bin neu hier
+                            <FormattedMessage id='account.newHere' />
                         </Button>
                     </section>
                 </Grow>
                 <Grow in={(this.state.form === 'register')}>
                     <TemplatesRegister />
                     <section className='o-television o-television__display o-container-small o-distance-m'>
-                        <h2 className='c-title-level-3 u-text-center'>Melde dich jetzt an</h2>
+                        <h2 className='c-title-level-3 u-text-center'>
+                            <FormattedMessage id='account.register.joinUs' />
+                        </h2>
                         <Button
                             type='quiet'
                             size='boss'
@@ -45,7 +50,7 @@ class AccountAccessForms extends Component {
                                 this.setState({ form: 'login' })
                             }}
                         >
-                            Anmelden
+                            <FormattedMessage id='account.login' />
                         </Button>
                     </section>
                 </Grow>
