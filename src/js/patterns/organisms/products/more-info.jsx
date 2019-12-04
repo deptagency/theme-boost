@@ -2,12 +2,9 @@ import React, { useState } from 'react'
 // import PropTypes from 'prop-types'
 import { ReactComponent as ChevronDown } from '../../../../icons/chevronDown.svg'
 import Collapsible from 'react-collapsible'
-import style, { aaa } from './more-info.module.scss'
 import ReviewsPanel from '../../organisms/products/panels/reviews-panel'
 
 const OrganismsMoreInfoProduct = props => {
-    console.log('**e*', style, aaa)
-
     const [reviewsOpen, setReviewsOpen] = useState(false)
 
     return (
@@ -100,7 +97,7 @@ const OrganismsMoreInfoProduct = props => {
             <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
                 <div className='c-referal' onClick={() => { setReviewsOpen(true) }}>
-                    <h3 className={`c-title-level-4 c-referal__body aaaaa ${aaa}`}>Bewertungen (62)</h3>
+                    <h3 className='c-title-level-4 c-referal__body'>Bewertungen (62)</h3>
                     <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                 </div>
             </div>
