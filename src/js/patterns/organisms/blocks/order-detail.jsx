@@ -28,7 +28,7 @@ class OrganismsOrderDetail extends Component {
                     <div className='o-order-detail__footer'>
                         <a href='' className='c-link o-block-short'>
                             <span className='o-block-short__body'>
-                                <FormattedMessage id='order.viewOrder'/>
+                                <FormattedMessage id='order.viewOrder' />
                             </span>
                             <svg className='c-icon o-block-short__short-item u-line-height-fix-tiny' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                 <title>chevron-right</title>

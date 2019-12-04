@@ -18,7 +18,7 @@ const TemplatesMyOrders = props => {
 
                     <article className='o-distance'>
                         <p className='c-title-level-4'>
-                            <FormattedMessage id='order.lastOrder'/>
+                            <FormattedMessage id='order.lastOrder' />
                         </p>
                         <div className='o-order-detail o-distance-m'>
                             <div className='o-order-detail__header'>
@@ -27,7 +27,7 @@ const TemplatesMyOrders = props => {
                                     <p className='u-text-s t-text-quiet'>12. Mai 2019</p>
                                 </div>
                                 <Badge type='quiet' color='red'>
-                                    <FormattedMessage id='account.cancel'/>
+                                    <FormattedMessage id='account.cancel' />
                                 </Badge>
                             </div>
                             <div className='o-order-detail__body o-box-center'>
@@ -49,7 +49,7 @@ const TemplatesMyOrders = props => {
                             </div>
                             <div className='o-order-detail__footer u-text-center'>
                                 <Button type='primary'>
-                                    <FormattedMessage id='order.viewOrder'/>
+                                    <FormattedMessage id='order.viewOrder' />
                                 </Button>
                             </div>
                         </div>
@@ -79,10 +79,10 @@ const TemplatesMyOrders = props => {
 
                     <section className='o-distance'>
                         <nav role='navigation'>
-                        <ReferalBordered title={<FormattedMessage id='account.orders'/>} />
-                        <ReferalBordered title={<FormattedMessage id='account.returns'/>} />
-                        <ReferalBordered title={<FormattedMessage id='account.userInfo'/>} />
-                        <ReferalBordered title={<FormattedMessage id='account.addresses'/>}/>
+                            <ReferalBordered title={<FormattedMessage id='account.orders' />} />
+                            <ReferalBordered title={<FormattedMessage id='account.returns' />} />
+                            <ReferalBordered title={<FormattedMessage id='account.userInfo' />} />
+                            <ReferalBordered title={<FormattedMessage id='account.addresses' />} />
                         </nav>
                     </section>
                 </div>

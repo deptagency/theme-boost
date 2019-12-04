@@ -9,16 +9,16 @@ import OrganismsFormPasswordChange from 'js/patterns/organisms/form/form-passwor
 const TemplatesMyPasswordChange = ({ products }) => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderSlideIn title={<FormattedMessage id='account.password.title'/>} className='o-television__bar' />
+            <OrganismsHeaderSlideIn title={<FormattedMessage id='account.password.title' />} className='o-television__bar' />
             <div className='o-television__display'>
                 <div className='o-container-small'>
                     <p className='u-text-s '>
-                        <FormattedMessage id='account.password.change'/>
+                        <FormattedMessage id='account.password.change' />
                     </p>
                     <div className='o-distance'>
                         <OrganismsFormPasswordChange />
                         <Button type='primary' size='boss' className='o-distance-m'>
-                            <FormattedMessage id='account.save'/>
+                            <FormattedMessage id='account.save' />
                         </Button>
                     </div>
                 </div>

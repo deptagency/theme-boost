@@ -20,13 +20,13 @@ const TemplatesMyAddresses = props => {
                         <path d='M9.40967 19.875H15.7502C15.8496 19.875 15.945 19.9145 16.0153 19.9848C16.0857 20.0551 16.1252 20.1505 16.1252 20.25V26.5905C16.1252 27.0877 16.3227 27.5647 16.6743 27.9163C17.026 28.2679 17.5029 28.4655 18.0002 28.4655C18.4974 28.4655 18.9744 28.2679 19.326 27.9163C19.6776 27.5647 19.8752 27.0877 19.8752 26.5905V20.25C19.8752 20.1505 19.9147 20.0551 19.985 19.9848C20.0553 19.9145 20.1507 19.875 20.2502 19.875H26.5907C27.0879 19.875 27.5649 19.6774 27.9165 19.3258C28.2681 18.9742 28.4657 18.4972 28.4657 18C28.4657 17.5027 28.2681 17.0258 27.9165 16.6741C27.5649 16.3225 27.0879 16.125 26.5907 16.125H20.2502C20.1507 16.125 20.0553 16.0855 19.985 16.0151C19.9147 15.9448 19.8752 15.8494 19.8752 15.75V9.40796C19.8752 8.91068 19.6776 8.43376 19.326 8.08213C18.9744 7.7305 18.4974 7.53296 18.0002 7.53296C17.5029 7.53296 17.026 7.7305 16.6743 8.08213C16.3227 8.43376 16.1252 8.91068 16.1252 9.40796V15.75C16.1252 15.8494 16.0857 15.9448 16.0153 16.0151C15.945 16.0855 15.8496 16.125 15.7502 16.125H9.40967C8.91239 16.125 8.43547 16.3225 8.08384 16.6741C7.73221 17.0258 7.53467 17.5027 7.53467 18C7.53467 18.4972 7.73221 18.9742 8.08384 19.3258C8.43547 19.6774 8.91239 19.875 9.40967 19.875Z' />
                     </svg>
 
-                    <p><FormattedMessage id='account.address.newAddress'/></p>
+                    <p><FormattedMessage id='account.address.newAddress' /></p>
                 </button>
                 <div className='o-distance'>
                     <div className='o-list-bare'>
                         <div className='o-list-bare__item'>
                             <h2 className='c-title-level-4 t-text-quiet u-text-uppercase'>
-                                <FormattedMessage id='account.address.residential'/>
+                                <FormattedMessage id='account.address.residential' />
                             </h2>
                             <div className='o-distance-m'>
                                 <OrganismsAddressblock />
@@ -39,7 +39,7 @@ const TemplatesMyAddresses = props => {
                                             <path d='M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z' />
                                         </svg>
                                         <div className='o-block-short__body u-text-s'>
-                                           <FormattedMessage id='account.address.standardBilling'/>
+                                            <FormattedMessage id='account.address.standardBilling' />
                                         </div>
                                     </div>
                                     <div className='o-list-bare__item o-block-short o-block-short--centered'>
@@ -48,7 +48,7 @@ const TemplatesMyAddresses = props => {
                                             <path d='M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z' />
                                         </svg>
                                         <div className='o-block-short__body u-text-s'>
-                                            <FormattedMessage id='account.address.standardDelivery'/>
+                                            <FormattedMessage id='account.address.standardDelivery' />
                                         </div>
                                     </div>
                                 </div>
@@ -63,14 +63,14 @@ const TemplatesMyAddresses = props => {
                                         </svg>
                                     </button>
                                     <Button type='quiet' className='o-buttonbar__item'>
-                                        <FormattedMessage id='account.edit'/>
+                                        <FormattedMessage id='account.edit' />
                                     </Button>
                                 </div>
                             </div>
                             <span className='c-divider o-list-bare__item' />
                             <div className='o-list-bare__item'>
-                                <h2 className='c-title-level-4 t-text-quiet u-text-uppercase'> 
-                                    <FormattedMessage id='account.address.residential'/></h2>
+                                <h2 className='c-title-level-4 t-text-quiet u-text-uppercase'>
+                                    <FormattedMessage id='account.address.residential' /></h2>
                                 <div className='o-distance-m'>
                                     <OrganismsAddressblock />
                                 </div>
@@ -85,7 +85,7 @@ const TemplatesMyAddresses = props => {
                                         </svg>
                                     </button>
                                     <Button type='quiet' className='o-buttonbar__item'>
-                                        <FormattedMessage id='account.edit'/>
+                                        <FormattedMessage id='account.edit' />
                                     </Button>
                                 </div>
                             </div>
@@ -95,10 +95,10 @@ const TemplatesMyAddresses = props => {
 
                 <section className='o-distance'>
                     <nav role='navigation'>
-                        <ReferalBordered title={<FormattedMessage id='account.orders'/>} />
-                        <ReferalBordered title={<FormattedMessage id='account.returns'/>} />
-                        <ReferalBordered title={<FormattedMessage id='account.userInfo'/>} />
-                        <ReferalBordered title={<FormattedMessage id='account.addresses'/>}/>
+                        <ReferalBordered title={<FormattedMessage id='account.orders' />} />
+                        <ReferalBordered title={<FormattedMessage id='account.returns' />} />
+                        <ReferalBordered title={<FormattedMessage id='account.userInfo' />} />
+                        <ReferalBordered title={<FormattedMessage id='account.addresses' />} />
                     </nav>
                 </section>
                 <OrganismsFooter />

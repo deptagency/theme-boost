@@ -21,14 +21,14 @@ class TemplatesOrderBilling extends Component {
                     </div>
                     <div className='o-distance'>
                         <h2 className='c-title-level-3'>
-                            <FormattedMessage id='order.selectMethod'/>
+                            <FormattedMessage id='order.selectMethod' />
                         </h2>
                         <div className='o-distance-m'>
                             <OrganismsPaymentListing />
                         </div>
                     </div>
                     <Button type='primary' size='boss' className='o-distance'>
-                        <FormattedMessage id='account.more'/>
+                        <FormattedMessage id='account.more' />
                     </Button>
                 </div>
                 <div className='o-prevent-space'>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import _ from 'lodash'
+import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -21,7 +22,7 @@ class OrganismsHeaderContext extends Component {
                     {this.props.backButton &&
                         <button>
                             <svg className='c-icon c-icon--m' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-                                <title><FormattedMessage id='back'/></title>
+                                <title><FormattedMessage id='back' /></title>
                                 <path d='M10.4 12l5.3-5.3c0.4-0.4 0.4-1 0-1.4s-1-0.4-1.4 0l-6 6c-0.4 0.4-0.4 1 0 1.4l6 6c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.4 0.4-1 0-1.4l-5.3-5.3z' />
                             </svg>
                         </button>
@@ -37,7 +38,7 @@ class OrganismsHeaderContext extends Component {
                             {this.props.removeSearchValue &&
                                 <button className='o-flex__item c-icon-circle c-icon-circle--xs'>
                                     <svg className='c-icon c-icon--xs c-icon-circle__icon' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-                                        <title><FormattedMessage id='header.cross'/></title>
+                                        <title><FormattedMessage id='header.cross' /></title>
                                         <path d='M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z' />
                                     </svg>
                                 </button>
@@ -47,7 +48,7 @@ class OrganismsHeaderContext extends Component {
                     {this.props.closeButton &&
                         <button>
                             <svg className='c-icon c-icon--m' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-                                <title><FormattedMessage id='header.closeView'/></title>
+                                <title><FormattedMessage id='header.closeView' /></title>
                                 <path d='M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z' />
                             </svg>
                         </button>

@@ -13,20 +13,20 @@ const TemplatesMyEmailChange = ({ products }) => {
             <div className='o-television__display'>
                 <div className='o-container-small'>
                     <p className='u-text-s'>
-                        <FormattedMessage id='account.eMailChange.text'/>
+                        <FormattedMessage id='account.eMailChange.text' />
                     </p>
                     <div className='o-distance'>
                         <dt className='u-text-s t-text-quiet'>
-                            <FormattedMessage id='account.eMailChange.current'/>
+                            <FormattedMessage id='account.eMailChange.current' />
                         </dt>
                         <dd className='u-text-s u-text-strong'>
-                            <FormattedMessage id='account.eMailChange.example'/>
+                            <FormattedMessage id='account.eMailChange.example' />
                         </dd>
                     </div>
                     <div className='o-distance'>
                         <OrganismsFormEmailChange />
                         <Button type='primary' size='boss' className='o-distance-m'>
-                            <FormattedMessage id='account.save'/>
+                            <FormattedMessage id='account.save' />
                         </Button>
                     </div>
                 </div>

@@ -29,13 +29,13 @@ const TemplatesMyUserData = ({ products }) => {
                             </div>
                             <div className='o-block-short__body'>
                                 <dt className='u-text-s t-text-quiet'>
-                                    <FormattedMessage id='account.user.name'/>
+                                    <FormattedMessage id='account.user.name' />
                                 </dt>
                                 <dd className='u-text-s u-text-strong'>
                                   John Doe
                                 </dd>
                                 <dt className='u-text-s t-text-quiet o-distance-s'>
-                                    <FormattedMessage id='account.user.gender'/>
+                                    <FormattedMessage id='account.user.gender' />
                                 </dt>
                                 <dd className='u-text-s u-text-strong'>
                                   Männlich
@@ -43,7 +43,7 @@ const TemplatesMyUserData = ({ products }) => {
                             </div>
                         </div>
                         <Button type='quiet' className='o-distance-m'>
-                            <FormattedMessage id='account.edit'/>
+                            <FormattedMessage id='account.edit' />
                         </Button>
                     </article>
 
@@ -63,7 +63,7 @@ const TemplatesMyUserData = ({ products }) => {
                             </div>
                             <div className='o-block-short__body'>
                                 <dt className='u-text-s t-text-quiet'>
-                                    <FormattedMessage id='account.login.emailAddress'/>
+                                    <FormattedMessage id='account.login.emailAddress' />
                                 </dt>
                                 <dd className='u-text-s u-text-strong'>
                                   John.Doe@gmail.com
@@ -71,7 +71,7 @@ const TemplatesMyUserData = ({ products }) => {
                             </div>
                         </div>
                         <Button type='quiet' className='o-distance-m'>
-                            <FormattedMessage id='account.edit'/>
+                            <FormattedMessage id='account.edit' />
                         </Button>
                     </article>
                     <span className='c-divider o-distance' />
@@ -90,7 +90,7 @@ const TemplatesMyUserData = ({ products }) => {
                             </div>
                             <div className='o-block-short__body'>
                                 <dt className='u-text-s t-text-quiet'>
-                                    <FormattedMessage id='account.login.password'/>
+                                    <FormattedMessage id='account.login.password' />
                                 </dt>
                                 <dd className='u-text-s u-text-strong'>
                                   **********
@@ -98,7 +98,7 @@ const TemplatesMyUserData = ({ products }) => {
                             </div>
                         </div>
                         <Button type='quiet' className='o-distance-m'>
-                            <FormattedMessage id='account.edit'/>
+                            <FormattedMessage id='account.edit' />
                         </Button>
                     </article>
                 </div>

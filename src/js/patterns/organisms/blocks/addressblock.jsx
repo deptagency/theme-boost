@@ -33,14 +33,14 @@ class OrganismsAddressblock extends Component {
                             </svg>
 
                             <span className='o-block-short__body'>
-                                <FormattedMessage id='account.change'/>
+                                <FormattedMessage id='account.change' />
                             </span>
                         </a>
           : null}
                 </div>
                 {this.props.sameAddress ?
                     <p className='o-distance-m u-text-s t-text-quiet'>
-                         <FormattedMessage id='account.address.corresponds'/>
+                        <FormattedMessage id='account.address.corresponds' />
                     </p>
                 : null }
             </Component>

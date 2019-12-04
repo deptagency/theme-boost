@@ -10,7 +10,7 @@ const TemplatesFullWishlist = () => {
             <OrganismsHeaderMobile />
             <section className='o-container o-prevent-space o-distance'>
                 <h1 className='c-title-level-3'>
-                    <FormattedMessage id='cart.myCart'/>
+                    <FormattedMessage id='cart.myCart' />
                 </h1>
                 <div className='o-grid o-grid--half o-grid--large-forth o-distance'>
                     <OrganismsProduct />

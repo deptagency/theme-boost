@@ -18,7 +18,7 @@ const TemplatesMyAddressChange = ({ products }) => {
             <div className='o-television__remote-control'>
                 <div className='o-container-small'>
                     <Button type='primary' size='boss'>
-                        <FormattedMessage id='account.save'/>
+                        <FormattedMessage id='account.save' />
                     </Button>
                 </div>
             </div>
