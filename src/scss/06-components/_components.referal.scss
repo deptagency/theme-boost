@@ -7,7 +7,7 @@
   text-decoration: none;
 
   &:hover {
-    color: $link-color-hover;
+    //color: $link-color-hover;
   }
 
   // Active Item includes a selected value
@@ -16,7 +16,7 @@
     grid-template-columns: 1fr 1fr;
   }
   &.is-focused {
-    color: $link-color-hover;
+    //color: $link-color-hover;
     
     .c-referal__body {
       font-weight: bold;

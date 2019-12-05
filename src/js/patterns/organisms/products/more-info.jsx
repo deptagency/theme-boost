@@ -1,26 +1,38 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { FormattedMessage } from 'react-intl'
+import classnames from 'classnames'
 import { ReactComponent as ChevronDown } from '../../../../icons/chevronDown.svg'
 import Collapsible from 'react-collapsible'
 import ReviewsPanel from '../../organisms/products/panels/reviews-panel'
 
 const OrganismsMoreInfoProduct = ({ product }) => {
     const [reviewsOpen, setReviewsOpen] = useState(false)
+    const [isDescriptionFocused, setIsDescriptionFocused] = useState(false)
+    const [isShippingFocused, setIsShippingFocused] = useState(false)
+    const [isReviewsFocused, setIsReviewsFocused] = useState(false)
 
     return (
         <nav role='navigation' className='o-distance-m o-prevent-space'>
             <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
                 <Collapsible
+                    onOpening={() => { setIsDescriptionFocused(true) }}
+                    onClosing={() => { setIsDescriptionFocused(false) }}
                     trigger={
-                        <div title='' className='c-referal is-focused'>
-                            <h3 className='c-title-level-4 c-referal__body'>Beschreibung</h3>
+                        <div
+                            className={classnames({
+                                'c-referal': true,
+                                'is-focused': isDescriptionFocused,
+                            })}
+                        >
+                            <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.description' /></h3>
                             <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                         </div>
                     }
                 >
                     <div className='o-distance'>
-                        <h2 className='c-title-level-2'>Beschreibung</h2>
+                        {/* <h2 className='c-title-level-2'>Beschreibung</h2> */}
                         <dl className='o-detaillist o-distance-m'>
                             <dt className='t-text-quiet'>Material Oberstoff:</dt>
                             <dd className='u-text-strong'>100% Viskose</dd>
@@ -44,9 +56,16 @@ const OrganismsMoreInfoProduct = ({ product }) => {
             <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
                 <Collapsible
+                    onOpening={() => { setIsShippingFocused(true) }}
+                    onClosing={() => { setIsShippingFocused(false) }}
                     trigger={
-                        <div className='c-referal is-focused'>
-                            <h3 className='c-title-level-4 c-referal__body'>Versand</h3>
+                        <div
+                            className={classnames({
+                                'c-referal': true,
+                                'is-focused': isShippingFocused,
+                            })}
+                        >
+                            <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.shipping' /></h3>
                             <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                         </div>
                     }
@@ -96,8 +115,17 @@ const OrganismsMoreInfoProduct = ({ product }) => {
             </div>
             <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
-                <div className='c-referal' onClick={() => { setReviewsOpen(true) }}>
-                    <h3 className='c-title-level-4 c-referal__body'>Bewertungen (62)</h3>
+                <div
+                    className={classnames({
+                        'c-referal': true,
+                        'is-focused': isReviewsFocused,
+                    })}
+                    onClick={() => {
+                        setIsReviewsFocused(!isReviewsFocused)
+                        setTimeout(() => { setReviewsOpen(true) }, 50)
+                    }}
+                >
+                    <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.reviews' values={{ count: 7 }} /></h3>
                     <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                 </div>
             </div>
@@ -105,7 +133,10 @@ const OrganismsMoreInfoProduct = ({ product }) => {
 
             <ReviewsPanel
                 isOpen={reviewsOpen}
-                onClose={() => { return setReviewsOpen(false) }}
+                onClose={() => {
+                    setIsReviewsFocused(!isReviewsFocused)
+                    setReviewsOpen(false)
+}}
                 product={product}
             />
 
