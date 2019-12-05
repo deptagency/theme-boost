@@ -1,9 +1,10 @@
 // @name Border
 // @description Available options for standard border
 
-$border-color-base: #d8e0ec;
-$border-color-focus: #3a42f1;
-$border-radius-base: 8px;
-$border-radius-rounded: 150px;
-$border-radius-checkbox: 5px;
-$border-size-base: 2px;
+$border-color-base: $color-palette-gray-300 !default;
+$border-color-focus: $color-palette-blue-600 !default;
+$border-radius-base: 8px !default;
+$border-radius-rounded: 150px !default;
+$border-radius-checkbox: 5px !default;
+$border-size-base: 2px !default;
+$border-style-base: solid !default;

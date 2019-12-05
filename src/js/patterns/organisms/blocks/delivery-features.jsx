@@ -1,18 +1,21 @@
 import React, { Fragment } from 'react'
-import deliveryTruck from '../../../../icons/delivery-truck.svg'
 
+import { FormattedMessage } from 'react-intl'
 import StoreFeatureList from '../../molecules/StoreFeatureList'
+import { ReactComponent as DeliveryTruck } from '../../../../icons/delivery-truck.svg'
 
 const OrganismsDeliveryFeatures = () => {
     return (
         <Fragment>
             <div className='o-block-short margin-12 padding-top--10'>
-                <img src={deliveryTruck} alt='delivery' />
+                <DeliveryTruck className='c-icon c-icon--l t-text-quiet' />
 
                 <div className='padding-left--16'>
-                    <strong className='u-text-strong'>Expres Lieferung:</strong>
+                    <strong className='u-text-strong'>
+                        <FormattedMessage id='order.deliveryFeatures.title' />
+                    </strong>
                     <p className='u-text-small'>
-                        Bestelle in den nächsten sechs Stunden und du erhälsts deine Lieferung morgen.
+                        <FormattedMessage id='order.deliveryFeatures.message' />
                     </p>
                 </div>
             </div>

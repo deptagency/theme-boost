@@ -1,46 +1,40 @@
 // @name Color Palette
 // @description Basic palette of all available colors
-$color-palette-unique-white: #ffffff;
-$color-palette-unique-black: #000000;
-$color-palette-blue-lighter: #ebecfe;
-$color-palette-blue-light: #898ef7;
-$color-palette-blue-base: #3a42f1;
-$color-palette-green-light: #f5fcf1;
-$color-palette-green-base: #98e076;
-$color-palette-orange-lighter: #fff7dc;
-$color-palette-orange-light: #ffe274;
-$color-palette-orange-base: #ffce18;
-$color-palette-gray-lightest: #f6faff;
-$color-palette-gray-lighter: #f1f6fc;
-$color-palette-gray-light: #d8e0ec;
-$color-palette-gray-base: #8c9bb0;
-$color-palette-gray-dark: #424f62;
+$color-palette-white: #fff !default;
+$color-palette-black: #000 !default;
+$color-palette-blue-100: #ebecfe !default;
+$color-palette-blue-400: #898ef7 !default;
+$color-palette-blue-600: #3a42f1 !default;
+$color-palette-green-200: #f5fcf1 !default;
+$color-palette-green-400: #98e076 !default;
+$color-palette-red-200: #faeaea !default;
+$color-palette-red-400: #e07676 !default;
+$color-palette-orange-200: #fff7dc !default;
+$color-palette-orange-400: #ffe274 !default;
+$color-palette-orange-600: #ffce18 !default;
+$color-palette-gray-100: #f6faff !default;
+$color-palette-gray-200: #f1f6fc !default;
+$color-palette-gray-300: #d8e0ec !default;
+$color-palette-gray-400: #c5cdd7 !default;
+$color-palette-gray-500: #8c9bb0 !default;
+$color-palette-gray-600: #697587 !default;
+$color-palette-gray-700: #424f62 !default;
+$color-palette-gray-800: #313E51 !default;
+$color-palette-gray-900: #192333 !default;
 
 // @name Color Brand
 // @description The key colors for your brand and making the platform more personal
-$color-brand-primary-base: #3a42f1;
-$color-brand-primary-gradation: #898ef7;
-$color-brand-primary-pastel: #ebecfe;
-$color-brand-secondary-base: #ffce18;
-$color-brand-secondary-gradation: #ffe274;
-$color-brand-secondary-pastel: #fff7dc;
+$color-brand-primary-base: $color-palette-blue-600 !default;
+$color-brand-primary-light: $color-palette-blue-400 !default;
+$color-brand-primary-lighter: $color-palette-blue-100 !default;
 
-// @name Color Layout
-// @description For Usage of backgrounds, font colors etc.
-$color-layout-ghost-base: #ffffff;
-$color-layout-ghost-gradation: #8c9bb0;
-$color-layout-ghost-inverse: #424f62;
-$color-layout-universe-base: #424f62;
-$color-layout-universe-gradation: #8c9bb0;
-$color-layout-universe-pastel: #d8e0ec;
-$color-layout-universe-inverse: #ffffff;
-$color-layout-spot-base: #3a42f1;
-$color-layout-spot-gradation: #898ef7;
-$color-layout-spot-pastel: #ebecfe;
+$color-brand-secondary-base: $color-palette-orange-600 !default;
+$color-brand-secondary-light: $color-palette-orange-400 !default;
+$color-brand-secondary-lighter: $color-palette-orange-200 !default;
 
 // @name Color Semantic
 // @description Meaningful colors for something like error or success messages
-$color-semantic-success-base: #98c674;
-$color-semantic-success-gradation: #f0faea;
-$color-semantic-danger-base: #e07676;
-$color-semantic-danger-gradation: #faeaea;
+$color-semantic-success-base: $color-palette-green-400 !default;
+$color-semantic-success-light: $color-palette-green-200 !default;
+$color-semantic-danger-base: $color-palette-red-400 !default;
+$color-semantic-danger-light: $color-palette-red-200 !default;

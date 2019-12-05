@@ -1,0 +1,52 @@
+.marginRight10 {
+  margin-right: 10px;
+}
+
+.marginRight16 {
+  margin-right: 16px;
+}
+
+.borderNone {
+  border: none
+}
+
+.borderBottom_selected {
+  border-bottom: 2px solid #3A42F1;
+}
+
+.moreInfoDesktop {
+  display: grid;
+  grid-template-columns: 60% 40%;
+
+  .moreInfoDesktop__tabs {
+    display: inline-block;
+    background: #F6F8FC;
+    border: none;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer;
+
+    .moreInfoDesktop__tabList {
+      border: none;
+
+      .moreInfoDesktop__tab {
+        display: inline-block;
+        border: none;
+        border-bottom: none;
+        bottom: -1px;
+        position: relative;
+        list-style: none;
+        cursor: pointer;
+        color: #97A5BA;
+      }
+    }
+  }
+
+  .moreInfoDesktop__tabs_selected {
+      background: none;
+  }
+}
+

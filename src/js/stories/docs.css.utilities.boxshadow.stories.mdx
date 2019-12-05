@@ -1,0 +1,27 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import imgTheming from './images/theming.jpg'
+
+<Meta title='1.Docs|12-Utilities/Shadows'/>
+
+# Shadow
+So let's handle the standard shadow via class
+
+
+| Class        | Properties | Example
+| ------------- |:-------------:|:-------------:
+| `.u-box-shadow` | box-shadow: 0 0 20px rgba(0, 0, 0, 0.25) | Use the standard box shadow on an element
+
+
+<Preview>
+    <Story name='Box Shadow'>
+        <div className='u-box-shadow'>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        </div>
+    </Story>
+</Preview>
+
+```html
+<div className='u-box-shadow'>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+</div>
+```

@@ -1,21 +1,21 @@
 // Config
 $button-border-color: transparent !default;
 $button-background-color: $color-brand-primary-base !default;
-$button-font-color: $color-palette-unique-white !default;
+$button-font-color: $color-palette-white !default;
 
 $button-hover-border-color: $color-brand-primary-base !default;
-$button-hover-background-color: $color-palette-unique-white !default;
+$button-hover-background-color: $color-palette-white !default;
 $button-hover-font-color: $color-brand-primary-base !default;
 
-$button-ghost-border-color: $color-palette-unique-white !default;
-$button-ghost-background-color: $color-palette-unique-white !default;
+$button-ghost-border-color: $color-palette-white !default;
+$button-ghost-background-color: $color-palette-white !default;
 $button-ghost-font-color: $color-brand-primary-base !default;
 
-$button-quiet-border-color: $color-brand-primary-pastel !default;
-$button-quiet-background-color: $color-brand-primary-pastel !default;
+$button-quiet-border-color: $color-brand-primary-lighter !default;
+$button-quiet-background-color: $color-brand-primary-lighter !default;
 $button-quiet-font-color: $color-brand-primary-base !default;
 
-$button-quiet-hover-border-color: $color-brand-primary-gradation !default;
+$button-quiet-hover-border-color: $color-brand-primary-light !default;
 $button-quiet-hover-background-color: transparent !default;
 $button-quiet-hover-font-color: $color-brand-primary-base !default;
 
@@ -24,7 +24,7 @@ $button-plain-background-color: transparent !default;
 $button-plain-font-color: $color-brand-primary-base !default;
 
 $button-control-font-color: $color-brand-primary-base !default;
-$button-control-background-color: $color-palette-unique-white !default;
+$button-control-background-color: $color-palette-white !default;
 $button-control-size: 48px !default;
 
 // Component
@@ -80,7 +80,7 @@ $button-control-size: 48px !default;
   color: $button-quiet-font-color;
 
   &:hover {
-    border-color: $color-brand-primary-gradation;
+    border-color: $color-brand-primary-light;
     background-color: transparent;
   }
 }
@@ -90,7 +90,7 @@ $button-control-size: 48px !default;
 .c-button--destructive {
   @include border($color-semantic-danger-base);
   background-color: $color-semantic-danger-base;
-  color: $color-palette-unique-white;
+  color: $color-palette-white;
 
   &:hover {
     border-color: $color-semantic-danger-base;

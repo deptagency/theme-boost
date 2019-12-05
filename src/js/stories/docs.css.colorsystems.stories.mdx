@@ -1,50 +1,69 @@
 import imgColorSystem from './images/color-system.jpg'
 
-<Meta title='1.Docs|06-Color System'/>
+<Meta title='1.Docs|04-Color System'/>
 
 # Color System
-A system with four colors will help to scale up the architecture. There are different reasons to use colors. It would be possible to use it for the brand reprensation or you want to present a success message for the user. We have a lot of more use cases for the usage of colors.
+A system with three colors will help to scale up the architecture. There are different reasons to use colors. It would be possible to use it for the brand reprensation or you want to present a success message for the user. We have a lot of more use cases for the usage of colors.
 
 <img src={imgColorSystem} />
 
 **We categorize the colors into different groups:**
 * Color Palette
 * Brand Colors
-* Layout Colors
 * Semantic Colors
 
-## Color Palette
-It contains all colors from the project. Each other color variable is based on this palette.
+## 1. Color Palette
+It contains all colors from the project. Each other color variable is based on this palette. This is a very specific level.
+
+**Sheme:**
 
 ````scss
-$color-gray-dark: #666;
-$color-gray-base: #ccc;
-$color-gray-lighter: #f2f2f2;
-
-$color-red-base: #ff0000;
+$color-palette-{COLOR}-{BRIGHTNESS}
 ````
 
-## Brand Colors
-The colors of the brand and the key colors for the theme.
+**Examples:**
 
 ````scss
-$brand-color-primary-base: green !default;
-$brand-color-primary-gradation: LightGreen !default;
+$color-palette-gray-100: #f6faff !default;
+$color-palette-gray-200: #f1f6fc !default;
+$color-palette-gray-300: #d8e0ec !default;
+$color-palette-gray-400: #c5cdd7 !default;
+$color-palette-gray-500: #8c9bb0 !default;
 ````
 
-## Layout Colors
-Used for page layout like containers, borders, cards, rules, headers, footers, and sidebars. 
+Brightness is available in **100, 200, 300, 400, 500, 600, 700, 800 and 900** (from lightest to darkest)
+
+## 2. Brand Colors
+The colors of the brand and the key colors for the theme. In this level we need a more generic approach. So the naming is a bit different.
+
+**Sheme:**
 
 ````scss
-$layout-color-spot-light: lighterblue !default;
-$layout-color-spot-dark: AliceBlue !default;
+$color-{TYPE}-{NAME}-{BRIGHTNESS}
 ````
 
-## Semantic Colors
+**Example:**
+
+````scss
+$brand-color-primary-base: $color-palette-gray-500 !default;
+$brand-color-primary-light: $color-palette-gray-300 !default;
+$brand-color-primary-lighter: $color-palette-gray-100 !default;
+````
+
+Brightness is available in **lighter, light, base, dark and darker.**
+
+## 3. Semantic Colors
 Meaningful and unique colors for feedback like success, warning, danger and other.
 
+**Sheme:**
+
 ````scss
-$semantic-color-success: green !default;
-$semantic-color-warning: orange !default;
-$semantic-color-danger: red !default;
+${COMPONENT}-{TYPE}-{PROPERTY_NAME}
+````
+
+**Example:**
+
+````scss
+$semantic-color-success-base: $color-palette-green-400 !default;
+$semantic-color-danger-base: $color-palette-red-400 !default;
 ````

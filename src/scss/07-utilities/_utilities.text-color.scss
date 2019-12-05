@@ -1,0 +1,75 @@
+.t-text-quiet {
+  color: $color-palette-gray-500 !important;
+}
+
+.t-text-ghost {
+  color: $color-palette-white !important;
+}
+
+.t-text-danger {
+  color: $color-semantic-danger-base !important;
+}
+
+.t-text-uniform {
+  color: $font-color-primary !important;
+}
+
+.t-text-focus {
+  color: $color-brand-secondary-base !important;
+}
+
+.t-text-spotlight {
+  color: $color-brand-primary-base !important;
+}
+
+.u-text-color-primary {
+  color: $color-brand-primary-base;
+}
+
+.u-text-color-secondary {
+  color: $color-brand-secondary-base;
+}
+
+// @name Text Color Danger
+.u-text-color-danger {
+  color: $color-semantic-danger-base !important;
+}
+
+// @name Text Color Success
+.u-text-color-success {
+  color: $color-semantic-success-base !important;
+}
+
+// Helper to create the text color like the normal body text
+.u-text-color-uniform {
+  color: $font-color-primary !important;
+}
+
+// Standard Text Colors mostly in different types of grays
+.u-text-color-800 {
+  color: $color-palette-gray-800;
+}
+
+.u-text-color-600 {
+  color: $color-palette-gray-600;
+}
+
+.u-text-color-300 {
+  color: $color-palette-gray-300;
+}
+
+.u-text-color-200 {
+  color: $color-palette-gray-200;
+}
+
+.u-text-color-100 {
+  color: $color-palette-gray-100;
+}
+
+.u-text-color-ghost {
+  color: $color-palette-white;
+}
+
+.u-text-quiet {
+  color: $color-palette-gray-500 !important;
+}

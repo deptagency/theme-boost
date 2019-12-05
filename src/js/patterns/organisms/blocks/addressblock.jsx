@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -31,12 +32,16 @@ class OrganismsAddressblock extends Component {
                                 </defs>
                             </svg>
 
-                            <span className='o-block-short__body'>Ändern</span>
+                            <span className='o-block-short__body'>
+                                <FormattedMessage id='account.change' />
+                            </span>
                         </a>
           : null}
                 </div>
                 {this.props.sameAddress ?
-                    <p className='o-distance-m u-text-s t-text-quiet'>Rechnungsadresse entspricht Lieferanschrift</p>
+                    <p className='o-distance-m u-text-s t-text-quiet'>
+                        <FormattedMessage id='account.address.corresponds' />
+                    </p>
                 : null }
             </Component>
         )

@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
+import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -11,7 +12,7 @@ const OrganismsSummary = ({ sum, currency, subtotal }) => {
                     <Fragment>
                         <div className='o-summary__item'>
                             <p className='u-text-s u-text-strong'>
-                      Zwischensumme
+                                <FormattedMessage id='cart.subtotal' />
                             </p>
                         </div>
                         <div className='o-summary__item'>
@@ -21,14 +22,18 @@ const OrganismsSummary = ({ sum, currency, subtotal }) => {
                         </div>
                     </Fragment>
                 : null}
-                <p className='o-summary__item u-text-s'>Versandkosten</p>
-                <p className='o-summary__item u-text-s cart-summary--right'>gratis</p>
+                <p className='o-summary__item u-text-s'>
+                    <FormattedMessage id='cart.shippingCosts' />
+                </p>
+                <p className='o-summary__item u-text-s cart-summary--right'>
+                    <FormattedMessage id='cart.gratis' />
+                </p>
                 <span className='o-summary__full-item c-divider' />
                 <div className='o-summary__item'>
                     <p className='u-text-strong'>
-                  Gesamtbetrag
+                        <FormattedMessage id='cart.totalAmount' />
                     </p>
-                    <p className='u-text-s t-text-quiet'>inkl. Mwst.</p>
+                    <p className='u-text-s t-text-quiet'><FormattedMessage id='cart.inclVat' /></p>
                 </div>
                 <div className='o-summary__item'>
                     <p className='u-text-m u-text-strong cart-summary--right'>{currency} {sum}</p>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -19,7 +20,9 @@ class OrganismsFormAddressChange extends Component {
                                             </div>
                                         </div>
                                         <div className='o-block-short__body'>
-                                            <label htmlFor='inp-radio-02' className='c-form-label'>Frau</label>
+                                            <label htmlFor='inp-radio-02' className='c-form-label'>
+                                                <FormattedMessage id='account.register.genderFemale' />
+                                            </label>
                                         </div>
                                     </div>
                                 </li>
@@ -32,40 +35,58 @@ class OrganismsFormAddressChange extends Component {
                                             </div>
                                         </div>
                                         <div className='o-block-short__body'>
-                                            <label htmlFor='inp-radio-02' className='c-form-label'>Herr</label>
+                                            <label htmlFor='inp-radio-02' className='c-form-label'>
+                                                <FormattedMessage id='account.register.genderMale' />
+                                            </label>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <label htmlFor='' className='c-form-label'>Firstname</label>
+                            <label htmlFor='' className='c-form-label'>
+                                <FormattedMessage id='account.register.firstName' />
+                            </label>
                             <input type='text' className='o-distance-xs' value='Tim' />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <label htmlFor='' className='c-form-label'>Lastname</label>
+                            <label htmlFor='' className='c-form-label'>
+                                <FormattedMessage id='account.register.lastName' />
+                            </label>
                             <input type='text' className='o-distance-xs' value='Hartmann' />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <label htmlFor='inp-mail' className='c-form-label'>Street with Nr.</label>
+                            <label htmlFor='inp-mail' className='c-form-label'>
+                                <FormattedMessage id='account.address.street' />
+                            </label>
                             <input type='text' id='inp-street' className='o-distance-s' value='Ewaldstr. 2' />
                         </div>
                         <div className='o-form-area__column-2-6 o-form-area__new-row'>
-                            <label htmlFor='inp-text' className='c-form-label'>PLZ</label>
+                            <label htmlFor='inp-text' className='c-form-label'>
+                                <FormattedMessage id='account.address.zip' />
+                            </label>
                             <input type='text' className='o-distance-s' id='inp-text' value='59174' />
                         </div>
                         <div className='o-form-area__column-4-6'>
-                            <label htmlFor='inp-text' className='c-form-label'>Ort</label>
+                            <label htmlFor='inp-text' className='c-form-label'>
+                                <FormattedMessage id='account.address.location' />
+                            </label>
                             <input type='text' className='o-distance-s' id='inp-text' value='Kamen' />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <label htmlFor='inp-hint-address' className='c-form-label'>Hint for Address</label>
+                            <label htmlFor='inp-hint-address' className='c-form-label'>
+                                <FormattedMessage id='account.address.hint' />
+                            </label>
                             <input type='text' id='inp-hint-address' className='o-distance-s' />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <label htmlFor='inp-hint-address' className='c-form-label'>Land</label>
+                            <label htmlFor='inp-hint-address' className='c-form-label'>
+                                <FormattedMessage id='account.address.land' />
+                            </label>
                             <select name='' id='' className='o-distance-s'>
-                                <option value=''>Choose</option>
+                                <option value=''>
+                                    <FormattedMessage id='account.choose' />
+                                </option>
                             </select>
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
@@ -80,7 +101,9 @@ class OrganismsFormAddressChange extends Component {
                                             </div>
                                         </div>
                                         <div className='o-block-short__body'>
-                                            <label htmlFor='inp-checkbox-02' className='c-form-label'>Lieferadresse</label>
+                                            <label htmlFor='inp-checkbox-02' className='c-form-label'>
+                                                <FormattedMessage id='account.address.delivery' />
+                                            </label>
                                         </div>
                                     </div>
                                 </li>
@@ -96,7 +119,9 @@ class OrganismsFormAddressChange extends Component {
                                             </div>
                                         </div>
                                         <div className='o-block-short__body'>
-                                            <label htmlFor='inp-checkbox-02' className='c-form-label'>Rechnungsadresse</label>
+                                            <label htmlFor='inp-checkbox-02' className='c-form-label'>
+                                                <FormattedMessage id='account.address.billing' />
+                                            </label>
                                         </div>
                                     </div>
                                 </li>

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { FormattedMessage } from 'react-intl'
+
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import _ from 'lodash'
@@ -41,22 +43,34 @@ class OrganismsHeaderMobile extends Component {
                                 </g>
                             </g>
                         </svg>
-                        <a href='' title='Boost Theme' className='c-logo o-list-inline__item'>Boost Theme</a>
+                        <a href='' title='Boost Theme' className='c-logo o-list-inline__item'>
+                            <FormattedMessage id='titleBoost' />
+                        </a>
                     </div>
                     <div className='o-list-inline o-list-inline--vertical-centered'>
                         <a href='' title='' className='c-link c-link--uniform o-list-inline__item u-line-height-reset u-text-center u-hidden-until-large'>
                             <SingleNeutralCircleIcon className='c-icon c-icon--s' />
-                            <p className='u-text-xxs u-line-height-reset'>Profile</p>
+                            <p className='u-text-xxs u-line-height-reset'>
+                                <FormattedMessage id='profile' />
+                            </p>
                         </a>
                         <button className='o-list-inline__item u-line-height-reset u-text-center'>
                             <svg version='1.1' xmlns='http://www.w3.org/2000/svg' className='c-icon c-icon--s' width='24' height='24' viewBox='0 0 24 24'>
                                 <path d='M21.7 20.3l-3.7-3.7c1.2-1.5 2-3.5 2-5.6 0-5-4-9-9-9s-9 4-9 9c0 5 4 9 9 9 2.1 0 4.1-0.7 5.6-2l3.7 3.7c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.4 0.4-1 0-1.4zM4 11c0-3.9 3.1-7 7-7s7 3.1 7 7c0 1.9-0.8 3.7-2 4.9 0 0 0 0 0 0s0 0 0 0c-1.3 1.3-3 2-4.9 2-4 0.1-7.1-3-7.1-6.9z' />
                             </svg>
-                            <p className='u-text-xxs u-line-height-reset'>Search</p>
+                            <p className='u-text-xxs u-line-height-reset'>
+                                <FormattedMessage id='header.search' />
+                            </p>
                         </button>
                         <a href='' title='Wishlist' className='c-link c-link--uniform o-list-inline__item u-line-height-reset u-text-center'>
-                            <svg className='c-icon c-icon--s' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><title>love-it-alternate</title><path d='M23.305,5.075A6.583,6.583,0,0,0,12.858,3.367L12,4.148l-.828-.754A6.525,6.525,0,0,0,5.485,1.587,6.476,6.476,0,0,0,.7,5.075,6.4,6.4,0,0,0,1.91,12.544L11.283,22.2a1,1,0,0,0,1.434,0l9.359-9.638A6.416,6.416,0,0,0,23.305,5.075Zm-2.648,6.076-8.3,8.545a.5.5,0,0,1-.717,0l-8.313-8.56A4.419,4.419,0,0,1,2.48,5.98,4.494,4.494,0,0,1,5.806,3.562,4.564,4.564,0,0,1,9.8,4.845l1.53,1.4a1,1,0,0,0,1.347,0l1.561-1.423A4.546,4.546,0,0,1,18.2,3.562,4.492,4.492,0,0,1,21.521,5.98,4.427,4.427,0,0,1,20.657,11.151Z' /></svg>
-                            <p className='u-text-xxs u-line-height-reset'>Wishlist</p>
+                            <svg className='c-icon c-icon--s' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
+                                <title>
+                                    <FormattedMessage id='loveIt' />
+                                </title>
+                                <path d='M23.305,5.075A6.583,6.583,0,0,0,12.858,3.367L12,4.148l-.828-.754A6.525,6.525,0,0,0,5.485,1.587,6.476,6.476,0,0,0,.7,5.075,6.4,6.4,0,0,0,1.91,12.544L11.283,22.2a1,1,0,0,0,1.434,0l9.359-9.638A6.416,6.416,0,0,0,23.305,5.075Zm-2.648,6.076-8.3,8.545a.5.5,0,0,1-.717,0l-8.313-8.56A4.419,4.419,0,0,1,2.48,5.98,4.494,4.494,0,0,1,5.806,3.562,4.564,4.564,0,0,1,9.8,4.845l1.53,1.4a1,1,0,0,0,1.347,0l1.561-1.423A4.546,4.546,0,0,1,18.2,3.562,4.492,4.492,0,0,1,21.521,5.98,4.427,4.427,0,0,1,20.657,11.151Z' /></svg>
+                            <p className='u-text-xxs u-line-height-reset'>
+                                <FormattedMessage id='header.wishlist' />
+                            </p>
                         </a>
                         <a href='' title='Cart' className='c-link c-link--uniform o-list-inline__item u-line-height-reset u-text-center'>
                             <svg
@@ -80,7 +94,9 @@ class OrganismsHeaderMobile extends Component {
                                     fill='black'
                             />
                             </svg>
-                            <p className='u-text-xxs u-line-height-reset'>Cart</p>
+                            <p className='u-text-xxs u-line-height-reset'>
+                                <FormattedMessage id='header.cart' />
+                            </p>
                         </a>
                     </div>
                 </div>

@@ -45,7 +45,7 @@
     width: 24px;
     @include border();
     border-radius: $border-radius-rounded;
-    background: $color-palette-unique-white;
+    background: $color-palette-white;
     transition: all .3s cubic-bezier(.64,0,.35,1);
 
     &:after {
@@ -57,7 +57,7 @@
       top: 50%;
       width: 8px;
       border-radius: $border-radius-rounded;
-      background-color: $color-palette-unique-white;
+      background-color: $color-palette-white;
       transform: translate(-50%, -50%);
       transition: all .3s cubic-bezier(.64,0,.35,1);
     }

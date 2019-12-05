@@ -1,10 +1,9 @@
-
 // @name Divider
 // @description Quiet Separation different type of sections
-$divider-base-color-background: #d8e0ec;
-$divider-base-height: 1px;
+$divider-base-color-background: $color-palette-gray-300 !default;
+$divider-base-height: 1px !default;
 
 // @name Divider Break
 // @description Loud Separation of different type of sections
-$divider-break-color-background: #f6faff;
-$divider-break-height: 5px;
+$divider-break-color-background: $color-palette-gray-100 !default;
+$divider-break-height: 5px !default;

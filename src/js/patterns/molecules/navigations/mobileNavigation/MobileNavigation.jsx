@@ -2,8 +2,7 @@ import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-
-import useBackgroundImageUrl from '../../../../helper/hooks/useBackgroundImageUrl'
+import useBackgroundImageUrl from 'frontastic-catwalk/src/js/helper/hooks/useBackgroundImageUrl'
 
 import { MobileNavTree, TopCategoryNavTabs, BackButton, CloseButton } from './components'
 import { topCategoryType } from './types'
@@ -91,11 +90,11 @@ function MoleculesMobileNavigation ({ open, topCategories, onClose, callToAction
                     className='c-mobile-navigation__scrollcontainer'
                     style={{ transform: `translateX(${level * -100}%)` }}
                 >
-                    <MobileNavTree
+                    {topCategories[currentTopCategory].tree && <MobileNavTree
                         items={topCategories[currentTopCategory].tree.children}
                         navPath={navPath}
                         onSelectItem={handleSelectNavItem}
-                    />
+                    />}
                 </div>
             </div>
         </nav>

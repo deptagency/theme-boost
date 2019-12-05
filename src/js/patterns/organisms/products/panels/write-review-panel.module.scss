@@ -1,0 +1,30 @@
+.writeReviewPanel {
+  padding: 20px 10px;
+  font-weight: bold;
+
+  .productOverivew {
+    display: grid;
+    grid-template-columns: 106px 2fr;
+    margin-top: 22px;
+  }
+
+  .nameAndStars {
+    .productName{
+      font-weight: bold;
+    }
+
+    .productDesigner {
+      color: #97A5BA;
+      font-weight: normal;
+    }
+
+    .rateMsg {
+      color: #97A5BA;
+    }
+  }
+
+  .reviewTextStyle {
+    color: #31333E;
+    font-weight: normal;
+  }
+}

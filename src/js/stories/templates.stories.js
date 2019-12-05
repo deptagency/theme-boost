@@ -334,7 +334,7 @@ templatesProductDetail.story = {
 //             >
 //             <MoleculesCart />
 //         </div>,
-//         <TemplatesSlideUp
+//         <TemplatesSlideInPanel
 //             key='slide-in-content'
 //             isOpen={isOpen}
 //             setIsOpen={setIsOpen}
@@ -345,7 +345,7 @@ templatesProductDetail.story = {
 //       ) : (
 //           <TemplatesFullCart setIsOpen={setIsOpen} />
 //       )}
-//         </TemplatesSlideUp>,
+//         </TemplatesSlideInPanel>,
 //     ]
 // }
 

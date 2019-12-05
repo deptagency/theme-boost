@@ -63,7 +63,7 @@
     &__item {
       cursor: pointer;
       margin-left: $spacing-inline-m;
-      @include border($color-palette-unique-white);
+      @include border($color-palette-white);
       @include box-shadow();
       transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 

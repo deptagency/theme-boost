@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { FormattedMessage } from 'react-intl'
 import OrganismsProduct from '../../organisms/products/product'
 import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
 import OrganismsFooter from 'js/patterns/organisms/base/foot'
@@ -8,7 +9,9 @@ const TemplatesFullWishlist = () => {
         <Fragment>
             <OrganismsHeaderMobile />
             <section className='o-container o-prevent-space o-distance'>
-                <h1 className='c-title-level-3'>Mein Warenkorb</h1>
+                <h1 className='c-title-level-3'>
+                    <FormattedMessage id='cart.myCart' />
+                </h1>
                 <div className='o-grid o-grid--half o-grid--large-forth o-distance'>
                     <OrganismsProduct />
                     <OrganismsProduct />

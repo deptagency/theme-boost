@@ -2,6 +2,8 @@ import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import app from 'frontastic-catwalk/src/js/app/app'
+import { FormattedMessage } from 'react-intl'
+
 import AccountAccessForms from '../../../patterns/templates/my-account/account-access'
 import { ReactComponent as ArrowLeftIcon } from '../../../../icons/arrow-left.svg'
 
@@ -20,7 +22,7 @@ const AccountItem = ({ name, onClick, showLeftArrow = true }) => {
 }
 
 AccountItem.propTypes = {
-    name: PropTypes.string.isRequired,
+    name: PropTypes.node.isRequired,
     onClick: PropTypes.func,
     showLeftArrow: PropTypes.bool,
 }
@@ -34,16 +36,21 @@ const AccountProfileTastic = ({ context }) => {
     return (
         <Fragment>
             <div className='profile-greet'>
-                Hallo, { session.account.firstName } { session.account.lastName }!
+                <FormattedMessage
+                    id='account.greet'
+                    values={{
+                        name: `${session.account.firstName} ${session.account.lastName}`,
+                    }}
+                />
             </div>
             <div>
-                <AccountItem name='Bestellungen' />
-                <AccountItem name='Rücksendungen' />
-                <AccountItem name='Benutzerdaten' />
-                <AccountItem name='Adressen' />
-                <AccountItem name='Hilfe' />
+                <AccountItem name={<FormattedMessage id='account.orders' />} />
+                <AccountItem name={<FormattedMessage id='account.returns' />} />
+                <AccountItem name={<FormattedMessage id='account.userInfo' />} />
+                <AccountItem name={<FormattedMessage id='account.addresses' />} />
+                <AccountItem name={<FormattedMessage id='account.help' />} />
                 <AccountItem
-                    name='Logout'
+                    name={<FormattedMessage id='account.logout' />}
                     onClick={() => { app.getLoader('context').logout() }}
                     showLeftArrow={false}
                 />

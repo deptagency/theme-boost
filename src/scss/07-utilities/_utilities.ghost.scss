@@ -1,0 +1,16 @@
+// Config
+$theme-ghost-main-color: $color-palette-white !default;
+
+// Ghost Theme
+// @group Themes
+.t-ghost {
+  background-color: $theme-ghost-main-color;
+}
+
+.t-ghost-border {
+  border-color: $theme-ghost-main-color;
+}
+
+.t-ghost-color {
+  color: $theme-ghost-main-color;
+}

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import Button from '../../atoms/buttons/button'
 import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
@@ -14,8 +15,10 @@ const TemplatesEmptyCart = () => {
                     <EmptyCartIcon className='c-icon c-icon--xl t-text-quiet' />
                 </div>
                 <div className='o-distance-m'>
-                    <p className='u-text-center'>Der Warenkorb ist noch leer.</p>
-                    <Button size='boss' type='primary' className='o-distance-s'>Jetzt anmelden</Button>
+                    <p className='u-text-center'><FormattedMessage id='cart.emptyCart' /></p>
+                    <Button size='boss' type='primary' className='o-distance-s'>
+                        <FormattedMessage id='cart.registerNow' />
+                    </Button>
                 </div>
             </section>
             <div className='o-prevent-space'>

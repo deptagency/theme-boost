@@ -38,8 +38,8 @@ class OrganismsGallery extends Component {
                         </button>
                     </div> */}
                     <Slider options={{ items: 1 }}>
-                        {images.map((url) => {
-                            return <img src={url} alt='' />
+                        {images.map((url, i) => {
+                            return <img key={i} src={url} alt='' />
                         })}
                     </Slider>
                 </div>

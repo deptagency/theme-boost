@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import OrganismsAddressblock from '../../organisms/blocks/addressblock'
 import OrganismsPaymentListing from '../../organisms/listings/payment-listing'
@@ -19,12 +20,16 @@ class TemplatesOrderBilling extends Component {
                         <span className='c-divider c-divider--break' />
                     </div>
                     <div className='o-distance'>
-                        <h2 className='c-title-level-3'>Zahlungsmethode wählen</h2>
+                        <h2 className='c-title-level-3'>
+                            <FormattedMessage id='order.selectMethod' />
+                        </h2>
                         <div className='o-distance-m'>
                             <OrganismsPaymentListing />
                         </div>
                     </div>
-                    <Button type='primary' size='boss' className='o-distance'>Weiter</Button>
+                    <Button type='primary' size='boss' className='o-distance'>
+                        <FormattedMessage id='account.more' />
+                    </Button>
                 </div>
                 <div className='o-prevent-space'>
                     <OrganismsFooter />

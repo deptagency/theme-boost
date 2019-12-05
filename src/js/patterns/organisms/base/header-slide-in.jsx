@@ -1,51 +1,52 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import _ from 'lodash'
+import { ReactComponent as CloseMobile } from '../../../../icons/close-x-mobile.svg'
+import { ReactComponent as ArrowLeftWhite } from '../../../../icons/arrow-left-white.svg'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsHeaderSlideIn extends Component {
-    render () {
-        const Component = this.props.component
-        const { title, setIsOpen } = this.props
+const OrganismsHeaderSlideIn = (props) => {
+    const { component: Component, title, onClose, showLeftBackIcon, showRightCloseIcon, className, theme } = props
+    return (
+        <Component
+            {..._.omit(props, ['component', 'className', 'theme', 'title', 'onClose', 'showLeftBackIcon', 'showRightCloseIcon'])}
+            className={classnames(
+              'c-context-header',
+              className,
+              theme
+          )}
+            >
+            <div className='o-container c-context-header__wrapper'>
 
-        return (
-            <Component
-                {..._.omit(this.props, ['children', 'component', 'className', 'theme', 'title', 'setIsOpen'])}
-                className={classnames(
-                  'c-context-header',
-                  this.props.className,
-                  this.props.theme
-              )}
-                >
-                <div className='o-container c-context-header__wrapper'>
+                {showLeftBackIcon && <button onClick={onClose}>
+                    <ArrowLeftWhite />
+                </button>}
 
-                    <div className='c-context-header__middle'>
-                        <div className='o-flex o-flex--justify-center'>
-                            <h1 className='c-title-level-3 c-context-header__title o-flex__item'>
-                                {title}
-                            </h1>
-                        </div>
+                <div className='c-context-header__middle'>
+                    <div className='o-flex o-flex--justify-center'>
+                        <h4 className='c-title-level-4 c-context-header__title o-flex__item'>
+                            {title}
+                        </h4>
                     </div>
-                    <button onClick={() => { setIsOpen(false) }}>
-                        <svg className='c-icon c-icon--m' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-                            <path d='M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z' />
-                        </svg>
-                    </button>
                 </div>
-            </Component>
-        )
-    }
+                {showRightCloseIcon && <button onClick={onClose}>
+                    <CloseMobile />
+                </button>}
+            </div>
+        </Component>
+    )
 }
 
 OrganismsHeaderSlideIn.propTypes = {
-    children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     theme: PropTypes.string,
-    title: PropTypes.string.isRequired,
-    setIsOpen: PropTypes.func.isRequired,
+    title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+    onClose: PropTypes.func.isRequired,
+    showLeftBackIcon: PropTypes.bool,
+    showRightCloseIcon: PropTypes.bool,
 }
 
 OrganismsHeaderSlideIn.defaultProps = {
@@ -53,6 +54,9 @@ OrganismsHeaderSlideIn.defaultProps = {
     theme: 't-spotlight',
     className: '',
     title: '',
+    onClose: () => {},
+    showLeftBackIcon: true,
+    showRightCloseIcon: true,
 }
 
 export default ComponentInjector.return('OrganismsHeaderSlideIn', OrganismsHeaderSlideIn)

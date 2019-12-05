@@ -9,7 +9,7 @@ class TemplatesPasswordResetConfirmation extends Component {
     render () {
         return (
             <div className='o-television'>
-                <OrganismsHeaderSlideIn setIsOpen={() => {}} title='Bestätigung' className='o-television__bar' />
+                <OrganismsHeaderSlideIn title='Bestätigung' className='o-television__bar' />
                 <div className='o-television__display'>
                     <div className='o-container-small'>
                         <div className='u-text-center'>
