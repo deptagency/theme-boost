@@ -5,8 +5,6 @@ import Button from 'js/patterns/atoms/buttons/button'
 import OrganismsPromobox from 'js/patterns/molecules/promobox/promobox'
 import OrganismsPromoboxWithPositioning from 'js/patterns/molecules/promobox/promobox-with-positioning'
 
-import OrganismsFeaturebox from 'js/patterns/organisms/featurebox/featurebox'
-
 export default {
     title: '4.Organisms|Boxes',
 }
@@ -23,46 +21,28 @@ promobox.story = {
     name: 'Promobox',
 }
 
-export const featurebox = () => {
-    return (
-        <OrganismsFeaturebox />
-    )
-}
-
-featurebox.story = {
-    name: 'Featurebox',
-}
-
 export const contentPromoboxWithPositioning = () => {
     return (
         <div>
-            <OrganismsPromoboxWithPositioning vertical='top' horizontal='right' >
+            <OrganismsPromoboxWithPositioning vertical='top' horizontal='right'>
                 <p className='c-topic'>Jetzt für den Sommer</p>
                 <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
-                <Button type='primary'>
-                Jetzt shoppen
-                </Button>
+                <Button type='primary'>Jetzt shoppen</Button>
             </OrganismsPromoboxWithPositioning>
-            <OrganismsPromoboxWithPositioning vertical='bottom' horizontal='left' >
+            <OrganismsPromoboxWithPositioning vertical='bottom' horizontal='left'>
                 <p className='c-topic'>Jetzt für den Sommer</p>
                 <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
-                <Button type='primary'>
-              Jetzt shoppen
-                </Button>
+                <Button type='primary'>Jetzt shoppen</Button>
             </OrganismsPromoboxWithPositioning>
-            <OrganismsPromoboxWithPositioning vertical='middle' horizontal='center' >
+            <OrganismsPromoboxWithPositioning vertical='middle' horizontal='center'>
                 <p className='c-topic'>Jetzt für den Sommer</p>
                 <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
-                <Button type='primary'>
-              Jetzt shoppen
-                </Button>
+                <Button type='primary'>Jetzt shoppen</Button>
             </OrganismsPromoboxWithPositioning>
-            <OrganismsPromoboxWithPositioning >
+            <OrganismsPromoboxWithPositioning>
                 <p className='c-topic'>Jetzt für den Sommer</p>
                 <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
-                <Button type='primary'>
-              Jetzt shoppen
-                </Button>
+                <Button type='primary'>Jetzt shoppen</Button>
             </OrganismsPromoboxWithPositioning>
         </div>
     )
@@ -77,19 +57,27 @@ export const standardboxes = () => {
         <div>
             <h3 className='o-distance'>Small Box</h3>
             <div className='c-box c-box--s t-quietlight'>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus omnis, ad repellat aliquam!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident
+                necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus
+                omnis, ad repellat aliquam!
             </div>
             <h3 className='o-distance'>Box</h3>
             <div className='c-box t-quietlight'>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus omnis, ad repellat aliquam!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident
+                necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus
+                omnis, ad repellat aliquam!
             </div>
             <h3 className='o-distance'>Large Box</h3>
             <div className='c-box c-box--l t-quietlight'>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus omnis, ad repellat aliquam!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident
+                necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus
+                omnis, ad repellat aliquam!
             </div>
             <h3 className='o-distance'>X-Large Box</h3>
             <div className='c-box c-box--xl t-quietlight'>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus omnis, ad repellat aliquam!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident
+                necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus
+                omnis, ad repellat aliquam!
             </div>
         </div>
     )
@@ -104,19 +92,27 @@ export const frames = () => {
         <div>
             <h3 className='o-distance'>Small Frame</h3>
             <div className='c-frame c-frame--s'>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus omnis, ad repellat aliquam!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident
+                necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus
+                omnis, ad repellat aliquam!
             </div>
             <h3 className='o-distance'>Frame</h3>
             <div className='c-frame'>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus omnis, ad repellat aliquam!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident
+                necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus
+                omnis, ad repellat aliquam!
             </div>
             <h3 className='o-distance'>Large Frame</h3>
             <div className='c-frame c-frame--l'>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus omnis, ad repellat aliquam!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident
+                necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus
+                omnis, ad repellat aliquam!
             </div>
             <h3 className='o-distance'>X-Large Frame</h3>
             <div className='c-frame c-frame--xl'>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus omnis, ad repellat aliquam!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, tenetur! Vero provident
+                necessitatibus animi. Laborum, ullam qui placeat esse dolores eligendi ipsa nemo impedit sint ducimus
+                omnis, ad repellat aliquam!
             </div>
         </div>
     )
