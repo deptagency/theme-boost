@@ -22,17 +22,12 @@ const MoreInfoProductTastic = ( { product, variant: propsVariant, route }) => {
         variant = propsVariant
     }
 
-/*    const MoreInfoComponent = (props) => {
+    const MoreInfoComponent = (props) => {
         if(width < 600)
             return <OrganismsMoreInfoProductMobile {... props} />
-        else return <div className='desktop-more-info' {... props} />
+        else return <OrganismsMoreInfoProductDesktop className='desktop-more-info' {... props} />
 
-    }*/
-
-    return (
-        <OrganismsMoreInfoProductMobile product={{ ...variant, name: product.name }} />
-    )
-
+    }
 
     return (
         <MoreInfoComponent product={{ ...variant, name: product.name }} />

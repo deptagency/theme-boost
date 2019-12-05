@@ -5,3 +5,42 @@
 .marginRight16 {
   margin-right: 16px;
 }
+
+.borderNone {
+  border: none
+}
+
+.moreInfoDesktop {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 645px;
+
+  .moreInfoDesktop__tabs {
+    display: inline-block;
+    background: #F6F8FC;
+    border: none;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer;
+
+    .moreInfoDesktop__tabList {
+      border: none;
+
+      .moreInfoDesktop__tab {
+        display: inline-block;
+        border: none;
+        border-bottom: none;
+        bottom: -1px;
+        position: relative;
+        list-style: none;
+        padding: 6px 12px;
+        cursor: pointer;
+        color: #97A5BA;
+      }
+    }
+  }
+}
+
