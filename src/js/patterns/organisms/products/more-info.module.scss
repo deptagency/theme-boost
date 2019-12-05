@@ -16,8 +16,7 @@
 
 .moreInfoDesktop {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  height: 645px;
+  grid-template-columns: 60% 40%;
 
   .moreInfoDesktop__tabs {
     display: inline-block;

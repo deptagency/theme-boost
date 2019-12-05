@@ -6,12 +6,8 @@ import productConnector from 'frontastic-catwalk/src/js/tastic/product/connector
 import OrganismsMoreInfoProductMobile from '../../patterns/organisms/products/more-info-mobile.jsx'
 import OrganismsMoreInfoProductDesktop from '../../patterns/organisms/products/more-info-desktop.jsx'
 
-const MoreInfoProductTastic = ( { product, variant: propsVariant, route }) => {
+const MoreInfoProductTastic = ({ product, variant: propsVariant, route }) => {
     const width = useWindowWidth()
-
-    useEffect(() => {
-        console.log('windowWIdth',  width)
-    }, [width])
 
     if (!product || !propsVariant) {
         return null
@@ -23,17 +19,12 @@ const MoreInfoProductTastic = ( { product, variant: propsVariant, route }) => {
     }
 
     const MoreInfoComponent = (props) => {
-        if(width < 600)
-            return <OrganismsMoreInfoProductMobile {... props} />
-        else return <OrganismsMoreInfoProductDesktop className='desktop-more-info' {... props} />
-
+        if (width < 600) { return <OrganismsMoreInfoProductMobile {... props} /> } else { return <OrganismsMoreInfoProductDesktop className='desktop-more-info' {... props} /> }
     }
 
     return (
         <MoreInfoComponent product={{ ...variant, name: product.name }} />
     )
-
-
 }
 
 MoreInfoProductTastic.propTypes = {
