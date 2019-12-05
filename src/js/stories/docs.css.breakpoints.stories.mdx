@@ -1,11 +1,13 @@
-<Meta title='1.Docs|11-Breakpoints'/>
+<Meta title='1.Docs|11-Breakpoints' />
 
 # Breakpoints
+
 Our framework is based on the mobile first approach and use a mixin for the creation of the breakpoint.
 
 `01-settings/_settings.breakpoint.scss`
 
 **Values:**
+
 ```json
 $layout-breakpoint-s: 480px;
 $layout-breakpoint-m: 600px;
@@ -15,37 +17,41 @@ $layout-breakpoint-xxl: 1160px;
 ```
 
 **Mixin:**
+
 ```scss
 // scss/02-tools/_tools.breakpoint.scss
 
 @mixin breakpoint($breakpoint) {
-  @media (min-width: $breakpoint) {
-    @content;
-  }
+    @media (min-width: $breakpoint) {
+        @content;
+    }
 }
 ```
 
 ## Practice
+
 **Don't**
-````scss
+
+```scss
 .c-button {
-  background-color: red;
+    background-color: red;
 }
 
-@mixin breakpoint($layout-breakpoint-m) {
-  .c-button {
-    background-color: blue;
-  }
+@include breakpoint($layout-breakpoint-m) {
+    .c-button {
+        background-color: blue;
+    }
 }
-````
+```
 
 **Do**
-````scss
-.c-button {
-  background-color: red;
 
-  @mixin breakpoint($layout-breakpoint-m) {
-    background-color: blue;
-  }
+```scss
+.c-button {
+    background-color: red;
+
+    @include breakpoint($layout-breakpoint-m) {
+        background-color: blue;
+    }
 }
-````
+```
