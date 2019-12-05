@@ -9,7 +9,7 @@ import Collapsible from 'react-collapsible'
 import ReviewsPanel from '../../organisms/products/panels/reviews-panel'
 import { marginRight10, marginRight16 } from './more-info.module.scss'
 
-const OrganismsMoreInfoProduct = ({ product }) => {
+const OrganismsMoreInfoProductDesktop = ({ product }) => {
     const [reviewsOpen, setReviewsOpen] = useState(false)
     const [isDescriptionFocused, setIsDescriptionFocused] = useState(false)
     const [isShippingFocused, setIsShippingFocused] = useState(false)
@@ -128,8 +128,8 @@ const OrganismsMoreInfoProduct = ({ product }) => {
     )
 }
 
-OrganismsMoreInfoProduct.propTypes = {
+OrganismsMoreInfoProductDesktop.propTypes = {
     product: PropTypes.object.isRequired,
 }
 
-export default OrganismsMoreInfoProduct
+export default OrganismsMoreInfoProductDesktop
