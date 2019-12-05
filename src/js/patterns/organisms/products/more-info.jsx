@@ -32,22 +32,21 @@ const OrganismsMoreInfoProduct = ({ product }) => {
                     }
                 >
                     <div className='o-distance'>
-                        {/* <h2 className='c-title-level-2'>Beschreibung</h2> */}
                         <dl className='o-detaillist o-distance-m'>
-                            <dt className='t-text-quiet'>Material Oberstoff:</dt>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.materialOuterFabric' /></dt>
                             <dd className='u-text-strong'>100% Viskose</dd>
-                            <dt className='t-text-quiet'>Futter:</dt>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.lining' /></dt>
                             <dd className='u-text-strong'>100% Viskose</dd>
                         </dl>
-                        <h3 className='c-title-level-3 o-distance'>Mehr zu diesem Produkt</h3>
+                        <h3 className='c-title-level-3 o-distance'><FormattedMessage id='product.moreAboutThisProduct' /></h3>
                         <dl className='o-detaillist o-distance-m'>
-                            <dt className='t-text-quiet'>Ausschnitt:</dt>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.cut' /></dt>
                             <dd className='u-text-strong'>100% Viskose</dd>
-                            <dt className='t-text-quiet'>Verschluss:</dt>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.clasp' /></dt>
                             <dd className='u-text-strong'>Schnürung</dd>
-                            <dt className='t-text-quiet'>Muster:</dt>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.samples' /></dt>
                             <dd className='u-text-strong'>Print</dd>
-                            <dt className='t-text-quiet'>Artikelnummer:</dt>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.itemNumber' /></dt>
                             <dd className='u-text-strong'>M523C012-K23</dd>
                         </dl>
                     </div>
@@ -78,7 +77,7 @@ const OrganismsMoreInfoProduct = ({ product }) => {
                                     <path d='M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z' />
                                 </svg>
                                 <div className='o-block-short__body u-text-s'>
-                                    Kostenloser Versand
+                                    <FormattedMessage id='product.freeShipping' />
                                 </div>
                             </div>
                             <div className='o-list-bare__item o-block-short o-block-short--centered'>
@@ -87,7 +86,7 @@ const OrganismsMoreInfoProduct = ({ product }) => {
                                     <path d='M20.7 5.3c-0.4-0.4-1-0.4-1.4 0l-10.3 10.3-4.3-4.3c-0.4-0.4-1-0.4-1.4 0s-0.4 1 0 1.4l5 5c0.2 0.2 0.4 0.3 0.7 0.3s0.5-0.1 0.7-0.3l11-11c0.4-0.4 0.4-1 0-1.4z' />
                                 </svg>
                                 <div className='o-block-short__body u-text-s'>
-                                    100 Tage Rückgaberecht
+                                    <FormattedMessage id='product.returnPolicy100days' />
                                 </div>
                             </div>
                         </div>
@@ -106,8 +105,8 @@ const OrganismsMoreInfoProduct = ({ product }) => {
                                 </defs>
                             </svg>
                             <div className='o-block-short__body'>
-                                <p className='u-text-strong'>Standard-Lieferung:</p>
-                                <p className='o-distance-xs'>kostenlos 2-4 Werktage</p>
+                                <p className='u-text-strong'><FormattedMessage id='product.standardDelivery.title' /></p>
+                                <p className='o-distance-xs'><FormattedMessage id='product.standardDelivery.message' /></p>
                             </div>
                         </div>
                     </div>
