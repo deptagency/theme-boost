@@ -4,7 +4,7 @@ import MoleculesHeading from '../molecules/headings/heading'
 import OrganismsHead from '../organisms/base/header'
 import OrganismsFoot from '../organisms/base/foot'
 import OrganismsProductSwiper from '../organisms/swiper/product-swiper'
-import OrganismsListingFeatures from '../organisms/listings/feature-listing'
+import StoreFeatureList from '../molecules/StoreFeatureList'
 import OrganismsNewsletterBlock from '../organisms/blocks/newsletter'
 import OrganismsMoreInfoProduct from '../organisms/products/more-info'
 import OrganismsProductView from '../organisms/products/product-view'
@@ -49,7 +49,7 @@ class TemplatesDetail extends Component {
                         </div>
                     </div>
                     <div className='o-container o-distance o-prevent-space'>
-                        <OrganismsListingFeatures />
+                        <StoreFeatureList />
                     </div>
                     <OrganismsMoreInfoProduct />
                     <section className='o-container o-distance'>

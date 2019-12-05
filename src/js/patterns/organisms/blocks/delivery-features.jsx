@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import deliveryTruck from '../../../../icons/delivery-truck.svg'
 
-import OrganismsFeatureListing from '../listings/feature-listing'
+import StoreFeatureList from '../../molecules/StoreFeatureList'
 
 const OrganismsDeliveryFeatures = () => {
     return (
@@ -16,13 +16,11 @@ const OrganismsDeliveryFeatures = () => {
                     </p>
                 </div>
             </div>
-            <OrganismsFeatureListing />
+            <StoreFeatureList />
         </Fragment>
     )
 }
 
-OrganismsDeliveryFeatures.propTypes = {
-
-}
+OrganismsDeliveryFeatures.propTypes = {}
 
 export default OrganismsDeliveryFeatures

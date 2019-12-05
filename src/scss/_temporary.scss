@@ -485,3 +485,72 @@
     max-width: $layout-wrapper-width;
     margin: 0 auto;
 }
+
+.c-page-foot {
+    background: #31333e;
+    // default text color
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 32px;
+    padding-top: 12px;
+    @include breakpoint($layout-breakpoint-l) {
+        margin-top: 74px;
+        padding-top: 28px;
+    }
+    // TODO
+    font-family: $font-family-spot;
+    h2 {
+        color: white;
+    }
+}
+
+.button-login-register {
+    margin: 12px 10px 3px;
+    width: fill-available;
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+.profile-greet {
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+// marcel - StoreFeature
+.c-store-feature__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100% + 12px);
+    padding: 6px 0;
+    margin-left: -6px;
+    margin-right: -6px;
+    @include breakpoint($layout-breakpoint-l) {
+        padding: 12px 0;
+        margin-left: -12px;
+        margin-right: -12px;
+        width: calc(100% + 24px);
+    }
+}
+.c-store-feature {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    // TODO: @timhartmann - f4f4f4 wasn't yet defined as a color. not sure if this is final
+    background: #f4f4f4;
+    font-size: 12px;
+    color: #31333e;
+    min-width: 156px;
+    max-width: 50%;
+    height: 44px;
+    padding: 0 8px;
+    border-radius: 10px;
+    margin: 6px;
+    @include breakpoint($layout-breakpoint-l) {
+        margin: 12px;
+    }
+}
+.c-store-feature__icon {
+    font-size: 20px;
+    line-height: 0;
+    margin-right: 8px;
+}
