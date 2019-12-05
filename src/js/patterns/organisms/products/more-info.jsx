@@ -34,20 +34,20 @@ const OrganismsMoreInfoProduct = ({ product }) => {
                     <div className='o-distance'>
                         <dl className='o-detaillist o-distance-m'>
                             <dt className='t-text-quiet'><FormattedMessage id='product.materialOuterFabric' /></dt>
-                            <dd className='u-text-strong'>100% Viskose</dd>
+                            <dd className='u-text-strong'>100% <FormattedMessage id='product.viscose' /></dd>
                             <dt className='t-text-quiet'><FormattedMessage id='product.lining' /></dt>
-                            <dd className='u-text-strong'>100% Viskose</dd>
+                            <dd className='u-text-strong'>100% <FormattedMessage id='product.viscose' /></dd>
                         </dl>
                         <h3 className='c-title-level-3 o-distance'><FormattedMessage id='product.moreAboutThisProduct' /></h3>
                         <dl className='o-detaillist o-distance-m'>
                             <dt className='t-text-quiet'><FormattedMessage id='product.cut' /></dt>
-                            <dd className='u-text-strong'>100% Viskose</dd>
+                            <dd className='u-text-strong'>100% <FormattedMessage id='product.viscose' /></dd>
                             <dt className='t-text-quiet'><FormattedMessage id='product.clasp' /></dt>
-                            <dd className='u-text-strong'>Schnürung</dd>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.samples' /></dt>
-                            <dd className='u-text-strong'>Print</dd>
+                            <dd className='u-text-strong'><FormattedMessage id='product.lacing' /></dd>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.style' /></dt>
+                            <dd className='u-text-strong'>{product.attributes.style.label}</dd>
                             <dt className='t-text-quiet'><FormattedMessage id='product.itemNumber' /></dt>
-                            <dd className='u-text-strong'>M523C012-K23</dd>
+                            <dd className='u-text-strong'>{product.attributes.matrixId}</dd>
                         </dl>
                     </div>
                 </Collapsible>
