@@ -78,7 +78,7 @@ module.exports = async ({ config, mode }) => {
     config.module.rules.push({
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         issuer: {
-            test: /\.jsx?$/,
+            test: /\.jsx?$|\.mdx?$/,
         },
         use: [
             {
