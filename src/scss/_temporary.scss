@@ -479,3 +479,11 @@
   margin: 0 10px;
   font-size: 12px;
 }
+
+.more-info-priduct--selected {
+  span {
+    color: #3A42F1;
+    border-bottom: 2px solid #3A42F1;
+    font-weight: bold;
+  }
+}

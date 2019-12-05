@@ -7,30 +7,58 @@ import { ReactComponent as YellowTick } from '../../../../icons/yellow-tick.svg'
 import { ReactComponent as SmallTruck } from '../../../../icons/truck-small.svg'
 import Collapsible from 'react-collapsible'
 import ReviewsPanel from '../../organisms/products/panels/reviews-panel'
-import { moreInfoDesktop, moreInfoDesktop__tabs, moreInfoDesktop__tabList, moreInfoDesktop__tab } from './more-info.module.scss'
+import { moreInfoDesktop, moreInfoDesktop__tabs, moreInfoDesktop__tabs_selected, moreInfoDesktop__tabList, moreInfoDesktop__tab, borderBottom_selected } from './more-info.module.scss'
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 const OrganismsMoreInfoProductDesktop = ({ product }) => {
+    const [selectedTab, setSelectedTab] = useState(0)
 
     return (
         <div className={moreInfoDesktop}>
-            <Tabs className={moreInfoDesktop__tabs}>
+            <Tabs className={moreInfoDesktop__tabs} selectedTabClassName={moreInfoDesktop__tabs_selected}>
                 <TabList className={moreInfoDesktop__tabList}>
-                    <Tab className={moreInfoDesktop__tab}>Title 1</Tab>
-                    <Tab className={moreInfoDesktop__tab}>Title 2</Tab>
-                    <Tab className={moreInfoDesktop__tab}>Title 3</Tab>
+                    <Tab className={moreInfoDesktop__tab}>
+                        <h3 className={classnames({
+                                'c-title-level-4 c-referal__body': true,
+                                'more-info-priduct--selected': selectedTab === 0
+                            })}
+                            onClick={() => { setSelectedTab(0) }}
+                        >
+                            <FormattedMessage id='product.description' />
+                        </h3>
+                    </Tab>
+                    <Tab className={moreInfoDesktop__tab}>
+                        <h3 className={classnames({
+                            'c-title-level-4 c-referal__body': true,
+                            'more-info-priduct--selected': selectedTab === 1
+                        })}
+                            onClick={() => { setSelectedTab(1) }}
+                        >
+                            <FormattedMessage id='product.shipping' />
+                        </h3>
+                    </Tab>
+                    <Tab className={moreInfoDesktop__tab}>
+                        <h3 className={classnames({
+                            'c-title-level-4 c-referal__body': true,
+                            'more-info-priduct--selected': selectedTab === 2
+                        })}
+                            onClick={() => { setSelectedTab(2) }}
+                        >
+                            <FormattedMessage id='product.reviews' values={{ count: 7 }} />
+                        </h3>
+                    </Tab>
                 </TabList>
 
                 <TabPanel>
-                    <h2>Any content 1</h2>
+                    <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.description' /></h3>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 2</h2>
+                    <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.shipping' /></h3>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 3</h2>
+                    <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.reviews' values={{ count: 7 }} /></h3>
                 </TabPanel>
             </Tabs>
 
