@@ -2,10 +2,10 @@
 
 // Object
 .o-container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $layout-wrapper-width;
-  width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $layout-wrapper-width;
+    width: 100%;
 }
 
 .o-container-medium {
@@ -16,116 +16,119 @@
 }
 
 .o-container-small {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $layout-wrapper-width-small;
-  width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $layout-wrapper-width-small;
+    width: 100%;
 }
 
 .o-center {
-  justify-content: center;
-  text-align: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .o-box-center {
-  justify-content: center;
+    justify-content: center;
 }
 
 .o-prevent-space {
-  padding-left: $layout-edge-width;
-  padding-right: $layout-edge-width;
+    padding-left: $layout-edge-width;
+    padding-right: $layout-edge-width;
 
-  // @media (min-width: $layout-breakpoint-xl) {
-  //   padding-left: 0;
-  //   padding-right: 0;
-  // }
+    // @media (min-width: $layout-breakpoint-xl) {
+    //   padding-left: 0;
+    //   padding-right: 0;
+    // }
 }
 
 .o-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: $layout-gutter-width;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $layout-gutter-width;
+    @include breakpoint($layout-breakpoint-l) {
+        max-width: $layout-wrapper-width;
+        margin: 0 auto;
+    }
 }
 
 .o-grid--side-by-side {
-  grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto;
 }
 
 .o-grid--half {
-  grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .o-grid--small-half {
-  @media (min-width: $layout-breakpoint-s) {
-    grid-template-columns: 1fr 1fr;
-  }
+    @media (min-width: $layout-breakpoint-s) {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .o-grid--medium-half {
-  grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
 
-  @media (min-width: $layout-breakpoint-m) {
-    grid-template-columns: 1fr 1fr;
-  }
+    @media (min-width: $layout-breakpoint-m) {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .o-grid--medium-third {
-  grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
 
-  @media (min-width: $layout-breakpoint-s) {
-    grid-template-columns: 1fr 1fr;
-  }
+    @media (min-width: $layout-breakpoint-s) {
+        grid-template-columns: 1fr 1fr;
+    }
 
-  @media (min-width: $layout-breakpoint-m) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+    @media (min-width: $layout-breakpoint-m) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .o-grid--medium-forth {
-  grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
 
-  @media (min-width: $layout-breakpoint-m) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+    @media (min-width: $layout-breakpoint-m) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 .o-grid--large-half {
-  grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
 
-  @media (min-width: $layout-breakpoint-l) {
-    grid-template-columns: 1fr 1fr;
-  }
+    @media (min-width: $layout-breakpoint-l) {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .o-grid--large-third {
-  @media (min-width: $layout-breakpoint-l) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+    @media (min-width: $layout-breakpoint-l) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .o-grid--large-forth {
-  @media (min-width: $layout-breakpoint-l) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+    @media (min-width: $layout-breakpoint-l) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 .o-image-center {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
 .o-stacked {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 
-  &__item {
-    margin-left: - $spacing-inline-s;
+    &__item {
+        margin-left: -$spacing-inline-s;
 
-    &:first-child {
-      margin-left: 0;
+        &:first-child {
+            margin-left: 0;
+        }
     }
-  }
 }
