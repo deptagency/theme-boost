@@ -8,6 +8,9 @@ import OrganismsImageColorSwiper from '../swiper/image-color-swiper'
 import Button from '../../atoms/buttons/button'
 import app from 'frontastic-catwalk/src/js/app/app'
 
+import { deliveryFeatures } from './product-view.module.scss'
+
+
 const OrganismsProductView = ({ images, name, variant, sizes }) => {
     return (
         <div className='o-grid'>
@@ -37,6 +40,8 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
                     <FormattedMessage id='inCartProduct' />
                 </Button>
             </div>
+
+            <div className={deliveryFeatures}>should be shown only on desctop</div>
         </div>
     )
 }

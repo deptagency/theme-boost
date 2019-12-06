@@ -1,0 +1,9 @@
+.deliveryFeatures {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .deliveryFeatures {
+    display: none;
+  }
+}

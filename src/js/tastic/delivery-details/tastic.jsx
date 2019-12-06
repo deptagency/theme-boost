@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
 import OrganismsDeliveryFeatures from '../../patterns/organisms/blocks/delivery-features.jsx'
+import { useWindowWidth } from '@react-hook/window-size'
 
-class DeliveryFeaturesTastic extends Component {
-    render () {
-        return (
-            <OrganismsDeliveryFeatures />
-        )
-    }
+const DeliveryFeaturesTastic = () => {
+    const width = useWindowWidth()
+
+    if (width > 600) return null
+
+    return (
+        <OrganismsDeliveryFeatures />
+    )
 }
 
 DeliveryFeaturesTastic.propTypes = {
