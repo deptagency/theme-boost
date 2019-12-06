@@ -8,9 +8,9 @@ import OrganismsImageColorSwiper from '../swiper/image-color-swiper'
 import Button from '../../atoms/buttons/button'
 import app from 'frontastic-catwalk/src/js/app/app'
 
-import { hideOver600 } from './product-view.module.scss'
+import { hideOver600, responsiveMargin } from './product-view.module.scss'
 
-const AddToCartButton = () => {
+const AddToCartButton = ({ variant }) => {
     return (
         <Button
             type='primary'
@@ -24,15 +24,20 @@ const AddToCartButton = () => {
     )
 }
 
+AddToCartButton.propTypes = {
+    variant: PropTypes.object.isRequired,
+}
+
+
 const OrganismsProductView = ({ images, name, variant, sizes }) => {
     return (
-        <div className='o-grid o-distance'>
+        <div className={`o-grid ${responsiveMargin}`}>
             <OrganismsProductStage
                 images={images}
                 name={name}
                 price={variant.price}
                 dicountedPrice={variant.discountedPrice}
-                addToCartButton={<AddToCartButton />}
+                addToCartButton={<AddToCartButton variant={variant} />}
             />
 
             <div className={hideOver600}>
@@ -42,7 +47,7 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
                 </div>
 
                 <div className='o-distance-l o-prevent-space'>
-                    <AddToCartButton />
+                    <AddToCartButton variant={variant} />
                 </div>
             </div>
             {/* Commenting out colors for now */}
