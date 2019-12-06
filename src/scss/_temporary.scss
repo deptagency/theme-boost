@@ -98,13 +98,11 @@
 }
 
 .slide-up-panel {
-    <<<<<<<HEAD
     margin: 0 !important;
     height: 100% !important;
-    =======margin: 0 !important;
     height: 100% !important;
     z-index: 3;
-    >>>>>>>master .slide-pane__header {
+    .slide-pane__header {
         display: none;
     }
     .slide-pane__content {
