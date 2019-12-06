@@ -46,7 +46,7 @@ class OrganismsGallery extends Component {
                  <ul className='c-gallery__thumb-bar'>
                     {images.map((url) => {
                         return  <li className='c-gallery__thumb-bar__item is-active'>
-                            <img src={url} alt='' />
+                            <img style={{maxWidth: '64px'}} src={url} alt='' />
                         </li>
                     })}
                 </ul>
