@@ -37,21 +37,19 @@ class OrganismsGallery extends Component {
                             </span>
                         </button>
                     </div> */}
-                    <Slider options={{ items: 1 }}>
+                    <Slider options={{ items: 1, responsive: {} }}>
                         {images.map((url, i) => {
                             return <img key={i} src={url} alt='' />
                         })}
                     </Slider>
                 </div>
-
-                {/* Commenting out for the time being, until desktop version is defined */}
-                {/* <ul className='c-gallery__thumb-bar'>
+                 <ul className='c-gallery__thumb-bar'>
                     {images.map((url) => {
                         return  <li className='c-gallery__thumb-bar__item is-active'>
                             <img src={url} alt='' />
                         </li>
                     })}
-                </ul> */}
+                </ul>
             </div>
         </div>)
     }
