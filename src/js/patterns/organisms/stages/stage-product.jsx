@@ -130,6 +130,7 @@ OrganismsProductStage.propTypes = {
     name: PropTypes.string.isRequired,
     price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     discountedPrice: PropTypes.string.isRequired,
+    addToCartButton: PropTypes.node,
 }
 
 OrganismsProductStage.defaultProps = {

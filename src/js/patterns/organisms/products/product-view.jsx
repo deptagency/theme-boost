@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import OrganismsProductStage from '../stages/stage-product'
 import OrganismsSizeSwiper from '../swiper/size-swiper'
 // eslint-disable-next-line no-unused-vars
-import OrganismsImageColorSwiper from '../swiper/image-color-swiper'
+// import OrganismsImageColorSwiper from '../swiper/image-color-swiper'
 import Button from '../../atoms/buttons/button'
 import app from 'frontastic-catwalk/src/js/app/app'
 
@@ -27,7 +27,6 @@ const AddToCartButton = ({ variant }) => {
 AddToCartButton.propTypes = {
     variant: PropTypes.object.isRequired,
 }
-
 
 const OrganismsProductView = ({ images, name, variant, sizes }) => {
     return (

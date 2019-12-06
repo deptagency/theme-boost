@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import { ReactComponent as DeliveryTruck } from '../../../../icons/delivery-truck.svg'
 

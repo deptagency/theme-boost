@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 // import PropTypes from 'prop-types'
 import OrganismsDeliveryFeatures from '../../patterns/organisms/blocks/delivery-features.jsx'
 import { useWindowWidth } from '@react-hook/window-size'
