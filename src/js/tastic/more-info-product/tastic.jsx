@@ -19,7 +19,7 @@ const MoreInfoProductTastic = ({ product, variant: propsVariant, route }) => {
     }
 
     const MoreInfoComponent = (props) => {
-        if (width < 600) { return <OrganismsMoreInfoProductMobile {... props} /> } else { return <OrganismsMoreInfoProductDesktop className='desktop-more-info' {... props} /> }
+        if (width < 630) { return <OrganismsMoreInfoProductMobile {... props} /> } else { return <OrganismsMoreInfoProductDesktop className='desktop-more-info' {... props} /> }
     }
 
     return (
