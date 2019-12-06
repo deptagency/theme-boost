@@ -9,7 +9,7 @@ import WriteReviewPanel from './write-review-panel'
 import { reviewsPanel,
     reviewBtn,
     ratingQuestion,
- } from './reviews-panel.module.scss'
+} from './reviews-panel.module.scss'
 
 const ReviewsPanel = ({ isOpen, onClose, product }) => {
     const [reviewFormOpen, setReviewFormOpen] = useState(false)
