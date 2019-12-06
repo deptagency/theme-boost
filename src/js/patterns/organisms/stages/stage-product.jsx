@@ -7,7 +7,7 @@ import OrganismsGallery from '../galleries/gallery'
 import MoleculesRating from '../../molecules/ratings/rating'
 import { hideUnder600 } from '../products/product-view.module.scss'
 import OrganismsExpressDelivery from '../blocks/express-delivery'
-import { productInfo, productInfoRight, rightAlign } from './stage-product.module.scss'
+import { productInfo, productInfoRight, productInfoRIghtBottom, rightAlign } from './stage-product.module.scss'
 
 class OrganismsProductStage extends Component {
     render () {
@@ -17,7 +17,7 @@ class OrganismsProductStage extends Component {
                 <div className='o-media-block__asset'>
                     <OrganismsGallery images={images} />
                 </div>
-                <div className={`o-media-block__body o-prevent-space`}>
+                <div className={`o-media-block__body o-prevent-space productInfoRight ${productInfoRight}`}>
                     <div className={productInfo}>
                         <div className='o-flex__item'>
                             <h1 className='c-title-level-3'>{name}</h1>
@@ -77,7 +77,7 @@ class OrganismsProductStage extends Component {
                         </div>
                     </div> */}
 
-                    <div className={hideUnder600}>
+                    <div className={`${hideUnder600} ${productInfoRIghtBottom}`}>
                         {addToCartButton}
                         <OrganismsExpressDelivery />
                     </div>

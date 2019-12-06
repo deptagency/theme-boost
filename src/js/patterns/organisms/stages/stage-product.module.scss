@@ -9,12 +9,19 @@
 }
 
 @media (min-width: 600px) {
-  .product
+  .productInfoRight {
+    display: grid;
+  }
 
+  .productInfoRIghtBottom {
+    display: grid;
+    align-self: end;
+  }
 
   .productInfo {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
 
     .rightAlign {
       justify-self: end;
