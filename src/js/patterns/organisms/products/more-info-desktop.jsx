@@ -13,6 +13,7 @@ import {
     moreInfoDesktop__tabs_selected,
     moreInfoDesktop__tabList,
     moreInfoDesktop__tab,
+    moreInfoDesktop__selected,
     marginRight10, marginRight16,
 } from './more-info.module.scss'
 /* eslint-disable enable */
@@ -31,7 +32,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                     <Tab className={moreInfoDesktop__tab}>
                         <h3 className={classnames({
                                 'c-title-level-4 c-referal__body': true,
-                                'more-info-priduct--selected': selectedTab === 0,
+                                [moreInfoDesktop__selected]: selectedTab === 0,
                             })}
                             onClick={() => { setSelectedTab(0) }}
                         >
@@ -41,7 +42,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                     <Tab className={moreInfoDesktop__tab}>
                         <h3 className={classnames({
                             'c-title-level-4 c-referal__body': true,
-                            'more-info-priduct--selected': selectedTab === 1,
+                            [moreInfoDesktop__selected]: selectedTab === 1,
                         })}
                             onClick={() => { setSelectedTab(1) }}
                         >
@@ -51,7 +52,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                     <Tab className={moreInfoDesktop__tab}>
                         <h3 className={classnames({
                             'c-title-level-4 c-referal__body': true,
-                            'more-info-priduct--selected': selectedTab === 2,
+                            [moreInfoDesktop__selected]: selectedTab === 2,
                         })}
                             onClick={() => { setSelectedTab(2) }}
                         >
