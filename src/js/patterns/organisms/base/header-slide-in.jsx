@@ -6,6 +6,7 @@ import { ReactComponent as CloseMobile } from '../../../../icons/close-x-mobile.
 import { ReactComponent as ArrowLeftWhite } from '../../../../icons/arrow-left-white.svg'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
+import {closeMobile} from './header-slide-in.module.scss'
 
 const OrganismsHeaderSlideIn = (props) => {
     const { component: Component, title, onClose, showLeftBackIcon, showRightCloseIcon, className, theme } = props
@@ -32,7 +33,7 @@ const OrganismsHeaderSlideIn = (props) => {
                     </div>
                 </div>
                 {showRightCloseIcon && <button onClick={onClose}>
-                    <CloseMobile />
+                    <CloseMobile className={closeMobile} />
                 </button>}
             </div>
         </Component>

@@ -6,6 +6,10 @@ import Button from '../../../atoms/buttons/button'
 import TemplatesSlideInPanel from '../../../templates/slide-in-panel'
 import ReviewsList from '../reviews-list'
 import WriteReviewPanel from './write-review-panel'
+import { reviewsPanel,
+    reviewBtn,
+    ratingQuestion,
+} from './reviews-panel.module.scss'
 
 const ReviewsPanel = ({ isOpen, onClose, product }) => {
     const [reviewFormOpen, setReviewFormOpen] = useState(false)
@@ -14,7 +18,7 @@ const ReviewsPanel = ({ isOpen, onClose, product }) => {
         return (
             <Button
                 type='quiet'
-                className='o-distance-l'
+                className={`${reviewBtn} o-distance-l`}
                 size='boss'
                 onClick={() => { setReviewFormOpen(true) }}
                 >
@@ -33,8 +37,8 @@ const ReviewsPanel = ({ isOpen, onClose, product }) => {
                 showLeftBackIcon={false}
             />}
             >
-            <div className='c-box'>
-                <div className='u-text-strong'><FormattedMessage id='ratingQuestion' /></div>
+            <div className={`${reviewsPanel}`}>
+                <div className={`${ratingQuestion} u-text-strong`}><FormattedMessage id='ratingQuestion' /></div>
                 <SubmitReviewButton />
                 <ReviewsList />
                 <SubmitReviewButton />
