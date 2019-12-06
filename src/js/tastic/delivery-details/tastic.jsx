@@ -6,7 +6,7 @@ import { useWindowWidth } from '@react-hook/window-size'
 const DeliveryFeaturesTastic = () => {
     const width = useWindowWidth()
 
-    if (width > 600) return null
+    if (width > 600) { return null }
 
     return (
         <OrganismsDeliveryFeatures />

@@ -3,7 +3,7 @@ import React from 'react'
 import MoleculesRating from '../../molecules/ratings/rating'
 import {
     reviewsListText,
-    reviewersName
+    reviewersName,
 } from './panels/reviews-panel.module.scss'
 
 const ReviewsList = props => {

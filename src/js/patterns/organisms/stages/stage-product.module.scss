@@ -1,8 +1,17 @@
+
+
 .productInfo {
 
 }
 
+.productInfoRight {
+  display: grid;
+}
+
 @media (min-width: 600px) {
+  .product
+
+
   .productInfo {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -10,7 +10,6 @@ import app from 'frontastic-catwalk/src/js/app/app'
 
 import { hideOver600 } from './product-view.module.scss'
 
-
 const AddToCartButton = () => {
     return (
         <Button
@@ -19,7 +18,7 @@ const AddToCartButton = () => {
             onClick={() => {
                 app.getLoader('cart').add(null, variant, 1, null)
             }}
-        >
+            >
             <FormattedMessage id='inCartProduct' />
         </Button>
     )
@@ -52,8 +51,7 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
                 <OrganismsImageColorSwiper />
             </div> */}
 
-
-            {/*<div className='o-distance-l o-prevent-space'>
+            {/* <div className='o-distance-l o-prevent-space'>
                 <Button
                     type='primary'
                     size='boss'
@@ -63,9 +61,7 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
                 >
                     <FormattedMessage id='inCartProduct' />
                 </Button>
-            </div>*/}
-
-
+            </div> */}
 
         </div>
     )
