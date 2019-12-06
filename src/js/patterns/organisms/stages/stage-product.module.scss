@@ -1,0 +1,14 @@
+.productInfo {
+
+}
+
+@media (min-width: 600px) {
+  .productInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .rightAlign {
+      justify-self: end;
+    }
+  }
+}

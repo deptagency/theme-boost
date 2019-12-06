@@ -9,17 +9,34 @@ import Button from '../../atoms/buttons/button'
 import app from 'frontastic-catwalk/src/js/app/app'
 
 import { deliveryFeatures } from './product-view.module.scss'
+import OrganismsExpressDelivery from "../blocks/express-delivery";
 
+
+const AddToCartButton = () => {
+    return (
+        <Button
+            type='primary'
+            size='boss'
+            onClick={() => {
+                app.getLoader('cart').add(null, variant, 1, null)
+            }}
+        >
+            <FormattedMessage id='inCartProduct' />
+        </Button>
+    )
+}
 
 const OrganismsProductView = ({ images, name, variant, sizes }) => {
     return (
-        <div className='o-grid'>
+        <div className='o-grid o-distance'>
             <OrganismsProductStage
                 images={images}
                 name={name}
                 price={variant.price}
                 dicountedPrice={variant.discountedPrice}
+                addToCartButton={<AddToCartButton />}
             />
+
             <h3 className='c-title-level-3 o-distance-m o-prevent-space'><FormattedMessage id='sizeProduct' /></h3>
             <div className='o-distance-s display-grid'>
                 <OrganismsSizeSwiper sizes={sizes} />
@@ -29,7 +46,9 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
             <div className='o-distance-s display-grid'>
                 <OrganismsImageColorSwiper />
             </div> */}
-            <div className='o-distance-l o-prevent-space'>
+
+
+            {/*<div className='o-distance-l o-prevent-space'>
                 <Button
                     type='primary'
                     size='boss'
@@ -39,9 +58,12 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
                 >
                     <FormattedMessage id='inCartProduct' />
                 </Button>
+            </div>*/}
+
+            <div className='o-distance-l o-prevent-space'>
+                <AddToCartButton />
             </div>
 
-            <div className={deliveryFeatures}>should be shown only on desctop</div>
         </div>
     )
 }
