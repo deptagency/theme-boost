@@ -13,6 +13,7 @@ import {
     moreInfoDesktop__tabs_selected,
     moreInfoDesktop__tabList,
     moreInfoDesktop__tab,
+    moreInfoDesktop__selected,
     marginRight10, marginRight16,
 } from './more-info.module.scss'
 /* eslint-disable enable */
@@ -31,7 +32,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                     <Tab className={moreInfoDesktop__tab}>
                         <h3 className={classnames({
                                 'c-title-level-4 c-referal__body': true,
-                                'more-info-priduct--selected': selectedTab === 0,
+                                [moreInfoDesktop__selected]: selectedTab === 0,
                             })}
                             onClick={() => { setSelectedTab(0) }}
                         >
@@ -41,7 +42,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                     <Tab className={moreInfoDesktop__tab}>
                         <h3 className={classnames({
                             'c-title-level-4 c-referal__body': true,
-                            'more-info-priduct--selected': selectedTab === 1,
+                            [moreInfoDesktop__selected]: selectedTab === 1,
                         })}
                             onClick={() => { setSelectedTab(1) }}
                         >
@@ -51,7 +52,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                     <Tab className={moreInfoDesktop__tab}>
                         <h3 className={classnames({
                             'c-title-level-4 c-referal__body': true,
-                            'more-info-priduct--selected': selectedTab === 2,
+                            [moreInfoDesktop__selected]: selectedTab === 2,
                         })}
                             onClick={() => { setSelectedTab(2) }}
                         >
@@ -65,28 +66,22 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                         <FormattedMessage id='product.description' />
                     </h3>
 
-                    <div className='o-distance'>
-                        <dl className='o-detaillist o-distance-m'>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.materialOuterFabric' /></dt>
-                            <dd className='u-text-strong'>100% <FormattedMessage id='product.viscose' /></dd>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.lining' /></dt>
-                            <dd className='u-text-strong'>100% <FormattedMessage id='product.viscose' /></dd>
+                    <div>
+                        <dl>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.materialOuterFabric' /> 100% <FormattedMessage id='product.viscose' /></dt>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.lining' /> 100% <FormattedMessage id='product.viscose' /></dt>
                         </dl>
-                        <h3 className='c-title-level-3 o-distance'><FormattedMessage id='product.moreAboutThisProduct' /></h3>
-                        <dl className='o-detaillist o-distance-m'>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.cut' /></dt>
-                            <dd className='u-text-strong'>100% <FormattedMessage id='product.viscose' /></dd>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.clasp' /></dt>
-                            <dd className='u-text-strong'><FormattedMessage id='product.lacing' /></dd>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.style' /></dt>
-                            <dd className='u-text-strong'>{product.attributes.style.label}</dd>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.itemNumber' /></dt>
-                            <dd className='u-text-strong'>{product.attributes.matrixId}</dd>
+                        <FormattedMessage id='product.moreAboutThisProduct' />
+                        <dl>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.cut' /> 100% <FormattedMessage id='product.viscose' /></dt>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.clasp' /> <FormattedMessage id='product.lacing' /></dt>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.style' /> {product.attributes.style.label}</dt>
+                            <dt className='t-text-quiet'><FormattedMessage id='product.itemNumber' /> {product.attributes.matrixId}</dt>
                         </dl>
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='o-distance'>
+                    <div>
                         <div className='o-list-bare'>
                             <div className='o-list-bare__item o-block-short o-block-short--centered'>
                                 <YellowTick className={marginRight10} />
@@ -118,7 +113,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
             {selectedTab === 2 ?
                 <Scrollbars autoHide style={{
                     height: 'calc(100% - 48px)',
-                    minHeight: '500px',
+                    minHeight: '340px',
                 }}>
                     <ReviewsList />
                 </Scrollbars>
@@ -128,6 +123,8 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                         backgroundImage: `url(${product.images[0]})`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center',
+                        width: '100%',
                     }}
                 />
             }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { useWindowWidth } from '@react-hook/window-size'
@@ -19,7 +19,7 @@ const MoreInfoProductTastic = ({ product, variant: propsVariant, route }) => {
     }
 
     const MoreInfoComponent = (props) => {
-        if (width < 600) { return <OrganismsMoreInfoProductMobile {... props} /> } else { return <OrganismsMoreInfoProductDesktop className='desktop-more-info' {... props} /> }
+        if (width < 630) { return <OrganismsMoreInfoProductMobile {... props} /> } else { return <OrganismsMoreInfoProductDesktop className='desktop-more-info' {... props} /> }
     }
 
     return (

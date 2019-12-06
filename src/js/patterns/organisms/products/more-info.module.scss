@@ -17,6 +17,7 @@
 .moreInfoDesktop {
   display: grid;
   grid-template-columns: 60% 40%;
+  height: 340px;
 
   .moreInfoDesktop__tabs {
     display: inline-block;
@@ -31,6 +32,7 @@
 
     .moreInfoDesktop__tabList {
       border: none;
+      padding-left: inherit;
 
       .moreInfoDesktop__tab {
         display: inline-block;
@@ -41,6 +43,14 @@
         list-style: none;
         cursor: pointer;
         color: #97A5BA;
+
+        .moreInfoDesktop__selected {
+          span {
+            color: #3A42F1;
+            border-bottom: 2px solid #3A42F1;
+            font-weight: bold;
+          }
+        }
       }
     }
   }
