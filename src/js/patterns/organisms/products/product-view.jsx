@@ -8,8 +8,7 @@ import OrganismsImageColorSwiper from '../swiper/image-color-swiper'
 import Button from '../../atoms/buttons/button'
 import app from 'frontastic-catwalk/src/js/app/app'
 
-import { deliveryFeatures } from './product-view.module.scss'
-import OrganismsExpressDelivery from "../blocks/express-delivery";
+import { hideOver600 } from './product-view.module.scss'
 
 
 const AddToCartButton = () => {
@@ -37,9 +36,15 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
                 addToCartButton={<AddToCartButton />}
             />
 
-            <h3 className='c-title-level-3 o-distance-m o-prevent-space'><FormattedMessage id='sizeProduct' /></h3>
-            <div className='o-distance-s display-grid'>
-                <OrganismsSizeSwiper sizes={sizes} />
+            <div className={hideOver600}>
+                <h3 className='c-title-level-3 o-distance-m o-prevent-space'><FormattedMessage id='sizeProduct' /></h3>
+                <div className='hideUnder600 o-distance-s display-grid'>
+                    <OrganismsSizeSwiper sizes={sizes} />
+                </div>
+
+                <div className='o-distance-l o-prevent-space'>
+                    <AddToCartButton />
+                </div>
             </div>
             {/* Commenting out colors for now */}
             {/* <h3 className='c-title-level-3 o-distance-m o-prevent-space'>Farbe: Olive</h3>
@@ -60,9 +65,7 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
                 </Button>
             </div>*/}
 
-            <div className='o-distance-l o-prevent-space'>
-                <AddToCartButton />
-            </div>
+
 
         </div>
     )

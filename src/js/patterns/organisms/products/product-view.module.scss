@@ -1,9 +1,18 @@
-.deliveryFeatures {
+.hideUnder600 {
   display: block;
 }
 
+.hideOver600 {
+  display: none;
+}
+
+
 @media (max-width: 600px) {
-  .deliveryFeatures {
+  .hideUnder600 {
     display: none;
+  }
+
+  .hideOver600 {
+    display: block;
   }
 }

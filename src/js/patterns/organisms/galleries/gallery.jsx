@@ -39,7 +39,7 @@ class OrganismsGallery extends Component {
                     </div> */}
                     <Slider options={{ items: 1, responsive: {} }}>
                         {images.map((url, i) => {
-                            return <img key={i} src={url} alt='' />
+                            return <img style={{maxHeight: '600px', width:'auto'}} key={i} src={url} alt='' />
                         })}
                     </Slider>
                 </div>

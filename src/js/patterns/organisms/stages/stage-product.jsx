@@ -5,7 +5,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import OrganismsGallery from '../galleries/gallery'
 import MoleculesRating from '../../molecules/ratings/rating'
-import { deliveryFeatures } from "../products/product-view.module.scss";
+import { hideUnder600 } from "../products/product-view.module.scss";
 import OrganismsExpressDelivery from "../blocks/express-delivery";
 import { productInfo, rightAlign } from './stage-product.module.scss'
 
@@ -78,7 +78,7 @@ class OrganismsProductStage extends Component {
                         </div>
                     </div> */}
 
-                    <div className={deliveryFeatures}>
+                    <div className={hideUnder600}>
                         {addToCartButton}
                         <OrganismsExpressDelivery />
                     </div>
