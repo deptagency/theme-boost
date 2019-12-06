@@ -1,11 +1,29 @@
-
-
 .productInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content;
 
+  .saleBadge {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .ratingBadge {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .inline {
+    display: flex;
+  }
 }
 
-.productInfoRight {
-  display: grid;
+.rightAlign {
+  justify-self: end;
+}
+
+.leftAlign {
+  justify-self: start;
 }
 
 @media (min-width: 600px) {
@@ -13,7 +31,7 @@
     display: grid;
   }
 
-  .productInfoRIghtBottom {
+  .productInfoRightBottom {
     display: grid;
     align-self: end;
   }
@@ -23,8 +41,27 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
 
+    .saleBadge {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+
+    .ratingBadge {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+
+    .inline {
+      display: block;
+    }
+
     .rightAlign {
       justify-self: end;
     }
+
+    .leftAlign {
+
+    }
   }
+
 }

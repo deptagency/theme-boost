@@ -7,7 +7,18 @@ import OrganismsGallery from '../galleries/gallery'
 import MoleculesRating from '../../molecules/ratings/rating'
 import { hideUnder600 } from '../products/product-view.module.scss'
 import OrganismsExpressDelivery from '../blocks/express-delivery'
-import { productInfo, productInfoRight, productInfoRIghtBottom, rightAlign } from './stage-product.module.scss'
+import {
+    productInfo,
+    productInfoRight,
+    productInfoRightBottom,
+    rightAlign,
+    leftAlign,
+    saleBadge,
+    ratingBadge,
+    inline
+} from './stage-product.module.scss'
+
+import { responsiveMargin } from '../products/product-view.module.scss'
 
 class OrganismsProductStage extends Component {
     render () {
@@ -18,16 +29,16 @@ class OrganismsProductStage extends Component {
                     <OrganismsGallery images={images} />
                 </div>
                 <div className={`o-media-block__body o-prevent-space productInfoRight ${productInfoRight}`}>
-                    <div className={productInfo}>
+                    <div className={`${productInfo} productInfo`}>
                         <div className='o-flex__item'>
                             <h1 className='c-title-level-3'>{name}</h1>
                         </div>
 
-                        <div className={rightAlign}>
+                        <div className={`${rightAlign} ${saleBadge}`}>
                             <span className='c-badge c-badge--danger'>Sale</span>
                         </div>
 
-                        <div className='o-flex o-distance-l'>
+                        <div className={`o-flex  ${responsiveMargin}`}>
                             <div className='o-flex__item'>
                                 <ul className='o-list-bare o-list-bare--tighty'>
                                     <li className='o-list-bare__item'>
@@ -41,8 +52,11 @@ class OrganismsProductStage extends Component {
                             </div>
                         </div>
 
-                        <div className={`${rightAlign} o-distance-l`}>
-                            <MoleculesRating />
+                        <div className={`${rightAlign} ${leftAlign} 
+                        ${responsiveMargin}
+                         ${inline} inslineeee
+                         ratingBadge ${ratingBadge}`}>
+                            <MoleculesRating outerClassName={`${inline} inslineeee`} />
                         </div>
 
                     </div>
@@ -77,7 +91,7 @@ class OrganismsProductStage extends Component {
                         </div>
                     </div> */}
 
-                    <div className={`${hideUnder600} ${productInfoRIghtBottom}`}>
+                    <div className={`${hideUnder600} productInfoRightBottom ${productInfoRightBottom}`}>
                         {addToCartButton}
                         <OrganismsExpressDelivery />
                     </div>

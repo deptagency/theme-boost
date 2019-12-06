@@ -5,9 +5,9 @@ import { FormattedMessage } from 'react-intl'
 import { ReactComponent as FullSmallStar } from '../../../../icons/full-small-star.svg'
 import { ReactComponent as EmptySmallStar } from '../../../../icons/empty-small-star.svg'
 
-const MoleculesRating = ({ className }) => {
+const MoleculesRating = ({ outerClassName, className }) => {
     return (
-        <div>
+        <div className={outerClassName}>
             <div className={`c-rating o-flex o-flex--center ${className}`}>
                 {[1, 2, 3, 4, 5].map((s, i) => {
                     return i < 3 ? <FullSmallStar /> : <EmptySmallStar />
@@ -22,10 +22,12 @@ const MoleculesRating = ({ className }) => {
 }
 
 MoleculesRating.propTypes = {
+    outerClassName: PropTypes.string,
     className: PropTypes.string,
 }
 
 MoleculesRating.defaultProps = {
+    outerClassName: '',
     className: '',
 }
 
