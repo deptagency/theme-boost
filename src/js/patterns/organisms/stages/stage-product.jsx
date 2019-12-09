@@ -5,7 +5,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import OrganismsGallery from '../galleries/gallery'
 import MoleculesRating from '../../molecules/ratings/rating'
-import { hideUnder600 } from '../products/product-view.module.scss'
+import { hideUnder600, responsiveMargin } from '../products/product-view.module.scss'
 import OrganismsExpressDelivery from '../blocks/express-delivery'
 import {
     productInfo,
@@ -15,10 +15,8 @@ import {
     leftAlign,
     saleBadge,
     ratingBadge,
-    inline
+    inline,
 } from './stage-product.module.scss'
-
-import { responsiveMargin } from '../products/product-view.module.scss'
 
 class OrganismsProductStage extends Component {
     render () {
