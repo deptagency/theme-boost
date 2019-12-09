@@ -14,7 +14,7 @@ const MoleculesRating = ({ outerClassName, className }) => {
                 })}
             </div>
             <div className='u-text-s t-text-quiet padding-left--8'>
-                <FormattedMessage id='product.reviews' values={{ count: 7 }} />
+                <FormattedMessage id='product.reviewsWithCount' values={{ count: 7 }} />
             </div>
 
         </div>

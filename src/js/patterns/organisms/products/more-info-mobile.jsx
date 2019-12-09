@@ -109,7 +109,7 @@ const OrganismsMoreInfoProductMobile = ({ product }) => {
                         setTimeout(() => { setReviewsOpen(true) }, 50)
                     }}
                 >
-                    <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.reviews' values={{ count: 7 }} /></h3>
+                    <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.reviewsWithCount' values={{ count: 7 }} /></h3>
                     <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                 </div>
             </div>

@@ -60,7 +60,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                         })}
                             onClick={() => { setSelectedTab(2) }}
                         >
-                            <FormattedMessage id='product.reviews' values={{ count: 7 }} />
+                            <FormattedMessage id='product.reviewsWithCount' values={{ count: 7 }} />
                         </h3>
                     </Tab>
                 </TabList>
@@ -112,7 +112,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                     </div>
                 </TabPanel>
                 <TabPanel className={moreInfoDesktop_tab_panel}>
-                    <h3><FormattedMessage id='product.reviews' values={{ count: 7 }} /></h3>
+                    <h3><FormattedMessage id='product.reviews' /></h3>
                 </TabPanel>
             </Tabs>
 
