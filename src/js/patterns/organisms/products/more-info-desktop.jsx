@@ -102,7 +102,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className='o-block-short o-distance-m'>
+                        <div className='o-block-short o-distance-l'>
                             <SmallTruck className={marginRight16} />
                             <div className='o-block-short__body'>
                                 <p className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.standardDelivery.title' /></p>
