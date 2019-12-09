@@ -17,7 +17,7 @@
 .moreInfoDesktop {
   display: grid;
   grid-template-columns: 60% 40%;
-  height: 550px;
+  height: 460px;
 
   .moreInfoDesktop__tabs {
     display: inline-block;
@@ -51,13 +51,31 @@
     .moreInfoDesktop_tab_panel {
       padding-left: 30px;
 
-        h3{
+        h3 {
           font-size: 35px;
           padding: 20px 0px;
           font-weight: 600;
           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
-    }  
+
+        .reviewOverview {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-right: 38px;
+
+          .minContentWidth {
+            width: min-content;
+          }
+
+          .precent {
+            font-size: 8rem;
+            font-weight: bold;
+          }
+        }
+      }
+
 
     .moreInfoDesktop__tabList {
       border: none;

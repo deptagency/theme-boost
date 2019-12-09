@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 import classnames from 'classnames'
 import { Scrollbars } from 'react-custom-scrollbars'
+import MoleculesStaticRating from '../../molecules/ratings/static-rating'
 import { ReactComponent as YellowTick } from '../../../../icons/yellow-tick.svg'
 import { ReactComponent as SmallTruck } from '../../../../icons/truck-small.svg'
 
@@ -18,7 +19,10 @@ import {
     moreInfoDesktop_tab_panel,
     moreInfoDesktop_span_formatted,
     moreInfoDesktop_p_formatted,
-    moreInfoDesktop_light_text
+    moreInfoDesktop_light_text,
+    reviewOverview,
+    precent,
+    minContentWidth,
 } from './more-info.module.scss'
 /* eslint-disable enable */
 
@@ -71,16 +75,16 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                     </h3>
 
                     <div>
-                            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.materialOuterFabric' /></span> 100% <FormattedMessage id='product.viscose' /></p>
-                            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.lining' /></span> 100% <FormattedMessage id='product.viscose' /></p>
+                        <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.materialOuterFabric' /></span> 100% <FormattedMessage id='product.viscose' /></p>
+                        <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.lining' /></span> 100% <FormattedMessage id='product.viscose' /></p>
 
-                            <p className={moreInfoDesktop_p_formatted}><FormattedMessage id='product.moreAboutThisProduct' /></p>
-                        
-                            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.cut' /></span> 100% <FormattedMessage id='product.viscose' /></p>
-                            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.clasp' /></span> <FormattedMessage id='product.lacing' /></p>
-                            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.style' /></span> {product.attributes.style.label} </p>
-                            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.itemNumber' /></span> {product.attributes.matrixId} </p>
-                    
+                        <p className={moreInfoDesktop_p_formatted}><FormattedMessage id='product.moreAboutThisProduct' /></p>
+
+                        <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.cut' /></span> 100% <FormattedMessage id='product.viscose' /></p>
+                        <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.clasp' /></span> <FormattedMessage id='product.lacing' /></p>
+                        <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.style' /></span> {product.attributes.style.label} </p>
+                        <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.itemNumber' /></span> {product.attributes.matrixId} </p>
+
                     </div>
                 </TabPanel>
                 <TabPanel className={moreInfoDesktop_tab_panel}>
@@ -113,6 +117,12 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                 </TabPanel>
                 <TabPanel className={moreInfoDesktop_tab_panel}>
                     <h3><FormattedMessage id='product.reviews' /></h3>
+
+                    <div className={reviewOverview}>
+                        <div className={`${precent} ${minContentWidth}`}>4,2</div>
+                        <MoleculesStaticRating outerClassName={minContentWidth} rating={3} reviewsCount={7} />
+                    </div>
+
                 </TabPanel>
             </Tabs>
 
@@ -120,10 +130,10 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                 <Scrollbars autoHide style={{
                     height: 'calc(100% - 48px)',
                     minHeight: '340px',
-                    margin: '30px',
-                    width: 'inherit'
+                    margin: '0 30px 30px',
+                    width: 'inherit',
                 }}>
-                    <ReviewsList/>
+                    <ReviewsList />
                 </Scrollbars>
                 :
                 <div
