@@ -6,7 +6,8 @@ import Button from '../../../atoms/buttons/button'
 import TemplatesSlideInPanel from '../../../templates/slide-in-panel'
 import ReviewsList from '../reviews-list'
 import WriteReviewPanel from './write-review-panel'
-import { reviewsPanel,
+import {
+    reviewsPanel,
     reviewBtn,
     ratingQuestion,
 } from './reviews-panel.module.scss'

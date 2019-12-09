@@ -1,9 +1,10 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 import MoleculesRating from '../../molecules/ratings/rating'
-import { reviewsListText,
-    reviewersName
- } from './panels/reviews-panel.module.scss'
+import {
+    reviewsListText,
+    reviewersName,
+} from './panels/reviews-panel.module.scss'
 
 const ReviewsList = props => {
     return (
