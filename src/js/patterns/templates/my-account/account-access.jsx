@@ -50,7 +50,7 @@ class AccountAccessForms extends Component {
                                 this.setState({ form: 'login' })
                             }}
                         >
-                            <FormattedMessage id='account.login' />
+                            <FormattedMessage id='account.login.login' />
                         </Button>
                     </section>
                 </Grow>

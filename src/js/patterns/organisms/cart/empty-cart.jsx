@@ -2,6 +2,7 @@ import React from 'react'
 
 import Button from '../../atoms/buttons/button'
 import { ReactComponent as EmptyCartIcon } from '../../../../icons/empty-cart.svg'
+import {FormattedMessage} from "react-intl";
 
 const OrganismsEmptyCart = () => {
     return (
@@ -10,8 +11,10 @@ const OrganismsEmptyCart = () => {
                 <EmptyCartIcon className='c-icon c-icon--xl t-text-quiet' />
             </div>
             <div className='o-distance-m'>
-                <p className='u-text-center'>Der Warenkorb ist noch leer.</p>
-                <Button size='boss' type='primary' className='o-distance-s'>Jetzt anmelden</Button>
+                <p className='u-text-center'><FormattedMessage id='cart.emptyCart' /></p>
+                <Button size='boss' type='primary' className='o-distance-s'>
+                    <FormattedMessage id='cart.registerNow' />
+                </Button>
             </div>
         </section>
     )
