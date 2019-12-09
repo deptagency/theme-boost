@@ -40,21 +40,18 @@ class OrganismsProductStage extends Component {
                             <div className='o-flex__item'>
                                 <ul className='o-list-bare o-list-bare--tighty'>
                                     <li className='o-list-bare__item'>
-                                        <span className='c-price t-text-danger u-text-m'>{discountedPrice}</span>
+                                        <span className='c-price t-text-danger u-text-m'>€ {discountedPrice || price}</span>
                                         <span className='u-text-s t-text-quiet'> inkl. 19% MwSt.</span>
                                     </li>
-                                    <li className='o-list-bare__item'>
-                                        <span className='c-price c-price--old t-text-quiet'>{price}</span>
-                                    </li>
+                                    {discountedPrice && <li className='o-list-bare__item'>
+                                        <span className='c-price c-price--old t-text-quiet'>€ {price}</span>
+                                    </li>}
                                 </ul>
                             </div>
                         </div>
 
-                        <div className={`${rightAlign} ${leftAlign} 
-                        ${responsiveMargin}
-                         ${inline} inslineeee
-                         ratingBadge ${ratingBadge}`}>
-                            <MoleculesRating outerClassName={`${inline} inslineeee`} />
+                        <div className={`${rightAlign} ${leftAlign} ${responsiveMargin} ${inline} ${ratingBadge}`}>
+                            <MoleculesRating outerClassName={inline} />
                         </div>
 
                     </div>
@@ -149,8 +146,8 @@ OrganismsProductStage.defaultProps = {
     images: [],
 
     // defaults for development purposes
-    discountedPrice: '49,95 €',
-    price: '69,95 €',
+    // discountedPrice: '49,95 €',
+    // price: '69,95 €',
 }
 
 export default ComponentInjector.return('OrganismsProductStage', OrganismsProductStage)

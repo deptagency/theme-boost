@@ -15,7 +15,7 @@ class PromoBoxTastic extends Component {
                 vertical={verticalPosition}
                 horizontal={horizontalPosition}
                 image={image}
-                customChildrenStyle={{margin: '32px'}}
+                customChildrenStyle={{ margin: '32px' }}
                 >
                 <p className='c-topic'><Translatable value={topic} /></p>
                 <h1 className='c-title'><Translatable value={title} /></h1>

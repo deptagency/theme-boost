@@ -59,15 +59,14 @@ class ProductSliderTastic extends Component {
 
         let productsToShow = take(productList.items, this.props.tastic.schema.get('productCount'))
 
-
         return (
             <Fragment>
                 <header className={sliderHeading}>
                     {title && <div className={`sliderTitle ${sliderTitle}`}>
-                            <Translatable value={title} />
+                        <Translatable value={title} />
                     </div>}
                     {description && <div className={`sliderDescription ${sliderDescription}`}>
-                            <Translatable value={description} />
+                        <Translatable value={description} />
                     </div>}
                 </header>
 
