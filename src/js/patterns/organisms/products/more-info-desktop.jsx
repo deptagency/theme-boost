@@ -15,6 +15,10 @@ import {
     moreInfoDesktop__tab,
     moreInfoDesktop__selected,
     marginRight10, marginRight16,
+    moreInfoDesktop_tab_panel,
+    moreInfoDesktop_span_formatted,
+    moreInfoDesktop_p_formatted,
+    moreInfoDesktop_light_text
 } from './more-info.module.scss'
 /* eslint-disable enable */
 
@@ -61,52 +65,54 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                     </Tab>
                 </TabList>
 
-                <TabPanel>
+                <TabPanel className={moreInfoDesktop_tab_panel}>
                     <h3 className='c-title-level-4 c-referal__body'>
                         <FormattedMessage id='product.description' />
                     </h3>
 
                     <div>
-                        <dl>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.materialOuterFabric' /> 100% <FormattedMessage id='product.viscose' /></dt>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.lining' /> 100% <FormattedMessage id='product.viscose' /></dt>
-                        </dl>
-                        <FormattedMessage id='product.moreAboutThisProduct' />
-                        <dl>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.cut' /> 100% <FormattedMessage id='product.viscose' /></dt>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.clasp' /> <FormattedMessage id='product.lacing' /></dt>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.style' /> {product.attributes.style.label}</dt>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.itemNumber' /> {product.attributes.matrixId}</dt>
-                        </dl>
+                            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.materialOuterFabric' /></span> 100% <FormattedMessage id='product.viscose' /></p>
+                            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.lining' /></span> 100% <FormattedMessage id='product.viscose' /></p>
+
+                            <p className={moreInfoDesktop_p_formatted}><FormattedMessage id='product.moreAboutThisProduct' /></p>
+                        
+                            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.cut' /></span> 100% <FormattedMessage id='product.viscose' /></p>
+                            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.clasp' /></span> <FormattedMessage id='product.lacing' /></p>
+                            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.style' /></span> {product.attributes.style.label} </p>
+                            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.itemNumber' /></span> {product.attributes.matrixId} </p>
+                    
                     </div>
                 </TabPanel>
-                <TabPanel>
+                <TabPanel className={moreInfoDesktop_tab_panel}>
                     <div>
+                        <h3 className='c-title-level-4 c-referal__body'>
+                            <FormattedMessage id='product.shipping' />
+                        </h3>
                         <div className='o-list-bare'>
                             <div className='o-list-bare__item o-block-short o-block-short--centered'>
                                 <YellowTick className={marginRight10} />
-                                <div className='o-block-short__body u-text-s'>
+                                <div className={moreInfoDesktop_light_text}>
                                     <FormattedMessage id='product.freeShipping' />
                                 </div>
                             </div>
                             <div className='o-list-bare__item o-block-short o-block-short--centered'>
                                 <YellowTick className={marginRight10} />
-                                <div className='o-block-short__body u-text-s'>
+                                <div className={moreInfoDesktop_light_text}>
                                     <FormattedMessage id='product.returnPolicy100days' />
                                 </div>
                             </div>
                         </div>
-                        <div className='o-block-short o-distance-m'>
+                        <div className='o-block-short o-distance-l'>
                             <SmallTruck className={marginRight16} />
                             <div className='o-block-short__body'>
-                                <p className='u-text-strong'><FormattedMessage id='product.standardDelivery.title' /></p>
-                                <p className='o-distance-xs'><FormattedMessage id='product.standardDelivery.message' /></p>
+                                <p className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.standardDelivery.title' /></p>
+                                <p className={moreInfoDesktop_light_text}><FormattedMessage id='product.standardDelivery.message' /></p>
                             </div>
                         </div>
                     </div>
                 </TabPanel>
-                <TabPanel>
-                    <h1><FormattedMessage id='product.reviews' values={{ count: 7 }} /></h1>
+                <TabPanel className={moreInfoDesktop_tab_panel}>
+                    <h3><FormattedMessage id='product.reviews' values={{ count: 7 }} /></h3>
                 </TabPanel>
             </Tabs>
 
@@ -114,8 +120,9 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                 <Scrollbars autoHide style={{
                     height: 'calc(100% - 48px)',
                     minHeight: '340px',
+                    margin: '30px',
                 }}>
-                    <ReviewsList />
+                    <ReviewsList/>
                 </Scrollbars>
                 :
                 <div
