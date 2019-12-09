@@ -15,6 +15,7 @@ class PromoBoxTastic extends Component {
                 vertical={verticalPosition}
                 horizontal={horizontalPosition}
                 image={image}
+                customChildrenStyle={{margin: '32px'}}
                 >
                 <p className='c-topic'><Translatable value={topic} /></p>
                 <h1 className='c-title'><Translatable value={title} /></h1>
@@ -25,7 +26,7 @@ class PromoBoxTastic extends Component {
                     // href={buttonLink.target}
                     type='primary'
                 >
-                    {buttonText}
+                    <Translatable value={buttonText} />
                 </Button>
             </OrganismsPromoboxWithPositioning>
         )
