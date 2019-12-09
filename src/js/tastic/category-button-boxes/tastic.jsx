@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 import OrganismsPromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
 import Button from '../../patterns/atoms/buttons/button'
-import Slider from '../../patterns/templates/slider'
 import { useWindowWidth } from '@react-hook/window-size'
-import { buttonBoxesDesktop } from './category-button-boxes.module.scss'
+import ButtonBoxesDesktop from '../../patterns/organisms/button-boxes/desktop'
+import ButtonBoxesMobile from '../../patterns/organisms/button-boxes/mobile'
 
 const CategoryButtonBoxesTastic = (props) => {
     const width = useWindowWidth()
@@ -18,53 +18,49 @@ const CategoryButtonBoxesTastic = (props) => {
         horizontal: 'center',
     }
 
-    const buttonBoxes = () => {
-        return [
-            <OrganismsPromoboxWithPositioning
-                key='1'
-                image={firstImage}
-                {... options}
-                >
-                <Button type='primary'>
-                    {firstButtonLabel}
-                </Button>
-            </OrganismsPromoboxWithPositioning>,
-            <OrganismsPromoboxWithPositioning
-                key='2'
-                image={secondImage}
-                {... options}
-                >
-                <Button type='primary'>
-                    {secondButtonLabel}
-                </Button>
-            </OrganismsPromoboxWithPositioning>,
-            <OrganismsPromoboxWithPositioning
-                key='3'
-                image={thirdImage}
-                {... options}
-                >
-                <Button type='primary'>
-                    {thirdButtonLabel}
-                </Button>
-            </OrganismsPromoboxWithPositioning>,
-        ]
-    }
+    const buttonBoxes = [
+        <OrganismsPromoboxWithPositioning
+            key='1'
+            image={firstImage}
+            {... options}
+            >
+            <Button type='primary'>
+                {firstButtonLabel}
+            </Button>
+        </OrganismsPromoboxWithPositioning>,
+        <OrganismsPromoboxWithPositioning
+            key='2'
+            image={secondImage}
+            {... options}
+            >
+            <Button type='primary'>
+                {secondButtonLabel}
+            </Button>
+        </OrganismsPromoboxWithPositioning>,
+        <OrganismsPromoboxWithPositioning
+            key='3'
+            image={thirdImage}
+            {... options}
+            >
+            <Button type='primary'>
+                {thirdButtonLabel}
+            </Button>
+        </OrganismsPromoboxWithPositioning>,
+    ]
 
     if (width < 880) {
         return (
-            <div className='button-boxes-slider display-grid'>
-                <Slider options={{ fixedWidth: 290 }}>
-                    {buttonBoxes()}
-                </Slider>
-            </div>
-        )
-    } else {
-        return (
-            <div className={buttonBoxesDesktop}>
-                {buttonBoxes()}
-            </div>
+            <ButtonBoxesMobile>
+                {buttonBoxes}
+            </ButtonBoxesMobile>
         )
     }
+
+    return (
+        <ButtonBoxesDesktop>
+            {buttonBoxes}
+        </ButtonBoxesDesktop>
+    )
 }
 
 CategoryButtonBoxesTastic.propTypes = {
