@@ -30,7 +30,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
     const [selectedTab, setSelectedTab] = useState(0)
 
     return (
-        <div className={moreInfoDesktop}>
+        <div className={`${moreInfoDesktop} o-distance-xl`}>
             <Tabs className={moreInfoDesktop__tabs} selectedTabClassName={moreInfoDesktop__tabs_selected}>
                 <TabList className={moreInfoDesktop__tabList}>
                     <Tab className={moreInfoDesktop__tab}>
@@ -121,6 +121,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                     height: 'calc(100% - 48px)',
                     minHeight: '340px',
                     margin: '30px',
+                    width: 'inherit'
                 }}>
                     <ReviewsList/>
                 </Scrollbars>

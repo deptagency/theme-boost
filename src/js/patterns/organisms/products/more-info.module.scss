@@ -18,7 +18,6 @@
   display: grid;
   grid-template-columns: 60% 40%;
   height: 550px;
-  padding: 3%;
 
   .moreInfoDesktop__tabs {
     display: inline-block;
@@ -62,7 +61,9 @@
 
     .moreInfoDesktop__tabList {
       border: none;
-      padding-left: 30px;
+      padding-left: 20px;
+      display: flex;
+      white-space: nowrap;
 
       .moreInfoDesktop__tab {
         display: inline-block;
