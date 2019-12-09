@@ -9,7 +9,7 @@ import { FormattedMessage } from 'react-intl'
 
 const OrganismsFullCart = ({ cartItems, sum, currency }) => {
     return (
-        <div className='o-container-medium o-prevent-space o-distance'>
+        <div className='o-container-medium o-prevent-space o-distance-s'>
             <section>
                 <h1 className='c-title-level-3'><FormattedMessage id='cart.myCart' /></h1>
                 <div className='o-distance'>
