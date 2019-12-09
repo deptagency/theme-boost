@@ -2,7 +2,7 @@ import React from 'react'
 
 import Button from '../../atoms/buttons/button'
 import { ReactComponent as EmptyCartIcon } from '../../../../icons/empty-cart.svg'
-import {FormattedMessage} from "react-intl";
+import { FormattedMessage } from 'react-intl'
 
 const OrganismsEmptyCart = () => {
     return (

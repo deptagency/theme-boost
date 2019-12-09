@@ -9,7 +9,7 @@ import TopCategoryNav from '../../molecules/navigations/topCategoryNav'
 import MoleculesUserIconNav from '../../molecules/navigations/user-icon-nav'
 import MobileMenuToggle from '../../atoms/buttons/mobile-menu-toggle'
 import Button from '../../atoms/buttons/button'
-import {FormattedMessage} from "react-intl";
+import { FormattedMessage } from 'react-intl'
 
 const OrganismsHead = ({ topCategories, loggedIn }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)

@@ -5,7 +5,7 @@ import OrganismsPaymentListingIcons from '../../organisms/listings/payment-listi
 import OrganismsSummary from '../../organisms/blocks/summary'
 import Button from '../../atoms/buttons/button'
 import OrganismsBundleListing from '../../organisms/listings/bundle-listing'
-import {FormattedMessage} from "react-intl";
+import { FormattedMessage } from 'react-intl'
 
 const OrganismsFullCart = ({ cartItems, sum, currency }) => {
     return (
