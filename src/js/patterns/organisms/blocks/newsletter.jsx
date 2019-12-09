@@ -13,15 +13,13 @@ class OrganismsNewsletterBlock extends Component {
                         <h3 className='c-title t-text-ghost'><FormattedMessage id='becomeFamily' /></h3>
                     </div>
                     <div>
-                        <form method='' action=''>
-                            <FormattedMessage id='yourEmail' >
-                                {placeholder => { return <input type='email' placeholder={placeholder} className='c-input-ghost' /> }}
-                            </FormattedMessage>
-                            <div className='o-distance-s'>
-                                <button type='submit' className='c-button c-button--boss c-button--ghost'><FormattedMessage id='submit' /></button>
-                                <p className='u-text-xs o-distance-s'><FormattedMessage id='submitAgree' /></p>
-                            </div>
-                        </form>
+                        <FormattedMessage id='yourEmail' >
+                            {placeholder => { return <input type='email' placeholder={placeholder} className='c-input-ghost' /> }}
+                        </FormattedMessage>
+                        <div className='o-distance-s'>
+                            <button type='submit' className='c-button c-button--boss c-button--ghost'><FormattedMessage id='submit' /></button>
+                            <p className='u-text-xs o-distance-s'><FormattedMessage id='submitAgree' /></p>
+                        </div>
                     </div>
                 </div>
             </div>
