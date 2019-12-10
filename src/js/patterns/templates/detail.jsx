@@ -6,7 +6,7 @@ import OrganismsFoot from '../organisms/base/foot'
 import OrganismsProductSwiper from '../organisms/swiper/product-swiper'
 import StoreFeatureList from '../molecules/StoreFeatureList'
 import OrganismsNewsletterBlock from '../organisms/blocks/newsletter'
-import OrganismsMoreInfoProduct from '../organisms/products/more-info'
+import OrganismsMoreInfoProduct from '../organisms/products/more-info-mobile'
 import OrganismsProductView from '../organisms/products/product-view'
 
 class TemplatesDetail extends Component {
