@@ -1,35 +1,9 @@
-.c-footer {
-    padding: $spacing-inset-m;
-    border-radius: $border-radius-base;
-    text-align: center;
-
-    @include breakpoint($layout-breakpoint-m) {
-        padding: $spacing-inset-l;
-        text-align: left;
-    }
-
-    a {
-        text-decoration: none;
-    }
-}
-
-.c-footer__body {
-    margin-top: $spacing-stack-l;
-    padding-top: $spacing-inset-l;
-    border-top: $border-size-base solid rgba($border-color-base, 0.3);
-}
-
-.c-footer__section {
-    padding-top: $spacing-stack-m;
-    border-top: $border-size-base solid rgba($border-color-base, 0.3);
-
-    @include breakpoint($layout-breakpoint-m) {
-        padding-top: 0;
-        border-top: 0;
-    }
-}
-
-.c-page-footer {
+.c-page-foot {
+    background: #31333e;
+    // default text color
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 32px;
+    padding-top: 12px;
     padding-bottom: 16px;
     strong {
         color: white;
@@ -37,12 +11,24 @@
     a {
         text-decoration: none;
     }
-    // NOTE: 12px couldn't be done with the regular distances.
-    // Also, it's nested here to overwrite the default of the
-    // o-distance-m class, which may or maynot be used later
-    .c-page-footer__contact-email {
-        margin-top: 12px;
+    @include breakpoint($layout-breakpoint-l) {
+        margin-top: 74px;
+        padding-top: 18px;
     }
+    // TODO
+    font-family: $font-family-spot;
+    h2 {
+        color: white;
+    }
+
+    .c-store-feature__list {
+        padding-top: 0;
+    }
+}
+
+.c-page-footer__contact-email {
+    // NOTE: 12px couldn't be done with the regular distances.
+    margin-top: 12px;
 }
 .c-page-footer__phone-icon {
     font-size: 22px;

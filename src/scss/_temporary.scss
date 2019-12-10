@@ -497,24 +497,6 @@
 }
 // marcel - general
 
-.c-page-foot {
-    background: #31333e;
-    // default text color
-    color: rgba(255, 255, 255, 0.8);
-    margin-top: 32px;
-    padding-top: 12px;
-    padding-bottom: 28px;
-    @include breakpoint($layout-breakpoint-l) {
-        margin-top: 74px;
-        padding-top: 28px;
-    }
-    // TODO
-    font-family: $font-family-spot;
-    h2 {
-        color: white;
-    }
-}
-
 .button-login-register {
     margin: 12px 10px 3px;
     width: fill-available;
@@ -532,12 +514,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 6px 0 16px;
+    // Those negative margins are here, so
+    // the store feature items can have a
+    // spacing in between (remember: we don't know
+    // their size), but align perfectly on the left
+    // and right of the grid
     width: calc(100% + 12px);
-    padding: 6px 0;
     margin-left: -6px;
     margin-right: -6px;
     @include breakpoint($layout-breakpoint-l) {
-        padding: 12px 0;
+        padding: 12px 0 28px;
         margin-left: -12px;
         margin-right: -12px;
         width: calc(100% + 24px);
