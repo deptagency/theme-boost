@@ -36,7 +36,7 @@ const OrganismsSummary = ({ sum, currency, subtotal }) => {
                     <p className='u-text-s t-text-quiet'><FormattedMessage id='cart.inclVat' /></p>
                 </div>
                 <div className='o-summary__item'>
-                    <p className='u-text-m u-text-strong cart-summary--right'>{currency} {sum}</p>
+                    <p className='u-text-m u-text-strong cart-summary--right'>{currency === 'EUR' ? '€' : currency} {sum}</p>
                 </div>
             </div>
         </div>

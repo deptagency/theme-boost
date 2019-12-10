@@ -17,7 +17,7 @@
 .moreInfoDesktop {
   display: grid;
   grid-template-columns: 60% 40%;
-  height: 340px;
+  height: 460px;
 
   .moreInfoDesktop__tabs {
     display: inline-block;
@@ -30,9 +30,58 @@
     padding: 6px 12px;
     cursor: pointer;
 
+    .moreInfoDesktop_span_formatted {
+      color: #333;
+      font-weight: 600;
+    }
+
+    .moreInfoDesktop_light_text {
+      color: #333;
+      font-weight: 300;
+    }
+
+    .moreInfoDesktop_p_formatted {
+      color: #333;
+      padding-top: 12px;
+      padding-bottom: 5px;
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    .moreInfoDesktop_tab_panel {
+      padding-left: 30px;
+
+        h3 {
+          font-size: 35px;
+          padding: 20px 0px;
+          font-weight: 600;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .reviewOverview {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-right: 38px;
+
+          .minContentWidth {
+            width: min-content;
+          }
+
+          .precent {
+            font-size: 8rem;
+            font-weight: bold;
+          }
+        }
+      }
+
+
     .moreInfoDesktop__tabList {
       border: none;
-      padding-left: inherit;
+      padding-left: 20px;
+      display: flex;
+      white-space: nowrap;
 
       .moreInfoDesktop__tab {
         display: inline-block;
@@ -43,6 +92,7 @@
         list-style: none;
         cursor: pointer;
         color: #97A5BA;
+        margin-right: 20px;
 
         .moreInfoDesktop__selected {
           span {

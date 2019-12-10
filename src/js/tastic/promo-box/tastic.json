@@ -81,10 +81,10 @@
                 {
                     "label": "Text",
                     "field": "buttonText",
-                    "translatable": false,
+                    "translatable": true,
                     "type": "string",
                     "required": true,
-                    "default": "Jetzt shoppen"
+                    "default": "Shop now"
                 },
                 {
                     "label": "Link",

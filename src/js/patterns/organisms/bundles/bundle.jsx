@@ -51,7 +51,7 @@ class OrganismBundle extends Component {
                     : null }
                 </div>
                 <div className='o-bundle__footer'>
-                    <span className='c-price'>{currency} {price}</span>
+                    <span className='c-price'>{currency === 'EUR' ? '€' : currency} {price}</span>
                     {this.props.showWishlistButton ?
                         <p><a href='' className='c-link c-link--quiet u-text-s'>Auf den Wunschzettel</a></p>
                   : null }

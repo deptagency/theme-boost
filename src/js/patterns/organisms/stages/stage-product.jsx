@@ -5,41 +5,55 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import OrganismsGallery from '../galleries/gallery'
 import MoleculesRating from '../../molecules/ratings/rating'
+import { hideUnder600, responsiveMargin } from '../products/product-view.module.scss'
+import OrganismsExpressDelivery from '../blocks/express-delivery'
+import {
+    productInfo,
+    productInfoRight,
+    productInfoRightBottom,
+    rightAlign,
+    leftAlign,
+    saleBadge,
+    ratingBadge,
+    inline,
+} from './stage-product.module.scss'
 
 class OrganismsProductStage extends Component {
     render () {
-        const { images, name, discountedPrice, price } = this.props
+        const { images, name, discountedPrice, price, addToCartButton } = this.props
         return (
             <div className='o-media-block'>
                 <div className='o-media-block__asset'>
                     <OrganismsGallery images={images} />
                 </div>
-                <div className='o-media-block__body o-prevent-space'>
-                    <div className='o-flex o-flex--justified'>
-                        <div>
-                            <div className='o-flex__item'>
-                                <h1 className='c-title-level-3'>{name}</h1>
-                            </div>
-                            <div className='o-flex o-flex--large-justified'>
-                                <div className='o-flex__item'>
-                                    <ul className='o-list-bare o-list-bare--tighty'>
-                                        <li className='o-list-bare__item'>
-                                            <span className='c-price t-text-danger u-text-m'>{discountedPrice}</span>
-                                            <span className='u-text-s t-text-quiet'> inkl. 19% MwSt.</span>
-                                        </li>
-                                        <li className='o-list-bare__item'>
-                                            <span className='c-price c-price--old t-text-quiet'>{price}</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className='o-flex__item'>
-                                    <MoleculesRating />
-                                </div>
-                            </div>
-                        </div>
+                <div className={`o-media-block__body o-prevent-space productInfoRight ${productInfoRight}`}>
+                    <div className={`${productInfo} productInfo`}>
                         <div className='o-flex__item'>
+                            <h1 className='c-title-level-3'>{name}</h1>
+                        </div>
+
+                        <div className={`${rightAlign} ${saleBadge}`}>
                             <span className='c-badge c-badge--danger'>Sale</span>
                         </div>
+
+                        <div className={`o-flex  ${responsiveMargin}`}>
+                            <div className='o-flex__item'>
+                                <ul className='o-list-bare o-list-bare--tighty'>
+                                    <li className='o-list-bare__item'>
+                                        <span className='c-price t-text-danger u-text-m'>€ {discountedPrice || price}</span>
+                                        <span className='u-text-s t-text-quiet'> inkl. 19% MwSt.</span>
+                                    </li>
+                                    {discountedPrice && <li className='o-list-bare__item'>
+                                        <span className='c-price c-price--old t-text-quiet'>€ {price}</span>
+                                    </li>}
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className={`${rightAlign} ${leftAlign} ${responsiveMargin} ${inline} ${ratingBadge}`}>
+                            <MoleculesRating outerClassName={inline} />
+                        </div>
+
                     </div>
 
                     {/* <div className='filter-component'>
@@ -71,9 +85,13 @@ class OrganismsProductStage extends Component {
                             </p>
                         </div>
                     </div> */}
+
+                    <div className={`${hideUnder600} productInfoRightBottom ${productInfoRightBottom}`}>
+                        {addToCartButton}
+                        <OrganismsExpressDelivery />
+                    </div>
                 </div>
 
-                {/**/}
                 {/* <div className="o-flex"> */}
                 {/* <div className="delivery-features">
                     <div className="c-box">
@@ -111,7 +129,6 @@ class OrganismsProductStage extends Component {
                 </div> */}
                 {/* </div> */}
 
-                {/*    */}
             </div>
         )
     }
@@ -122,14 +139,15 @@ OrganismsProductStage.propTypes = {
     name: PropTypes.string.isRequired,
     price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     discountedPrice: PropTypes.string.isRequired,
+    addToCartButton: PropTypes.node,
 }
 
 OrganismsProductStage.defaultProps = {
     images: [],
 
     // defaults for development purposes
-    discountedPrice: '49,95 €',
-    price: '69,95 €',
+    // discountedPrice: '49,95 €',
+    // price: '69,95 €',
 }
 
 export default ComponentInjector.return('OrganismsProductStage', OrganismsProductStage)

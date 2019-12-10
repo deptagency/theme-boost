@@ -5,7 +5,7 @@ import Translatable from 'frontastic-catwalk/src/js/component/translatable'
 
 class OrganismsPromoboxWithPositioning extends Component {
     render () {
-        const { children, vertical, horizontal, height, image } = this.props
+        const { children, vertical, horizontal, height, image, customChildrenStyle } = this.props
 
         let style = {}
         if (typeof height !== 'undefined') {
@@ -22,8 +22,10 @@ class OrganismsPromoboxWithPositioning extends Component {
                     src={image.media.file}
                     alt={<Translatable value={image.media.title} />} className='c-promobox__backdrop' />
                 <div className={`c-promobox__overlay c-promobox__overlay--${vertical}-${horizontal}`}>
-                    <div className='c-promobox__overlay__inner'>
-                        {children}
+                    <div className={`c-promobox__overlay__inner`}>
+                        <div style={customChildrenStyle}>
+                            {children}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -34,6 +36,7 @@ class OrganismsPromoboxWithPositioning extends Component {
 OrganismsPromoboxWithPositioning.defaultProps = {
     vertical: 'middle',
     horizontal: 'center',
+    customChildrenStyle: {},
 }
 
 OrganismsPromoboxWithPositioning.propTypes = {
@@ -42,6 +45,7 @@ OrganismsPromoboxWithPositioning.propTypes = {
     horizontal: PropTypes.string,
     height: PropTypes.string,
     image: PropTypes.object.isRequired,
+    customChildrenStyle: PropTypes.string,
 }
 
 export default ComponentInjector.return('OrganismsPromoboxWithPositioning', OrganismsPromoboxWithPositioning)

@@ -9,6 +9,7 @@ import TopCategoryNav from '../../molecules/navigations/topCategoryNav'
 import MoleculesUserIconNav from '../../molecules/navigations/user-icon-nav'
 import MobileMenuToggle from '../../atoms/buttons/mobile-menu-toggle'
 import Button from '../../atoms/buttons/button'
+import { FormattedMessage } from 'react-intl'
 
 const OrganismsHead = ({ topCategories, loggedIn }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -27,7 +28,9 @@ const OrganismsHead = ({ topCategories, loggedIn }) => {
                     setIsMobileMenuOpen(false)
                 }}
                 >
-                {loggedIn ? 'Meine bEstellungen ansehen' : 'Melde dich jetzt an'}
+                {loggedIn ?
+                    <FormattedMessage id='account.viewMyProfile' />
+                    : <FormattedMessage id='account.signUp' /> }
             </Button>
         )
     }

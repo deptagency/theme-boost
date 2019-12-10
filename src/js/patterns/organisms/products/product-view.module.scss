@@ -1,0 +1,26 @@
+.hideUnder600 {
+  display: block;
+}
+
+.hideOver600 {
+  display: none;
+}
+
+.responsiveMargin {
+  margin-top: 32px;
+}
+
+
+@media (max-width: 600px) {
+  .hideUnder600 {
+    display: none;
+  }
+
+  .hideOver600 {
+    display: block;
+  }
+
+  .responsiveMargin {
+    margin-top: 0;
+  }
+}

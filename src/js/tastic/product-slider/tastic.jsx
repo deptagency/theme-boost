@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import Link from 'frontastic-catwalk/src/js/app/link'
-import MoleculesHeading from '../../patterns/molecules/headings/heading'
 import Slider from '../../patterns/templates/slider'
 import Translatable from 'frontastic-catwalk/src/js/component/translatable'
 import { take } from 'lodash'
 import MoleculesSticker from '../../patterns/molecules/sticker/sticker'
 import Wishlist from '../../patterns/atoms/wishlist/wishlist'
+import { sliderHeading, sliderTitle, sliderDescription } from './product-slider.module.scss'
 
 const ProductItem = ({ product }) => {
     const { name, variants } = product
@@ -60,15 +60,20 @@ class ProductSliderTastic extends Component {
         let productsToShow = take(productList.items, this.props.tastic.schema.get('productCount'))
 
         return (
-            <div className='margin-12'>
-                <MoleculesHeading
-                    title={<Translatable value={title} />}
-                    description={<Translatable value={description} />}
-                />
+            <Fragment>
+                <header className={sliderHeading}>
+                    {title && <div className={`sliderTitle ${sliderTitle}`}>
+                        <Translatable value={title} />
+                    </div>}
+                    {description && <div className={`sliderDescription ${sliderDescription}`}>
+                        <Translatable value={description} />
+                    </div>}
+                </header>
+
                 <Slider>
                     {productsToShow.map((product, i) => { return <ProductItem key={i} product={product} /> })}
                 </Slider>
-            </div>
+            </Fragment>
         )
     }
 }

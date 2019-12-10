@@ -5,30 +5,32 @@ import { FormattedMessage } from 'react-intl'
 import { ReactComponent as FullSmallStar } from '../../../../icons/full-small-star.svg'
 import { ReactComponent as EmptySmallStar } from '../../../../icons/empty-small-star.svg'
 
-const MoleculesRating = ({ outerClassName, className }) => {
+const MoleculesStaticRating = ({ outerClassName, className, rating, reviewsCount }) => {
     return (
         <div className={outerClassName}>
             <div className={`c-rating o-flex o-flex--center ${className}`}>
                 {[1, 2, 3, 4, 5].map((s, i) => {
-                    return i < 3 ? <FullSmallStar /> : <EmptySmallStar />
+                    return i < rating ? <FullSmallStar /> : <EmptySmallStar />
                 })}
             </div>
             <div className='u-text-s t-text-quiet padding-left--8'>
-                <FormattedMessage id='product.reviewsWithCount' values={{ count: 7 }} />
+                {reviewsCount} <FormattedMessage id='product.reviews' />
             </div>
 
         </div>
     )
 }
 
-MoleculesRating.propTypes = {
+MoleculesStaticRating.propTypes = {
     outerClassName: PropTypes.string,
     className: PropTypes.string,
+    rating: PropTypes.number.isRequired,
+    reviewsCount: PropTypes.number.isRequired,
 }
 
-MoleculesRating.defaultProps = {
+MoleculesStaticRating.defaultProps = {
     outerClassName: '',
     className: '',
 }
 
-export default ComponentInjector.return('MoleculesRating', MoleculesRating)
+export default ComponentInjector.return('MoleculesStaticRating', MoleculesStaticRating)
