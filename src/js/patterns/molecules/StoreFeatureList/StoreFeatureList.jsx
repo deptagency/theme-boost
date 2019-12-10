@@ -8,18 +8,16 @@ import { ReactComponent as IconTruck } from '../../../../icons/truck.svg'
 import { ReactComponent as IconBill } from '../../../../icons/bill.svg'
 import { ReactComponent as IconPackage } from '../../../../icons/package.svg'
 
-export function StoreFeatureList() {
+export function StoreFeatureList({ features }) {
     return (
         <div className='c-store-feature__list'>
-            <StoreFeature icon={<IconTruck />}>
-                <Translatable value={'Lieferung in 24 Stunden'} />
-            </StoreFeature>
-            <StoreFeature icon={<IconBill />}>
-                <Translatable value={'Kauf auf Rechnung'} />
-            </StoreFeature>
-            <StoreFeature icon={<IconPackage />}>
-                <Translatable value={'Kostenloser Versand & Rückversand'} />
-            </StoreFeature>
+            {features.map((feature) => {
+                return (
+                    <StoreFeature icon={feature.icon}>
+                        <Translatable value={feature.text} />
+                    </StoreFeature>
+                )
+            })}
         </div>
     )
 }

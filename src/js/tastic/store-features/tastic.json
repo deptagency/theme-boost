@@ -6,7 +6,40 @@
     "schema": [
         {
             "name": "Features",
-            "fields": []
+            "fields": [
+                {
+                    "label": "Features",
+                    "field": "features",
+                    "type": "group",
+                    "itemLabelField": "text",
+                    "fields": [
+                        {
+                            "label": "Text",
+                            "field": "text",
+                            "type": "string"
+                        },
+                        {
+                            "label": "Icon",
+                            "field": "icon",
+                            "type": "enum",
+                            "values": [
+                                {
+                                    "name": "Truck",
+                                    "value": "truck"
+                                },
+                                {
+                                    "name": "Bill",
+                                    "value": "bill"
+                                },
+                                {
+                                    "name": "Box",
+                                    "value": "box"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
