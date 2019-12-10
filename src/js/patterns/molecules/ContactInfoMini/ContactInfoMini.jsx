@@ -2,27 +2,24 @@ import React from 'react'
 
 import { ReactComponent as PhoneIcon } from '../../../../icons/phone.svg'
 
-export function ContactInfoMini() {
+export function ContactInfoMini({ phoneNumber, phoneNumberSubline, email, emailOverline }) {
     return (
-        <div>
-            <h2 className='u-text-m u-text-strong u-text-uppercase'>Kontakt</h2>
-            <div className='o-distance-m'>
-                <div className='o-block-short o-block-short--centered o-footer__contact-details'>
-                    <PhoneIcon />
-                    <div>
-                        <strong className='u-text-strong t-text-ghost'>02300 77 77 5</strong> <br />
-                        <span className='u-text-s'>24 Stunden Service</span>
-                    </div>
+        <>
+            <div className='o-block-short o-block-short--centered'>
+                <PhoneIcon className='c-page-footer__phone-icon' />
+                <div>
+                    <strong className='u-text-strong'>{phoneNumber}</strong> <br />
+                    <span className='u-text-s'>{phoneNumberSubline}</span>
                 </div>
             </div>
-            <div className='o-distance-m'>
+            <div className='o-distance-m c-page-footer__contact-email'>
                 <p>
-                    <span className='u-text-s'>Schreiben Sie uns</span> <br />
-                    <a href='' title='' className='c-link c-link--ghost'>
-                        <strong>hallo@frontastic.cloud</strong>
+                    <span className='u-text-s'>{emailOverline}</span> <br />
+                    <a href={email} title='' className='c-link c-link--ghost'>
+                        <strong>{email}</strong>
                     </a>
                 </p>
             </div>
-        </div>
+        </>
     )
 }
