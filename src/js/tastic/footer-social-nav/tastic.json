@@ -1,0 +1,41 @@
+{
+    "tasticType": "frontastic/boost/footer-social-nav",
+    "name": "Footer Social Navigation",
+    "icon": "public",
+    "category": "General",
+    "schema": [
+        {
+            "name": "Social Links",
+            "fields": [
+                {
+                    "label": "Social Links",
+                    "field": "socialLinks",
+                    "type": "group",
+                    "itemLabelField": "icon",
+                    "fields": [
+                        {
+                            "label": "Link",
+                            "field": "reference",
+                            "type": "reference"
+                        },
+                        {
+                            "label": "Icon",
+                            "field": "icon",
+                            "type": "enum",
+                            "values": [
+                                {
+                                    "name": "Instagram",
+                                    "value": "instagram"
+                                },
+                                {
+                                    "name": "Facebook",
+                                    "value": "facebook"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
