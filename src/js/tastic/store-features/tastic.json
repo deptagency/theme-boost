@@ -1,0 +1,12 @@
+{
+    "tasticType": "frontastic/boost/store-features",
+    "name": "Store Features",
+    "icon": "list",
+    "category": "General",
+    "schema": [
+        {
+            "name": "Features",
+            "fields": []
+        }
+    ]
+}
