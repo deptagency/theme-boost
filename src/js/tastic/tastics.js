@@ -52,6 +52,8 @@ import StoreFeaturesTastic from './store-features/tastic'
 import FooterContactInfoTastic from './footer-contact-info/tastic'
 import FooterPaymentMethodsTastic from './footer-payment-methods/tastic'
 import FooterLinkListTastic from './footer-link-list/tastic'
+import FooterMetaNavTastic from './footer-meta-nav/tastic'
+import FooterSocialNavTastic from './footer-social-nav/tastic'
 
 export default (() => {
     return {
@@ -109,5 +111,7 @@ export default (() => {
         'frontastic/boost/footer-contact-info': FooterContactInfoTastic,
         'frontastic/boost/footer-payment-methods': FooterPaymentMethodsTastic,
         'frontastic/boost/footer-link-list': FooterLinkListTastic,
+        'frontastic/boost/footer-meta-nav': FooterMetaNavTastic,
+        'frontastic/boost/footer-social-nav': FooterSocialNavTastic,
     }
 })()

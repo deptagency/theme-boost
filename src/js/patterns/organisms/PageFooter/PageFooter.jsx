@@ -13,8 +13,6 @@ import { ReactComponent as InstagramIcon } from '../../../../icons/instagram.svg
 
 import Column from './components/Column'
 
-import styles from './styles.module.scss'
-
 const linksUnternehmen = [
     { url: '#', title: 'Ueber uns' },
     { url: '#', title: 'Partnerschaften' },
@@ -51,7 +49,7 @@ export function PageFooter() {
                 <Column title='Zahlungsbedingungen'>
                     <LinkList
                         links={linksPayment}
-                        className={styles.paymentMethodsList}
+                        className='c-page-footer__payment-methods'
                         listClassName='o-list-inline'
                         listItemClassName='o-list-inline__item'
                     />
@@ -70,7 +68,7 @@ export function PageFooter() {
             <div className='o-footer__bottom'>
                 <LinkList
                     links={linksSocial}
-                    className={styles.socialList}
+                    className='c-page-footer__social-links'
                     listClassName='o-list-inline'
                     listItemClassName='o-list-inline__item'
                 />
