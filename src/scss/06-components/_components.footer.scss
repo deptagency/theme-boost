@@ -28,3 +28,38 @@
         border-top: 0;
     }
 }
+
+.c-page-footer {
+    padding-bottom: 16px;
+    strong {
+        color: white;
+    }
+    a {
+        text-decoration: none;
+    }
+    // NOTE: 12px couldn't be done with the regular distances.
+    // Also, it's nested here to overwrite the default of the
+    // o-distance-m class, which may or maynot be used later
+    .c-page-footer__contact-email {
+        margin-top: 12px;
+    }
+}
+.c-page-footer__phone-icon {
+    font-size: 22px;
+    margin-right: 9px;
+    path {
+        fill: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.c-page-footer__payment-methods {
+    font-size: 38px;
+
+    rect {
+        fill: white;
+    }
+    path,
+    circle {
+        fill: #31333e;
+    }
+}
