@@ -19,6 +19,7 @@ function FooterLinkList({ data }) {
         <Column title={<Translatable value={data.header} />}>
             <LinkList
                 links={translateLabels(data.links)}
+                className='c-page-footer__link-list'
                 listClassName='o-list-bare'
                 listItemClassName='o-list-bare__item'
             />
