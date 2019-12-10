@@ -48,6 +48,10 @@ import ShowcaseTextTastic from './showcase-text/tastic'
 import AccountAccessTastic from './account/access/tastic'
 import AccountConfirmTastic from './account/confirm/tastic'
 import AccountProfileTastic from './account/profile/tastic'
+import StoreFeaturesTastic from './store-features/tastic'
+import FooterContactInfoTastic from './footer-contact-info/tastic'
+import FooterPaymentMethodsTastic from './footer-payment-methods/tastic'
+import FooterLinkListTastic from './footer-link-list/tastic'
 
 export default (() => {
     return {
@@ -101,5 +105,9 @@ export default (() => {
         'frontastic/boost/account-access': AccountAccessTastic,
         'frontastic/boost/account-confirm': AccountConfirmTastic,
         'frontastic/boost/account-profile': AccountProfileTastic,
+        'frontastic/boost/store-features': StoreFeaturesTastic,
+        'frontastic/boost/footer-contact-info': FooterContactInfoTastic,
+        'frontastic/boost/footer-payment-methods': FooterPaymentMethodsTastic,
+        'frontastic/boost/footer-link-list': FooterLinkListTastic,
     }
 })()
