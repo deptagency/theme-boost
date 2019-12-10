@@ -1,0 +1,31 @@
+{
+    "tasticType": "frontastic/boost/footer-meta-nav",
+    "name": "Footer Meta Navigation",
+    "icon": "list",
+    "category": "General",
+    "schema": [
+        {
+            "name": "Links",
+            "fields": [
+                {
+                    "label": "Links",
+                    "field": "links",
+                    "type": "group",
+                    "itemLabelField": "label",
+                    "fields": [
+                        {
+                            "label": "Label",
+                            "field": "label",
+                            "type": "string"
+                        },
+                        {
+                            "label": "Link",
+                            "field": "reference",
+                            "type": "reference"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
