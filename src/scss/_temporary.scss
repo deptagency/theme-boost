@@ -1,12 +1,12 @@
 #frssrw {
-  display: none
+    display: none;
 }
 
-.s-node {
-  max-width: 1024px;
-  display: block;
-  margin: auto;
-}
+//.s-node {
+//  max-width: 1024px;
+//  display: block;
+//  margin: auto;
+//}
 
 .product-in-cart-amount {
     width: 60px;
@@ -496,13 +496,6 @@
     }
 }
 // marcel - general
-.c-page-head,
-.c-page-body,
-.o-footer .o-container,
-.c-footer .o-container {
-    max-width: $layout-wrapper-width;
-    margin: 0 auto;
-}
 
 .c-page-foot {
     background: #31333e;
@@ -510,6 +503,7 @@
     color: rgba(255, 255, 255, 0.8);
     margin-top: 32px;
     padding-top: 12px;
+    padding-bottom: 28px;
     @include breakpoint($layout-breakpoint-l) {
         margin-top: 74px;
         padding-top: 28px;
@@ -572,4 +566,3 @@
     line-height: 0;
     margin-right: 8px;
 }
-
