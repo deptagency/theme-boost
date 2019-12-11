@@ -4,10 +4,11 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import wishlistHeart from '../../../../icons/wishlist-heart.svg'
 
 import MoleculesDetaillist from '../../molecules/lists/detaillist'
+import AtomsPrice from '../../atoms/prices/price'
 
 class OrganismBundle extends Component {
     render () {
-        const { showWishListIcon, showCloseIcon, image, name, designer, count, price, color, size, currency } = this.props
+        const { showWishListIcon, showCloseIcon, image, name, designer, count, price, color, size } = this.props
 
         return (<div className='c-product-row'>
             <article className='o-bundle'>
@@ -51,7 +52,7 @@ class OrganismBundle extends Component {
                     : null }
                 </div>
                 <div className='o-bundle__footer'>
-                    <span className='c-price'>{currency === 'EUR' ? '€' : currency} {price}</span>
+                    <span className='c-price'><AtomsPrice value={price} /></span>
                     {this.props.showWishlistButton ?
                         <p><a href='' className='c-link c-link--quiet u-text-s'>Auf den Wunschzettel</a></p>
                   : null }
@@ -72,7 +73,6 @@ OrganismBundle.propTypes = {
     price: PropTypes.number.isRequired,
     count: PropTypes.number.isRequired,
     color: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
     size: PropTypes.string.isRequired,
 }
 

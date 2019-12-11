@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
+import AtomsPrice from '../../atoms/prices/price'
 
 const OrganismsSummary = ({ sum, currency, subtotal }) => {
     return (
@@ -36,7 +37,7 @@ const OrganismsSummary = ({ sum, currency, subtotal }) => {
                     <p className='u-text-s t-text-quiet'><FormattedMessage id='cart.inclVat' /></p>
                 </div>
                 <div className='o-summary__item'>
-                    <p className='u-text-m u-text-strong cart-summary--right'>{currency === 'EUR' ? '€' : currency} {sum}</p>
+                    <p className='u-text-m u-text-strong cart-summary--right'><AtomsPrice value={sum} /></p>
                 </div>
             </div>
         </div>

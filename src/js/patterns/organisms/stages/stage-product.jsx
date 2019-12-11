@@ -40,11 +40,11 @@ class OrganismsProductStage extends Component {
                             <div className='o-flex__item'>
                                 <ul className='o-list-bare o-list-bare--tighty'>
                                     <li className='o-list-bare__item'>
-                                        <span className='c-price t-text-danger u-text-m'>€ {discountedPrice || price}</span>
+                                        <span className='c-price t-text-danger u-text-m'>{discountedPrice || price}</span>
                                         <span className='u-text-s t-text-quiet'> inkl. 19% MwSt.</span>
                                     </li>
                                     {discountedPrice && <li className='o-list-bare__item'>
-                                        <span className='c-price c-price--old t-text-quiet'>€ {price}</span>
+                                        <span className='c-price c-price--old t-text-quiet'>{price}</span>
                                     </li>}
                                 </ul>
                             </div>
@@ -137,17 +137,13 @@ class OrganismsProductStage extends Component {
 OrganismsProductStage.propTypes = {
     images: PropTypes.array.isRequired,
     name: PropTypes.string.isRequired,
-    price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    discountedPrice: PropTypes.string,
+    price: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node]),
+    discountedPrice: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node]),
     addToCartButton: PropTypes.node,
 }
 
 OrganismsProductStage.defaultProps = {
     images: [],
-
-    // defaults for development purposes
-    // discountedPrice: '49,95 €',
-    // price: '69,95 €',
 }
 
 export default ComponentInjector.return('OrganismsProductStage', OrganismsProductStage)

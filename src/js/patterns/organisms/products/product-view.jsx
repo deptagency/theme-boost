@@ -7,6 +7,7 @@ import OrganismsSizeSwiper from '../swiper/size-swiper'
 // import OrganismsImageColorSwiper from '../swiper/image-color-swiper'
 import Button from '../../atoms/buttons/button'
 import app from 'frontastic-catwalk/src/js/app/app'
+import AtomsPrice from '../../atoms/prices/price'
 
 import { hideOver600, responsiveMargin } from './product-view.module.scss'
 
@@ -34,8 +35,8 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
             <OrganismsProductStage
                 images={images}
                 name={name}
-                price={variant.price}
-                dicountedPrice={variant.discountedPrice}
+                price={<AtomsPrice value={variant.price} />}
+                discountedPrice={variant.discountedPrice ? <AtomsPrice value={variant.discountedPrice} /> : null}
                 addToCartButton={<AddToCartButton variant={variant} />}
             />
 
