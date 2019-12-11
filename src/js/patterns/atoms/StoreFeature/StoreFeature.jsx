@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export function StoreFeature({ icon, children }) {
+export function StoreFeature ({ icon, children }) {
     return (
         <div className='c-store-feature'>
             <div className='c-store-feature__icon'>{icon}</div>

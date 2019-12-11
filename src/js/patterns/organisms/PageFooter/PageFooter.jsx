@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 import StoreFeatureList from '../../molecules/StoreFeatureList'
 import ContactInfoMini from '../../molecules/ContactInfoMini'
@@ -38,7 +38,7 @@ const linksSocial = [
     { url: '#', title: 'Instagram', children: <InstagramIcon /> },
 ]
 
-export function PageFooter() {
+function PageFooter () {
     return (
         <div className='c-page-footer o-container o-prevent-space'>
             <StoreFeatureList />
@@ -83,17 +83,18 @@ export function PageFooter() {
     )
 }
 
-PageFooter.propTypes = {
-    // children: PropTypes.node.isRequired,
-    component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    className: PropTypes.string,
-    theme: PropTypes.string,
-}
+// PageFooter.propTypes = {
+//     children: PropTypes.node.isRequired,
+//     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+//     className: PropTypes.string,
+//     theme: PropTypes.string,
+// }
 
-PageFooter.defaultProps = {
-    component: 'footer',
-    theme: 't-universe',
-    className: '',
-}
+// PageFooter.defaultProps = {
+//     component: 'footer',
+//     theme: 't-universe',
+//     className: '',
+// }
 
-//ComponentInjector.return('PageFooter', PageFooter)
+export { PageFooter }
+// ComponentInjector.return('PageFooter', PageFooter)

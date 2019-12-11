@@ -9,14 +9,14 @@ import StoreFeatureList from '../../molecules/StoreFeatureList'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsFooter extends Component {
-    render() {
+    render () {
         const Component = this.props.component
 
         return (
             <Component
                 {..._.omit(this.props, ['children', 'component', 'className', 'theme'])}
                 className={classnames('o-footer c-footer o-distance-xl', this.props.className, this.props.theme)}
-            >
+                >
                 <div className='o-container o-prevent-space'>
                     <div className='o-footer__top c-footer__top'>
                         <StoreFeatureList />

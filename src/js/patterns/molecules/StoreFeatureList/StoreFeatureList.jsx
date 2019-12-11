@@ -1,14 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import StoreFeature from '../../atoms/StoreFeature'
-
 import Translatable from 'frontastic-catwalk/src/js/component/translatable'
 
-import { ReactComponent as IconTruck } from '../../../../icons/truck.svg'
-import { ReactComponent as IconBill } from '../../../../icons/bill.svg'
-import { ReactComponent as IconPackage } from '../../../../icons/package.svg'
-
-export function StoreFeatureList({ features }) {
+export function StoreFeatureList ({ features }) {
     return (
         <div className='c-store-feature__list'>
             {features.map((feature) => {
@@ -22,6 +18,10 @@ export function StoreFeatureList({ features }) {
     )
 }
 
-StoreFeatureList.propTypes = {}
+StoreFeatureList.propTypes = {
+    features: PropTypes.array,
+}
 
-StoreFeatureList.defaultProps = {}
+StoreFeatureList.defaultProps = {
+    features: [],
+}

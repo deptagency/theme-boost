@@ -1,9 +1,8 @@
 import React from 'react'
-
-import Translatable from '@frontastic/catwalk/src/js/component/translatable'
+import PropTypes from 'prop-types'
 import NodeLink from '@frontastic/catwalk/src/js/app/nodeLink.jsx'
 
-export function LinkList({ links, className, listClassName, listItemClassName }) {
+function LinkList ({ links, className, listClassName, listItemClassName }) {
     return (
         <nav className={className || ''}>
             <ul className={listClassName}>
@@ -22,3 +21,9 @@ export function LinkList({ links, className, listClassName, listItemClassName })
         </nav>
     )
 }
+
+LinkList.propTypes = {
+    links: PropTypes.string, className: PropTypes.string, listClassName: PropTypes.string, listItemClassName: PropTypes.string,
+}
+
+export { LinkList }

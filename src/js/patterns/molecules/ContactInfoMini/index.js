@@ -1,1 +1,1 @@
-export { ContactInfoMini, ContactInfoMini as default } from './ContactInfoMini';
+export { ContactInfoMini, ContactInfoMini as default } from './ContactInfoMini'

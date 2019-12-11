@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { ReactComponent as PhoneIcon } from '../../../../icons/phone.svg'
 
-export function ContactInfoMini({ phoneNumber, phoneNumberSubline, email, emailOverline }) {
+const ContactInfoMini = ({ phoneNumber, phoneNumberSubline, email, emailOverline }) => {
     return (
         <>
             <div className='o-block-short o-block-short--centered'>
@@ -23,3 +24,12 @@ export function ContactInfoMini({ phoneNumber, phoneNumberSubline, email, emailO
         </>
     )
 }
+
+ContactInfoMini.propTypes = {
+    phoneNumber: PropTypes.string,
+    phoneNumberSubline: PropTypes.string,
+    email: PropTypes.string,
+    emailOverline: PropTypes.string,
+}
+
+export { ContactInfoMini }

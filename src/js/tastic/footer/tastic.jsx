@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import PageFooter from '../../patterns/organisms/PageFooter'
 
 class FooterTastic extends Component {
-    render() {
+    render () {
         return <PageFooter />
     }
 }

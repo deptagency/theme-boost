@@ -10,7 +10,7 @@ import OrganismsMoreInfoProduct from '../organisms/products/more-info-mobile'
 import OrganismsProductView from '../organisms/products/product-view'
 
 class TemplatesDetail extends Component {
-    render() {
+    render () {
         return (
             <Fragment>
                 <OrganismsHead />

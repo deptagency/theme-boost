@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export function Column({ children, className = '', title = 'Title missing' }) {
+function Column ({ children, className = '', title = 'Title missing' }) {
     return (
         <div className={className}>
             <h2 className='u-text-m u-text-strong u-text-uppercase'>{title}</h2>
@@ -8,3 +9,11 @@ export function Column({ children, className = '', title = 'Title missing' }) {
         </div>
     )
 }
+
+Column.propTypes = {
+    children: PropTypes.object,
+    className: PropTypes.string,
+    title: PropTypes.string,
+}
+
+export { Column }

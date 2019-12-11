@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-//import OrganismsFeatureListing from '../listings/feature-listing'
+// import OrganismsFeatureListing from '../listings/feature-listing'
 import OrganismsExpressDelivery from './express-delivery'
 
 // NOTE: this pattern and the tastic (delivery-details/tastic.jsx)
@@ -9,7 +9,7 @@ const OrganismsDeliveryFeatures = () => {
     return (
         <Fragment>
             <OrganismsExpressDelivery />
-            {/*<OrganismsFeatureListing />*/}
+            {/* <OrganismsFeatureListing /> */}
         </Fragment>
     )
 }
