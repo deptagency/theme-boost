@@ -45,7 +45,7 @@ OrganismsPromoboxWithPositioning.propTypes = {
     horizontal: PropTypes.string,
     height: PropTypes.string,
     image: PropTypes.object.isRequired,
-    customChildrenStyle: PropTypes.string,
+    customChildrenStyle: PropTypes.object,
 }
 
 export default ComponentInjector.return('OrganismsPromoboxWithPositioning', OrganismsPromoboxWithPositioning)

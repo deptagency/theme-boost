@@ -7,9 +7,9 @@ import Translatable from 'frontastic-catwalk/src/js/component/translatable'
 export function StoreFeatureList ({ features }) {
     return (
         <div className='c-store-feature__list'>
-            {features.map((feature) => {
+            {features.map((feature, i) => {
                 return (
-                    <StoreFeature icon={feature.icon}>
+                    <StoreFeature key={i} icon={feature.icon}>
                         <Translatable value={feature.text} />
                     </StoreFeature>
                 )

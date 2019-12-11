@@ -6,9 +6,9 @@ function LinkList ({ links, className, listClassName, listItemClassName }) {
     return (
         <nav className={className || ''}>
             <ul className={listClassName}>
-                {links.map((link) => {
+                {links.map((link, i) => {
                     return (
-                        <li key={link.label} className={listItemClassName}>
+                        <li key={`${i}-${link.label}`} className={listItemClassName}>
                             {link.reference ? (
                                 <NodeLink node={link.reference}>{link.children || link.label}</NodeLink>
                             ) : (
@@ -23,7 +23,10 @@ function LinkList ({ links, className, listClassName, listItemClassName }) {
 }
 
 LinkList.propTypes = {
-    links: PropTypes.string, className: PropTypes.string, listClassName: PropTypes.string, listItemClassName: PropTypes.string,
+    links: PropTypes.array,
+    className: PropTypes.string,
+    listClassName: PropTypes.string,
+    listItemClassName: PropTypes.string,
 }
 
 export { LinkList }

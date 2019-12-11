@@ -13,7 +13,7 @@ function Column ({ children, className = '', title = 'Title missing' }) {
 Column.propTypes = {
     children: PropTypes.object,
     className: PropTypes.string,
-    title: PropTypes.string,
+    title: PropTypes.object,
 }
 
 export { Column }

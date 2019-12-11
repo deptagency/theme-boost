@@ -26,10 +26,10 @@ const ContactInfoMini = ({ phoneNumber, phoneNumberSubline, email, emailOverline
 }
 
 ContactInfoMini.propTypes = {
-    phoneNumber: PropTypes.string,
-    phoneNumberSubline: PropTypes.string,
-    email: PropTypes.string,
-    emailOverline: PropTypes.string,
+    phoneNumber: PropTypes.object,
+    phoneNumberSubline: PropTypes.object,
+    email: PropTypes.object,
+    emailOverline: PropTypes.object,
 }
 
 export { ContactInfoMini }

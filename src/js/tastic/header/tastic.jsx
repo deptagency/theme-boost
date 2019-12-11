@@ -6,7 +6,7 @@ import ReferencePropType from 'frontastic-catwalk/src/js/component/reference'
 
 import Header from '../../patterns/organisms/base/header'
 
-function HeaderTastic ({ data, context }) {
+const HeaderTastic = ({ data, context }) => {
     return (
         <Header
             topCategories={data.topCategories}
@@ -20,7 +20,7 @@ HeaderTastic.propTypes = {
         topCategories: PropTypes.arrayOf(
             PropTypes.shape({
                 name: PropTypes.string,
-                reference: ReferencePropType,
+                reference: () => { return ReferencePropType },
             })
         ),
     }),

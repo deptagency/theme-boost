@@ -16,3 +16,7 @@ IconButton.propTypes = {
     className: PropTypes.string,
     children: PropTypes.any,
 }
+
+IconButton.defaultProps = {
+    onClick: () => {},
+}
