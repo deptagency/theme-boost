@@ -8,8 +8,6 @@ import BrandContentfulTastic from './brand-contentful/tastic'
 import HorizontalSpacerTastic from './horisontal-spacer/tastic'
 import FrontasticHeaderTastic from './frontastic-header/tastic'
 import DeliveryFeaturesTastic from './delivery-details/tastic'
-import ChangeEmailTastic from './change-email/tastic'
-import ChangeAddressTastic from './change-address/tastic'
 import CheckoutTastic from './checkout/tastic'
 import ProductViewTastic from './product-view/tastic'
 import CartTastic from './cart/tastic'
@@ -37,8 +35,6 @@ export default (() => {
         'frontastic/boost/horizontal-spacer': HorizontalSpacerTastic,
         'frontastic/boost/frontastic-header': FrontasticHeaderTastic,
         'frontastic/boost/delivery-features': DeliveryFeaturesTastic,
-        'frontastic/boost/change-email': ChangeEmailTastic,
-        'frontastic/boost/change-address': ChangeAddressTastic,
         'frontastic/boost/checkout': CheckoutTastic,
         'frontastic/boost/product-view': ProductViewTastic,
         'frontastic/boost/cart': CartTastic,
