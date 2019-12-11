@@ -30,7 +30,7 @@ AddToCartButton.propTypes = {
 
 const OrganismsProductView = ({ images, name, variant, sizes }) => {
     return (
-        <div className={`o-grid ${responsiveMargin}`}>
+        <div className={responsiveMargin}>
             <OrganismsProductStage
                 images={images}
                 name={name}
