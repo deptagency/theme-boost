@@ -10,7 +10,7 @@ const MoleculesRating = ({ outerClassName, className }) => {
         <div className={outerClassName}>
             <div className={`c-rating o-flex o-flex--center ${className}`}>
                 {[1, 2, 3, 4, 5].map((s, i) => {
-                    return i < 3 ? <FullSmallStar /> : <EmptySmallStar />
+                    return i < 3 ? <FullSmallStar key={i} /> : <EmptySmallStar key={i} />
                 })}
             </div>
             <div className='u-text-s t-text-quiet padding-left--8'>

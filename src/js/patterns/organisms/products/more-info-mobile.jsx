@@ -7,7 +7,7 @@ import { ReactComponent as YellowTick } from '../../../../icons/yellow-tick.svg'
 import { ReactComponent as SmallTruck } from '../../../../icons/truck-small.svg'
 import Collapsible from 'react-collapsible'
 import ReviewsPanel from '../../organisms/products/panels/reviews-panel'
-import { marginRight10, marginRight16 } from './more-info.module.scss'
+import { moreInfoMobile, marginRight10, marginRight16 } from './more-info.module.scss'
 
 const OrganismsMoreInfoProductMobile = ({ product }) => {
     const [reviewsOpen, setReviewsOpen] = useState(false)
@@ -16,7 +16,7 @@ const OrganismsMoreInfoProductMobile = ({ product }) => {
     const [isReviewsFocused, setIsReviewsFocused] = useState(false)
 
     return (
-        <nav role='navigation' className='o-distance-m o-prevent-space'>
+        <nav role='navigation' className={`${moreInfoMobile} o-distance-m o-prevent-space`}>
             <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
                 <Collapsible

@@ -14,42 +14,57 @@
   border-bottom: 2px solid #3A42F1;
 }
 
-.moreInfoDesktop {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  height: 460px;
+@media (max-width: 700px) {
+  .moreInfoDesktop {
+    display: none;
+  }
 
-  .moreInfoDesktop__tabs {
-    display: inline-block;
-    background: #F6F8FC;
-    border: none;
-    border-bottom: none;
-    bottom: -1px;
-    position: relative;
-    list-style: none;
-    padding: 6px 12px;
-    cursor: pointer;
+  .moreInfoMobile {
+    display: block;
+  }
+}
 
-    .moreInfoDesktop_span_formatted {
-      color: #333;
-      font-weight: 600;
-    }
+@media (min-width: 700px) {
+  .moreInfoMobile {
+    display: none;
+  }
 
-    .moreInfoDesktop_light_text {
-      color: #333;
-      font-weight: 300;
-    }
+  .moreInfoDesktop {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 460px;
 
-    .moreInfoDesktop_p_formatted {
-      color: #333;
-      padding-top: 12px;
-      padding-bottom: 5px;
-      font-weight: 600;
-      font-size: 20px;
-    }
+    .moreInfoDesktop__tabs {
+      display: inline-block;
+      background: #F6F8FC;
+      border: none;
+      border-bottom: none;
+      bottom: -1px;
+      position: relative;
+      list-style: none;
+      padding: 6px 12px;
+      cursor: pointer;
 
-    .moreInfoDesktop_tab_panel {
-      padding-left: 30px;
+      .moreInfoDesktop_span_formatted {
+        color: #333;
+        font-weight: 600;
+      }
+
+      .moreInfoDesktop_light_text {
+        color: #333;
+        font-weight: 300;
+      }
+
+      .moreInfoDesktop_p_formatted {
+        color: #333;
+        padding-top: 12px;
+        padding-bottom: 5px;
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      .moreInfoDesktop_tab_panel {
+        padding-left: 30px;
 
         h3 {
           font-size: 35px;
@@ -77,36 +92,36 @@
       }
 
 
-    .moreInfoDesktop__tabList {
-      border: none;
-      padding-left: 20px;
-      display: flex;
-      white-space: nowrap;
-
-      .moreInfoDesktop__tab {
-        display: inline-block;
+      .moreInfoDesktop__tabList {
         border: none;
-        border-bottom: none;
-        bottom: -1px;
-        position: relative;
-        list-style: none;
-        cursor: pointer;
-        color: #97A5BA;
-        margin-right: 20px;
+        padding-left: 20px;
+        display: flex;
+        white-space: nowrap;
 
-        .moreInfoDesktop__selected {
-          span {
-            color: #3A42F1;
-            border-bottom: 2px solid #3A42F1;
-            font-weight: bold;
+        .moreInfoDesktop__tab {
+          display: inline-block;
+          border: none;
+          border-bottom: none;
+          bottom: -1px;
+          position: relative;
+          list-style: none;
+          cursor: pointer;
+          color: #97A5BA;
+          margin-right: 20px;
+
+          .moreInfoDesktop__selected {
+            span {
+              color: #3A42F1;
+              border-bottom: 2px solid #3A42F1;
+              font-weight: bold;
+            }
           }
         }
       }
     }
-  }
 
-  .moreInfoDesktop__tabs_selected {
+    .moreInfoDesktop__tabs_selected {
       background: none;
+    }
   }
 }
-

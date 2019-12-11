@@ -1,14 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { useWindowWidth } from '@react-hook/window-size'
 import productConnector from 'frontastic-catwalk/src/js/tastic/product/connector'
 import OrganismsMoreInfoProductMobile from '../../patterns/organisms/products/more-info-mobile.jsx'
 import OrganismsMoreInfoProductDesktop from '../../patterns/organisms/products/more-info-desktop.jsx'
 
 const MoreInfoProductTastic = ({ product, variant: propsVariant, route }) => {
-    const width = useWindowWidth()
-
     if (!product || !propsVariant) {
         return null
     }
@@ -18,12 +15,11 @@ const MoreInfoProductTastic = ({ product, variant: propsVariant, route }) => {
         variant = propsVariant
     }
 
-    const MoreInfoComponent = (props) => {
-        if (width < 630) { return <OrganismsMoreInfoProductMobile {... props} /> } else { return <OrganismsMoreInfoProductDesktop className='desktop-more-info' {... props} /> }
-    }
-
     return (
-        <MoreInfoComponent product={{ ...variant, name: product.name }} />
+        <>
+            <OrganismsMoreInfoProductMobile product={{ ...variant, name: product.name }} />
+            <OrganismsMoreInfoProductDesktop product={{ ...variant, name: product.name }} />
+        </>
     )
 }
 
