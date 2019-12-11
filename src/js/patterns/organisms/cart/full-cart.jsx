@@ -25,10 +25,7 @@ const OrganismsFullCart = ({ cartItems, sum, currency }) => {
             <section className='o-container o-distance'>
                 <h2 className='c-title-level-3'><FormattedMessage id='cart.totalSum' /></h2>
                 <div className='o-distance-s'>
-                    <OrganismsSummary
-                        currency={currency}
-                        sum={sum}
-                    />
+                    <OrganismsSummary sum={sum} />
                     <p className='o-distance-m u-text-s t-text-quiet'>
                         <FormattedMessage id='cart.enterVouchers' />
                     </p>

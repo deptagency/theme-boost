@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import AtomsPrice from '../../atoms/prices/price'
 
-const OrganismsSummary = ({ sum, currency, subtotal }) => {
+const OrganismsSummary = ({ sum, subtotal }) => {
     return (
         <div>
             <div className='o-summary'>
@@ -18,7 +18,7 @@ const OrganismsSummary = ({ sum, currency, subtotal }) => {
                         </div>
                         <div className='o-summary__item'>
                             <p className='u-text-s u-text-strong cart-summary--right'>
-                                {currency} {sum}
+                                <AtomsPrice value={sum} />
                             </p>
                         </div>
                     </Fragment>
@@ -47,7 +47,6 @@ const OrganismsSummary = ({ sum, currency, subtotal }) => {
 OrganismsSummary.propTypes = {
     subtotal: PropTypes.bool,
     sum: PropTypes.number.isRequired,
-    currency: PropTypes.string.isRequired,
 }
 
 OrganismsSummary.defaultProps = {

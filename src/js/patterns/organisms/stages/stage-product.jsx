@@ -40,12 +40,10 @@ class OrganismsProductStage extends Component {
                             <div className='o-flex__item'>
                                 <ul className='o-list-bare o-list-bare--tighty'>
                                     <li className='o-list-bare__item'>
-                                        <span className='c-price t-text-danger u-text-m'>{discountedPrice || price}</span>
+                                        <span className='t-text-danger u-text-m'>{discountedPrice || price}</span>
                                         <span className='u-text-s t-text-quiet'> inkl. 19% MwSt.</span>
                                     </li>
-                                    {discountedPrice && <li className='o-list-bare__item'>
-                                        <span className='c-price c-price--old t-text-quiet'>{price}</span>
-                                    </li>}
+                                    {discountedPrice && <li className='o-list-bare__item'>{price}</li>}
                                 </ul>
                             </div>
                         </div>

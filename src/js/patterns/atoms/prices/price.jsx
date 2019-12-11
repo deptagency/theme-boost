@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import classnames from 'classnames'
 import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 
 class AtomsPrice extends Component {
@@ -10,7 +11,11 @@ class AtomsPrice extends Component {
 
     render () {
         return (
-            <span>
+            <span className={classnames({
+                    'c-price': true,
+                    'c-price--old': this.props.old,
+                })}
+                >
                 {(this.props.value / 100).toLocaleString(
                     this.locale(),
                     {
@@ -27,10 +32,12 @@ AtomsPrice.propTypes = {
     context: PropTypes.object.isRequired,
     value: PropTypes.number.isRequired,
     currency: PropTypes.string,
+    old: PropTypes.bool,
 }
 
 AtomsPrice.defaultProps = {
     currency: null,
+    old: false,
 }
 
 // These are just default props for the pattern library

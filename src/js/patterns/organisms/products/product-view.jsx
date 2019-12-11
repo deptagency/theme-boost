@@ -35,7 +35,7 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
             <OrganismsProductStage
                 images={images}
                 name={name}
-                price={<AtomsPrice value={variant.price} />}
+                price={<AtomsPrice value={variant.price} old={variant.discountedPrice !== null} />}
                 discountedPrice={variant.discountedPrice ? <AtomsPrice value={variant.discountedPrice} /> : null}
                 addToCartButton={<AddToCartButton variant={variant} />}
             />

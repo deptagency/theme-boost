@@ -8,6 +8,7 @@
 .c-price--old {
   font-weight: $font-weight-base;
   text-decoration: line-through;
+  color: $color-palette-gray-500;
 }
 .c-price--highlight {
   color: $color-semantic-danger-base;

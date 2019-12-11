@@ -52,7 +52,7 @@ class OrganismBundle extends Component {
                     : null }
                 </div>
                 <div className='o-bundle__footer'>
-                    <span className='c-price'><AtomsPrice value={price} /></span>
+                    <AtomsPrice value={price} />
                     {this.props.showWishlistButton ?
                         <p><a href='' className='c-link c-link--quiet u-text-s'>Auf den Wunschzettel</a></p>
                   : null }
