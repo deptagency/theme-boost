@@ -45,7 +45,7 @@ const OrganismsSummary = ({ sum, subtotal }) => {
 }
 
 OrganismsSummary.propTypes = {
-    subtotal: PropTypes.bool,
+    subtotal: PropTypes.string,
     sum: PropTypes.number.isRequired,
 }
 

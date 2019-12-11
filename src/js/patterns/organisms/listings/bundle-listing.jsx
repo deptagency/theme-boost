@@ -12,7 +12,7 @@ const OrganismsBundleListing = ({ cartItems, currency }) => {
                 {map(cartItems, (item, index) => {
                     // TODO attributes.**.label - make it more robust
                     return (
-                        <Fragment>
+                        <Fragment key={index}>
                             <div className='o-list-bare__item'>
                                 <OrganismsBundle
                                     name={item.name}
