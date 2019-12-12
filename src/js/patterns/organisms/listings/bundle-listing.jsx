@@ -1,32 +1,29 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import OrganismsBundle from '../bundles/bundle'
 import { map } from 'lodash'
 
-const OrganismsBundleListing = ({ cartItems, currency }) => {
+const OrganismsBundleListing = ({ cartItems }) => {
     return (
         <div>
             <section className='o-list-bare'>
                 {map(cartItems, (item, index) => {
                     // TODO attributes.**.label - make it more robust
                     return (
-                        <Fragment key={index}>
-                            <div className='o-list-bare__item'>
-                                <OrganismsBundle
-                                    name={item.name}
-                                    designer={item.variant.attributes.designer.label}
-                                    image={item.variant.images[0]}
-                                    count={item.count}
-                                    price={item.price}
-                                    color={item.variant.attributes.color.label}
-                                    size={item.variant.attributes.size}
-                                    currency={currency}
-                                />
-                            </div>
-                            {cartItems.length - 1 > index && <span className='c-divider o-list-bare__item' />}
-                        </Fragment>
+                        <>
+                            <OrganismsBundle
+                                name={item.name}
+                                designer={item.variant.attributes.designer.label}
+                                image={item.variant.images[0]}
+                                count={item.count}
+                                price={item.price}
+                                color={item.variant.attributes.color.label}
+                                size={item.variant.attributes.size}
+                        />
+                            {cartItems.length - 1 > index && <span style={{ marginTop: '12px' }} className='c-divider' />}
+                        </>
 
                     )
                 })}
@@ -37,7 +34,6 @@ const OrganismsBundleListing = ({ cartItems, currency }) => {
 
 OrganismsBundleListing.propTypes = {
     cartItems: PropTypes.array.isRequired,
-    currency: PropTypes.string.isRequired,
 }
 
 OrganismsBundleListing.defaultProps = {}

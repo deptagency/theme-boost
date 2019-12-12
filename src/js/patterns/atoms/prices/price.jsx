@@ -13,6 +13,7 @@ class AtomsPrice extends Component {
         return (
             <span className={classnames({
                     'c-price': true,
+                    'c-price--normal': this.props.normal,
                     'c-price--old': this.props.old,
                 })}
                 >
@@ -32,12 +33,14 @@ AtomsPrice.propTypes = {
     context: PropTypes.object.isRequired,
     value: PropTypes.number.isRequired,
     currency: PropTypes.string,
+    normal: PropTypes.bool,
     old: PropTypes.bool,
 }
 
 AtomsPrice.defaultProps = {
     currency: null,
     old: false,
+    normal: false,
 }
 
 // These are just default props for the pattern library

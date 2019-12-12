@@ -1,0 +1,9 @@
+.marginTop {
+  margin-top: 32px;
+}
+
+@media (min-width: 640px) {
+  .marginTop {
+    margin-top: 16px;
+  }
+}
