@@ -67,7 +67,7 @@ class TemplatesLogin extends Component {
                 >
                     <FormattedMessage id='account.login.login' />
                 </Button>
-                <div className={`${ loginBorder } o-television__display__boundless c-divider c-divider--break o-distance-m`} />
+                <div className={`${loginBorder} o-television__display__boundless c-divider c-divider--break o-distance-m`} />
             </div>
         )
     }
