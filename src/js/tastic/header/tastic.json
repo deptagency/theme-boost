@@ -8,19 +8,8 @@
             "name": "Top Categories",
             "fields": [
                 {
-                    "label": "Navigation Tree Women",
-                    "field": "treeWomen",
-                    "type": "tree"
-                },
-                {
-                    "label": "Navigation Tree Men",
-                    "field": "treeMen",
-                    "type": "tree"
-                },
-                {
-                    "label": "Navigation Tree Kids",
-                    "field": "treeKids",
-                    "type": "tree"
+                    "type": "description",
+                    "text": "Choose a few top categories to be displayed on top of the navigation. Selecting a top category will allow the consumer to navigate to its tree."
                 },
                 {
                     "label": "Top Categories",
