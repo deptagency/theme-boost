@@ -3,6 +3,7 @@ import PromoBoxTastic from './promo-box/tastic.jsx'
 import CategoryButtonBoxesTastic from './category-button-boxes/tastic.jsx'
 import ProductSliderTastic from './product-slider/tastic.jsx'
 import NewsletterTastic from './newsletter/tastic'
+import MarkdownTastic from './markdown/tastic'
 import MoreInfoProductTastic from './more-info-product/tastic'
 import BrandContentfulTastic from './brand-contentful/tastic'
 import HorizontalSpacerTastic from './horisontal-spacer/tastic'
@@ -30,6 +31,7 @@ export default (() => {
         'frontastic/boost/category-button-boxes': CategoryButtonBoxesTastic,
         'frontastic/boost/product-slider': ProductSliderTastic,
         'frontastic/boost/newsletter': NewsletterTastic,
+        'frontastic/boost/markdown': MarkdownTastic,
         'frontastic/boost/more-info-product': MoreInfoProductTastic,
         'frontastic/boost/brand-contentful': BrandContentfulTastic,
         'frontastic/boost/horizontal-spacer': HorizontalSpacerTastic,
