@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types'
+
 import app from 'frontastic-catwalk/src/js/app/app'
+import useBackgroundImageUrl from 'frontastic-catwalk/src/js/helper/hooks/useBackgroundImageUrl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import MobileNavigation from '../../molecules/navigations/mobileNavigation'
@@ -11,7 +13,7 @@ import MobileMenuToggle from '../../atoms/buttons/mobile-menu-toggle'
 import Button from '../../atoms/buttons/button'
 import { FormattedMessage } from 'react-intl'
 
-const OrganismsHead = ({ topCategories, loggedIn }) => {
+const OrganismsHead = ({ topCategories, logo, loggedIn }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     if (!topCategories) {
@@ -35,6 +37,8 @@ const OrganismsHead = ({ topCategories, loggedIn }) => {
         )
     }
 
+    const logoRef = useRef(null)
+
     return (
         <div className='o-header'>
             <div className='o-header__top'>
@@ -55,7 +59,11 @@ const OrganismsHead = ({ topCategories, loggedIn }) => {
                     }}
                 />
 
-                <a href='/' className='c-logo' title='Catwalk'>
+                <a href='/' className='c-logo' title='Catwalk' ref={logoRef}
+                   style={(logo ? {
+                       backgroundImage: `url(${useBackgroundImageUrl(logoRef, logo)})`,
+                   } : {})}
+                >
                     Catwalk
                 </a>
                 <MoleculesUserIconNav open />
@@ -75,6 +83,7 @@ const OrganismsHead = ({ topCategories, loggedIn }) => {
 
 OrganismsHead.propTypes = {
     topCategories: PropTypes.arrayOf(topCategoryType),
+    logo: PropTypes.object,
     loggedIn: PropTypes.bool.isRequired,
 }
 

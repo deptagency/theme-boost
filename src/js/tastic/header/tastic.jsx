@@ -10,6 +10,7 @@ const HeaderTastic = ({ data, context }) => {
     return (
         <Header
             topCategories={data.topCategories}
+            logo={data.logo}
             loggedIn={context.session.loggedIn}
         />
     )
@@ -23,6 +24,9 @@ HeaderTastic.propTypes = {
                 reference: () => { return ReferencePropType },
             })
         ),
+        logo: PropTypes.shape({
+            media: PropTypes.object,
+        }),
     }),
     context: PropTypes.object.isRequired,
 }

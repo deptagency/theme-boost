@@ -5,7 +5,7 @@
     "category": "Boost Theme",
     "schema": [
         {
-            "name": "Top Categories",
+            "name": "Menu",
             "fields": [
                 {
                     "type": "description",
@@ -41,6 +41,21 @@
                             "type": "media"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "Logo",
+            "fields": [
+                {
+                    "type": "description",
+                    "text": "Select a logo to overwrite the default 'Catwalk'."
+                },
+                {
+                    "label": "Logo",
+                    "field": "logo",
+                    "type": "media",
+                    "required": false
                 }
             ]
         }
