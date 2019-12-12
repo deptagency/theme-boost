@@ -16,7 +16,7 @@ const ProductItem = ({ product }) => {
     return (
         <article className='o-product'>
             <div className='o-product__asset' title=''>
-                <Link itemProp='url' to={product._url || ''}>
+                <Link itemProp='url' path={product._url || ''}>
                     <div className='o-head-up'>
                         <img
                             className='tns-lazy'
