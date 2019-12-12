@@ -16,10 +16,6 @@ import { FormattedMessage } from 'react-intl'
 const OrganismsHead = ({ topCategories, logo, loggedIn }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-    if (!topCategories) {
-        return null
-    }
-
     const ctaLoggedIn = () => {
         return (
             <Button
@@ -38,6 +34,11 @@ const OrganismsHead = ({ topCategories, logo, loggedIn }) => {
     }
 
     const logoRef = useRef(null)
+    const backgroundImageUrl = useBackgroundImageUrl(logoRef, logo)
+
+    if (!topCategories) {
+        return null
+    }
 
     return (
         <div className='o-header'>
@@ -60,8 +61,8 @@ const OrganismsHead = ({ topCategories, logo, loggedIn }) => {
                 />
 
                 <a href='/' className='c-logo' title='Catwalk' ref={logoRef}
-                   style={(logo ? {
-                       backgroundImage: `url(${useBackgroundImageUrl(logoRef, logo)})`,
+                    style={(logo ? {
+                       backgroundImage: `url(${backgroundImageUrl})`,
                    } : {})}
                 >
                     Catwalk
