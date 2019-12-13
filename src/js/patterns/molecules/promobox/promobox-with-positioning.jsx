@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import Translatable from 'frontastic-catwalk/src/js/component/translatable'
+
+import Image from '@frontastic/catwalk/src/js/image'
+import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
+import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 
 class OrganismsPromoboxWithPositioning extends Component {
     render () {
@@ -18,9 +20,10 @@ class OrganismsPromoboxWithPositioning extends Component {
 
         return (
             <div className='c-promobox t-spotlight u-aspect-ratio-16x9' style={style}>
-                <img
-                    src={image.media.file}
-                    alt={<Translatable value={image.media.title} />} className='c-promobox__backdrop' />
+                <Image
+                    media={image.media}
+                    alt={<Translatable value={image.media.title} />}
+                    className='c-promobox__backdrop tns-lazy' />
                 <div className={`c-promobox__overlay c-promobox__overlay--${vertical}-${horizontal}`}>
                     <div className={`c-promobox__overlay__inner`}>
                         <div style={customChildrenStyle}>
