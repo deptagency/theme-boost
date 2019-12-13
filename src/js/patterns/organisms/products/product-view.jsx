@@ -74,6 +74,7 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
 
 OrganismsProductView.propTypes = {
     images: PropTypes.array.isRequired,
+    // TODO: Rename, because these are actually variants that can be selected
     sizes: PropTypes.array.isRequired,
     name: PropTypes.string.isRequired,
     variant: PropTypes.object.isRequired,

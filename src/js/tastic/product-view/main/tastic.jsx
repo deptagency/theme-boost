@@ -13,6 +13,7 @@ class Main extends Component {
             return null
         }
 
+        // TODO: Make replaceable by integrators
         const sizes = product.variants.map((v) => { // eslint-disable-line array-callback-return
             if (v.attributes.size) { return v.attributes.size }
         })
