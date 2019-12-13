@@ -40,7 +40,7 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
                         </div>
                     }
                 >
-                    <OrganismsDetailsMobile variant={variant} />
+                    {variant.attributes && <OrganismsDetailsMobile attributes={variant.attributes} />}
                 </Collapsible>
             </div>
             <span className='c-divider o-distance-m' />
@@ -120,7 +120,7 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
                 }}
                 product={product}
                 image={variant.images ? variant.images[0] : ''}
-                designer={variant.attributes.designer ? variant.attributes.designer : null}
+                designer={variant.attributes.designer && variant.attributes.designer.label ? variant.attributes.designer : null}
             />
 
         </nav>
