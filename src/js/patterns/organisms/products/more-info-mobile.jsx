@@ -9,7 +9,7 @@ import Collapsible from 'react-collapsible'
 import ReviewsPanel from '../../organisms/products/panels/reviews-panel'
 import { moreInfoMobile, marginRight10, marginRight16 } from './more-info.module.scss'
 
-const OrganismsMoreInfoProductMobile = ({ product }) => {
+const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
     const [reviewsOpen, setReviewsOpen] = useState(false)
     const [isDescriptionFocused, setIsDescriptionFocused] = useState(false)
     const [isShippingFocused, setIsShippingFocused] = useState(false)
@@ -48,9 +48,9 @@ const OrganismsMoreInfoProductMobile = ({ product }) => {
                             <dt className='t-text-quiet'><FormattedMessage id='product.clasp' /></dt>
                             <dd className='u-text-strong'><FormattedMessage id='product.lacing' /></dd>
                             <dt className='t-text-quiet'><FormattedMessage id='product.style' /></dt>
-                            <dd className='u-text-strong'>{product.attributes.style.label}</dd>
+                            <dd className='u-text-strong'>{variant.attributes.style.label}</dd>
                             <dt className='t-text-quiet'><FormattedMessage id='product.itemNumber' /></dt>
-                            <dd className='u-text-strong'>{product.attributes.matrixId}</dd>
+                            <dd className='u-text-strong'>{variant.attributes.matrixId}</dd>
                         </dl>
                     </div>
                 </Collapsible>
@@ -120,8 +120,9 @@ const OrganismsMoreInfoProductMobile = ({ product }) => {
                 onClose={() => {
                     setIsReviewsFocused(!isReviewsFocused)
                     setReviewsOpen(false)
-}}
+                }}
                 product={product}
+                variant={variant}
             />
 
         </nav>
@@ -130,6 +131,7 @@ const OrganismsMoreInfoProductMobile = ({ product }) => {
 
 OrganismsMoreInfoProductMobile.propTypes = {
     product: PropTypes.object.isRequired,
+    variant: PropTypes.object.isRequired,
 }
 
 export default OrganismsMoreInfoProductMobile

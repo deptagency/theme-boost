@@ -16,6 +16,7 @@ class ProductViewTastic extends Component {
                 tastic={this.props.tastic}
                 data={this.props.data}
                 variant={this.props.variant}
+                selectedVariant={this.props.selectedVariant}
             />
         )
     }

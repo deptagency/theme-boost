@@ -12,7 +12,7 @@ const MoreInfoProductTastic = ({ product, variant }) => {
 
     return (
         <>
-            <OrganismsMoreInfoProductMobile product={{ ...variant, name: product.name }} />
+            <OrganismsMoreInfoProductMobile product={product} variant={variant} />
             <OrganismsMoreInfoProductDesktop product={{ ...variant, name: product.name }} />
         </>
     )

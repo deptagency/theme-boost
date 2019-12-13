@@ -15,7 +15,7 @@ import { writeReviewPanel,
 } from './write-review-panel.module.scss'
 import Button from '../../../atoms/buttons/button'
 
-const WriteReviewPanel = ({ isOpen, onClose, product }) => {
+const WriteReviewPanel = ({ isOpen, onClose, product, variant }) => {
     const [ rating, setRating ] = useState(0)
     const [reviewText, setReviewText] = useState('')
 
@@ -38,7 +38,7 @@ const WriteReviewPanel = ({ isOpen, onClose, product }) => {
                 <div className={productOverivew}>
                     <div
                         style={{
-                            backgroundImage: `url(${product.images[0]})`,
+                            backgroundImage: `url(${variant.images[0]})`,
                             height: '131px',
                             width: '100px',
                             backgroundSize: 'contain',
@@ -52,7 +52,7 @@ const WriteReviewPanel = ({ isOpen, onClose, product }) => {
                         </div>
 
                         <div className={`${productDesigner} u-text-xs`}>
-                            {product.attributes.designer && product.attributes.designer.label}
+                            {variant.attributes.designer && variant.attributes.designer.label}
                         </div>
 
                         <SmallStars saveRating={setRating} />
