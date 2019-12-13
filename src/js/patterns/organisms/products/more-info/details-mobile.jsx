@@ -2,6 +2,13 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
+import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
+
+/**
+ * Default implementation of attribute rendering on product detail pages.
+ *
+ * You will most probably want to replace this by a custom rendering for your product model.
+ */
 const DetailsMobile = ({ variant }) => {
     return <div className='o-distance'>
         <dl className='o-detaillist o-distance-m'>
@@ -46,4 +53,4 @@ DetailsMobile.propTypes = {
     variant: PropTypes.object.isRequired,
 }
 
-export default DetailsMobile
+export default ComponentInjector.return('OrganismsMoreInfoProductMobile.DetailsMobile', DetailsMobile)
