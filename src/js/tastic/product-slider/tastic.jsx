@@ -1,9 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-import Link from 'frontastic-catwalk/src/js/app/link'
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
+import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
+import Link from '@frontastic/catwalk/src/js/app/link'
+import Translatable from '@frontastic/catwalk/src/js/component/translatable'
+
 import Slider from '../../patterns/templates/slider'
-import Translatable from 'frontastic-catwalk/src/js/component/translatable'
 import { take } from 'lodash'
 import MoleculesSticker from '../../patterns/molecules/sticker/sticker'
 import Wishlist from '../../patterns/atoms/wishlist/wishlist'
@@ -18,12 +21,13 @@ const ProductItem = ({ product }) => {
             <div className='o-product__asset' title=''>
                 <Link itemProp='url' path={product._url || ''}>
                     <div className='o-head-up'>
-                        <img
+                        <RemoteImage
                             className='tns-lazy'
-                            src={variants[0].images[0]}
-                            data-src={variants[0].images[0]}
+                            url={variants[0].images[0] || NoImage}
                             alt={name}
-                            style={{ height: '246px', margin: '0 auto' }}
+                            cropRatio='1:1'
+                            itemProp='image'
+                            options={{ crop: 'pad', background: 'white' }}
                         />
                         <div className='o-head-up__item o-head-up__item--top-left'>
                             <MoleculesSticker />
@@ -50,14 +54,13 @@ ProductItem.propTypes = {
 
 class ProductSliderTastic extends Component {
     render () {
-        const { title, description } = this.props.data
+        const { title, description, stream, productCount } = this.props.data
 
-        let productList = this.props.rawData.stream[this.props.tastic.configuration.stream]
-        if (!productList) {
+        if (!stream) {
             return null
         }
 
-        let productsToShow = take(productList.items, this.props.tastic.schema.get('productCount'))
+        const productsToShow = take(stream.items, productCount)
 
         return (
             <Fragment>
@@ -80,10 +83,8 @@ class ProductSliderTastic extends Component {
 
 ProductSliderTastic.propTypes = {
     data: PropTypes.object.isRequired,
-    tastic: PropTypes.object.isRequired,
-    rawData: PropTypes.object.isRequired,
 }
 
 ProductSliderTastic.defaultProps = {}
 
-export default ProductSliderTastic
+export default tastify()(ProductSliderTastic)
