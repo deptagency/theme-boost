@@ -36,8 +36,6 @@ Main.propTypes = {
     variant: PropTypes.object,
     option: PropTypes.object, // eslint-disable-line react/no-unused-prop-types
     selectedVariant: PropTypes.number, // eslint-disable-line react/no-unused-prop-types
-    // connect()
-    route: PropTypes.object.isRequired,
 }
 
 Main.defaultProps = {

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
+import NoImage from '@frontastic/catwalk/src/layout/noImage.svg'
 import Link from '@frontastic/catwalk/src/js/app/link'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 
