@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 
-import ReferencePropType from 'frontastic-catwalk/src/js/component/reference'
+import ReferencePropType from '@frontastic/catwalk/src/js/component/reference'
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 
 import Header from '../../patterns/organisms/base/header'
 
@@ -33,11 +33,4 @@ HeaderTastic.propTypes = {
 
 HeaderTastic.defaultProps = {}
 
-export default connect(
-    (globalState, props) => {
-        return {
-            ...props,
-            context: globalState.app.context,
-        }
-    }
-)(HeaderTastic)
+export default tastify({ connect: { context: true } })(HeaderTastic)
