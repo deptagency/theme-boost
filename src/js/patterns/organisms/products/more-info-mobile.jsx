@@ -7,6 +7,7 @@ import { ReactComponent as YellowTick } from '../../../../icons/yellow-tick.svg'
 import { ReactComponent as SmallTruck } from '../../../../icons/truck-small.svg'
 import Collapsible from 'react-collapsible'
 import ReviewsPanel from '../../organisms/products/panels/reviews-panel'
+import DetailsMobile from './more-info/details-mobile'
 import { moreInfoMobile, marginRight10, marginRight16 } from './more-info.module.scss'
 
 const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
@@ -17,11 +18,15 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
 
     return (
         <nav role='navigation' className={`${moreInfoMobile} o-distance-m o-prevent-space`}>
-            <span className='c-divider o-distance-m' />
+            <span className='c-divider o-distance-m'/>
             <div className='o-distance-m'>
                 <Collapsible
-                    onOpening={() => { setIsDescriptionFocused(true) }}
-                    onClosing={() => { setIsDescriptionFocused(false) }}
+                    onOpening={() => {
+                        setIsDescriptionFocused(true)
+                    }}
+                    onClosing={() => {
+                        setIsDescriptionFocused(false)
+                    }}
                     trigger={
                         <div
                             className={classnames({
@@ -29,37 +34,24 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
                                 'is-focused': isDescriptionFocused,
                             })}
                         >
-                            <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.description' /></h3>
-                            <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
+                            <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.description'/>
+                            </h3>
+                            <ChevronDown className='c-icon c-referal__icon t-text-quiet'/>
                         </div>
                     }
                 >
-                    <div className='o-distance'>
-                        <dl className='o-detaillist o-distance-m'>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.materialOuterFabric' /></dt>
-                            <dd className='u-text-strong'>100% <FormattedMessage id='product.viscose' /></dd>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.lining' /></dt>
-                            <dd className='u-text-strong'>100% <FormattedMessage id='product.viscose' /></dd>
-                        </dl>
-                        <h3 className='c-title-level-3 o-distance'><FormattedMessage id='product.moreAboutThisProduct' /></h3>
-                        <dl className='o-detaillist o-distance-m'>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.cut' /></dt>
-                            <dd className='u-text-strong'>100% <FormattedMessage id='product.viscose' /></dd>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.clasp' /></dt>
-                            <dd className='u-text-strong'><FormattedMessage id='product.lacing' /></dd>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.style' /></dt>
-                            <dd className='u-text-strong'>{variant.attributes.style.label}</dd>
-                            <dt className='t-text-quiet'><FormattedMessage id='product.itemNumber' /></dt>
-                            <dd className='u-text-strong'>{variant.attributes.matrixId}</dd>
-                        </dl>
-                    </div>
+                    <DetailsMobile variant={variant}/>
                 </Collapsible>
             </div>
-            <span className='c-divider o-distance-m' />
+            <span className='c-divider o-distance-m'/>
             <div className='o-distance-m'>
                 <Collapsible
-                    onOpening={() => { setIsShippingFocused(true) }}
-                    onClosing={() => { setIsShippingFocused(false) }}
+                    onOpening={() => {
+                        setIsShippingFocused(true)
+                    }}
+                    onClosing={() => {
+                        setIsShippingFocused(false)
+                    }}
                     trigger={
                         <div
                             className={classnames({
@@ -67,37 +59,39 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
                                 'is-focused': isShippingFocused,
                             })}
                         >
-                            <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.shipping' /></h3>
-                            <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
+                            <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.shipping'/>
+                            </h3>
+                            <ChevronDown className='c-icon c-referal__icon t-text-quiet'/>
                         </div>
                     }
                 >
                     <div className='o-distance'>
                         <div className='o-list-bare'>
                             <div className='o-list-bare__item o-block-short o-block-short--centered'>
-                                <YellowTick className={marginRight10} />
+                                <YellowTick className={marginRight10}/>
                                 <div className='o-block-short__body u-text-s'>
-                                    <FormattedMessage id='product.freeShipping' />
+                                    <FormattedMessage id='product.freeShipping'/>
                                 </div>
                             </div>
                             <div className='o-list-bare__item o-block-short o-block-short--centered'>
-                                <YellowTick className={marginRight10} />
+                                <YellowTick className={marginRight10}/>
                                 <div className='o-block-short__body u-text-s'>
-                                    <FormattedMessage id='product.returnPolicy100days' />
+                                    <FormattedMessage id='product.returnPolicy100days'/>
                                 </div>
                             </div>
                         </div>
                         <div className='o-block-short o-distance-m'>
-                            <SmallTruck className={marginRight16} />
+                            <SmallTruck className={marginRight16}/>
                             <div className='o-block-short__body'>
-                                <p className='u-text-strong'><FormattedMessage id='product.standardDelivery.title' /></p>
-                                <p className='o-distance-xs'><FormattedMessage id='product.standardDelivery.message' /></p>
+                                <p className='u-text-strong'><FormattedMessage id='product.standardDelivery.title'/></p>
+                                <p className='o-distance-xs'><FormattedMessage id='product.standardDelivery.message'/>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </Collapsible>
             </div>
-            <span className='c-divider o-distance-m' />
+            <span className='c-divider o-distance-m'/>
             <div className='o-distance-m'>
                 <div
                     className={classnames({
@@ -106,14 +100,17 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
                     })}
                     onClick={() => {
                         setIsReviewsFocused(!isReviewsFocused)
-                        setTimeout(() => { setReviewsOpen(true) }, 50)
+                        setTimeout(() => {
+                            setReviewsOpen(true)
+                        }, 50)
                     }}
                 >
-                    <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.reviewsWithCount' values={{ count: 7 }} /></h3>
-                    <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
+                    <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.reviewsWithCount'
+                                                                                      values={{ count: 7 }}/></h3>
+                    <ChevronDown className='c-icon c-referal__icon t-text-quiet'/>
                 </div>
             </div>
-            <span className='c-divider o-distance-m' />
+            <span className='c-divider o-distance-m'/>
 
             <ReviewsPanel
                 isOpen={reviewsOpen}
