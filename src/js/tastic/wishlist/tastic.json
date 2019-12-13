@@ -1,0 +1,18 @@
+{
+    "tasticType": "frontastic/boost/wishlist",
+    "name": "Wishlist",
+    "icon": "favorite",
+    "schema": [
+        {
+            "name": "Content",
+            "fields": [
+                {
+                    "label": "Show SomeField",
+                    "field": "showSomeField",
+                    "type": "boolean",
+                    "default": true
+                }
+            ]
+        }
+    ]
+}
