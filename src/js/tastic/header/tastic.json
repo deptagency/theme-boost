@@ -39,6 +39,10 @@
                             "label": "Mobile Nav Background",
                             "field": "mobileNavBackgroundImage",
                             "type": "media"
+                        },
+                        {
+                            "type": "description",
+                            "text": "Ratio-Setting will currently not be used."
                         }
                     ]
                 }

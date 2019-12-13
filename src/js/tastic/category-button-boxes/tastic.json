@@ -11,7 +11,10 @@
                     "label": "First Image",
                     "field": "firstImage",
                     "type": "media",
-                    "required": true
+                    "required": true,
+                    "options": {
+                        "ratio": "16:9"
+                    }
                 },
                 {
                     "label": "First Button Label",
@@ -38,7 +41,10 @@
                     "label": "Second Image",
                     "field": "secondImage",
                     "type": "media",
-                    "required": true
+                    "required": true,
+                    "options": {
+                        "ratio": "16:9"
+                    }
                 },
                 {
                     "label": "Second Button Label",
@@ -65,7 +71,10 @@
                     "label": "Third Image",
                     "field": "thirdImage",
                     "type": "media",
-                    "required": true
+                    "required": true,
+                    "options": {
+                        "ratio": "16:9"
+                    }
                 },
                 {
                     "label": "Third Button Label",
