@@ -18,7 +18,7 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
 
     return (
         <nav role='navigation' className={`${moreInfoMobile} o-distance-m o-prevent-space`}>
-            <span className='c-divider o-distance-m'/>
+            <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
                 <Collapsible
                     onOpening={() => {
@@ -34,16 +34,16 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
                                 'is-focused': isDescriptionFocused,
                             })}
                         >
-                            <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.description'/>
+                            <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.description' />
                             </h3>
-                            <ChevronDown className='c-icon c-referal__icon t-text-quiet'/>
+                            <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                         </div>
                     }
                 >
-                    <OrganismsDetailsMobile variant={variant}/>
+                    <OrganismsDetailsMobile variant={variant} />
                 </Collapsible>
             </div>
-            <span className='c-divider o-distance-m'/>
+            <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
                 <Collapsible
                     onOpening={() => {
@@ -59,39 +59,39 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
                                 'is-focused': isShippingFocused,
                             })}
                         >
-                            <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.shipping'/>
+                            <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.shipping' />
                             </h3>
-                            <ChevronDown className='c-icon c-referal__icon t-text-quiet'/>
+                            <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                         </div>
                     }
                 >
                     <div className='o-distance'>
                         <div className='o-list-bare'>
                             <div className='o-list-bare__item o-block-short o-block-short--centered'>
-                                <YellowTick className={marginRight10}/>
+                                <YellowTick className={marginRight10} />
                                 <div className='o-block-short__body u-text-s'>
-                                    <FormattedMessage id='product.freeShipping'/>
+                                    <FormattedMessage id='product.freeShipping' />
                                 </div>
                             </div>
                             <div className='o-list-bare__item o-block-short o-block-short--centered'>
-                                <YellowTick className={marginRight10}/>
+                                <YellowTick className={marginRight10} />
                                 <div className='o-block-short__body u-text-s'>
-                                    <FormattedMessage id='product.returnPolicy100days'/>
+                                    <FormattedMessage id='product.returnPolicy100days' />
                                 </div>
                             </div>
                         </div>
                         <div className='o-block-short o-distance-m'>
-                            <SmallTruck className={marginRight16}/>
+                            <SmallTruck className={marginRight16} />
                             <div className='o-block-short__body'>
-                                <p className='u-text-strong'><FormattedMessage id='product.standardDelivery.title'/></p>
-                                <p className='o-distance-xs'><FormattedMessage id='product.standardDelivery.message'/>
+                                <p className='u-text-strong'><FormattedMessage id='product.standardDelivery.title' /></p>
+                                <p className='o-distance-xs'><FormattedMessage id='product.standardDelivery.message' />
                                 </p>
                             </div>
                         </div>
                     </div>
                 </Collapsible>
             </div>
-            <span className='c-divider o-distance-m'/>
+            <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
                 <div
                     className={classnames({
@@ -106,11 +106,11 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
                     }}
                 >
                     <h3 className='c-title-level-4 c-referal__body'><FormattedMessage id='product.reviewsWithCount'
-                                                                                      values={{ count: 7 }}/></h3>
-                    <ChevronDown className='c-icon c-referal__icon t-text-quiet'/>
+                        values={{ count: 7 }} /></h3>
+                    <ChevronDown className='c-icon c-referal__icon t-text-quiet' />
                 </div>
             </div>
-            <span className='c-divider o-distance-m'/>
+            <span className='c-divider o-distance-m' />
 
             <ReviewsPanel
                 isOpen={reviewsOpen}
@@ -119,7 +119,8 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
                     setReviewsOpen(false)
                 }}
                 product={product}
-                variant={variant}
+                image={variant.images ? variant.images[0] : ''}
+                designer={variant.attributes.designer ? variant.attributes.designer : null}
             />
 
         </nav>

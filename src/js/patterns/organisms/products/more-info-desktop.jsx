@@ -18,7 +18,6 @@ import {
     marginRight10, marginRight16,
     moreInfoDesktop_tab_panel,
     moreInfoDesktop_span_formatted,
-    moreInfoDesktop_p_formatted,
     moreInfoDesktop_light_text,
     reviewOverview,
     precent,
@@ -29,10 +28,10 @@ import {
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 import ReviewsList from './reviews-list'
-import OrganismsDetailsDesktop from "./more-info/details-desktop";
+import OrganismsDetailsDesktop from './more-info/details-desktop'
 
 const OrganismsMoreInfoProductDesktop = ({ product }) => {
-    const { images , attributes } = product
+    const { images, attributes } = product
     const [selectedTab, setSelectedTab] = useState(0)
 
     return (
@@ -75,7 +74,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                     <h3 className='c-title-level-4 c-referal__body'>
                         <FormattedMessage id='product.description' />
                     </h3>
-                    {attributes && <OrganismsDetailsDesktop attributes={attributes}  />}
+                    {attributes && <OrganismsDetailsDesktop attributes={attributes} />}
                 </TabPanel>
                 <TabPanel className={moreInfoDesktop_tab_panel}>
                     <div>

@@ -12,7 +12,7 @@ import {
     ratingQuestion,
 } from './reviews-panel.module.scss'
 
-const ReviewsPanel = ({ isOpen, onClose, product, variant }) => {
+const ReviewsPanel = ({ isOpen, onClose, product, image, designer }) => {
     const [reviewFormOpen, setReviewFormOpen] = useState(false)
 
     const SubmitReviewButton = () => {
@@ -49,7 +49,8 @@ const ReviewsPanel = ({ isOpen, onClose, product, variant }) => {
             isOpen={reviewFormOpen}
             onClose={() => { setReviewFormOpen(false) }}
             product={product}
-            variant={variant}
+            image={image}
+            designer={designer}
         />,
     ]
 }
@@ -58,7 +59,8 @@ ReviewsPanel.propTypes = {
     isOpen: PropTypes.bool,
     onClose: PropTypes.func,
     product: PropTypes.object.isRequired,
-    variant: PropTypes.object.isRequired,
+    image: PropTypes.string,
+    designer: PropTypes.object,
 }
 
 WriteReviewPanel.defaultProps = {

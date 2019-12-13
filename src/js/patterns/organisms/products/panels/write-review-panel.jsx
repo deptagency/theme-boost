@@ -15,7 +15,7 @@ import { writeReviewPanel,
 } from './write-review-panel.module.scss'
 import Button from '../../../atoms/buttons/button'
 
-const WriteReviewPanel = ({ isOpen, onClose, product, variant }) => {
+const WriteReviewPanel = ({ isOpen, onClose, product, image, designer }) => {
     const [ rating, setRating ] = useState(0)
     const [reviewText, setReviewText] = useState('')
 
@@ -36,15 +36,15 @@ const WriteReviewPanel = ({ isOpen, onClose, product, variant }) => {
                 <FormattedMessage id='order.reviewQuestion' />
 
                 <div className={productOverivew}>
-                    <div
+                    {image && <div
                         style={{
-                            backgroundImage: `url(${variant.images[0]})`,
+                            backgroundImage: `url(${image})`,
                             height: '131px',
                             width: '100px',
                             backgroundSize: 'contain',
                             margin: '0 16px 45px 0',
                         }}
-                    />
+                    />}
 
                     <div className={nameAndStars}>
                         <div className={`${productName} u-text-s`}>
@@ -52,7 +52,7 @@ const WriteReviewPanel = ({ isOpen, onClose, product, variant }) => {
                         </div>
 
                         <div className={`${productDesigner} u-text-xs`}>
-                            {variant.attributes.designer && variant.attributes.designer.label}
+                            {designer && designer.label}
                         </div>
 
                         <SmallStars saveRating={setRating} />
@@ -95,6 +95,8 @@ WriteReviewPanel.propTypes = {
     isOpen: PropTypes.bool,
     onClose: PropTypes.func,
     product: PropTypes.object.isRequired,
+    image: PropTypes.string,
+    designer: PropTypes.object,
 }
 
 WriteReviewPanel.defaultProps = {

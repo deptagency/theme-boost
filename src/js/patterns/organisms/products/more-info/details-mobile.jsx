@@ -9,39 +9,39 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
  *
  * You will most probably want to replace this by a custom rendering for your product model.
  */
-const OrganismsDetailsDesktop = ({ variant }) => {
+const OrganismsDetailsMobile = ({ variant }) => {
     return <div className='o-distance'>
         <dl className='o-detaillist o-distance-m'>
             {variant.attributes.color && variant.attributes.color.label ?
                 <Fragment>
-                    <dt className='t-text-quiet'><FormattedMessage id='product.color'/></dt>
+                    <dt className='t-text-quiet'><FormattedMessage id='product.color' /></dt>
                     <dd className='u-text-strong'>{variant.attributes.color.label}</dd>
                 </Fragment>
             : null}
             {variant.attributes.designer && variant.attributes.designer.label ?
                 <Fragment>
-                    <dt className='t-text-quiet'><FormattedMessage id='product.designer'/></dt>
+                    <dt className='t-text-quiet'><FormattedMessage id='product.designer' /></dt>
                     <dd className='u-text-strong'>{variant.attributes.designer.label}</dd>
                 </Fragment>
             : null}
         </dl>
-        <h3 className='c-title-level-3 o-distance'><FormattedMessage id='product.moreAboutThisProduct'/></h3>
+        <h3 className='c-title-level-3 o-distance'><FormattedMessage id='product.moreAboutThisProduct' /></h3>
         <dl className='o-detaillist o-distance-m'>
             {variant.attributes.style && variant.attributes.style.label ?
                 <Fragment>
-                    <dt className='t-text-quiet'><FormattedMessage id='product.style'/></dt>
+                    <dt className='t-text-quiet'><FormattedMessage id='product.style' /></dt>
                     <dd className='u-text-strong'>{variant.attributes.style.label}</dd>
                 </Fragment>
             : null}
             {variant.attributes.commonSize && variant.attributes.commonSize.label ?
                 <Fragment>
-                    <dt className='t-text-quiet'><FormattedMessage id='product.commonSize'/></dt>
+                    <dt className='t-text-quiet'><FormattedMessage id='product.commonSize' /></dt>
                     <dd className='u-text-strong'>{variant.attributes.commonSize.label}</dd>
                 </Fragment>
             : null}
             {variant.attributes.matrixId ?
                 <Fragment>
-                    <dt className='t-text-quiet'><FormattedMessage id='product.itemNumber'/></dt>
+                    <dt className='t-text-quiet'><FormattedMessage id='product.itemNumber' /></dt>
                     <dd className='u-text-strong'>{variant.attributes.matrixId}</dd>
                 </Fragment>
             : null}
@@ -49,8 +49,8 @@ const OrganismsDetailsDesktop = ({ variant }) => {
     </div>
 }
 
-OrganismsDetailsDesktop.propTypes = {
+OrganismsDetailsMobile.propTypes = {
     variant: PropTypes.object.isRequired,
 }
 
-export default ComponentInjector.return('OrganismsMoreInfoProductMobile.OrganismsDetailsDesktop', OrganismsDetailsDesktop)
+export default ComponentInjector.return('OrganismsMoreInfoProductMobile.OrganismsDetailsMobile', OrganismsDetailsMobile)

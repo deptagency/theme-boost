@@ -3,18 +3,21 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
+
+/* eslint-disable camelcase */
 import {
     moreInfoDesktop_light_text,
     moreInfoDesktop_p_formatted,
-    moreInfoDesktop_span_formatted
-} from "../more-info.module.scss";
+    moreInfoDesktop_span_formatted,
+} from '../more-info.module.scss'
+/* eslint-disable camelcase */
 
 /**
  * Default implementation of attribute rendering on product detail pages.
  *
  * You will most probably want to replace this by a custom rendering for your product model.
  */
-const OrganismsDetailsMobile = ({ attributes: { style, matrixId } }) => {
+const OrganismsDetailsDesktop = ({ attributes: { style, matrixId } }) => {
     return (
         <>
             <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.materialOuterFabric' /></span> 100% <FormattedMessage id='product.viscose' /></p>
@@ -31,8 +34,8 @@ const OrganismsDetailsMobile = ({ attributes: { style, matrixId } }) => {
     )
 }
 
-OrganismsDetailsMobile.propTypes = {
+OrganismsDetailsDesktop.propTypes = {
     attributes: PropTypes.object.isRequired,
 }
 
-export default ComponentInjector.return('OrganismsMoreInfoProductMobile.OrganismsDetailsMobile', OrganismsDetailsMobile)
+export default ComponentInjector.return('OrganismsMoreInfoProductMobile.OrganismsDetailsDesktop', OrganismsDetailsDesktop)
