@@ -9,7 +9,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
  *
  * You will most probably want to replace this by a custom rendering for your product model.
  */
-const DetailsMobile = ({ variant }) => {
+const OrganismsDetailsDesktop = ({ variant }) => {
     return <div className='o-distance'>
         <dl className='o-detaillist o-distance-m'>
             {variant.attributes.color && variant.attributes.color.label ?
@@ -49,8 +49,8 @@ const DetailsMobile = ({ variant }) => {
     </div>
 }
 
-DetailsMobile.propTypes = {
+OrganismsDetailsDesktop.propTypes = {
     variant: PropTypes.object.isRequired,
 }
 
-export default ComponentInjector.return('OrganismsMoreInfoProductMobile.DetailsMobile', DetailsMobile)
+export default ComponentInjector.return('OrganismsMoreInfoProductMobile.OrganismsDetailsDesktop', OrganismsDetailsDesktop)

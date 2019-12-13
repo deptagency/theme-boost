@@ -24,7 +24,6 @@ MoreInfoProductTastic.propTypes = {
     // productConnector
     product: PropTypes.object,
     variant: PropTypes.object,
-    route: PropTypes.object,
 }
 
 MoreInfoProductTastic.defaultProps = {}

@@ -29,8 +29,10 @@ import {
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 import ReviewsList from './reviews-list'
+import OrganismsDetailsDesktop from "./more-info/details-desktop";
 
 const OrganismsMoreInfoProductDesktop = ({ product }) => {
+    const { images , attributes } = product
     const [selectedTab, setSelectedTab] = useState(0)
 
     return (
@@ -73,19 +75,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                     <h3 className='c-title-level-4 c-referal__body'>
                         <FormattedMessage id='product.description' />
                     </h3>
-
-                    <div>
-                        <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.materialOuterFabric' /></span> 100% <FormattedMessage id='product.viscose' /></p>
-                        <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.lining' /></span> 100% <FormattedMessage id='product.viscose' /></p>
-
-                        <p className={moreInfoDesktop_p_formatted}><FormattedMessage id='product.moreAboutThisProduct' /></p>
-
-                        <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.cut' /></span> 100% <FormattedMessage id='product.viscose' /></p>
-                        <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.clasp' /></span> <FormattedMessage id='product.lacing' /></p>
-                        <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.style' /></span> {product.attributes.style.label} </p>
-                        <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.itemNumber' /></span> {product.attributes.matrixId} </p>
-
-                    </div>
+                    {attributes && <OrganismsDetailsDesktop attributes={attributes}  />}
                 </TabPanel>
                 <TabPanel className={moreInfoDesktop_tab_panel}>
                     <div>
@@ -138,7 +128,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                 :
                 <div
                     style={{
-                        backgroundImage: `url(${product.images[0]})`,
+                        backgroundImage: `url(${images[0]})`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
                         backgroundPosition: 'center',

@@ -7,7 +7,7 @@ import { ReactComponent as YellowTick } from '../../../../icons/yellow-tick.svg'
 import { ReactComponent as SmallTruck } from '../../../../icons/truck-small.svg'
 import Collapsible from 'react-collapsible'
 import ReviewsPanel from '../../organisms/products/panels/reviews-panel'
-import DetailsMobile from './more-info/details-mobile'
+import OrganismsDetailsMobile from './more-info/details-mobile'
 import { moreInfoMobile, marginRight10, marginRight16 } from './more-info.module.scss'
 
 const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
@@ -40,7 +40,7 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
                         </div>
                     }
                 >
-                    <DetailsMobile variant={variant}/>
+                    <OrganismsDetailsMobile variant={variant}/>
                 </Collapsible>
             </div>
             <span className='c-divider o-distance-m'/>
