@@ -7,15 +7,10 @@ import OrganismsProductView from '../../../patterns/organisms/products/product-v
 
 class Main extends Component {
     render () {
-        const { product, variant: propsVariant, route } = this.props
+        const { product, variant } = this.props
 
-        if (!product || !propsVariant) {
+        if (!product || !variant) {
             return null
-        }
-
-        let variant = product.variants.find(v => { return v.attributes['ean'] === route.parameters.identifier })
-        if (!variant) {
-            variant = propsVariant
         }
 
         const sizes = product.variants.map((v) => { // eslint-disable-line array-callback-return
@@ -49,9 +44,4 @@ Main.defaultProps = {
     komplettPreis: false,
 }
 
-export default connect((globalState, props) => {
-    return {
-        route: globalState.app.route,
-        ...props,
-    }
-})(connect(productConnector)(Main))
+export default connect(productConnector)(Main)

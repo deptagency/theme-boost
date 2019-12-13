@@ -12,7 +12,11 @@ class ProductViewTastic extends Component {
         }
 
         return (
-            <Main tastic={this.props.tastic} data={this.props.data} variant={this.props.variant} />
+            <Main
+                tastic={this.props.tastic}
+                data={this.props.data}
+                variant={this.props.variant}
+            />
         )
     }
 }
