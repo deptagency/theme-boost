@@ -21,7 +21,7 @@ class TemplatesLogin extends Component {
         return (
             <div className='o-television o-television__display o-container-small'>
                 <div className={loginTitle}>
-                    <FormattedMessage id='account.login.welcomeBack'/>
+                    <FormattedMessage id='account.login.welcomeBack' />
                 </div>
                 <div className='o-form-area o-distance-m'>
                     <div className='o-form-area__column-6-6 o-form-area__new-row'>

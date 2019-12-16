@@ -7,8 +7,7 @@ import classnames from 'classnames'
 import Button from '../../atoms/buttons/button'
 import { registerCheckBoxFont, 
     registerCheckBoxMarg,
-    registerBorder} from './form-register.module.scss'
-
+    registerBorder } from './form-register.module.scss'
 
 class OrganismsFormRegister extends Component {
     constructor (props) {
