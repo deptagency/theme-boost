@@ -3,9 +3,8 @@ import app from 'frontastic-catwalk/src/js/app/app'
 import { FormattedMessage } from 'react-intl'
 
 import Button from '../atoms/buttons/button'
-import OrganismsPageHeader from '../organisms/base/header-page'
 
-import { loginBorder } from './login.module.scss'
+import { loginBorder, loginTitle } from './login.module.scss'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class TemplatesLogin extends Component {
@@ -21,10 +20,9 @@ class TemplatesLogin extends Component {
     render () {
         return (
             <div className='o-television o-television__display o-container-small'>
-                <OrganismsPageHeader
-                    title={<FormattedMessage id='account.login.welcomeBack' />}
-                    handleClick={() => { app.getRouter().history.replace('/') }}
-                />
+                <div className={loginTitle}>
+                    <FormattedMessage id='account.login.welcomeBack'/>
+                </div>
                 <div className='o-form-area o-distance-m'>
                     <div className='o-form-area__column-6-6 o-form-area__new-row'>
                         <label htmlFor='inp-mail' className='c-form-label'>

@@ -6,6 +6,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import Button from '../../../patterns/atoms/buttons/button'
 import { FormattedMessage } from 'react-intl'
 
+
 class AccountAccessForms extends Component {
     constructor (props) {
         super(props)
@@ -19,7 +20,7 @@ class AccountAccessForms extends Component {
         return (
             <div className='o-layout'>
                 <Grow in={(this.state.form === 'login')}>
-                    <TemplatesLogin />
+                    <TemplatesLogin/>
                     <section className='o-television o-television__display o-container-small o-distance-m'>
                         <h2 className='c-title-level-4 u-text-center'>
                             <FormattedMessage id='account.newHere' />
@@ -38,21 +39,6 @@ class AccountAccessForms extends Component {
                 </Grow>
                 <Grow in={(this.state.form === 'register')}>
                     <TemplatesRegister />
-                    <section className='o-television o-television__display o-container-small o-distance-m'>
-                        <h2 className='c-title-level-3 u-text-center'>
-                            <FormattedMessage id='account.register.joinUs' />
-                        </h2>
-                        <Button
-                            type='quiet'
-                            size='boss'
-                            className='o-distance-m'
-                            onClick={() => {
-                                this.setState({ form: 'login' })
-                            }}
-                        >
-                            <FormattedMessage id='account.login.login' />
-                        </Button>
-                    </section>
                 </Grow>
             </div>
         )
