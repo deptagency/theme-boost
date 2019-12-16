@@ -38,6 +38,21 @@ class AccountAccessForms extends Component {
                 </Grow>
                 <Grow in={(this.state.form === 'register')}>
                     <TemplatesRegister />
+                    <section className='o-television o-television__display o-container-small o-distance-m'>
+                        <h2 className='c-title-level-4 u-text-center'>
+                            <FormattedMessage id='account.login.welcomeBack' />
+                        </h2>
+                        <Button
+                            type='quiet'
+                            size='boss'
+                            className='c-button o-distance-m c-button--quiet c-button--boss'
+                            onClick={() => {
+                                this.setState({ form: 'login' })
+                            }}
+                        >
+                            <FormattedMessage id='account.login.login' />
+                        </Button>
+                    </section>
                 </Grow>
             </div>
         )
