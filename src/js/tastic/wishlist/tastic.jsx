@@ -1,36 +1,23 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 import _ from 'lodash'
 import { connect } from 'react-redux'
 
-import app from 'frontastic-catwalk/src/js/app/app'
-
-import MoleculesProductInWishlist from '../../patterns/organisms/products/product-in-wishlist'
+import ProductItem from '../../patterns/molecules/product/productItem'
 
 class Wishlist extends Component {
     
     render () {
+        console.log('this.props: ', this.props.rawData.stream);
+        
         return (<div className='c-wishlist o-layout'>
                     <h1 class="c-title-level-3">
-                        <span>cart.myCart</span>
+                        <span><Translatable value={this.props.title} /></span>
                     </h1>
                     <div class="o-grid o-grid--half o-grid--large-forth o-distance">
-                        {_.map(this.props.wishlist.lineItems, (lineItem) => {
-                            return <MoleculesProductInWishlist
-                                key={lineItem.lineItemId}
-                                lineItem={lineItem}
-                                onRemove={(lineItem) => {
-                                    app.getLoader('wishlist').removeLineItem(this.props.wishlist.wishlistId, {
-                                        lineItemId: lineItem.lineItemId,
-                                    })
-                                }}
-                                onChangeCount={(lineItem, count) => {
-                                    app.getLoader('wishlist').updateLineItem(this.props.wishlist.wishlistId, {
-                                        lineItemId: lineItem.lineItemId,
-                                        count: count,
-                                    })
-                                }}
-                            />
+                        {_.map(this.props.wishlist.lineItems, (lineItem, i) => {
+                            return <ProductItem key={i} product={lineItem} />
                         })}
                     </div>
                 </div>)
@@ -42,27 +29,50 @@ Wishlist.propTypes = {
 }
 
 Wishlist.defaultProps = {
+    title: 'Wishlist',
     wishlist: {
         name: "My Wishes",
         lineItems: [
             {
-                name: "item_1"
+                name: "Vero Moda Freizeitkleid",
+                category: "Ballkleid",
+                price: "39,95 €",
+                variants: [
+                    { images: ['https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg'] }
+                ]
             },
             {
-                name: "item_2"
+                name: "Vero Moda Kleid",
+                category: "Kleid",
+                price: "19,95 €",
+                variants: [
+                    { images: ['https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/073327_1_large.jpg'] }
+                ]
             },
             {
-                name: "item_3"
+                name: "Freizeitkleid",
+                category: "Hosen",
+                price: "9,99 €",
+                variants: [
+                    { images: ['https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/073319_1_large.jpg'] }
+                ]
             },
             {
-                name: "item_4"
+                name: "Vero Moda",
+                category: "BallBall",
+                price: "129,95 €",
+                variants: [
+                    { images: ['https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/073316_1_large.jpg'] }
+                ]
             },
             {
-                name: "item_5"
+                name: "Vero Freizeithose",
+                category: "Jeans",
+                price: "239,95 €",
+                variants: [
+                    { images: ['https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/073328_1_large.jpg'] }
+                ]
             },
-            {
-                name: "item_6"
-            }
         ]
     }
 }

@@ -7,10 +7,11 @@
             "name": "Content",
             "fields": [
                 {
-                    "label": "Show SomeField",
-                    "field": "showSomeField",
-                    "type": "boolean",
-                    "default": true
+                    "label": "Stream",
+                    "field": "stream",
+                    "type": "stream",
+                    "streamType": "product",
+                    "default": null
                 }
             ]
         }
