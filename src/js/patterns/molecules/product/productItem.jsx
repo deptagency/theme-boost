@@ -57,6 +57,7 @@ ProductItem.propTypes = {
     product: PropTypes.object.isRequired,
     showStrikePrice: PropTypes.bool,
     showPercent: PropTypes.bool,
+    removeWishlistItem: PropTypes.func,
 }
 
 ProductItem.defaultProps = {
