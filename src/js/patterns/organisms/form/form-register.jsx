@@ -7,7 +7,6 @@ import classnames from 'classnames'
 import Button from '../../atoms/buttons/button'
 import { registerCheckBoxFont, 
     registerCheckBoxMarg,
-    registerMaxWidth, 
     registerBorder} from './form-register.module.scss'
 
 
@@ -224,7 +223,7 @@ class OrganismsFormRegister extends Component {
                                 email: this.state.register_email,
                                 password: this.state.register_password,
                                 tos: this.state.register_tos,
-                                inform: this.state.register_inform, 
+                                inform: this.state.register_inform,
                             })
                         }}
                     >
@@ -234,9 +233,9 @@ class OrganismsFormRegister extends Component {
                 </fieldset>
 
                 <section className='o-television o-television__display o-container-small o-distance-m'>
-                        <h2 className='c-title-level-4 u-text-center'>
-                            <FormattedMessage id='account.login.welcomeBack'/>
-                        </h2>
+                    <h2 className='c-title-level-4 u-text-center'>
+                        <FormattedMessage id='account.login.welcomeBack' />
+                    </h2>
                     <Button
                         type='quiet'
                         size='boss'
