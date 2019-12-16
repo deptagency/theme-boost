@@ -5,7 +5,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import app from 'frontastic-catwalk/src/js/app/app'
 import classnames from 'classnames'
 import Button from '../../atoms/buttons/button'
-import { registerCheckBoxFont, 
+import { registerCheckBoxFont,
     registerCheckBoxMarg,
     registerBorder } from './form-register.module.scss'
 
