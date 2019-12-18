@@ -1,67 +1,56 @@
+$page-foot-background-color: $color-palette-gray-900 !default;
+$page-foot-font-color: $color-palette-gray-200 !default;
+
 .c-page-foot {
-    background: #31333e;
-    // default text color
-    color: rgba(255, 255, 255, 0.8);
-    margin-top: 32px;
-    padding-top: 12px;
-    padding-bottom: 16px;
-    strong {
-        color: white;
+    margin-top: $spacing-stack-l;
+    padding: $spacing-inset-l 0 $spacing-inset-m;
+    background: $page-foot-background-color;
+    color: $page-foot-font-color;
+    font-family: $font-family-spot;
+    text-align: center;
+
+    @include breakpoint($layout-breakpoint-l) {
+        text-align: left;
     }
+
     a {
         text-decoration: none;
     }
-    @include breakpoint($layout-breakpoint-l) {
-        margin-top: 74px;
-        padding-top: 18px;
-    }
-    // TODO
-    font-family: $font-family-spot;
-    h2 {
-        color: white;
-    }
-
-    .c-store-feature__list {
-        padding-top: 0;
-    }
 }
 
-.c-page-footer__contact-email {
-    // NOTE: 12px couldn't be done with the regular distances.
-    margin-top: 12px;
-}
-.c-page-footer__phone-icon {
-    font-size: 22px;
-    margin-right: 9px;
-    path {
-        fill: rgba(255, 255, 255, 0.8);
-    }
-}
-
-.c-page-footer__link-list {
-    margin-bottom: 96px;
-}
-
+// Payment Icons
 .c-page-footer__payment-methods {
-    font-size: 38px;
+    font-size: 36px;
+    line-height: 0;
 
     rect {
-        fill: white;
+        fill: $color-palette-white;
     }
     path,
     circle {
-        fill: #31333e;
+        fill: $color-palette-gray-900;
     }
 }
 
+// Small Bottom Nav
 .c-page-footer__meta-nav {
+    justify-content: center;
     width: 100%;
-    justify-content: flex-end;
+
+    @include breakpoint($layout-breakpoint-l) {
+        justify-content: flex-end;
+    }
 }
 
+//  Social Icons
 .c-page-footer__social-links {
-    font-size: 20px;
+    font-size: 24px;
+
+    @include breakpoint($layout-breakpoint-l) {
+        font-size: 16px;
+    }
+    
     path {
-        fill: rgba(255, 255, 255, 0.8);
+        fill: $color-palette-gray-400;
     }
 }

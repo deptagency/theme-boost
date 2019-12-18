@@ -7,20 +7,18 @@ const ContactInfoMini = ({ phoneNumber, phoneNumberSubline, email, emailOverline
     return (
         <>
             <div className='o-block-short o-block-short--centered'>
-                <PhoneIcon className='c-page-footer__phone-icon' />
-                <div>
+                <PhoneIcon className='c-icon o-block-short__short-item u-text-color-ghost' />
+                <div className='o-block-short__body'>
                     <strong className='u-text-strong'>{phoneNumber}</strong> <br />
-                    <span className='u-text-s'>{phoneNumberSubline}</span>
+                    <p className='u-text-s'>{phoneNumberSubline}</p>
                 </div>
             </div>
-            <div className='o-distance-m c-page-footer__contact-email'>
-                <p>
-                    <span className='u-text-s'>{emailOverline}</span> <br />
-                    <a href={email} title='' className='c-link c-link--ghost'>
-                        <strong>{email}</strong>
-                    </a>
-                </p>
-            </div>
+            <p className='o-distance-m'>
+                <span className='u-text-s'>{emailOverline}</span> <br />
+                <a href={email} title='' className='c-link c-link--ghost'>
+                    <strong>{email}</strong>
+                </a>
+            </p>
         </>
     )
 }
