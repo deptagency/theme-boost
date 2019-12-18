@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Image from '@frontastic/catwalk/src/js/image'
 import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
-import './promobox-with-positioning.scss'
+import { ribbon, ribbonTopRight } from './promobox-with-positioning.module.scss'
 
 class OrganismsPromoboxWithPositioning extends Component {
     render () {
@@ -20,7 +20,7 @@ class OrganismsPromoboxWithPositioning extends Component {
         }
 
         var showRibbon = false
-        if (vertical === 'top') {
+        if (vertical === 'bottom' && horizontal === 'left') {
             showRibbon = true
         }
 
@@ -32,7 +32,7 @@ class OrganismsPromoboxWithPositioning extends Component {
                     className='c-promobox__backdrop tns-lazy' />
                 <div className={`c-promobox__overlay c-promobox__overlay--${vertical}-${horizontal}`}>
                     {showRibbon && (
-                        <div className='ribbonTopRight ribbon'>
+                        <div className={`${ribbonTopRight} ${ribbon}`}>
                             <span>BETA</span>
                         </div>
                     )}
