@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -12,8 +12,9 @@ const OrganismsBundleListing = ({ cartItems }) => {
                 {map(cartItems, (item, index) => {
                     // TODO attributes.**.label - make it more robust
                     return (
-                        <>
+                        <Fragment key={index}>
                             <OrganismsBundle
+                                itemId={item.lineItemId}
                                 name={item.name}
                                 designer={item.variant.attributes.designer.label}
                                 image={item.variant.images[0]}
@@ -23,7 +24,7 @@ const OrganismsBundleListing = ({ cartItems }) => {
                                 size={item.variant.attributes.size}
                         />
                             {cartItems.length - 1 > index && <span style={{ marginTop: '12px' }} className='c-divider' />}
-                        </>
+                        </Fragment>
 
                     )
                 })}
