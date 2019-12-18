@@ -19,9 +19,9 @@ class OrganismsPromoboxWithPositioning extends Component {
             return null
         }
 
-        var showRibbon = false;
-        if (vertical == 'top') {
-            showRibbon = true;
+        var showRibbon = false
+        if (vertical === 'top') {
+            showRibbon = true
         }
 
         return (
