@@ -20,11 +20,11 @@ import {
 
 class OrganismsProductStage extends Component {
     render () {
-        const { images, name, discountedPrice, price, addToCartButton } = this.props
+        const { images, name, discountedPrice, price, addToCartButton, addToWishlist } = this.props
         return (
             <div className='o-media-block'>
                 <div className='o-media-block__asset'>
-                    <OrganismsGallery images={images} />
+                    <OrganismsGallery images={images} addToWishlist={addToWishlist} />
                 </div>
                 <div className={`o-media-block__body o-prevent-space productInfoRight ${productInfoRight}`}>
                     <div className={`${productInfo} productInfo`}>
@@ -138,6 +138,7 @@ OrganismsProductStage.propTypes = {
     price: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node]),
     discountedPrice: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node]),
     addToCartButton: PropTypes.node,
+    addToWishlist: PropTypes.func,
 }
 
 OrganismsProductStage.defaultProps = {
