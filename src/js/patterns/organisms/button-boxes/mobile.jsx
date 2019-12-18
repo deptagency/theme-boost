@@ -4,7 +4,7 @@ import Slider from '../../templates/slider'
 
 const ButtonBoxesMobile = ({ children }) => {
     return (
-        <div className='button-boxes-slider display-grid'>
+        <div className='o-tiny-slider-wrapper'>
             <Slider options={{ fixedWidth: 290 }}>
                 {children}
             </Slider>

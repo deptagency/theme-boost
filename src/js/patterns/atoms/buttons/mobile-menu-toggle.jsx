@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const MenuIcon = () => {
     return (
         <svg
-            className='c-icon o-block-short__icon'
+            className='c-icon c-icon--s o-block-short__icon'
             width='24'
             height='24'
             viewBox='0 0 24 24'
