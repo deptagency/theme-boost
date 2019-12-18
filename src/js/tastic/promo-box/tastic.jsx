@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import Translatable from '@frontastic/catwalk/src/js/component/translatable'
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
+
 import OrganismsPromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
 import Button from '../../patterns/atoms/buttons/button'
-import Translatable from 'frontastic-catwalk/src/js/component/translatable'
 
 class PromoBoxTastic extends Component {
     render () {
@@ -35,9 +37,8 @@ class PromoBoxTastic extends Component {
 
 PromoBoxTastic.propTypes = {
     data: PropTypes.object.isRequired,
-    // tastic: PropTypes.object.isRequired,
 }
 
 PromoBoxTastic.defaultProps = {}
 
-export default PromoBoxTastic
+export default tastify()(PromoBoxTastic)

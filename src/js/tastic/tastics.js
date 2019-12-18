@@ -3,6 +3,7 @@ import PromoBoxTastic from './promo-box/tastic.jsx'
 import CategoryButtonBoxesTastic from './category-button-boxes/tastic.jsx'
 import ProductSliderTastic from './product-slider/tastic.jsx'
 import NewsletterTastic from './newsletter/tastic'
+import MarkdownTastic from './markdown/tastic'
 import MoreInfoProductTastic from './more-info-product/tastic'
 import BrandContentfulTastic from './brand-contentful/tastic'
 import HorizontalSpacerTastic from './horisontal-spacer/tastic'
@@ -22,6 +23,7 @@ import FooterPaymentMethodsTastic from './footer-payment-methods/tastic'
 import FooterLinkListTastic from './footer-link-list/tastic'
 import FooterMetaNavTastic from './footer-meta-nav/tastic'
 import FooterSocialNavTastic from './footer-social-nav/tastic'
+import WishlistTastic from './wishlist/tastic'
 
 export default (() => {
     return {
@@ -30,6 +32,7 @@ export default (() => {
         'frontastic/boost/category-button-boxes': CategoryButtonBoxesTastic,
         'frontastic/boost/product-slider': ProductSliderTastic,
         'frontastic/boost/newsletter': NewsletterTastic,
+        'frontastic/boost/markdown': MarkdownTastic,
         'frontastic/boost/more-info-product': MoreInfoProductTastic,
         'frontastic/boost/brand-contentful': BrandContentfulTastic,
         'frontastic/boost/horizontal-spacer': HorizontalSpacerTastic,
@@ -49,5 +52,6 @@ export default (() => {
         'frontastic/boost/footer-link-list': FooterLinkListTastic,
         'frontastic/boost/footer-meta-nav': FooterMetaNavTastic,
         'frontastic/boost/footer-social-nav': FooterSocialNavTastic,
+        'frontastic/boost/wishlist': WishlistTastic,
     }
 })()

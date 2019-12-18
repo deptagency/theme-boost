@@ -29,7 +29,7 @@ AddToCartButton.propTypes = {
     variant: PropTypes.object.isRequired,
 }
 
-const OrganismsProductView = ({ images, name, variant, sizes }) => {
+const OrganismsProductView = ({ images, name, variant, sizes, addToWishlist }) => {
     return (
         <div className={responsiveMargin}>
             <OrganismsProductStage
@@ -38,6 +38,7 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
                 price={<AtomsPrice value={variant.price} old={variant.discountedPrice !== null} />}
                 discountedPrice={variant.discountedPrice ? <AtomsPrice value={variant.discountedPrice} /> : null}
                 addToCartButton={<AddToCartButton variant={variant} />}
+                addToWishlist={addToWishlist}
             />
 
             <div className={hideOver600}>
@@ -74,9 +75,11 @@ const OrganismsProductView = ({ images, name, variant, sizes }) => {
 
 OrganismsProductView.propTypes = {
     images: PropTypes.array.isRequired,
+    // TODO: Rename, because these are actually variants that can be selected
     sizes: PropTypes.array.isRequired,
     name: PropTypes.string.isRequired,
     variant: PropTypes.object.isRequired,
+    addToWishlist: PropTypes.func,
 }
 
 OrganismsProductView.defaultProps = {

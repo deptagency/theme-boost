@@ -5,6 +5,11 @@
   font-weight: $font-weight-bold;
   white-space: nowrap;
 }
+
+.c-price--normal {
+  font-weight: $font-weight-light;
+}
+
 .c-price--old {
   font-weight: $font-weight-base;
   text-decoration: line-through;

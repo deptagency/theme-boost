@@ -4,18 +4,14 @@
 
 .o-grid {
     display: grid;
-    column-gap: 20px;
-    margin: 0 10px;
+    column-gap: $layout-gutter-width;
+    max-width: $layout-wrapper-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $layout-edge-width;
+    padding-right: $layout-edge-width;
     grid-template-columns: [content-start] repeat(12, minmax(0, 1fr)) [content-end];
 
-    @include breakpoint($layout-breakpoint-l) {
-        margin: 0 20px;
-    }
-
-    @include breakpoint($layout-breakpoint-xxl) {
-        max-width: 1100px;
-        margin: 0 auto;
-    }
     &.o-grid--debug > *:nth-child(odd) {
         background-color: rgba(203, 0, 114, 0.65);
     }
@@ -27,6 +23,8 @@
 
     .o-grid {
         margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
         width: 100%;
     }
 }

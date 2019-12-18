@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 
-import ReferencePropType from 'frontastic-catwalk/src/js/component/reference'
+import ReferencePropType from '@frontastic/catwalk/src/js/component/reference'
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 
 import Header from '../../patterns/organisms/base/header'
 
@@ -10,6 +10,7 @@ const HeaderTastic = ({ data, context }) => {
     return (
         <Header
             topCategories={data.topCategories}
+            logo={data.logo}
             loggedIn={context.session.loggedIn}
         />
     )
@@ -23,17 +24,13 @@ HeaderTastic.propTypes = {
                 reference: () => { return ReferencePropType },
             })
         ),
+        logo: PropTypes.shape({
+            media: PropTypes.object,
+        }),
     }),
     context: PropTypes.object.isRequired,
 }
 
 HeaderTastic.defaultProps = {}
 
-export default connect(
-    (globalState, props) => {
-        return {
-            ...props,
-            context: globalState.app.context,
-        }
-    }
-)(HeaderTastic)
+export default tastify({ connect: { context: true } })(HeaderTastic)

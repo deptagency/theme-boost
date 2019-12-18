@@ -1,0 +1,45 @@
+.productRow {
+  display: grid;
+  grid-template-columns: 25% 50% 20%;
+  justify-content: space-around;
+  margin-top: 12px;
+
+  .productImage {
+    align-content: center;
+    display: grid;
+  }
+
+  .productInfo {
+
+    .productTitle {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .productDesigner {
+      font-size: 14px;
+      font-weight: normal;
+      color:  #97A5BA;
+    }
+
+    .countSelect {
+      width: 60px;
+      padding: 6px 8px;
+      font-size: 14px;
+    }
+  }
+
+  .rightColumn {
+    display: grid;
+    align-content: space-between;
+    justify-items: end;
+
+    .cursorPointer {
+      cursor: pointer;
+    }
+
+    .cartPrice {
+      font-size: 16px;
+    }
+  }
+}

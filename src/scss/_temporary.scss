@@ -456,10 +456,6 @@
 }
 
 // PAGE SETTINGS
-.c-page-wrapper {
-    margin: 10px;
-}
-
 .user-select--disabled {
     -webkit-user-select: none; /* Safari 3.1+ */
     -moz-user-select: none; /* Firefox 2+ */
@@ -509,11 +505,26 @@
     font-size: 12px;
 }
 
+.o-box-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -$spacing-inline-m;
+  margin-top: -$spacing-stack-m;
+
+  @include breakpoint($layout-breakpoint-l) {
+    
+  }
+
+  &__item {
+    margin-left: $spacing-inline-m;
+    margin-top: $spacing-stack-m;
+  }
+}
+
 // marcel - StoreFeature
 .c-store-feature__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    
     padding: 6px 0 16px;
     // Those negative margins are here, so
     // the store feature items can have a
@@ -523,33 +534,15 @@
     width: calc(100% + 12px);
     margin-left: -6px;
     margin-right: -6px;
-    @include breakpoint($layout-breakpoint-l) {
-        padding: 12px 0 28px;
-        margin-left: -12px;
-        margin-right: -12px;
-        width: calc(100% + 24px);
-    }
+
 }
 .c-store-feature {
     display: flex;
     flex: 1;
     align-items: center;
-    // TODO: @timhartmann - f4f4f4 wasn't yet defined as a color. not sure if this is final
-    background: #f4f4f4;
-    font-size: 12px;
+    justify-content: center;
     color: #31333e;
     min-width: 156px;
     max-width: 50%;
-    height: 44px;
-    padding: 0 8px;
-    border-radius: 10px;
-    margin: 6px;
-    @include breakpoint($layout-breakpoint-l) {
-        margin: 12px;
-    }
 }
-.c-store-feature__icon {
-    font-size: 20px;
-    line-height: 0;
-    margin-right: 8px;
-}
+

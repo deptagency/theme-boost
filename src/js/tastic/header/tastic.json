@@ -5,22 +5,11 @@
     "category": "Boost Theme",
     "schema": [
         {
-            "name": "Top Categories",
+            "name": "Menu",
             "fields": [
                 {
-                    "label": "Navigation Tree Women",
-                    "field": "treeWomen",
-                    "type": "tree"
-                },
-                {
-                    "label": "Navigation Tree Men",
-                    "field": "treeMen",
-                    "type": "tree"
-                },
-                {
-                    "label": "Navigation Tree Kids",
-                    "field": "treeKids",
-                    "type": "tree"
+                    "type": "description",
+                    "text": "Choose a few top categories to be displayed on top of the navigation. Selecting a top category will allow the consumer to navigate to its tree."
                 },
                 {
                     "label": "Top Categories",
@@ -50,8 +39,27 @@
                             "label": "Mobile Nav Background",
                             "field": "mobileNavBackgroundImage",
                             "type": "media"
+                        },
+                        {
+                            "type": "description",
+                            "text": "Ratio-Setting will currently not be used."
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "Logo",
+            "fields": [
+                {
+                    "type": "description",
+                    "text": "Select a logo to overwrite the default 'Catwalk'."
+                },
+                {
+                    "label": "Logo",
+                    "field": "logo",
+                    "type": "media",
+                    "required": false
                 }
             ]
         }

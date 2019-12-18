@@ -17,7 +17,7 @@ const TemplatesFullCart = ({ cartItems, sum, currency }) => {
                 <section>
                     <h1 className='c-title-level-3'><FormattedMessage id='cart.myCart' /></h1>
                     <div className='o-distance'>
-                        <OrganismsBundleListing cartItems={cartItems} currency={currency} />
+                        <OrganismsBundleListing cartItems={cartItems} />
                     </div>
                 </section>
                 <span className='c-divider c-divider--break o-distance' />

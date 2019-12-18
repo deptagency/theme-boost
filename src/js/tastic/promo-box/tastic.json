@@ -71,7 +71,10 @@
                     "field": "image",
                     "translatable": false,
                     "type": "media",
-                    "required": false
+                    "required": false,
+                    "options": {
+                        "ratio": "16:9"
+                    }
                 }
             ]
         },
