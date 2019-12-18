@@ -17,7 +17,7 @@ function FooterMetaNav ({ data }) {
         <LinkList
             links={translateLabels(data.links)}
             listClassName='c-page-footer__meta-nav o-list-inline o-footer__bottom__navigation'
-            listItemClassName='o-list-inline__item u-text-s'
+            listItemClassName='o-list-inline__item u-text-s c-link c-link--quiet'
         />
     )
 }
