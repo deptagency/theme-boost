@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import app from 'frontastic-catwalk/src/js/app/app'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import { ReactComponent as CartBin } from '../../../../icons/cart-bin.svg'
 import {
@@ -10,6 +11,7 @@ import {
     productDesigner,
     countSelect,
     rightColumn,
+    cursorPointer,
     cartPrice,
 } from './bundle.module.scss'
 
@@ -18,7 +20,7 @@ import AtomsPrice from '../../atoms/prices/price'
 
 class OrganismsBundle extends Component {
     render () {
-        const { image, name, designer, count, price, color, size } = this.props
+        const { itemId, image, name, designer, count, price, color, size } = this.props
 
         return (
             <div className={`${productRow} productRow`}>
@@ -40,13 +42,18 @@ class OrganismsBundle extends Component {
                         />
                         <select className={`${countSelect} o-distance-s`} name='' id=''>
                             {Array.from(Array(10).keys()).map((i) => {
-                                return <option value={i + 1}>{i + 1}</option>
+                                return <option key={i} value={i + 1}>{i + 1}</option>
                             })}
                         </select>
                     </div>
                 </div>
                 <div className={`${rightColumn} rightColumn`}>
-                    <CartBin />
+                    <CartBin
+                        className={cursorPointer}
+                        onClick={() => {
+                            app.getLoader('cart').removeLineItem({ lineItemId: itemId })
+                        }}
+                    />
                     <div className={`${cartPrice} cartPrice`}>
                         <AtomsPrice value={price} normal />
                     </div>
@@ -57,6 +64,7 @@ class OrganismsBundle extends Component {
 }
 
 OrganismsBundle.propTypes = {
+    itemId: PropTypes.string.isRequired,
     image: PropTypes.string,
     name: PropTypes.string.isRequired,
     designer: PropTypes.string.isRequired,

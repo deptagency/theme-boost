@@ -5,7 +5,8 @@
   margin-top: 12px;
 
   .productImage {
-
+    align-content: center;
+    display: grid;
   }
 
   .productInfo {
@@ -32,6 +33,10 @@
     display: grid;
     align-content: space-between;
     justify-items: end;
+
+    .cursorPointer {
+      cursor: pointer;
+    }
 
     .cartPrice {
       font-size: 16px;
