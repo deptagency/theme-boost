@@ -20,16 +20,15 @@ import MoleculesDetaillist from '../../molecules/lists/detaillist'
 import AtomsPrice from '../../atoms/prices/price'
 
 const OrganismsBundle = ({ itemId, image, name, designer, count, price, color, size }) => {
-
     // TODO create a counter with - and + instead of a dropdown
-    const productCounter =  Array.from(Array(10).keys())
+    const productCounter = Array.from(Array(10).keys())
 
     return (
         <div className={classnames(productRow, 'productRow')}>
-            <div  className={classnames(productImage, 'productImage')}>
+            <div className={classnames(productImage, 'productImage')}>
                 <img src={image} alt='' />
             </div>
-            <div  className={classnames(productInfo, 'productInfo')}>
+            <div className={classnames(productInfo, 'productInfo')}>
                 <div className='o-bundle__header'>
                     <div>
                         <div className={classnames(productTitle, 'productTitle')}>{name}</div>

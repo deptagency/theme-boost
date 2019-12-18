@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 export function StoreFeature ({ icon, children }) {
     return (
         <div className='c-box c-box--s u-background-color-ghost c-store-feature o-box-row__item'>
-            <div className="o-block-short o-block-short--centered">
+            <div className='o-block-short o-block-short--centered'>
                 <div className='o-block-short__short-item'>{icon}</div>
-                <p class="u-text-s">{children}</p>
+                <p className='u-text-s'>{children}</p>
             </div>
         </div>
     )
