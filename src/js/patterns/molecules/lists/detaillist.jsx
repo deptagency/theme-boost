@@ -10,7 +10,7 @@ import {
     value,
 } from './detaillist.module.scss'
 
-const MoleculesDetaillist = ({ color, size, count }) => {
+const MoleculesDetaillist = ({ color, size }) => {
     return (
         <div className={classnames(detailList, 'detailList', 'o-distance-s')}>
             <div>
@@ -22,17 +22,11 @@ const MoleculesDetaillist = ({ color, size, count }) => {
                 <span className={classnames(fontSize14, label)}><FormattedMessage id='sizeProduct' /></span>
                 <span className={classnames(fontSize14, value)}> {size}</span>
             </div>
-
-            <div>
-                <span className={classnames(fontSize14, label)}><FormattedMessage id='quantityProduct' /></span>
-                <span className={classnames(fontSize14, value)}> {count}</span>
-            </div>
         </div>
     )
 }
 
 MoleculesDetaillist.propTypes = {
-    count: PropTypes.number.isRequired,
     color: PropTypes.string.isRequired,
     size: PropTypes.string.isRequired,
 }

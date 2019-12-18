@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-
+import app from 'frontastic-catwalk/src/js/app/app'
 import productConnector from 'frontastic-catwalk/src/js/tastic/product/connector'
 import OrganismsProductView from '../../../patterns/organisms/products/product-view'
 
@@ -24,6 +24,9 @@ class Main extends Component {
                 name={this.props.product.name}
                 variant={variant}
                 sizes={sizes}
+                addToWishlist={() => {
+                    app.getLoader('wishlist').add(product, variant, 1, null)
+                }}
             />
         )
     }

@@ -23,6 +23,7 @@ import FooterPaymentMethodsTastic from './footer-payment-methods/tastic'
 import FooterLinkListTastic from './footer-link-list/tastic'
 import FooterMetaNavTastic from './footer-meta-nav/tastic'
 import FooterSocialNavTastic from './footer-social-nav/tastic'
+import WishlistTastic from './wishlist/tastic'
 
 export default (() => {
     return {
@@ -51,5 +52,6 @@ export default (() => {
         'frontastic/boost/footer-link-list': FooterLinkListTastic,
         'frontastic/boost/footer-meta-nav': FooterMetaNavTastic,
         'frontastic/boost/footer-social-nav': FooterSocialNavTastic,
+        'frontastic/boost/wishlist': WishlistTastic,
     }
 })()
