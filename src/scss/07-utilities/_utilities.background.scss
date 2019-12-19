@@ -4,11 +4,11 @@
   background-color: $color-palette-white;
 }
 
-.u-background-color-quiet {
+.u-background-color-gray-200 {
     background-color: $color-palette-gray-200;
 }
 
-.u-background-color-dark {
+.u-background-color-gray-900 {
   background-color: $color-palette-gray-900;
 }
 
@@ -26,4 +26,8 @@
 
 .u-background-color-success {
   background-color: $color-semantic-success-base;
+}
+
+.u-background-color-default {
+  background-color: $color-palette-gray-200;
 }
