@@ -1,5 +1,18 @@
-.registerTitle {
+.registerTitleDesktop {
     font-size: 27px;
     font-weight: bold;
     text-align: center;
+    display: inherit;
+}
+.registerMobile {
+    display: none;
+}
+
+@media (max-width: 766px) {
+    .registerMobile {
+        display: inherit;
+    }
+    .registerTitleDesktop {
+        display: none;
+    }
 }

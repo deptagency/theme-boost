@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 import classnames from 'classnames'
 import _ from 'lodash'
 
-import { titleHeaderPage } from './header-page.module.scss'
+import { titleHeaderPage, centerTitle } from './header-page.module.scss'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsPageHeader extends Component {
@@ -19,7 +19,7 @@ class OrganismsPageHeader extends Component {
                 )}
                 onClick={this.props.handleClick}
                 >
-                <div className='o-block-short o-block-short--centered'>
+                <div className={`${centerTitle} o-block-short o-block-short--centered`}>
                     <button className='o-block-short__short-item c-link c-link--uniform'>
                         <svg className='c-icon c-icon--m' version='1.1' width='24' height='24' viewBox='0 0 24 24'>
                             <title><FormattedMessage id='account.back' />}</title>
