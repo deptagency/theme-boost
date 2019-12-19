@@ -2,6 +2,44 @@
    #CELL
 ========================================================================== */
 
+.c-page-body {
+
+  // Adding standard space for each cell. It is important when cells will be stacked on mobile.
+  .o-cell {
+      margin-top: $spacing-stack-m;
+
+      // Remove the same margin like in the cells
+      > .o-grid {
+          margin-top: -$spacing-stack-m;
+      }
+  }
+  
+  // Full Rows separates sections. Because of this the margin is higher
+  .o-cell--12,
+  .o-cell--1\/1 {
+      margin-top: $spacing-stack-xl;
+
+      // Children with the same classe shouldn't get the same margin. We don't want to have twice. So remove it.
+      .o-cell--12,
+      .o-cell--1\/1 {
+          margin-top: 0;
+      }
+  }
+
+  // Workaround to remove space for the first full-row in page-body
+  .c-page-wrapper>.o-grid>.o-cell:first-child {
+      margin-top: 0;
+
+      > .o-grid {
+        margin-top: 0;
+      }
+
+      .o-cell--12 {
+        margin-top: 0;
+      }
+  }
+}
+
 .o-cell {
     display: flex;
     flex-direction: column;

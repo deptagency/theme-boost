@@ -11,7 +11,6 @@ import Slider from '../../patterns/templates/slider'
 import { take } from 'lodash'
 import MoleculesSticker from '../../patterns/molecules/sticker/sticker'
 import Wishlist from '../../patterns/atoms/wishlist/wishlist'
-import { sliderHeading, sliderTitle, sliderDescription } from './product-slider.module.scss'
 
 const ProductItem = ({ product }) => {
     const { name, variants } = product
@@ -65,18 +64,19 @@ class ProductSliderTastic extends Component {
 
         return (
             <Fragment>
-                <header className={sliderHeading}>
-                    {title && <div className={`sliderTitle ${sliderTitle}`}>
+                <header className='o-heading'>
+                    {title && <p className='o-heading__topic c-topic'>
                         <Translatable value={title} />
-                    </div>}
-                    {description && <div className={`sliderDescription ${sliderDescription}`}>
+                    </p>}
+                    {description && <h2 className='o-heading__title c-title'>
                         <Translatable value={description} />
-                    </div>}
+                    </h2>}
                 </header>
-
-                <Slider>
-                    {productsToShow.map((product, i) => { return <ProductItem key={i} product={product} /> })}
-                </Slider>
+                <div className='o-distance-m'>
+                    <Slider>
+                        {productsToShow.map((product, i) => { return <ProductItem key={i} product={product} /> })}
+                    </Slider>
+                </div>
             </Fragment>
         )
     }

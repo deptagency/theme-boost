@@ -22,4 +22,8 @@
 
 .e-tastic {
     width: 100%;
+
+    + .e-tastic {
+      margin-top: $spacing-stack-m;
+    }
 }
