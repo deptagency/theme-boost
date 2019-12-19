@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl'
 import OrganismsFormRegister from '../organisms/form/form-register'
 import OrganismsPageHeader from '../organisms/base/header-page'
 
-import { registerTitleDesktop, registerMobile,  } from './register.module.scss'
+import { registerTitleDesktop, registerMobile } from './register.module.scss'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class TemplatesRegister extends Component {
