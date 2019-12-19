@@ -19,8 +19,8 @@ const OrganismsHead = ({ topCategories, logo, loggedIn }) => {
     const ctaLoggedIn = () => {
         return (
             <Button
-                className='button-login-register'
                 type='quiet'
+                size='boss'
                 onClick={() => {
                     app.getRouter().push('Frontastic.Frontend.Master.Account.profile')
                     setIsMobileMenuOpen(false)
