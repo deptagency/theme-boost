@@ -3,8 +3,9 @@ import app from 'frontastic-catwalk/src/js/app/app'
 import { FormattedMessage } from 'react-intl'
 
 import Button from '../atoms/buttons/button'
-import OrganismsPageHeader from '../organisms/base/header-page'
 
+import OrganismsPageHeader from '../organisms/base/header-page'
+import { loginBorder, loginTitleDesktop, loginMobile } from './login.module.scss'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class TemplatesLogin extends Component {
@@ -20,10 +21,15 @@ class TemplatesLogin extends Component {
     render () {
         return (
             <div className='o-television o-television__display o-container-small'>
-                <OrganismsPageHeader
-                    title={<FormattedMessage id='account.login.login' />}
-                    handleClick={() => { app.getRouter().history.replace('/') }}
-                />
+                <div className={loginMobile}>
+                    <OrganismsPageHeader
+                        title={<FormattedMessage id='account.login.welcomeBack' />}
+                        handleClick={() => { app.getRouter().history.replace('/') }}
+                    />
+                </div>
+                <div className={loginTitleDesktop}>
+                    <FormattedMessage id='account.login.welcomeBack' />
+                </div>
                 <div className='o-form-area o-distance-m'>
                     <div className='o-form-area__column-6-6 o-form-area__new-row'>
                         <label htmlFor='inp-mail' className='c-form-label'>
@@ -66,7 +72,7 @@ class TemplatesLogin extends Component {
                 >
                     <FormattedMessage id='account.login.login' />
                 </Button>
-                <div className='o-television__display__boundless c-divider c-divider--break o-distance-m' />
+                <div className={`${loginBorder} o-television__display__boundless c-divider c-divider--break o-distance-m`} />
             </div>
         )
     }

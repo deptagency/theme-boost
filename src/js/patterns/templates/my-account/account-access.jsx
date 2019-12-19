@@ -21,8 +21,8 @@ class AccountAccessForms extends Component {
                 <Grow in={(this.state.form === 'login')}>
                     <TemplatesLogin />
                     <section className='o-television o-television__display o-container-small o-distance-m'>
-                        <h2 className='c-title-level-3 u-text-center'>
-                            <FormattedMessage id='account.freeAccount' />
+                        <h2 className='c-title-level-4 u-text-center'>
+                            <FormattedMessage id='account.newHere' />
                         </h2>
                         <Button
                             type='quiet'
@@ -32,20 +32,20 @@ class AccountAccessForms extends Component {
                                 this.setState({ form: 'register' })
                             }}
                         >
-                            <FormattedMessage id='account.newHere' />
+                            <FormattedMessage id='account.register.register' />
                         </Button>
                     </section>
                 </Grow>
                 <Grow in={(this.state.form === 'register')}>
                     <TemplatesRegister />
                     <section className='o-television o-television__display o-container-small o-distance-m'>
-                        <h2 className='c-title-level-3 u-text-center'>
-                            <FormattedMessage id='account.register.joinUs' />
+                        <h2 className='c-title-level-4 u-text-center'>
+                            <FormattedMessage id='account.login.welcomeBack' />
                         </h2>
                         <Button
                             type='quiet'
                             size='boss'
-                            className='o-distance-m'
+                            className='c-button o-distance-m c-button--quiet c-button--boss'
                             onClick={() => {
                                 this.setState({ form: 'login' })
                             }}
