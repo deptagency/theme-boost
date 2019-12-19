@@ -5,6 +5,28 @@ import Button from 'js/patterns/atoms/buttons/button'
 import OrganismsPromobox from 'js/patterns/molecules/promobox/promobox'
 import OrganismsPromoboxWithPositioning from 'js/patterns/molecules/promobox/promobox-with-positioning'
 
+export const image = {
+    title: {
+        'en_GB@EUR': 'Dress Red Valentino multi'
+    },
+    ratio: '16:9',
+    media: {
+        _type: 'Frontastic\Backstage\MediaApiBundle\Domain\MediaApi\Media',
+        mediaId: 'cpu6utizt6fvvsvkcsk8',
+        name: 'Test',
+        tags: ['__none'],
+        file: 'https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/073328_1_large.jpg',
+        size: 2130695,
+        width: 2200,
+        height: 1237,
+        format: 'jpg',
+        created: '2019-12-19T05:00:16+00:00',
+        metaData: "_FILTERED_"
+    },
+    gravity: {
+        mode: 'faces'
+    }
+}
 
 <Meta title='4.Organisms|Boxes' />
 
@@ -25,28 +47,28 @@ A very prominent box with background to present important content
 
 <Preview withToolbar>
     <Story name='Positioning'>
-        <OrganismsPromoboxWithPositioning vertical='top' horizontal='right'>
+        <OrganismsPromoboxWithPositioning vertical='top' horizontal='right' image={image}>
             <p className='c-topic'>Jetzt für den Sommer</p>
             <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
             <Button type='primary'>
             Jetzt shoppen
             </Button>
         </OrganismsPromoboxWithPositioning>
-        <OrganismsPromoboxWithPositioning vertical='bottom' horizontal='left'>
+        <OrganismsPromoboxWithPositioning vertical='bottom' horizontal='left' image={{}}>
             <p className='c-topic'>Jetzt für den Sommer</p>
             <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
             <Button type='primary'>
           Jetzt shoppen
             </Button>
         </OrganismsPromoboxWithPositioning>
-        <OrganismsPromoboxWithPositioning vertical='middle' horizontal='center'>
+        <OrganismsPromoboxWithPositioning vertical='middle' horizontal='center' image={{}}>
             <p className='c-topic'>Jetzt für den Sommer</p>
             <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
             <Button type='primary'>
           Jetzt shoppen
             </Button>
         </OrganismsPromoboxWithPositioning>
-        <OrganismsPromoboxWithPositioning>
+        <OrganismsPromoboxWithPositioning image={{}}>
             <p className='c-topic'>Jetzt für den Sommer</p>
             <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
             <Button type='primary'>
