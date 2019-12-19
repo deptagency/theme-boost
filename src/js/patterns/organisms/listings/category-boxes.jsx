@@ -12,7 +12,7 @@ class OrganismsCategoryBoxes extends Component {
             <div>
                 <section className='o-distance'>
                     <div className='o-swiper'>
-                        <div className="o-swiper__holder">
+                        <div className='o-swiper__holder'>
                             <div className='c-chip u-aspect-ratio-1x1 o-head-up'>
                                 <div className='o-head-up__item o-head-up__item--middle'>
                                     <a href='' title='' className='c-link'>{firstLabel}</a>
