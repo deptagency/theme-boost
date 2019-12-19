@@ -6,7 +6,7 @@ export function StoreFeature ({ icon, children }) {
         <div className='c-box c-box--s u-background-color-ghost c-store-feature o-box-row__item'>
             <div className='o-block-short o-block-short--centered'>
                 <div className='o-block-short__short-item'>{icon}</div>
-                <p className='u-text-s'>{children}</p>
+                <p className='u-text-s u-text-color-900'>{children}</p>
             </div>
         </div>
     )

@@ -74,6 +74,7 @@
 @import '05-objects/objects.popup';
 @import '05-objects/objects.order-detail';
 @import '05-objects/objects.disabled-area';
+@import '05-objects/objects.box-row';
 
 // Components
 @import '06-components/components.badge';
@@ -135,6 +136,8 @@
 @import '07-utilities/utilities.background';
 
 @import '~flickity/dist/flickity';
+
+@import 'vendor/tiny-slider';
 
 // utilities form Catwalk
 @import 'utilities/utilities.transitions';

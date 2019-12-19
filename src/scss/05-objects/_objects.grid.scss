@@ -83,6 +83,10 @@
     grid-template-columns: 1fr auto;
 }
 
+.o-grid--third {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .o-grid--half {
     grid-template-columns: 1fr 1fr;
 }

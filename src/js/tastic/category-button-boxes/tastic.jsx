@@ -13,13 +13,12 @@ const CategoryButtonBoxesTastic = (props) => {
     // eslint-disable-next-line no-unused-vars
     const { firstImage, firstButtonLabel, firstButtonLink, secondImage, secondButtonLabel, secondButtonLink, thirdImage, thirdButtonLabel, thirdButtonLink } = props.data
     let options = {
-        height: '204px',
         vertical: 'middle',
         horizontal: 'center',
     }
 
     const buttonBoxes = [
-        <OrganismsPromoboxWithPositioning
+        <div><OrganismsPromoboxWithPositioning
             key='1'
             image={firstImage}
             {... options}
@@ -27,8 +26,8 @@ const CategoryButtonBoxesTastic = (props) => {
             <Button type='primary'>
                 {firstButtonLabel}
             </Button>
-        </OrganismsPromoboxWithPositioning>,
-        <OrganismsPromoboxWithPositioning
+        </OrganismsPromoboxWithPositioning></div>,
+        <div><OrganismsPromoboxWithPositioning
             key='2'
             image={secondImage}
             {... options}
@@ -36,8 +35,8 @@ const CategoryButtonBoxesTastic = (props) => {
             <Button type='primary'>
                 {secondButtonLabel}
             </Button>
-        </OrganismsPromoboxWithPositioning>,
-        <OrganismsPromoboxWithPositioning
+        </OrganismsPromoboxWithPositioning></div>,
+        <div><OrganismsPromoboxWithPositioning
             key='3'
             image={thirdImage}
             {... options}
@@ -45,7 +44,7 @@ const CategoryButtonBoxesTastic = (props) => {
             <Button type='primary'>
                 {thirdButtonLabel}
             </Button>
-        </OrganismsPromoboxWithPositioning>,
+        </OrganismsPromoboxWithPositioning></div>,
     ]
 
     if (width < 880) {

@@ -363,30 +363,6 @@
     }
 }
 
-// TASTICS
-.button-boxes-slider {
-    margin-left: -10px;
-
-    .tns-outer {
-        overflow: hidden;
-    }
-
-    .tns-slider {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .tns-item {
-        margin-right: 8px;
-    }
-}
-
-.catwalk-category-button-boxes-tastic {
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
 .font--bold-black {
     color: #000;
     font-weight: bold;
@@ -468,10 +444,6 @@
     grid-auto-flow: column;
 }
 
-.category-boxes {
-    font-size: 12px;
-}
-
 .button-login-register {
     margin: 12px 10px 3px;
     width: fill-available;
@@ -504,45 +476,3 @@
     margin: 0 10px;
     font-size: 12px;
 }
-
-.o-box-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: -$spacing-inline-m;
-  margin-top: -$spacing-stack-m;
-
-  @include breakpoint($layout-breakpoint-l) {
-    
-  }
-
-  &__item {
-    margin-left: $spacing-inline-m;
-    margin-top: $spacing-stack-m;
-  }
-}
-
-// marcel - StoreFeature
-.c-store-feature__list {
-    
-    padding: 6px 0 16px;
-    // Those negative margins are here, so
-    // the store feature items can have a
-    // spacing in between (remember: we don't know
-    // their size), but align perfectly on the left
-    // and right of the grid
-    width: calc(100% + 12px);
-    margin-left: -6px;
-    margin-right: -6px;
-
-}
-.c-store-feature {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    color: #31333e;
-    min-width: 156px;
-    max-width: 50%;
-}
-

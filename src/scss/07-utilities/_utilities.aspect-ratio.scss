@@ -29,6 +29,22 @@
   }
 }
 
+.u-aspect-ratio-21x9-medium {
+    &:before {
+        @include breakpoint($layout-breakpoint-m) {
+            @include aspect-ratio(21, 9);
+        }
+    }
+}
+
+.u-aspect-ratio-21x9-large {
+    &:before {
+        @include breakpoint($layout-breakpoint-l) {
+            @include aspect-ratio(21, 9);
+        }
+    }
+}
+
 // 1x1
 .u-aspect-ratio-1x1 {
   &:before {

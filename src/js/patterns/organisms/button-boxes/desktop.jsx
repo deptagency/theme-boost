@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { buttonBoxesDesktop } from './category-button-boxes.module.scss'
 
 const ButtonBoxesDesktop = ({ children }) => {
     return (
-        <div className={buttonBoxesDesktop}>
+        <div className='o-grid o-grid--third'>
             {children}
         </div>
     )

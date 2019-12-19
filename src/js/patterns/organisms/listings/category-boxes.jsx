@@ -11,22 +11,24 @@ class OrganismsCategoryBoxes extends Component {
         return (
             <div>
                 <section className='o-distance'>
-                    <div className='category-boxes'>
-                        <div className='c-chip u-aspect-ratio-1x1 o-head-up'>
-                            <div className='o-head-up__item o-head-up__item--middle'>
-                                <a href='' title='' className='c-link'>{firstLabel}</a>
+                    <div className='o-swiper'>
+                        <div className="o-swiper__holder">
+                            <div className='c-chip u-aspect-ratio-1x1 o-head-up'>
+                                <div className='o-head-up__item o-head-up__item--middle'>
+                                    <a href='' title='' className='c-link'>{firstLabel}</a>
+                                </div>
                             </div>
+                            <div className='c-chip u-aspect-ratio-1x1 o-head-up'>
+                                <div className='o-head-up__item o-head-up__item--middle'>
+                                    <a href='' title='' className='c-link'>{secondLabel}</a>
+                                </div>
+                            </div>
+                            <a href='' title='' className='c-chip u-aspect-ratio-1x1 o-head-up'>
+                                <div className='o-head-up__item o-head-up__item--middle'>
+                                    <span className='c-link'>{thirdLabel}</span>
+                                </div>
+                            </a>
                         </div>
-                        <div className='c-chip u-aspect-ratio-1x1 o-head-up'>
-                            <div className='o-head-up__item o-head-up__item--middle'>
-                                <a href='' title='' className='c-link'>{secondLabel}</a>
-                            </div>
-                        </div>
-                        <a href='' title='' className='c-chip u-aspect-ratio-1x1 o-head-up'>
-                            <div className='o-head-up__item o-head-up__item--middle'>
-                                <span className='c-link'>{thirdLabel}</span>
-                            </div>
-                        </a>
                     </div>
                 </section>
             </div>
