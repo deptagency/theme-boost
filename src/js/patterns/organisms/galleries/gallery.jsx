@@ -54,7 +54,7 @@ class OrganismsGallery extends Component {
                     {imagesComponents.map((imageComponent, i) => {
                         return <li key={i} className='c-gallery__thumb-bar__item is-active'>
                             {imageComponent}
-                        </li>)
+                        </li>})
                     })}
                 </ul>
             </div>
