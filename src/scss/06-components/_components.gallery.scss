@@ -1,3 +1,7 @@
+$gallery-thumb-bar-item-width: 64px !default;
+
+/// Gallery
+/// @group Gallery
 .c-gallery {
   position: relative;
 
@@ -21,30 +25,13 @@
   }
   &__spot-area {
     position: relative;
-  }
-  &__carousel {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow: auto;
-    scroll-snap-type: x mandatory;
 
-    &__item {
-      flex-shrink: 0;
-      padding-bottom: 144%;
-      position: relative;
-      scroll-snap-align: start;
+    img {
+      display: block;
       width: 100%;
-
-      img {
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-      }
     }
   }
+  
   &__thumb-bar {
     display: none;
 
@@ -63,6 +50,7 @@
     &__item {
       cursor: pointer;
       margin-left: $spacing-inline-m;
+      width: $gallery-thumb-bar-item-width;
       @include border($color-palette-white);
       @include box-shadow();
       transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -77,6 +65,10 @@
 
       &.is-active {
         border-color: $color-brand-primary-base;
+      }
+
+      img {
+        border-radius: $border-radius-base;
       }
     }
   }

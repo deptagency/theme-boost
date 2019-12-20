@@ -6,7 +6,7 @@ import Slider from '../../../patterns/templates/slider'
 
 const OrganismsSizeSwiper = ({ sizes }) => {
     return (
-        <div className='o-swiper display-grid'>
+      <div className='o-swiper'>
             <Slider options={{ fixedWidth: '150px' }}>
                 {sizes.map((c, i) => {
                   return <button key={i} className='o-swiper__item c-chip'>{c}</button>

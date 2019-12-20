@@ -18,6 +18,21 @@
   }
 }
 
+.o-product__details {
+  display: grid;
+  row-gap: $spacing-stack-m;
+
+  @include breakpoint($layout-breakpoint-l) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__offset {
+    @include breakpoint($layout-breakpoint-l) {
+      flex: end;
+    }
+  }
+}
+
 .o-product__body {
   display: flex;
   flex-direction: column;

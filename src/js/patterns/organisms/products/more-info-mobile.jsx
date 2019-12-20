@@ -17,7 +17,7 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
     const [isReviewsFocused, setIsReviewsFocused] = useState(false)
 
     return (
-        <nav role='navigation' className={`${moreInfoMobile} o-distance-m o-prevent-space`}>
+        <nav role='navigation' className={`${moreInfoMobile} o-distance-m`}>
             <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
                 <Collapsible

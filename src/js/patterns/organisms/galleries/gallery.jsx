@@ -43,8 +43,8 @@ class OrganismsGallery extends Component {
                     <Slider options={{ items: 1, responsive: {} }}>
                         {images.map((url, i) => {
                             return (
-                                <div key={i} className='g-image'>
-                                    <img style={{ maxHeight: '600px', width: 'auto', display: 'block', margin: '0 auto' }} src={url} alt='' />
+                                <div key={i}>
+                                    <img src={url} alt='' />
                                 </div>
                             )
                         })}
@@ -53,7 +53,7 @@ class OrganismsGallery extends Component {
                 <ul className='c-gallery__thumb-bar'>
                     {images.map((url, i) => {
                         return <li key={i} className='c-gallery__thumb-bar__item is-active'>
-                            <img style={{ maxWidth: '64px' }} src={url} alt='' />
+                            <img src={url} alt='' />
                         </li>
                     })}
                 </ul>
