@@ -1,0 +1,27 @@
+.loginMobile {
+    display: none;
+}
+
+.loginBorder {
+    margin-left: 0px !important;
+}
+
+.loginTitleDesktop {
+    display: inherit;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.loginMaxWidth {
+    max-width: 620px !important;
+}
+
+@media (max-width: 766px) {
+    .loginMobile {
+        display: inherit;
+    }
+    .loginTitleDesktop {
+        display: none;
+    }
+}

@@ -3,8 +3,10 @@ import Grow from 'frontastic-catwalk/src/js/component/grow'
 import TemplatesRegister from '../../../patterns/templates/register'
 import TemplatesLogin from '../../../patterns/templates/login'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
+import classnames from 'classnames'
 import Button from '../../../patterns/atoms/buttons/button'
 import { FormattedMessage } from 'react-intl'
+import { buttonMaxWidth } from './account-access.module.scss'
 
 class AccountAccessForms extends Component {
     constructor (props) {
@@ -20,9 +22,9 @@ class AccountAccessForms extends Component {
             <div className='o-layout'>
                 <Grow in={(this.state.form === 'login')}>
                     <TemplatesLogin />
-                    <section className='o-television o-television__display o-container-small o-distance-m'>
-                        <h2 className='c-title-level-3 u-text-center'>
-                            <FormattedMessage id='account.freeAccount' />
+                    <section className={classnames(buttonMaxWidth, 'o-television o-television__display o-container-small o-distance-m')}>
+                        <h2 className='c-title-level-4 u-text-center'>
+                            <FormattedMessage id='account.newHere' />
                         </h2>
                         <Button
                             type='quiet'
@@ -32,20 +34,20 @@ class AccountAccessForms extends Component {
                                 this.setState({ form: 'register' })
                             }}
                         >
-                            <FormattedMessage id='account.newHere' />
+                            <FormattedMessage id='account.register.register' />
                         </Button>
                     </section>
                 </Grow>
                 <Grow in={(this.state.form === 'register')}>
                     <TemplatesRegister />
-                    <section className='o-television o-television__display o-container-small o-distance-m'>
-                        <h2 className='c-title-level-3 u-text-center'>
-                            <FormattedMessage id='account.register.joinUs' />
+                    <section className={classnames(buttonMaxWidth, 'o-television o-television__display o-container-small o-distance-m')}>
+                        <h2 className='c-title-level-4 u-text-center'>
+                            <FormattedMessage id='account.login.welcomeBack' />
                         </h2>
                         <Button
                             type='quiet'
                             size='boss'
-                            className='o-distance-m'
+                            className='c-button o-distance-m c-button--quiet c-button--boss'
                             onClick={() => {
                                 this.setState({ form: 'login' })
                             }}
