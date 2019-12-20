@@ -6,7 +6,7 @@ import Slider from '../../../patterns/templates/slider'
 
 class OrganismsGallery extends Component {
     render () {
-        const { images, addToWishlist } = this.props
+        const { imagesComponents, addToWishlist } = this.props
 
         return (<div>
             <div className='c-gallery'>
@@ -41,20 +41,20 @@ class OrganismsGallery extends Component {
                         </button>
                     </div> */}
                     <Slider options={{ items: 1, responsive: {} }}>
-                        {images.map((url, i) => {
+                        {imagesComponents.map((imageComponent, i) => {
                             return (
                                 <div key={i}>
-                                    <img src={url} alt='' />
+                                    {imageComponent}
                                 </div>
                             )
                         })}
                     </Slider>
                 </div>
                 <ul className='c-gallery-thumb-bar o-head-up__item o-head-up__item--bottom-left'>
-                    {images.map((url, i) => {
-                        return <li key={i} className='c-gallery-thumb-bar__item is-active u-box-shadow'>
-                            <img src={url} alt='' width='64px' />
-                        </li>
+                    {imagesComponents.map((imageComponent, i) => {
+                        return <li key={i} className='c-gallery__thumb-bar__item is-active'>
+                            {imageComponent}
+                        </li>)
                     })}
                 </ul>
             </div>
@@ -63,12 +63,12 @@ class OrganismsGallery extends Component {
 }
 
 OrganismsGallery.propTypes = {
-    images: PropTypes.array.isRequired,
+    imagesComponents: PropTypes.arrayOf(PropTypes.node).isRequired,
     addToWishlist: PropTypes.func,
 }
 
 OrganismsGallery.defaultProps = {
-    images: [],
+    imagesComponents: [],
     addToWishlist: () => {},
 }
 

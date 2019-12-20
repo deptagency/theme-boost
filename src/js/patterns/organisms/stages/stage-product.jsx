@@ -13,7 +13,12 @@ class OrganismsProductStage extends Component {
         return (
             <div className='o-media-block'>
                 <div className='o-media-block__asset'>
-                    <OrganismsGallery images={images} addToWishlist={addToWishlist} />
+                    <OrganismsGallery
+                        imagesComponents={(images || []).map((image) => {
+                            return (<img src={image} alt='' />)
+                        })}
+                        addToWishlist={addToWishlist}
+                    />
                 </div>
                 <div className='o-media-block__body'>
                     <div className='o-product__header o-product__header--centered'>
