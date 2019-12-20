@@ -1,0 +1,38 @@
+.c-tabs__list {
+  @include list-reset();
+  display: flex;
+  flex-direction: row;
+
+  &__item {
+    cursor: pointer;
+    margin-left: $spacing-inline-l;
+    position: relative;
+
+    &:before {
+      content: '';
+      bottom: -4px;
+      display: none;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      background: $color-brand-primary-base;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      color: $color-brand-primary-base;
+    }
+
+    &.is-active {
+      color: $color-brand-primary-base;
+
+      &:before {
+        display: block;
+      }
+    }
+  }
+}

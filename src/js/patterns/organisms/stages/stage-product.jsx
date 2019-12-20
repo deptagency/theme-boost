@@ -25,13 +25,15 @@ class OrganismsProductStage extends Component {
                     </div>
                     <div className='o-product__details o-distance-m'>
                         <div className='o-product__price'>
-                            <p className='u-text-color-danger'>{discountedPrice || price}</p>
+                            <p className='u-text-color-danger'>{ discountedPrice || price }</p>
                             <span className='u-text-s u-text-color-quiet o-product__price__info'> inkl. 19% MwSt.</span>
                         </div>
-                        {discountedPrice && {price}}
+                        {
+                            discountedPrice && { price }
+                        }
 
                         <div className='o-product__details__offset'>
-                            <MoleculesRating />
+                            <MoleculesRating counterMessage='true' />
                         </div>
                     </div>
 
@@ -85,15 +87,15 @@ class OrganismsProductStage extends Component {
                         <div className='o-distance-l'>
                             {addToCartButton}
                             <select name='size' id=''>
-                              <option value=''>Select Size</option>
-                              <option value=''>36</option>
-                              <option value=''>38</option>
+                                <option value=''>Select Size</option>
+                                <option value=''>36</option>
+                                <option value=''>38</option>
                             </select>
                             <div className='o-buttonbar o-distance-m'>
-                              <button className='c-button c-button--primary o-buttonbar__item o-buttonbar__item--full'>Add to Cart</button>
-                              <button className='c-button c-button--quiet c-button--single-icon o-buttonbar__item'>
-                                <Wishlist className='c-icon c-icon--m' />
-                              </button>
+                                <button className='c-button c-button--primary o-buttonbar__item o-buttonbar__item--full'>Add to Cart</button>
+                                <button className='c-button c-button--quiet c-button--single-icon o-buttonbar__item'>
+                                    <Wishlist className='c-icon c-icon--m' />
+                                </button>
                             </div>
                             <div className='o-distance-m'>
                                 <OrganismsExpressDelivery />

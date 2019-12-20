@@ -7,24 +7,6 @@ import MoleculesStaticRating from '../../molecules/ratings/static-rating'
 import { ReactComponent as YellowTick } from '../../../../icons/yellow-tick.svg'
 import { ReactComponent as SmallTruck } from '../../../../icons/truck-small.svg'
 
-/* eslint-disable camelcase */
-import {
-    moreInfoDesktop,
-    moreInfoDesktop__tabs,
-    moreInfoDesktop__tabs_selected,
-    moreInfoDesktop__tabList,
-    moreInfoDesktop__tab,
-    moreInfoDesktop__selected,
-    marginRight10, marginRight16,
-    moreInfoDesktop_tab_panel,
-    moreInfoDesktop_span_formatted,
-    moreInfoDesktop_light_text,
-    reviewOverview,
-    precent,
-    minContentWidth,
-} from './more-info.module.scss'
-/* eslint-disable enable */
-
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 import ReviewsList from './reviews-list'
@@ -35,106 +17,112 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
     const [selectedTab, setSelectedTab] = useState(0)
 
     return (
-        <div className={`${moreInfoDesktop} o-distance-xl`}>
-            <Tabs className={moreInfoDesktop__tabs} selectedTabClassName={moreInfoDesktop__tabs_selected}>
-                <TabList className={moreInfoDesktop__tabList}>
-                    <Tab className={moreInfoDesktop__tab}>
-                        <h3 className={classnames({
-                                'c-title-level-4 c-referal__body': true,
-                                [moreInfoDesktop__selected]: selectedTab === 0,
+        <div className='u-hidden-until-medium'>
+            <div className='o-with-sidebar o-distance-xl' style={{ minHeight: '440px' }}>
+                <Tabs className='c-box c-box--l c-tabs u-background-color-default' selectedTabClassName='is-active'>
+                    <TabList className='c-tabs__list'>
+                        <Tab className='c-tabs__list__item'>
+                            <h3 className={classnames({
+                                    'c-title-level-4': true,
+                                    'is-active': selectedTab === 0,
+                                })}
+                                onClick={() => { setSelectedTab(0) }}
+                            >
+                                <FormattedMessage id='product.description' />
+                            </h3>
+                        </Tab>
+                        <Tab className='c-tabs__list__item'>
+                            <h3 className={classnames({
+                                'c-title-level-4': true,
+                                'is-active': selectedTab === 1,
                             })}
-                            onClick={() => { setSelectedTab(0) }}
-                        >
+                                onClick={() => { setSelectedTab(1) }}
+                            >
+                                <FormattedMessage id='product.shipping' />
+                            </h3>
+                        </Tab>
+                        <Tab className='c-tabs__list__item'>
+                            <h3 className={classnames({
+                                'c-title-level-4': true,
+                                'is-active': selectedTab === 2,
+                            })}
+                                onClick={() => { setSelectedTab(2) }}
+                            >
+                                <FormattedMessage id='product.reviewsWithCount' values={{ count: 7 }} />
+                            </h3>
+                        </Tab>
+                    </TabList>
+
+                    <TabPanel className='o-distance-l'>
+                        <h3 className='c-title'>
                             <FormattedMessage id='product.description' />
                         </h3>
-                    </Tab>
-                    <Tab className={moreInfoDesktop__tab}>
-                        <h3 className={classnames({
-                            'c-title-level-4 c-referal__body': true,
-                            [moreInfoDesktop__selected]: selectedTab === 1,
-                        })}
-                            onClick={() => { setSelectedTab(1) }}
-                        >
-                            <FormattedMessage id='product.shipping' />
-                        </h3>
-                    </Tab>
-                    <Tab className={moreInfoDesktop__tab}>
-                        <h3 className={classnames({
-                            'c-title-level-4 c-referal__body': true,
-                            [moreInfoDesktop__selected]: selectedTab === 2,
-                        })}
-                            onClick={() => { setSelectedTab(2) }}
-                        >
-                            <FormattedMessage id='product.reviewsWithCount' values={{ count: 7 }} />
-                        </h3>
-                    </Tab>
-                </TabList>
-
-                <TabPanel className={moreInfoDesktop_tab_panel}>
-                    <h3 className='c-title-level-4 c-referal__body'>
-                        <FormattedMessage id='product.description' />
-                    </h3>
-                    {attributes && <OrganismsDetailsDesktop attributes={attributes} />}
-                </TabPanel>
-                <TabPanel className={moreInfoDesktop_tab_panel}>
-                    <div>
-                        <h3 className='c-title-level-4 c-referal__body'>
-                            <FormattedMessage id='product.shipping' />
-                        </h3>
-                        <div className='o-list-bare'>
-                            <div className='o-list-bare__item o-block-short o-block-short--centered'>
-                                <YellowTick className={marginRight10} />
-                                <div className={moreInfoDesktop_light_text}>
-                                    <FormattedMessage id='product.freeShipping' />
+                        <div className='o-distance-m'>
+                            { attributes && <OrganismsDetailsDesktop attributes={attributes} /> }
+                        </div>
+                    </TabPanel>
+                    <TabPanel className='o-distance-l'>
+                        <div>
+                            <h3 className='c-title'>
+                                <FormattedMessage id='product.shipping' />
+                            </h3>
+                            <div className='o-distance-m'>
+                                <div className='o-list-bare'>
+                                    <div className='o-list-bare__item'>
+                                        <div className='o-block-short o-block-short--centered'>
+                                            <YellowTick className='o-block-short__short-item' />
+                                            <div>
+                                                <FormattedMessage id='product.freeShipping' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='o-list-bare__item'>
+                                        <div className='o-block-short o-block-short--centered'>
+                                            <YellowTick className='o-block-short__short-item' />
+                                            <div>
+                                                <FormattedMessage id='product.returnPolicy100days' />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className='o-list-bare__item o-block-short o-block-short--centered'>
-                                <YellowTick className={marginRight10} />
-                                <div className={moreInfoDesktop_light_text}>
-                                    <FormattedMessage id='product.returnPolicy100days' />
-                                </div>
+                            <div className='o-block-short o-block-short--medium o-distance-l'>
+                                <SmallTruck className='c-icon c-icon--m o-block-short__short-item' />
+                                <p className='o-block-short__body'>
+                                    <p><FormattedMessage id='product.standardDelivery.title' /></p>
+                                    <p><FormattedMessage id='product.standardDelivery.message' /></p>
+                                </p>
                             </div>
                         </div>
-                        <div className='o-block-short o-distance-l'>
-                            <SmallTruck className={marginRight16} />
-                            <div className='o-block-short__body'>
-                                <p className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.standardDelivery.title' /></p>
-                                <p className={moreInfoDesktop_light_text}><FormattedMessage id='product.standardDelivery.message' /></p>
+                    </TabPanel>
+                    <TabPanel className='o-distance-l'>
+                        <h3 className='c-title'><FormattedMessage id='product.reviews' /></h3>
+                        <div className='o-box-center o-flex'>
+                            <div className='o-distance-xl o-block-short o-block-short--medium o-block-short--centered'>
+                                <h4 className='c-title o-block-short__short-item'>4,2</h4>
+                                <MoleculesStaticRating outerClassName='o-block-short__body' rating={3} reviewsCount={7} />
                             </div>
                         </div>
-                    </div>
-                </TabPanel>
-                <TabPanel className={moreInfoDesktop_tab_panel}>
-                    <h3><FormattedMessage id='product.reviews' /></h3>
 
-                    <div className={reviewOverview}>
-                        <div className={`${precent} ${minContentWidth}`}>4,2</div>
-                        <MoleculesStaticRating outerClassName={minContentWidth} rating={3} reviewsCount={7} />
-                    </div>
+                    </TabPanel>
+                </Tabs>
 
-                </TabPanel>
-            </Tabs>
-
-            {selectedTab === 2 ?
-                <Scrollbars autoHide style={{
-                    height: 'calc(100% - 48px)',
-                    minHeight: '340px',
-                    margin: '0 30px 30px',
-                    width: 'inherit',
-                }}>
-                    <ReviewsList />
-                </Scrollbars>
-                :
-                <div
-                    style={{
-                        backgroundImage: `url(${images[0]})`,
-                        backgroundSize: 'contain',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center',
-                        width: '100%',
-                    }}
-                />
-            }
+                {selectedTab === 2 ?
+                    <Scrollbars autoHide>
+                        <ReviewsList />
+                    </Scrollbars>
+                    :
+                    <div
+                        style={{
+                            backgroundImage: `url(${images[0]})`,
+                            backgroundSize: 'contain',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                            width: '100%',
+                        }}
+                    />
+                }
+            </div>
         </div>
     )
 }

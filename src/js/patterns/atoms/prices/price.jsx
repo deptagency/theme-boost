@@ -36,14 +36,14 @@ AtomsPrice.propTypes = {
     currency: PropTypes.string,
     normal: PropTypes.bool,
     old: PropTypes.bool,
-    large: PropTypes.bool
+    large: PropTypes.bool,
 }
 
 AtomsPrice.defaultProps = {
     currency: null,
     old: false,
     normal: false,
-    large: false
+    large: false,
 }
 
 // These are just default props for the pattern library

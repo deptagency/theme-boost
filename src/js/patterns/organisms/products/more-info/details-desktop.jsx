@@ -4,14 +4,6 @@ import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-/* eslint-disable camelcase */
-import {
-    moreInfoDesktop_light_text,
-    moreInfoDesktop_p_formatted,
-    moreInfoDesktop_span_formatted,
-} from '../more-info.module.scss'
-/* eslint-disable camelcase */
-
 /**
  * Default implementation of attribute rendering on product detail pages.
  *
@@ -19,18 +11,24 @@ import {
  */
 const OrganismsDetailsDesktop = ({ attributes: { style, matrixId } }) => {
     return (
-        <>
-            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.materialOuterFabric' /></span> 100% <FormattedMessage id='product.viscose' /></p>
-            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.lining' /></span> 100% <FormattedMessage id='product.viscose' /></p>
+        <div>
+            <dl className='o-detaillist'>
+                <dt className='u-text-color-quiet'><FormattedMessage id='product.materialOuterFabric' /></dt>
+                <dd className='u-text-strong'>100% <FormattedMessage id='product.viscose' /></dd>
+                <dt className='u-text-color-quiet'><FormattedMessage id='product.lining' /></dt>
+                <dd className='u-text-strong'>100% <FormattedMessage id='product.viscose' /></dd>
+            </dl>
+            <h3 className='c-title-level-3 o-distance-l'><FormattedMessage id='product.moreAboutThisProduct' /></h3>
+            <dl className='o-detaillist o-distance-m'>
+                <dt className='u-text-color-quiet'><FormattedMessage id='product.cut' /></dt>
+                <dd className='u-text-strong'>100% <FormattedMessage id='product.viscose' /></dd>
+                <dt className='u-text-color-quiet'><FormattedMessage id='product.clasp' /></dt>
+                <dd className='u-text-strong'><FormattedMessage id='product.lacing' /></dd>
+                {(style && style.label) && <><dt className='u-text-color-quiet'><FormattedMessage id='product.style' /></dt> <dd className='u-text-strong'>{style.label}</dd></> }
+                {matrixId && <><dt className='u-text-color-quiet'><FormattedMessage id='product.itemNumber' /></dt> <dd className='u-text-strong'>{matrixId} </dd></>}
 
-            <p className={moreInfoDesktop_p_formatted}><FormattedMessage id='product.moreAboutThisProduct' /></p>
-
-            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.cut' /></span> 100% <FormattedMessage id='product.viscose' /></p>
-            <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.clasp' /></span> <FormattedMessage id='product.lacing' /></p>
-            {(style && style.label) && <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.style' /></span> {style.label} </p>}
-            {matrixId && <p className={moreInfoDesktop_light_text}><span className={moreInfoDesktop_span_formatted}><FormattedMessage id='product.itemNumber' /></span> {matrixId} </p>}
-
-        </>
+            </dl>
+        </div>
     )
 }
 

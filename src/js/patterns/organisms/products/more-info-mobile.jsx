@@ -8,7 +8,6 @@ import { ReactComponent as SmallTruck } from '../../../../icons/truck-small.svg'
 import Collapsible from 'react-collapsible'
 import ReviewsPanel from '../../organisms/products/panels/reviews-panel'
 import OrganismsDetailsMobile from './more-info/details-mobile'
-import { moreInfoMobile, marginRight10, marginRight16 } from './more-info.module.scss'
 
 const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
     const [reviewsOpen, setReviewsOpen] = useState(false)
@@ -17,7 +16,7 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
     const [isReviewsFocused, setIsReviewsFocused] = useState(false)
 
     return (
-        <nav role='navigation' className={`${moreInfoMobile} o-distance-m`}>
+        <nav role='navigation' className='o-distance-m u-hidden-medium-up'>
             <span className='c-divider o-distance-m' />
             <div className='o-distance-m'>
                 <Collapsible
@@ -67,21 +66,21 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
                 >
                     <div className='o-distance'>
                         <div className='o-list-bare'>
-                            <div className='o-list-bare__item o-block-short o-block-short--centered'>
-                                <YellowTick className={marginRight10} />
+                            <div className='o-list-bare__item o-block-short o-block-short--medium o-block-short--centered'>
+                                <YellowTick className='o-block-short__short-item' />
                                 <div className='o-block-short__body u-text-s'>
                                     <FormattedMessage id='product.freeShipping' />
                                 </div>
                             </div>
                             <div className='o-list-bare__item o-block-short o-block-short--centered'>
-                                <YellowTick className={marginRight10} />
+                                <YellowTick className='o-block-short__short-item' />
                                 <div className='o-block-short__body u-text-s'>
                                     <FormattedMessage id='product.returnPolicy100days' />
                                 </div>
                             </div>
                         </div>
-                        <div className='o-block-short o-distance-m'>
-                            <SmallTruck className={marginRight16} />
+                        <div className='o-block-short o-block-short--medium o-distance-m'>
+                            <SmallTruck className='c-icon c-icon--m o-block-short__short-item' />
                             <div className='o-block-short__body'>
                                 <p className='u-text-strong'><FormattedMessage id='product.standardDelivery.title' /></p>
                                 <p className='o-distance-xs'><FormattedMessage id='product.standardDelivery.message' />
