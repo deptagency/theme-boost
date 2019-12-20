@@ -60,7 +60,7 @@ function MoleculesMobileNavigation ({ open, topCategories, onClose, callToAction
             >
                 {/** Header (background image with tab nav) */}
                 <div
-                    className='c-mobile-navigation__header'
+                    className='c-mobile-navigation__header o-head-up'
                     ref={ref}
                     style={{
                         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImageUrl})`,
@@ -83,7 +83,7 @@ function MoleculesMobileNavigation ({ open, topCategories, onClose, callToAction
                 {/** Optional Call to Action Button.
                         Example: Sign up, My account, ...
                  */}
-                {callToAction && <div className='c-mobile-navigation__cta-wrapper'>{callToAction}</div>}
+                {callToAction && <div className='c-mobile-navigation__cta-wrapper o-distance-m o-prevent-space'>{callToAction}</div>}
 
                 {/** Scrollable menu wrapper + MobileNavTree */}
                 <div

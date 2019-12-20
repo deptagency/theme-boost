@@ -5,15 +5,15 @@ import { FormattedMessage } from 'react-intl'
 import { ReactComponent as FullSmallStar } from '../../../../icons/full-small-star.svg'
 import { ReactComponent as EmptySmallStar } from '../../../../icons/empty-small-star.svg'
 
-const MoleculesRating = ({ outerClassName, className }) => {
+const MoleculesRating = ({ className }) => {
     return (
-        <div className={outerClassName}>
-            <div className={`c-rating o-flex o-flex--center ${className}`}>
+        <div>
+            <div className='c-rating o-flex o-flex--center'>
                 {[1, 2, 3, 4, 5].map((s, i) => {
                     return i < 3 ? <FullSmallStar key={i} /> : <EmptySmallStar key={i} />
                 })}
             </div>
-            <div className='u-text-s t-text-quiet padding-left--8'>
+            <div className='u-text-s t-text-quiet'>
                 <FormattedMessage id='product.reviewsWithCount' values={{ count: 7 }} />
             </div>
 
@@ -22,12 +22,12 @@ const MoleculesRating = ({ outerClassName, className }) => {
 }
 
 MoleculesRating.propTypes = {
-    outerClassName: PropTypes.string,
+    // outerClassName: PropTypes.string,
     className: PropTypes.string,
 }
 
 MoleculesRating.defaultProps = {
-    outerClassName: '',
+    // outerClassName: '',
     className: '',
 }
 

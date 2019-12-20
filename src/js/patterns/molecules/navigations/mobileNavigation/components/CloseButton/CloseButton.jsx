@@ -9,8 +9,8 @@ import { ReactComponent as CloseX } from './../../../../../../../icons/close-x-m
 */
 export function CloseButton ({ onClick }) {
     return (
-        <button className='c-mobile-navigation__header-close-button' onClick={onClick}>
-            <CloseX />
+        <button className='o-head-up__item o-head-up__item--top-right' onClick={onClick}>
+            <CloseX className='c-icon' />
         </button>
     )
 }

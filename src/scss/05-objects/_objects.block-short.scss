@@ -20,3 +20,11 @@
 .o-block-short--centered {
   align-items: center;
 }
+
+/// @object Block Short 
+/// @variation Large
+.o-block-short--medium {
+  .o-block-short__short-item {
+    margin-right: $spacing-inline-m;
+  }
+}

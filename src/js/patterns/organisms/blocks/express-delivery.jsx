@@ -4,10 +4,10 @@ import { ReactComponent as DeliveryTruck } from '../../../../icons/delivery-truc
 
 const OrganismsExpressDelivery = () => {
     return (
-        <div className='o-block-short margin-12 padding-top--10'>
-            <DeliveryTruck className='c-icon c-icon--l t-text-quiet' />
+        <div className='o-block-short o-block-short--medium'>
+            <DeliveryTruck className='o-block-short__short-item c-icon c-icon--l t-text-quiet' />
 
-            <div className='padding-left--16'>
+            <div>
                 <strong className='u-text-strong'><FormattedMessage id='order.deliveryFeatures.title' /></strong>
                 <p className='u-text-small'><FormattedMessage id='order.deliveryFeatures.message' /></p>
             </div>

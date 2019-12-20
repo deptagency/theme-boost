@@ -14,7 +14,7 @@ $badge-spot-background-color: $color-brand-secondary-base !default;
 /// @group badges
 .c-badge {
   display: inline-block;
-  padding: $spacing-squish-m;
+  padding: $spacing-inset-xs $spacing-inset-m;
   vertical-align: top;
   @include border(transparent);
   background-color: $badge-background-color;

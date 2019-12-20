@@ -373,20 +373,7 @@
     width: 100%;
 }
 
-.o-swiper {
-    .tns-outer {
-        .tns-slider {
-            //width: 100% !important;
-        }
-    }
-}
-
 //one line css
-
-.display-grid {
-    display: grid;
-}
-
 .grid-justify-items--center {
     justify-items: center;
 }
@@ -439,40 +426,10 @@
     user-select: none; /* Standard syntax */
 }
 
-.size-swiper {
-    display: grid;
-    grid-auto-flow: column;
-}
-
-.button-login-register {
-    margin: 12px 10px 3px;
-    width: fill-available;
-    width: -webkit-fill-available;
-    width: -moz-available;
-}
-
-.profile-greet {
-    margin: 0 10px;
-    font-size: 12px;
-}
-
 .more-info-priduct--selected {
     span {
         color: #3a42f1;
         border-bottom: 2px solid #3a42f1;
         font-weight: bold;
     }
-}
-// marcel - general
-
-.button-login-register {
-    margin: 12px 10px 3px;
-    width: fill-available;
-    width: -webkit-fill-available;
-    width: -moz-available;
-}
-
-.profile-greet {
-    margin: 0 10px;
-    font-size: 12px;
 }

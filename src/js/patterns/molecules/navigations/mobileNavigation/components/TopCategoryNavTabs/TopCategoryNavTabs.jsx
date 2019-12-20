@@ -5,7 +5,7 @@ import { topCategoryType } from './../../types'
 
 const TabItem = ({ item, onClick, isActive }) => {
     return (
-        <li className={`c-top-category-tab-nav__item${isActive ? ' c-gender-tab-nav__item--active' : ''}`}>
+        <li className={`c-top-category-tab-nav__item${isActive ? ' is-active' : ''}`}>
             <a onClick={onClick} title='Frauen'>
                 {item.name}
             </a>
@@ -20,7 +20,7 @@ TabItem.propTypes = {
 
 export const TopCategoryNavTabs = ({ items, onCategorySelect, activeId = 0 }) => {
     return (
-        <ul className='c-top-category-tab-nav'>
+        <ul className='c-top-category-tab-nav o-head-up__item o-head-up__item--bottom'>
             {items &&
                 items.map((item, i) => {
                     if (!item.tree) {

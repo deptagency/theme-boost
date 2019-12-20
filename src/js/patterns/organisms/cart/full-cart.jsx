@@ -4,17 +4,15 @@ import PropTypes from 'prop-types'
 import MoleculesCartListing from '../../molecules/cart/cart-listing'
 import MoleculesCartSummary from '../../molecules/cart/cart-summary'
 
-import {
-    cartDesktop,
-    cartListing,
-    cartSummaryDesktop,
-} from './cart.module.scss'
-
 const OrganismsFullCart = ({ cartItems, sum }) => {
     return (
-        <div className={`${cartDesktop} cartDesktop o-distance-s`}>
-            <MoleculesCartListing outerClassName={`${cartListing} cartListing`} cartItems={cartItems} />
-            <MoleculesCartSummary outerClassName={`${cartSummaryDesktop} cartSummaryDesktop`} sum={sum} />
+        <div className='o-with-sidebar o-distance-s'>
+            <div className='o-with-sidebar__main'>
+                <MoleculesCartListing cartItems={cartItems} />
+            </div>
+            <div className='o-with-sidebar__sidebar is-sticky'>
+                <MoleculesCartSummary outerClassName='c-box u-background-color-quiet' sum={sum} />
+            </div>
         </div>
     )
 }

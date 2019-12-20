@@ -51,4 +51,9 @@ $head-up-spacing-inner: $spacing-inset-m !default;
     top: 50%;
     transform: translate(-50%, -50%);
   }
+  &__item--bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 }

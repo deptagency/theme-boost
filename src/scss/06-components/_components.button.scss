@@ -43,10 +43,6 @@ $button-control-size: 48px !default;
   transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.c-button--full-width {
-  width: 100%;
-}
-
 .c-button__icon {
   margin-left: $spacing-inline-s;
   vertical-align: -4px;
@@ -156,4 +152,10 @@ $button-control-size: 48px !default;
     height: 28px;
     width: 28px;
   }
+}
+
+/// Single Icon Button
+/// @group Buttons
+.c-button--single-icon {
+  line-height: 0;
 }
