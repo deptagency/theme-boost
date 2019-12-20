@@ -8,6 +8,10 @@
     display: none;
 }
 
+.registerMaxWidth {
+    max-width: 620px !important;
+}
+
 @media (max-width: 766px) {
     .registerMobile {
         display: inherit;

@@ -13,6 +13,10 @@
     text-align: center;
 }
 
+.loginMaxWidth {
+    max-width: 620px !important;
+}
+
 @media (max-width: 766px) {
     .loginMobile {
         display: inherit;

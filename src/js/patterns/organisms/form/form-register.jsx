@@ -5,9 +5,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import app from 'frontastic-catwalk/src/js/app/app'
 import classnames from 'classnames'
 import Button from '../../atoms/buttons/button'
-import { registerCheckBoxFont,
-    registerCheckBoxMarg,
-    registerBorder } from './form-register.module.scss'
+import { registerCheckBoxFont } from './form-register.module.scss'
 
 class OrganismsFormRegister extends Component {
     constructor (props) {
@@ -142,7 +140,7 @@ class OrganismsFormRegister extends Component {
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <div className='o-block-short'>
                                 <div className='o-block-short__short-item'>
-                                    <div className={`${registerCheckBoxMarg} c-form-checkbox`}>
+                                    <div className='c-form-checkbox'>
                                         <input
                                             type='checkbox'
                                             checked={this.state.register_tos}
@@ -175,7 +173,7 @@ class OrganismsFormRegister extends Component {
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <div className='o-block-short'>
                                 <div className='o-block-short__short-item'>
-                                    <div className={`${registerCheckBoxMarg} c-form-checkbox`}>
+                                    <div className='c-form-checkbox'>
                                         <input
                                             type='checkbox'
                                             checked={this.state.register_inform}
@@ -228,7 +226,7 @@ class OrganismsFormRegister extends Component {
                     >
                         <FormattedMessage id='account.register.registerNow' />
                     </Button>
-                    <div className={`${registerBorder} o-television__display__boundless c-divider c-divider--break o-distance-m`} />
+                    <div className='o-television__display__boundless c-divider c-divider--break o-distance-m' />
                 </fieldset>
             </form>
         )

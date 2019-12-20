@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import app from 'frontastic-catwalk/src/js/app/app'
 import { FormattedMessage } from 'react-intl'
-
+import classnames from 'classnames'
 import Button from '../atoms/buttons/button'
 
 import OrganismsPageHeader from '../organisms/base/header-page'
-import { loginBorder, loginTitleDesktop, loginMobile } from './login.module.scss'
+import {
+    loginBorder,
+    loginTitleDesktop,
+    loginMobile,
+    loginMaxWidth,
+} from './login.module.scss'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class TemplatesLogin extends Component {
@@ -20,7 +25,7 @@ class TemplatesLogin extends Component {
 
     render () {
         return (
-            <div className='o-television o-television__display o-container-small'>
+            <div className={classnames(loginMaxWidth, 'o-television o-television__display o-container-small')}>
                 <div className={loginMobile}>
                     <OrganismsPageHeader
                         title={<FormattedMessage id='account.login.welcomeBack' />}
@@ -72,7 +77,7 @@ class TemplatesLogin extends Component {
                 >
                     <FormattedMessage id='account.login.login' />
                 </Button>
-                <div className={`${loginBorder} o-television__display__boundless c-divider c-divider--break o-distance-m`} />
+                <div className={classnames(loginBorder, 'o-television__display__boundless c-divider c-divider--break o-distance-m')} />
             </div>
         )
     }
