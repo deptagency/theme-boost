@@ -16,25 +16,19 @@ class OrganismsProductStage extends Component {
                     <OrganismsGallery images={images} addToWishlist={addToWishlist} />
                 </div>
                 <div className='o-media-block__body'>
-                    <div className='o-product__header'>
-                        <h1 className='c-title-level-3 o-product__header__large-column'>{name}</h1>
+                    <div className='o-product__header o-product__header--centered'>
+                        <h1 className='c-title o-product__header__large-column'>{name}</h1>
 
                         <div className='o-product__header__offset'>
                             <span className='c-badge c-badge--danger'>Sale</span>
                         </div>
                     </div>
-                    <div className='o-product__details'>
-                        <div className='o-flex'>
-                            <div className='o-flex__item'>
-                                <ul className='o-list-bare o-list-bare--tighty'>
-                                    <li className='o-list-bare__item'>
-                                        <span className='t-text-danger u-text-m'>{discountedPrice || price}</span>
-                                        <span className='u-text-s t-text-quiet'> inkl. 19% MwSt.</span>
-                                    </li>
-                                    {discountedPrice && <li className='o-list-bare__item'>{price}</li>}
-                                </ul>
-                            </div>
+                    <div className='o-product__details o-distance-m'>
+                        <div className='o-product__price'>
+                            <p className='u-text-color-danger'>{discountedPrice || price}</p>
+                            <span className='u-text-s u-text-color-quiet o-product__price__info'> inkl. 19% MwSt.</span>
                         </div>
+                        {discountedPrice && {price}}
 
                         <div className='o-product__details__offset'>
                             <MoleculesRating />
@@ -73,11 +67,27 @@ class OrganismsProductStage extends Component {
 
                     <div className='u-hidden-until-medium'>
                         <div className='o-distance-l'>
+                            <p className='c-title-level-3 u-text-normal'>Farbe: <span className='u-text-strong'>Olive</span></p>
+                            <div className='o-distance-m'>
+                                <div className='c-gallery-thumb-bar'>
+                                    <div className='c-gallery-thumb-bar__item is-active'>
+                                        <img src='https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/073319_1_medium.jpg' alt='' />
+                                    </div>
+                                    <div className='c-gallery-thumb-bar__item'>
+                                        <img src='https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/073319_1_medium.jpg' alt='' />
+                                    </div>
+                                    <div className='c-gallery-thumb-bar__item'>
+                                        <img src='https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/073319_1_medium.jpg' alt='' />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='o-distance-l'>
                             {addToCartButton}
-                            <select name="size" id="">
-                              <option value="">Select Size</option>
-                              <option value="">36</option>
-                              <option value="">38</option>
+                            <select name='size' id=''>
+                              <option value=''>Select Size</option>
+                              <option value=''>36</option>
+                              <option value=''>38</option>
                             </select>
                             <div className='o-buttonbar o-distance-m'>
                               <button className='c-button c-button--primary o-buttonbar__item o-buttonbar__item--full'>Add to Cart</button>

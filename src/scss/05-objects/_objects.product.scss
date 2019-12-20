@@ -18,7 +18,12 @@
   }
 }
 
+.o-product__header--centered {
+  align-items: center;
+}
+
 .o-product__details {
+  align-items: center;
   display: grid;
   row-gap: $spacing-stack-m;
 
@@ -28,8 +33,19 @@
 
   &__offset {
     @include breakpoint($layout-breakpoint-l) {
-      flex: end;
+      justify-self: flex-end;
     }
+  }
+}
+
+.o-product__price {
+  align-items: baseline;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: $layout-gutter-width;
+
+  @include breakpoint($layout-breakpoint-l) {
+    display: block;
   }
 }
 

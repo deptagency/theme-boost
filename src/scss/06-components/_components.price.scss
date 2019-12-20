@@ -1,20 +1,36 @@
 // Config
 
-// Component
+/// Default Price
+/// @group Price
 .c-price {
   font-weight: $font-weight-bold;
+  line-height: 1;
   white-space: nowrap;
 }
 
+/// Normal Price
+/// @group Price
 .c-price--normal {
   font-weight: $font-weight-light;
 }
 
+/// Old Price
+/// @group Price
 .c-price--old {
   font-weight: $font-weight-base;
   text-decoration: line-through;
   color: $color-palette-gray-500;
 }
+
+/// Price Highlight like special deals
+/// @group Price
 .c-price--highlight {
   color: $color-semantic-danger-base;
+}
+
+/// Large Price
+/// @group Price
+.c-price--l {
+  font-family: $font-family-spot;
+  font-size: $font-size-l;
 }

@@ -15,6 +15,7 @@ class AtomsPrice extends Component {
                     'c-price': true,
                     'c-price--normal': this.props.normal,
                     'c-price--old': this.props.old,
+                    'c-price--l': this.props.large,
                 })}
                 >
                 {(this.props.value / 100).toLocaleString(
@@ -35,12 +36,14 @@ AtomsPrice.propTypes = {
     currency: PropTypes.string,
     normal: PropTypes.bool,
     old: PropTypes.bool,
+    large: PropTypes.bool
 }
 
 AtomsPrice.defaultProps = {
     currency: null,
     old: false,
     normal: false,
+    large: false
 }
 
 // These are just default props for the pattern library

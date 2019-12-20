@@ -50,10 +50,10 @@ class OrganismsGallery extends Component {
                         })}
                     </Slider>
                 </div>
-                <ul className='c-gallery__thumb-bar'>
+                <ul className='c-gallery-thumb-bar o-head-up__item o-head-up__item--bottom-left'>
                     {images.map((url, i) => {
-                        return <li key={i} className='c-gallery__thumb-bar__item is-active'>
-                            <img src={url} alt='' />
+                        return <li key={i} className='c-gallery-thumb-bar__item is-active u-box-shadow'>
+                            <img src={url} alt='' width='64px' />
                         </li>
                     })}
                 </ul>
