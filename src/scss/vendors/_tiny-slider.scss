@@ -1,0 +1,12 @@
+.o-tiny-slider-wrapper {
+    margin-left: -$layout-gutter-width/2;
+    margin-right: -16px;
+   
+    .tns-outer {
+        overflow: hidden;
+    }
+    .tns-item {
+        padding-left: $layout-gutter-width/2;
+        padding-right: $layout-gutter-width/2;
+    }
+}
