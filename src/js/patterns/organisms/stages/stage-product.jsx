@@ -74,16 +74,16 @@ class OrganismsProductStage extends Component {
                     <div className='u-hidden-until-medium'>
                         <div className='o-distance-l'>
                             {addToCartButton}
-                            <select name="size" id="">
-                              <option value="">Select Size</option>
-                              <option value="">36</option>
-                              <option value="">38</option>
+                            <select name='size' id=''>
+                                <option value=''>Select Size</option>
+                                <option value=''>36</option>
+                                <option value=''>38</option>
                             </select>
                             <div className='o-buttonbar o-distance-m'>
-                              <button className='c-button c-button--primary o-buttonbar__item o-buttonbar__item--full'>Add to Cart</button>
-                              <button className='c-button c-button--quiet c-button--single-icon o-buttonbar__item'>
-                                <Wishlist className='c-icon c-icon--m' />
-                              </button>
+                                <button className='c-button c-button--primary o-buttonbar__item o-buttonbar__item--full'>Add to Cart</button>
+                                <button className='c-button c-button--quiet c-button--single-icon o-buttonbar__item'>
+                                    <Wishlist className='c-icon c-icon--m' />
+                                </button>
                             </div>
                             <div className='o-distance-m'>
                                 <OrganismsExpressDelivery />

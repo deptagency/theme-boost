@@ -5,7 +5,7 @@ import OrganismsProductStage from '../stages/stage-product'
 import OrganismsSizeSwiper from '../swiper/size-swiper'
 // eslint-disable-next-line no-unused-vars
 // import OrganismsImageColorSwiper from '../swiper/image-color-swiper'
-import OrganismsExpressDelivery from '../blocks/express-delivery'
+// import OrganismsExpressDelivery from '../blocks/express-delivery'
 import Button from '../../atoms/buttons/button'
 import app from 'frontastic-catwalk/src/js/app/app'
 import AtomsPrice from '../../atoms/prices/price'

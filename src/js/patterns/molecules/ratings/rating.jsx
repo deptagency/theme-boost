@@ -22,12 +22,12 @@ const MoleculesRating = ({ className }) => {
 }
 
 MoleculesRating.propTypes = {
-    outerClassName: PropTypes.string,
+    // outerClassName: PropTypes.string,
     className: PropTypes.string,
 }
 
 MoleculesRating.defaultProps = {
-    outerClassName: '',
+    // outerClassName: '',
     className: '',
 }
 

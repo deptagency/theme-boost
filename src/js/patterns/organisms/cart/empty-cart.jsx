@@ -13,7 +13,7 @@ const OrganismsEmptyCart = () => {
                         <EmptyCartIcon className='c-icon c-icon--xl' />
                     </div>
                     <div className='o-distance-m u-text-center'>
-                        <h2><FormattedMessage id="cart.emptyCart.title" /></h2>
+                        <h2><FormattedMessage id='cart.emptyCart.title' /></h2>
                         <p><FormattedMessage id='cart.emptyCart.text' /></p>
                         <Button size='boss' type='primary' className='o-distance-m'>
                             <FormattedMessage id='cart.registerNow' />
