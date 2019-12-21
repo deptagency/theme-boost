@@ -42,7 +42,20 @@ fieldset {
 }
 
 select {
-  cursor: pointer;
+    cursor: pointer;
+
+    padding: $spacing-inset-m;
+    background-image: url(../../icons/arrow-expand.svg);
+    background-repeat: no-repeat;
+    background-position: right $spacing-inset-m top 50%;
+    background-size: 16px auto;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &::-ms-expand {
+        display: none;
+    }
 }
 
 legend {
