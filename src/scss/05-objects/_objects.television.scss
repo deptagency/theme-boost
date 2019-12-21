@@ -6,14 +6,11 @@ $television-boundless-space: $television-prevent-space * 2 !default;
 .o-television {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  //height: 100vh;
+  height: 100vh;
   overflow: hidden;
 }
 
 .o-television__bar {
-  align-items: center;
-  display: flex;
-  min-height: 60px;
   width: 100%;
 }
 
@@ -26,7 +23,10 @@ $television-boundless-space: $television-prevent-space * 2 !default;
 .o-television__display {
   grid-row: 2;
   overflow: auto;
-  padding: $spacing-inset-m $television-prevent-space 0;
+
+  &__wrapper {
+      padding: $spacing-inset-m $television-prevent-space 0;
+  }
 
   &__header {
     margin-top: -$television-prevent-space;

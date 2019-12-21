@@ -6,7 +6,6 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import classnames from 'classnames'
 import Button from '../../../patterns/atoms/buttons/button'
 import { FormattedMessage } from 'react-intl'
-import { buttonMaxWidth } from './account-access.module.scss'
 
 class AccountAccessForms extends Component {
     constructor (props) {

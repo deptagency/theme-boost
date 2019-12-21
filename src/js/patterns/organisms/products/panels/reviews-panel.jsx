@@ -6,11 +6,6 @@ import Button from '../../../atoms/buttons/button'
 import TemplatesSlideInPanel from '../../../templates/slide-in-panel'
 import ReviewsList from '../reviews-list'
 import WriteReviewPanel from './write-review-panel'
-import {
-    reviewsPanel,
-    reviewBtn,
-    ratingQuestion,
-} from './reviews-panel.module.scss'
 
 const ReviewsPanel = ({ isOpen, onClose, product, image, designer }) => {
     const [reviewFormOpen, setReviewFormOpen] = useState(false)
@@ -19,7 +14,6 @@ const ReviewsPanel = ({ isOpen, onClose, product, image, designer }) => {
         return (
             <Button
                 type='quiet'
-                className={`${reviewBtn} o-distance-l`}
                 size='boss'
                 onClick={() => { setReviewFormOpen(true) }}
                 >
@@ -32,18 +26,21 @@ const ReviewsPanel = ({ isOpen, onClose, product, image, designer }) => {
         <TemplatesSlideInPanel
             key='1'
             isOpen={isOpen}
-            header={<OrganismsHeaderSlideIn
-                onClose={onClose}
-                title={<FormattedMessage id={'reviews'} />}
-                showLeftBackIcon={false}
-            />}
-            >
-            <div className={`${reviewsPanel}`}>
-                <div className={`${ratingQuestion} u-text-strong`}><FormattedMessage id='ratingQuestion' /></div>
+            header={
+                <OrganismsHeaderSlideIn
+                    onClose={onClose}
+                    title={<FormattedMessage id={'reviews'} />}
+                    showLeftBackIcon={false}
+                />}
+            footer={
                 <SubmitReviewButton />
-                <ReviewsList />
+            }
+        >
+            <div className='u-text-strong'><FormattedMessage id='ratingQuestion' /></div>
+            <div className='o-distance-m'>
                 <SubmitReviewButton />
             </div>
+            <ReviewsList />
         </TemplatesSlideInPanel>,
         <WriteReviewPanel key='2'
             isOpen={reviewFormOpen}
