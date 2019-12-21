@@ -5,6 +5,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import OrganismsGallery from '../galleries/gallery'
 import MoleculesRating from '../../molecules/ratings/rating'
 import OrganismsExpressDelivery from '../blocks/express-delivery'
+import ProductImage from '../products/product-image'
 import { ReactComponent as Wishlist } from './../../../../icons/wishlist-heart.svg'
 
 class OrganismsProductStage extends Component {
@@ -13,7 +14,12 @@ class OrganismsProductStage extends Component {
         return (
             <div className='o-media-block'>
                 <div className='o-media-block__asset'>
-                    <OrganismsGallery images={images} addToWishlist={addToWishlist} />
+                    <OrganismsGallery
+                        imagesComponents={(images || []).map((image) => {
+                            return (<ProductImage imageUrl={image} />)
+                        })}
+                        addToWishlist={addToWishlist}
+                    />
                 </div>
                 <div className='o-media-block__body'>
                     <div className='o-product__header o-product__header--centered'>
