@@ -3,26 +3,15 @@ import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import { FormattedMessage } from 'react-intl'
 import classnames from 'classnames'
-import {
-    detailList,
-    fontSize14,
-    label,
-    value,
-} from './detaillist.module.scss'
 
 const MoleculesDetaillist = ({ color, size }) => {
     return (
-        <div className={classnames(detailList, 'detailList', 'o-distance-s')}>
-            <div>
-                <span className={classnames(fontSize14, label)}><FormattedMessage id='colorProduct' /></span>
-                <span className={classnames(fontSize14, value)}> {color}</span>
-            </div>
-
-            <div>
-                <span className={classnames(fontSize14, label)}><FormattedMessage id='sizeProduct' /></span>
-                <span className={classnames(fontSize14, value)}> {size}</span>
-            </div>
-        </div>
+        <dl className='o-detaillist o-distance-s'>
+            <dt className='u-text-color-quiet'><FormattedMessage id='colorProduct' /></dt>
+            <dd className='u-text-strong'>{color}</dd>
+            <dt className='u-text-color-quiet'><FormattedMessage id='sizeProduct' /></dt>
+            <dd className='u-text-strong'>{size}</dd>
+        </dl>
     )
 }
 
