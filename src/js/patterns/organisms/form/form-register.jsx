@@ -5,7 +5,6 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import app from 'frontastic-catwalk/src/js/app/app'
 import classnames from 'classnames'
 import Button from '../../atoms/buttons/button'
-import { registerCheckBoxFont } from './form-register.module.scss'
 
 class OrganismsFormRegister extends Component {
     constructor (props) {
@@ -49,7 +48,7 @@ class OrganismsFormRegister extends Component {
                                                 'is-active': this.state.register_salutation === 'Frau',
 
                                             })}>
-                                                <input type='radio' id='inp-radio-02' name='salutation_frau' className='c-form-radio__input' />
+                                                <input type='radio' id='inp-radio-02' name='salutation' className='c-form-radio__input' />
                                                 <span className='c-form-radio__backdrop' />
                                             </div>
                                         </div>
@@ -68,7 +67,7 @@ class OrganismsFormRegister extends Component {
                                                 'is-active': this.state.register_salutation === 'Herr',
 
                                             })}>
-                                                <input type='radio' id='inp-radio-02' name='salutation_herr' className='c-form-radio__input' />
+                                                <input type='radio' id='inp-radio-02' name='salutation' className='c-form-radio__input' />
                                                 <span className='c-form-radio__backdrop' />
                                             </div>
                                         </div>
@@ -164,7 +163,7 @@ class OrganismsFormRegister extends Component {
                                     </div>
                                 </div>
                                 <div className='o-block-short__body'>
-                                    <label htmlFor='inp-checkbox-02' className={registerCheckBoxFont}>
+                                    <label htmlFor='inp-checkbox-02'>
                                         <FormattedMessage id='account.register.tcAgree' />
                                     </label>
                                 </div>
@@ -197,7 +196,7 @@ class OrganismsFormRegister extends Component {
                                     </div>
                                 </div>
                                 <div className='o-block-short__body'>
-                                    <label htmlFor='inp-checkbox-02' className={registerCheckBoxFont}>
+                                    <label htmlFor='inp-checkbox-02'>
                                         <FormattedMessage id='account.register.informAgree' />
                                     </label>
                                 </div>
@@ -226,7 +225,7 @@ class OrganismsFormRegister extends Component {
                     >
                         <FormattedMessage id='account.register.registerNow' />
                     </Button>
-                    <div className='o-television__display__boundless c-divider c-divider--break o-distance-m' />
+                    <div className='c-divider c-divider--break o-distance-l' />
                 </fieldset>
             </form>
         )

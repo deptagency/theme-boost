@@ -22,8 +22,8 @@ class AccountAccessForms extends Component {
             <div className='o-layout'>
                 <Grow in={(this.state.form === 'login')}>
                     <TemplatesLogin />
-                    <section className={classnames(buttonMaxWidth, 'o-television o-television__display o-container-small o-distance-m')}>
-                        <h2 className='c-title-level-4 u-text-center'>
+                    <section className='o-container-small o-distance-l'>
+                        <h2 className='c-title u-text-center'>
                             <FormattedMessage id='account.newHere' />
                         </h2>
                         <Button
@@ -40,8 +40,8 @@ class AccountAccessForms extends Component {
                 </Grow>
                 <Grow in={(this.state.form === 'register')}>
                     <TemplatesRegister />
-                    <section className={classnames(buttonMaxWidth, 'o-television o-television__display o-container-small o-distance-m')}>
-                        <h2 className='c-title-level-4 u-text-center'>
+                    <section className='o-container-small o-distance-l'>
+                        <h2 className='c-title u-text-center'>
                             <FormattedMessage id='account.login.welcomeBack' />
                         </h2>
                         <Button
