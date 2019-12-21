@@ -17,8 +17,8 @@ class TemplatesLogin extends Component {
                         <Button type='primary' size='boss' className='o-buttonbar__item'>Anmelden</Button>
                         <Button type='primary' size='boss' className='o-buttonbar__item'>Registrieren</Button>
                     </div>
-                    <span className='c-divider c-divider--break o-distance-m' />
-                    <section className='o-distance-m'>
+                    <span className='c-divider c-divider--break o-distance-l' />
+                    <section className='o-distance-l'>
                         <h2 className='c-title-level-3'>Als Gast fortfahren</h2>
                         <form action='' className='o-distance-s'>
                             <label htmlFor='' className='c-label'>E-Mail-Adresse</label>

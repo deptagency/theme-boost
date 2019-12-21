@@ -15,8 +15,8 @@ class TemplatesCheckoutRegister extends Component {
                 <div className='o-container-small'>
                     <OrganismsFormRegister />
                     <Button type='primary' size='boss' className='o-distance-m'>Jetzt Registrieren</Button>
-                    <span className='c-divider c-divider--break o-distance-m' />
-                    <section className='o-distance-m'>
+                    <span className='c-divider c-divider--break o-distance-l' />
+                    <section className='o-distance-l'>
                         <h2 className='c-title-level-3 u-text-center'>Melde dich jetzt an</h2>
                         <Button type='quiet' size='boss' className='o-distance-m'>Anmelden</Button>
                     </section>
