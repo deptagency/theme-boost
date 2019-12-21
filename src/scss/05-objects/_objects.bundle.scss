@@ -12,6 +12,10 @@
     grid-column: 3 / span 2;
     grid-row: 1;
     grid-template-columns: 1fr auto;
+
+    &__full-column {
+      grid-column: auto / span 2;
+    }
   }
 
   .o-bundle__body {

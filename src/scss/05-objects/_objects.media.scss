@@ -27,8 +27,10 @@
 // Always elements are in a row
 /// @group Objects
 .o-media-block--row {
-  .o-media-block__asset,
-  .o-media-block__body {
+  .o-media-block__asset {  
     grid-column: auto / span 2;
+  }
+  .o-media-block__body {
+    grid-column: auto / span 3;
   }
 }
