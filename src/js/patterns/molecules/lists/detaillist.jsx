@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import { FormattedMessage } from 'react-intl'
-import classnames from 'classnames'
 
 const MoleculesDetaillist = ({ color, size }) => {
     return (

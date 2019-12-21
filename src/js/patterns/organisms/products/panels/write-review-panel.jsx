@@ -27,8 +27,8 @@ const WriteReviewPanel = ({ isOpen, onClose, product, image, designer }) => {
                 <p className='c-title-level-3'><FormattedMessage id='order.reviewQuestion' /></p>
 
                 <div className='o-bundle o-distance-m'>
-                    {image && 
-                      <img src={image} className='o-bundle__asset' />
+                    {image &&
+                        <img src={image} className='o-bundle__asset' alt='Asset' />
                     }
 
                     <div className='o-bundle__header'>

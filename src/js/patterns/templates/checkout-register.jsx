@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 
 import Button from '../atoms/buttons/button'
 import OrganismsHeaderMobile from '../organisms/base/header-mobile'

@@ -26,16 +26,12 @@ const ReviewsPanel = ({ isOpen, onClose, product, image, designer }) => {
         <TemplatesSlideInPanel
             key='1'
             isOpen={isOpen}
-            header={
-                <OrganismsHeaderSlideIn
-                    onClose={onClose}
-                    title={<FormattedMessage id={'reviews'} />}
-                    showLeftBackIcon={false}
-                />}
-            footer={
-                <SubmitReviewButton />
-            }
-        >
+            header={<OrganismsHeaderSlideIn
+                onClose={onClose}
+                title={<FormattedMessage id={'reviews'} />}
+                showLeftBackIcon={false}
+            />}
+            footer={<SubmitReviewButton />}>
             <div className='u-text-strong'><FormattedMessage id='ratingQuestion' /></div>
             <div className='o-distance-m'>
                 <SubmitReviewButton />

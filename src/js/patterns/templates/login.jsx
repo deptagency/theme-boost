@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import app from 'frontastic-catwalk/src/js/app/app'
 import { FormattedMessage } from 'react-intl'
-import classnames from 'classnames'
 import Button from '../atoms/buttons/button'
 
 import OrganismsPageHeader from '../organisms/base/header-page'
