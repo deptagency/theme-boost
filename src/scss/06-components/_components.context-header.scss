@@ -3,9 +3,10 @@
 // Context Header
 // Insert some User Interactions and shows the user where he / she is
 .c-context-header {
+  align-items: center;
   display: flex;
   height: 52px;
-  padding: $spacing-inset-s $layout-edge-width;
+  padding: $spacing-inset-m $layout-edge-width;
   width: 100%;
   border-bottom: 1px solid $border-color-base;
   text-align: center;
