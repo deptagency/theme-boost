@@ -4,15 +4,6 @@ import { FormattedMessage } from 'react-intl'
 import TemplatesSlideInPanel from '../../../templates/slide-in-panel'
 import OrganismsHeaderSlideIn from '../../base/header-slide-in'
 import SmallStars from '../stars/small-stars'
-
-import { writeReviewPanel,
-    productOverivew,
-    nameAndStars,
-    productName,
-    productDesigner,
-    rateMsg,
-    reviewTextStyle,
-} from './write-review-panel.module.scss'
 import Button from '../../../atoms/buttons/button'
 
 const WriteReviewPanel = ({ isOpen, onClose, product, image, designer }) => {
@@ -31,45 +22,41 @@ const WriteReviewPanel = ({ isOpen, onClose, product, image, designer }) => {
             />}
             >
 
-            <div className={`${writeReviewPanel} u-text-m`}>
+            <div>
 
-                <FormattedMessage id='order.reviewQuestion' />
+                <p className='c-title-level-3'><FormattedMessage id='order.reviewQuestion' /></p>
 
-                <div className={productOverivew}>
-                    {image && <div
-                        style={{
-                            backgroundImage: `url(${image})`,
-                            height: '131px',
-                            width: '100px',
-                            backgroundSize: 'contain',
-                            margin: '0 16px 45px 0',
-                        }}
-                    />}
+                <div className='o-bundle o-distance-m'>
+                    {image && 
+                      <img src={image} className='o-bundle__asset' />
+                    }
 
-                    <div className={nameAndStars}>
-                        <div className={`${productName} u-text-s`}>
-                            {product.name}
+                    <div className='o-bundle__header'>
+                        <div className='o-bundle__header__full-column'>
+                            <h2 className='c-title-level-4'>{product.name}</h2>
+                            <p className='u-text-s t-text-quiet'>
+                                {designer && designer.label}
+                            </p>
                         </div>
+                    </div>
 
-                        <div className={`${productDesigner} u-text-xs`}>
-                            {designer && designer.label}
-                        </div>
-
+                    <div className='o-bundle__body'>
                         <SmallStars saveRating={setRating} />
 
-                        <div className={`${rateMsg} u-text-xxs`}>
+                        <p className='u-text-s t-text-quiet'>
                             <FormattedMessage id='order.pleaseRate' />
-                        </div>
+                        </p>
 
                     </div>
 
                 </div>
 
-                <div className={`${reviewTextStyle} u-text-s`}><FormattedMessage id='order.yourReview' /></div>
+                <label htmlFor='review' className='c-form-label o-distance-l'><FormattedMessage id='order.yourReview' /></label>
                 <textarea
                     type='text'
                     className='o-distance-xs'
                     rows='5'
+                    id='review'
                     value={reviewText}
                     onChange={(event => { return (setReviewText(event.target.value)) })}
                 />
