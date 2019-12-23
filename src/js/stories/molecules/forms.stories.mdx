@@ -1,10 +1,8 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 
-import Label from 'js/patterns/atoms/forms/form-label'
-import Checkbox from 'js/patterns/atoms/forms/form-checkbox'
-import Radiobutton from 'js/patterns/atoms/forms/form-radiobutton'
-
 import InputWithUnit from 'js/patterns/molecules/forms/input-with-unit'
+import CheckboxWithLabel from 'js/patterns/molecules/forms/checkbox-with-label'
+import RadiobuttonWithLabel from 'js/patterns/molecules/forms/radiobutton-with-label'
 
 <Meta title='3.Molecules|Forms' />
 
@@ -14,14 +12,7 @@ import InputWithUnit from 'js/patterns/molecules/forms/input-with-unit'
 
 <Preview withToolbar>
     <Story name='Checkbox with Label'>
-        <div className='o-block-short'>
-            <div className='o-block-short__short-item'>
-                <Checkbox id='inp-checkbox-02' />
-            </div>
-            <div className='o-block-short__body'>
-                <Label className="c-form-label" htmlFor="inp-checkbox-02" value="Checkbox-Label" />
-            </div>
-        </div>
+        <CheckboxWithLabel label="Hallo Label" />
     </Story>
 </Preview>
 
@@ -29,14 +20,7 @@ import InputWithUnit from 'js/patterns/molecules/forms/input-with-unit'
 
 <Preview withToolbar>
     <Story name='Radiobutton with Label'>
-        <div className='o-block-short'>
-            <div className='o-block-short__short-item'>
-                <Radiobutton id='inp-radiobutton-03' />
-            </div>
-            <div className='o-block-short__body'>
-                <Label className="c-form-label" htmlFor="inp-radiobutton-03" value="Radiobutton-Label" />
-            </div>
-        </div>
+        <RadiobuttonWithLabel label="Hallo Label" />
     </Story>
 </Preview>
 

@@ -26,6 +26,7 @@ class FormRadiobutton extends Component {
                     type='radio'
                     name='radio'
                     className='c-form-radio__input'
+                    id={this.props.id}
                     checked={this.state.checked}
                     onChange={this.onChange}
                 />
@@ -36,10 +37,12 @@ class FormRadiobutton extends Component {
 }
 
 FormRadiobutton.propTypes = {
+    id: PropTypes.string,
     checked: PropTypes.bool
 }
 
 FormRadiobutton.defaultProps = {
+    id: undefined,
     checked: false
 }
 

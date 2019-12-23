@@ -22,7 +22,6 @@ InputWithUnit.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
     className: PropTypes.string,
-    classNameUnit: PropTypes.string,
     unit: PropTypes.string,
     prefix: PropTypes.bool,
     connected: PropTypes.bool,
