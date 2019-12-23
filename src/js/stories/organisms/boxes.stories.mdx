@@ -2,8 +2,8 @@ import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks'
 
 import Button from 'js/patterns/atoms/buttons/button'
 
-import OrganismsPromobox from 'js/patterns/molecules/promobox/promobox'
-import OrganismsPromoboxWithPositioning from 'js/patterns/molecules/promobox/promobox-with-positioning'
+import Promobox from 'js/patterns/molecules/promobox/promobox'
+import PromoboxWithPositioning from 'js/patterns/molecules/promobox/promobox-with-positioning'
 
 export const image = {
     title: {
@@ -38,7 +38,7 @@ A very prominent box with background to present important content
 
 <Preview withToolbar>
     <Story name='Promobox'>
-        <OrganismsPromobox />
+        <Promobox />
     </Story>
 </Preview>
 
@@ -47,34 +47,34 @@ A very prominent box with background to present important content
 
 <Preview withToolbar>
     <Story name='Positioning'>
-        <OrganismsPromoboxWithPositioning vertical='top' horizontal='right' image={image}>
+        <PromoboxWithPositioning vertical='top' horizontal='right' image={image}>
             <p className='c-topic'>Jetzt für den Sommer</p>
             <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
             <Button type='primary'>
             Jetzt shoppen
             </Button>
-        </OrganismsPromoboxWithPositioning>
-        <OrganismsPromoboxWithPositioning vertical='bottom' horizontal='left' image={{}}>
+        </PromoboxWithPositioning>
+        <PromoboxWithPositioning vertical='bottom' horizontal='left' image={{}}>
             <p className='c-topic'>Jetzt für den Sommer</p>
             <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
             <Button type='primary'>
           Jetzt shoppen
             </Button>
-        </OrganismsPromoboxWithPositioning>
-        <OrganismsPromoboxWithPositioning vertical='middle' horizontal='center' image={{}}>
+        </PromoboxWithPositioning>
+        <PromoboxWithPositioning vertical='middle' horizontal='center' image={{}}>
             <p className='c-topic'>Jetzt für den Sommer</p>
             <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
             <Button type='primary'>
           Jetzt shoppen
             </Button>
-        </OrganismsPromoboxWithPositioning>
-        <OrganismsPromoboxWithPositioning image={{}}>
+        </PromoboxWithPositioning>
+        <PromoboxWithPositioning image={{}}>
             <p className='c-topic'>Jetzt für den Sommer</p>
             <h1 className='c-title'>Viele Angebote bei Levi´s </h1>
             <Button type='primary'>
           Jetzt shoppen
             </Button>
-        </OrganismsPromoboxWithPositioning>
+        </PromoboxWithPositioning>
     </Story>
 </Preview>
 

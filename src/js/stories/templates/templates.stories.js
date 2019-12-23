@@ -2,31 +2,31 @@ import React from 'react'
 
 import { withKnobs } from '@storybook/addon-knobs'
 
-import TemplatesOrderBilling from '../patterns/templates/order/order-billing'
-import TemplatesEmptyCart from '../patterns/templates/cart/empty-cart'
-import TemplatesFullCart from '../patterns/templates/cart/full-cart'
-import TemplatesEmptyWishlist from '../patterns/templates/cart/empty-wishlist'
-import TemplatesFullWishlist from '../patterns/templates/cart/full-wishlist'
-import TemplatesPassworResetAddMail from '../patterns/templates/passwort-reset/passwort-reset-add-mail'
-import TemplatesNewPassword from '../patterns/templates/passwort-reset/new-password'
-import TemplatesPasswordResetConfirmation from '../patterns/templates/passwort-reset/password-reset-confirmation'
-import TemplatesLogin from '../patterns/templates/login'
-import TemplatesRegister from '../patterns/templates/register'
-import TemplatesOrderConfirmation from '../patterns/templates/order-confirmation'
-import TemplatesOrder from '../patterns/templates/order'
-import TemplatesMyOrders from '../patterns/templates/my-account/my-orders'
-import TemplatesMyOrderDetails from '../patterns/templates/my-account/my-order-details'
-import TemplatesMyAddresses from '../patterns/templates/my-account/my-addresses'
-import TemplatesMyAddressChange from '../patterns/templates/my-account/my-address-change'
-import TemplatesMyUserData from '../patterns/templates/my-account/my-user-data'
-import TemplatesMyEmailChange from '../patterns/templates/my-account/my-email-change'
-import TemplatesMyPasswordChange from '../patterns/templates/my-account/my-password-change'
-import TemplatesCheckoutLogin from '../patterns/templates/checkout-login'
-import TemplatesCheckoutRegister from '../patterns/templates/checkout-register'
-import TemplatesHome from '../patterns/templates/home'
-import TemplatesHelp from '../patterns/templates/help'
-import TemplatesHelpDetail from '../patterns/templates/help-detail'
-import TemplatesProductDetail from '../patterns/templates/detail'
+import OrderBilling from '../../patterns/templates/order/order-billing'
+import EmptyCart from '../../patterns/templates/cart/empty-cart'
+import FullCart from '../../patterns/templates/cart/full-cart'
+import EmptyWishlist from '../../patterns/templates/cart/empty-wishlist'
+import FullWishlist from '../../patterns/templates/cart/full-wishlist'
+import PassworResetAddMail from '../../patterns/templates/passwort-reset/passwort-reset-add-mail'
+import NewPassword from '../../patterns/templates/passwort-reset/new-password'
+import PasswordResetConfirmation from '../../patterns/templates/passwort-reset/password-reset-confirmation'
+import Login from '../../patterns/templates/login'
+import Register from '../../patterns/templates/register'
+import OrderConfirmation from '../../patterns/templates/order-confirmation'
+import Order from '../../patterns/templates/order'
+import MyOrders from '../../patterns/templates/my-account/my-orders'
+import MyOrderDetails from '../../patterns/templates/my-account/my-order-details'
+import MyAddresses from '../../patterns/templates/my-account/my-addresses'
+import MyAddressChange from '../../patterns/templates/my-account/my-address-change'
+import MyUserData from '../../patterns/templates/my-account/my-user-data'
+import MyEmailChange from '../../patterns/templates/my-account/my-email-change'
+import MyPasswordChange from '../../patterns/templates/my-account/my-password-change'
+import CheckoutLogin from '../../patterns/templates/checkout-login'
+import CheckoutRegister from '../../patterns/templates/checkout-register'
+import Home from '../../patterns/templates/home'
+import Help from '../../patterns/templates/help'
+import HelpDetail from '../../patterns/templates/help-detail'
+import ProductDetail from '../../patterns/templates/detail'
 
 export default {
     title: '5.Templates|All',
@@ -34,7 +34,7 @@ export default {
 }
 
 export const orderBilling = () => {
-    return <TemplatesOrderBilling />
+    return <OrderBilling />
 }
 
 orderBilling.story = {
@@ -42,7 +42,7 @@ orderBilling.story = {
 }
 
 export const templateEmptyCart = () => {
-    return <TemplatesEmptyCart />
+    return <EmptyCart />
 }
 
 templateEmptyCart.story = {
@@ -50,7 +50,7 @@ templateEmptyCart.story = {
 }
 
 export const templateFullCart = () => {
-    return <TemplatesFullCart />
+    return <FullCart />
 }
 
 templateFullCart.story = {
@@ -58,7 +58,7 @@ templateFullCart.story = {
 }
 
 export const templateEmptyWishlist = () => {
-    return <TemplatesEmptyWishlist />
+    return <EmptyWishlist />
 }
 
 templateEmptyWishlist.story = {
@@ -66,7 +66,7 @@ templateEmptyWishlist.story = {
 }
 
 export const templateFullWishlist = () => {
-    return <TemplatesFullWishlist />
+    return <FullWishlist />
 }
 
 templateFullWishlist.story = {
@@ -74,7 +74,7 @@ templateFullWishlist.story = {
 }
 
 export const templatePasswortResetAddMail = () => {
-    return <TemplatesPassworResetAddMail />
+    return <PassworResetAddMail />
 }
 
 templatePasswortResetAddMail.story = {
@@ -82,7 +82,7 @@ templatePasswortResetAddMail.story = {
 }
 
 export const templateNewPassword = () => {
-    return <TemplatesNewPassword />
+    return <NewPassword />
 }
 
 templateNewPassword.story = {
@@ -90,7 +90,7 @@ templateNewPassword.story = {
 }
 
 export const templatePasswordResetConfirmation = () => {
-    return <TemplatesPasswordResetConfirmation />
+    return <PasswordResetConfirmation />
 }
 
 templatePasswordResetConfirmation.story = {
@@ -98,7 +98,7 @@ templatePasswordResetConfirmation.story = {
 }
 
 export const templateLogin = () => {
-    return <TemplatesLogin />
+    return <Login />
 }
 
 templateLogin.story = {
@@ -106,7 +106,7 @@ templateLogin.story = {
 }
 
 export const templatesRegister = () => {
-    return <TemplatesRegister />
+    return <Register />
 }
 
 templatesRegister.story = {
@@ -114,7 +114,7 @@ templatesRegister.story = {
 }
 
 export const templatesOrderConfirmation = () => {
-    return <TemplatesOrderConfirmation />
+    return <OrderConfirmation />
 }
 
 templatesOrderConfirmation.story = {
@@ -122,7 +122,7 @@ templatesOrderConfirmation.story = {
 }
 
 export const templatesOrder = () => {
-    return <TemplatesOrder />
+    return <Order />
 }
 
 templatesOrder.story = {
@@ -132,7 +132,7 @@ templatesOrder.story = {
 export const myOrders = () => {
     return (
         <div className='fit-view'>
-            <TemplatesMyOrders />
+            <MyOrders />
         </div>
     )
 }
@@ -142,7 +142,7 @@ myOrders.story = {
 }
 
 export const templatesMyOrderDetails = () => {
-    return <TemplatesMyOrderDetails />
+    return <MyOrderDetails />
 }
 
 templatesMyOrderDetails.story = {
@@ -150,7 +150,7 @@ templatesMyOrderDetails.story = {
 }
 
 export const templatesMyAddresses = () => {
-    return <TemplatesMyAddresses />
+    return <MyAddresses />
 }
 
 templatesMyAddresses.story = {
@@ -158,7 +158,7 @@ templatesMyAddresses.story = {
 }
 
 export const templatesMyAddressChange = () => {
-    return <TemplatesMyAddressChange />
+    return <MyAddressChange />
 }
 
 templatesMyAddressChange.story = {
@@ -166,7 +166,7 @@ templatesMyAddressChange.story = {
 }
 
 export const templatesMyUserData = () => {
-    return <TemplatesMyUserData />
+    return <MyUserData />
 }
 
 templatesMyUserData.story = {
@@ -174,7 +174,7 @@ templatesMyUserData.story = {
 }
 
 export const templatesMyEmailChange = () => {
-    return <TemplatesMyEmailChange />
+    return <MyEmailChange />
 }
 
 templatesMyEmailChange.story = {
@@ -182,7 +182,7 @@ templatesMyEmailChange.story = {
 }
 
 export const templatesMyPasswordChange = () => {
-    return <TemplatesMyPasswordChange />
+    return <MyPasswordChange />
 }
 
 templatesMyPasswordChange.story = {
@@ -190,14 +190,14 @@ templatesMyPasswordChange.story = {
 }
 
 export const templatesCheckoutLogin = () => {
-    return <TemplatesCheckoutLogin />
+    return <CheckoutLogin />
 }
 
 templatesCheckoutLogin.story = {
     name: 'Checkout Login',
 }
 export const templatesCheckoutRegister = () => {
-    return <TemplatesCheckoutRegister />
+    return <CheckoutRegister />
 }
 
 templatesCheckoutRegister.story = {
@@ -205,7 +205,7 @@ templatesCheckoutRegister.story = {
 }
 
 export const templatesHome = () => {
-    return <TemplatesHome />
+    return <Home />
 }
 
 templatesHome.story = {
@@ -213,7 +213,7 @@ templatesHome.story = {
 }
 
 export const templatesHelp = () => {
-    return <TemplatesHelp />
+    return <Help />
 }
 
 templatesHelp.story = {
@@ -221,7 +221,7 @@ templatesHelp.story = {
 }
 
 export const templatesHelpDetail = () => {
-    return <TemplatesHelpDetail />
+    return <HelpDetail />
 }
 
 templatesHelpDetail.story = {
@@ -229,14 +229,14 @@ templatesHelpDetail.story = {
 }
 
 export const templatesProductDetail = () => {
-    return <TemplatesProductDetail />
+    return <ProductDetail />
 }
 
 templatesProductDetail.story = {
     name: 'Product Detail',
 }
 
-// export const home = () => { return <TemplatesHome /> }
+// export const home = () => { return <Home /> }
 
 // home.story = {
 //     name: 'Home',
@@ -262,7 +262,7 @@ templatesProductDetail.story = {
 //     name: 'Bestseller Swipe Vertical',
 // }
 
-// export const leererWarenkorb = () => { return <TemplatesEmptyCart /> }
+// export const leererWarenkorb = () => { return <EmptyCart /> }
 
 // leererWarenkorb.story = {
 //     name: 'Leerer Warenkorb',
@@ -271,7 +271,7 @@ templatesProductDetail.story = {
 // export const meinWarenkorb = () => {
 //     return (
 //         <div>
-//             <TemplatesFullCart />
+//             <FullCart />
 //         </div>
 //     )
 // }
@@ -283,7 +283,7 @@ templatesProductDetail.story = {
 // export const interactiveCart = () => {
 //     const emptyCart = boolean('Empty cart', true)
 
-//     if (emptyCart) { return <TemplatesEmptyCart /> } else { return <TemplatesFullCart /> }
+//     if (emptyCart) { return <EmptyCart /> } else { return <FullCart /> }
 // }
 
 // interactiveCart.story = {
@@ -303,15 +303,15 @@ templatesProductDetail.story = {
 //             >
 //             <MoleculesCart />
 //         </div>,
-//         <TemplatesSlideIn
+//         <SlideIn
 //             key='slide-in-content'
 //             isOpen={isOpen}
 //             header={<OrganismsHeaderSlideIn setIsOpen={setIsOpen} title='Main Warenkorb' />}
 //             >
 //             {emptyCart ? (
-//                 <TemplatesEmptyCart setIsOpen={setIsOpen} />
+//                 <EmptyCart setIsOpen={setIsOpen} />
 //             ) : (
-//                 <TemplatesFullCart setIsOpen={setIsOpen} />
+//                 <FullCart setIsOpen={setIsOpen} />
 //             )}
 //         </TemplatesSlideIn>,
 //     ]
@@ -334,16 +334,16 @@ templatesProductDetail.story = {
 //             >
 //             <MoleculesCart />
 //         </div>,
-//         <TemplatesSlideInPanel
+//         <SlideInPanel
 //             key='slide-in-content'
 //             isOpen={isOpen}
 //             setIsOpen={setIsOpen}
 //             header={<OrganismsHeaderSlideIn setIsOpen={setIsOpen} title='Main Warenkorb' />}
 //             >
 //             {emptyCart ? (
-//                 <TemplatesEmptyCart setIsOpen={setIsOpen} />
+//                 <EmptyCart setIsOpen={setIsOpen} />
 //       ) : (
-//           <TemplatesFullCart setIsOpen={setIsOpen} />
+//           <FullCart setIsOpen={setIsOpen} />
 //       )}
 //         </TemplatesSlideInPanel>,
 //     ]
@@ -356,7 +356,7 @@ templatesProductDetail.story = {
 // export const filter = () => {
 //     return (
 //         <div className='fit-view'>
-//             <TemplatesFilter />
+//             <Filter />
 //         </div>
 //     )
 // }
@@ -365,7 +365,7 @@ templatesProductDetail.story = {
 //     name: 'Filter',
 // }
 
-// export const help = () => { return <TemplatesHelp /> }
+// export const help = () => { return <Help /> }
 
 // help.story = {
 //     name: 'Help',
@@ -386,7 +386,7 @@ templatesProductDetail.story = {
 // export const myOrdersDetails = () => {
 //     return (
 //         <div className='fit-view'>
-//             <TemplatesMyOrderDetails products={[{}, {}]} />
+//             <MyOrderDetails products={[{}, {}]} />
 //         </div>
 //     )
 // }
@@ -398,7 +398,7 @@ templatesProductDetail.story = {
 // export const productReturnView = () => {
 //     return (
 //         <div className='fit-view'>
-//             <TemplatesProductReturn />
+//             <ProductReturn />
 //         </div>
 //     )
 // }
@@ -407,7 +407,7 @@ templatesProductDetail.story = {
 //     name: 'Product return - view',
 // }
 
-// export const orderSuccess = () => { return <TemplatesOrderSuccess /> }
+// export const orderSuccess = () => { return <OrderSuccess /> }
 
 // orderSuccess.story = {
 //     name: 'Order Success',

@@ -1,12 +1,13 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 
-import OrganismsPromobox from 'js/patterns/molecules/promobox/promobox'
-import OrganismsChoice from 'js/patterns/organisms/form/form-choice'
-import OrganismsProductListing from 'js/patterns/organisms/listings/product-listing'
-import OrganismsBundleListing from 'js/patterns/organisms/listings/bundle-listing'
-import OrganismsPaymentListingIcons from 'js/patterns/organisms/listings/payment-listing-icons'
-import OrganismsPaymentListing from 'js/patterns/organisms/listings/payment-listing'
-import OrganismsCategoryBoxes from 'js/patterns/organisms/listings/category-boxes'
+import Promobox from 'js/patterns/molecules/promobox/promobox'
+
+import Choice from 'js/patterns/organisms/form/form-choice'
+import ProductListing from 'js/patterns/organisms/listings/product-listing'
+import BundleListing from 'js/patterns/organisms/listings/bundle-listing'
+import PaymentListingIcons from 'js/patterns/organisms/listings/payment-listing-icons'
+import PaymentListing from 'js/patterns/organisms/listings/payment-listing'
+import CategoryBoxes from 'js/patterns/organisms/listings/category-boxes'
 
 <Meta title='4.Organisms|Listings' />
 
@@ -15,21 +16,21 @@ import OrganismsCategoryBoxes from 'js/patterns/organisms/listings/category-boxe
 ## Product Listing
 <Preview withToolbar>
     <Story name='Product Listing'>
-        <OrganismsProductListing />
+        <ProductListing />
     </Story>
 </Preview>
 
 ## Bundle Listing
 <Preview withToolbar>
     <Story name='Bundle Listing'>
-        <OrganismsBundleListing cartItems={{}} />
+        <BundleListing cartItems={{}} />
     </Story>
 </Preview>
 
 ## Payment Icons Listing
 <Preview withToolbar>
     <Story name='Payment Icons Listing'>
-        <OrganismsBundleListing cartItems={{}} />
+        <BundleListing cartItems={{}} />
     </Story>
 </Preview>
 
@@ -39,9 +40,9 @@ import OrganismsCategoryBoxes from 'js/patterns/organisms/listings/category-boxe
         <div>
             <section className='o-distance'>
                 <div className='o-grid o-grid--medium-third'>
-                    <OrganismsPromobox />
-                    <OrganismsPromobox />
-                    <OrganismsPromobox />
+                    <Promobox />
+                    <Promobox />
+                    <Promobox />
                 </div>
             </section>
             <section className='o-distance'>
@@ -70,7 +71,7 @@ import OrganismsCategoryBoxes from 'js/patterns/organisms/listings/category-boxe
 ## Category Boxes Listing
 <Preview withToolbar>
     <Story name='Category Boxes Listing'>
-        <OrganismsCategoryBoxes
+        <CategoryBoxes
             firstLabel='First'
             firstLink={{}}
             secondLabel='First'
@@ -86,16 +87,16 @@ import OrganismsCategoryBoxes from 'js/patterns/organisms/listings/category-boxe
     <Story name='Choices Listing'>
         <ul className='o-list-inline'>
             <li className='o-list-inline__item'>
-                <OrganismsChoice />
+                <Choice />
             </li>
             <li className='o-list-inline__item'>
-                <OrganismsChoice />
+                <Choice />
             </li>
             <li className='o-list-inline__item'>
-                <OrganismsChoice />
+                <Choice />
             </li>
             <li className='o-list-inline__item'>
-                <OrganismsChoice />
+                <Choice />
             </li>
         </ul>
     </Story>

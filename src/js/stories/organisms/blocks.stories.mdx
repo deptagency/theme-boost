@@ -1,10 +1,10 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 
-import OrganismsNewsletterBlock from 'js/patterns/organisms/blocks/newsletter'
-import OrganismsSummary from 'js/patterns/organisms/blocks/summary'
-import OrganismsCreditCard from 'js/patterns/organisms/blocks/creditcard'
-import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
-import OrganismsDeliveryFeatures from 'js/patterns/organisms/blocks/delivery-features'
+import NewsletterBlock from 'js/patterns/organisms/blocks/newsletter'
+import Summary from 'js/patterns/organisms/blocks/summary'
+import CreditCard from 'js/patterns/organisms/blocks/creditcard'
+import Addressblock from 'js/patterns/organisms/blocks/addressblock'
+import DeliveryFeatures from 'js/patterns/organisms/blocks/delivery-features'
 
 <Meta title='4.Organisms|Blocks' />
 
@@ -13,7 +13,7 @@ import OrganismsDeliveryFeatures from 'js/patterns/organisms/blocks/delivery-fea
 ## Creditcard
 <Preview withToolbar>
     <Story name='Creditcard'>
-        <OrganismsCreditCard />
+        <CreditCard />
     </Story>
 </Preview>
 
@@ -36,27 +36,27 @@ import OrganismsDeliveryFeatures from 'js/patterns/organisms/blocks/delivery-fea
 ## Newsletter
 <Preview withToolbar>
     <Story name='Newsletter'>
-        <OrganismsNewsletterBlock />
+        <NewsletterBlock />
     </Story>
 </Preview>
 
 ## Summary
 <Preview withToolbar>
     <Story name='Summary'>
-        <OrganismsSummary sum={12430} />
+        <Summary sum={12430} />
     </Story>
 </Preview>
 
 ## Address
 <Preview withToolbar>
     <Story name='Address'>
-        <OrganismsAddressblock />
+        <Addressblock />
     </Story>
 </Preview>
 
 ## Delivery Features
 <Preview withToolbar>
     <Story name='Delivery Features'>
-        <OrganismsDeliveryFeatures />
+        <DeliveryFeatures />
     </Story>
 </Preview>
