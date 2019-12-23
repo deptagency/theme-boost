@@ -1,16 +1,16 @@
 import React from 'react'
 
-import AtomsFormLabel from 'js/patterns/atoms/forms/form-label'
-import AtomsFormInput from 'js/patterns/atoms/forms/form-input'
-import AtomsFormTextarea from 'js/patterns/atoms/forms/form-textarea'
-import AtomsFormElements from 'js/patterns/atoms/forms/form'
+import FormLabel from 'js/patterns/atoms/forms/form-label'
+import FormInput from 'js/patterns/atoms/forms/form-input'
+import FormTextarea from 'js/patterns/atoms/forms/form-textarea'
+import FormElements from 'js/patterns/atoms/forms/form'
 
 export default {
     title: '2.Atoms|Form',
 }
 
 export const collection = () => {
-    return <AtomsFormElements />
+    return <FormElements />
 }
 
 collection.story = {
@@ -18,7 +18,7 @@ collection.story = {
 }
 
 export const label = () => {
-    return <AtomsFormLabel />
+    return <FormLabel />
 }
 
 label.story = {
@@ -26,7 +26,7 @@ label.story = {
 }
 
 export const textarea = () => {
-    return <AtomsFormTextarea />
+    return <FormTextarea />
 }
 
 textarea.story = {
@@ -34,7 +34,7 @@ textarea.story = {
 }
 
 export const input = () => {
-    return <AtomsFormInput />
+    return <FormInput />
 }
 
 input.story = {

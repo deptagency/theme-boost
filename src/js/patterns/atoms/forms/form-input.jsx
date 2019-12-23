@@ -1,19 +1,33 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class AtomsFormInput extends Component {
-    render () {
-        return (<div>
-            <input type='text' id='inp-textfield' name='textfield' />
-        </div>)
+class FormInput extends Component {
+    render() {
+        const props = this.props
+        return (
+            <input {...props} />
+        )
     }
 }
 
-AtomsFormInput.propTypes = {
+FormInput.propTypes = {
+    id: PropTypes.string,
+    type: PropTypes.string,
+    name: PropTypes.string,
+    className: PropTypes.string,
+    checked: PropTypes.bool,
+    onChange: PropTypes.func
 }
 
-AtomsFormInput.defaultProps = {
+FormInput.defaultProps = {
+    id: undefined,
+    type: 'text',
+    name: 'textfield',
+    className: '',
+    checked: undefined,
+    onChange: () => {}
 }
 
-export default ComponentInjector.return('AtomsFormInput', AtomsFormInput)
+export default ComponentInjector.return('FormInput', FormInput)

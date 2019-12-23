@@ -1,6 +1,9 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 
-import MoleculesFormUnit from 'js/patterns/molecules/forms/form-unit'
+import FormInput from 'js/patterns/atoms/forms/form-input'
+import FormRadiobutton from 'js/patterns/atoms/forms/form-radiobutton'
+import FormCheckbox from 'js/patterns/atoms/forms/form-checkbox'
+import FormUnit from 'js/patterns/molecules/forms/form-unit'
 
 <Meta title='3.Molecules|Forms' />
 
@@ -9,84 +12,32 @@ import MoleculesFormUnit from 'js/patterns/molecules/forms/form-unit'
 ## Default Radio
 
 <Preview withToolbar>
-    <Story name='Default Radio'>
-        <div className='c-form-radio'>
-            <input type='radio' id='inp-radio-01' name='radio' className='c-form-radio__input' />
-            <span className='c-form-radio__backdrop' />
-        </div>
+    <Story name='Radiobutton'>
+        <FormRadiobutton />
     </Story>
 </Preview>
 
 ## Active Radio
 
 <Preview withToolbar>
-    <Story name='Active Radio'>
-        <div className='c-form-radio'>
-            <input type='radio' id='inp-radio-01' name='radio' className='c-form-radio__input' checked />
-            <span className='c-form-radio__backdrop' />
-        </div>
+    <Story name='Radiobutton (active)'>
+        <FormRadiobutton checked={true} />
     </Story>
 </Preview>
 
 ## Default Checkbox
 
 <Preview withToolbar>
-    <Story name='Default Checkbox'>
-        <div className='c-form-checkbox'>
-            <input type='checkbox' id='inp-checkbox-01' name='checkbox' className='c-form-checkbox__input' />
-            <span className='c-form-checkbox__backdrop' />
-            <svg className='c-form-checkbox__icon' x='0px' y='0px' viewBox='0 0 200 200'>
-                <path
-                    id='Check'
-                    className='st0'
-                    d='M189.3,18.4c-10-6.6-23.4-4.6-31.1,4.7L81.1,127.9L37.2,95.6c-10.4-7.7-25-5.4-32.7,4.9
-        c-7.7,10.4-5.4,25,4.9,32.7l0,0l60,44.2c5.7,4.2,13,5.6,19.9,3.7c6.7-0.4,13.1-3.5,17.4-9.3l89.2-121
-        C203,40.1,200.1,25.5,189.3,18.4z'
-                />
-            </svg>
-        </div>
+    <Story name='Checkbox'>
+        <FormCheckbox />
     </Story>
 </Preview>
 
 ## Active Checkbox
 
 <Preview withToolbar>
-    <Story name='Active Checkbox'>
-        <div className='c-form-checkbox'>
-            <input
-                type='checkbox'
-                id='inp-checkbox-01'
-                name='checkbox'
-                className='c-form-checkbox__input'
-                checked
-            />
-            <span className='c-form-checkbox__backdrop' />
-            <svg className='c-form-checkbox__icon' x='0px' y='0px' viewBox='0 0 200 200'>
-                <path
-                    id='Check'
-                    className='st0'
-                    d='M189.3,18.4c-10-6.6-23.4-4.6-31.1,4.7L81.1,127.9L37.2,95.6c-10.4-7.7-25-5.4-32.7,4.9
-        c-7.7,10.4-5.4,25,4.9,32.7l0,0l60,44.2c5.7,4.2,13,5.6,19.9,3.7c6.7-0.4,13.1-3.5,17.4-9.3l89.2-121
-        C203,40.1,200.1,25.5,189.3,18.4z'
-                />
-            </svg>
-        </div>
-    </Story>
-</Preview>
-
-## Form Unit
-
-<Preview withToolbar>
-    <Story name='Form Unit'>
-        <MoleculesFormUnit />
-    </Story>
-</Preview>
-
-## Form Helptext
-
-<Preview withToolbar>
-    <Story name='Form Helptext'>
-        <p className='c-form-help-text'>Help Text</p>
+    <Story name='Checkbox (active)'>
+        <FormCheckbox checked={true} />
     </Story>
 </Preview>
 
@@ -96,24 +47,7 @@ import MoleculesFormUnit from 'js/patterns/molecules/forms/form-unit'
     <Story name='Default Choice'>
         <div className='o-block-short'>
             <div className='o-block-short__short-item'>
-                <div className='c-form-checkbox'>
-                    <input
-                        type='checkbox'
-                        id='inp-checkbox-02'
-                        name='checkbox'
-                        className='c-form-checkbox__input'
-                    />
-                    <span className='c-form-checkbox__backdrop' />
-                    <svg className='c-form-checkbox__icon' x='0px' y='0px' viewBox='0 0 200 200'>
-                        <path
-                            id='Check'
-                            className='st0'
-                            d='M189.3,18.4c-10-6.6-23.4-4.6-31.1,4.7L81.1,127.9L37.2,95.6c-10.4-7.7-25-5.4-32.7,4.9
-        c-7.7,10.4-5.4,25,4.9,32.7l0,0l60,44.2c5.7,4.2,13,5.6,19.9,3.7c6.7-0.4,13.1-3.5,17.4-9.3l89.2-121
-        C203,40.1,200.1,25.5,189.3,18.4z'
-                        />
-                    </svg>
-                </div>
+                <FormCheckbox id='inp-checkbox-02' />
             </div>
             <div className='o-block-short__body'>
                 <label htmlFor='inp-checkbox-02' className='c-form-label'>
@@ -130,25 +64,7 @@ import MoleculesFormUnit from 'js/patterns/molecules/forms/form-unit'
     <Story name='Active Choice'>
         <div className='o-block-short'>
             <div className='o-block-short__short-item'>
-                <div className='c-form-checkbox'>
-                    <input
-                        type='checkbox'
-                        id='inp-checkbox-03'
-                        name='checkbox'
-                        className='c-form-checkbox__input'
-                        checked
-                    />
-                    <span className='c-form-checkbox__backdrop' />
-                    <svg className='c-form-checkbox__icon' x='0px' y='0px' viewBox='0 0 200 200'>
-                        <path
-                            id='Check'
-                            className='st0'
-                            d='M189.3,18.4c-10-6.6-23.4-4.6-31.1,4.7L81.1,127.9L37.2,95.6c-10.4-7.7-25-5.4-32.7,4.9
-      c-7.7,10.4-5.4,25,4.9,32.7l0,0l60,44.2c5.7,4.2,13,5.6,19.9,3.7c6.7-0.4,13.1-3.5,17.4-9.3l89.2-121
-      C203,40.1,200.1,25.5,189.3,18.4z'
-                        />
-                    </svg>
-                </div>
+                <FormCheckbox id='inp-checkbox-03' checked={true} />
             </div>
             <div className='o-block-short__body'>
                 <label htmlFor='inp-checkbox-03' className='c-form-label'>
@@ -156,5 +72,21 @@ import MoleculesFormUnit from 'js/patterns/molecules/forms/form-unit'
                 </label>
             </div>
         </div>
+    </Story>
+</Preview>
+
+## Form Unit
+
+<Preview withToolbar>
+    <Story name='Input with Unit'>
+        <FormUnit />
+    </Story>
+</Preview>
+
+## Form Helptext
+
+<Preview withToolbar>
+    <Story name='Helptext'>
+        <p className='c-form-help-text'>Help Text</p>
     </Story>
 </Preview>
