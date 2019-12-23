@@ -7,9 +7,11 @@ class AtomsFormLabel extends Component {
     render () {
         const { className, value } = this.props
 
-        return (<div className={className}>
-            <label htmlFor=''>{value}</label>
-        </div>)
+        return (
+            <div className={className}>
+                <label htmlFor=''>{value}</label>
+            </div>
+        )
     }
 }
 

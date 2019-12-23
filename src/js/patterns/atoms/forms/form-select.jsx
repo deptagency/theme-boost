@@ -3,26 +3,28 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class AtomsFormSelect extends Component {
+class FormSelect extends Component {
     render () {
         const { options } = this.props
 
-        return (<div>
-            <select name='select' id='inp-select'>
-                {options.map((o) => {
-                  return <option value={o}>{o}</option>
-              })}
-            </select>
-        </div>)
+        return (
+            <div>
+                <select name='select' id='inp-select'>
+                    {options.map((o) => {
+                        return <option value={o}>{o}</option>
+                    })}
+                </select>
+            </div>
+        )
     }
 }
 
-AtomsFormSelect.propTypes = {
+FormSelect.propTypes = {
     options: PropTypes.array.isRequired,
 }
 
-AtomsFormSelect.defaultProps = {
+FormSelect.defaultProps = {
     options: ['value', 'value', 'value'],
 }
 
-export default ComponentInjector.return('AtomsFormSelect', AtomsFormSelect)
+export default ComponentInjector.return('FormSelect', FormSelect)

@@ -1,75 +1,39 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 
-import FormInput from 'js/patterns/atoms/forms/form-input'
-import FormRadiobutton from 'js/patterns/atoms/forms/form-radiobutton'
-import FormCheckbox from 'js/patterns/atoms/forms/form-checkbox'
+import Label from 'js/patterns/atoms/forms/form-label'
+import Checkbox from 'js/patterns/atoms/forms/form-checkbox'
+import Radiobutton from 'js/patterns/atoms/forms/form-radiobutton'
 import FormUnit from 'js/patterns/molecules/forms/form-unit'
 
 <Meta title='3.Molecules|Forms' />
 
 # Form Elements
 
-## Default Radio
+## Checkbox with Label
 
 <Preview withToolbar>
-    <Story name='Radiobutton'>
-        <FormRadiobutton />
-    </Story>
-</Preview>
-
-## Active Radio
-
-<Preview withToolbar>
-    <Story name='Radiobutton (active)'>
-        <FormRadiobutton checked={true} />
-    </Story>
-</Preview>
-
-## Default Checkbox
-
-<Preview withToolbar>
-    <Story name='Checkbox'>
-        <FormCheckbox />
-    </Story>
-</Preview>
-
-## Active Checkbox
-
-<Preview withToolbar>
-    <Story name='Checkbox (active)'>
-        <FormCheckbox checked={true} />
-    </Story>
-</Preview>
-
-## Default Choice
-
-<Preview withToolbar>
-    <Story name='Default Choice'>
+    <Story name='Checkbox with Label'>
         <div className='o-block-short'>
             <div className='o-block-short__short-item'>
-                <FormCheckbox id='inp-checkbox-02' />
+                <Checkbox id='inp-checkbox-02' />
             </div>
             <div className='o-block-short__body'>
-                <label htmlFor='inp-checkbox-02' className='c-form-label'>
-                    Checkbox
-                </label>
+                <Label className="c-form-label" htmlFor="inp-checkbox-02" value="Checkbox-Label" />
             </div>
         </div>
     </Story>
 </Preview>
 
-## Active Choice
+## Radiobutton with Label
 
 <Preview withToolbar>
-    <Story name='Active Choice'>
+    <Story name='Radiobutton with Label'>
         <div className='o-block-short'>
             <div className='o-block-short__short-item'>
-                <FormCheckbox id='inp-checkbox-03' checked={true} />
+                <Radiobutton id='inp-radiobutton-03' />
             </div>
             <div className='o-block-short__body'>
-                <label htmlFor='inp-checkbox-03' className='c-form-label'>
-                    Checkbox
-                </label>
+                <Label className="c-form-label" htmlFor="inp-radiobutton-03" value="Radiobutton-Label" />
             </div>
         </div>
     </Story>
@@ -80,13 +44,5 @@ import FormUnit from 'js/patterns/molecules/forms/form-unit'
 <Preview withToolbar>
     <Story name='Input with Unit'>
         <FormUnit />
-    </Story>
-</Preview>
-
-## Form Helptext
-
-<Preview withToolbar>
-    <Story name='Helptext'>
-        <p className='c-form-help-text'>Help Text</p>
     </Story>
 </Preview>
