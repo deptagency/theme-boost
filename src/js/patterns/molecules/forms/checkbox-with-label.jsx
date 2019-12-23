@@ -10,10 +10,10 @@ class CheckboxWithLabel extends Component {
         return (
             <div className='o-block-short'>
                 <div className='o-block-short__short-item'>
-                    <Checkbox id='inp-checkbox-02' />
+                    <Checkbox id={this.props.id} />
                 </div>
                 <div className='o-block-short__body'>
-                    <Label className="c-form-label" htmlFor="inp-checkbox-02" value={this.props.label} />
+                    <Label className="c-form-label" htmlFor={this.props.id} value={this.props.label} />
                 </div>
             </div>
         )
@@ -21,7 +21,7 @@ class CheckboxWithLabel extends Component {
 }
 
 CheckboxWithLabel.propTypes = {
-    id: PropTypes.string,
+    id: PropTypes.string.isRequired,
     name: PropTypes.string,
     className: PropTypes.string,
     label: PropTypes.string.isRequired

@@ -2,7 +2,7 @@ import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 
 import Promobox from 'js/patterns/molecules/promobox/promobox'
 
-import Choice from 'js/patterns/organisms/form/form-choice'
+import RadiobuttonWithLabel from 'js/patterns/molecules/forms/radiobutton-with-label'
 import ProductListing from 'js/patterns/organisms/listings/product-listing'
 import BundleListing from 'js/patterns/organisms/listings/bundle-listing'
 import PaymentListingIcons from 'js/patterns/organisms/listings/payment-listing-icons'
@@ -87,16 +87,16 @@ import CategoryBoxes from 'js/patterns/organisms/listings/category-boxes'
     <Story name='Choices Listing'>
         <ul className='o-list-inline'>
             <li className='o-list-inline__item'>
-                <Choice />
+                <RadiobuttonWithLabel label='Option #1' id='opt1' />
             </li>
             <li className='o-list-inline__item'>
-                <Choice />
+                <RadiobuttonWithLabel label='Option #2' id='opt2' />
             </li>
             <li className='o-list-inline__item'>
-                <Choice />
+                <RadiobuttonWithLabel label='Option #3' id='opt3' />
             </li>
             <li className='o-list-inline__item'>
-                <Choice />
+                <RadiobuttonWithLabel label='Option #4' id='opt4' />
             </li>
         </ul>
     </Story>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import OrganismsChoice from 'js/patterns/organisms/form/form-choice'
+import RadiobuttonWithLabel from 'js/patterns/molecules/forms/radiobutton-with-label'
 import FromTo from 'js/patterns/organisms/form/from-to'
 
 class OrganismsFormContact extends Component {
@@ -29,10 +29,10 @@ class OrganismsFormContact extends Component {
                             <div className='o-distance-s'>
                                 <ul className='o-list-inline'>
                                     <li className='o-list-inline__item'>
-                                        <OrganismsChoice />
+                                        <RadiobuttonWithLabel label="männlich" id='male' />
                                     </li>
                                     <li className='o-list-inline__item'>
-                                        <OrganismsChoice />
+                                        <RadiobuttonWithLabel label="weiblich" id='female' />
                                     </li>
                                 </ul>
                             </div>
