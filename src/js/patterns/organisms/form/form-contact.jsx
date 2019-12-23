@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import OrganismsChoice from 'js/patterns/organisms/form/form-choice'
-import MoleculesFormFromTo from 'js/patterns/molecules/forms/form-element-from-to'
+import FromTo from 'js/patterns/organisms/form/from-to'
 
 class OrganismsFormContact extends Component {
     render () {
@@ -63,7 +63,7 @@ class OrganismsFormContact extends Component {
                             <input type='text' className='o-distance-xs' />
                         </div>
                         <div className='o-form-area__column-6-6'>
-                            <MoleculesFormFromTo />
+                            <FromTo />
                         </div>
                         <div className='o-form-area__column-6-6'>
                             <label htmlFor='' className='c-form-label'>Credit Card / CVC</label>

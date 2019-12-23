@@ -3,7 +3,8 @@ import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import Label from 'js/patterns/atoms/forms/form-label'
 import Checkbox from 'js/patterns/atoms/forms/form-checkbox'
 import Radiobutton from 'js/patterns/atoms/forms/form-radiobutton'
-import FormUnit from 'js/patterns/molecules/forms/form-unit'
+
+import InputWithUnit from 'js/patterns/molecules/forms/input-with-unit'
 
 <Meta title='3.Molecules|Forms' />
 
@@ -43,6 +44,6 @@ import FormUnit from 'js/patterns/molecules/forms/form-unit'
 
 <Preview withToolbar>
     <Story name='Input with Unit'>
-        <FormUnit />
+        <InputWithUnit unit='€' prefix={false} connected={false} />
     </Story>
 </Preview>

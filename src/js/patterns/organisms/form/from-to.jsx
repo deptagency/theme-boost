@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class FormElementFromTo extends Component {
+import InputWithUnit from 'js/patterns/molecules/forms/input-with-unit'
+
+class FromTo extends Component {
     render () {
         const { className } = this.props
 
@@ -11,17 +13,11 @@ class FormElementFromTo extends Component {
             <div className={`c-form-element ${className}`}>
                 <div className='c-form-from-to'>
                     <div className='c-form-from-to__item'>
-                        <div className='c-form-unit'>
-                            <input type='text' className='c-form-unit__input' id='inp-unit' />
-                            <div className='c-form-unit__type'>€</div>
-                        </div>
+                        <InputWithUnit unit='€' />
                     </div>
                     <div className='c-form-from-to__item c-form-from-to__item--connector' />
                     <div className='c-form-from-to__item'>
-                        <div className='c-form-unit'>
-                            <input type='text' className='c-form-unit__input' id='inp-unit' />
-                            <div className='c-form-unit__type'>€</div>
-                        </div>
+                        <InputWithUnit unit='€' />
                     </div>
                 </div>
             </div>
@@ -29,12 +25,12 @@ class FormElementFromTo extends Component {
     }
 }
 
-FormElementFromTo.propTypes = {
+FromTo.propTypes = {
     className: PropTypes.string,
 }
 
-FormElementFromTo.defaultProps = {
+FromTo.defaultProps = {
     className: '',
 }
 
-export default ComponentInjector.return('FormElementFromTo', FormElementFromTo)
+export default ComponentInjector.return('FromTo', FromTo)

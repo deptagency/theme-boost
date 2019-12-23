@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import AtomsFormLabel from '../atoms/forms/form-label'
 import OrganismsHeaderSlideIn from '../organisms/base/header-slide-in'
 import OrganismsSizes from '../organisms/sizes/sizes'
-import MoleculesFormFromTo from '../molecules/forms/form-element-from-to'
+import FromTo from '../organisms/forms/form-element-from-to'
 import MobileSwipe from './mobile-swipe'
 import OrganismsSorting from '../organisms/sorting/sorting'
 import MoleculesButton from '../molecules/buttons/button'
@@ -32,7 +32,7 @@ const TemplatesFilter = ({ setIsOpen, count }) => {
 
                 <div className='filter-component'>
                     <AtomsFormLabel className='filter-input-label' value='Preis' />
-                    <MoleculesFormFromTo className='extra-margin' />
+                    <FromTo className='extra-margin' />
                 </div>
 
                 <div className='filter-component'>
