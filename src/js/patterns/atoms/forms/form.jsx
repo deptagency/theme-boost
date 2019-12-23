@@ -2,101 +2,111 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
+import Input from 'js/patterns/atoms/forms/form-input'
+import Checkbox from 'js/patterns/atoms/forms/form-checkbox'
+import Radiobutton from 'js/patterns/atoms/forms/form-radiobutton'
+import Select from 'js/patterns/atoms/forms/form-select'
+import Textarea from 'js/patterns/atoms/forms/form-textarea'
+import Fieldset from 'js/patterns/atoms/forms/form-fieldset'
+import Label from 'js/patterns/atoms/forms/form-label'
+
 class AtomsForms extends Component {
     render () {
         return (<div>
             <label>Input Text Placeholder</label>
-            <input type='text' name='input' placeholder='Text' />
+            <Input placeholder='Text' />
             <br />
             <label>Input Number</label>
-            <input type='number' name='input' placeholder='Number' />
+            <Input type='number' placeholder='Number' />
             <br />
             <label>Input Date</label>
-            <input type='date' name='input' placeholder='date' />
+            <Input type='date' placeholder='Date' />
             <br />
             <label>Input Color</label>
-            <input type='color' name='input' placeholder='color' />
+            <Input type='color' placeholder='Color' />
             <br />
             <label>Input Range</label>
-            <input type='range' name='range' min='0' max='100' value='90' step='10' />
+            <Input type='range' min={0} max={100} value={90} step={10} />
             <br />
             <label>Input Text</label>
-            <input type='text' name='input' value='Value' />
+            <Input type='text' value='Value' />
             <br />
             <label>Input Tel</label>
-            <input type='tel' name='input' placeholder='tel' />
+            <Input type='tel' placeholder='Tel' />
             <br />
             <label>Input Mail</label>
-            <input type='email' name='input' placeholder='email' />
+            <Input type='email' placeholder='Email' />
             <br />
             <label>Input Mail Disabled</label>
-            <input type='email' name='input' value='tel Disabled' disabled />
+            <Input type='email' value='Email Disabled' disabled={true} />
             <br />
             <label>Input Mail Required</label>
-            <input type='email' name='input' value='tel Required' required />
+            <Input type='email' value='Email Required' required={true} />
             <br />
             <label>Input Mail Hidden</label>
-            <input type='email' name='input' value='Email hidden' hidden />
+            <Input type='email' value='Email hidden' hidden={true} />
             <br />
             <label>Input Password</label>
-            <input type='password' name='input' />
+            <Input type='password' />
             <br />
+
             <label>Checkbox Default</label>
-            <input type='checkbox' name='checkbox' value='Value' />
+            <Checkbox value='VAL' />
             <br />
             <label>Checkbox Checked</label>
-            <input type='checkbox' name='checkbox' value='Value' checked />
+            <Checkbox value='VAL' checked={true} />
             <br />
             <label>Checkbox Disabled</label>
-            <input type='checkbox' name='checkbox' value='Value' disabled />
+            <Checkbox value='VAL' disabled={true} />
             <br />
             <label>Checkbox Required</label>
-            <input type='checkbox' name='checkbox' value='Value' required />
+            <Checkbox value='VAL' required={true} />
             <br />
+
             <label>Radio Default</label>
-            <input type='radio' name='radio' value='Value' />
+            <Radiobutton value='val' />
             <br />
             <label>Radio Checked</label>
-            <input type='radio' name='radio' value='Value' checked />
+            <Radiobutton value='val' checked={true} />
             <br />
             <label>Radio Disabled</label>
-            <input type='radio' name='radio' value='Value' disabled />
+            <Radiobutton value='val' disabled={true} />
             <br />
             <label>Radio Required</label>
-            <input type='radio' name='radio' value='Value' required />
+            <Radiobutton value='val' required={true} />
 
             <br />
             <label>Select</label>
-            <select id='' name='select'>
-                <option>Bitte auswählen</option>
-                <option value='Value A'>Value A</option>
-                <option value='Value B'>Value B</option>
-                <option value='Value C'>Value C</option>
-                <option value='Value D'>Value D</option>
-            </select>
+            <Select name='select_1' options={[
+                    {value: 'none', label: '-- Bitte wählen --'},
+                    {value: 'val_1', label: 'Value 1'},
+                    {value: 'val_2', label: 'Value 2'},
+                    {value: 'val_3', label: 'Value 3'},
+                    {value: 'val_4', label: 'Value 4'}
+                ]} />
 
             <br />
             <label>Select Multiple</label>
-            <select id='' name='select' multiple>
-                <option>Bitte auswählen</option>
-                <option value='Value A'>Value A</option>
-                <option value='Value B'>Value B</option>
-                <option value='Value C'>Value C</option>
-                <option value='Value D'>Value D</option>
-            </select>
+            <Select name='select_2' multiple={true} options={[
+                    {value: 'val_1', label: 'Value 1'},
+                    {value: 'val_2', label: 'Value 2'},
+                    {value: 'val_3', label: 'Value 3'},
+                    {value: 'val_4', label: 'Value 4'}
+                ]} />
 
             <br />
             <label>Textarea</label>
-            <textarea />
+            <Textarea name='myText' />
 
-            <label>Label</label>
+            <br />
+            <Label value='Test-Label' />
 
             <br />
             <label>Fieldset</label>
-            <fieldset>
-                <legend>Legend</legend>
-                <input type='text' />
-            </fieldset>
+            <Fieldset legend='Fieldset-Legend'>
+                <Input placeholder='Vorname' />
+                <Input placeholder='Nachname' />
+            </Fieldset>
 
         </div>)
     }

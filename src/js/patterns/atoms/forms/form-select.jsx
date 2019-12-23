@@ -5,26 +5,28 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class FormSelect extends Component {
     render () {
-        const { options } = this.props
-
+        const options = this.props.options
+        
         return (
-            <div>
-                <select name='select' id='inp-select'>
-                    {options.map((o) => {
-                        return <option value={o}>{o}</option>
-                    })}
-                </select>
-            </div>
+            <select name={this.props.name} multiple={this.props.multiple}>
+                {options.map((option) => {
+                    return <option key={option.value} value={option.value}>{option.label}</option>
+                })}
+            </select>
         )
     }
 }
 
 FormSelect.propTypes = {
+    name: PropTypes.string,
     options: PropTypes.array.isRequired,
+    multiple: PropTypes.bool
 }
 
 FormSelect.defaultProps = {
-    options: ['value', 'value', 'value'],
+    name: undefined,
+    options: undefined,
+    multiple: undefined
 }
 
 export default ComponentInjector.return('FormSelect', FormSelect)

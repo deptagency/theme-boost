@@ -1,19 +1,21 @@
 import React, { Component } from 'react'
-
+import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class AtomsFormTextarea extends Component {
+class Textarea extends Component {
     render () {
-        return (<div>
-            <textarea name='textarea' id='textarea' />
-        </div>)
+        return (<textarea name={this.props.name} id={this.props.id} />)
     }
 }
 
-AtomsFormTextarea.propTypes = {
+Textarea.propTypes = {
+    id: PropTypes.string,
+    name: PropTypes.string,
 }
 
-AtomsFormTextarea.defaultProps = {
+Textarea.defaultProps = {
+    id: undefined,
+    name: undefined,
 }
 
-export default ComponentInjector.return('AtomsFormTextarea', AtomsFormTextarea)
+export default ComponentInjector.return('Textarea', Textarea)
