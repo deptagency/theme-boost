@@ -6,7 +6,7 @@ import Input from 'js/patterns/atoms/forms/input'
 
 class InputWithUnit extends Component {
     render () {
-        const prefix = this.props.prefix;
+        const prefix = this.props.prefix
 
         return (
             <div className='c-form-unit'>
@@ -20,7 +20,6 @@ class InputWithUnit extends Component {
 
 InputWithUnit.propTypes = {
     id: PropTypes.string,
-    name: PropTypes.string,
     className: PropTypes.string,
     unit: PropTypes.string,
     prefix: PropTypes.bool,
@@ -29,7 +28,6 @@ InputWithUnit.propTypes = {
 
 InputWithUnit.defaultProps = {
     id: undefined,
-    name: '',
     className: 'c-form-unit__input',
     unit: undefined,
     prefix: false,

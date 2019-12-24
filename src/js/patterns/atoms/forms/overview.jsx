@@ -38,13 +38,13 @@ class Overview extends Component {
             <Input type='email' placeholder='Email' />
             <br />
             <label>Input Mail Disabled</label>
-            <Input type='email' value='Email Disabled' disabled={true} />
+            <Input type='email' value='Email Disabled' disabled />
             <br />
             <label>Input Mail Required</label>
-            <Input type='email' value='Email Required' required={true} />
+            <Input type='email' value='Email Required' required />
             <br />
             <label>Input Mail Hidden</label>
-            <Input type='email' value='Email hidden' hidden={true} />
+            <Input type='email' value='Email hidden' hidden />
             <br />
             <label>Input Password</label>
             <Input type='password' />
@@ -54,44 +54,44 @@ class Overview extends Component {
             <Checkbox value='VAL' />
             <br />
             <label>Checkbox Checked</label>
-            <Checkbox value='VAL' checked={true} />
+            <Checkbox value='VAL' checked />
             <br />
             <label>Checkbox Disabled</label>
-            <Checkbox value='VAL' disabled={true} />
+            <Checkbox value='VAL' disabled />
             <br />
             <label>Checkbox Required</label>
-            <Checkbox value='VAL' required={true} />
+            <Checkbox value='VAL' required />
             <br />
 
             <label>Radio Default</label>
             <Radiobutton value='val' />
             <br />
             <label>Radio Checked</label>
-            <Radiobutton value='val' checked={true} />
+            <Radiobutton value='val' checked />
             <br />
             <label>Radio Disabled</label>
-            <Radiobutton value='val' disabled={true} />
+            <Radiobutton value='val' disabled />
             <br />
             <label>Radio Required</label>
-            <Radiobutton value='val' required={true} />
+            <Radiobutton value='val' required />
 
             <br />
             <label>Selectbox</label>
             <Selectbox name='select_1' options={[
-                    {key: '', value: '-- Bitte wählen --'},
-                    {key: 'val_1', value: 'Value 1'},
-                    {key: 'val_2', value: 'Value 2'},
-                    {key: 'val_3', value: 'Value 3'},
-                    {key: 'val_4', value: 'Value 4'}
+                    { key: '', value: '-- Bitte wählen --' },
+                    { key: 'val_1', value: 'Value 1' },
+                    { key: 'val_2', value: 'Value 2' },
+                    { key: 'val_3', value: 'Value 3' },
+                    { key: 'val_4', value: 'Value 4' },
                 ]} />
 
             <br />
             <label>Select Multiple</label>
-            <Selectbox name='select_2' multiple={true} options={[
-                    {key: 'val_1', value: 'Value 1'},
-                    {key: 'val_2', value: 'Value 2'},
-                    {key: 'val_3', value: 'Value 3'},
-                    {key: 'val_4', value: 'Value 4'}
+            <Selectbox name='select_2' multiple options={[
+                    { key: 'val_1', value: 'Value 1' },
+                    { key: 'val_2', value: 'Value 2' },
+                    { key: 'val_3', value: 'Value 3' },
+                    { key: 'val_4', value: 'Value 4' },
                 ]} />
 
             <br />

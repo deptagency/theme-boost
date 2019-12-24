@@ -18,6 +18,7 @@ class Fieldset extends Component {
 Fieldset.propTypes = {
     legend: PropTypes.string,
     className: PropTypes.string,
+    children: PropTypes.any,
 }
 
 Fieldset.defaultProps = {

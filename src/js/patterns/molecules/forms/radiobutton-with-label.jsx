@@ -13,7 +13,7 @@ class RadiobuttonWithLabel extends Component {
                     <Radiobutton id={this.props.id} />
                 </div>
                 <div className='o-block-short__body'>
-                    <Label className="c-form-label" htmlFor={this.props.id} label={this.props.label} />
+                    <Label className='c-form-label' htmlFor={this.props.id} label={this.props.label} />
                 </div>
             </div>
         )
@@ -22,15 +22,11 @@ class RadiobuttonWithLabel extends Component {
 
 RadiobuttonWithLabel.propTypes = {
     id: PropTypes.string.isRequired,
-    name: PropTypes.string,
-    className: PropTypes.string,
     label: PropTypes.string.isRequired,
 }
 
 RadiobuttonWithLabel.defaultProps = {
     id: undefined,
-    name: '',
-    className: 'c-form-unit__input',
     label: 'Radiobutton-Label',
 }
 

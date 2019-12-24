@@ -5,10 +5,10 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import Input from 'js/patterns/atoms/forms/input'
 
 class Radiobutton extends Component {
-    constructor(props) {
-        super(props);
+    constructor (props) {
+        super(props)
 
-        this.onChange = this.onChange.bind(this);
+        this.onChange = this.onChange.bind(this)
 
         this.state = {
             checked: props.checked,
@@ -16,14 +16,14 @@ class Radiobutton extends Component {
             required: props.required,
         }
     }
-    
-    onChange() {
+
+    onChange () {
         this.setState({
-            checked: !this.state.checked
-        });
+            checked: !this.state.checked,
+        })
     }
 
-    render() {
+    render () {
         return (
             <div className='c-form-radio'>
                 <Input

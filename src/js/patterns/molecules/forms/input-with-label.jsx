@@ -7,7 +7,7 @@ import Input from 'js/patterns/atoms/forms/input'
 
 class InputWithLabel extends Component {
     render () {
-        return(
+        return (
             <div className={this.props.className}>
                 <Label htmlFor={this.props.id} className='c-form-label' label={this.props.label} />
                 <Input type={this.props.type} className='o-distance-xs' id={this.props.id} name={this.props.name} />

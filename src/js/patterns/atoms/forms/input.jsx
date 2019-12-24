@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class Input extends Component {
-    constructor(props) {
-        super(props);
+    constructor (props) {
+        super(props)
 
-        this.onChange = this.onChange.bind(this);
+        this.onChange = this.onChange.bind(this)
 
         this.state = {
             checked: props.checked,
@@ -18,11 +18,11 @@ class Input extends Component {
         }
     }
 
-    onChange() {
-        this.setState({ value: this.state.value });
+    onChange () {
+        this.setState({ value: this.state.value })
     }
-    
-    render() {
+
+    render () {
         return (
             <input
                 id={this.props.id}
@@ -54,7 +54,6 @@ Input.propTypes = {
     disabled: PropTypes.bool,
     required: PropTypes.bool,
     hidden: PropTypes.bool,
-    onChange: PropTypes.func,
     value: PropTypes.any,
     min: PropTypes.number,
     max: PropTypes.number,

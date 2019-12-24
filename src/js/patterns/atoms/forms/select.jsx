@@ -6,7 +6,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 class Selectbox extends Component {
     render () {
         const options = this.props.options
-        
+
         return (
             <select name={this.props.name} multiple={this.props.multiple}>
                 {options.map((option) => {
@@ -24,13 +24,13 @@ class Selectbox extends Component {
 Selectbox.propTypes = {
     name: PropTypes.string,
     options: PropTypes.array.isRequired,
-    multiple: PropTypes.bool
+    multiple: PropTypes.bool,
 }
 
 Selectbox.defaultProps = {
     name: undefined,
     options: undefined,
-    multiple: undefined
+    multiple: undefined,
 }
 
 export default ComponentInjector.return('Selectbox', Selectbox)

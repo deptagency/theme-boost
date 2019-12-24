@@ -13,34 +13,34 @@ class Contact extends Component {
                 <h2>Contact Form</h2>
                 <form method='' className='o-distance-m'>
                     <Fieldset legend='Kontaktinformationen'>
-                        <InputWithLabel id='contact_firstname' label="Firstname" name='contact_firstname' />
-                        <InputWithLabel id='contact_lastname' label="Lastname" name='contact_lastname' />
+                        <InputWithLabel id='contact_firstname' label='Firstname' name='contact_firstname' />
+                        <InputWithLabel id='contact_lastname' label='Lastname' name='contact_lastname' />
 
-                        <InputWithLabel id='email' label="E-Mail Adress" type='email' />
-                        
+                        <InputWithLabel id='email' label='E-Mail Adress' type='email' />
+
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <p className='c-form-label'>Geschlecht wählen</p>
                             <div className='o-distance-s'>
                                 <ul className='o-list-inline'>
                                     <li className='o-list-inline__item'>
-                                        <RadiobuttonWithLabel label="männlich" id='male' />
+                                        <RadiobuttonWithLabel label='männlich' id='male' />
                                     </li>
                                     <li className='o-list-inline__item'>
-                                        <RadiobuttonWithLabel label="weiblich" id='female' />
+                                        <RadiobuttonWithLabel label='weiblich' id='female' />
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </Fieldset>
                     <Fieldset className='o-distance' legend='Lieferanschrift'>
-                        <InputWithLabel id='shipping_firstname' label="Firstname" name='shipping_firstname' />
-                        <InputWithLabel id='shipping_lastname' label="Lastname" name='shipping_lastname' />
+                        <InputWithLabel id='shipping_firstname' label='Firstname' name='shipping_firstname' />
+                        <InputWithLabel id='shipping_lastname' label='Lastname' name='shipping_lastname' />
 
-                        <InputWithLabel id='shipping_address' label="Address" name='shipping_address' />
+                        <InputWithLabel id='shipping_address' label='Address' name='shipping_address' />
 
-                        <InputWithLabel id='shipping_expiry_date' label="Ablaufdatum" name='shipping_expiry_date' className='o-form-area__column-3-6 o-form-area__column--breakpoint-l-1-6' />
-                        <InputWithLabel id='shipping_cvc' label="CVC" name='shipping_cvc' className='o-form-area__column-3-6 o-form-area__column--breakpoint-l-1-6' />
-                        
+                        <InputWithLabel id='shipping_expiry_date' label='Ablaufdatum' name='shipping_expiry_date' className='o-form-area__column-3-6 o-form-area__column--breakpoint-l-1-6' />
+                        <InputWithLabel id='shipping_cvc' label='CVC' name='shipping_cvc' className='o-form-area__column-3-6 o-form-area__column--breakpoint-l-1-6' />
+
                         <div className='o-form-area__column-6-6'>
                             <FromTo />
                         </div>
@@ -56,7 +56,6 @@ class Contact extends Component {
                                 </div>
                             </div>
                         </div>
-
 
                         <div className='o-form-area__column-2-6 o-form-area__new-row'>
                             <label htmlFor='' className='c-form-label'>ZIP</label>
