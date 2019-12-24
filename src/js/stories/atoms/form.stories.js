@@ -55,7 +55,12 @@ radiobutton.story = {
 }
 
 export const selectbox = () => {
-    return <Selectbox />
+    return <Selectbox options={[
+        { key: 'v1', value: 'Value A' },
+        { key: 'v2', value: 'Value B' },
+        { key: 'v3', value: 'Value C' },
+        { key: 'v4', value: 'Value D' }
+    ]} />
 }
 selectbox.story = {
     name: 'Selectbox',

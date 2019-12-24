@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class FormInput extends Component {
+class Input extends Component {
     constructor(props) {
         super(props);
 
@@ -44,7 +44,7 @@ class FormInput extends Component {
     }
 }
 
-FormInput.propTypes = {
+Input.propTypes = {
     id: PropTypes.string,
     type: PropTypes.string,
     name: PropTypes.string,
@@ -61,7 +61,7 @@ FormInput.propTypes = {
     step: PropTypes.number,
 }
 
-FormInput.defaultProps = {
+Input.defaultProps = {
     id: undefined,
     type: 'text',
     name: 'textfield',
@@ -77,4 +77,4 @@ FormInput.defaultProps = {
     step: undefined,
 }
 
-export default ComponentInjector.return('FormInput', FormInput)
+export default ComponentInjector.return('Input', Input)

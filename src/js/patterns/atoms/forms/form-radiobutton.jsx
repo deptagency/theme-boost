@@ -4,7 +4,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import FormInput from 'js/patterns/atoms/forms/form-input'
 
-class FormRadiobutton extends Component {
+class Radiobutton extends Component {
     constructor(props) {
         super(props);
 
@@ -42,18 +42,18 @@ class FormRadiobutton extends Component {
     }
 }
 
-FormRadiobutton.propTypes = {
+Radiobutton.propTypes = {
     id: PropTypes.string,
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
     required: PropTypes.bool,
 }
 
-FormRadiobutton.defaultProps = {
+Radiobutton.defaultProps = {
     id: undefined,
     checked: undefined,
     disabled: undefined,
     required: undefined,
 }
 
-export default ComponentInjector.return('FormRadiobutton', FormRadiobutton)
+export default ComponentInjector.return('Radiobutton', Radiobutton)

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class AtomsFormLabel extends Component {
+class Label extends Component {
     render () {
         const { className, value } = this.props
 
@@ -15,16 +15,16 @@ class AtomsFormLabel extends Component {
     }
 }
 
-AtomsFormLabel.propTypes = {
+Label.propTypes = {
     value: PropTypes.string.isRequired,
     className: PropTypes.string.isRequired,
     htmlFor: PropTypes.string,
 }
 
-AtomsFormLabel.defaultProps = {
+Label.defaultProps = {
     value: 'Label',
     className: '',
     htmlFor: '',
 }
 
-export default ComponentInjector.return('AtomsFormLabel', AtomsFormLabel)
+export default ComponentInjector.return('Label', Label)

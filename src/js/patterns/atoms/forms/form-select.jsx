@@ -3,30 +3,34 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class FormSelect extends Component {
+class Selectbox extends Component {
     render () {
         const options = this.props.options
         
         return (
             <select name={this.props.name} multiple={this.props.multiple}>
                 {options.map((option) => {
-                    return <option key={option.value} value={option.value}>{option.label}</option>
+                    if (typeof option === 'object') {
+                        return <option key={option.key} value={option.key}>{option.value}</option>
+                    } else {
+                        return <option key={option} value={option}>{option}</option>
+                    }
                 })}
             </select>
         )
     }
 }
 
-FormSelect.propTypes = {
+Selectbox.propTypes = {
     name: PropTypes.string,
     options: PropTypes.array.isRequired,
     multiple: PropTypes.bool
 }
 
-FormSelect.defaultProps = {
+Selectbox.defaultProps = {
     name: undefined,
     options: undefined,
     multiple: undefined
 }
 
-export default ComponentInjector.return('FormSelect', FormSelect)
+export default ComponentInjector.return('Selectbox', Selectbox)

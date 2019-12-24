@@ -4,7 +4,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import FormInput from 'js/patterns/atoms/forms/form-input'
 
-class FormCheckbox extends Component {
+class Checkbox extends Component {
     constructor(props) {
         super(props);
 
@@ -51,18 +51,18 @@ class FormCheckbox extends Component {
     }
 }
 
-FormCheckbox.propTypes = {
+Checkbox.propTypes = {
     id: PropTypes.string,
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
     required: PropTypes.bool,
 }
 
-FormCheckbox.defaultProps = {
+Checkbox.defaultProps = {
     id: undefined,
     checked: undefined,
     disabled: undefined,
     required: undefined,
 }
 
-export default ComponentInjector.return('FormCheckbox', FormCheckbox)
+export default ComponentInjector.return('Checkbox', Checkbox)

@@ -5,7 +5,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import Input from 'js/patterns/atoms/forms/form-input'
 import Checkbox from 'js/patterns/atoms/forms/form-checkbox'
 import Radiobutton from 'js/patterns/atoms/forms/form-radiobutton'
-import Select from 'js/patterns/atoms/forms/form-select'
+import Selectbox from 'js/patterns/atoms/forms/form-select'
 import Textarea from 'js/patterns/atoms/forms/form-textarea'
 import Fieldset from 'js/patterns/atoms/forms/form-fieldset'
 import Label from 'js/patterns/atoms/forms/form-label'
@@ -76,23 +76,27 @@ class AtomsForms extends Component {
             <Radiobutton value='val' required={true} />
 
             <br />
-            <label>Select</label>
-            <Select name='select_1' options={[
-                    {value: 'none', label: '-- Bitte wählen --'},
-                    {value: 'val_1', label: 'Value 1'},
-                    {value: 'val_2', label: 'Value 2'},
-                    {value: 'val_3', label: 'Value 3'},
-                    {value: 'val_4', label: 'Value 4'}
+            <label>Selectbox</label>
+            <Selectbox name='select_1' options={[
+                    {key: '', value: '-- Bitte wählen --'},
+                    {key: 'val_1', value: 'Value 1'},
+                    {key: 'val_2', value: 'Value 2'},
+                    {key: 'val_3', value: 'Value 3'},
+                    {key: 'val_4', value: 'Value 4'}
                 ]} />
 
             <br />
             <label>Select Multiple</label>
-            <Select name='select_2' multiple={true} options={[
-                    {value: 'val_1', label: 'Value 1'},
-                    {value: 'val_2', label: 'Value 2'},
-                    {value: 'val_3', label: 'Value 3'},
-                    {value: 'val_4', label: 'Value 4'}
+            <Selectbox name='select_2' multiple={true} options={[
+                    {key: 'val_1', value: 'Value 1'},
+                    {key: 'val_2', value: 'Value 2'},
+                    {key: 'val_3', value: 'Value 3'},
+                    {key: 'val_4', value: 'Value 4'}
                 ]} />
+
+            <br />
+            <label>Select only key</label>
+            <Selectbox name='select_3' options={['1', '2', '3']} />
 
             <br />
             <label>Textarea</label>
