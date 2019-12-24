@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import Input from 'js/patterns/atoms/forms/form-input'
+import Input from 'js/patterns/atoms/forms/input'
 
 class InputWithUnit extends Component {
     render () {

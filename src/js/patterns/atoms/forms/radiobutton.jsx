@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import FormInput from 'js/patterns/atoms/forms/form-input'
+import Input from 'js/patterns/atoms/forms/input'
 
 class Radiobutton extends Component {
     constructor(props) {
@@ -26,7 +26,7 @@ class Radiobutton extends Component {
     render() {
         return (
             <div className='c-form-radio'>
-                <FormInput
+                <Input
                     type='radio'
                     name='radio'
                     className='c-form-radio__input'

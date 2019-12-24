@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Button from '../atoms/buttons/button'
 import OrganismsHeaderMobile from '../organisms/base/header-mobile'
-import OrganismsFormRegister from '../organisms/form/form-register'
+import OrganismsFormRegister from '../organisms/form/register'
 import OrganismsFooter from '../organisms/base/foot'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'

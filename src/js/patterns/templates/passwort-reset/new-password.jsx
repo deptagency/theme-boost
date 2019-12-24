@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import OrganismsFormPasswortReset from '../../organisms/form/form-password-reset'
+import OrganismsFormPasswortReset from '../../organisms/form/password-reset'
 import Button from '../../atoms/buttons/button'
 import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
 import OrganismsPageHeader from '../../organisms/base/header-page'

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsFormCoupon extends Component {
+class Coupon extends Component {
     render () {
         return (<div>
             <form method=''>
@@ -19,10 +19,10 @@ class OrganismsFormCoupon extends Component {
     }
 }
 
-OrganismsFormCoupon.propTypes = {
+Coupon.propTypes = {
 }
 
-OrganismsFormCoupon.defaultProps = {
+Coupon.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsFormCoupon', OrganismsFormCoupon)
+export default ComponentInjector.return('Coupon', Coupon)

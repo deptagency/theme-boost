@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsFormSepa extends Component {
+class Sepa extends Component {
     render () {
         return (<div>
             <form method=''>
@@ -59,10 +59,10 @@ class OrganismsFormSepa extends Component {
     }
 }
 
-OrganismsFormSepa.propTypes = {
+Sepa.propTypes = {
 }
 
-OrganismsFormSepa.defaultProps = {
+Sepa.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsFormSepa', OrganismsFormSepa)
+export default ComponentInjector.return('Sepa', Sepa)

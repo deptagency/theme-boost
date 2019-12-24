@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsFormAddress extends Component {
+class Address extends Component {
     render () {
         return (<div>
             <form method=''>
@@ -176,10 +176,10 @@ class OrganismsFormAddress extends Component {
     }
 }
 
-OrganismsFormAddress.propTypes = {
+Address.propTypes = {
 }
 
-OrganismsFormAddress.defaultProps = {
+Address.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsFormAddress', OrganismsFormAddress)
+export default ComponentInjector.return('Address', Address)

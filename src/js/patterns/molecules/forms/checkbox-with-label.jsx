@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import Label from 'js/patterns/atoms/forms/form-label'
-import Checkbox from 'js/patterns/atoms/forms/form-checkbox'
+import Label from 'js/patterns/atoms/forms/label'
+import Checkbox from 'js/patterns/atoms/forms/checkbox'
 
 class CheckboxWithLabel extends Component {
     render () {
@@ -13,7 +13,7 @@ class CheckboxWithLabel extends Component {
                     <Checkbox id={this.props.id} />
                 </div>
                 <div className='o-block-short__body'>
-                    <Label className="c-form-label" htmlFor={this.props.id} value={this.props.label} />
+                    <Label className="c-form-label" htmlFor={this.props.id} label={this.props.label} />
                 </div>
             </div>
         )

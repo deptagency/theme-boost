@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import Input from 'js/patterns/atoms/forms/form-input'
-import Checkbox from 'js/patterns/atoms/forms/form-checkbox'
-import Radiobutton from 'js/patterns/atoms/forms/form-radiobutton'
-import Selectbox from 'js/patterns/atoms/forms/form-select'
-import Textarea from 'js/patterns/atoms/forms/form-textarea'
-import Fieldset from 'js/patterns/atoms/forms/form-fieldset'
-import Label from 'js/patterns/atoms/forms/form-label'
+import Input from 'js/patterns/atoms/forms/input'
+import Checkbox from 'js/patterns/atoms/forms/checkbox'
+import Radiobutton from 'js/patterns/atoms/forms/radiobutton'
+import Selectbox from 'js/patterns/atoms/forms/select'
+import Textarea from 'js/patterns/atoms/forms/textarea'
+import Fieldset from 'js/patterns/atoms/forms/fieldset'
+import Label from 'js/patterns/atoms/forms/label'
 
-class AtomsForms extends Component {
+class Overview extends Component {
     render () {
         return (<div>
             <label>Input Text Placeholder</label>
@@ -116,10 +116,10 @@ class AtomsForms extends Component {
     }
 }
 
-AtomsForms.propTypes = {
+Overview.propTypes = {
 }
 
-AtomsForms.defaultProps = {
+Overview.defaultProps = {
 }
 
-export default ComponentInjector.return('AtomsForms', AtomsForms)
+export default ComponentInjector.return('Overview', Overview)

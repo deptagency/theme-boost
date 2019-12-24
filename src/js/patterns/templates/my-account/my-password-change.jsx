@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 
 import Button from 'js/patterns/atoms/buttons/button'
 import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
-import OrganismsFormPasswordChange from 'js/patterns/organisms/form/form-password-change'
+import OrganismsFormPasswordChange from 'js/patterns/organisms/form/password-change'
 
 const TemplatesMyPasswordChange = ({ products }) => {
     return (

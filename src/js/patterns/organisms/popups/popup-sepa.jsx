@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import OrganismsFormSepa from 'js/patterns/organisms/form/form-sepa'
+import OrganismsFormSepa from 'js/patterns/organisms/form/sepa'
 import Button from 'js/patterns/atoms/buttons/button'
 import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
 

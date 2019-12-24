@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import AtomsFormLabel from '../atoms/forms/form-label'
+import Label from '../atoms/forms/label'
 import OrganismsHeaderSlideIn from '../organisms/base/header-slide-in'
 import OrganismsSizes from '../organisms/sizes/sizes'
 import FromTo from '../organisms/forms/form-element-from-to'
@@ -17,26 +17,26 @@ const TemplatesFilter = ({ setIsOpen, count }) => {
             <div className='filter-content'>
 
                 <div className='filter-component'>
-                    <AtomsFormLabel className='filter-input-label' value='Größe' />
+                    <Label className='filter-input-label' value='Größe' />
                     <MobileSwipe sliderId='swipe-sizes'>
                         <OrganismsSizes />
                     </MobileSwipe>
                 </div>
 
                 <div className='filter-component'>
-                    <AtomsFormLabel className='filter-input-label' value='Sortierung' />
+                    <Label className='filter-input-label' value='Sortierung' />
                     <MobileSwipe sliderId='swipe-sorting'>
                         <OrganismsSorting />
                     </MobileSwipe>
                 </div>
 
                 <div className='filter-component'>
-                    <AtomsFormLabel className='filter-input-label' value='Preis' />
+                    <Label className='filter-input-label' value='Preis' />
                     <FromTo className='extra-margin' />
                 </div>
 
                 <div className='filter-component'>
-                    <AtomsFormLabel className='filter-input-label' value='Marke' />
+                    <Label className='filter-input-label' value='Marke' />
                     <select className='extra-margin' id='' name='select'>
                         <option>Bitte auswählen</option>
                         <option value='Value A'>Value A</option>
@@ -48,7 +48,7 @@ const TemplatesFilter = ({ setIsOpen, count }) => {
                 </div>
 
                 <div className='filter-component'>
-                    <AtomsFormLabel className='filter-input-label' value='Farbe' />
+                    <Label className='filter-input-label' value='Farbe' />
                     <MobileSwipe sliderId='swipe-colors'>
                         <MoleculesColorsFilter />
                     </MobileSwipe>

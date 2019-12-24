@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsFormAddressChange extends Component {
+class AddressChange extends Component {
     render () {
         return (<div>
             <form method=''>
@@ -134,10 +134,10 @@ class OrganismsFormAddressChange extends Component {
     }
 }
 
-OrganismsFormAddressChange.propTypes = {
+AddressChange.propTypes = {
 }
 
-OrganismsFormAddressChange.defaultProps = {
+AddressChange.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsFormAddressChange', OrganismsFormAddressChange)
+export default ComponentInjector.return('AddressChange', AddressChange)

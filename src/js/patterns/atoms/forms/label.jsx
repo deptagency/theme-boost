@@ -5,24 +5,24 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class Label extends Component {
     render () {
-        const { className, value } = this.props
+        const { className, label } = this.props
 
         return (
             <div className={className}>
-                <label htmlFor={this.props.htmlFor}>{value}</label>
+                <label htmlFor={this.props.htmlFor}>{label}</label>
             </div>
         )
     }
 }
 
 Label.propTypes = {
-    value: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
     className: PropTypes.string.isRequired,
     htmlFor: PropTypes.string,
 }
 
 Label.defaultProps = {
-    value: 'Label',
+    label: 'Label',
     className: '',
     htmlFor: '',
 }

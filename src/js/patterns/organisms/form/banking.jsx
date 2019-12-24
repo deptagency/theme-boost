@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsFormBanking extends Component {
+class Banking extends Component {
     render () {
         return (<Fragment>
             <div className='o-form-area__column-6-6 o-form-area__new-row'>
@@ -17,10 +17,10 @@ class OrganismsFormBanking extends Component {
     }
 }
 
-OrganismsFormBanking.propTypes = {
+Banking.propTypes = {
 }
 
-OrganismsFormBanking.defaultProps = {
+Banking.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsFormBanking', OrganismsFormBanking)
+export default ComponentInjector.return('Banking', Banking)

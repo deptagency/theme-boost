@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Button from '../atoms/buttons/button'
 import OrganismsAddressblock from '../organisms/blocks/addressblock'
 import OrganismsBundleListing from '../organisms/listings/bundle-listing'
-import OrganismsFormCoupon from '../organisms/form/form-coupon'
+import OrganismsFormCoupon from '../organisms/form/coupon'
 import OrganismsSummary from '../organisms/blocks/summary'
 import OrganismsHeaderContext from '../organisms/base/header-context'
 

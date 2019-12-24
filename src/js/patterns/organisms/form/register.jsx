@@ -6,7 +6,7 @@ import app from 'frontastic-catwalk/src/js/app/app'
 import classnames from 'classnames'
 import Button from '../../atoms/buttons/button'
 
-class OrganismsFormRegister extends Component {
+class Register extends Component {
     constructor (props) {
         super(props)
 
@@ -232,10 +232,10 @@ class OrganismsFormRegister extends Component {
     }
 }
 
-OrganismsFormRegister.propTypes = {
+Register.propTypes = {
 }
 
-OrganismsFormRegister.defaultProps = {
+Register.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsFormRegister', OrganismsFormRegister)
+export default ComponentInjector.return('Register', Register)

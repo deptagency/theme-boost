@@ -5,22 +5,24 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 class Fieldset extends Component {
     render () {
         return (
-            <fieldset>
+            <fieldset className={this.props.className}>
                 <legend>{this.props.legend}</legend>
-                {this.props.children}
+                <div className='o-form-area o-distance-m'>
+                    {this.props.children}
+                </div>
             </fieldset>
         )
     }
 }
 
 Fieldset.propTypes = {
-    id: PropTypes.string,
     legend: PropTypes.string,
+    className: PropTypes.string,
 }
 
 Fieldset.defaultProps = {
-    id: undefined,
     legend: undefined,
+    className: undefined,
 }
 
 export default ComponentInjector.return('Fieldset', Fieldset)

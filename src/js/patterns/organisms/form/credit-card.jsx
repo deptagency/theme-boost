@@ -4,7 +4,7 @@ import OrganismsCreditCard from '../blocks/creditcard'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsFormCreditCard extends Component {
+class CreditCard extends Component {
     render () {
         return (<div>
             <form method=''>
@@ -37,10 +37,10 @@ class OrganismsFormCreditCard extends Component {
     }
 }
 
-OrganismsFormCreditCard.propTypes = {
+CreditCard.propTypes = {
 }
 
-OrganismsFormCreditCard.defaultProps = {
+CreditCard.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsFormCreditCard', OrganismsFormCreditCard)
+export default ComponentInjector.return('CreditCard', CreditCard)

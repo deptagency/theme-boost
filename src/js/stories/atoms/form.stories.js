@@ -1,19 +1,19 @@
 import React from 'react'
 
-import Form from 'js/patterns/atoms/forms/form'
-import Label from 'js/patterns/atoms/forms/form-label'
-import Input from 'js/patterns/atoms/forms/form-input'
-import Textarea from 'js/patterns/atoms/forms/form-textarea'
-import Checkbox from 'js/patterns/atoms/forms/form-checkbox'
-import Radiobutton from 'js/patterns/atoms/forms/form-radiobutton'
-import Selectbox from 'js/patterns/atoms/forms/form-select'
+import Overview from 'js/patterns/atoms/forms/overview'
+import Label from 'js/patterns/atoms/forms/label'
+import Input from 'js/patterns/atoms/forms/input'
+import Textarea from 'js/patterns/atoms/forms/textarea'
+import Checkbox from 'js/patterns/atoms/forms/checkbox'
+import Radiobutton from 'js/patterns/atoms/forms/radiobutton'
+import Selectbox from 'js/patterns/atoms/forms/select'
 
 export default {
     title: '2.Atoms|Form',
 }
 
 export const overview = () => {
-    return <Form />
+    return <Overview />
 }
 overview.story = {
     name: 'Overview',
