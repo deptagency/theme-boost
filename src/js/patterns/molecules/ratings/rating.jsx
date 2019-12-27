@@ -2,15 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import { FormattedMessage } from 'react-intl'
-import { ReactComponent as FullSmallStar } from '../../../../icons/full-small-star.svg'
-import { ReactComponent as EmptySmallStar } from '../../../../icons/empty-small-star.svg'
+import { ReactComponent as StarSmallFull } from '../../../../icons/star-small-full.svg'
+import { ReactComponent as StarSmallEmpty } from '../../../../icons/star-small-empty.svg'
 
 const MoleculesRating = ({ counterMessage, className }) => {
     return (
         <div className={className}>
             <div className='c-rating o-flex o-flex--center'>
                 {[1, 2, 3, 4, 5].map((s, i) => {
-                    return i < 3 ? <FullSmallStar className='o-flex__item' key={i} /> : <EmptySmallStar className='o-flex__item' key={i} />
+                    return i < 3 ? <StarSmallFull className='o-flex__item' key={i} /> : <StarSmallEmpty className='o-flex__item' key={i} />
                 })}
             </div>
             {counterMessage ?

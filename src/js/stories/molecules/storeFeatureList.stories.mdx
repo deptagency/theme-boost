@@ -1,7 +1,7 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
 
-import { ReactComponent as IconTruck } from '../../../../icons/truck.svg'
-import StoreFeatureList from './'
+import { ReactComponent as IconTruck } from '../../../icons/truck.svg'
+import StoreFeatureList from 'js/patterns/molecules/StoreFeatureList'
 
 <Meta title='3.Molecules|StoreFeatureList' component={StoreFeatureList} />
 
@@ -17,6 +17,9 @@ wrapper.
 
 <Preview>
     <Story name='Store Feature List '>
-        <StoreFeatureList />
+        <StoreFeatureList features={[
+            {icon: <IconTruck/>, text: 'Lieferung in 24 Stunden'},
+            {icon: <IconTruck/>, text: 'Lieferung in 48 Stunden'},
+        ]} />
     </Story>
 </Preview>

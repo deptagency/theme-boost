@@ -5,7 +5,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import { Link } from 'react-router-dom'
 import AtomsPrice from '../../atoms/prices/price'
 import IconButton from '../../../patterns/atoms/buttons/IconButton'
-import { ReactComponent as CloseX } from '../../../../icons/close-x-mobile.svg'
+import { ReactComponent as CloseX } from '../../../../icons/close.svg'
 
 const ProductItem = (props) => {
     let product = props.product
