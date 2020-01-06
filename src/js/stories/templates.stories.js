@@ -27,6 +27,7 @@ import TemplatesHome from '../patterns/templates/home'
 import TemplatesHelp from '../patterns/templates/help'
 import TemplatesHelpDetail from '../patterns/templates/help-detail'
 import TemplatesProductDetail from '../patterns/templates/detail'
+import TemplatesFilter from '../patterns/templates/filter'
 
 export default {
     title: '5.Templates|All',
@@ -234,6 +235,14 @@ export const templatesProductDetail = () => {
 
 templatesProductDetail.story = {
     name: 'Product Detail',
+}
+
+export const templatesFilter = () => {
+    return <TemplatesFilter />
+}
+
+templatesFilter.story = {
+    name: 'Filter',
 }
 
 // export const home = () => { return <TemplatesHome /> }
