@@ -7,7 +7,7 @@ import { map } from 'lodash'
 
 const OrganismsBundleListing = ({ cartItems }) => {
     return (
-        <div>
+        <div className='o-distance-l'>
             <section className='o-list-bare'>
                 {map(cartItems, (item, index) => {
                     // TODO attributes.**.label - make it more robust
