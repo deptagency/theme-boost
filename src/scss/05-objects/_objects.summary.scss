@@ -10,4 +10,7 @@
   &__full-item {
     grid-column: auto / span 2;
   }
+  &__item--offset {
+    text-align: right;
+  }
 }

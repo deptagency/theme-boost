@@ -16,8 +16,8 @@ const OrganismsSummary = ({ sum, subtotal }) => {
                                 <FormattedMessage id='cart.subtotal' />
                             </p>
                         </div>
-                        <div className='o-summary__item'>
-                            <p className='u-text-s u-text-strong cart-summary--right'>
+                        <div className='o-summary__item o-summary__item--offset'>
+                            <p className='u-text-s u-text-strong'>
                                 <AtomsPrice value={sum} />
                             </p>
                         </div>
@@ -26,7 +26,7 @@ const OrganismsSummary = ({ sum, subtotal }) => {
                 <p className='o-summary__item u-text-s'>
                     <FormattedMessage id='cart.shippingCosts' />
                 </p>
-                <p className='o-summary__item u-text-s cart-summary--right'>
+                <p className='o-summary__item o-summary__item--offset u-text-s'>
                     <FormattedMessage id='cart.gratis' />
                 </p>
                 <span className='o-summary__full-item c-divider' />
@@ -36,8 +36,8 @@ const OrganismsSummary = ({ sum, subtotal }) => {
                     </p>
                     <p className='u-text-s t-text-quiet'><FormattedMessage id='cart.inclVat' /></p>
                 </div>
-                <div className='o-summary__item'>
-                    <p className='u-text-m u-text-strong cart-summary--right'><AtomsPrice value={sum} /></p>
+                <div className='o-summary__item o-summary__item--offset'>
+                    <p className='u-text-m u-text-strong'><AtomsPrice value={sum} /></p>
                 </div>
             </div>
         </div>

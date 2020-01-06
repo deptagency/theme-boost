@@ -12,10 +12,6 @@
     width: 60px;
 }
 
-.cart-summary--right {
-    text-align: right;
-}
-
 .organism-sizes {
     display: flex;
     flex-direction: row;
@@ -90,14 +86,6 @@
 .c-slide-in {
     height: 100%;
     width: 100%;
-}
-
-.expansion-component {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 4px;
-    margin: 4px;
-    box-shadow: 0 2px 0 #e0e0e2;
 }
 
 .c-size__item {
@@ -263,41 +251,6 @@
             padding-right: 10px;
         }
     }
-}
-
-.organism-my-orders--details {
-    .mo-sent-to {
-        width: 108px;
-        font-size: 16px;
-        padding-top: 14px;
-        padding-bottom: 12px;
-
-        .mo-sent-name {
-            font-weight: bold;
-        }
-    }
-
-    .mo-payment-type {
-        color: #98999f;
-        font-size: 12px;
-        padding-bottom: 12px;
-    }
-
-    .mod-margin {
-        margin: 10px;
-    }
-}
-
-.margin-12 {
-    margin: 12px;
-}
-
-.margin-lr-16 {
-    margin: 0 16px;
-}
-
-.padding--10 {
-    padding: 10px;
 }
 
 .padding-top--10 {
