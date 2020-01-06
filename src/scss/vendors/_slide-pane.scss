@@ -1,0 +1,12 @@
+.o-slide-up-panel {
+  margin: 0 !important;
+  height: 100% !important;
+  z-index: 3;
+  
+  .slide-pane__header {
+    display: none;
+  }
+  .slide-pane__content {
+    padding: 0;
+  }
+}

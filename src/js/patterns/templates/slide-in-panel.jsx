@@ -11,7 +11,7 @@ Modal.setAppElement(document.getElementById('app'))
 const TemplatesSlideInPanel = ({ isOpen, children, header, footer, from }) => {
     return (
         <SlidingPane
-            className='slide-up-panel'
+            className='o-slide-up-panel'
             overlayClassName='some-custom-overlay-class'
             isOpen={isOpen}
             from={from}
@@ -25,8 +25,9 @@ const TemplatesSlideInPanel = ({ isOpen, children, header, footer, from }) => {
                     <div className='o-television__display__wrapper'>
                         {children}
                     </div>
+                    <div className="c-box u-background-color-default o-television__display__boundless o-television__bouncer o-distance-m"></div>
                 </Scrollbars>
-                <div className='o-television__remote-control'>
+                <div className='o-television__remote-control u-background-color-default'>
                     {footer}
                 </div>
             </div>
