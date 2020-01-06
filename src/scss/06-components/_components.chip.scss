@@ -1,7 +1,7 @@
 // Config
 
-/// Tag
-/// @group tags
+/// Chip
+/// @group chips
 .c-chip {
   align-items: center;
   cursor: pointer;
@@ -20,6 +20,7 @@
     background-color: $color-brand-primary-lighter;
   }
 
+  // Active Chip
   &.is-active {
     border-color: $color-brand-primary-base;
     background-color: $color-brand-primary-base;
@@ -37,18 +38,22 @@
   }
 }
 
+// Small Chip
 .c-chip--small {
   padding: $spacing-squish-s;
 }
 
+// Squared Chip
 .c-chip--squared {
   padding: $spacing-inset-m;
 }
 
+// Selected Chip
 .c-chip--selected {
   cursor: default;
 }
 
+// Content Width Chip
 .c-chip--content-width {
   white-space: nowrap;
 }
