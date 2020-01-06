@@ -5,11 +5,11 @@ import { FormattedMessage } from 'react-intl'
 
 const MoleculesDetaillist = ({ color, size }) => {
     return (
-        <dl className='o-detaillist o-distance-s'>
-            <dt className='u-text-color-quiet'><FormattedMessage id='colorProduct' /></dt>
-            <dd className='u-text-strong'>{color}</dd>
-            <dt className='u-text-color-quiet'><FormattedMessage id='sizeProduct' /></dt>
-            <dd className='u-text-strong'>{size}</dd>
+        <dl className='o-detaillist'>
+            <dt className='u-text-color-quiet u-text-s'><FormattedMessage id='colorProduct' /></dt>
+            <dd className='u-text-strong u-text-s'>{color}</dd>
+            <dt className='u-text-color-quiet u-text-s'><FormattedMessage id='sizeProduct' /></dt>
+            <dd className='u-text-strong u-text-s'>{size}</dd>
         </dl>
     )
 }
