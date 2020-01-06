@@ -2,7 +2,6 @@
 $swiper-column-width: 8px;
 
 .o-swiper {
-  margin: 0 -10px;
   overflow: hidden;
   //scroll-snap-type: x proximity;
 }
@@ -10,7 +9,7 @@ $swiper-column-width: 8px;
 .o-swiper__holder {
   display: grid;
   grid-auto-flow: column;
-  grid-gap: 16px;
+  grid-gap: $spacing-inline-m;
   //grid-gap: $spacing-inset-m;
 
   //display: grid;
@@ -32,7 +31,6 @@ $swiper-column-width: 8px;
 .o-swiper__item {
   position: relative;
   scroll-snap-align: start;
-  margin: 0 4px;
 }
 
 .o-swiper__image {
