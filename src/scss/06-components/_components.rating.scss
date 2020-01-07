@@ -11,6 +11,7 @@ $rating-active-font-color: $color-palette-orange-600 !default;
 
     &.is-active {
       fill: currentColor;
+      stroke: none;
     }
   }
 }
