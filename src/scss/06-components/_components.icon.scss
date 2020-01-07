@@ -26,7 +26,7 @@ $icon-size-default: map-get($icons, m) !default;
 /// @group Icons
 @each $size, $value in $icons {
   .c-icon--#{$size} {
-    height: $value;
+    height: auto;
     width: $value;
   }
 }
