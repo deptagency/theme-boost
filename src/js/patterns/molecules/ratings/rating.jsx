@@ -10,7 +10,7 @@ const MoleculesRating = ({ counterMessage, className }) => {
         <div className={className}>
             <div className='c-rating o-flex o-flex--center'>
                 {[1, 2, 3, 4, 5].map((s, i) => {
-                    return i < 3 ? <StarSmallFull className='o-flex__item' key={i} /> : <StarSmallEmpty className='o-flex__item' key={i} />
+                    return i < 3 ? <StarSmallFull className='c-rating__symbol is-active o-flex__item' key={i} /> : <StarSmallEmpty className='c-rating__symbol o-flex__item' key={i} />
                 })}
             </div>
             {counterMessage ?

@@ -10,7 +10,7 @@ const MoleculesStaticRating = ({ outerClassName, className, rating, reviewsCount
         <div className={outerClassName}>
             <div className={`c-rating o-flex o-flex--center ${className}`}>
                 {[1, 2, 3, 4, 5].map((s, i) => {
-                    return i < rating ? <FullSmallStar className='o-flex__item' key={i} /> : <EmptySmallStar className='o-flex__item' key={i} />
+                    return i < rating ? <FullSmallStar className='c-rating__symbol o-flex__item' key={i} /> : <EmptySmallStar className='o-flex__item' key={i} />
                 })}
             </div>
             <div className='u-text-s u-text-color-quiet o-distance-s'>
