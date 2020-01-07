@@ -42,7 +42,7 @@ $television-boundless-space: $television-prevent-space * 2 !default;
 
 // Bouncer as an indicator to signal the end of the container
 .o-television__bouncer {
-  height: 100px;
+  min-height: 100px;
 }
 
 // Move elements to the left and right edges of the television container
