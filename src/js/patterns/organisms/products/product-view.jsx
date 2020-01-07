@@ -1,8 +1,8 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import PropTypes from 'prop-types'
-import OrganismsProductStage from '../stages/stage-product'
-import OrganismsSizeSwiper from '../swiper/size-swiper'
+import ProductStage from '../stages/stage-product'
+import SizeSwiper from '../swiper/size-swiper'
 // eslint-disable-next-line no-unused-vars
 // import OrganismsImageColorSwiper from '../swiper/image-color-swiper'
 import Button from '../../atoms/buttons/button'
@@ -30,7 +30,7 @@ AddToCartButton.propTypes = {
 const OrganismsProductView = ({ images, name, variant, sizes, addToWishlist }) => {
     return (
         <div>
-            <OrganismsProductStage
+            <ProductStage
                 images={images}
                 name={name}
                 price={<AtomsPrice large='true' value={variant.price} old={variant.discountedPrice !== null} />}
@@ -43,7 +43,7 @@ const OrganismsProductView = ({ images, name, variant, sizes, addToWishlist }) =
                     <FormattedMessage id='sizeProduct' />
                 </h3>
                 <div className='o-distance-s'>
-                    <OrganismsSizeSwiper sizes={sizes} />
+                    <SizeSwiper sizes={sizes} />
                 </div>
                 <div className='o-distance-l'>
                     <AddToCartButton variant={variant} />

@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
+import Addressblock from 'js/patterns/organisms/blocks/addressblock'
 import Button from 'js/patterns/atoms/buttons/button'
-import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
+import HeaderMobile from 'js/patterns/organisms/base/header-mobile'
 
 import PaymentType from '../../../constants/payment-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class TemplatesOrderConfirmation extends Component {
+class OrderConfirmation extends Component {
     render () {
         const { paymentType: pt } = this.props
 
         return (
             <div className='o-television'>
-                <OrganismsHeaderMobile className='o-television__bar' />
+                <HeaderMobile className='o-television__bar' />
                 <div className='o-television__display'>
                     <div className='o-container-small'>
                         <section className='u-text-center'>
@@ -50,7 +50,7 @@ class TemplatesOrderConfirmation extends Component {
                         <section className='o-distance o-prevent-space'>
                             <h2 className='c-title-level-3'>Lieferadresse</h2>
                             <div className='o-distance-m'>
-                                <OrganismsAddressblock />
+                                <Addressblock />
                             </div>
                         </section>
                         <div className='o-television__display__boundless'>
@@ -107,12 +107,12 @@ class TemplatesOrderConfirmation extends Component {
     }
 }
 
-TemplatesOrderConfirmation.propTypes = {
+OrderConfirmation.propTypes = {
     paymentType: PropTypes.oneOf([PaymentType.directDebit, PaymentType.creditCard, PaymentType.invoice]).isRequired,
 }
 
-TemplatesOrderConfirmation.defaultProps = {
+OrderConfirmation.defaultProps = {
 
 }
 
-export default ComponentInjector.return('TemplatesOrderConfirmation', TemplatesOrderConfirmation)
+export default ComponentInjector.return('OrderConfirmation', OrderConfirmation)

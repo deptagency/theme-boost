@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 
 import Button from '../atoms/buttons/button'
-import OrganismsHeaderMobile from '../organisms/base/header-mobile'
-import OrganismsFormRegister from '../organisms/form/register'
-import OrganismsFooter from '../organisms/base/foot'
+import HeaderMobile from '../organisms/base/header-mobile'
+import FormRegister from '../organisms/form/register'
+import Footer from '../organisms/base/foot'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class TemplatesCheckoutRegister extends Component {
+class CheckoutRegister extends Component {
     render () {
         return (
             <>
-                <OrganismsHeaderMobile />
+                <HeaderMobile />
                 <div className='o-container-small'>
-                    <OrganismsFormRegister />
+                    <FormRegister />
                     <Button type='primary' size='boss' className='o-distance-m'>Jetzt Registrieren</Button>
                     <span className='c-divider c-divider--break o-distance-l' />
                     <section className='o-distance-l'>
@@ -21,16 +21,16 @@ class TemplatesCheckoutRegister extends Component {
                         <Button type='quiet' size='boss' className='o-distance-m'>Anmelden</Button>
                     </section>
                 </div>
-                <OrganismsFooter />
+                <Footer />
             </>
         )
     }
 }
 
-TemplatesCheckoutRegister.propTypes = {
+CheckoutRegister.propTypes = {
 }
 
-TemplatesCheckoutRegister.defaultProps = {
+CheckoutRegister.defaultProps = {
 }
 
-export default ComponentInjector.return('TemplatesCheckoutRegister', TemplatesCheckoutRegister)
+export default ComponentInjector.return('CheckoutRegister', CheckoutRegister)

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsStage extends Component {
+class Stage extends Component {
     render () {
         return (<div>
             <div className='o-stage'>
@@ -14,10 +14,10 @@ class OrganismsStage extends Component {
     }
 }
 
-OrganismsStage.propTypes = {
+Stage.propTypes = {
 }
 
-OrganismsStage.defaultProps = {
+Stage.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsStage', OrganismsStage)
+export default ComponentInjector.return('Stage', Stage)

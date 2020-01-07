@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class MoleculesHeading extends Component {
+class Heading extends Component {
     render () {
         const { title, description } = this.props
 
@@ -20,9 +20,9 @@ class MoleculesHeading extends Component {
     }
 }
 
-MoleculesHeading.propTypes = {
+Heading.propTypes = {
     title: PropTypes.node.isRequired,
     description: PropTypes.node.isRequired,
 }
 
-export default ComponentInjector.return('MoleculesHeading', MoleculesHeading)
+export default ComponentInjector.return('Heading', Heading)

@@ -2,19 +2,19 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import MoleculesProductInCart from '../../molecules/products/product-in-cart'
+import ProductInCart from '../../molecules/products/product-in-cart'
 
-class OrganismsProductListingInCart extends Component {
+class ProductListingInCart extends Component {
     render () {
         return (
             <div>
                 <section className='o-list-bare'>
                     <div className='o-list-bare__item'>
-                        <MoleculesProductInCart />
+                        <ProductInCart />
                     </div>
                     <span className='c-divider o-list-bare__item' />
                     <div className='o-list-bare__item'>
-                        <MoleculesProductInCart />
+                        <ProductInCart />
                     </div>
                 </section>
             </div>
@@ -22,8 +22,8 @@ class OrganismsProductListingInCart extends Component {
     }
 }
 
-OrganismsProductListingInCart.propTypes = {}
+ProductListingInCart.propTypes = {}
 
-OrganismsProductListingInCart.defaultProps = {}
+ProductListingInCart.defaultProps = {}
 
-export default ComponentInjector.return('OrganismsProductListingInCart', OrganismsProductListingInCart)
+export default ComponentInjector.return('ProductListingInCart', ProductListingInCart)

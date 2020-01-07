@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-const OrganismsCategorySwiper = ({ categories }) => {
+const CategorySwiper = ({ categories }) => {
     return (
         <div className='o-swiper'>
             <div className='o-swiper__holder'>
@@ -15,12 +15,12 @@ const OrganismsCategorySwiper = ({ categories }) => {
     )
 }
 
-OrganismsCategorySwiper.propTypes = {
+CategorySwiper.propTypes = {
     categories: PropTypes.array.isRequired,
 }
 
-OrganismsCategorySwiper.defaultProps = {
+CategorySwiper.defaultProps = {
     categories: ['Freizeitkleider', 'Ballkleider', 'Abendkleider', 'Blusenkleider', 'Jerseykleider'],
 }
 
-export default ComponentInjector.return('OrganismsCategorySwiper', OrganismsCategorySwiper)
+export default ComponentInjector.return('CategorySwiper', CategorySwiper)

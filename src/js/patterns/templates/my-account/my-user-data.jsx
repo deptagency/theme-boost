@@ -3,17 +3,17 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
 import Button from 'js/patterns/atoms/buttons/button'
-import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
-import OrganismsPageHeader from 'js/patterns/organisms/base/header-page'
-import OrganismsFooter from 'js/patterns/organisms/base/foot'
+import HeaderMobile from 'js/patterns/organisms/base/header-mobile'
+import PageHeader from 'js/patterns/organisms/base/header-page'
+import Footer from 'js/patterns/organisms/base/foot'
 
-const TemplatesMyUserData = ({ products }) => {
+const MyUserData = ({ products }) => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderMobile className='o-television__bar' />
+            <HeaderMobile className='o-television__bar' />
             <div className='o-television__display'>
                 <div className='o-container-medium'>
-                    <OrganismsPageHeader title='Meine Benutzerdaten' />
+                    <PageHeader title='Meine Benutzerdaten' />
                     <article className='o-distance'>
                         <div className='o-block-short'>
                             <div className='o-block-short__short-item'>
@@ -102,15 +102,15 @@ const TemplatesMyUserData = ({ products }) => {
                         </Button>
                     </article>
                 </div>
-                <OrganismsFooter />
+                <Footer />
             </div>
 
         </div>
     )
 }
 
-TemplatesMyUserData.propTypes = {
+MyUserData.propTypes = {
     products: PropTypes.array.isRequired,
 }
 
-export default TemplatesMyUserData
+export default MyUserData

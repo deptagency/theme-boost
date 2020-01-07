@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsNewsletterBlock extends Component {
+class NewsletterBlock extends Component {
     render () {
         return (
             <div className='c-box t-spotlight'>
@@ -27,10 +27,10 @@ class OrganismsNewsletterBlock extends Component {
     }
 }
 
-OrganismsNewsletterBlock.propTypes = {
+NewsletterBlock.propTypes = {
 }
 
-OrganismsNewsletterBlock.defaultProps = {
+NewsletterBlock.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsNewsletterBlock', OrganismsNewsletterBlock)
+export default ComponentInjector.return('NewsletterBlock', NewsletterBlock)

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class MoleculesBreadcrumb extends Component {
+class Breadcrumb extends Component {
     render () {
         return (<div>
             <ol className='o-list-divided c-breadcrumb' itemScope itemType='http://schema.org/BreadcrumbList'>
@@ -29,10 +29,10 @@ class MoleculesBreadcrumb extends Component {
     }
 }
 
-MoleculesBreadcrumb.propTypes = {
+Breadcrumb.propTypes = {
 }
 
-MoleculesBreadcrumb.defaultProps = {
+Breadcrumb.defaultProps = {
 }
 
-export default ComponentInjector.return('MoleculesBreadcrumb', MoleculesBreadcrumb)
+export default ComponentInjector.return('Breadcrumb', Breadcrumb)

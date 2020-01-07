@@ -3,16 +3,16 @@ import { FormattedMessage } from 'react-intl'
 
 import Button from '../../atoms/buttons/button'
 import { ReactComponent as WishlistIcon } from 'icons/wishlist-heart.svg'
-import OrganismsNewsletterBlock from 'js/patterns/organisms/blocks/newsletter'
-import OrganismsHeaderMobile from 'js/patterns/organisms/base/header-mobile'
-import OrganismsProductSwiper from 'js/patterns/organisms/swiper/product-swiper'
-import OrganismsFooter from 'js/patterns/organisms/base/foot'
-import MoleculesHeading from 'js/patterns/molecules/headings/heading'
+import NewsletterBlock from 'js/patterns/organisms/blocks/newsletter'
+import HeaderMobile from 'js/patterns/organisms/base/header-mobile'
+import ProductSwiper from 'js/patterns/organisms/swiper/product-swiper'
+import Footer from 'js/patterns/organisms/base/foot'
+import Heading from 'js/patterns/molecules/headings/heading'
 
-const TemplatesEmptyWishlist = () => {
+const EmptyWishlist = () => {
     return (
         <Fragment>
-            <OrganismsHeaderMobile />
+            <HeaderMobile />
             <section className='o-container-small o-distance o-prevent-space'>
                 <div className='u-text-center'>
                     <WishlistIcon className='c-icon c-icon--xl t-text-quiet' />
@@ -25,21 +25,21 @@ const TemplatesEmptyWishlist = () => {
                 </div>
             </section>
             <section className='o-container o-distance o-prevent-space'>
-                <MoleculesHeading title='Zuletzt angesehen' description='Könnte etwas für deine Wunschliste sein' />
-                <OrganismsProductSwiper />
+                <Heading title='Zuletzt angesehen' description='Könnte etwas für deine Wunschliste sein' />
+                <ProductSwiper />
             </section>
             <section className='o-container o-distance o-prevent-space'>
-                <OrganismsNewsletterBlock />
+                <NewsletterBlock />
             </section>
             <div className='o-prevent-space'>
-                <OrganismsFooter />
+                <Footer />
             </div>
         </Fragment>
     )
 }
 
-TemplatesEmptyWishlist.propTypes = {
+EmptyWishlist.propTypes = {
 
 }
 
-export default TemplatesEmptyWishlist
+export default EmptyWishlist

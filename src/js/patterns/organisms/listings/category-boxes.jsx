@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsCategoryBoxes extends Component {
+class CategoryBoxes extends Component {
     render () {
         // eslint-disable-next-line no-unused-vars
         const { firstLabel, firstLink, secondLabel, secondLink, thirdLabel, thirdLink } = this.props
@@ -36,7 +36,7 @@ class OrganismsCategoryBoxes extends Component {
     }
 }
 
-OrganismsCategoryBoxes.propTypes = {
+CategoryBoxes.propTypes = {
     firstLabel: PropTypes.string.isRequired,
     firstLink: PropTypes.object.isRequired,
     secondLabel: PropTypes.string.isRequired,
@@ -45,7 +45,7 @@ OrganismsCategoryBoxes.propTypes = {
     thirdLink: PropTypes.object.isRequired,
 }
 
-OrganismsCategoryBoxes.defaultProps = {
+CategoryBoxes.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsCategoryBoxes', OrganismsCategoryBoxes)
+export default ComponentInjector.return('CategoryBoxes', CategoryBoxes)

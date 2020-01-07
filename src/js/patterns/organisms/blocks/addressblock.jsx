@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsAddressblock extends Component {
+class Addressblock extends Component {
     render () {
         const Component = this.props.component
 
@@ -48,16 +48,16 @@ class OrganismsAddressblock extends Component {
     }
 }
 
-OrganismsAddressblock.propTypes = {
+Addressblock.propTypes = {
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     editable: PropTypes.bool,
     sameAddress: PropTypes.bool,
 }
 
-OrganismsAddressblock.defaultProps = {
+Addressblock.defaultProps = {
     component: 'div',
     editable: null,
     sameAddress: false,
 }
 
-export default ComponentInjector.return('OrganismsAddressblock', OrganismsAddressblock)
+export default ComponentInjector.return('Addressblock', Addressblock)

@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class MoleculesWishlist extends Component {
+class Wishlist extends Component {
     render () {
         return (<div>
             <div className='o-counter'>
@@ -18,10 +18,10 @@ class MoleculesWishlist extends Component {
     }
 }
 
-MoleculesWishlist.propTypes = {
+Wishlist.propTypes = {
 }
 
-MoleculesWishlist.defaultProps = {
+Wishlist.defaultProps = {
 }
 
-export default ComponentInjector.return('MoleculesWishlist', MoleculesWishlist)
+export default ComponentInjector.return('Wishlist', Wishlist)

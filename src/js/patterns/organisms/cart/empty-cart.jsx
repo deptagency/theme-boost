@@ -4,7 +4,7 @@ import Button from '../../atoms/buttons/button'
 import { ReactComponent as EmptyCartIcon } from '../../../../icons/empty-cart.svg'
 import { FormattedMessage } from 'react-intl'
 
-const OrganismsEmptyCart = () => {
+const EmptyCart = () => {
     return (
         <section className='o-container o-distance o-prevent-space'>
             <div className='c-box u-background-color-default'>
@@ -25,8 +25,8 @@ const OrganismsEmptyCart = () => {
     )
 }
 
-OrganismsEmptyCart.propTypes = {
+EmptyCart.propTypes = {
 
 }
 
-export default OrganismsEmptyCart
+export default EmptyCart

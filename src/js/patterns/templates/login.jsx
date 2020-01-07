@@ -3,10 +3,10 @@ import app from 'frontastic-catwalk/src/js/app/app'
 import { FormattedMessage } from 'react-intl'
 import Button from '../atoms/buttons/button'
 
-import OrganismsPageHeader from '../organisms/base/header-page'
+import PageHeader from '../organisms/base/header-page'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class TemplatesLogin extends Component {
+class Login extends Component {
     constructor (props) {
         super(props)
 
@@ -19,7 +19,7 @@ class TemplatesLogin extends Component {
     render () {
         return (
             <div className='o-container-small'>
-                <OrganismsPageHeader
+                <PageHeader
                     title={<FormattedMessage id='account.login.welcomeBack' />}
                     className='u-hidden-medium-up'
                     handleClick={() => { app.getRouter().history.replace('/') }}
@@ -77,10 +77,10 @@ class TemplatesLogin extends Component {
     }
 }
 
-TemplatesLogin.propTypes = {
+Login.propTypes = {
 }
 
-TemplatesLogin.defaultProps = {
+Login.defaultProps = {
 }
 
-export default ComponentInjector.return('TemplatesLogin', TemplatesLogin)
+export default ComponentInjector.return('Login', Login)

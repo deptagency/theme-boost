@@ -1,20 +1,20 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import OrganismsOrderDetail from '../../organisms/blocks/order-detail'
+import OrderDetail from '../../organisms/blocks/order-detail'
 import Button from '../../atoms/buttons/button'
 import Badge from '../../atoms/badges/badge'
-import OrganismsPageHeader from '../../organisms/base/header-page'
-import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
+import PageHeader from '../../organisms/base/header-page'
+import HeaderMobile from '../../organisms/base/header-mobile'
 import ReferalBordered from '../../atoms/links/referal-bordered'
 
-const TemplatesMyOrders = props => {
+const MyOrders = props => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderMobile />
+            <HeaderMobile />
             <div className='o-television__display'>
                 <div className='o-container-medium'>
-                    <OrganismsPageHeader title='Bestellungen' />
+                    <PageHeader title='Bestellungen' />
 
                     <article className='o-distance'>
                         <p className='c-title-level-4'>
@@ -63,15 +63,15 @@ const TemplatesMyOrders = props => {
                         <div className='o-distance-m'>
                             <div className='o-list-bare'>
                                 <div className='o-list-bare__item'>
-                                    <OrganismsOrderDetail />
+                                    <OrderDetail />
                                 </div>
                                 <span className='c-divider o-list-bare__item' />
                                 <div className='o-list-bare__item'>
-                                    <OrganismsOrderDetail />
+                                    <OrderDetail />
                                 </div>
                                 <span className='c-divider o-list-bare__item' />
                                 <div className='o-list-bare__item'>
-                                    <OrganismsOrderDetail />
+                                    <OrderDetail />
                                 </div>
                             </div>
                         </div>
@@ -91,8 +91,8 @@ const TemplatesMyOrders = props => {
     )
 }
 
-TemplatesMyOrders.propTypes = {
+MyOrders.propTypes = {
 
 }
 
-export default TemplatesMyOrders
+export default MyOrders

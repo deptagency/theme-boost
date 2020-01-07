@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Grow from 'frontastic-catwalk/src/js/component/grow'
-import TemplatesRegister from '../../../patterns/templates/register'
-import TemplatesLogin from '../../../patterns/templates/login'
+import Register from '../../../patterns/templates/register'
+import Login from '../../../patterns/templates/login'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import Button from '../../../patterns/atoms/buttons/button'
 import { FormattedMessage } from 'react-intl'
@@ -19,7 +19,7 @@ class AccountAccessForms extends Component {
         return (
             <div className='o-layout'>
                 <Grow in={(this.state.form === 'login')}>
-                    <TemplatesLogin />
+                    <Login />
                     <section className='o-container-small o-distance-l'>
                         <h2 className='c-title u-text-center'>
                             <FormattedMessage id='account.newHere' />
@@ -37,7 +37,7 @@ class AccountAccessForms extends Component {
                     </section>
                 </Grow>
                 <Grow in={(this.state.form === 'register')}>
-                    <TemplatesRegister />
+                    <Register />
                     <section className='o-container-small o-distance-l'>
                         <h2 className='c-title u-text-center'>
                             <FormattedMessage id='account.login.welcomeBack' />

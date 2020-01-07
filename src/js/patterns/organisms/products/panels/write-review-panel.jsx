@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
-import TemplatesSlideInPanel from '../../../templates/slide-in-panel'
-import OrganismsHeaderSlideIn from '../../base/header-slide-in'
+import SlideInPanel from '../../../templates/slide-in-panel'
+import HeaderSlideIn from '../../base/header-slide-in'
 import SmallStars from '../stars/small-stars'
 import Button from '../../../atoms/buttons/button'
 
@@ -11,11 +11,11 @@ const WriteReviewPanel = ({ isOpen, onClose, product, image, designer }) => {
     const [reviewText, setReviewText] = useState('')
 
     return (
-        <TemplatesSlideInPanel
+        <SlideInPanel
             key='2'
             isOpen={isOpen}
             from='right'
-            header={<OrganismsHeaderSlideIn
+            header={<HeaderSlideIn
                 onClose={onClose}
                 title={<FormattedMessage id='writeReview' />}
                 showRightCloseIcon={false}
@@ -74,7 +74,7 @@ const WriteReviewPanel = ({ isOpen, onClose, product, image, designer }) => {
 
             </div>
 
-        </TemplatesSlideInPanel>
+        </SlideInPanel>
     )
 }
 

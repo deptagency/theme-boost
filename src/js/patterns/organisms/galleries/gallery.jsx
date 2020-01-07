@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import Slider from '../../../patterns/templates/slider'
 
-class OrganismsGallery extends Component {
+class Gallery extends Component {
     render () {
         const { imagesComponents, addToWishlist } = this.props
 
@@ -62,14 +62,14 @@ class OrganismsGallery extends Component {
     }
 }
 
-OrganismsGallery.propTypes = {
+Gallery.propTypes = {
     imagesComponents: PropTypes.arrayOf(PropTypes.node).isRequired,
     addToWishlist: PropTypes.func,
 }
 
-OrganismsGallery.defaultProps = {
+Gallery.defaultProps = {
     imagesComponents: [],
     addToWishlist: () => {},
 }
 
-export default ComponentInjector.return('OrganismsGallery', OrganismsGallery)
+export default ComponentInjector.return('Gallery', Gallery)

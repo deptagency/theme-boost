@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl'
 import { ReactComponent as StarSmallFull } from '../../../../icons/star-small-full.svg'
 import { ReactComponent as StarSmallEmpty } from '../../../../icons/star-small-empty.svg'
 
-const MoleculesRating = ({ counterMessage, className }) => {
+const Rating = ({ counterMessage, className }) => {
     return (
         <div className={className}>
             <div className='c-rating o-flex o-flex--center'>
@@ -23,14 +23,14 @@ const MoleculesRating = ({ counterMessage, className }) => {
     )
 }
 
-MoleculesRating.propTypes = {
+Rating.propTypes = {
     className: PropTypes.string,
     counterMessage: PropTypes.bool,
 }
 
-MoleculesRating.defaultProps = {
+Rating.defaultProps = {
     className: '',
     counterMessage: false,
 }
 
-export default ComponentInjector.return('MoleculesRating', MoleculesRating)
+export default ComponentInjector.return('Rating', Rating)

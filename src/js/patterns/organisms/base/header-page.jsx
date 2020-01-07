@@ -6,7 +6,7 @@ import _ from 'lodash'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsPageHeader extends Component {
+class PageHeader extends Component {
     render () {
         const Component = this.props.component
 
@@ -34,7 +34,7 @@ class OrganismsPageHeader extends Component {
     }
 }
 
-OrganismsPageHeader.propTypes = {
+PageHeader.propTypes = {
     // children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
@@ -42,10 +42,10 @@ OrganismsPageHeader.propTypes = {
     handleClick: PropTypes.func,
 }
 
-OrganismsPageHeader.defaultProps = {
+PageHeader.defaultProps = {
     component: 'div',
     className: '',
     title: 'Anmelden',
 }
 
-export default ComponentInjector.return('OrganismsPageHeader', OrganismsPageHeader)
+export default ComponentInjector.return('PageHeader', PageHeader)

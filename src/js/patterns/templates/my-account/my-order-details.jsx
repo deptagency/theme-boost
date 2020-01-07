@@ -2,16 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
-import OrganismsAddressblock from 'js/patterns/organisms/blocks/addressblock'
+import Addressblock from 'js/patterns/organisms/blocks/addressblock'
 import Button from 'js/patterns/atoms/buttons/button'
-import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
-import OrganismsSummary from 'js/patterns/organisms/blocks/summary'
-import OrganismsBundleListing from 'js/patterns/organisms/listings/bundle-listing'
+import HeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
+import Summary from 'js/patterns/organisms/blocks/summary'
+import BundleListing from 'js/patterns/organisms/listings/bundle-listing'
 
-const TemplatesMyOrderDetails = ({ products }) => {
+const MyOrderDetails = ({ products }) => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderSlideIn title={<FormattedMessage id='order.myOrder' />} className='o-television__bar' />
+            <HeaderSlideIn title={<FormattedMessage id='order.myOrder' />} className='o-television__bar' />
             <div className='o-television__display'>
                 <div className='o-container-small'>
                     <div>
@@ -98,7 +98,7 @@ const TemplatesMyOrderDetails = ({ products }) => {
                         Verschickt am Do., 11.09.2019
                         </h2>
                         <div className='o-distance-m'>
-                            <OrganismsBundleListing />
+                            <BundleListing />
                         </div>
                     </div>
                     <div className='o-distance'>
@@ -107,7 +107,7 @@ const TemplatesMyOrderDetails = ({ products }) => {
                         </h2>
                         <div className='o-distance-m o-disabled-area'>
                             <div className='t-ghost o-disabled-area__overlay' />
-                            <OrganismsBundleListing />
+                            <BundleListing />
                         </div>
                     </div>
                     <div className='o-television__display__boundless o-distance'>
@@ -118,7 +118,7 @@ const TemplatesMyOrderDetails = ({ products }) => {
                             <FormattedMessage id='order.total' />
                         </h2>
                         <div className='o-distance-m'>
-                            <OrganismsSummary />
+                            <Summary />
                         </div>
                     </div>
                     <div className='o-television__display__boundless o-distance'>
@@ -129,7 +129,7 @@ const TemplatesMyOrderDetails = ({ products }) => {
                             <FormattedMessage id='account.address.delivery' />
                         </h2>
                         <div className='o-distance-m'>
-                            <OrganismsAddressblock />
+                            <Addressblock />
                         </div>
                     </div>
                     <div className='o-distance'>
@@ -137,7 +137,7 @@ const TemplatesMyOrderDetails = ({ products }) => {
                             <FormattedMessage id='account.address.invoiceAddress' />
                         </h2>
                         <div className='o-distance-m'>
-                            <OrganismsAddressblock />
+                            <Addressblock />
                         </div>
                     </div>
                     <Button type='quiet' size='boss' className='o-distance'>
@@ -151,8 +151,8 @@ const TemplatesMyOrderDetails = ({ products }) => {
     )
 }
 
-TemplatesMyOrderDetails.propTypes = {
+MyOrderDetails.propTypes = {
     products: PropTypes.array.isRequired,
 }
 
-export default TemplatesMyOrderDetails
+export default MyOrderDetails

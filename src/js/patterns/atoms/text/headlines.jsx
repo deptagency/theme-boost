@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class AtomsHeadlines extends Component {
+class Headlines extends Component {
     render () {
         return (<div>
             <h1>It is a simple title</h1>
@@ -15,10 +15,10 @@ class AtomsHeadlines extends Component {
     }
 }
 
-AtomsHeadlines.propTypes = {
+Headlines.propTypes = {
 }
 
-AtomsHeadlines.defaultProps = {
+Headlines.defaultProps = {
 }
 
-export default ComponentInjector.return('AtomsHeadlines', AtomsHeadlines)
+export default ComponentInjector.return('Headlines', Headlines)

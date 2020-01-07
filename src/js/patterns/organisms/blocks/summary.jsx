@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import AtomsPrice from '../../atoms/prices/price'
 
-const OrganismsSummary = ({ sum, subtotal }) => {
+const Summary = ({ sum, subtotal }) => {
     return (
         <div>
             <div className='o-summary'>
@@ -44,13 +44,13 @@ const OrganismsSummary = ({ sum, subtotal }) => {
     )
 }
 
-OrganismsSummary.propTypes = {
+Summary.propTypes = {
     subtotal: PropTypes.string,
     sum: PropTypes.number.isRequired,
 }
 
-OrganismsSummary.defaultProps = {
+Summary.defaultProps = {
     subtotal: '',
 }
 
-export default ComponentInjector.return('OrganismsSummary', OrganismsSummary)
+export default ComponentInjector.return('Summary', Summary)

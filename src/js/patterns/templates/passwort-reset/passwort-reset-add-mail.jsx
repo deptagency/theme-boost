@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 
 import Button from '../../atoms/buttons/button'
-import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
-import OrganismsPageHeader from '../../organisms/base/header-page'
+import HeaderMobile from '../../organisms/base/header-mobile'
+import PageHeader from '../../organisms/base/header-page'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class TemplatesPasswortResetAddMail extends Component {
+class PasswortResetAddMail extends Component {
     render () {
         return (
             <div className='o-television'>
-                <OrganismsHeaderMobile className='o-television__bar' />
+                <HeaderMobile className='o-television__bar' />
                 <div className='o-television__display'>
                     <div className='o-container-small'>
                         <div>
-                            <OrganismsPageHeader title='Neues Passwort anfordern' />
+                            <PageHeader title='Neues Passwort anfordern' />
                             <p className='u-text-s t-text-quiet'>Bitte gib Deine E-Mail-Adresse ein. Wir werden Dir eine E-Mail zusenden, damit Du Dein Passwort zurücksetzen kannst.</p>
                         </div>
                         <form method=''>
@@ -39,10 +39,10 @@ class TemplatesPasswortResetAddMail extends Component {
     }
 }
 
-TemplatesPasswortResetAddMail.propTypes = {
+PasswortResetAddMail.propTypes = {
 }
 
-TemplatesPasswortResetAddMail.defaultProps = {
+PasswortResetAddMail.defaultProps = {
 }
 
-export default ComponentInjector.return('TemplatesPasswortResetAddMail', TemplatesPasswortResetAddMail)
+export default ComponentInjector.return('PasswortResetAddMail', PasswortResetAddMail)

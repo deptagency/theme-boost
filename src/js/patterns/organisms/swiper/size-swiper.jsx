@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import Slider from '../../../patterns/templates/slider'
 
-const OrganismsSizeSwiper = ({ sizes }) => {
+const SizeSwiper = ({ sizes }) => {
     return (
         <div className='o-swiper'>
             <Slider options={{ fixedWidth: '150px' }}>
@@ -16,12 +16,12 @@ const OrganismsSizeSwiper = ({ sizes }) => {
     )
 }
 
-OrganismsSizeSwiper.propTypes = {
+SizeSwiper.propTypes = {
     sizes: PropTypes.array.isRequired,
 }
 
-OrganismsSizeSwiper.defaultProps = {
+SizeSwiper.defaultProps = {
     sizes: ['36', '38', '40', '42', '44', '46', '48', '50', '52', '54', '56'],
 }
 
-export default ComponentInjector.return('OrganismsSizeSwiper', OrganismsSizeSwiper)
+export default ComponentInjector.return('SizeSwiper', SizeSwiper)

@@ -2,27 +2,27 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import Button from '../atoms/buttons/button'
-import OrganismsAddressblock from '../organisms/blocks/addressblock'
-import OrganismsBundleListing from '../organisms/listings/bundle-listing'
-import OrganismsFormCoupon from '../organisms/form/coupon'
-import OrganismsSummary from '../organisms/blocks/summary'
-import OrganismsHeaderContext from '../organisms/base/header-context'
+import Addressblock from '../organisms/blocks/addressblock'
+import BundleListing from '../organisms/listings/bundle-listing'
+import FormCoupon from '../organisms/form/coupon'
+import Summary from '../organisms/blocks/summary'
+import HeaderContext from '../organisms/base/header-context'
 
 import PaymentType from '../../../constants/payment-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class TemplatesOrder extends Component {
+class Order extends Component {
     render () {
         const { paymentType: pt } = this.props
 
         return (
             <Fragment>
                 <div className='o-television'>
-                    <OrganismsHeaderContext className='o-television__bar' />
+                    <HeaderContext className='o-television__bar' />
                     <div className='o-television__display'>
                         <div className='o-container-medium'>
-                            <OrganismsAddressblock />
+                            <Addressblock />
                             <div className='o-television__display__boundless'>
                                 <span className='c-divider c-divider--break o-distance' />
                             </div>
@@ -99,7 +99,7 @@ class TemplatesOrder extends Component {
                             <section className='o-distance'>
                                 <h2 className='c-title-level-3'>Artikel</h2>
                                 <div className='o-distance-m'>
-                                    <OrganismsBundleListing />
+                                    <BundleListing />
                                 </div>
                             </section>
                             <div className='o-television__display__boundless'>
@@ -107,11 +107,11 @@ class TemplatesOrder extends Component {
                             </div>
                             <section className='o-distance'>
                                 <h2 className='c-title-level-3'>Gutscheincode</h2>
-                                <OrganismsFormCoupon />
+                                <FormCoupon />
                             </section>
                             <section className='o-distance'>
                                 <div className='c-box t-quietlight'>
-                                    <OrganismsSummary />
+                                    <Summary />
                                     <Button type='primary' size='boss' className='o-distance-s'>Zahlungspflichtig bestellen</Button>
                                 </div>
                                 <p className='u-text-s t-text-quiet o-distance-m'>Mit deiner Bestellung erklärst du dich mit unseren Datenschutzbestimmungen, AGB und Widerrufsbestimmungen einverstanden. Als Kunde von frontastic erhältst du Produktempfehlungen per Mail, von denen du dich jederzeit über einen Link in der Mail abmelden kannst.</p>
@@ -120,7 +120,7 @@ class TemplatesOrder extends Component {
                     </div>
                     <div className='o-television__remote-control'>
                         <div className='o-container-medium'>
-                            <OrganismsSummary />
+                            <Summary />
                             <Button type='primary' size='boss' className='o-distance-s'>Zahlungspflicht bestellen</Button>
                         </div>
                     </div>
@@ -130,11 +130,11 @@ class TemplatesOrder extends Component {
     }
 }
 
-TemplatesOrder.propTypes = {
+Order.propTypes = {
     paymentType: PropTypes.any, // FIXME: What type is it?
 }
 
-TemplatesOrder.defaultProps = {
+Order.defaultProps = {
 }
 
-export default ComponentInjector.return('TemplatesOrder', TemplatesOrder)
+export default ComponentInjector.return('Order', Order)

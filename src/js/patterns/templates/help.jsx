@@ -1,20 +1,20 @@
 import React, { Component, Fragment } from 'react'
 
 import Referal from '../atoms/links/referal'
-import OrganismsHeaderMobile from '../organisms/base/header-mobile'
-import OrganismsFoot from '../organisms/base/foot'
-import OrganismsPageHeader from '../organisms/base/header-page'
-import OrganismsNewsletterBlock from '../organisms/blocks/newsletter'
+import HeaderMobile from '../organisms/base/header-mobile'
+import Foot from '../organisms/base/foot'
+import PageHeader from '../organisms/base/header-page'
+import NewsletterBlock from '../organisms/blocks/newsletter'
 
-class TemplatesHelp extends Component {
+class Help extends Component {
     render () {
         return (
             <Fragment>
                 <div className='o-television'>
-                    <OrganismsHeaderMobile />
+                    <HeaderMobile />
                     <div className='o-television__display'>
                         <div className='o-container-medium'>
-                            <OrganismsPageHeader title='Hilfe' />
+                            <PageHeader title='Hilfe' />
                             <p className='o-distance-s'>Hier helfen wir dir am schnellsten weiter - finde Updates zu deinen Bestellungen sowie Antworten zu allen Themen.</p>
                             <div className='o-distance'>
                                 <h2 className='c-title-level-3'>Finde Antworten nach Themen</h2>
@@ -31,9 +31,9 @@ class TemplatesHelp extends Component {
                             </div>
                         </div>
                         <div className='o-distance o-container'>
-                            <OrganismsNewsletterBlock />
+                            <NewsletterBlock />
                         </div>
-                        <OrganismsFoot />
+                        <Foot />
                     </div>
                 </div>
             </Fragment>
@@ -41,8 +41,8 @@ class TemplatesHelp extends Component {
     }
 }
 
-TemplatesHelp.propTypes = {}
+Help.propTypes = {}
 
-TemplatesHelp.defaultProps = {}
+Help.defaultProps = {}
 
-export default TemplatesHelp
+export default Help

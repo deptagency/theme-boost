@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsChiplist extends Component {
+class Chiplist extends Component {
     render () {
         return (<div>
             <div className='o-chiplist'>
@@ -38,10 +38,10 @@ class OrganismsChiplist extends Component {
     }
 }
 
-OrganismsChiplist.propTypes = {
+Chiplist.propTypes = {
 }
 
-OrganismsChiplist.defaultProps = {
+Chiplist.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsChiplist', OrganismsChiplist)
+export default ComponentInjector.return('Chiplist', Chiplist)

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class MoleculesSequentialNav extends Component {
+class SequentialNav extends Component {
     render () {
         return (
             <nav role='navigation' className='c-sequential-navigation'>
@@ -76,8 +76,8 @@ class MoleculesSequentialNav extends Component {
     }
 }
 
-MoleculesSequentialNav.propTypes = {}
+SequentialNav.propTypes = {}
 
-MoleculesSequentialNav.defaultProps = {}
+SequentialNav.defaultProps = {}
 
-export default ComponentInjector.return('MoleculesSequentialNav', MoleculesSequentialNav)
+export default ComponentInjector.return('SequentialNav', SequentialNav)

@@ -8,12 +8,12 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import MobileNavigation from '../../molecules/navigations/mobileNavigation'
 import { topCategoryType } from '../../molecules/navigations/mobileNavigation/types'
 import TopCategoryNav from '../../molecules/navigations/topCategoryNav'
-import MoleculesUserIconNav from '../../molecules/navigations/user-icon-nav'
+import UserIconNav from '../../molecules/navigations/user-icon-nav'
 import MobileMenuToggle from '../../atoms/buttons/mobile-menu-toggle'
 import Button from '../../atoms/buttons/button'
 import { FormattedMessage } from 'react-intl'
 
-const OrganismsHead = ({ topCategories, logo, loggedIn }) => {
+const Head = ({ topCategories, logo, loggedIn }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     const ctaLoggedIn = () => {
@@ -67,7 +67,7 @@ const OrganismsHead = ({ topCategories, logo, loggedIn }) => {
                 >
                     Catwalk
                 </a>
-                <MoleculesUserIconNav open />
+                <UserIconNav open />
             </div>
             <MobileNavigation
                 className='u-hidden-medium-up'
@@ -82,14 +82,14 @@ const OrganismsHead = ({ topCategories, logo, loggedIn }) => {
     )
 }
 
-OrganismsHead.propTypes = {
+Head.propTypes = {
     topCategories: PropTypes.arrayOf(topCategoryType),
     logo: PropTypes.object,
     loggedIn: PropTypes.bool.isRequired,
 }
 
-OrganismsHead.defaultProps = {
+Head.defaultProps = {
     loggedIn: false,
 }
 
-export default ComponentInjector.return('OrganismsHead', OrganismsHead)
+export default ComponentInjector.return('Head', Head)

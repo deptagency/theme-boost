@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class MoleculesIcon extends Component {
+class Icon extends Component {
     render () {
         return (
             <React.Fragment>
@@ -146,8 +146,8 @@ class MoleculesIcon extends Component {
     }
 }
 
-MoleculesIcon.propTypes = {}
+Icon.propTypes = {}
 
-MoleculesIcon.defaultProps = {}
+Icon.defaultProps = {}
 
-export default ComponentInjector.return('MoleculesIcon', MoleculesIcon)
+export default ComponentInjector.return('Icon', Icon)

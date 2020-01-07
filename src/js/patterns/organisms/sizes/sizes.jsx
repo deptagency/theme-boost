@@ -4,7 +4,7 @@ import classnames from 'classnames'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsSizes extends Component {
+class Sizes extends Component {
     render () {
         const { values, disabledValues } = this.props
 
@@ -30,14 +30,14 @@ class OrganismsSizes extends Component {
     }
 }
 
-OrganismsSizes.propTypes = {
+Sizes.propTypes = {
     values: PropTypes.array,
     disabledValues: PropTypes.array,
 }
 
-OrganismsSizes.defaultProps = {
+Sizes.defaultProps = {
     values: [34, 36, 38, 40, 42, 44, 46, 48],
     disabledValues: [40],
 }
 
-export default ComponentInjector.return('OrganismsSizes', OrganismsSizes)
+export default ComponentInjector.return('Sizes', Sizes)

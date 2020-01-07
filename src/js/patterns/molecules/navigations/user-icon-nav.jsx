@@ -8,7 +8,7 @@ import { ReactComponent as WishlistIcon } from '../../../../icons/wishlist-favor
 import { ReactComponent as SearchIcon } from '../../../../icons/search.svg'
 import { ReactComponent as MyProfile } from './../../../../icons/my-profile.svg'
 
-const MoleculesUserIconNav = () => {
+const UserIconNav = () => {
     return (
         <ul className='o-header__top-right o-list-inline c-user-icon-nav'>
             <li className='o-list-inline__item'>
@@ -39,4 +39,4 @@ const MoleculesUserIconNav = () => {
     )
 }
 
-export default MoleculesUserIconNav
+export default UserIconNav

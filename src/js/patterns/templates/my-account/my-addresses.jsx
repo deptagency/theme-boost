@@ -2,18 +2,18 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import Button from '../../atoms/buttons/button'
-import OrganismsPageHeader from '../../organisms/base/header-page'
-import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
-import OrganismsFooter from '../../organisms/base/foot'
+import PageHeader from '../../organisms/base/header-page'
+import HeaderMobile from '../../organisms/base/header-mobile'
+import Footer from '../../organisms/base/foot'
 import ReferalBordered from '../../atoms/links/referal-bordered'
-import OrganismsAddressblock from '../../organisms/blocks/addressblock'
+import Addressblock from '../../organisms/blocks/addressblock'
 
-const TemplatesMyAddresses = props => {
+const MyAddresses = props => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderMobile className='o-television__bar' />
+            <HeaderMobile className='o-television__bar' />
             <div className='o-television__display'>
-                <OrganismsPageHeader title='Adressen' />
+                <PageHeader title='Adressen' />
                 <button className='c-button c-button--quiet c-button--boss o-distance-m'>
                     <svg className='c-icon c-icon--m' width='36' height='36' viewBox='0 0 36 36' fill='none'>
                         <path d='M18 35.625C21.4859 35.625 24.8935 34.5913 27.7919 32.6547C30.6903 30.718 32.9494 27.9654 34.2834 24.7448C35.6174 21.5243 35.9664 17.9805 35.2863 14.5615C34.6063 11.1426 32.9277 8.00215 30.4628 5.53725C27.9979 3.07235 24.8574 1.39373 21.4385 0.713667C18.0196 0.0336028 14.4758 0.382637 11.2552 1.71663C8.03466 3.05063 5.28201 5.30967 3.34535 8.20808C1.40869 11.1065 0.375 14.5141 0.375 18C0.380558 22.6727 2.23926 27.1525 5.54338 30.4566C8.84751 33.7608 13.3273 35.6194 18 35.625ZM18 4.12501C20.7442 4.12501 23.4268 4.93876 25.7085 6.46337C27.9903 7.98797 29.7687 10.155 30.8188 12.6903C31.869 15.2256 32.1438 18.0154 31.6084 20.7069C31.073 23.3984 29.7516 25.8707 27.8111 27.8111C25.8707 29.7516 23.3984 31.073 20.7069 31.6084C18.0154 32.1438 15.2256 31.869 12.6903 30.8188C10.1549 29.7687 7.98796 27.9903 6.46336 25.7085C4.93875 23.4268 4.125 20.7442 4.125 18C4.12897 14.3213 5.59207 10.7945 8.19328 8.19329C10.7945 5.59208 14.3213 4.12898 18 4.12501Z' />
@@ -29,7 +29,7 @@ const TemplatesMyAddresses = props => {
                                 <FormattedMessage id='account.address.residential' />
                             </h2>
                             <div className='o-distance-m'>
-                                <OrganismsAddressblock />
+                                <Addressblock />
                             </div>
                             <div className='o-distance-m'>
                                 <div className='o-list-bare'>
@@ -72,7 +72,7 @@ const TemplatesMyAddresses = props => {
                                 <h2 className='c-title-level-4 t-text-quiet u-text-uppercase'>
                                     <FormattedMessage id='account.address.residential' /></h2>
                                 <div className='o-distance-m'>
-                                    <OrganismsAddressblock />
+                                    <Addressblock />
                                 </div>
                                 <div className='o-buttonbar o-distance-m o-buttonbar--spread'>
                                     <button className='o-buttonbar__item'>
@@ -101,14 +101,14 @@ const TemplatesMyAddresses = props => {
                         <ReferalBordered title={<FormattedMessage id='account.addresses' />} />
                     </nav>
                 </section>
-                <OrganismsFooter />
+                <Footer />
             </div>
         </div>
     )
 }
 
-TemplatesMyAddresses.propTypes = {
+MyAddresses.propTypes = {
 
 }
 
-export default TemplatesMyAddresses
+export default MyAddresses

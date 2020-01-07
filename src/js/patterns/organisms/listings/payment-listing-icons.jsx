@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsPaymentListingIcons extends Component {
+class PaymentListingIcons extends Component {
     render () {
         return (
             <div>
@@ -39,8 +39,8 @@ class OrganismsPaymentListingIcons extends Component {
     }
 }
 
-OrganismsPaymentListingIcons.propTypes = {}
+PaymentListingIcons.propTypes = {}
 
-OrganismsPaymentListingIcons.defaultProps = {}
+PaymentListingIcons.defaultProps = {}
 
-export default ComponentInjector.return('OrganismsPaymentListingIcons', OrganismsPaymentListingIcons)
+export default ComponentInjector.return('PaymentListingIcons', PaymentListingIcons)

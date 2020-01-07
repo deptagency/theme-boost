@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
 // import OrganismsFeatureListing from '../listings/feature-listing'
-import OrganismsExpressDelivery from './express-delivery'
+import ExpressDelivery from './express-delivery'
 
 // NOTE: this pattern and the tastic (delivery-details/tastic.jsx)
 // are most definitely obsolete. *marcel
 
-const OrganismsDeliveryFeatures = () => {
+const DeliveryFeatures = () => {
     return (
         <Fragment>
             <OrganismsExpressDelivery />
@@ -14,6 +14,6 @@ const OrganismsDeliveryFeatures = () => {
     )
 }
 
-OrganismsDeliveryFeatures.propTypes = {}
+DeliveryFeatures.propTypes = {}
 
-export default OrganismsDeliveryFeatures
+export default DeliveryFeatures

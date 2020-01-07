@@ -6,7 +6,7 @@ import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 import { ribbon, ribbonTopRight } from './promobox-with-positioning.module.scss'
 
-class OrganismsPromoboxWithPositioning extends Component {
+class PromoboxWithPositioning extends Component {
     render () {
         const { children, vertical, horizontal, height, image, customChildrenStyle } = this.props
 
@@ -47,13 +47,13 @@ class OrganismsPromoboxWithPositioning extends Component {
     }
 }
 
-OrganismsPromoboxWithPositioning.defaultProps = {
+PromoboxWithPositioning.defaultProps = {
     vertical: 'middle',
     horizontal: 'center',
     customChildrenStyle: {},
 }
 
-OrganismsPromoboxWithPositioning.propTypes = {
+PromoboxWithPositioning.propTypes = {
     children: PropTypes.node.isRequired,
     vertical: PropTypes.string,
     horizontal: PropTypes.string,
@@ -62,4 +62,4 @@ OrganismsPromoboxWithPositioning.propTypes = {
     customChildrenStyle: PropTypes.object,
 }
 
-export default ComponentInjector.return('OrganismsPromoboxWithPositioning', OrganismsPromoboxWithPositioning)
+export default ComponentInjector.return('PromoboxWithPositioning', PromoboxWithPositioning)

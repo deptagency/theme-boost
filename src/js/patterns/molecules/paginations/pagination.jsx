@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class MoleculesPagination extends Component {
+class Pagination extends Component {
     render () {
         return (<div>
             <div className='c-pagination'>
@@ -16,10 +16,10 @@ class MoleculesPagination extends Component {
     }
 }
 
-MoleculesPagination.propTypes = {
+Pagination.propTypes = {
 }
 
-MoleculesPagination.defaultProps = {
+Pagination.defaultProps = {
 }
 
-export default ComponentInjector.return('MoleculesPagination', MoleculesPagination)
+export default ComponentInjector.return('Pagination', Pagination)

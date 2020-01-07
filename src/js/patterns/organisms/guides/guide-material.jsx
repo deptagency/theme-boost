@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
+import HeaderSlideIn from '../../organisms/base/header-slide-in'
 
-const OrganismsGuideMaterial = ({ materials }) => {
+const GuideMaterial = ({ materials }) => {
     return (
         <div>
             <div className='o-television is-active'>
-                <OrganismsHeaderSlideIn title='Material' />
+                <HeaderSlideIn title='Material' />
                 <div className='o-television__display'>
 
                     <ul className='o-list-bare'>
@@ -35,12 +35,12 @@ const OrganismsGuideMaterial = ({ materials }) => {
     )
 }
 
-OrganismsGuideMaterial.propTypes = {
+GuideMaterial.propTypes = {
     materials: PropTypes.array.isRequired,
 }
 
-OrganismsGuideMaterial.defaultProps = {
+GuideMaterial.defaultProps = {
     materials: ['Baumwolle', 'Denim', 'Jersey', 'Polyester'],
 }
 
-export default ComponentInjector.return('OrganismsGuideMaterial', OrganismsGuideMaterial)
+export default ComponentInjector.return('GuideMaterial', GuideMaterial)

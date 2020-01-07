@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-const OrganismsSortingSwiper = ({ sorting }) => {
+const SortingSwiper = ({ sorting }) => {
     return (
         <div className='o-swiper'>
             <div className='o-swiper__holder'>
@@ -15,12 +15,12 @@ const OrganismsSortingSwiper = ({ sorting }) => {
     )
 }
 
-OrganismsSortingSwiper.propTypes = {
+SortingSwiper.propTypes = {
     sorting: PropTypes.array.isRequired,
 }
 
-OrganismsSortingSwiper.defaultProps = {
+SortingSwiper.defaultProps = {
     sorting: ['Topseller', 'Neu hinzugefügt', 'Niedrigster Preis', 'Höchster Preis'],
 }
 
-export default ComponentInjector.return('OrganismsSortingSwiper', OrganismsSortingSwiper)
+export default ComponentInjector.return('SortingSwiper', SortingSwiper)

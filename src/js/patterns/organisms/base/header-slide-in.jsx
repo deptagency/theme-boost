@@ -7,7 +7,7 @@ import { ReactComponent as ArrowLeftWhite } from '../../../../icons/arrow-left.s
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-const OrganismsHeaderSlideIn = (props) => {
+const HeaderSlideIn = (props) => {
     const { component: Component, title, onClose, showLeftBackIcon, showRightCloseIcon, className, theme } = props
     return (
         <Component
@@ -39,7 +39,7 @@ const OrganismsHeaderSlideIn = (props) => {
     )
 }
 
-OrganismsHeaderSlideIn.propTypes = {
+HeaderSlideIn.propTypes = {
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     theme: PropTypes.string,
@@ -49,7 +49,7 @@ OrganismsHeaderSlideIn.propTypes = {
     showRightCloseIcon: PropTypes.bool,
 }
 
-OrganismsHeaderSlideIn.defaultProps = {
+HeaderSlideIn.defaultProps = {
     component: 'header',
     theme: 't-spotlight',
     className: '',
@@ -59,4 +59,4 @@ OrganismsHeaderSlideIn.defaultProps = {
     showRightCloseIcon: true,
 }
 
-export default ComponentInjector.return('OrganismsHeaderSlideIn', OrganismsHeaderSlideIn)
+export default ComponentInjector.return('HeaderSlideIn', HeaderSlideIn)

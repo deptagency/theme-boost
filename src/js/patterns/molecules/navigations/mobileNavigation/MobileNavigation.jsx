@@ -13,7 +13,7 @@ import { topCategoryType } from './types'
  * see PropTypes for prop documentation
  *
  */
-function MoleculesMobileNavigation ({ open, topCategories, onClose, callToAction, className }) {
+function MainMobileNavigation ({ open, topCategories, onClose, callToAction, className }) {
     // currentTopCategoy is the array ID that determines which tree is being rendered
     const [currentTopCategory, setCurrentTopCategory] = useState(0)
     // the current level of nesting.
@@ -101,7 +101,7 @@ function MoleculesMobileNavigation ({ open, topCategories, onClose, callToAction
     )
 }
 
-MoleculesMobileNavigation.propTypes = {
+MainMobileNavigation.propTypes = {
     /**
      * Is the menu visible?
      */
@@ -124,6 +124,6 @@ MoleculesMobileNavigation.propTypes = {
     className: PropTypes.string,
 }
 
-MoleculesMobileNavigation.defaultProps = {}
+MainMobileNavigation.defaultProps = {}
 
-export const MobileNavigation = ComponentInjector.return('MoleculesMobileNavigation', MoleculesMobileNavigation)
+export const MobileNavigation = ComponentInjector.return('MainMobileNavigation', MainMobileNavigation)

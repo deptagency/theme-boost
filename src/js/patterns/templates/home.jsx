@@ -2,46 +2,46 @@ import React, { Component, Fragment } from 'react'
 
 import MoleculesSequentialNav from '../molecules/navigations/sequential-nav'
 
-import OrganismsHead from '../organisms/base/header'
-import OrganismsStage from '../organisms/stages/stage'
-import OrganismsCategoryListing from '../organisms/listings/category-listing'
-import OrganismsCategoryListingHalf from '../organisms/listings/category-listing-half'
-import OrganismsProductListing from '../organisms/listings/product-listing'
-import OrganismsFoot from '../organisms/base/foot'
+import Head from '../organisms/base/header'
+import Stage from '../organisms/stages/stage'
+import CategoryListing from '../organisms/listings/category-listing'
+import CategoryListingHalf from '../organisms/listings/category-listing-half'
+import ProductListing from '../organisms/listings/product-listing'
+import Foot from '../organisms/base/foot'
 
-class TemplatesHome extends Component {
+class Home extends Component {
     render () {
         return (
             <Fragment>
-                <OrganismsHead />
+                <Head />
                 <main role='main'>
                     <section className='o-container o-distance-m'>
-                        <OrganismsStage />
+                        <Stage />
                     </section>
                     <section className='o-container o-distance-s'>
-                        <OrganismsCategoryListing />
+                        <CategoryListing />
                     </section>
                     <section className='o-container o-distance'>
-                        <OrganismsProductListing />
+                        <ProductListing />
                     </section>
                     <section className='o-container o-distance'>
-                        <OrganismsCategoryListingHalf />
+                        <CategoryListingHalf />
                     </section>
                     <section className='o-container o-distance'>
-                        <OrganismsProductListing />
+                        <ProductListing />
                     </section>
                 </main>
 
                 <MoleculesSequentialNav />
 
-                <OrganismsFoot />
+                <Foot />
             </Fragment>
         )
     }
 }
 
-TemplatesHome.propTypes = {}
+Home.propTypes = {}
 
-TemplatesHome.defaultProps = {}
+Home.defaultProps = {}
 
-export default TemplatesHome
+export default Home

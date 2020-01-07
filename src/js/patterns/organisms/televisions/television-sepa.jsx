@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 
-import OrganismsFormSepa from '../../organisms/form/sepa'
+import FormSepa from '../../organisms/form/sepa'
 import Button from '../../atoms/buttons/button'
-import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
+import HeaderSlideIn from '../../organisms/base/header-slide-in'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsTelevisionSepa extends Component {
+class TelevisionSepa extends Component {
     render () {
         return (
             <div className='o-television'>
-                <OrganismsHeaderSlideIn title='SEPA-Lastschrift' className='o-television__bar' />
+                <HeaderSlideIn title='SEPA-Lastschrift' className='o-television__bar' />
                 <div className='o-television__display'>
-                    <OrganismsFormSepa />
+                    <FormSepa />
                 </div>
                 <div className='o-television__remote-control'>
                     <Button type='primary' size='boss'>Speichern</Button>
@@ -22,10 +22,10 @@ class OrganismsTelevisionSepa extends Component {
     }
 }
 
-OrganismsTelevisionSepa.propTypes = {
+TelevisionSepa.propTypes = {
 }
 
-OrganismsTelevisionSepa.defaultProps = {
+TelevisionSepa.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsTelevisionSepa', OrganismsTelevisionSepa)
+export default ComponentInjector.return('TelevisionSepa', TelevisionSepa)

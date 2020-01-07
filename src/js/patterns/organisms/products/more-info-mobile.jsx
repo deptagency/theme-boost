@@ -7,9 +7,9 @@ import { ReactComponent as YellowTick } from '../../../../icons/yellow-tick.svg'
 import { ReactComponent as SmallTruck } from '../../../../icons/truck-small.svg'
 import Collapsible from 'react-collapsible'
 import ReviewsPanel from '../../organisms/products/panels/reviews-panel'
-import OrganismsDetailsMobile from './more-info/details-mobile'
+import DetailsMobile from './more-info/details-mobile'
 
-const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
+const MoreInfoProductMobile = ({ product, variant }) => {
     const [reviewsOpen, setReviewsOpen] = useState(false)
     const [isDescriptionFocused, setIsDescriptionFocused] = useState(false)
     const [isShippingFocused, setIsShippingFocused] = useState(false)
@@ -39,7 +39,7 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
                         </div>
                     }
                 >
-                    {variant.attributes && <OrganismsDetailsMobile attributes={variant.attributes} />}
+                    {variant.attributes && <DetailsMobile attributes={variant.attributes} />}
                 </Collapsible>
             </div>
             <span className='c-divider o-distance-m' />
@@ -126,9 +126,9 @@ const OrganismsMoreInfoProductMobile = ({ product, variant }) => {
     )
 }
 
-OrganismsMoreInfoProductMobile.propTypes = {
+MoreInfoProductMobile.propTypes = {
     product: PropTypes.object.isRequired,
     variant: PropTypes.object.isRequired,
 }
 
-export default OrganismsMoreInfoProductMobile
+export default MoreInfoProductMobile

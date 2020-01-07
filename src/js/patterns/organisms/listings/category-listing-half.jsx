@@ -2,21 +2,21 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import OrganismsPromobox from '../../molecules/promobox/promobox'
+import Promobox from '../../molecules/promobox/promobox'
 
-class OrganismsCategoryListingHalf extends Component {
+class CategoryListingHalf extends Component {
     render () {
         return (
             <div className='o-grid o-grid--small-half'>
-                <OrganismsPromobox />
-                <OrganismsPromobox />
+                <Promobox />
+                <Promobox />
             </div>
         )
     }
 }
 
-OrganismsCategoryListingHalf.propTypes = {}
+CategoryListingHalf.propTypes = {}
 
-OrganismsCategoryListingHalf.defaultProps = {}
+CategoryListingHalf.defaultProps = {}
 
-export default ComponentInjector.return('OrganismsCategoryListingHalf', OrganismsCategoryListingHalf)
+export default ComponentInjector.return('CategoryListingHalf', CategoryListingHalf)
