@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
-import TemplatesLogin from '../../patterns/templates/checkout-login'
+import Login from '../../patterns/templates/checkout-login'
 
 class CheckoutTastic extends Component {
     render () {
         return (
-            <TemplatesLogin />
+            <Login />
         )
     }
 }

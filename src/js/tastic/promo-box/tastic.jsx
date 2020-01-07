@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 
-import OrganismsPromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
+import PromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
 import Button from '../../patterns/atoms/buttons/button'
 
 class PromoBoxTastic extends Component {
@@ -13,7 +13,7 @@ class PromoBoxTastic extends Component {
         const { verticalPosition, horizontalPosition, buttonLink, buttonText, image, title, topic } = this.props.data
 
         return (
-            <OrganismsPromoboxWithPositioning
+            <PromoboxWithPositioning
                 vertical={verticalPosition}
                 horizontal={horizontalPosition}
                 image={image}
@@ -30,7 +30,7 @@ class PromoBoxTastic extends Component {
                 >
                     <Translatable value={buttonText} />
                 </Button>
-            </OrganismsPromoboxWithPositioning>
+            </PromoboxWithPositioning>
         )
     }
 }

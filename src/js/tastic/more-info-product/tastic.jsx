@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import productConnector from 'frontastic-catwalk/src/js/tastic/product/connector'
-import OrganismsMoreInfoProductMobile from '../../patterns/organisms/products/more-info-mobile.jsx'
-import OrganismsMoreInfoProductDesktop from '../../patterns/organisms/products/more-info-desktop.jsx'
+import MoreInfoProductMobile from '../../patterns/organisms/products/more-info-mobile.jsx'
+import MoreInfoProductDesktop from '../../patterns/organisms/products/more-info-desktop.jsx'
 
 const MoreInfoProductTastic = ({ product, variant }) => {
     if (!product || !variant) {
@@ -12,8 +12,8 @@ const MoreInfoProductTastic = ({ product, variant }) => {
 
     return (
         <>
-            <OrganismsMoreInfoProductMobile product={product} variant={variant} />
-            <OrganismsMoreInfoProductDesktop product={{ ...variant, name: product.name }} />
+            <MoreInfoProductMobile product={product} variant={variant} />
+            <MoreInfoProductDesktop product={{ ...variant, name: product.name }} />
         </>
     )
 }

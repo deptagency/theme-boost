@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import OrganismsPromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
+import PromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
 import Button from '../../patterns/atoms/buttons/button'
 import { useWindowWidth } from '@react-hook/window-size'
 import ButtonBoxesDesktop from '../../patterns/organisms/button-boxes/desktop'
@@ -18,7 +18,7 @@ const CategoryButtonBoxesTastic = (props) => {
     }
 
     const buttonBoxes = [
-        <div><OrganismsPromoboxWithPositioning
+        <div><PromoboxWithPositioning
             key='1'
             image={firstImage}
             {... options}
@@ -26,8 +26,8 @@ const CategoryButtonBoxesTastic = (props) => {
             <Button type='primary'>
                 {firstButtonLabel}
             </Button>
-        </OrganismsPromoboxWithPositioning></div>,
-        <div><OrganismsPromoboxWithPositioning
+        </PromoboxWithPositioning></div>,
+        <div><PromoboxWithPositioning
             key='2'
             image={secondImage}
             {... options}
@@ -35,8 +35,8 @@ const CategoryButtonBoxesTastic = (props) => {
             <Button type='primary'>
                 {secondButtonLabel}
             </Button>
-        </OrganismsPromoboxWithPositioning></div>,
-        <div><OrganismsPromoboxWithPositioning
+        </PromoboxWithPositioning></div>,
+        <div><PromoboxWithPositioning
             key='3'
             image={thirdImage}
             {... options}
@@ -44,7 +44,7 @@ const CategoryButtonBoxesTastic = (props) => {
             <Button type='primary'>
                 {thirdButtonLabel}
             </Button>
-        </OrganismsPromoboxWithPositioning></div>,
+        </PromoboxWithPositioning></div>,
     ]
 
     if (width < 880) {

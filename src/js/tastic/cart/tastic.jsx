@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import OrganismsFullCart from '../../patterns/organisms/cart/full-cart'
-import OrganismsEmptyCart from '../../patterns/organisms/cart/empty-cart'
+import FullCart from '../../patterns/organisms/cart/full-cart'
+import EmptyCart from '../../patterns/organisms/cart/empty-cart'
 import Entity from 'frontastic-catwalk/src/js/app/entity'
 
 class CartTastic extends Component {
@@ -13,7 +13,7 @@ class CartTastic extends Component {
             const { lineItems, sum, currency } = cart.data
 
             return (
-                <OrganismsFullCart
+                <FullCart
                     cartItems={lineItems}
                     sum={sum}
                     currency={currency}
@@ -21,7 +21,7 @@ class CartTastic extends Component {
             )
         } else {
             return (
-                <OrganismsEmptyCart />
+                <EmptyCart />
             )
         }
     }

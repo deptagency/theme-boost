@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
 
-import OrganismsNewsletterBlock from '../../patterns/organisms/blocks/newsletter'
+import NewsletterBlock from '../../patterns/organisms/blocks/newsletter'
 
 class NewsletterTastic extends Component {
     render () {
-        return <OrganismsNewsletterBlock />
+        return <NewsletterBlock />
     }
 }
 
