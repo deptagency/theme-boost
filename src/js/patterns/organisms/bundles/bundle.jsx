@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import app from 'frontastic-catwalk/src/js/app/app'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import classnames from 'classnames'
 import { ReactComponent as CartBin } from '../../../../icons/cart-bin.svg'
 
 import MoleculesDetaillist from '../../molecules/lists/detaillist'
@@ -25,7 +24,7 @@ const OrganismsBundle = ({ itemId, image, name, designer, count, price, color, s
                 <button onClick={() => {
                     app.getLoader('cart').removeLineItem({ lineItemId: itemId })
                 }}>
-                    <CartBin/>
+                    <CartBin />
                 </button>
             </div>
             <div className='o-bundle__body'>
@@ -41,8 +40,7 @@ const OrganismsBundle = ({ itemId, image, name, designer, count, price, color, s
                             count: event.target.value,
                         })
                     }}
-                    value={count}
-                >
+                    value={count} >
                     {productCounter.map((i) => {
                         const count = i + 1
                         return <option key={count} value={count}>{count}</option>
