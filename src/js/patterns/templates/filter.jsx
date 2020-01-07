@@ -73,7 +73,7 @@ const Filter = ({ setIsOpen, count }) => {
                     <ReferalBordered title='Obermaterial' />
                     <ReferalBordered title='Neuheiten' />
                 </div>
-                <div className='c-box u-background-color-default o-television__display__boundless o-television__bouncer o-distance-m' />
+                <div className='u-background-color-default o-television__bouncer o-distance-m' />
             </div>
             <div className='o-television__remote-control u-background-color-default'>
                 <Button type='primary' size='boss'>
