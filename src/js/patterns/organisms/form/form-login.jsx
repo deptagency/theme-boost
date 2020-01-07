@@ -10,11 +10,11 @@ class OrganismsFormLogin extends Component {
                     <div className='o-form-area o-distance-m'>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-mail' className='c-form-label'>E-Mail Address</label>
-                            <input type='email' id='inp-mail' className='o-distance-s' />
+                            <input type='email' id='inp-mail' className='o-distance-xs' />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-password' className='c-form-label'>Password</label>
-                            <div className='c-form-unit o-distance-s'>
+                            <div className='c-form-unit o-distance-xs'>
                                 <input type='password' className='c-form-unit__input c-form-unit__input--connected' id='inp-password' />
                                 <button className='c-form-unit__type c-link c-link--quiet'>Show</button>
                             </div>

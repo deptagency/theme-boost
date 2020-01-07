@@ -13,7 +13,7 @@ class OrganismsFormPasswordChange extends Component {
                             <label htmlFor='inp-password' className='c-form-label'>
                                 <FormattedMessage id='account.password.current' />
                             </label>
-                            <div className='c-form-unit o-distance-s'>
+                            <div className='c-form-unit o-distance-xs'>
                                 <input type='password' className='c-form-unit__input c-form-unit__input--connected' id='inp-password' />
                                 <button className='c-form-unit__type c-link c-link--quiet'>
                                     <FormattedMessage id='account.show' />
@@ -24,7 +24,7 @@ class OrganismsFormPasswordChange extends Component {
                             <label htmlFor='inp-password' className='c-form-label'>
                                 <FormattedMessage id='account.password.new' />
                             </label>
-                            <div className='c-form-unit o-distance-s'>
+                            <div className='c-form-unit o-distance-xs'>
                                 <input type='password' className='c-form-unit__input c-form-unit__input--connected' id='inp-password' />
                                 <button className='c-form-unit__type c-link c-link--quiet'>
                                     <FormattedMessage id='account.show' />
@@ -35,7 +35,7 @@ class OrganismsFormPasswordChange extends Component {
                             <label htmlFor='inp-password-2' className='c-form-label'>
                                 <FormattedMessage id='account.password.confirmNew' />
                             </label>
-                            <div className='c-form-unit o-distance-s'>
+                            <div className='c-form-unit o-distance-xs'>
                                 <input type='password' className='c-form-unit__input c-form-unit__input--connected' id='inp-password-2' />
                                 <button className='c-form-unit__type c-link c-link--quiet'>
                                     <FormattedMessage id='account.show' />
