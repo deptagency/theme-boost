@@ -4,21 +4,21 @@ import MoleculesProductRow from '../molecules/products/product-row'
 
 const TemplatesProductReturn = props => {
     return (
-        <div className='padding--10'>
+        <div className='c-box'>
             <MoleculesProductRow
                 showWishListIcon={false}
                 showCloseIcon={false}
                 showProductCount
             />
 
-            <div className='padding-top--10'>
-                <MoleculesButton className='width--100 height--52px' type='primary'>
+            <div className='o-distance-m'>
+                <MoleculesButton type='primary' size='boss'>
                     Behalten
                 </MoleculesButton>
             </div>
 
-            <div className='padding-top--10'>
-                <MoleculesButton className='width--100 height--52px' type='quiet'>
+            <div className='o-distance-m'>
+                <MoleculesButton type='quiet' size='boss'>
                     Zurückgeben
                 </MoleculesButton>
             </div>

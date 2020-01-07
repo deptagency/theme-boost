@@ -11,7 +11,7 @@ const OrganismsFullCart = ({ cartItems, sum }) => {
                 <MoleculesCartListing cartItems={cartItems} />
             </div>
             <div className='o-with-sidebar__sidebar is-sticky'>
-                <MoleculesCartSummary outerClassName='c-box u-background-color-quiet' sum={sum} />
+                <MoleculesCartSummary outerClassName='c-box u-background-color-default' sum={sum} />
             </div>
         </div>
     )

@@ -3,14 +3,13 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 import OrganismsBundleListing from '../../organisms/listings/bundle-listing'
 import OrganismsPaymentListingIcons from '../../organisms/listings/payment-listing-icons'
-import { marginTop } from './cart-listing.module.scss'
 
 const MoleculesCartListing = ({ cartItems, outerClassName }) => {
     return (
         <div className={outerClassName}>
             <section>
                 <h1 className='c-title-level-3'><FormattedMessage id='cart.myCart' /></h1>
-                <div className={marginTop}>
+                <div>
                     <OrganismsBundleListing cartItems={cartItems} />
                 </div>
             </section>

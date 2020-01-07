@@ -44,7 +44,8 @@ fieldset {
 select {
     cursor: pointer;
 
-    padding: $spacing-inset-m;
+    padding: $spacing-inset-s $spacing-inset-xl $spacing-inset-s $spacing-inset-m;
+    width: auto;
     background-image: url(../../icons/arrow-expand.svg);
     background-repeat: no-repeat;
     background-position: right $spacing-inset-m top 50%;

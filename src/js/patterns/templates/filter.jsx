@@ -6,72 +6,77 @@ import OrganismsSizes from '../organisms/sizes/sizes'
 import MoleculesFormFromTo from '../molecules/forms/form-element-from-to'
 import MobileSwipe from './mobile-swipe'
 import OrganismsSorting from '../organisms/sorting/sorting'
-import MoleculesButton from '../molecules/buttons/button'
-import MoleculesColorsFilter from '../molecules/colorsfilter/colors-filter'
-import arrowLeft from '../../../../icons/arrow-left.svg'
+import MoleculesButton from '../atoms/buttons/button'
+import ReferalBordered from '../atoms/links/referal-bordered'
+// import MoleculesColorsFilter from '../molecules/colorsfilter/colors-filter'
+import arrowLeft from '../../../icons/arrow-left.svg'
 
 const TemplatesFilter = ({ setIsOpen, count }) => {
     return (
-        <div className='filter-panel'>
-            <OrganismsHeaderSlideIn title='Filter' />
-            <div className='filter-content'>
-
-                <div className='filter-component'>
-                    <AtomsFormLabel className='filter-input-label' value='Größe' />
-                    <MobileSwipe sliderId='swipe-sizes'>
-                        <OrganismsSizes />
-                    </MobileSwipe>
+        <div className='o-television is-active u-background-color-default'>
+            <OrganismsHeaderSlideIn title='Filter' className='o-television__bar' />
+            <div className='o-television__display u-background-color-ghost'>
+                <div>
+                    <AtomsFormLabel className='c-title-level-4' value='Größe' />
+                    <div className='o-television__display__boundless o-distance-s'>
+                        <MobileSwipe sliderId='swipe-sizes'>
+                            <OrganismsSizes />
+                        </MobileSwipe>
+                    </div>
                 </div>
-
-                <div className='filter-component'>
-                    <AtomsFormLabel className='filter-input-label' value='Sortierung' />
-                    <MobileSwipe sliderId='swipe-sorting'>
-                        <OrganismsSorting />
-                    </MobileSwipe>
+                <div className='o-television__display__boundless'>
+                    <span className='c-divider c-divider--break o-distance-m' />
                 </div>
-
-                <div className='filter-component'>
-                    <AtomsFormLabel className='filter-input-label' value='Preis' />
-                    <MoleculesFormFromTo className='extra-margin' />
+                <div className='o-distance-m'>
+                    <AtomsFormLabel className='c-title-level-4' value='Sortierung' />
+                    <div className='o-television__display__boundless o-distance-s'>
+                        <MobileSwipe sliderId='swipe-sorting'>
+                            <OrganismsSorting />
+                        </MobileSwipe>
+                    </div>
                 </div>
-
-                <div className='filter-component'>
-                    <AtomsFormLabel className='filter-input-label' value='Marke' />
-                    <select className='extra-margin' id='' name='select'>
+                <div className='o-television__display__boundless'>
+                    <span className='c-divider c-divider--break o-distance-m' />
+                </div>
+                <div className='o-distance-m'>
+                    <AtomsFormLabel className='c-title-level-4' value='Preis' />
+                    <MoleculesFormFromTo className='o-distance-s' />
+                </div>
+                <div className='o-television__display__boundless'>
+                    <span className='c-divider c-divider--break o-distance-m' />
+                </div>
+                <div className='o-distance-m'>
+                    <AtomsFormLabel className='c-title-level-4' value='Marke' />
+                    <select id='' name='select' className='o-distance-s u-full-width'>
                         <option>Bitte auswählen</option>
                         <option value='Value A'>Value A</option>
                         <option value='Value B'>Value B</option>
                         <option value='Value C'>Value C</option>
                         <option value='Value D'>Value D</option>
                     </select>
-
                 </div>
-
-                <div className='filter-component'>
-                    <AtomsFormLabel className='filter-input-label' value='Farbe' />
-                    <MobileSwipe sliderId='swipe-colors'>
-                        <MoleculesColorsFilter />
+                <div className='o-television__display__boundless'>
+                    <span className='c-divider c-divider--break o-distance-m' />
+                </div>
+                <div className='o-distance-m'>
+                    <AtomsFormLabel className='c-title-level-4' value='Farbe' />
+                    <MobileSwipe sliderId='swipe-colors' className='o-distance-s'>
+                        {/* <MoleculesColorsFilter /> */}
                     </MobileSwipe>
                 </div>
-
-                <div className='filter-component filter-component--collapsed'>
-                    Material
-                    <img src={arrowLeft} alt='arrow left' />
+                <div className='o-television__display__boundless'>
+                    <span className='c-divider c-divider--break o-distance-m' />
                 </div>
-                <div className='filter-component filter-component--collapsed'>
-                    Muster
-                    <img src={arrowLeft} alt='arrow left' />
+                <div className='o-distance-m'>
+                    <ReferalBordered title='Material' />
+                    <ReferalBordered title='Muster' />
+                    <ReferalBordered title='Obermaterial' />
+                    <ReferalBordered title='Neuheiten' />
                 </div>
-                <div className='filter-component filter-component--collapsed'>
-                    Obermaterial
-                    <img src={arrowLeft} alt='arrow left' />
-                </div>
-                <div className='filter-component filter-component--collapsed'>
-                    Neuheiten
-                    <img src={arrowLeft} alt='arrow left' />
-                </div>
-
-                <MoleculesButton className='button-show-filter-results' type='primary'>
+                <div className='c-box u-background-color-default o-television__display__boundless o-television__bouncer o-distance-m' />
+            </div>
+            <div className='o-television__remote-control u-background-color-default'>
+                <MoleculesButton type='primary' size='boss'>
                     {count} Ergebnisse anzeigen
                 </MoleculesButton>
             </div>

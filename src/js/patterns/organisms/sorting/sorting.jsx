@@ -7,12 +7,18 @@ class OrganismsSorting extends Component {
     render () {
         const { values } = this.props
 
-        return (<div className='organism-sorting'>
-            <div className='c-chip is-active min-width-160'>Topseller</div>
-            {values.map((v) => {
-                  return <div className='c-chip min-width-160'>{v}</div>
-              })}
-        </div>)
+        return (
+            <div className='o-swiper'>
+                <div className='o-swiper__holder'>
+                    <div className='o-swiper__item'>
+                        <button className='c-chip c-chip--content-width is-active'>Topseller</button>
+                    </div>
+                    {values.map((v) => {
+                          return <div className='o-swiper__item'><button className='c-chip c-chip--content-width'>{v}</button></div>
+                      })}
+                </div>
+            </div>
+        )
     }
 }
 

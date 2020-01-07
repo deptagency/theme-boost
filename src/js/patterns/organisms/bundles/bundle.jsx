@@ -2,19 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import app from 'frontastic-catwalk/src/js/app/app'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import classnames from 'classnames'
 import { ReactComponent as CartBin } from '../../../../icons/cart-bin.svg'
-import {
-    productRow,
-    productImage,
-    productInfo,
-    productTitle,
-    productDesigner,
-    countSelect,
-    rightColumn,
-    cursorPointer,
-    cartPrice,
-} from './bundle.module.scss'
 
 import MoleculesDetaillist from '../../molecules/lists/detaillist'
 import AtomsPrice from '../../atoms/prices/price'
@@ -24,49 +12,43 @@ const OrganismsBundle = ({ itemId, image, name, designer, count, price, color, s
     const productCounter = Array.from(Array(10).keys())
 
     return (
-        <div className={classnames(productRow, 'productRow')}>
-            <div className={classnames(productImage, 'productImage')}>
+        <div className='o-bundle'>
+            <div className='o-bundle__asset'>
                 <img src={image} alt='' />
             </div>
-            <div className={classnames(productInfo, 'productInfo')}>
-                <div className='o-bundle__header'>
-                    <div>
-                        <div className={classnames(productTitle, 'productTitle')}>{name}</div>
-                        <div className={classnames(productDesigner, 'productDesigner')}>{designer}</div>
-                    </div>
+            <div className='o-bundle__header'>
+                <div>
+                    <div className='c-title-level-4'>{name}</div>
+                    <div className='u-text-s t-text-quiet'>{designer}</div>
                 </div>
-                <div className='o-bundle__body'>
-                    <MoleculesDetaillist
-                        color={color}
-                        size={size}
-                    />
-                    <select
-                        className={classnames(countSelect, 'o-distance-s')}
-                        onChange={(event) => {
-                            app.getLoader('cart').updateLineItem({
-                                lineItemId: itemId,
-                                count: event.target.value,
-                            })
-                        }}
-                        value={count}
-                    >
-                        {productCounter.map((i) => {
-                            const count = i + 1
-                            return <option key={count} value={count}>{count}</option>
-                        })}
-                    </select>
-                </div>
+                <button onClick={() => {
+                    app.getLoader('cart').removeLineItem({ lineItemId: itemId })
+                }}>
+                    <CartBin />
+                </button>
             </div>
-            <div className={classnames(rightColumn, 'rightColumn')}>
-                <CartBin
-                    className={cursorPointer}
-                    onClick={() => {
-                        app.getLoader('cart').removeLineItem({ lineItemId: itemId })
-                    }}
+            <div className='o-bundle__body'>
+                <MoleculesDetaillist
+                    color={color}
+                    size={size}
                 />
-                <div className={classnames(cartPrice, 'cartPrice')}>
-                    <AtomsPrice value={price} normal />
-                </div>
+                <select
+                    className='o-distance-m'
+                    onChange={(event) => {
+                        app.getLoader('cart').updateLineItem({
+                            lineItemId: itemId,
+                            count: event.target.value,
+                        })
+                    }}
+                    value={count} >
+                    {productCounter.map((i) => {
+                        const count = i + 1
+                        return <option key={count} value={count}>{count}</option>
+                    })}
+                </select>
+            </div>
+            <div className='o-bundle__footer'>
+                <AtomsPrice value={price} normal />
             </div>
         </div>
     )
