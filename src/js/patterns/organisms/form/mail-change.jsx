@@ -6,16 +6,14 @@ class MailChange extends Component {
     render () {
         return (<div>
             <form method=''>
-                <fieldset>
-                    <div className='o-form-area o-distance-m'>
-                        <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <label htmlFor='' className='c-form-label'>E-Mail-Address</label>
-                            <input type='mail' className='o-distance-xs' />
-                        </div>
+                <div className='o-form-area'>
+                    <div className='o-form-area__column-6-6 o-form-area__new-row'>
+                        <label htmlFor='' className='c-form-label'>E-Mail-Address</label>
+                        <input type='mail' className='o-distance-xs' />
                     </div>
-                </fieldset>
-                <div className='o-distance-l'>
-                    <button type='submit' className='c-button c-button--primary c-button--boss'>Jetzt speichern</button>
+                    <div className='o-form-area__column-6-6 o-form-area__new-row'>
+                        <button type='submit' className='c-button c-button--primary c-button--boss'>Jetzt speichern</button>
+                    </div>
                 </div>
             </form>
         </div>)

@@ -194,11 +194,7 @@ class OrganismsGuideBrand extends Component {
                                 </div>
                             </article>
                         </div>
-                        <div className='c-holder o-television__display__boundless c-box t-quietlight o-distance'>
-                            <a href='' className='c-logo' title='Catwalk'>
-                              Catwalk
-                            </a>
-                        </div>
+                        <div className='c-box u-background-color-default o-television__display__boundless o-television__bouncer o-distance-m' />
                     </div>
                     <div className='o-television__remote-control'>
                         <button type='submit' className='c-button c-button--quiet c-button--boss'>Zurück</button>

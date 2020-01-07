@@ -65,7 +65,7 @@ class Contact extends Component {
                             <label htmlFor='' className='c-form-label'>Place</label>
                             <input type='text' className='o-distance-xs' />
                         </div>
-                        <div className='o-form-area__column-2-6 o-form-area__new-row'>
+                        <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='' className='c-form-label'>Thema auswählen</label>
                             <select name='' id='' className='o-distance-xs'>
                                 <option value=''>Allgemeine Anfrage</option>

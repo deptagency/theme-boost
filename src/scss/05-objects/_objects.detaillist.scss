@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(2, max-content);
   grid-column-gap: $spacing-inline-m;
-  grid-row-gap: $spacing-stack-m;
+  grid-row-gap: $spacing-stack-xs;
   align-items: flex-start;
   justify-content: flex-start;
 }

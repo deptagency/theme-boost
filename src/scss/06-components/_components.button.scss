@@ -155,7 +155,37 @@ $button-control-size: 48px !default;
 }
 
 /// Single Icon Button
+/// @description Increase the touchable area for single button icons
 /// @group Buttons
-.c-button--single-icon {
+.c-button-single-icon {
   line-height: 0;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    height: 200%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 200%;
+    border-radius: $border-radius-rounded;
+    transform: translate(-50%, -50%);
+  }
+
+  &:before {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+}
+
+/// Single Icon Button with Primary Color
+.c-button-single-icon--primary {
+  &:before {
+    background-color: $color-brand-primary-lighter;
+  }
 }

@@ -39,8 +39,8 @@ class Register extends Component {
                 <fieldset>
                     <div className='o-form-area o-distance-m'>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <ul className='o-list-inline'>
-                                <li className='o-list-inline__item' onClick={() => { return this.setState({ register_salutation: 'Frau' }) }}>
+                            <ul className='o-list-bare'>
+                                <li className='o-list-bare__item' onClick={() => { return this.setState({ register_salutation: 'Frau' }) }}>
                                     <div className='o-block-short'>
                                         <div className='o-block-short__short-item'>
                                             <div className={classnames({
@@ -59,7 +59,7 @@ class Register extends Component {
                                         </div>
                                     </div>
                                 </li>
-                                <li className='o-list-inline__item' onClick={() => { return this.setState({ register_salutation: 'Herr' }) }}>
+                                <li className='o-list-bare__item' onClick={() => { return this.setState({ register_salutation: 'Herr' }) }}>
                                     <div className='o-block-short'>
                                         <div className='o-block-short__short-item'>
                                             <div className={classnames({
@@ -124,10 +124,9 @@ class Register extends Component {
                             <label htmlFor='inp-password' className='c-form-label'>
                                 <FormattedMessage id='account.login.password' />
                             </label>
-                            <div className='c-form-unit o-distance-s'>
+                            <div className='c-form-unit o-distance-xs'>
                                 <input
                                     type='password'
-                                    className='o-distance-xs'
                                     id='inp-password'
                                     value={this.state.register_password}
                                     onChange={(event) => {
@@ -137,68 +136,68 @@ class Register extends Component {
                             </div>
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <div className='o-block-short'>
-                                <div className='o-block-short__short-item'>
-                                    <div className='c-form-checkbox'>
-                                        <input
-                                            type='checkbox'
-                                            checked={this.state.register_tos}
-                                            id='inp-checkbox-02'
-                                            name='checkbox'
-                                            className='c-form-checkbox__input'
-                                            onClick={(event) => {
-                                                this.setState({ register_tos: event.target.checked })
-                                            }}
-                                        />
-                                        <span className='c-form-checkbox__backdrop' />
-                                        <svg className='c-form-checkbox__icon' x='0px' y='0px' viewBox='0 0 200 200'>
-                                            <path
-                                                id='Check'
-                                                className='st0'
-                                                d='M189.3,18.4c-10-6.6-23.4-4.6-31.1,4.7L81.1,127.9L37.2,95.6c-10.4-7.7-25-5.4-32.7,4.9
-                                                c-7.7,10.4-5.4,25,4.9,32.7l0,0l60,44.2c5.7,4.2,13,5.6,19.9,3.7c6.7-0.4,13.1-3.5,17.4-9.3l89.2-121
-                                                C203,40.1,200.1,25.5,189.3,18.4z'
+                            <div className='o-list-bare'>
+                                <div className='o-block-short o-list-bare__item'>
+                                    <div className='o-block-short__short-item'>
+                                        <div className='c-form-checkbox'>
+                                            <input
+                                                type='checkbox'
+                                                checked={this.state.register_tos}
+                                                id='inp-checkbox-02'
+                                                name='checkbox'
+                                                className='c-form-checkbox__input'
+                                                onClick={(event) => {
+                                                    this.setState({ register_tos: event.target.checked })
+                                                }}
                                             />
-                                        </svg>
+                                            <span className='c-form-checkbox__backdrop' />
+                                            <svg className='c-form-checkbox__icon' x='0px' y='0px' viewBox='0 0 200 200'>
+                                                <path
+                                                    id='Check'
+                                                    className='st0'
+                                                    d='M189.3,18.4c-10-6.6-23.4-4.6-31.1,4.7L81.1,127.9L37.2,95.6c-10.4-7.7-25-5.4-32.7,4.9
+                                                    c-7.7,10.4-5.4,25,4.9,32.7l0,0l60,44.2c5.7,4.2,13,5.6,19.9,3.7c6.7-0.4,13.1-3.5,17.4-9.3l89.2-121
+                                                    C203,40.1,200.1,25.5,189.3,18.4z'
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div className='o-block-short__body'>
+                                        <label htmlFor='inp-checkbox-02'>
+                                            <FormattedMessage id='account.register.tcAgree' />
+                                        </label>
                                     </div>
                                 </div>
-                                <div className='o-block-short__body'>
-                                    <label htmlFor='inp-checkbox-02'>
-                                        <FormattedMessage id='account.register.tcAgree' />
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <div className='o-block-short'>
-                                <div className='o-block-short__short-item'>
-                                    <div className='c-form-checkbox'>
-                                        <input
-                                            type='checkbox'
-                                            checked={this.state.register_inform}
-                                            id='inp-checkbox-02'
-                                            name='checkbox'
-                                            className='c-form-checkbox__input'
-                                            onClick={(event) => {
-                                                this.setState({ register_inform: event.target.checked })
-                                            }}
-                                        />
-                                        <span className='c-form-checkbox__backdrop' />
-                                        <svg className='c-form-checkbox__icon' x='0px' y='0px' viewBox='0 0 200 200'>
-                                            <path
-                                                id='Check'
-                                                className='st0'
-                                                d='M189.3,18.4c-10-6.6-23.4-4.6-31.1,4.7L81.1,127.9L37.2,95.6c-10.4-7.7-25-5.4-32.7,4.9
-                                                c-7.7,10.4-5.4,25,4.9,32.7l0,0l60,44.2c5.7,4.2,13,5.6,19.9,3.7c6.7-0.4,13.1-3.5,17.4-9.3l89.2-121
-                                                C203,40.1,200.1,25.5,189.3,18.4z'
+                                <div className='o-block-short o-list-bare__item'>
+                                    <div className='o-block-short__short-item'>
+                                        <div className='c-form-checkbox'>
+                                            <input
+                                                type='checkbox'
+                                                checked={this.state.register_inform}
+                                                id='inp-checkbox-02'
+                                                name='checkbox'
+                                                className='c-form-checkbox__input'
+                                                onClick={(event) => {
+                                                    this.setState({ register_inform: event.target.checked })
+                                                }}
                                             />
-                                        </svg>
+                                            <span className='c-form-checkbox__backdrop' />
+                                            <svg className='c-form-checkbox__icon' x='0px' y='0px' viewBox='0 0 200 200'>
+                                                <path
+                                                    id='Check'
+                                                    className='st0'
+                                                    d='M189.3,18.4c-10-6.6-23.4-4.6-31.1,4.7L81.1,127.9L37.2,95.6c-10.4-7.7-25-5.4-32.7,4.9
+                                                    c-7.7,10.4-5.4,25,4.9,32.7l0,0l60,44.2c5.7,4.2,13,5.6,19.9,3.7c6.7-0.4,13.1-3.5,17.4-9.3l89.2-121
+                                                    C203,40.1,200.1,25.5,189.3,18.4z'
+                                                />
+                                            </svg>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='o-block-short__body'>
-                                    <label htmlFor='inp-checkbox-02'>
-                                        <FormattedMessage id='account.register.informAgree' />
-                                    </label>
+                                    <div className='o-block-short__body'>
+                                        <label htmlFor='inp-checkbox-02'>
+                                            <FormattedMessage id='account.register.informAgree' />
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>

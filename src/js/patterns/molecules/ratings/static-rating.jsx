@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import { FormattedMessage } from 'react-intl'
-import { ReactComponent as FullSmallStar } from '../../../../icons/full-small-star.svg'
-import { ReactComponent as EmptySmallStar } from '../../../../icons/empty-small-star.svg'
+import { ReactComponent as FullSmallStar } from '../../../../icons/star-small-full.svg'
+import { ReactComponent as EmptySmallStar } from '../../../../icons/star-small-empty.svg'
 
 const MoleculesStaticRating = ({ outerClassName, className, rating, reviewsCount }) => {
     return (

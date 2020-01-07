@@ -10,8 +10,8 @@ class AddressChange extends Component {
                 <fieldset>
                     <div className='o-form-area o-distance-m'>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
-                            <ul className='o-list-inline'>
-                                <li className='o-list-inline__item'>
+                            <ul className='o-list-bare'>
+                                <li className='o-list-bare__item'>
                                     <div className='o-block-short'>
                                         <div className='o-block-short__short-item'>
                                             <div className='c-form-radio'>
@@ -26,7 +26,7 @@ class AddressChange extends Component {
                                         </div>
                                     </div>
                                 </li>
-                                <li className='o-list-inline__item'>
+                                <li className='o-list-bare__item'>
                                     <div className='o-block-short'>
                                         <div className='o-block-short__short-item'>
                                             <div className='c-form-radio'>
@@ -59,31 +59,31 @@ class AddressChange extends Component {
                             <label htmlFor='inp-mail' className='c-form-label'>
                                 <FormattedMessage id='account.address.street' />
                             </label>
-                            <input type='text' id='inp-street' className='o-distance-s' value='Ewaldstr. 2' />
+                            <input type='text' id='inp-street' className='o-distance-xs' value='Ewaldstr. 2' />
                         </div>
                         <div className='o-form-area__column-2-6 o-form-area__new-row'>
                             <label htmlFor='inp-text' className='c-form-label'>
                                 <FormattedMessage id='account.address.zip' />
                             </label>
-                            <input type='text' className='o-distance-s' id='inp-text' value='59174' />
+                            <input type='text' className='o-distance-xs' id='inp-text' value='59174' />
                         </div>
                         <div className='o-form-area__column-4-6'>
                             <label htmlFor='inp-text' className='c-form-label'>
                                 <FormattedMessage id='account.address.location' />
                             </label>
-                            <input type='text' className='o-distance-s' id='inp-text' value='Kamen' />
+                            <input type='text' className='o-distance-xs' id='inp-text' value='Kamen' />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-hint-address' className='c-form-label'>
                                 <FormattedMessage id='account.address.hint' />
                             </label>
-                            <input type='text' id='inp-hint-address' className='o-distance-s' />
+                            <input type='text' id='inp-hint-address' className='o-distance-xs' />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-hint-address' className='c-form-label'>
                                 <FormattedMessage id='account.address.land' />
                             </label>
-                            <select name='' id='' className='o-distance-s'>
+                            <select name='' id='' className='o-distance-xs'>
                                 <option value=''>
                                     <FormattedMessage id='account.choose' />
                                 </option>

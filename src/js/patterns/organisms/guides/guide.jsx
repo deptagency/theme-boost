@@ -77,11 +77,7 @@ class OrganismsGuide extends Component {
                             <ReferalBordered title='Patterns' />
                             <ReferalBordered title='Newness' />
                         </section>
-                        <div className='c-holder o-television__display__boundless c-box t-quietlight'>
-                            <a href='' className='c-logo' title='Catwalk'>
-                              Catwalk
-                            </a>
-                        </div>
+                        <div className='c-box u-background-color-default o-television__display__boundless o-television__bouncer o-distance-m' />
                     </div>
                     <div className='o-television__remote-control t-quietlight'>
                         <div className='o-buttonbar o-buttonbar--stacked'>

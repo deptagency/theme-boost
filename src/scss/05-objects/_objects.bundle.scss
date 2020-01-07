@@ -2,14 +2,14 @@
 // @group Objects
 .o-bundle {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 120px 1fr 1fr 1fr;
   grid-template-rows: auto 1fr auto;
   grid-gap: $layout-gutter-width;
 
   .o-bundle__header {
     align-items: flex-start;
     display: grid;
-    grid-column: 3 / span 2;
+    grid-column: 2 / span 3;
     grid-row: 1;
     grid-template-columns: 1fr auto;
 
@@ -19,17 +19,17 @@
   }
 
   .o-bundle__body {
-    grid-column: 3 / span 2;
+    grid-column: 2 / span 3;
     grid-row: 2;
   }
 
   .o-bundle__asset {
-    grid-column: 1 / span 2;
+    grid-column: 1;
     grid-row: 1 / span 3;
   }
 
   .o-bundle__footer {
-    grid-column: 3 / span 2;
+    grid-column: 2 / span 3;
     grid-row: 3;
     text-align: right;
   }

@@ -9,19 +9,22 @@ class OrganismsSizes extends Component {
         const { values, disabledValues } = this.props
 
         return (
-            <div className='organism-sizes'>
-                {values.map((v) => {
-                    return (
-                        <div
-                            className={classnames({
-                                'c-size__item': true,
-                                'is-disabled': disabledValues.includes(v),
-                            })}
-                        >
-                            {v}
-                        </div>
-                    )
-                })}
+            <div className='o-swiper'>
+                <div className='o-swiper__holder'>
+                    {values.map((v) => {
+                        return (
+                            <div className='o-swiper__item'>
+                                <button
+                                    className={classnames({
+                                        'c-chip c-chip--squared': true,
+                                        'is-disabled': disabledValues.includes(v),
+                                    })}>
+                                    {v}
+                                </button>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         )
     }

@@ -49,23 +49,23 @@ class Address extends Component {
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-mail' className='c-form-label'>Street with Nr.</label>
-                            <input type='text' id='inp-street' className='o-distance-s' />
+                            <input type='text' id='inp-street' className='o-distance-xs' />
                         </div>
                         <div className='o-form-area__column-2-6 o-form-area__new-row'>
                             <label htmlFor='inp-text' className='c-form-label'>PLZ</label>
-                            <input type='text' className='o-distance-s' id='inp-text' />
+                            <input type='text' className='o-distance-xs' id='inp-text' />
                         </div>
                         <div className='o-form-area__column-4-6'>
                             <label htmlFor='inp-text' className='c-form-label'>Ort</label>
-                            <input type='text' className='o-distance-s' id='inp-text' />
+                            <input type='text' className='o-distance-xs' id='inp-text' />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-hint-address' className='c-form-label'>Hint for Address</label>
-                            <input type='text' id='inp-hint-address' className='o-distance-s' />
+                            <input type='text' id='inp-hint-address' className='o-distance-xs' />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-hint-address' className='c-form-label'>Land</label>
-                            <select name='' id='' className='o-distance-s'>
+                            <select name='' id='' className='o-distance-xs'>
                                 <option value=''>Choose</option>
                             </select>
                         </div>
@@ -146,23 +146,23 @@ class Address extends Component {
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-mail' className='c-form-label'>Street with Nr.</label>
-                            <input type='text' id='inp-street' className='o-distance-s' />
+                            <input type='text' id='inp-street' className='o-distance-xs' />
                         </div>
                         <div className='o-form-area__column-2-6 o-form-area__new-row'>
                             <label htmlFor='inp-text' className='c-form-label'>PLZ</label>
-                            <input type='text' className='o-distance-s' id='inp-text' />
+                            <input type='text' className='o-distance-xs' id='inp-text' />
                         </div>
                         <div className='o-form-area__column-4-6'>
                             <label htmlFor='inp-text' className='c-form-label'>Ort</label>
-                            <input type='text' className='o-distance-s' id='inp-text' />
+                            <input type='text' className='o-distance-xs' id='inp-text' />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-hint-address' className='c-form-label'>Hint for Address</label>
-                            <input type='text' id='inp-hint-address' className='o-distance-s' />
+                            <input type='text' id='inp-hint-address' className='o-distance-xs' />
                         </div>
                         <div className='o-form-area__column-6-6 o-form-area__new-row'>
                             <label htmlFor='inp-hint-address' className='c-form-label'>Land</label>
-                            <select name='' id='' className='o-distance-s'>
+                            <select name='' id='' className='o-distance-xs'>
                                 <option value=''>Choose</option>
                             </select>
                         </div>
