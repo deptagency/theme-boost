@@ -99,7 +99,7 @@ class OrganismsProductStage extends Component {
                             </select>
                             <div className='o-buttonbar o-distance-s'>
                                 <button className='c-button c-button--primary o-buttonbar__item o-buttonbar__item--full'>Add to Cart</button>
-                                <button className='c-button c-button--quiet c-button--single-icon o-buttonbar__item'>
+                                <button className='c-button c-button--quiet u-icon-line-height o-buttonbar__item'>
                                     <Wishlist className='c-icon c-icon--m' />
                                 </button>
                             </div>

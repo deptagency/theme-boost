@@ -21,7 +21,7 @@ const OrganismsBundle = ({ itemId, image, name, designer, count, price, color, s
                     <div className='c-title-level-4'>{name}</div>
                     <div className='u-text-s t-text-quiet'>{designer}</div>
                 </div>
-                <button onClick={() => {
+                <button className='c-button-single-icon c-button-single-icon--primary' onClick={() => {
                     app.getLoader('cart').removeLineItem({ lineItemId: itemId })
                 }}>
                     <CartBin />
