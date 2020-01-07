@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { Fragment, Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 class OrganismsChoice extends Component {
     render () {
-        return (<div>
+        return (<Fragment>
             <div className='o-block-short'>
                 <div className='o-block-short__short-item'>
                     <div className='c-form-checkbox'>
@@ -32,7 +32,7 @@ class OrganismsChoice extends Component {
                     </label>
                 </div>
             </div>
-        </div>)
+        </Fragment>)
     }
 }
 
