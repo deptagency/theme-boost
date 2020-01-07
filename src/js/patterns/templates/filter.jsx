@@ -17,36 +17,36 @@ const Filter = ({ setIsOpen, count }) => {
             <HeaderSlideIn title='Filter' className='o-television__bar' />
             <div className='o-television__display u-background-color-ghost'>
                 <div>
-                    <FormLabel className='c-title-level-4' value='Größe' />
+                    <Label className='c-title-level-4' value='Größe' />
                     <div className='o-television__display__boundless o-distance-s'>
-                        <MobileSwipe sliderId='swipe-sizes'>
+                        <Swipe sliderId='swipe-sizes'>
                             <Sizes />
-                        </MobileSwipe>
+                        </Swipe>
                     </div>
                 </div>
                 <div className='o-television__display__boundless'>
                     <span className='c-divider c-divider--break o-distance-m' />
                 </div>
                 <div className='o-distance-m'>
-                    <FormLabel className='c-title-level-4' value='Sortierung' />
+                    <Label className='c-title-level-4' value='Sortierung' />
                     <div className='o-television__display__boundless o-distance-s'>
-                        <MobileSwipe sliderId='swipe-sorting'>
+                        <Swipe sliderId='swipe-sorting'>
                             <Sorting />
-                        </MobileSwipe>
+                        </Swipe>
                     </div>
                 </div>
                 <div className='o-television__display__boundless'>
                     <span className='c-divider c-divider--break o-distance-m' />
                 </div>
                 <div className='o-distance-m'>
-                    <FormLabel className='c-title-level-4' value='Preis' />
+                    <Label className='c-title-level-4' value='Preis' />
                     <FromTo className='o-distance-s' />
                 </div>
                 <div className='o-television__display__boundless'>
                     <span className='c-divider c-divider--break o-distance-m' />
                 </div>
                 <div className='o-distance-m'>
-                    <FormLabel className='c-title-level-4' value='Marke' />
+                    <Label className='c-title-level-4' value='Marke' />
                     <select id='' name='select' className='o-distance-s u-full-width'>
                         <option>Bitte auswählen</option>
                         <option value='Value A'>Value A</option>
@@ -59,10 +59,10 @@ const Filter = ({ setIsOpen, count }) => {
                     <span className='c-divider c-divider--break o-distance-m' />
                 </div>
                 <div className='o-distance-m'>
-                    <FormLabel className='c-title-level-4' value='Farbe' />
-                    <MobileSwipe sliderId='swipe-colors' className='o-distance-s'>
+                    <Label className='c-title-level-4' value='Farbe' />
+                    <Swipe sliderId='swipe-colors' className='o-distance-s'>
                         {/* <MoleculesColorsFilter /> */}
-                    </MobileSwipe>
+                    </Swipe>
                 </div>
                 <div className='o-television__display__boundless'>
                     <span className='c-divider c-divider--break o-distance-m' />
