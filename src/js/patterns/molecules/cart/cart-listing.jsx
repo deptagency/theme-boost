@@ -13,12 +13,16 @@ const MoleculesCartListing = ({ cartItems, outerClassName }) => {
                     <OrganismsBundleListing cartItems={cartItems} />
                 </div>
             </section>
-            <span className='c-divider c-divider--break o-distance' />
+            <div className='o-with-sidebar__boundless o-distance'>
+                <span className='c-divider c-divider--break' />
+            </div>
             <section className='o-container o-distance'>
                 <h2 className='c-title-level-3'><FormattedMessage id='cart.paymentMethods' /></h2>
                 <OrganismsPaymentListingIcons image={''} />
             </section>
-            <span className='c-divider c-divider--break o-distance' />
+            <div className='o-with-sidebar__boundless o-distance'>
+                <span className='c-divider c-divider--break' />
+            </div>
         </div>
     )
 }
