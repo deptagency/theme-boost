@@ -7,20 +7,20 @@ import OrganismsPaymentListingIcons from '../../organisms/listings/payment-listi
 const MoleculesCartListing = ({ cartItems, outerClassName }) => {
     return (
         <div className={outerClassName}>
-            <section>
-                <h1 className='c-title-level-3'><FormattedMessage id='cart.myCart' /></h1>
+            <section className='c-frame-large-up'>
+                <h1 className='c-title-area'><FormattedMessage id='cart.myCart' /></h1>
                 <div>
                     <OrganismsBundleListing cartItems={cartItems} />
                 </div>
             </section>
-            <div className='o-with-sidebar__boundless o-distance'>
+            <div className='o-with-sidebar__boundless o-distance u-hidden-large-up'>
                 <span className='c-divider c-divider--break' />
             </div>
-            <section className='o-container o-distance'>
-                <h2 className='c-title-level-3'><FormattedMessage id='cart.paymentMethods' /></h2>
+            <section className='o-container o-distance-l c-frame-large-up'>
+                <h2 className='c-title-area'><FormattedMessage id='cart.paymentMethods' /></h2>
                 <OrganismsPaymentListingIcons image={''} />
             </section>
-            <div className='o-with-sidebar__boundless o-distance'>
+            <div className='o-with-sidebar__boundless o-distance u-hidden-large-up'>
                 <span className='c-divider c-divider--break' />
             </div>
         </div>
