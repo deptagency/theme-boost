@@ -6,7 +6,7 @@ import ContentLoader from 'react-content-loader'
 class EmptyCartLoader extends Component {
     render () {
         return (<div>
-           <ContentLoader
+            <ContentLoader
                 height={300}
                 width={800}
                 speed={2}
