@@ -24,7 +24,7 @@ class FullCartLoader extends Component {
                 <rect x="220" y="110" rx="5" ry="5" width="165" height="8" />
                 <rect x="220" y="130" rx="5" ry="5" width="165" height="8" />
                 <rect x="220" y="180" rx="8" ry="8" width="100" height="29" />
-                <rect x="550" y="15" rx="20" ry="20" width="240" height="200" />
+                <rect x="550" y="15" rx="20" ry="20" width="220" height="200" />
 
             </ContentLoader>
         </div>)
