@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-// import './product-loader.module.scss'
 import ContentLoader from 'react-content-loader'
 
 class FullCartLoader extends Component {
@@ -12,7 +11,7 @@ class FullCartLoader extends Component {
                 width={800}
                 speed={2}
                 primaryColor="#d9d9d9"
-                secondaryColor="#ecebeb"
+                secondaryColor="#787878"
                 >
                 <rect x="40" y="15" rx="20" ry="20" width="150" height="200" />
                 <rect x="40" y="320" rx="5" ry="5" width="45" height="35" />
