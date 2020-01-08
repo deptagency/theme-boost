@@ -2,10 +2,10 @@ import React, { Fragment, Component } from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import Addressblock from '../../organisms/blocks/addressblock'
-import OrganismsPaymentListing from '../../organisms/listings/payment-listing'
+import PaymentListing from '../../organisms/listings/payment-listing'
 import Button from '../../atoms/buttons/button'
-import OrganismsHeaderContext from '../../organisms/base/header-context'
-import OrganismsFooter from '../../organisms/base/foot'
+import HeaderContext from '../../organisms/base/header-context'
+import Footer from '../../organisms/base/foot'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -32,7 +32,7 @@ class OrderBilling extends Component {
                     </Button>
                 </div>
                 <div className='o-prevent-space'>
-                    <OrganismsFooter />
+                    <Footer />
                 </div>
             </Fragment>
         )
