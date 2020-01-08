@@ -9,7 +9,7 @@ const CartSummary = ({ sum, outerClassName }) => {
     return (
         <div className={`${outerClassName}`}>
             <section className='o-container'>
-                <h2 className='c-title-level-3'><FormattedMessage id='cart.totalSum' /></h2>
+                <h2 className='c-title-area'><FormattedMessage id='cart.totalSum' /></h2>
                 <div className='o-distance-s'>
                     <Summary sum={sum} />
                     <p className='o-distance-m u-text-s t-text-quiet'>
