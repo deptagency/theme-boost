@@ -1,0 +1,19 @@
+@media (max-width: 880px) {
+  .smallScreen {
+    display: block;
+  }
+
+  .largeScreen {
+    display: none;
+  }
+}
+
+@media (min-width: 880px) {
+  .smallScreen {
+    display: none;
+  }
+
+  .largeScreen {
+    display: block;
+  }
+}

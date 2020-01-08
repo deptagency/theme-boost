@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import ContentLoader from 'react-content-loader'
 
+import { smallScreen, largeScreen } from './loaders.module.scss'
+
 class HomepageLoader extends Component {
     render () {
         return (<div>
@@ -20,9 +22,12 @@ class HomepageLoader extends Component {
 
                 <rect x="19" y="90" rx="7" ry="7" width="760" height="360" />
 
-                <rect x="20" y="470" rx="7" ry="7" width="230" height="170" />
-                <rect x="287" y="470" rx="7" ry="7" width="230" height="170" />
-                <rect x="547" y="470" rx="7" ry="7" width="230" height="170" />
+                <rect className={largeScreen} x="20" y="470" rx="7" ry="7" width="230" height="170" />
+                <rect className={largeScreen} x="287" y="470" rx="7" ry="7" width="230" height="170" />
+                <rect className={largeScreen} x="547" y="470" rx="7" ry="7" width="230" height="170" />
+
+                <rect className={smallScreen} x="20" y="470" rx="7" ry="7" width="230" height="170" />
+                <rect className={smallScreen} x="287" y="470" rx="7" ry="7" width="230" height="170" />
 
                 <rect x="200" y="660" rx="4" ry="4" width="400" height="12" />
                 <rect x="300" y="685" rx="4" ry="4" width="200" height="15" />
