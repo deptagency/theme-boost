@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import OrganismsFormLogin from 'js/patterns/organisms/form/form-login'
+import OrganismsFormLogin from 'js/patterns/organisms/form/login'
 import Button from 'js/patterns/atoms/buttons/button'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'

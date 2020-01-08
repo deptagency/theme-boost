@@ -8,21 +8,23 @@ import { map } from 'lodash'
 const OrganismsBundleListing = ({ cartItems }) => {
     return (
         <div className='o-distance-l'>
-            <section className='o-list-bare'>
+            <section>
                 {map(cartItems, (item, index) => {
                     // TODO attributes.**.label - make it more robust
                     return (
                         <Fragment key={index}>
-                            <OrganismsBundle
-                                itemId={item.lineItemId}
-                                name={item.name}
-                                designer={item.variant.attributes.designer.label}
-                                image={item.variant.images[0]}
-                                count={item.count}
-                                price={item.price}
-                                color={item.variant.attributes.color.label}
-                                size={item.variant.attributes.size}
-                        />
+                            <div className='o-distance-m'>
+                                <OrganismsBundle
+                                    itemId={item.lineItemId}
+                                    name={item.name}
+                                    designer={item.variant.attributes.designer.label}
+                                    image={item.variant.images[0]}
+                                    count={item.count}
+                                    price={item.price}
+                                    color={item.variant.attributes.color.label}
+                                    size={item.variant.attributes.size}
+                                />
+                            </div>
                             {cartItems.length - 1 > index && <span style={{ marginTop: '12px' }} className='c-divider' />}
                         </Fragment>
 

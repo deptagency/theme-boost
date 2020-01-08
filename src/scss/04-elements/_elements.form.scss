@@ -43,7 +43,6 @@ fieldset {
 
 select {
     cursor: pointer;
-
     padding: $spacing-inset-s $spacing-inset-xl $spacing-inset-s $spacing-inset-m;
     width: auto;
     background-image: url(../../icons/arrow-expand.svg);
@@ -53,6 +52,7 @@ select {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+    line-height: 1.2;
 
     &::-ms-expand {
         display: none;

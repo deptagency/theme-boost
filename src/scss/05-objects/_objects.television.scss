@@ -1,6 +1,5 @@
 // Config
 $television-prevent-space: $spacing-inset-m !default;
-$television-boundless-space: $television-prevent-space * 2 !default;
 
 // @object television
 .o-television {
@@ -42,11 +41,13 @@ $television-boundless-space: $television-prevent-space * 2 !default;
 
 // Bouncer as an indicator to signal the end of the container
 .o-television__bouncer {
-  height: 100px;
+  margin-left: -$television-prevent-space;
+  min-height: 100px;
+  width: calc(100% + #{$television-prevent-space});
 }
 
 // Move elements to the left and right edges of the television container
 .o-television__display__boundless {
   margin-left: -$television-prevent-space;
-  width: calc(100% + #{$television-boundless-space});
+  width: calc(100% + #{$television-prevent-space});
 }

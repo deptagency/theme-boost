@@ -20,4 +20,16 @@
             }
         }
     }
+
+    &__boundless {
+      margin-left: -$layout-edge-width;
+      margin-right: -$layout-edge-width;
+      width: calc(100% + #{$layout-edge-width-total});
+
+      @include breakpoint($layout-breakpoint-l) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
 }

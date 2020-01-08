@@ -15,3 +15,11 @@
 .c-frame--xl {
   padding: $spacing-inset-xl;
 }
+
+.c-frame-large-up {
+  @include breakpoint($layout-breakpoint-l) {
+    display: block;
+    padding: $spacing-inset-m;
+    @include border();
+  }
+}

@@ -44,3 +44,16 @@
 .c-title-level-4 {
   font-size: $font-size-m;
 }
+
+/// Area Title
+/// @description Title for different areas
+/// @group headings
+.c-title-area {
+  font-family: $font-family-spot;
+  font-size: $font-size-l;
+  line-height: 1.2;
+
+  @include breakpoint($layout-breakpoint-l) {
+    font-size: $font-size-xl;
+  }
+}

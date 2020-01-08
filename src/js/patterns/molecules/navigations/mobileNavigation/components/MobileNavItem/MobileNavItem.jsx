@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
 // TODO: that path hurts! resolve into webpack or something like that
-import { ReactComponent as ForwardIcon } from './../../../../../../../icons/arrow-forward.svg'
+import { ReactComponent as ArrowRight } from './../../../../../../../icons/arrow-right.svg'
 
 import { MobileNavTree } from '../MobileNavTree'
 import { categoryTreeType } from '../../types'
@@ -27,7 +27,7 @@ export function MobileNavItem ({ item, level, navPath, onClick }) {
                 }}
                 title='Startseite'
                 className='c-navigation__next-level-button'>
-                <ForwardIcon />
+                <ArrowRight />
             </button>
         )
     }

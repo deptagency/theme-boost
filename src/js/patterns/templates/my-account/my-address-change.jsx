@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
-import OrganismFormAddressChange from '../../organisms/form/form-address-change'
+import OrganismFormAddressChange from '../../organisms/form/address-change'
 import Button from '../../atoms/buttons/button'
 import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
 

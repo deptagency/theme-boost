@@ -1,52 +1,52 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import AtomsFormLabel from '../atoms/forms/form-label'
-import OrganismsHeaderSlideIn from '../organisms/base/header-slide-in'
-import OrganismsSizes from '../organisms/sizes/sizes'
-import MoleculesFormFromTo from '../molecules/forms/form-element-from-to'
-import MobileSwipe from './mobile-swipe'
-import OrganismsSorting from '../organisms/sorting/sorting'
-import MoleculesButton from '../atoms/buttons/button'
+import Label from '../atoms/forms/label'
+import HeaderSlideIn from '../organisms/base/header-slide-in'
+import Sizes from '../organisms/sizes/sizes'
+import FromTo from '../organisms/form/from-to'
+import Swipe from './mobile-swipe'
+import Sorting from '../organisms/sorting/sorting'
+import Button from '../atoms/buttons/button'
 import ReferalBordered from '../atoms/links/referal-bordered'
 // import MoleculesColorsFilter from '../molecules/colorsfilter/colors-filter'
 import arrowLeft from '../../../icons/arrow-left.svg'
 
-const TemplatesFilter = ({ setIsOpen, count }) => {
+const Filter = ({ setIsOpen, count }) => {
     return (
         <div className='o-television is-active u-background-color-default'>
-            <OrganismsHeaderSlideIn title='Filter' className='o-television__bar' />
+            <HeaderSlideIn title='Filter' className='o-television__bar' />
             <div className='o-television__display u-background-color-ghost'>
                 <div>
-                    <AtomsFormLabel className='c-title-level-4' value='Größe' />
+                    <Label className='c-title-level-4' value='Größe' />
                     <div className='o-television__display__boundless o-distance-s'>
-                        <MobileSwipe sliderId='swipe-sizes'>
-                            <OrganismsSizes />
-                        </MobileSwipe>
+                        <Swipe sliderId='swipe-sizes'>
+                            <Sizes />
+                        </Swipe>
                     </div>
                 </div>
                 <div className='o-television__display__boundless'>
                     <span className='c-divider c-divider--break o-distance-m' />
                 </div>
                 <div className='o-distance-m'>
-                    <AtomsFormLabel className='c-title-level-4' value='Sortierung' />
+                    <Label className='c-title-level-4' value='Sortierung' />
                     <div className='o-television__display__boundless o-distance-s'>
-                        <MobileSwipe sliderId='swipe-sorting'>
-                            <OrganismsSorting />
-                        </MobileSwipe>
+                        <Swipe sliderId='swipe-sorting'>
+                            <Sorting />
+                        </Swipe>
                     </div>
                 </div>
                 <div className='o-television__display__boundless'>
                     <span className='c-divider c-divider--break o-distance-m' />
                 </div>
                 <div className='o-distance-m'>
-                    <AtomsFormLabel className='c-title-level-4' value='Preis' />
-                    <MoleculesFormFromTo className='o-distance-s' />
+                    <Label className='c-title-level-4' value='Preis' />
+                    <FromTo className='o-distance-s' />
                 </div>
                 <div className='o-television__display__boundless'>
                     <span className='c-divider c-divider--break o-distance-m' />
                 </div>
                 <div className='o-distance-m'>
-                    <AtomsFormLabel className='c-title-level-4' value='Marke' />
+                    <Label className='c-title-level-4' value='Marke' />
                     <select id='' name='select' className='o-distance-s u-full-width'>
                         <option>Bitte auswählen</option>
                         <option value='Value A'>Value A</option>
@@ -59,10 +59,10 @@ const TemplatesFilter = ({ setIsOpen, count }) => {
                     <span className='c-divider c-divider--break o-distance-m' />
                 </div>
                 <div className='o-distance-m'>
-                    <AtomsFormLabel className='c-title-level-4' value='Farbe' />
-                    <MobileSwipe sliderId='swipe-colors' className='o-distance-s'>
+                    <Label className='c-title-level-4' value='Farbe' />
+                    <Swipe sliderId='swipe-colors' className='o-distance-s'>
                         {/* <MoleculesColorsFilter /> */}
-                    </MobileSwipe>
+                    </Swipe>
                 </div>
                 <div className='o-television__display__boundless'>
                     <span className='c-divider c-divider--break o-distance-m' />
@@ -73,25 +73,25 @@ const TemplatesFilter = ({ setIsOpen, count }) => {
                     <ReferalBordered title='Obermaterial' />
                     <ReferalBordered title='Neuheiten' />
                 </div>
-                <div className='c-box u-background-color-default o-television__display__boundless o-television__bouncer o-distance-m' />
+                <div className='u-background-color-default o-television__bouncer o-distance-m' />
             </div>
             <div className='o-television__remote-control u-background-color-default'>
-                <MoleculesButton type='primary' size='boss'>
+                <Button type='primary' size='boss'>
                     {count} Ergebnisse anzeigen
-                </MoleculesButton>
+                </Button>
             </div>
         </div>
     )
 }
 
-TemplatesFilter.defaultProps = {
+Filter.defaultProps = {
     setIsOpen: () => {},
     count: 429,
 }
 
-TemplatesFilter.propTypes = {
+Filter.propTypes = {
     setIsOpen: PropTypes.func.isRequired,
     count: PropTypes.number.isRequired,
 }
 
-export default TemplatesFilter
+export default Filter

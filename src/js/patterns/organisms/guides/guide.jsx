@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import MoleculesFormFromTo from '../../molecules/forms/form-element-from-to'
+import FromTo from '../../organisms/form/from-to'
 import OrganismsColorSwiper from '../../organisms/swiper/color-swiper'
 import OrganismsSizeSwiper from '../../organisms/swiper/size-swiper'
 import OrganismsSortingSwiper from '../../organisms/swiper/sorting-swiper'
@@ -69,7 +69,7 @@ class OrganismsGuide extends Component {
                         <section className='o-distance-m'>
                             <label htmlFor='' className='c-title-level-4'>Price</label>
                             <input type='range' className='o-distance-s' />
-                            <MoleculesFormFromTo />
+                            <FromTo />
                         </section>
                         <section className='o-television__display__boundless o-distance-m'>
                             <ReferalBordered title='Brand' />
@@ -77,11 +77,7 @@ class OrganismsGuide extends Component {
                             <ReferalBordered title='Patterns' />
                             <ReferalBordered title='Newness' />
                         </section>
-                        <div className='c-holder o-television__display__boundless c-box t-quietlight'>
-                            <a href='' className='c-logo' title='Catwalk'>
-                              Catwalk
-                            </a>
-                        </div>
+                        <div className='c-box u-background-color-default o-television__display__boundless o-television__bouncer o-distance-m' />
                     </div>
                     <div className='o-television__remote-control t-quietlight'>
                         <div className='o-buttonbar o-buttonbar--stacked'>

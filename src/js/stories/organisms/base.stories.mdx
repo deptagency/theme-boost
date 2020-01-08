@@ -1,0 +1,66 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import Foot from 'js/patterns/organisms/base/foot'
+import Header from 'js/patterns/organisms/base/header'
+import HeaderMobile from 'js/patterns/organisms/base/header-mobile'
+import HeaderContext from 'js/patterns/organisms/base/header-context'
+import HeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
+
+<Meta title='4.Organisms|Base' />
+
+# Base
+
+## Footer
+The default footer of your platform
+
+<Preview withToolbar>
+    <Story name='Footer'>
+        <Foot />
+    </Story>
+</Preview>
+
+<Props of={Foot} />
+
+## Header
+The header for large screens 
+
+<Preview withToolbar>
+    <Story name='Header'>
+        <Header />
+    </Story>
+</Preview>
+
+<Props of={Header} />
+
+## Header Mobile
+The standard mobile header for viewports until large breakpoint
+
+<Preview withToolbar>
+    <Story name='Header Mobile'>
+        <HeaderMobile><p>Header</p></HeaderMobile>
+    </Story>
+</Preview>
+
+<Props of={HeaderMobile} />
+
+## Header Context
+It will be appear when you go deeper into the page and you're in the next level of navigation.
+
+<Preview withToolbar>
+    <Story name='Header Context'>
+        <HeaderContext><p>Header</p></HeaderContext>
+    </Story>
+</Preview>
+
+<Props of={HeaderContext} />
+
+## Header Slide In
+When another screen appears over the page like an overlay, when this header is necessary to show the different hierarchy.
+
+<Preview withToolbar>
+    <Story name='Header Slide In'>
+        <HeaderSlideIn title='Default Title' />
+    </Story>
+</Preview>
+
+<Props of={HeaderSlideIn} />

@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import _ from 'lodash'
-import { ReactComponent as CloseMobile } from '../../../../icons/close-x-mobile.svg'
-import { ReactComponent as ArrowLeftWhite } from '../../../../icons/arrow-left-white.svg'
+import { ReactComponent as CloseMobile } from '../../../../icons/close.svg'
+import { ReactComponent as ArrowLeftWhite } from '../../../../icons/arrow-left.svg'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 

@@ -5,10 +5,13 @@ $rating-active-font-color: $color-palette-orange-600 !default;
 /// Rating
 .c-rating {
   &__symbol {
-    color: $rating-font-color;
+    stroke: currentColor;
+    stroke-width: 2px;
+    color: $rating-active-font-color;
 
     &.is-active {
-      color: $rating-active-font-color;
+      fill: currentColor;
+      stroke: none;
     }
   }
 }

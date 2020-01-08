@@ -8,19 +8,18 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  //justify-content: space-between;
+  justify-content: space-between;
   padding: $spacing-squish-m;
   @include border();
   color: $color-brand-primary-base;
-  //line-height: 1;
-  //transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  @include transition;
 
   &:hover {
     border-color: $color-brand-primary-lighter;
     background-color: $color-brand-primary-lighter;
   }
 
-  // Active Chip
+  /// Active Chip
   &.is-active {
     border-color: $color-brand-primary-base;
     background-color: $color-brand-primary-base;
@@ -38,22 +37,26 @@
   }
 }
 
-// Small Chip
+/// Small Chip
+/// @description Smaller Chip
 .c-chip--small {
   padding: $spacing-squish-s;
 }
 
-// Squared Chip
+/// Squared Chip
+/// @description The values for inset padding are the same in each direction
 .c-chip--squared {
   padding: $spacing-inset-m;
 }
 
-// Selected Chip
+/// Selected Chip
+/// @description Selected means that is currently and use and can be removed
 .c-chip--selected {
   cursor: default;
 }
 
-// Content Width Chip
+/// Content Width Chip
+/// @description The Chip will never have line-breaks. It means that width of the container is the same like the text.
 .c-chip--content-width {
   white-space: nowrap;
 }

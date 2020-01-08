@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 
 import Button from '../../atoms/buttons/button'
 import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
-import OrganismsFormEmailChange from '../../organisms/form/form-email-change'
+import OrganismsFormEmailChange from '../../organisms/form/email-change'
 
 const TemplatesMyEmailChange = ({ products }) => {
     return (

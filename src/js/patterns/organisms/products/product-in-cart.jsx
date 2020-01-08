@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import MoleculesDetaillist from '../lists/detaillist'
-import AtomsFormSelect from '../../atoms/forms/form-select'
+import SelectBox from '../../atoms/forms/form-select'
 
 class MoleculesProductInCart extends Component {
     render () {
@@ -34,7 +34,7 @@ class MoleculesProductInCart extends Component {
                         </button>
                     </div>
                     <div className='product-in-cart-amount'>
-                        <AtomsFormSelect options={[1, 2, 3, 4, 5]} />
+                        <SelectBox options={[1, 2, 3, 4, 5]} />
                     </div>
                     <div className='o-product__footer'>
                         <span className='c-price'>39,95 €</span>

@@ -1,0 +1,16 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+
+import { ReactComponent as IconTruck } from '../../../icons/truck.svg'
+import StoreFeature from 'js/patterns/atoms/StoreFeature'
+
+<Meta title='2.Atoms|StoreFeature' component={StoreFeature} />
+
+# StoreFeature
+
+A little box that shows the features of a store like free shipping, etc.
+
+<Preview>
+    <Story name='Store Feature'>
+        <StoreFeature icon={<IconTruck/>}>Lieferung in 24 Stunden</StoreFeature>
+    </Story>
+</Preview>
