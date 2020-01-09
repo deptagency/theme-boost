@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsPromobox extends Component {
+class Promobox extends Component {
     render () {
         return (<div>
             <h3>Default Promobox</h3>
@@ -73,10 +73,10 @@ class OrganismsPromobox extends Component {
     }
 }
 
-OrganismsPromobox.propTypes = {
+Promobox.propTypes = {
 }
 
-OrganismsPromobox.defaultProps = {
+Promobox.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsPromobox', OrganismsPromobox)
+export default ComponentInjector.return('Promobox', Promobox)

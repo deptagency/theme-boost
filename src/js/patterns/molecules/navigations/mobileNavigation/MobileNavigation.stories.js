@@ -2,7 +2,7 @@ import React from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
-import MoleculesMobileNavigation from './'
+import MobileNavigation from './'
 import Button from 'js/patterns/atoms/buttons/button'
 
 import topCategories from './topCategories.json'
@@ -21,7 +21,7 @@ const ctaLoggedIn = () => {
 
 export const mobileNavigation = () => {
     return (
-        <MoleculesMobileNavigation
+        <MobileNavigation
             open={boolean('Open', true)}
             onClose={action('close-menu')}
             topCategories={topCategories}

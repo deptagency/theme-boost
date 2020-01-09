@@ -4,10 +4,10 @@ import app from 'frontastic-catwalk/src/js/app/app'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import { ReactComponent as CartBin } from '../../../../icons/cart-bin.svg'
 
-import MoleculesDetaillist from '../../molecules/lists/detaillist'
-import AtomsPrice from '../../atoms/prices/price'
+import Detaillist from '../../molecules/lists/detaillist'
+import Price from '../../atoms/prices/price'
 
-const OrganismsBundle = ({ itemId, image, name, designer, count, price, color, size }) => {
+const Bundle = ({ itemId, image, name, designer, count, price, color, size }) => {
     // TODO create a counter with - and + instead of a dropdown
     const productCounter = Array.from(Array(10).keys())
 
@@ -28,7 +28,7 @@ const OrganismsBundle = ({ itemId, image, name, designer, count, price, color, s
                 </button>
             </div>
             <div className='o-bundle__body'>
-                <MoleculesDetaillist
+                <Detaillist
                     color={color}
                     size={size}
                 />
@@ -48,13 +48,13 @@ const OrganismsBundle = ({ itemId, image, name, designer, count, price, color, s
                 </select>
             </div>
             <div className='o-bundle__footer'>
-                <AtomsPrice value={price} normal />
+                <Price value={price} normal />
             </div>
         </div>
     )
 }
 
-OrganismsBundle.propTypes = {
+Bundle.propTypes = {
     itemId: PropTypes.string.isRequired,
     image: PropTypes.string,
     name: PropTypes.string.isRequired,
@@ -65,7 +65,7 @@ OrganismsBundle.propTypes = {
     size: PropTypes.string.isRequired,
 }
 
-OrganismsBundle.defaultProps = {
+Bundle.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsBundle', OrganismsBundle)
+export default ComponentInjector.return('Bundle', Bundle)

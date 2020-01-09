@@ -2,10 +2,10 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import OrganismsBundle from '../bundles/bundle'
+import Bundle from '../bundles/bundle'
 import { map } from 'lodash'
 
-const OrganismsBundleListing = ({ cartItems }) => {
+const BundleListing = ({ cartItems }) => {
     return (
         <div className='o-distance-l'>
             <section>
@@ -14,7 +14,7 @@ const OrganismsBundleListing = ({ cartItems }) => {
                     return (
                         <Fragment key={index}>
                             <div className='o-distance-m'>
-                                <OrganismsBundle
+                                <Bundle
                                     itemId={item.lineItemId}
                                     name={item.name}
                                     designer={item.variant.attributes.designer.label}
@@ -35,10 +35,10 @@ const OrganismsBundleListing = ({ cartItems }) => {
     )
 }
 
-OrganismsBundleListing.propTypes = {
+BundleListing.propTypes = {
     cartItems: PropTypes.array.isRequired,
 }
 
-OrganismsBundleListing.defaultProps = {}
+BundleListing.defaultProps = {}
 
-export default ComponentInjector.return('OrganismsBundleListing', OrganismsBundleListing)
+export default ComponentInjector.return('BundleListing', BundleListing)

@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import OrganismsSummary from '../../organisms/blocks/summary'
+import Summary from '../../organisms/blocks/summary'
 import Button from '../../atoms/buttons/button'
 import { FormattedMessage } from 'react-intl'
 
-const MoleculesCartSummary = ({ sum, outerClassName }) => {
+const CartSummary = ({ sum, outerClassName }) => {
     return (
         <div className={`${outerClassName}`}>
             <section className='o-container'>
                 <h2 className='c-title-area'><FormattedMessage id='cart.totalSum' /></h2>
                 <div className='o-distance-s'>
-                    <OrganismsSummary sum={sum} />
+                    <Summary sum={sum} />
                     <p className='o-distance-m u-text-s t-text-quiet'>
                         <FormattedMessage id='cart.enterVouchers' />
                     </p>
@@ -26,9 +26,9 @@ const MoleculesCartSummary = ({ sum, outerClassName }) => {
     )
 }
 
-MoleculesCartSummary.propTypes = {
+CartSummary.propTypes = {
     sum: PropTypes.number.isRequired,
     outerClassName: PropTypes.string.isRequired,
 }
 
-export default MoleculesCartSummary
+export default CartSummary

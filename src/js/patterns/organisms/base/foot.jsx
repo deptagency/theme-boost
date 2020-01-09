@@ -8,7 +8,7 @@ import StoreFeatureList from '../../molecules/StoreFeatureList'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsFooter extends Component {
+class Footer extends Component {
     render () {
         const Component = this.props.component
 
@@ -221,17 +221,17 @@ class OrganismsFooter extends Component {
     }
 }
 
-OrganismsFooter.propTypes = {
+Footer.propTypes = {
     // children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     theme: PropTypes.string,
 }
 
-OrganismsFooter.defaultProps = {
+Footer.defaultProps = {
     component: 'footer',
     theme: 't-universe',
     className: '',
 }
 
-export default ComponentInjector.return('OrganismsFooter', OrganismsFooter)
+export default ComponentInjector.return('Footer', Footer)

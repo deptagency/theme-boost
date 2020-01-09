@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class AtomsParagraph extends Component {
+class Paragraph extends Component {
     render () {
         return (<div>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
@@ -10,10 +10,10 @@ class AtomsParagraph extends Component {
     }
 }
 
-AtomsParagraph.propTypes = {
+Paragraph.propTypes = {
 }
 
-AtomsParagraph.defaultProps = {
+Paragraph.defaultProps = {
 }
 
-export default ComponentInjector.return('AtomsParagraph', AtomsParagraph)
+export default ComponentInjector.return('Paragraph', Paragraph)

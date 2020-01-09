@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class MoleculesSticker extends Component {
+class Sticker extends Component {
     render () {
         return (<div>
             <span className='c-sticker'>20%</span>
@@ -10,10 +10,10 @@ class MoleculesSticker extends Component {
     }
 }
 
-MoleculesSticker.propTypes = {
+Sticker.propTypes = {
 }
 
-MoleculesSticker.defaultProps = {
+Sticker.defaultProps = {
 }
 
-export default ComponentInjector.return('MoleculesSticker', MoleculesSticker)
+export default ComponentInjector.return('Sticker', Sticker)

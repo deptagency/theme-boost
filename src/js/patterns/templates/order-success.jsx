@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-class TemplatesOrderSuccess extends Component {
+class OrderSuccess extends Component {
     render () {
         return (
             <Fragment>
@@ -79,8 +79,8 @@ class TemplatesOrderSuccess extends Component {
     }
 }
 
-TemplatesOrderSuccess.propTypes = {}
+OrderSuccess.propTypes = {}
 
-TemplatesOrderSuccess.defaultProps = {}
+OrderSuccess.defaultProps = {}
 
-export default TemplatesOrderSuccess
+export default OrderSuccess

@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import FromTo from '../../organisms/form/from-to'
-import OrganismsColorSwiper from '../../organisms/swiper/color-swiper'
-import OrganismsSizeSwiper from '../../organisms/swiper/size-swiper'
-import OrganismsSortingSwiper from '../../organisms/swiper/sorting-swiper'
+import ColorSwiper from '../../organisms/swiper/color-swiper'
+import SizeSwiper from '../../organisms/swiper/size-swiper'
+import SortingSwiper from '../../organisms/swiper/sorting-swiper'
 import ReferalBordered from '../../atoms/links/referal-bordered'
 
-class OrganismsGuide extends Component {
+class Guide extends Component {
     render () {
         return (
             <div>
@@ -42,7 +42,7 @@ class OrganismsGuide extends Component {
                         <section>
                             <label htmlFor='' className='c-title-level-4'>Sizes</label>
                             <div className='o-television__display__boundless o-distance-s'>
-                                <OrganismsSizeSwiper />
+                                <SizeSwiper />
                             </div>
                         </section>
                         <div className='o-television__display__boundless'>
@@ -51,7 +51,7 @@ class OrganismsGuide extends Component {
                         <section className='o-distance-m'>
                             <label htmlFor='' className='c-title-level-4'>Sorting</label>
                             <div className='o-television__display__boundless o-distance-s'>
-                                <OrganismsSortingSwiper />
+                                <SortingSwiper />
                             </div>
                         </section>
                         <div className='o-television__display__boundless'>
@@ -60,7 +60,7 @@ class OrganismsGuide extends Component {
                         <section className='o-distance-m'>
                             <label htmlFor='' className='c-title-level-4'>Colors</label>
                             <div className='o-television__display__boundless o-distance-s'>
-                                <OrganismsColorSwiper />
+                                <ColorSwiper />
                             </div>
                         </section>
                         <div className='o-television__display__boundless'>
@@ -95,8 +95,8 @@ class OrganismsGuide extends Component {
     }
 }
 
-OrganismsGuide.propTypes = {}
+Guide.propTypes = {}
 
-OrganismsGuide.defaultProps = {}
+Guide.defaultProps = {}
 
-export default ComponentInjector.return('OrganismsGuide', OrganismsGuide)
+export default ComponentInjector.return('Guide', Guide)

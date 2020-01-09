@@ -11,7 +11,7 @@ import AtomsPrice from '../../atoms/prices/price'
 import NoImage from '../../../../../layout/noImage.svg'
 import RemoteImage from '../../../../remoteImage'
 
-class MoleculesProductTeaser extends Component {
+class ProductTeaser extends Component {
     render () {
         let product = this.props.product
         let variant = this.props.variant || product.variants[0]
@@ -58,24 +58,24 @@ class MoleculesProductTeaser extends Component {
     }
 }
 
-MoleculesProductTeaser.propTypes = {
+ProductTeaser.propTypes = {
     product: PropTypes.object.isRequired,
     variant: PropTypes.object,
     showStrikePrice: PropTypes.bool,
     showPercent: PropTypes.bool,
 }
 
-MoleculesProductTeaser.defaultProps = {
+ProductTeaser.defaultProps = {
     showStrikePrice: false,
     showPercent: false,
     variant: null,
 }
 
 // These are just default props for the pattern library
-MoleculesProductTeaser.testProps = {
+ProductTeaser.testProps = {
     product: fixture.product,
     showStrikePrice: true,
     showPercent: true,
 }
 
-export default ComponentInjector.return('MoleculesProductTeaser', MoleculesProductTeaser)
+export default ComponentInjector.return('ProductTeaser', ProductTeaser)

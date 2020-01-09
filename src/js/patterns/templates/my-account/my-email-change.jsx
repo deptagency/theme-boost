@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
 import Button from '../../atoms/buttons/button'
-import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
-import OrganismsFormEmailChange from '../../organisms/form/email-change'
+import HeaderSlideIn from '../../organisms/base/header-slide-in'
+import FormEmailChange from '../../organisms/form/email-change'
 
-const TemplatesMyEmailChange = ({ products }) => {
+const MyEmailChange = ({ products }) => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderSlideIn title='E-Mail-Adresse ändern' className='o-television__bar' />
+            <HeaderSlideIn title='E-Mail-Adresse ändern' className='o-television__bar' />
             <div className='o-television__display'>
                 <div className='o-container-small'>
                     <p className='u-text-s'>
@@ -24,7 +24,7 @@ const TemplatesMyEmailChange = ({ products }) => {
                         </dd>
                     </div>
                     <div className='o-distance'>
-                        <OrganismsFormEmailChange />
+                        <FormEmailChange />
                         <Button type='primary' size='boss' className='o-distance-m'>
                             <FormattedMessage id='account.save' />
                         </Button>
@@ -37,8 +37,8 @@ const TemplatesMyEmailChange = ({ products }) => {
     )
 }
 
-TemplatesMyEmailChange.propTypes = {
+MyEmailChange.propTypes = {
     products: PropTypes.array.isRequired,
 }
 
-export default TemplatesMyEmailChange
+export default MyEmailChange

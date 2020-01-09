@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 
 import Button from '../../atoms/buttons/button'
-import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
+import HeaderSlideIn from '../../organisms/base/header-slide-in'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class TemplatesPasswordResetConfirmation extends Component {
+class PasswordResetConfirmation extends Component {
     render () {
         return (
             <div className='o-television'>
-                <OrganismsHeaderSlideIn title='Bestätigung' className='o-television__bar' />
+                <HeaderSlideIn title='Bestätigung' className='o-television__bar' />
                 <div className='o-television__display'>
                     <div className='o-container-small'>
                         <div className='u-text-center'>
@@ -30,10 +30,10 @@ class TemplatesPasswordResetConfirmation extends Component {
     }
 }
 
-TemplatesPasswordResetConfirmation.propTypes = {
+PasswordResetConfirmation.propTypes = {
 }
 
-TemplatesPasswordResetConfirmation.defaultProps = {
+PasswordResetConfirmation.defaultProps = {
 }
 
-export default ComponentInjector.return('TemplatesPasswordResetConfirmation', TemplatesPasswordResetConfirmation)
+export default ComponentInjector.return('PasswordResetConfirmation', PasswordResetConfirmation)

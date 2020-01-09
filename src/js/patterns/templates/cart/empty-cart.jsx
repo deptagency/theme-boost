@@ -2,14 +2,14 @@ import React, { Fragment } from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import Button from '../../atoms/buttons/button'
-import OrganismsHeaderMobile from '../../organisms/base/header-mobile'
-import OrganismsFooter from '../../organisms/base/foot'
+import HeaderMobile from '../../organisms/base/header-mobile'
+import Footer from '../../organisms/base/foot'
 import { ReactComponent as EmptyCartIcon } from '../../../../icons/empty-cart.svg'
 
-const TemplatesEmptyCart = () => {
+const EmptyCart = () => {
     return (
         <Fragment>
-            <OrganismsHeaderMobile />
+            <HeaderMobile />
             <section className='o-container-small o-distance o-prevent-space'>
                 <div className='u-text-center'>
                     <EmptyCartIcon className='c-icon c-icon--xl t-text-quiet' />
@@ -22,14 +22,14 @@ const TemplatesEmptyCart = () => {
                 </div>
             </section>
             <div className='o-prevent-space'>
-                <OrganismsFooter />
+                <Footer />
             </div>
         </Fragment>
     )
 }
 
-TemplatesEmptyCart.propTypes = {
+EmptyCart.propTypes = {
 
 }
 
-export default TemplatesEmptyCart
+export default EmptyCart

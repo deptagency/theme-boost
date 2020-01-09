@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
+import HeaderSlideIn from '../../organisms/base/header-slide-in'
 
-const OrganismsGuideSorting = ({ sortItems }) => {
+const GuideSorting = ({ sortItems }) => {
     return (
         <div>
             <div className='o-television is-active'>
-                <OrganismsHeaderSlideIn title='Neuheiten' />
+                <HeaderSlideIn title='Neuheiten' />
                 <div className='o-television__display'>
 
                     <ul className='o-list-bare'>
@@ -35,12 +35,12 @@ const OrganismsGuideSorting = ({ sortItems }) => {
     )
 }
 
-OrganismsGuideSorting.propTypes = {
+GuideSorting.propTypes = {
     sortItems: PropTypes.array.isRequired,
 }
 
-OrganismsGuideSorting.defaultProps = {
+GuideSorting.defaultProps = {
     sortItems: ['Diese Woche', 'Letzte Woche', 'Diesen Monat', 'Letzten Monat', 'Letztes Jahr'],
 }
 
-export default ComponentInjector.return('OrganismsGuideSorting', OrganismsGuideSorting)
+export default ComponentInjector.return('GuideSorting', GuideSorting)

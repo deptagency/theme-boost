@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import MoleculesDetaillist from '../lists/detaillist'
+import Detaillist from '../lists/detaillist'
 import SelectBox from '../../atoms/forms/form-select'
 
-class MoleculesProductInCart extends Component {
+class ProductInCart extends Component {
     render () {
         return (<div>
             <article className='o-product o-product--row'>
@@ -20,7 +20,7 @@ class MoleculesProductInCart extends Component {
                         <div className='o-product__header__large-column'>
                             <h3 className='c-title-level-4'>Vero Moda</h3>
                             <p className='t-text-quiet'>Ballkleid</p>
-                            <MoleculesDetaillist />
+                            <Detaillist />
                         </div>
                         <button>
                             <svg version='1.1' x='0px' y='0px' viewBox='0 0 200 200' className='c-icon t-text-quiet'>
@@ -45,10 +45,10 @@ class MoleculesProductInCart extends Component {
     }
 }
 
-MoleculesProductInCart.propTypes = {
+ProductInCart.propTypes = {
 }
 
-MoleculesProductInCart.defaultProps = {
+ProductInCart.defaultProps = {
 }
 
-export default ComponentInjector.return('MoleculesProductInCart', MoleculesProductInCart)
+export default ComponentInjector.return('ProductInCart', ProductInCart)

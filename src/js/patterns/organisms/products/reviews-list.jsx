@@ -1,6 +1,6 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
-import MoleculesRating from '../../molecules/ratings/rating'
+import Rating from '../../molecules/ratings/rating'
 
 const ReviewsList = props => {
     return (
@@ -9,7 +9,7 @@ const ReviewsList = props => {
                 return (
                     <div key={i} className='o-distance-l'>
                         <p className='u-text-strong'>Beatrice</p>
-                        <MoleculesRating className='o-distance-s' />
+                        <Rating className='o-distance-s' />
                         <p className='o-distance-s'>
                             Tolles Kleid, es sieht sehr elegant aus. Ich bin zur Zeit schwanger und das Kleid passt trotzdem perfekt.
                         </p>

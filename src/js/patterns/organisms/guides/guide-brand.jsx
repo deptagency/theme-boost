@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
+import HeaderSlideIn from '../../organisms/base/header-slide-in'
 
-class OrganismsGuideBrand extends Component {
+class GuideBrand extends Component {
     render () {
         return (
             <div>
                 <div className='o-television'>
-                    <OrganismsHeaderSlideIn title='Marke' />
+                    <HeaderSlideIn title='Marke' />
                     <div className='o-television__display'>
                         <form action='' className='o-television__display__header o-television__display__boundless t-ghost'>
                             <div className='c-box'>
@@ -205,8 +205,8 @@ class OrganismsGuideBrand extends Component {
     }
 }
 
-OrganismsGuideBrand.propTypes = {}
+GuideBrand.propTypes = {}
 
-OrganismsGuideBrand.defaultProps = {}
+GuideBrand.defaultProps = {}
 
-export default ComponentInjector.return('OrganismsGuideBrand', OrganismsGuideBrand)
+export default ComponentInjector.return('GuideBrand', GuideBrand)

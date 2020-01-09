@@ -1,41 +1,41 @@
 import React, { Component, Fragment } from 'react'
 
-import MoleculesFilterBar from '../molecules/navigations/filter-bar'
-import MoleculesProduct from '../molecules/products/product'
-import OrganismsBanner from '../organisms/banners/newsletter-banner'
-import OrganismsGuide from '../organisms/guides/guide'
-import MoleculesBreadcrumb from '../molecules/breadcrumbs/breadcrumb'
-import MoleculesSequentialNav from '../molecules/navigations/sequential-nav'
+import FilterBar from '../molecules/navigations/filter-bar'
+import Product from '../molecules/products/product'
+import Banner from '../organisms/banners/newsletter-banner'
+import Guide from '../organisms/guides/guide'
+import Breadcrumb from '../molecules/breadcrumbs/breadcrumb'
+import SequentialNav from '../molecules/navigations/sequential-nav'
 
-import OrganismsHead from '../organisms/base/header'
-import OrganismsFoot from '../organisms/base/foot'
+import Head from '../organisms/base/header'
+import Foot from '../organisms/base/foot'
 
-class TemplatesCategoryOverview extends Component {
+class CategoryOverview extends Component {
     render () {
         return (
             <Fragment>
-                <OrganismsHead />
+                <Head />
                 <main role='main'>
                     <div className='o-container o-distance-l o-prevent-space'>
                         <div className='o-stage o-stage--accent'>
-                            <MoleculesBreadcrumb />
+                            <Breadcrumb />
                             <h2 className='c-title o-distance-s'>Kleider</h2>
                             <p>4521 Produkte</p>
                         </div>
                         <div className='o-guided-content o-distance-l'>
                             <div className='o-guided-content__aside'>
-                                <MoleculesSequentialNav />
+                                <SequentialNav />
                             </div>
                             <div className='o-guided-content__body'>
-                                <MoleculesFilterBar />
+                                <FilterBar />
                                 <div className='o-distance-l'>
                                     <div className='o-grid o-grid--large-third'>
-                                        <MoleculesProduct />
-                                        <MoleculesProduct />
-                                        <MoleculesProduct />
-                                        <MoleculesProduct />
-                                        <MoleculesProduct />
-                                        <MoleculesProduct />
+                                        <Product />
+                                        <Product />
+                                        <Product />
+                                        <Product />
+                                        <Product />
+                                        <Product />
                                     </div>
                                 </div>
                                 <div className='o-distance o-center'>
@@ -101,19 +101,19 @@ class TemplatesCategoryOverview extends Component {
                             </div>
                         </div>
                         <div className='o-distance'>
-                            <OrganismsBanner />
+                            <Banner />
                         </div>
                     </div>
                 </main>
-                <OrganismsGuide />
-                <OrganismsFoot />
+                <Guide />
+                <Foot />
             </Fragment>
         )
     }
 }
 
-TemplatesCategoryOverview.propTypes = {}
+CategoryOverview.propTypes = {}
 
-TemplatesCategoryOverview.defaultProps = {}
+CategoryOverview.defaultProps = {}
 
-export default TemplatesCategoryOverview
+export default CategoryOverview

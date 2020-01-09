@@ -4,7 +4,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import OrganismsProduct from '../products/product'
 
-class OrganismsProductSwiper extends Component {
+class ProductSwiper extends Component {
     render () {
         return (
             <div className='o-swiper o-distance-m'>
@@ -19,8 +19,8 @@ class OrganismsProductSwiper extends Component {
     }
 }
 
-OrganismsProductSwiper.propTypes = {}
+ProductSwiper.propTypes = {}
 
-OrganismsProductSwiper.defaultProps = {}
+ProductSwiper.defaultProps = {}
 
-export default ComponentInjector.return('OrganismsProductSwiper', OrganismsProductSwiper)
+export default ComponentInjector.return('ProductSwiper', ProductSwiper)

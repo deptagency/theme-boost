@@ -8,7 +8,7 @@ import { Scrollbars } from 'react-custom-scrollbars'
 import Modal from 'react-modal'
 Modal.setAppElement(document.getElementById('app'))
 
-const TemplatesSlideInPanel = ({ isOpen, children, header, footer, from }) => {
+const SlideInPanel = ({ isOpen, children, header, footer, from }) => {
     return (
         <SlidingPane
             className='o-slide-up-panel'
@@ -36,12 +36,12 @@ const TemplatesSlideInPanel = ({ isOpen, children, header, footer, from }) => {
     )
 }
 
-TemplatesSlideInPanel.defaultProps = {
+SlideInPanel.defaultProps = {
     isOpen: false,
     from: 'bottom',
 }
 
-TemplatesSlideInPanel.propTypes = {
+SlideInPanel.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     children: PropTypes.node.isRequired,
     header: PropTypes.node.isRequired,
@@ -49,4 +49,4 @@ TemplatesSlideInPanel.propTypes = {
     from: PropTypes.string.isRequired,
 }
 
-export default TemplatesSlideInPanel
+export default SlideInPanel

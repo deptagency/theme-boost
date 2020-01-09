@@ -6,7 +6,7 @@ import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsHeaderContext extends Component {
+class HeaderContext extends Component {
     render () {
         const Component = this.props.component
         return (
@@ -59,7 +59,7 @@ class OrganismsHeaderContext extends Component {
     }
 }
 
-OrganismsHeaderContext.propTypes = {
+HeaderContext.propTypes = {
     children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
@@ -71,7 +71,7 @@ OrganismsHeaderContext.propTypes = {
     removeSearchValue: PropTypes.bool,
 }
 
-OrganismsHeaderContext.defaultProps = {
+HeaderContext.defaultProps = {
     component: 'header',
     theme: '',
     className: '',
@@ -82,4 +82,4 @@ OrganismsHeaderContext.defaultProps = {
     removeSearchValue: false,
 }
 
-export default ComponentInjector.return('OrganismsHeaderContext', OrganismsHeaderContext)
+export default ComponentInjector.return('HeaderContext', HeaderContext)

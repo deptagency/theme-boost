@@ -1,20 +1,20 @@
 import React, { Component, Fragment } from 'react'
 
 import Referal from '../atoms/links/referal'
-import OrganismsHeaderMobile from '../organisms/base/header-mobile'
-import OrganismsFoot from '../organisms/base/foot'
-import OrganismsPageHeader from '../organisms/base/header-page'
-import OrganismsNewsletterBlock from '../organisms/blocks/newsletter'
+import HeaderMobile from '../organisms/base/header-mobile'
+import Foot from '../organisms/base/foot'
+import PageHeader from '../organisms/base/header-page'
+import NewsletterBlock from '../organisms/blocks/newsletter'
 
-class TemplatesHelpDetail extends Component {
+class HelpDetail extends Component {
     render () {
         return (
             <Fragment>
                 <div className='o-television'>
-                    <OrganismsHeaderMobile />
+                    <HeaderMobile />
                     <div className='o-television__display'>
                         <div className='o-container-medium'>
-                            <OrganismsPageHeader title='Rücksendung & Erstattung' />
+                            <PageHeader title='Rücksendung & Erstattung' />
                             <div className='o-distance-l'>
                                 <h2 className='c-title-level-4 o-block-short'>
                                     <span className='o-block-short__body'>
@@ -62,10 +62,10 @@ class TemplatesHelpDetail extends Component {
                                 <span className='c-divider o-distance-m' />
                             </nav>
                             <div className='o-distance'>
-                                <OrganismsNewsletterBlock />
+                                <NewsletterBlock />
                             </div>
                         </div>
-                        <OrganismsFoot />
+                        <Foot />
                     </div>
                 </div>
             </Fragment>
@@ -73,8 +73,8 @@ class TemplatesHelpDetail extends Component {
     }
 }
 
-TemplatesHelpDetail.propTypes = {}
+HelpDetail.propTypes = {}
 
-TemplatesHelpDetail.defaultProps = {}
+HelpDetail.defaultProps = {}
 
-export default TemplatesHelpDetail
+export default HelpDetail

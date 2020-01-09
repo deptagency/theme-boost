@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-const OrganismsColorSwiper = ({ colors, className }) => {
+const ColorSwiper = ({ colors, className }) => {
     const selectedColor = '#000'
 
     return (
@@ -25,14 +25,14 @@ const OrganismsColorSwiper = ({ colors, className }) => {
     )
 }
 
-OrganismsColorSwiper.defaultProps = {
+ColorSwiper.defaultProps = {
     colors: ['#98E076', '#3A42F1', '#000', 'gray', '#FFCE18', '#FCEA46', 'brown', 'beige'],
     className: '',
 }
 
-OrganismsColorSwiper.propTypes = {
+ColorSwiper.propTypes = {
     colors: PropTypes.array.isRequired,
     className: PropTypes.string,
 }
 
-export default OrganismsColorSwiper
+export default ColorSwiper

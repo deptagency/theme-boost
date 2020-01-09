@@ -1,22 +1,22 @@
 import React, { Component, Fragment } from 'react'
 
-import MoleculesHeading from '../molecules/headings/heading'
-import OrganismsHead from '../organisms/base/header'
-import OrganismsFoot from '../organisms/base/foot'
-import OrganismsProductSwiper from '../organisms/swiper/product-swiper'
+import Heading from '../molecules/headings/heading'
+import Head from '../organisms/base/header'
+import Foot from '../organisms/base/foot'
+import ProductSwiper from '../organisms/swiper/product-swiper'
 import StoreFeatureList from '../molecules/StoreFeatureList'
-import OrganismsNewsletterBlock from '../organisms/blocks/newsletter'
-import OrganismsMoreInfoProduct from '../organisms/products/more-info-mobile'
-import OrganismsProductView from '../organisms/products/product-view'
+import NewsletterBlock from '../organisms/blocks/newsletter'
+import MoreInfoProduct from '../organisms/products/more-info-mobile'
+import ProductView from '../organisms/products/product-view'
 
-class TemplatesDetail extends Component {
+class Detail extends Component {
     render () {
         return (
             <Fragment>
-                <OrganismsHead />
+                <Head />
                 <main role='main'>
                     <div className='o-container o-distance'>
-                        <OrganismsProductView variant={{ price: 0, discountedPrice: 0 }} />
+                        <ProductView variant={{ price: 0, discountedPrice: 0 }} />
                         <div className='o-distance-l o-prevent-space'>
                             <div className='o-block-short'>
                                 <svg
@@ -51,30 +51,30 @@ class TemplatesDetail extends Component {
                     <div className='o-container o-distance o-prevent-space'>
                         <StoreFeatureList />
                     </div>
-                    <OrganismsMoreInfoProduct />
+                    <MoreInfoProduct />
                     <section className='o-container o-distance'>
                         <div className='o-container'>
-                            <MoleculesHeading
+                            <Heading
                                 title='Das könnte dir auch gefallen'
                                 description='Empfehlungen für dich'
                             />
-                            <OrganismsProductSwiper />
+                            <ProductSwiper />
                         </div>
                     </section>
                     <section className='o-container o-distance o-prevent-space'>
-                        <OrganismsNewsletterBlock />
+                        <NewsletterBlock />
                     </section>
                 </main>
                 <div className='o-prevent-space'>
-                    <OrganismsFoot />
+                    <Foot />
                 </div>
             </Fragment>
         )
     }
 }
 
-TemplatesDetail.propTypes = {}
+Detail.propTypes = {}
 
-TemplatesDetail.defaultProps = {}
+Detail.defaultProps = {}
 
-export default TemplatesDetail
+export default Detail

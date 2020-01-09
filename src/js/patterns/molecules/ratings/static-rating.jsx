@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl'
 import { ReactComponent as FullSmallStar } from '../../../../icons/star-small-full.svg'
 import { ReactComponent as EmptySmallStar } from '../../../../icons/star-small-empty.svg'
 
-const MoleculesStaticRating = ({ outerClassName, className, rating, reviewsCount }) => {
+const StaticRating = ({ outerClassName, className, rating, reviewsCount }) => {
     return (
         <div className={outerClassName}>
             <div className={`c-rating o-flex o-flex--center ${className}`}>
@@ -21,16 +21,16 @@ const MoleculesStaticRating = ({ outerClassName, className, rating, reviewsCount
     )
 }
 
-MoleculesStaticRating.propTypes = {
+StaticRating.propTypes = {
     outerClassName: PropTypes.string,
     className: PropTypes.string,
     rating: PropTypes.number.isRequired,
     reviewsCount: PropTypes.number.isRequired,
 }
 
-MoleculesStaticRating.defaultProps = {
+StaticRating.defaultProps = {
     outerClassName: '',
     className: '',
 }
 
-export default ComponentInjector.return('MoleculesStaticRating', MoleculesStaticRating)
+export default ComponentInjector.return('StaticRating', StaticRating)

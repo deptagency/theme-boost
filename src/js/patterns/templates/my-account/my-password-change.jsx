@@ -3,20 +3,20 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
 import Button from 'js/patterns/atoms/buttons/button'
-import OrganismsHeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
-import OrganismsFormPasswordChange from 'js/patterns/organisms/form/password-change'
+import HeaderSlideIn from 'js/patterns/organisms/base/header-slide-in'
+import FormPasswordChange from 'js/patterns/organisms/form/password-change'
 
-const TemplatesMyPasswordChange = ({ products }) => {
+const MyPasswordChange = ({ products }) => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderSlideIn title={<FormattedMessage id='account.password.title' />} className='o-television__bar' />
+            <HeaderSlideIn title={<FormattedMessage id='account.password.title' />} className='o-television__bar' />
             <div className='o-television__display'>
                 <div className='o-container-small'>
                     <p className='u-text-s '>
                         <FormattedMessage id='account.password.change' />
                     </p>
                     <div className='o-distance'>
-                        <OrganismsFormPasswordChange />
+                        <FormPasswordChange />
                         <Button type='primary' size='boss' className='o-distance-m'>
                             <FormattedMessage id='account.save' />
                         </Button>
@@ -28,8 +28,8 @@ const TemplatesMyPasswordChange = ({ products }) => {
     )
 }
 
-TemplatesMyPasswordChange.propTypes = {
+MyPasswordChange.propTypes = {
     products: PropTypes.array.isRequired,
 }
 
-export default TemplatesMyPasswordChange
+export default MyPasswordChange

@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import app from 'frontastic-catwalk/src/js/app/app'
 import { FormattedMessage } from 'react-intl'
-import OrganismsFormRegister from '../organisms/form/register'
-import OrganismsPageHeader from '../organisms/base/header-page'
+import FormRegister from '../organisms/form/register'
+import PageHeader from '../organisms/base/header-page'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class TemplatesRegister extends Component {
+class Register extends Component {
     render () {
         return (
             <div className='o-container-small'>
-                <OrganismsPageHeader
+                <PageHeader
                     title={<FormattedMessage id='account.register.createUser' />}
                     className='u-hidden-medium-up'
                     handleClick={() => { app.getRouter().history.replace('/') }}
@@ -19,16 +19,16 @@ class TemplatesRegister extends Component {
                         <FormattedMessage id='account.register.createUser' />
                     </h2>
                 </div>
-                <OrganismsFormRegister />
+                <FormRegister />
             </div>
         )
     }
 }
 
-TemplatesRegister.propTypes = {
+Register.propTypes = {
 }
 
-TemplatesRegister.defaultProps = {
+Register.defaultProps = {
 }
 
-export default ComponentInjector.return('TemplatesRegister', TemplatesRegister)
+export default ComponentInjector.return('Register', Register)

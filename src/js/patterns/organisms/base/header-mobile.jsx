@@ -9,7 +9,7 @@ import { ReactComponent as SingleNeutralCircleIcon } from '../../../../icons/sin
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsHeaderMobile extends Component {
+class HeaderMobile extends Component {
     render () {
         const Component = this.props.component
 
@@ -105,17 +105,17 @@ class OrganismsHeaderMobile extends Component {
     }
 }
 
-OrganismsHeaderMobile.propTypes = {
+HeaderMobile.propTypes = {
     children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
     theme: PropTypes.string,
 }
 
-OrganismsHeaderMobile.defaultProps = {
+HeaderMobile.defaultProps = {
     component: 'header',
     theme: '',
     className: '',
 }
 
-export default ComponentInjector.return('OrganismsHeaderMobile', OrganismsHeaderMobile)
+export default ComponentInjector.return('HeaderMobile', HeaderMobile)

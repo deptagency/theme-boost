@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsOrderDetail extends Component {
+class OrderDetail extends Component {
     render () {
         return (
             <Fragment>
@@ -43,10 +43,10 @@ class OrganismsOrderDetail extends Component {
     }
 }
 
-OrganismsOrderDetail.propTypes = {
+OrderDetail.propTypes = {
 }
 
-OrganismsOrderDetail.defaultProps = {
+OrderDetail.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsOrderDetail', OrganismsOrderDetail)
+export default ComponentInjector.return('OrderDetail', OrderDetail)

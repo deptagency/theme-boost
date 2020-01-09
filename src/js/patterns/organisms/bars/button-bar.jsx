@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import Button from 'js/patterns/atoms/buttons/button'
 
-class OrganismsButtonBar extends Component {
+class ButtonBar extends Component {
     render () {
         return (<div>
             <div className='o-buttonbar'>
@@ -36,10 +36,10 @@ class OrganismsButtonBar extends Component {
     }
 }
 
-OrganismsButtonBar.propTypes = {
+ButtonBar.propTypes = {
 }
 
-OrganismsButtonBar.defaultProps = {
+ButtonBar.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsButtonBar', OrganismsButtonBar)
+export default ComponentInjector.return('ButtonBar', ButtonBar)

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsCreditCard extends Component {
+class CreditCardVisual extends Component {
     render () {
         return (<div>
             <div className='c-box c-box--l o-creditcard t-universe t-box-shadow t-text-ghost'>
@@ -52,10 +52,10 @@ class OrganismsCreditCard extends Component {
     }
 }
 
-OrganismsCreditCard.propTypes = {
+CreditCardVisual.propTypes = {
 }
 
-OrganismsCreditCard.defaultProps = {
+CreditCardVisual.defaultProps = {
 }
 
-export default ComponentInjector.return('OrganismsCreditCard', OrganismsCreditCard)
+export default ComponentInjector.return('CreditCardVisual', CreditCardVisual)

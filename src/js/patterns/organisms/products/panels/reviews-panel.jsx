@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
-import OrganismsHeaderSlideIn from '../../base/header-slide-in'
+import HeaderSlideIn from '../../base/header-slide-in'
 import Button from '../../../atoms/buttons/button'
-import TemplatesSlideInPanel from '../../../templates/slide-in-panel'
+import SlideInPanel from '../../../templates/slide-in-panel'
 import ReviewsList from '../reviews-list'
 import WriteReviewPanel from './write-review-panel'
 
@@ -23,10 +23,10 @@ const ReviewsPanel = ({ isOpen, onClose, product, image, designer }) => {
     }
 
     return [
-        <TemplatesSlideInPanel
+        <SlideInPanel
             key='1'
             isOpen={isOpen}
-            header={<OrganismsHeaderSlideIn
+            header={<HeaderSlideIn
                 onClose={onClose}
                 title={<FormattedMessage id={'reviews'} />}
                 showLeftBackIcon={false}
@@ -37,7 +37,7 @@ const ReviewsPanel = ({ isOpen, onClose, product, image, designer }) => {
                 <SubmitReviewButton />
             </div>
             <ReviewsList />
-        </TemplatesSlideInPanel>,
+        </SlideInPanel>,
         <WriteReviewPanel key='2'
             isOpen={reviewFormOpen}
             onClose={() => { setReviewFormOpen(false) }}

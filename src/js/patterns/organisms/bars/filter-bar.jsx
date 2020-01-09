@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsFilterBar extends Component {
+class FilterBar extends Component {
     render () {
         return (
             <Fragment>
@@ -39,8 +39,8 @@ class OrganismsFilterBar extends Component {
     }
 }
 
-OrganismsFilterBar.propTypes = {}
+FilterBar.propTypes = {}
 
-OrganismsFilterBar.defaultProps = {}
+FilterBar.defaultProps = {}
 
-export default ComponentInjector.return('OrganismsFilterBar', OrganismsFilterBar)
+export default ComponentInjector.return('FilterBar', FilterBar)

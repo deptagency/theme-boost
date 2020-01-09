@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsSorting extends Component {
+class Sorting extends Component {
     render () {
         const { values } = this.props
 
@@ -22,12 +22,12 @@ class OrganismsSorting extends Component {
     }
 }
 
-OrganismsSorting.propTypes = {
+Sorting.propTypes = {
     values: PropTypes.array,
 }
 
-OrganismsSorting.defaultProps = {
+Sorting.defaultProps = {
     values: ['Neu hinzugefügt', 'Niedrigster Preis', 'Hocher Presis'],
 }
 
-export default ComponentInjector.return('OrganismsSorting', OrganismsSorting)
+export default ComponentInjector.return('Sorting', Sorting)

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class AtomsTopic extends Component {
+class Topic extends Component {
     render () {
         return (<div>
             <p className='c-topic'>Exklusive Rabatte</p>
@@ -10,10 +10,10 @@ class AtomsTopic extends Component {
     }
 }
 
-AtomsTopic.propTypes = {
+Topic.propTypes = {
 }
 
-AtomsTopic.defaultProps = {
+Topic.defaultProps = {
 }
 
-export default ComponentInjector.return('AtomsTopic', AtomsTopic)
+export default ComponentInjector.return('Topic', Topic)

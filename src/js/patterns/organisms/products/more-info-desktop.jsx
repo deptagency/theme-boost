@@ -3,16 +3,16 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 import classnames from 'classnames'
 import { Scrollbars } from 'react-custom-scrollbars'
-import MoleculesStaticRating from '../../molecules/ratings/static-rating'
+import StaticRating from '../../molecules/ratings/static-rating'
 import { ReactComponent as YellowTick } from '../../../../icons/yellow-tick.svg'
 import { ReactComponent as SmallTruck } from '../../../../icons/truck-small.svg'
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 import ReviewsList from './reviews-list'
-import OrganismsDetailsDesktop from './more-info/details-desktop'
+import DetailsDesktop from './more-info/details-desktop'
 
-const OrganismsMoreInfoProductDesktop = ({ product }) => {
+const MoreInfoProductDesktop = ({ product }) => {
     const { images, attributes } = product
     const [selectedTab, setSelectedTab] = useState(0)
 
@@ -58,7 +58,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                             <FormattedMessage id='product.description' />
                         </h3>
                         <div className='o-distance-m'>
-                            { attributes && <OrganismsDetailsDesktop attributes={attributes} /> }
+                            { attributes && <DetailsDesktop attributes={attributes} /> }
                         </div>
                     </TabPanel>
                     <TabPanel className='o-distance-l'>
@@ -100,7 +100,7 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
                         <div className='o-box-center o-flex'>
                             <div className='o-distance-xl o-block-short o-block-short--medium o-block-short--centered'>
                                 <h4 className='c-title o-block-short__short-item'>4,2</h4>
-                                <MoleculesStaticRating outerClassName='o-block-short__body' rating={3} reviewsCount={7} />
+                                <StaticRating outerClassName='o-block-short__body' rating={3} reviewsCount={7} />
                             </div>
                         </div>
 
@@ -127,8 +127,8 @@ const OrganismsMoreInfoProductDesktop = ({ product }) => {
     )
 }
 
-OrganismsMoreInfoProductDesktop.propTypes = {
+MoreInfoProductDesktop.propTypes = {
     product: PropTypes.object.isRequired,
 }
 
-export default OrganismsMoreInfoProductDesktop
+export default MoreInfoProductDesktop

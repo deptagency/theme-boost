@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
-import TemplatesLogin from '../../patterns/templates/login.jsx'
+import Login from '../../patterns/templates/login.jsx'
 
 class LoginTastic extends Component {
     render () {
         return (
-            <TemplatesLogin />
+            <Login />
         )
     }
 }

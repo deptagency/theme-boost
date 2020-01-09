@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 import OrganismsBundleListing from '../../organisms/listings/bundle-listing'
 import OrganismsPaymentListingIcons from '../../organisms/listings/payment-listing-icons'
 
-const MoleculesCartListing = ({ cartItems, outerClassName }) => {
+const CartListing = ({ cartItems, outerClassName }) => {
     return (
         <div className={outerClassName}>
             <section className='c-frame-large-up'>
@@ -27,9 +27,9 @@ const MoleculesCartListing = ({ cartItems, outerClassName }) => {
     )
 }
 
-MoleculesCartListing.propTypes = {
+CartListing.propTypes = {
     cartItems: PropTypes.array.isRequired,
     outerClassName: PropTypes.string,
 }
 
-export default MoleculesCartListing
+export default CartListing

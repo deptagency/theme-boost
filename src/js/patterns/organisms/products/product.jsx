@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import MoleculesSticker from '../../molecules/sticker/sticker'
+import Sticker from '../../molecules/sticker/sticker'
 import Wishlist from '../../atoms/wishlist/wishlist'
 
-class OrganismsProduct extends Component {
+class Product extends Component {
     render () {
         const { width } = this.props
         let style = {}
@@ -18,7 +18,7 @@ class OrganismsProduct extends Component {
                         <img src='https://mosaic04.ztat.net/vgs/media/catalog-lg/BL/82/1D/00/7K/11/BL821D007-K11@9.jpg' width='320px' alt='' className={this.props.thumbClass} />
                         {this.props.sale ?
                             <div className='o-head-up__item o-head-up__item--top-left'>
-                                <MoleculesSticker />
+                                <Sticker />
                             </div>
                         : null }
                         <div className='o-head-up__item o-head-up__item--top-right'>
@@ -62,7 +62,7 @@ class OrganismsProduct extends Component {
     }
 }
 
-OrganismsProduct.propTypes = {
+Product.propTypes = {
     width: PropTypes.string,
     sale: PropTypes.bool,
     title: PropTypes.string,
@@ -74,7 +74,7 @@ OrganismsProduct.propTypes = {
     addable: PropTypes.bool,
 }
 
-OrganismsProduct.defaultProps = {
+Product.defaultProps = {
     sale: null,
     title: 'Vero Moda Freizeitkleid',
     category: 'Ballkleid',
@@ -84,4 +84,4 @@ OrganismsProduct.defaultProps = {
     thumbClass: null,
 }
 
-export default ComponentInjector.return('OrganismsProduct', OrganismsProduct)
+export default ComponentInjector.return('Product', Product)

@@ -2,17 +2,17 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import MoleculesPromobox from '../../molecules/promobox/promobox'
+import Promobox from '../../molecules/promobox/promobox'
 
-class OrganismsCategoryListing extends Component {
+class CategoryListing extends Component {
     render () {
         return (
             <div>
                 <section className='o-distance'>
                     <div className='o-grid o-grid--medium-third'>
-                        <MoleculesPromobox />
-                        <MoleculesPromobox />
-                        <MoleculesPromobox />
+                        <Promobox />
+                        <Promobox />
+                        <Promobox />
                     </div>
                 </section>
             </div>
@@ -20,8 +20,8 @@ class OrganismsCategoryListing extends Component {
     }
 }
 
-OrganismsCategoryListing.propTypes = {}
+CategoryListing.propTypes = {}
 
-OrganismsCategoryListing.defaultProps = {}
+CategoryListing.defaultProps = {}
 
-export default ComponentInjector.return('OrganismsCategoryListing', OrganismsCategoryListing)
+export default ComponentInjector.return('CategoryListing', CategoryListing)

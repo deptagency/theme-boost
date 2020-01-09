@@ -4,7 +4,7 @@ import Chip from '../../atoms/chips/chip'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsPaymentListing extends Component {
+class PaymentListing extends Component {
     render () {
         return (
             <div className='o-grid o-grid--half'>
@@ -17,8 +17,8 @@ class OrganismsPaymentListing extends Component {
     }
 }
 
-OrganismsPaymentListing.propTypes = {}
+PaymentListing.propTypes = {}
 
-OrganismsPaymentListing.defaultProps = {}
+PaymentListing.defaultProps = {}
 
-export default ComponentInjector.return('OrganismsPaymentListing', OrganismsPaymentListing)
+export default ComponentInjector.return('PaymentListing', PaymentListing)

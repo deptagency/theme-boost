@@ -2,19 +2,19 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import OrganismsGallery from '../galleries/gallery'
-import MoleculesRating from '../../molecules/ratings/rating'
-import OrganismsExpressDelivery from '../blocks/express-delivery'
+import Gallery from '../galleries/gallery'
+import Rating from '../../molecules/ratings/rating'
+import ExpressDelivery from '../blocks/express-delivery'
 import ProductImage from '../products/product-image'
 import { ReactComponent as Wishlist } from './../../../../icons/wishlist-heart.svg'
 
-class OrganismsProductStage extends Component {
+class ProductStage extends Component {
     render () {
         const { images, name, discountedPrice, price, addToCartButton, addToWishlist } = this.props
         return (
             <div className='o-media-block'>
                 <div className='o-media-block__asset'>
-                    <OrganismsGallery
+                    <Gallery
                         imagesComponents={(images || []).map((image) => {
                             return (<ProductImage imageUrl={image} />)
                         })}
@@ -39,7 +39,7 @@ class OrganismsProductStage extends Component {
                         }
 
                         <div className='o-product__details__offset'>
-                            <MoleculesRating counterMessage='true' />
+                            <Rating counterMessage='true' />
                         </div>
                     </div>
 
@@ -104,7 +104,7 @@ class OrganismsProductStage extends Component {
                                 </button>
                             </div>
                             <div className='o-distance-m'>
-                                <OrganismsExpressDelivery />
+                                <ExpressDelivery />
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@ class OrganismsProductStage extends Component {
     }
 }
 
-OrganismsProductStage.propTypes = {
+ProductStage.propTypes = {
     images: PropTypes.array.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node]),
@@ -160,8 +160,8 @@ OrganismsProductStage.propTypes = {
     addToWishlist: PropTypes.func,
 }
 
-OrganismsProductStage.defaultProps = {
+ProductStage.defaultProps = {
     images: [],
 }
 
-export default ComponentInjector.return('OrganismsProductStage', OrganismsProductStage)
+export default ComponentInjector.return('ProductStage', ProductStage)

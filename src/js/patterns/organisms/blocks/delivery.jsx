@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class OrganismsDeliveryBlock extends Component {
+class DeliveryBlock extends Component {
     render () {
         const { className } = this.props
         return (
@@ -34,12 +34,12 @@ class OrganismsDeliveryBlock extends Component {
     }
 }
 
-OrganismsDeliveryBlock.propTypes = {
+DeliveryBlock.propTypes = {
     className: PropTypes.string,
 }
 
-OrganismsDeliveryBlock.defaultProps = {
+DeliveryBlock.defaultProps = {
     className: '',
 }
 
-export default ComponentInjector.return('OrganismsDeliveryBlock', OrganismsDeliveryBlock)
+export default ComponentInjector.return('DeliveryBlock', DeliveryBlock)

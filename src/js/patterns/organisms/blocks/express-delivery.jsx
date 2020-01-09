@@ -2,7 +2,7 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import { ReactComponent as DeliveryTruck } from '../../../../icons/delivery-truck.svg'
 
-const OrganismsExpressDelivery = () => {
+const ExpressDelivery = () => {
     return (
         <div className='o-block-short o-block-short--medium'>
             <DeliveryTruck className='o-block-short__short-item c-icon c-icon--l t-text-quiet' />
@@ -15,8 +15,8 @@ const OrganismsExpressDelivery = () => {
     )
 }
 
-OrganismsExpressDelivery.propTypes = {
+ExpressDelivery.propTypes = {
 
 }
 
-export default OrganismsExpressDelivery
+export default ExpressDelivery

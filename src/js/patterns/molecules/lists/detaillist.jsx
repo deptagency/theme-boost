@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import { FormattedMessage } from 'react-intl'
 
-const MoleculesDetaillist = ({ color, size }) => {
+const Detaillist = ({ color, size }) => {
     return (
         <dl className='o-detaillist'>
             <dt className='u-text-color-quiet u-text-s'><FormattedMessage id='colorProduct' /></dt>
@@ -14,12 +14,12 @@ const MoleculesDetaillist = ({ color, size }) => {
     )
 }
 
-MoleculesDetaillist.propTypes = {
+Detaillist.propTypes = {
     color: PropTypes.string.isRequired,
     size: PropTypes.string.isRequired,
 }
 
-MoleculesDetaillist.defaultProps = {
+Detaillist.defaultProps = {
 }
 
-export default ComponentInjector.return('MoleculesDetaillist', MoleculesDetaillist)
+export default ComponentInjector.return('Detaillist', Detaillist)

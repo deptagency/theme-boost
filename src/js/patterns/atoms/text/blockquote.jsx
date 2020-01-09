@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class AtomsBlockquote extends Component {
+class Blockquote extends Component {
     render () {
         return (<div>
             <blockquote>
@@ -13,10 +13,10 @@ class AtomsBlockquote extends Component {
     }
 }
 
-AtomsBlockquote.propTypes = {
+Blockquote.propTypes = {
 }
 
-AtomsBlockquote.defaultProps = {
+Blockquote.defaultProps = {
 }
 
-export default ComponentInjector.return('AtomsBlockquote', AtomsBlockquote)
+export default ComponentInjector.return('Blockquote', Blockquote)

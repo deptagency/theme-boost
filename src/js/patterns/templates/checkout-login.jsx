@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 
 import Button from '../atoms/buttons/button'
-import OrganismsPageHeader from '../organisms/base/header-page'
-import OrganismsHeaderMobile from '../organisms/base/header-mobile'
+import PageHeader from '../organisms/base/header-page'
+import HeaderMobile from '../organisms/base/header-mobile'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-class TemplatesLogin extends Component {
+class Login extends Component {
     render () {
         return (
             <>
-                <OrganismsHeaderMobile />
+                <HeaderMobile />
                 <div className='o-container-small'>
-                    <OrganismsPageHeader title='Anmelden' />
+                    <PageHeader title='Anmelden' />
                     <h2 className='c-title-level-3 o-distance-m'>Melde dich an oder erstelle ein Konto</h2>
                     <div className='o-buttonbar o-distance-s'>
                         <Button type='primary' size='boss' className='o-buttonbar__item'>Anmelden</Button>
@@ -32,10 +32,10 @@ class TemplatesLogin extends Component {
     }
 }
 
-TemplatesLogin.propTypes = {
+Login.propTypes = {
 }
 
-TemplatesLogin.defaultProps = {
+Login.defaultProps = {
 }
 
-export default ComponentInjector.return('TemplatesLogin', TemplatesLogin)
+export default ComponentInjector.return('Login', Login)

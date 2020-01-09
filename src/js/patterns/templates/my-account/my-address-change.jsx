@@ -2,17 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
-import OrganismFormAddressChange from '../../organisms/form/address-change'
+import FormAddressChange from '../../organisms/form/address-change'
 import Button from '../../atoms/buttons/button'
-import OrganismsHeaderSlideIn from '../../organisms/base/header-slide-in'
+import HeaderSlideIn from '../../organisms/base/header-slide-in'
 
-const TemplatesMyAddressChange = ({ products }) => {
+const MyAddressChange = ({ products }) => {
     return (
         <div className='o-television'>
-            <OrganismsHeaderSlideIn title='Adresse ändern' className='o-television__bar' />
+            <HeaderSlideIn title='Adresse ändern' className='o-television__bar' />
             <div className='o-television__display'>
                 <div className='o-container-small'>
-                    <OrganismFormAddressChange />
+                    <FormAddressChange />
                 </div>
             </div>
             <div className='o-television__remote-control'>
@@ -27,8 +27,8 @@ const TemplatesMyAddressChange = ({ products }) => {
     )
 }
 
-TemplatesMyAddressChange.propTypes = {
+MyAddressChange.propTypes = {
     products: PropTypes.array.isRequired,
 }
 
-export default TemplatesMyAddressChange
+export default MyAddressChange
