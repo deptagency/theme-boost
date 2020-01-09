@@ -16,13 +16,14 @@
   align-items: center;
   column-gap: 24px;
   display: grid;
-  grid-template-columns: 24px 1fr 24px;
+  grid-template-columns: auto 1fr 24px;
   justify-content: center;
   justify-items: center;
 }
 
 .c-context-header__middle {
   grid-column: 2;
+  width: 100%;
   @include overflow-ellipsis;
 }
 
