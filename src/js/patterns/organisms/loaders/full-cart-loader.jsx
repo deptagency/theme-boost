@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import ContentLoader from 'react-content-loader'
-import { smallScreen, largeScreen, blockSmallScreenHide } from './loaders.module.scss'
+import { smallScreen, largeScreen } from './loaders.module.scss'
 
 class FullCartLoader extends Component {
     render () {
@@ -33,28 +33,28 @@ class FullCartLoader extends Component {
 
                 {/* small screen */}
 
-                <rect className={smallScreen} x='200' y='15' rx='20' ry='20' width='150' height='200' />
-                <rect className={smallScreen} x='630' y='17' rx='2' ry='2' width='20' height='18' />
-                <rect className={smallScreen} x='400' y='17' rx='10' ry='10' width='170' height='16' />
-                <rect className={smallScreen} x='400' y='50' rx='10' ry='10' width='135' height='12' />
-                <rect className={smallScreen} x='400' y='110' rx='5' ry='5' width='120' height='8' />
-                <rect className={smallScreen} x='400' y='130' rx='5' ry='5' width='120' height='8' />
-                <rect className={smallScreen} x='400' y='180' rx='8' ry='8' width='70' height='29' />
+                <rect className={smallScreen} x='30' y='15' rx='20' ry='20' width='200' height='250' />
+                <rect className={smallScreen} x='730' y='17' rx='5' ry='5' width='50' height='50' />
+                <rect className={smallScreen} x='250' y='17' rx='10' ry='10' width='250' height='16' />
+                <rect className={smallScreen} x='250' y='50' rx='10' ry='10' width='200' height='12' />
+                <rect className={smallScreen} x='250' y='130' rx='5' ry='5' width='120' height='8' />
+                <rect className={smallScreen} x='250' y='150' rx='5' ry='5' width='120' height='8' />
+                <rect className={smallScreen} x='250' y='210' rx='8' ry='8' width='120' height='40' />
 
-                <rect className={smallScreen} x='200' y='245' rx='20' ry='20' width='150' height='200' />
-                <rect className={smallScreen} x='630' y='247' rx='2' ry='2' width='20' height='18' />
-                <rect className={smallScreen} x='400' y='247' rx='10' ry='10' width='170' height='16' />
-                <rect className={smallScreen} x='400' y='280' rx='10' ry='10' width='135' height='12' />
-                <rect className={smallScreen} x='400' y='340' rx='5' ry='5' width='120' height='8' />
-                <rect className={smallScreen} x='400' y='380' rx='5' ry='5' width='120' height='8' />
-                <rect className={smallScreen} x='400' y='410' rx='8' ry='8' width='70' height='29' />
+                <rect className={smallScreen} x='30' y='315' rx='20' ry='20' width='200' height='250' />
+                <rect className={smallScreen} x='730' y='317' rx='5' ry='5' width='50' height='50' />
+                <rect className={smallScreen} x='250' y='317' rx='10' ry='10' width='250' height='16' />
+                <rect className={smallScreen} x='250' y='350' rx='10' ry='10' width='200' height='12' />
+                <rect className={smallScreen} x='250' y='430' rx='5' ry='5' width='120' height='8' />
+                <rect className={smallScreen} x='250' y='450' rx='5' ry='5' width='120' height='8' />
+                <rect className={smallScreen} x='250' y='510' rx='8' ry='8' width='120' height='40' />
 
-                <rect className={smallScreen} x='200' y='550' rx='5' ry='5' width='60' height='35' />
-                <rect className={smallScreen} x='280' y='550' rx='5' ry='5' width='60' height='35' />
-                <rect className={smallScreen} x='360' y='550' rx='5' ry='5' width='60' height='35' />
-                <rect className={smallScreen} x='440' y='550' rx='5' ry='5' width='60' height='35' />
+                <rect className={smallScreen} x='30' y='600' rx='5' ry='5' width='60' height='40' />
+                <rect className={smallScreen} x='110' y='600' rx='5' ry='5' width='60' height='40' />
+                <rect className={smallScreen} x='190' y='600' rx='5' ry='5' width='60' height='40' />
+                <rect className={smallScreen} x='270' y='600' rx='5' ry='5' width='60' height='40' />
 
-                <rect className={smallScreen} x='200' y='650' rx='20' ry='20' width='450' height='200' />
+                <rect className={smallScreen} x='30' y='690' rx='20' ry='20' width='740' height='300' />
             </ContentLoader>
         </div>)
     }
