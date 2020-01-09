@@ -22,9 +22,9 @@ class HomepageLoader extends Component {
 
                 <rect x='19' y='90' rx='7' ry='7' width='760' height='360' />
 
-                <rect className={largeScreen} x="20" y="470" rx="7" ry="7" width="230" height="170" />
-                <rect className={largeScreen} x="287" y="470" rx="7" ry="7" width="230" height="170" />
-                <rect className={largeScreen} x="547" y="470" rx="7" ry="7" width="230" height="170" />
+                <rect className={largeScreen} x='20' y='470' rx='7' ry='7' width='230' height='170' />
+                <rect className={largeScreen} x='287' y='470' rx='7' ry='7' width='230' height='170' />
+                <rect className={largeScreen} x='547' y='470' rx='7' ry='7' width='230' height='170' />
 
                 <rect className={largeScreen} x='200' y='660' rx='4' ry='4' width='400' height='12' />
                 <rect className={largeScreen} x='300' y='685' rx='4' ry='4' width='200' height='15' />
@@ -36,10 +36,10 @@ class HomepageLoader extends Component {
 
                 {/* small screen */}
 
-                <rect className={smallScreen} x="20" y="470" rx="7" ry="7" width="300" height="200" />
-                <rect className={smallScreen} x="340" y="470" rx="7" ry="7" width="300" height="200" />
-                <rect className={smallScreen} x="660" y="470" rx="7" ry="7" width="300" height="200" />
-                
+                <rect className={smallScreen} x='20' y='470' rx='7' ry='7' width='300' height='200' />
+                <rect className={smallScreen} x='340' y='470' rx='7' ry='7' width='300' height='200' />
+                <rect className={smallScreen} x='660' y='470' rx='7' ry='7' width='300' height='200' />
+
                 <rect className={smallScreen} x='200' y='690' rx='4' ry='4' width='400' height='12' />
                 <rect className={smallScreen} x='300' y='720' rx='4' ry='4' width='200' height='15' />
 
