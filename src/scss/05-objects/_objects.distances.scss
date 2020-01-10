@@ -21,3 +21,7 @@
     margin-top: $spacing-stack-xl;
   }
 }
+
+@include breakpointLoop('o-distance-none') {
+    margin-top: 0;
+}
