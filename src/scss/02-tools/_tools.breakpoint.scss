@@ -5,3 +5,35 @@
     @content;
   }
 }
+
+/// @name BreakpointLoop
+/// @description Generates breakpoint specific classes
+@mixin breakpointLoop($name) {
+    .#{$name} {
+        @content;
+    }
+
+    .#{$name}--breakpoint-s {
+        @include breakpoint($layout-breakpoint-s) {
+            @content;
+        }
+    }
+
+    .#{$name}--breakpoint-m {
+        @include breakpoint($layout-breakpoint-m) {
+            @content;
+        }
+    }
+
+    .#{$name}--breakpoint-l {
+        @include breakpoint($layout-breakpoint-l) {
+            @content;
+        }
+    }
+
+    .#{$name}--breakpoint-xl {
+        @include breakpoint($layout-breakpoint-xl) {
+            @content;
+        }
+    }
+}

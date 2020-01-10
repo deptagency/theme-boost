@@ -1,21 +1,17 @@
-.o-distance-xs {
+@include breakpointLoop('o-distance-xs') {
   margin-top: $spacing-stack-xs;
 }
-
-.o-distance-s {
-  margin-top: $spacing-stack-s;
+@include breakpointLoop('o-distance-s') {
+    margin-top: $spacing-stack-s;
 }
-
-.o-distance-m {
-  margin-top: $spacing-stack-m;
+@include breakpointLoop('o-distance-m') {
+    margin-top: $spacing-stack-m;
 }
-
-.o-distance-l {
-  margin-top: $spacing-stack-l;
+@include breakpointLoop('o-distance-l') {
+    margin-top: $spacing-stack-l;
 }
-
-.o-distance-xl {
-  margin-top: $spacing-stack-xl;
+@include breakpointLoop('o-distance-xl') {
+    margin-top: $spacing-stack-xl;
 }
 
 .o-distance {
