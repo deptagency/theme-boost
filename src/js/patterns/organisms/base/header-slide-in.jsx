@@ -20,8 +20,8 @@ const HeaderSlideIn = (props) => {
             >
             <div className='o-container c-context-header__wrapper'>
 
-                {showLeftBackIcon && <button onClick={onClose}>
-                    <ArrowLeftWhite />
+                {showLeftBackIcon && <button onClick={onClose} className='u-icon-line-height'>
+                    <ArrowLeftWhite className='c-icon c-icon--s' />
                 </button>}
 
                 <div className='c-context-header__middle'>
