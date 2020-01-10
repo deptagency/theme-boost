@@ -1,11 +1,12 @@
 // Config
 
 // Frame
-.c-frame {
+@include breakpointLoop('c-frame') {
   display: block;
   padding: $spacing-inset-m;
   @include border();
 }
+
 .c-frame--s {
   padding: $spacing-inset-s;
 }
