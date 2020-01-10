@@ -1,6 +1,8 @@
 // Config
 
-// Divider
+/// @name Divider
+/// @description Standard quiet divider to separate content
+/// @group Divider
 .c-divider {
   display: block;
   height: $divider-base-height;
@@ -8,6 +10,9 @@
   background: $divider-base-color-background;
 }
 
+/// @name DividerBreak
+/// @description Conspicuous divider to separate larger areas
+/// @group Divider
 .c-divider--break {
   height: $divider-break-height;
   background: $divider-break-color-background;

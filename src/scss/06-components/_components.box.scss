@@ -1,8 +1,9 @@
 // Config
 
-/// Box
+/// @name Box
+/// @description Simple Standard Box
 /// @group Box
-.c-box {
+@include breakpointLoop('c-box') {
   display: block;
   padding: $spacing-inset-m;
   border-radius: $border-radius-base;
@@ -21,7 +22,7 @@
     padding: $spacing-inset-xl;
 }
 
-/// Edge Box
+/// @name BoxEdged
 /// @description Removing border-radius to create real edges
 /// @group Box
 .c-box--edged {

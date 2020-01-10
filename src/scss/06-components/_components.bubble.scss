@@ -3,7 +3,8 @@ $bubble-size: 18px !default;
 $bubble-background-color: $color-semantic-success-base !default;
 $bubble-font-color: $color-palette-white !default;
 
-// Bubble
+/// @name Bubble
+/// @description Bubble with single important information like a counter or an indicator
 .c-bubble {
   align-items: center;
   background: $bubble-background-color;
