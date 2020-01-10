@@ -22,9 +22,9 @@ const MyAddresses = props => {
 
                     <p><FormattedMessage id='account.address.newAddress' /></p>
                 </button>
-                <div className='o-distance'>
-                    <div className='o-list-bare'>
-                        <div className='o-list-bare__item'>
+                <div className='o-distance-l'>
+                    <div className='o-grid o-grid--large-half o-grid--inline'>
+                        <div className='c-frame--breakpoint-l'>
                             <h2 className='c-title-level-4 t-text-quiet u-text-uppercase'>
                                 <FormattedMessage id='account.address.residential' />
                             </h2>
@@ -67,40 +67,43 @@ const MyAddresses = props => {
                                     </Button>
                                 </div>
                             </div>
+                        </div>
+                        <div className='o-distance-l u-hidden-large-up'>
                             <span className='c-divider o-list-bare__item' />
-                            <div className='o-list-bare__item'>
-                                <h2 className='c-title-level-4 t-text-quiet u-text-uppercase'>
-                                    <FormattedMessage id='account.address.residential' /></h2>
-                                <div className='o-distance-m'>
-                                    <Addressblock />
-                                </div>
-                                <div className='o-buttonbar o-distance-m o-buttonbar--spread'>
-                                    <button className='o-buttonbar__item'>
-                                        <svg className='c-icon c-icon--outline c-icon--s' width='20' height='20' viewBox='0 0 20 20' fill='none'>
-                                            <path d='M1.25 3.75H18.75' stroke='#31333E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-                                            <path d='M11.875 1.25H8.125C7.79348 1.25 7.47554 1.3817 7.24112 1.61612C7.0067 1.85054 6.875 2.16848 6.875 2.5V3.75H13.125V2.5C13.125 2.16848 12.9933 1.85054 12.7589 1.61612C12.5245 1.3817 12.2065 1.25 11.875 1.25Z' stroke='#31333E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-                                            <path d='M8.125 14.375V8.125' stroke='#31333E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-                                            <path d='M11.875 14.375V8.125' stroke='#31333E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-                                            <path d='M15.7208 17.6033C15.6949 17.9159 15.5524 18.2073 15.3216 18.4197C15.0909 18.6321 14.7887 18.75 14.475 18.75H5.52583C5.21218 18.75 4.90998 18.6321 4.6792 18.4197C4.44842 18.2073 4.30593 17.9159 4.28 17.6033L3.125 3.75H16.875L15.7208 17.6033Z' stroke='#31333E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-                                        </svg>
-                                    </button>
-                                    <Button type='quiet' className='o-buttonbar__item'>
-                                        <FormattedMessage id='account.edit' />
-                                    </Button>
-                                </div>
+                        </div>
+                        <div className='c-frame--breakpoint-l o-distance-l o-distance-none--breakpoint-l'>
+                            <h2 className='c-title-level-4 t-text-quiet u-text-uppercase'>
+                                <FormattedMessage id='account.address.residential' /></h2>
+                            <div className='o-distance-m'>
+                                <Addressblock />
+                            </div>
+                            <div className='o-buttonbar o-distance-m o-buttonbar--spread'>
+                                <button className='o-buttonbar__item'>
+                                    <svg className='c-icon c-icon--outline c-icon--s' width='20' height='20' viewBox='0 0 20 20' fill='none'>
+                                        <path d='M1.25 3.75H18.75' stroke='#31333E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+                                        <path d='M11.875 1.25H8.125C7.79348 1.25 7.47554 1.3817 7.24112 1.61612C7.0067 1.85054 6.875 2.16848 6.875 2.5V3.75H13.125V2.5C13.125 2.16848 12.9933 1.85054 12.7589 1.61612C12.5245 1.3817 12.2065 1.25 11.875 1.25Z' stroke='#31333E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+                                        <path d='M8.125 14.375V8.125' stroke='#31333E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+                                        <path d='M11.875 14.375V8.125' stroke='#31333E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+                                        <path d='M15.7208 17.6033C15.6949 17.9159 15.5524 18.2073 15.3216 18.4197C15.0909 18.6321 14.7887 18.75 14.475 18.75H5.52583C5.21218 18.75 4.90998 18.6321 4.6792 18.4197C4.44842 18.2073 4.30593 17.9159 4.28 17.6033L3.125 3.75H16.875L15.7208 17.6033Z' stroke='#31333E' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+                                    </svg>
+                                </button>
+                                <Button type='quiet' className='o-buttonbar__item'>
+                                    <FormattedMessage id='account.edit' />
+                                </Button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <section className='o-distance'>
-                    <nav role='navigation'>
-                        <ReferalBordered title={<FormattedMessage id='account.orders' />} />
-                        <ReferalBordered title={<FormattedMessage id='account.returns' />} />
-                        <ReferalBordered title={<FormattedMessage id='account.userInfo' />} />
-                        <ReferalBordered title={<FormattedMessage id='account.addresses' />} />
-                    </nav>
-                </section>
+                <div className='u-hidden-large-up'>
+                    <section className='o-distance'>
+                        <nav role='navigation'>
+                            <ReferalBordered title={<FormattedMessage id='account.orders' />} />
+                            <ReferalBordered title={<FormattedMessage id='account.returns' />} />
+                            <ReferalBordered title={<FormattedMessage id='account.userInfo' />} />
+                            <ReferalBordered title={<FormattedMessage id='account.addresses' />} />
+                        </nav>
+                    </section>
+                </div>
                 <Footer />
             </div>
         </div>
