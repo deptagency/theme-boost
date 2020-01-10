@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
   padding: $spacing-squish-m;
   @include border();
   color: $color-brand-primary-base;
@@ -17,6 +17,11 @@
   &:hover {
     border-color: $color-brand-primary-lighter;
     background-color: $color-brand-primary-lighter;
+  }
+
+  /// Deletable Chip
+  &.is-deletable {
+    justify-content: space-between;
   }
 
   /// Active Chip

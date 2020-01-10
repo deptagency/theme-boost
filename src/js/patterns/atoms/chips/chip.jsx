@@ -17,6 +17,7 @@ class Chip extends Component {
                 className={classnames(
               'c-chip',
               this.props.className,
+              this.props.deleteable ? 'is-deletable' : null,
               this.props.active ? 'is-active' : null,
               this.props.selected ? 'is-selected' : null,
             )}

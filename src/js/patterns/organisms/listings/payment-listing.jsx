@@ -7,11 +7,11 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 class PaymentListing extends Component {
     render () {
         return (
-            <div className='o-grid o-grid--half'>
-                <Chip component='button' title='PayPal' />
-                <Chip component='button' title='SEPA-Lastschrift' />
-                <Chip component='button' title='Kreditkarte' active='true' />
-                <Chip component='button' title='Rechnung' />
+            <div className='o-grid o-grid--half o-grid--inline'>
+                <Chip component='button' title='PayPal' className='c-chip--squared' />
+                <Chip component='button' title='SEPA' className='c-chip--squared' />
+                <Chip component='button' title='Creditcard' active='true' className='c-chip--squared o-distance-m' />
+                <Chip component='button' title='Invoice' className='c-chip--squared o-distance-m' />
             </div>
         )
     }
