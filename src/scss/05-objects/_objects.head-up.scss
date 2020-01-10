@@ -3,7 +3,6 @@ $head-up-spacing-inner: $spacing-inset-m !default;
 
 // Object
 .o-head-up {
-  display: block;
   overflow: hidden;
   position: relative;
 
@@ -56,4 +55,19 @@ $head-up-spacing-inner: $spacing-inset-m !default;
     left: 0;
     width: 100%;
   }
+  &__item--full {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.c-overlay {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include overlay();
+  color: $color-palette-white;
 }

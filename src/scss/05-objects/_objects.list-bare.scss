@@ -10,6 +10,16 @@
   }
 }
 
+.o-list-bare--spreaded {
+  .o-list-bare__item {
+    margin-top: $spacing-stack-l;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
 .o-list-bare--tighty {
   .o-list-bare__item {
     margin-top: $spacing-stack-xs;

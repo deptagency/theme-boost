@@ -10,7 +10,7 @@ class Addressblock extends Component {
 
         return (
             <Component>
-                <div className='o-grid o-grid--side-by-side'>
+                <div className='o-grid o-grid--side-by-side o-grid--inline'>
                     <address>
                         <span className='u-text-strong'>Tim Hartmann</span> <br />
                         Ewaldstr. 2 <br />

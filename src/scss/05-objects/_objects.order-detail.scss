@@ -1,15 +1,45 @@
+/// @name OrderDetail
+/// @description Describes an order with the most important details
 .o-order-detail {
+  align-items: flex-start;
+  display: grid;
+  grid-column-gap: $spacing-inline-m;
+  grid-row-gap: $spacing-stack-l;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, auto);
+
+  /// Mostly a full row with important information about the order detail
   &__header {
     align-items: center;
     display: flex;
     flex-direction: row;
+    grid-column: 1 / span 5;
+    grid-row: 1;
     justify-content: space-between;
   }
-  &__body {
+
+  /// Full Row in Order-Detail 
+  &__row {
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin-top: $spacing-stack-m;
+    grid-column: 1 / span 5;
+
+    &__item {
+        padding-left: $spacing-inline-m;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+  }
+
+  /// Preview section to show something more from the order
+  &__previews {
+    display: flex;
+    grid-column: 3 / span 2;
+    grid-row: 2;
+    flex-direction: row;
 
     &__item {
       padding-left: $spacing-inline-m;
@@ -19,7 +49,21 @@
       }
     }
   }
+
+  /// Main Area for details
+  &__body {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    grid-column: 1 / 2;
+    grid-row: 2;
+    margin-top: $spacing-stack-m;
+  }
+
+  /// The end of the order block with mostly an interaction item
   &__footer {
+    grid-column: 1 / span 5;
+    grid-row: 3;
     margin-top: $spacing-stack-m;
   }
 }

@@ -14,8 +14,10 @@ import Login from '../../patterns/templates/login'
 import Register from '../../patterns/templates/register'
 import OrderConfirmation from '../../patterns/templates/order-confirmation'
 import Order from '../../patterns/templates/order'
+import MyAccountIntroDesktop from '../../patterns/templates/my-account/my-intro-desktop'
 import MyOrders from '../../patterns/templates/my-account/my-orders'
 import MyOrderDetails from '../../patterns/templates/my-account/my-order-details'
+import MyOrderDetailsDesktop from '../../patterns/templates/my-account/my-order-details-desktop'
 import MyAddresses from '../../patterns/templates/my-account/my-addresses'
 import MyAddressChange from '../../patterns/templates/my-account/my-address-change'
 import MyUserData from '../../patterns/templates/my-account/my-user-data'
@@ -150,6 +152,14 @@ templatesMyOrderDetails.story = {
     name: 'My Order Detailview',
 }
 
+export const templatesMyOrderDetailsDesktop = () => {
+    return <MyOrderDetailsDesktop />
+}
+
+templatesMyOrderDetailsDesktop.story = {
+    name: 'My Order Detailview Desktop',
+}
+
 export const templatesMyAddresses = () => {
     return <MyAddresses />
 }
@@ -172,6 +182,14 @@ export const templatesMyUserData = () => {
 
 templatesMyUserData.story = {
     name: 'User Data',
+}
+
+export const templatesMyAccountIntroDesktop = () => {
+    return <MyAccountIntroDesktop />
+}
+
+templatesMyAccountIntroDesktop.story = {
+    name: 'My Account Intro Desktop',
 }
 
 export const templatesMyEmailChange = () => {
