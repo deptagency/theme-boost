@@ -15,7 +15,7 @@ const TemplatesFullCart = ({ cartItems, sum, currency }) => {
             <HeaderMobile />
             <div className='o-container-medium o-prevent-space o-distance'>
                 <section>
-                    <h1 className='c-title-level-3'><FormattedMessage id='cart.myCart' /></h1>
+                    <h1 className='c-title-area'><FormattedMessage id='cart.myCart' /></h1>
                     <div className='o-distance'>
                         <BundleListing cartItems={cartItems} />
                     </div>

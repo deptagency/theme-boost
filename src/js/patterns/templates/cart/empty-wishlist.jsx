@@ -13,17 +13,18 @@ const EmptyWishlist = () => {
     return (
         <Fragment>
             <HeaderMobile />
-            <section className='o-container-small o-distance o-prevent-space'>
-                <div className='u-text-center'>
-                    <WishlistIcon className='c-icon c-icon--xl t-text-quiet' />
+            <div className='c-box u-background-color-default o-distance'>
+                <div className='o-container-small'>
+                    <div className='u-text-center'>
+                        <WishlistIcon className='c-icon c-icon--xl t-text-quiet' />
+                    </div>
+                    <div className='o-distance-m u-text-center'>
+                        <h2 className='c-title-area'><FormattedMessage id='cart.emptyCart.title' /></h2>
+                        <p><FormattedMessage id='cart.emptyCart' /></p>
+                        <Button size='boss' type='primary' className='o-distance-m'><FormattedMessage id='cart.registerNow' /></Button>
+                    </div>
                 </div>
-                <div className='o-distance-m'>
-                    <p className='u-text-center'>
-                        <FormattedMessage id='cart.emptyCart' />
-                    </p>
-                    <Button size='boss' type='primary' className='o-distance-s'><FormattedMessage id='cart.registerNow' /></Button>
-                </div>
-            </section>
+            </div>
             <section className='o-container o-distance o-prevent-space'>
                 <Heading title='Zuletzt angesehen' description='Könnte etwas für deine Wunschliste sein' />
                 <ProductSwiper />
