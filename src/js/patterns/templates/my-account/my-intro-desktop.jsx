@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-import Button from '../../atoms/buttons/button'
-import PageHeader from '../../organisms/base/header-page'
 import HeaderMobile from '../../organisms/base/header-mobile'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
