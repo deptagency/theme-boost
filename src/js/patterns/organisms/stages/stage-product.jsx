@@ -7,6 +7,7 @@ import Rating from '../../molecules/ratings/rating'
 import ExpressDelivery from '../blocks/express-delivery'
 import ProductImage from '../products/product-image'
 import { ReactComponent as Wishlist } from './../../../../icons/wishlist-heart.svg'
+import { actions, actionPosition } from './stage.module.scss'
 
 class ProductStage extends Component {
     render () {
@@ -91,22 +92,24 @@ class ProductStage extends Component {
                                 </div>
                             </div>
                         </div> */}
-                        <div className='o-distance-l'>
+                        <div className={actions}>
                             {/* Commenting out until we add data from the API */}
                             {/* <select name='size' id='' className='u-full-width'>
                                 <option value=''>Select Size</option>
                                 <option value=''>36</option>
                                 <option value=''>38</option>
                             </select> */}
-                            <div className='o-buttonbar o-distance-s'>
-                                {addToCartButton}
+                            <div className={actionPosition}>
+                                <div className='o-buttonbar o-distance-s'>
+                                    {addToCartButton}
 
-                                <button className='c-button c-button--quiet u-icon-line-height o-buttonbar__item'>
-                                    <Wishlist className='c-icon c-icon--m' />
-                                </button>
-                            </div>
-                            <div className='o-distance-m'>
-                                <ExpressDelivery />
+                                    <button className='c-button c-button--quiet u-icon-line-height o-buttonbar__item'>
+                                        <Wishlist className='c-icon c-icon--m' />
+                                    </button>
+                                </div>
+                                <div className='o-distance-m'>
+                                    <ExpressDelivery />
+                                </div>
                             </div>
                         </div>
                     </div>
