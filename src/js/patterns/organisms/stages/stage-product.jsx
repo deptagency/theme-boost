@@ -74,7 +74,8 @@ class ProductStage extends Component {
                     </div> */}
 
                     <div className='u-hidden-until-medium'>
-                        <div className='o-distance-l'>
+                        {/* Commenting out until we add data from the API */}
+                        {/* <div className='o-distance-l'>
                             <p className='c-title-level-3 u-text-normal'>Farbe: <span className='u-text-strong'>Olive</span></p>
                             <div className='o-distance-m'>
                                 <div className='c-gallery-thumb-bar'>
@@ -89,16 +90,17 @@ class ProductStage extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className='o-distance-l'>
-                            {addToCartButton}
-                            <select name='size' id='' className='u-full-width'>
+                            {/* Commenting out until we add data from the API */}
+                            {/* <select name='size' id='' className='u-full-width'>
                                 <option value=''>Select Size</option>
                                 <option value=''>36</option>
                                 <option value=''>38</option>
-                            </select>
+                            </select> */}
                             <div className='o-buttonbar o-distance-s'>
-                                <button className='c-button c-button--primary o-buttonbar__item o-buttonbar__item--full'>Add to Cart</button>
+                                {addToCartButton}
+
                                 <button className='c-button c-button--quiet u-icon-line-height o-buttonbar__item'>
                                     <Wishlist className='c-icon c-icon--m' />
                                 </button>

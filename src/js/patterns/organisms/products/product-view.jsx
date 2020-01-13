@@ -9,25 +9,12 @@ import Button from '../../atoms/buttons/button'
 import app from 'frontastic-catwalk/src/js/app/app'
 import AtomsPrice from '../../atoms/prices/price'
 
-const AddToCartButton = ({ variant }) => {
-    return (
-        <Button
-            type='primary'
-            size='boss'
-            onClick={() => {
-                app.getLoader('cart').add(null, variant, 1, null)
-            }}
-            >
-            <FormattedMessage id='inCartProduct' />
-        </Button>
-    )
-}
-
-AddToCartButton.propTypes = {
-    variant: PropTypes.object.isRequired,
-}
-
 const OrganismsProductView = ({ images, name, variant, sizes, addToWishlist }) => {
+    const addItemToChart = (v) => {
+        // TODO - customise this function for number of items, ...
+        app.getLoader('cart').add(null, v, 1, null)
+    }
+
     return (
         <div>
             <ProductStage
@@ -36,6 +23,14 @@ const OrganismsProductView = ({ images, name, variant, sizes, addToWishlist }) =
                 price={<AtomsPrice large='true' value={variant.price} old={variant.discountedPrice !== null} />}
                 discountedPrice={variant.discountedPrice ? <AtomsPrice value={variant.discountedPrice} /> : null}
                 addToWishlist={addToWishlist}
+                addToCartButton={
+                    <button
+                        className='c-button c-button--primary o-buttonbar__item o-buttonbar__item--full'
+                        onClick={() => { addItemToChart(variant) }}
+                    >
+                        <FormattedMessage id='inCartProduct' />
+                    </button>
+                }
             />
 
             <div className='u-hidden-medium-up'>
@@ -46,7 +41,13 @@ const OrganismsProductView = ({ images, name, variant, sizes, addToWishlist }) =
                     <SizeSwiper sizes={sizes} />
                 </div>
                 <div className='o-distance-l'>
-                    <AddToCartButton variant={variant} />
+                    <Button
+                        type='primary'
+                        size='boss'
+                        onClick={() => { addItemToChart(variant) }}
+                    >
+                        <FormattedMessage id='inCartProduct' />
+                    </Button>
                 </div>
             </div>
 
