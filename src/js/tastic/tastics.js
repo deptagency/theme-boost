@@ -12,7 +12,6 @@ import DeliveryFeaturesTastic from './delivery-details/tastic'
 import CheckoutTastic from './checkout/tastic'
 import ProductViewTastic from './product-view/tastic'
 import CartTastic from './cart/tastic'
-import LoginTastic from './login/tastic'
 import ShowcaseTextTastic from './showcase-text/tastic'
 import AccountAccessTastic from './account/access/tastic'
 import AccountConfirmTastic from './account/confirm/tastic'
@@ -41,7 +40,6 @@ export default (() => {
         'frontastic/boost/checkout': CheckoutTastic,
         'frontastic/boost/product-view': ProductViewTastic,
         'frontastic/boost/cart': CartTastic,
-        'frontastic/boost/login': LoginTastic,
         'frontastic/boost/showcase-text': ShowcaseTextTastic,
         'frontastic/boost/account-access': AccountAccessTastic,
         'frontastic/boost/account-confirm': AccountConfirmTastic,
