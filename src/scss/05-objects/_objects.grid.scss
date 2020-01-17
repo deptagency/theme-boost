@@ -30,8 +30,13 @@
 }
 
 .o-grid--inline {
-  padding-left: 0;
-  padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.customGrid .o-grid {
+    max-width: 100%;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 // before:
@@ -89,7 +94,7 @@
 }
 
 .o-grid--third {
-  grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .o-grid--half {
