@@ -1,0 +1,96 @@
+@media (max-width: 599px) {
+    .secNavDesktop {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .secNavDesktop {
+        font-family: inherit;
+        text-align: center;
+    }
+
+    .listNavStyle {
+        margin-bottom: 0px;
+    }
+
+    .anchorNav {
+        text-decoration: none;
+
+        &:hover {
+            color: rgb(73, 121, 165);
+            text-decoration: underline;
+        }
+
+    }
+
+    .anchorNavRed {
+        text-decoration: none;
+        color: rgb(228, 103, 30);
+
+        &:hover {
+            color: darkred;
+            text-decoration: underline;
+        }
+    }
+
+    .listItemNav {
+        display: inline-block;
+        list-style-type: none;
+        margin-right: 11px;
+    }
+    
+    .dropdown {
+        // position: relative;
+        display: inline-block;
+        text-align: left;
+      }
+
+    .dropdownContent {
+        display: none;
+        position: absolute;
+        text-decoration: none;
+        list-style-type: none;
+        background-color: #fff;
+        height: auto;
+        min-width: 160px;
+        box-shadow: -1px 20px 20px 0px #677992;
+        z-index: 1;
+        right: 0;
+        left: 0;
+        border-radius: 10px;
+        padding: 20px;
+        padding-left: 10%;
+      }
+    
+    .dropdownContent span {
+        padding: 12px 16px;
+        display: block;
+    }
+
+    .listItemNav:hover .dropdownContent {display: block;}
+
+    .gridItemColumn {
+        padding: 20px;
+        font-size: 18px;
+        text-decoration: none;
+        float: left;
+        width: 25%;
+
+        a {
+            display: block;
+
+            &:hover {
+                color: rgb(73, 121, 165);
+            }
+        }
+
+    }
+
+    .boldText {
+        font-weight: 600;
+        color: black;
+        padding-bottom: 10px;
+    }
+}
+
