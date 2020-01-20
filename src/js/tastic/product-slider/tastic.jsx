@@ -10,7 +10,7 @@ import Slider from '../../patterns/templates/slider'
 import { take } from 'lodash'
 import Sticker from '../../patterns/molecules/sticker/sticker'
 import Wishlist from '../../patterns/atoms/wishlist/wishlist'
-import ProductImage from "../../patterns/organisms/products/product-image";
+import ProductImage from '../../patterns/organisms/products/product-image'
 
 const ProductItem = ({ product }) => {
     const { name, variants } = product
