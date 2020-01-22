@@ -1,14 +1,36 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
+import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
 import { FormattedMessage } from 'react-intl'
-import classnames from 'classnames'
-import { listNavStyle, listItemNav, anchorNav, anchorNavRed, dropdown, dropdownContent, secNavDesktop, gridItemColumn, boldText} from './second-navigation-desktop.module.scss'
+import categoryTreeType from '../../../mobileNavigation'
+import topCategories from '../../../mobileNavigation/topCategories.json'
+import { SecondNavigationDesktopTree } from '../tree'
 
+import { 
+    listNavStyle, 
+    listItemNav, 
+    anchorNav, 
+    anchorNavRed, 
+    dropdown, 
+    dropdownContent, 
+    secNavDesktop, gridItemColumn, 
+    boldText
+} from './second-navigation-desktop-item.module.scss'
 
+export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) {
+    // helper to see if the current item is part of the path.
+    const isItemInPath = (item) => {
+        return navPath.find((item) => {
+            return item.nodeId === item.nodeId
 
-class SecondNavigationDesktop extends Component {
-    render () {
+        })
+    }
+    const hasSubLevel = (item) => {
+        return item && item.length > 0
+    }
+    console.log('top', topCategories);
+
         return (
             <nav className={secNavDesktop}>
                 <ul className={listNavStyle, dropdown}>
@@ -25,7 +47,26 @@ class SecondNavigationDesktop extends Component {
                             <li>
                                 <div className={gridItemColumn}>
                                     <div className={boldText}>   
-                                        Clothing
+                                        <li>
+                                            <SecondNavigationDesktopTree 
+                                                topCategories={topCategories}
+                                            />
+                                            <NodeLink
+                                                node={item}
+                                                onClick={(e) => {
+                                                    if (onClick && item && item.length > 0) {
+                                                        e.preventDefault()
+                                                        return onClick(item, level)
+                                                    }
+                                                }}
+                                                title='Startseite'
+                                                className='c-navigation__anchor'>
+                                                {item.name}
+                                            </NodeLink>
+                                            {hasSubLevel(item) && (
+                                                <SecondNavigationDesktopTree items={item} navPath={navPath} level={level + 1} onSelectItem={onClick} />
+                                            )}
+                                        </li>
                                     </div>
                                     <a>T-shirts</a>
                                     <a>Blouses</a>
@@ -288,10 +329,15 @@ class SecondNavigationDesktop extends Component {
             </nav>
         )
     }
-}
 
-SecondNavigationDesktop.propTypes = {}
+    SecondNavigationDesktopItem.propTypes = {
+        item: categoryTreeType,
+        level: PropTypes.number,
+        navPath: PropTypes.arrayOf(categoryTreeType),
+        onClick: PropTypes.func,
+    }
+    
 
-SecondNavigationDesktop.defaultProps = {}
 
-export default ComponentInjector.return('SecondNavigationDesktop', SecondNavigationDesktop)
+
+
