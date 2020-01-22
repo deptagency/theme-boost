@@ -7,6 +7,7 @@ import Rating from '../../molecules/ratings/rating'
 import ExpressDelivery from '../blocks/express-delivery'
 import ProductImage from '../products/product-image'
 import { ReactComponent as Wishlist } from './../../../../icons/wishlist-heart.svg'
+import { actions, actionPosition } from './stage.module.scss'
 
 class ProductStage extends Component {
     render () {
@@ -74,7 +75,8 @@ class ProductStage extends Component {
                     </div> */}
 
                     <div className='u-hidden-until-medium'>
-                        <div className='o-distance-l'>
+                        {/* Commenting out until we add data from the API */}
+                        {/* <div className='o-distance-l'>
                             <p className='c-title-level-3 u-text-normal'>Farbe: <span className='u-text-strong'>Olive</span></p>
                             <div className='o-distance-m'>
                                 <div className='c-gallery-thumb-bar'>
@@ -89,22 +91,25 @@ class ProductStage extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className='o-distance-l'>
-                            {addToCartButton}
-                            <select name='size' id='' className='u-full-width'>
+                        </div> */}
+                        <div className={actions}>
+                            {/* Commenting out until we add data from the API */}
+                            {/* <select name='size' id='' className='u-full-width'>
                                 <option value=''>Select Size</option>
                                 <option value=''>36</option>
                                 <option value=''>38</option>
-                            </select>
-                            <div className='o-buttonbar o-distance-s'>
-                                <button className='c-button c-button--primary o-buttonbar__item o-buttonbar__item--full'>Add to Cart</button>
-                                <button className='c-button c-button--quiet u-icon-line-height o-buttonbar__item'>
-                                    <Wishlist className='c-icon c-icon--m' />
-                                </button>
-                            </div>
-                            <div className='o-distance-m'>
-                                <ExpressDelivery />
+                            </select> */}
+                            <div className={actionPosition}>
+                                <div className='o-buttonbar o-distance-s'>
+                                    {addToCartButton}
+
+                                    <button className='c-button c-button--quiet u-icon-line-height o-buttonbar__item'>
+                                        <Wishlist className='c-icon c-icon--m' />
+                                    </button>
+                                </div>
+                                <div className='o-distance-m'>
+                                    <ExpressDelivery />
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -5,9 +5,9 @@ import app from 'frontastic-catwalk/src/js/app/app'
 import { FormattedMessage } from 'react-intl'
 
 import AccountAccessForms from '../../../patterns/templates/my-account/account-access'
-import { ReactComponent as ArrowLeftIcon } from '../../../../icons/arrow-left.svg'
+import { ReactComponent as ArrowRightIcon } from '../../../../icons/arrow-right.svg'
 
-const AccountItem = ({ name, onClick, showLeftArrow = true }) => {
+const AccountItem = ({ name, onClick, showRightArrow = true }) => {
     return (
         <div className='c-navigation__item'>
             <a
@@ -16,7 +16,7 @@ const AccountItem = ({ name, onClick, showLeftArrow = true }) => {
             >
                 {name}
             </a>
-            {showLeftArrow && <ArrowLeftIcon />}
+            {showRightArrow && <ArrowRightIcon fill='gray' stroke='white' />}
         </div>
     )
 }
@@ -24,7 +24,7 @@ const AccountItem = ({ name, onClick, showLeftArrow = true }) => {
 AccountItem.propTypes = {
     name: PropTypes.node.isRequired,
     onClick: PropTypes.func,
-    showLeftArrow: PropTypes.bool,
+    showRightArrow: PropTypes.bool,
 }
 
 const AccountProfileTastic = ({ context }) => {
@@ -43,7 +43,7 @@ const AccountProfileTastic = ({ context }) => {
                     }}
                 />
             </div>
-            <div>
+            <div className='o-distance'>
                 <AccountItem name={<FormattedMessage id='account.orders' />} />
                 <AccountItem name={<FormattedMessage id='account.returns' />} />
                 <AccountItem name={<FormattedMessage id='account.userInfo' />} />
@@ -52,7 +52,7 @@ const AccountProfileTastic = ({ context }) => {
                 <AccountItem
                     name={<FormattedMessage id='account.logout' />}
                     onClick={() => { app.getLoader('context').logout() }}
-                    showLeftArrow={false}
+                    showRightArrow={false}
                 />
             </div>
         </Fragment>

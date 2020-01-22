@@ -9,7 +9,6 @@ import Sorting from '../organisms/sorting/sorting'
 import Button from '../atoms/buttons/button'
 import ReferalBordered from '../atoms/links/referal-bordered'
 // import MoleculesColorsFilter from '../molecules/colorsfilter/colors-filter'
-import arrowLeft from '../../../icons/arrow-left.svg'
 
 const Filter = ({ setIsOpen, count }) => {
     return (

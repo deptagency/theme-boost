@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
-import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
 import NoImage from '@frontastic/catwalk/src/layout/noImage.svg'
 import Link from '@frontastic/catwalk/src/js/app/link'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
@@ -11,6 +10,7 @@ import Slider from '../../patterns/templates/slider'
 import { take } from 'lodash'
 import Sticker from '../../patterns/molecules/sticker/sticker'
 import Wishlist from '../../patterns/atoms/wishlist/wishlist'
+import ProductImage from '../../patterns/organisms/products/product-image'
 
 const ProductItem = ({ product }) => {
     const { name, variants } = product
@@ -21,9 +21,9 @@ const ProductItem = ({ product }) => {
             <div className='o-product__asset' title=''>
                 <Link itemProp='url' path={product._url || ''}>
                     <div className='o-head-up'>
-                        <RemoteImage
+                        <ProductImage
                             className='tns-lazy'
-                            url={variants[0].images[0] || NoImage}
+                            imageUrl={variants[0].images[0] || NoImage}
                             alt={name}
                             cropRatio='1:1'
                             itemProp='image'
