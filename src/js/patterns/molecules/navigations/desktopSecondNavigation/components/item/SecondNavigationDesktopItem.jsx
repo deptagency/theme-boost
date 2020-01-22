@@ -48,9 +48,6 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
                                 <div className={gridItemColumn}>
                                     <div className={boldText}>   
                                         <li>
-                                            <SecondNavigationDesktopTree 
-                                                topCategories={topCategories}
-                                            />
                                             <NodeLink
                                                 node={item}
                                                 onClick={(e) => {
