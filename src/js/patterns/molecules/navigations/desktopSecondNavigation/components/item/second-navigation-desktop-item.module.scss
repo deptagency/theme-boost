@@ -8,6 +8,7 @@
     .secNavDesktop {
         font-family: inherit;
         text-align: center;
+        display: inline-block;
     }
 
     .listNavStyle {
@@ -35,7 +36,6 @@
     }
 
     .listItemNav {
-        display: inline-block;
         list-style-type: none;
         margin-right: 11px;
     }

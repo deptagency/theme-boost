@@ -5,12 +5,12 @@ import { SecondNavigationDesktopItem } from '../item'
 import { categoryTreeType } from '../../../mobileNavigation/types'
 
 export function SecondNavigationDesktopTree ({ items, onSelectItem, navPath, level = 0 }) {
-    console.log('NavPath', navPath, navPath.length)
     return (
-        <div className={`c-navigation__tree c-navigation__tree--level-${level}`}>
-            <ul className='c-navigation__list'>
+        <div>
+            {/* MAKE A CSS MODULE */}
+            <ul style={{textAlign: 'center'}}> 
 
-                {navPath.length && navPath.length >= 1 && level > 0 && (
+                {navPath.length >= 1 && level > 0 && (
                     <SecondNavigationDesktopItem
                         item={{ name: 'Alles anzeigen', nodeId: navPath[navPath.length - 1].nodeId }}
                         navPath={navPath}

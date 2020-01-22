@@ -56,39 +56,18 @@ function MainDesktopSecNavigation ({ open, topCategories, onClose, callToAction,
     return (
         <nav role='navigation' className={`c-navigation${open ? ' is-active' : ''} ${className}`}>
             <div
-                className={`c-navigation__body c-mobile-navigation__body c-mobile-navigation__body--current-level-${level} `}
+                // className={`c-navigation__body c-mobile-navigation__body c-mobile-navigation__body--current-level-${level} `}
             >
-                {/** Header (background image with tab nav) */}
-                <div
-                    className='c-mobile-navigation__header o-head-up'
-                    ref={ref}
-                    style={{
-                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImageUrl})`,
-                    }}
-                >
-                    {/* {level > 0 && <BackButton onClick={handleGoBack} />} */}
-                    {/* <CloseButton onClick={onClose} /> */}
-
-                    {/* {level === 0 ? (
-                        <TopCategoryNavTabs
-                            items={topCategories}
-                            onCategorySelect={handleSelectTopCategory}
-                            activeId={currentTopCategory}
-                        />
-                    ) : (
-                        <span>{navPath[navPath.length - 1].name}</span>
-                    )} */}
-                </div>
 
                 {/** Optional Call to Action Button.
                         Example: Sign up, My account, ...
                  */}
-                {callToAction && <div className='c-mobile-navigation__cta-wrapper o-distance-m o-prevent-space'>{callToAction}</div>}
+                {/* {callToAction && <div className='c-mobile-navigation__cta-wrapper o-distance-m o-prevent-space'>{callToAction}</div>} */}
 
                 {/** Scrollable menu wrapper + MobileNavTree */}
                 <div
-                    className='c-mobile-navigation__scrollcontainer'
-                    style={{ transform: `translateX(${level * -100}%)` }}
+                    // className='c-mobile-navigation__scrollcontainer'
+                    // style={{ transform: `translateX(${level * -100}%)` }}
                 >
                     {topCategories[currentTopCategory].tree && <SecondNavigationDesktopTree
                         items={topCategories[currentTopCategory].tree.children}
@@ -101,28 +80,30 @@ function MainDesktopSecNavigation ({ open, topCategories, onClose, callToAction,
     )
 }
 
-// MainDesktopSecNavigation.propTypes = {
-//     /**
-//      * Is the menu visible?
-//      */
-//     open: PropTypes.bool,
-//     /**
-//      * The main content of the menu (see specific
-//      * type defintions for details)
-//      */
-//     topCategories: PropTypes.arrayOf(topCategoryType),
-//     /**
-//      * Event handler when the close button is clicked
-//      */
-//     onClose: PropTypes.func,
-//     /**
-//      * A component for the call to action slot
-//      * that sits above the menu. Ideally something like:
-//      * <MoleculesButton type='quiet' onClick={}>GO</MoleculesButton>
-//      */
-//     callToAction: PropTypes.element,
-//     className: PropTypes.string,
-// }
+MainDesktopSecNavigation.propTypes = {
+    /**
+     * Is the menu visible?
+     */
+    open: PropTypes.bool,
+    /**
+     * The main content of the menu (see specific
+     * type defintions for details)
+     */
+    
+                 // topCategories: PropTypes.arrayOf(topCategoryType),
+
+    /**
+     * Event handler when the close button is clicked
+     */
+    onClose: PropTypes.func,
+    /**
+     * A component for the call to action slot
+     * that sits above the menu. Ideally something like:
+     * <MoleculesButton type='quiet' onClick={}>GO</MoleculesButton>
+     */
+    callToAction: PropTypes.element,
+    className: PropTypes.string,
+}
 
 MainDesktopSecNavigation.defaultProps = {}
 
