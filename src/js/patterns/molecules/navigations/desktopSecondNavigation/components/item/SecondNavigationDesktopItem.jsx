@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
-import { FormattedMessage } from 'react-intl'
 import categoryTreeType from '../../../mobileNavigation'
 import topCategories from '../../../mobileNavigation/topCategories.json'
 import { SecondNavigationDesktopTree } from '../tree'

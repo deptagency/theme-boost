@@ -54,7 +54,9 @@ function MainDesktopSecNavigation ({ open, topCategories, onClose, callToAction,
     }
 
     return (
-        <nav role='navigation' className={`c-navigation${open ? ' is-active' : ''} ${className}`}>
+        <nav role='navigation' 
+        // className={`c-navigation${open ? ' is-active' : ''} ${className}`}
+        >
             <div
                 // className={`c-navigation__body c-mobile-navigation__body c-mobile-navigation__body--current-level-${level} `}
             >

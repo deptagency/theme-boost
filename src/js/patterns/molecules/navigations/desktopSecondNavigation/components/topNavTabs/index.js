@@ -1,0 +1,1 @@
+export { TopCategoryNavTabsDesktop } from './TopCategoryNavTabsDesktop'
