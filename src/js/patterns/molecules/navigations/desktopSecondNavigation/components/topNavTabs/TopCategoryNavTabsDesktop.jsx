@@ -5,7 +5,7 @@ import { topCategoryType } from '../../../mobileNavigation/types'
 
 const TabItemDesktop = ({ item, onClick, isActive }) => {
     return (
-        <li className={`c-top-category-tab-nav__item${isActive ? ' is-active' : ''}`}>
+        <li className={`c-top-category-tab-nav__item${isActive ? ' is-active' : ''}`} style={{color: 'black'}}>
             <a onClick={onClick} title='Frauen'>
                 {item.name}
             </a>

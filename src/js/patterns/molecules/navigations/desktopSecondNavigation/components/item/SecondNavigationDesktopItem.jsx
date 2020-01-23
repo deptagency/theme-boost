@@ -34,7 +34,8 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
         return (
             <nav className={secNavDesktop}>
                 <ul className={listNavStyle, dropdown}>
-                    <li className={listItemNav}>
+                    <li className={`c-navigation__item${isItemInPath(item) ? ' c-navigation__item--active' : ''}`}> 
+                     {/* className= {listItemNav} */}
                         <NodeLink className={anchorNav}
                             node={item}
                             onClick={(e) => {

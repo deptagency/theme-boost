@@ -36,8 +36,8 @@
     }
 
     .listItemNav {
-        list-style-type: none;
-        margin-right: 11px;
+        list-style-type: none !important;
+        margin-right: 11px !important;
     }
     
     .dropdown {
@@ -68,7 +68,7 @@
         display: block;
     }
 
-    .listItemNav:hover .dropdownContent {display: block;}
+    .listItemNav:hover .dropdownContent {display: block !important;}
 
     .gridItemColumn {
         padding: 20px;

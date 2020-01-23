@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import useBackgroundImageUrl from 'frontastic-catwalk/src/js/helper/hooks/useBackgroundImageUrl'
 
-import { SecondNavigationDesktopTree } from './components'
-// import { topCategoryType } from './types'
+import { SecondNavigationDesktopTree, TopCategoryNavTabsDesktop } from './components'
+import { topCategoryType } from './../mobileNavigation/types'
 
 /*
  * Main Component for Mobile Navigation
@@ -55,27 +55,32 @@ function MainDesktopSecNavigation ({ open, topCategories, onClose, callToAction,
 
     return (
         <nav role='navigation' 
-        // className={`c-navigation${open ? ' is-active' : ''} ${className}`}
+        className={`c-navigation${open ? ' is-active' : ''} ${className}`}
         >
-            <div
-                // className={`c-navigation__body c-mobile-navigation__body c-mobile-navigation__body--current-level-${level} `}
-            >
-
-                {/** Optional Call to Action Button.
-                        Example: Sign up, My account, ...
-                 */}
-                {/* {callToAction && <div className='c-mobile-navigation__cta-wrapper o-distance-m o-prevent-space'>{callToAction}</div>} */}
-
-                {/** Scrollable menu wrapper + MobileNavTree */}
+            <div>
                 <div
-                    // className='c-mobile-navigation__scrollcontainer'
-                    // style={{ transform: `translateX(${level * -100}%)` }}
+                    className='c-mobile-navigation__header o-head-up'
+                    ref={ref}
+                    style={{color:'black'}}
                 >
+
+                    {level === 0 ? (
+                        <TopCategoryNavTabsDesktop
+                            items={topCategories}
+                            onCategorySelect={handleSelectTopCategory}
+                            activeId={currentTopCategory}
+                        />
+                    ) : (
+                        <span>{navPath[navPath.length - 1].name}</span>
+                    )}
+                </div>
+                {callToAction && <div className='c-mobile-navigation__cta-wrapper o-distance-m o-prevent-space'>{callToAction}</div>}
+                <div>
                     {topCategories[currentTopCategory].tree && <SecondNavigationDesktopTree
                         items={topCategories[currentTopCategory].tree.children}
                         navPath={navPath}
                         onSelectItem={handleSelectNavItem}
-                    />}
+                    />}   
                 </div>
             </div>
         </nav>
@@ -91,8 +96,7 @@ MainDesktopSecNavigation.propTypes = {
      * The main content of the menu (see specific
      * type defintions for details)
      */
-    
-                 // topCategories: PropTypes.arrayOf(topCategoryType),
+    topCategories: PropTypes.arrayOf(topCategoryType),
 
     /**
      * Event handler when the close button is clicked
