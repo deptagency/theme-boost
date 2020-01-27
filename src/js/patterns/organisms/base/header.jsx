@@ -8,7 +8,6 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import MobileNavigation from '../../molecules/navigations/mobileNavigation'
 import { topCategoryType } from '../../molecules/navigations/mobileNavigation/types'
 import TopCategoryNav from '../../molecules/navigations/topCategoryNav'
-import TopCategoryNavTabsDesktop  from '../../molecules/navigations/topCategoryNav'
 import UserIconNav from '../../molecules/navigations/user-icon-nav'
 import DesktopSecNavigation from '../../molecules/navigations/desktopSecondNavigation'
 import MobileMenuToggle from '../../atoms/buttons/mobile-menu-toggle'
@@ -43,11 +42,15 @@ const Head = ({ topCategories, logo, loggedIn }) => {
     }
 
     return (
-        <div>
+        <div className='cijeli taj div i header i'>
             <div className='o-header'>
                 <div className='o-header__top'>
-                    <div className='o-header__top-left u-hidden-until-medium'>
-                        <TopCategoryNav items={topCategories} />
+                    <div 
+                    className='o-header__top-left u-hidden-until-medium'
+                    >
+                        <TopCategoryNav 
+                         items={topCategories} 
+                        />
                     </div>
                     {/*
                         Although <MobileMenuToggle /> and <MobileNavigation />
@@ -82,7 +85,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                     topCategories={topCategories}
                 />
             </div>
-            <div>
+            <div className="nesto">
                 <DesktopSecNavigation
                     topCategories={topCategories}
                 />

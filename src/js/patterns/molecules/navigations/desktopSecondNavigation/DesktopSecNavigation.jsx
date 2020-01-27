@@ -4,7 +4,9 @@ import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import useBackgroundImageUrl from 'frontastic-catwalk/src/js/helper/hooks/useBackgroundImageUrl'
 
-import { SecondNavigationDesktopTree, TopCategoryNavTabsDesktop } from './components'
+import { SecondNavigationDesktopTree } from './components'
+import TopCategoryNav from '../topCategoryNav'
+
 import { topCategoryType } from './../mobileNavigation/types'
 
 /*
@@ -65,7 +67,7 @@ function MainDesktopSecNavigation ({ open, topCategories, onClose, callToAction,
                 >
 
                     {level === 0 ? (
-                        <TopCategoryNavTabsDesktop
+                        <TopCategoryNav
                             items={topCategories}
                             onCategorySelect={handleSelectTopCategory}
                             activeId={currentTopCategory}

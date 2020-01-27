@@ -1,33 +1,66 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Reference from 'frontastic-catwalk/src/js/component/reference'
 
-const NavItem = ({ item, active = false }) => {
+import { topCategoryType } from './../mobileNavigation/types'
+import { 
+    TopCatNav, 
+} from './top-category-nav.module.scss'
+
+
+const NavItem = ({ item, onClick, isActive, active }) => {
     return (
-        <li key={item.nodeId} className='c-service-navigation o-list-inline__item'>
-            <Reference reference={item.reference} className={`c-service-navigation__anchor ${active && 'is-active'}`}>
+        <li 
+        className={`${TopCatNav} 'c-service-navigation o-list-inline__item'`}
+        // className={`c-top-category-tab-nav__item${isActive ? ' is-active' : ''}`} style={{color: 'black'}}
+        >
+            <a 
+            onClick={onClick} 
+            title='Frauen'
+            className={`c-service-navigation__anchor ${active && 'is-active'}`} 
+            >
                 {item.name}
-            </Reference>
+            </a>
         </li>
     )
 }
-
 NavItem.propTypes = {
-    item: PropTypes.object.isRequired,
-    active: PropTypes.bool,
+    item: topCategoryType,
+    onClick: PropTypes.func,
+    isActive: PropTypes.bool,
 }
 
-export const TopCategoryNav = ({ items }) => {
+export const TopCategoryNav = ({ items, onCategorySelect, activeId = 0 }) => {
     return (
-        <ul className='c-service-navigation o-list-inline'>
+        <ul  
+        className='c-service-navigation o-list-inline' 
+        // className='c-top-category-tab-nav o-head-up__item o-head-up__item--bottom'
+        >
             {items &&
                 items.map((item, i) => {
-                    return <NavItem key={i} item={item} />
+                    if (!item.tree) {
+                        return null
+                    }
+
+                    return (
+                        <NavItem
+                            onClick={() => {
+                                return onCategorySelect(i)
+                            }}
+                            item={item}
+                            key={item.tree.nodeId}
+                            isActive={i === activeId}
+                        />
+                    )
                 })}
         </ul>
     )
 }
 
 TopCategoryNav.propTypes = {
-    items: PropTypes.array.isRequired,
+    items: PropTypes.arrayOf(topCategoryType),
+    onCategorySelect: PropTypes.func,
+    activeId: PropTypes.number,
 }
+
+
+
