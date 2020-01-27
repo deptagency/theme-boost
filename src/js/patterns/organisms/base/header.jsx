@@ -49,7 +49,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                     className='o-header__top-left u-hidden-until-medium'
                     >
                         <TopCategoryNav 
-                         items={topCategories} 
+                            items={topCategories} 
                         />
                     </div>
                     {/*
