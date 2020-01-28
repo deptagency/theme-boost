@@ -8,7 +8,7 @@ export function SecondNavigationDesktopTree ({ items, onSelectItem, navPath, lev
     return (
         <div>
             {/* MAKE A CSS MODULE */}
-            <ul style={{textAlign: 'center'}}> 
+            <ul style={{ textAlign: 'center' }}>
 
                 {navPath.length >= 1 && level > 0 && (
                     <SecondNavigationDesktopItem

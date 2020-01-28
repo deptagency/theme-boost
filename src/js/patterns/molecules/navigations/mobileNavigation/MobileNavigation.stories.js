@@ -30,7 +30,7 @@ export const mobileNavigation = () => {
                 topCategories={topCategories}
                 callToAction={ctaLoggedIn()}
             />
-            <SecondNavigationDesktopItem 
+            <SecondNavigationDesktopItem
                 topCategories={topCategories}
             />
         </div>

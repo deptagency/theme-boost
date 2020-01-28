@@ -16,6 +16,10 @@ import { FormattedMessage } from 'react-intl'
 
 const Head = ({ topCategories, logo, loggedIn }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const logoRef = useRef(null)
+    const backgroundImageUrl = useBackgroundImageUrl(logoRef, logo)
+    const [currentTopCategory, setCurrentTopCategory] = useState(0)
+    const [navPath, setNavPath] = useState([])
 
     const ctaLoggedIn = () => {
         return (
@@ -34,8 +38,14 @@ const Head = ({ topCategories, logo, loggedIn }) => {
         )
     }
 
-    const logoRef = useRef(null)
-    const backgroundImageUrl = useBackgroundImageUrl(logoRef, logo)
+    const handleSelectTopCategory = (categoryId) => {
+        setNavPath([])
+        setCurrentTopCategory(categoryId)
+    }
+
+    const handleSelectNavItem = (item) => {
+        setNavPath([...navPath, item])
+    }
 
     if (!topCategories) {
         return null
@@ -45,11 +55,13 @@ const Head = ({ topCategories, logo, loggedIn }) => {
         <div className='cijeli taj div i header i'>
             <div className='o-header'>
                 <div className='o-header__top'>
-                    <div 
-                    className='o-header__top-left u-hidden-until-medium'
+                    <div
+                        className='o-header__top-left u-hidden-until-medium'
                     >
-                        <TopCategoryNav 
-                            items={topCategories} 
+                        <TopCategoryNav
+                            items={topCategories}
+                            onCategorySelect={handleSelectTopCategory}
+                            activeId={currentTopCategory}
                         />
                     </div>
                     {/*
@@ -73,7 +85,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                     >
                         Catwalk
                     </a>
-                    <UserIconNav open />             
+                    <UserIconNav open />
                 </div>
                 <MobileNavigation
                     className='u-hidden-medium-up'
@@ -85,9 +97,12 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                     topCategories={topCategories}
                 />
             </div>
-            <div className="nesto">
+            <div className='nesto'>
                 <DesktopSecNavigation
                     topCategories={topCategories}
+                    currentTopCategory={currentTopCategory}
+                    navPath={navPath}
+                    handleSelectNavItem={handleSelectNavItem}
                 />
             </div>
         </div>

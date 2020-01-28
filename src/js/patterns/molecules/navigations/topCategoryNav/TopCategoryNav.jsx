@@ -2,21 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { topCategoryType } from './../mobileNavigation/types'
-import { 
-    TopCatNav, 
+import {
+    TopCatNav,
 } from './top-category-nav.module.scss'
-
 
 const NavItem = ({ item, onClick, isActive, active }) => {
     return (
-        <li 
-        className={`${TopCatNav} 'c-service-navigation o-list-inline__item'`}
-        // className={`c-top-category-tab-nav__item${isActive ? ' is-active' : ''}`} style={{color: 'black'}}
-        >
-            <a 
-            onClick={onClick} 
-            title='Frauen'
-            className={`c-service-navigation__anchor ${active && 'is-active'}`} 
+        <li
+            className={`${TopCatNav} 'c-service-navigation o-list-inline__item'`}
+            // className={`c-top-category-tab-nav__item${isActive ? ' is-active' : ''}`} style={{color: 'black'}}
+            >
+            <a
+                onClick={onClick}
+                title='Frauen'
+                className={`c-service-navigation__anchor ${active && 'is-active'}`}
             >
                 {item.name}
             </a>
@@ -31,10 +30,10 @@ NavItem.propTypes = {
 
 export const TopCategoryNav = ({ items, onCategorySelect, activeId = 0 }) => {
     return (
-        <ul  
-        className='c-service-navigation o-list-inline' 
-        // className='c-top-category-tab-nav o-head-up__item o-head-up__item--bottom'
-        >
+        <ul
+            className='c-service-navigation o-list-inline'
+            // className='c-top-category-tab-nav o-head-up__item o-head-up__item--bottom'
+            >
             {items &&
                 items.map((item, i) => {
                     if (!item.tree) {
@@ -61,6 +60,3 @@ TopCategoryNav.propTypes = {
     onCategorySelect: PropTypes.func,
     activeId: PropTypes.number,
 }
-
-
-
