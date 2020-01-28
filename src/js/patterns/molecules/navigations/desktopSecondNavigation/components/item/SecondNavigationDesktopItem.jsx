@@ -78,13 +78,13 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
                     </NodeLink>
 
                     {hasSubLevel(item) && (
-                    <SecondNavigationDesktopTree 
-                        items={item} navPath={navPath} 
-                        level={level + 1} 
-                        onSelectItem={onClick} 
+                    <SecondNavigationDesktopTree
+                        items={item} navPath={navPath}
+                        level={level + 1}
+                        onSelectItem={onClick}
                     />
                     )}
-                    
+
                 </li>
             </ul>
         </nav>

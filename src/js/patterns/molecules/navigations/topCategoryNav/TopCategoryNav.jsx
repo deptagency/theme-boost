@@ -6,7 +6,7 @@ import {
     TopCatNav,
 } from './top-category-nav.module.scss'
 
-const NavItem = ({ item, onClick, isActive, active }) => {
+const NavItem = ({ item, onClick, active }) => {
     return (
         <li className={`${TopCatNav} 'c-service-navigation o-list-inline__item'`}>
             <a
