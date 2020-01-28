@@ -52,7 +52,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
     }
 
     return (
-        <div className='cijeli taj div i header i'>
+        <>
             <div className='o-header'>
                 <div className='o-header__top'>
                     <div
@@ -97,7 +97,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                     topCategories={topCategories}
                 />
             </div>
-            <div className='nesto'>
+            <div>
                 <DesktopSecNavigation
                     topCategories={topCategories}
                     currentTopCategory={currentTopCategory}
@@ -105,7 +105,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                     handleSelectNavItem={handleSelectNavItem}
                 />
             </div>
-        </div>
+        </>
     )
 }
 

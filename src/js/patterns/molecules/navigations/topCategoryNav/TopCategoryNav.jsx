@@ -8,10 +8,7 @@ import {
 
 const NavItem = ({ item, onClick, isActive, active }) => {
     return (
-        <li
-            className={`${TopCatNav} 'c-service-navigation o-list-inline__item'`}
-            // className={`c-top-category-tab-nav__item${isActive ? ' is-active' : ''}`} style={{color: 'black'}}
-            >
+        <li className={`${TopCatNav} 'c-service-navigation o-list-inline__item'`}>
             <a
                 onClick={onClick}
                 title='Frauen'
@@ -30,10 +27,7 @@ NavItem.propTypes = {
 
 export const TopCategoryNav = ({ items, onCategorySelect, activeId = 0 }) => {
     return (
-        <ul
-            className='c-service-navigation o-list-inline'
-            // className='c-top-category-tab-nav o-head-up__item o-head-up__item--bottom'
-            >
+        <ul className='c-service-navigation o-list-inline'>
             {items &&
                 items.map((item, i) => {
                     if (!item.tree) {

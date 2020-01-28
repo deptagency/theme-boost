@@ -1,12 +1,8 @@
-import React, { useState, useRef } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import useBackgroundImageUrl from 'frontastic-catwalk/src/js/helper/hooks/useBackgroundImageUrl'
-
 import { SecondNavigationDesktopTree } from './components'
-import TopCategoryNav from '../topCategoryNav'
-
 import { topCategoryType } from './../mobileNavigation/types'
 
 function MainDesktopSecNavigation ({ topCategories, currentTopCategory, navPath, handleSelectNavItem }) {
@@ -27,25 +23,13 @@ function MainDesktopSecNavigation ({ topCategories, currentTopCategory, navPath,
 }
 
 MainDesktopSecNavigation.propTypes = {
-    /**
-     * Is the menu visible?
-     */
+    /* Is the menu visible? */
     open: PropTypes.bool,
-    /**
-     * The main content of the menu (see specific
-     * type defintions for details)
-     */
+    /* The main content of the menu (see specific type defintions for details) */
     topCategories: PropTypes.arrayOf(topCategoryType),
-
-    /**
-     * Event handler when the close button is clicked
-     */
+    /* Event handler when the close button is clicked */
     onClose: PropTypes.func,
-    /**
-     * A component for the call to action slot
-     * that sits above the menu. Ideally something like:
-     * <MoleculesButton type='quiet' onClick={}>GO</MoleculesButton>
-     */
+    /* A component for the call to action slot that sits above the menu. Ideally something like: <MoleculesButton type='quiet' onClick={}>GO</MoleculesButton> */
     callToAction: PropTypes.element,
     className: PropTypes.string,
 }
