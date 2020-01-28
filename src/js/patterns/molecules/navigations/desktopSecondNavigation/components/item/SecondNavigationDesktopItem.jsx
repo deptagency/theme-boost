@@ -98,3 +98,4 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
 //     navPath: PropTypes.arrayOf(categoryTreeType),
 //     onClick: PropTypes.func,
 // }
+

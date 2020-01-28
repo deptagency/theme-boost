@@ -23,8 +23,10 @@ function MainDesktopSecNavigation ({ topCategories, currentTopCategory, navPath,
 }
 
 MainDesktopSecNavigation.propTypes = {
-    /* The main content of the menu (see specific type defintions for details) */
     topCategories: PropTypes.arrayOf(topCategoryType),
+    navPath: PropTypes.node,
+    handleSelectNavItem: PropTypes.node,
+    currentTopCategory: PropTypes.node,
 }
 
 MainDesktopSecNavigation.defaultProps = {}
