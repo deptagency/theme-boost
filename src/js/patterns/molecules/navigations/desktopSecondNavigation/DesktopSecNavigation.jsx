@@ -23,15 +23,8 @@ function MainDesktopSecNavigation ({ topCategories, currentTopCategory, navPath,
 }
 
 MainDesktopSecNavigation.propTypes = {
-    /* Is the menu visible? */
-    open: PropTypes.bool,
     /* The main content of the menu (see specific type defintions for details) */
     topCategories: PropTypes.arrayOf(topCategoryType),
-    /* Event handler when the close button is clicked */
-    onClose: PropTypes.func,
-    /* A component for the call to action slot that sits above the menu. Ideally something like: <MoleculesButton type='quiet' onClick={}>GO</MoleculesButton> */
-    callToAction: PropTypes.element,
-    className: PropTypes.string,
 }
 
 MainDesktopSecNavigation.defaultProps = {}

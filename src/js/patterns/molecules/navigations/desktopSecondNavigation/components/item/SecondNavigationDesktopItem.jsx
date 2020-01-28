@@ -7,7 +7,6 @@ import {
     listNavStyle,
     listItemNav,
     anchorNav,
-    anchorNavRed,
     dropdown,
     dropdownContent,
     secNavDesktop, gridItemColumn,

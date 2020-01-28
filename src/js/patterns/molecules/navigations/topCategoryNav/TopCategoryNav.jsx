@@ -22,7 +22,6 @@ const NavItem = ({ item, onClick, active }) => {
 NavItem.propTypes = {
     item: topCategoryType,
     onClick: PropTypes.func,
-    isActive: PropTypes.bool,
 }
 
 export const TopCategoryNav = ({ items, onCategorySelect, activeId = 0 }) => {
@@ -41,7 +40,6 @@ export const TopCategoryNav = ({ items, onCategorySelect, activeId = 0 }) => {
                             }}
                             item={item}
                             key={item.tree.nodeId}
-                            isActive={i === activeId}
                         />
                     )
                 })}
