@@ -15,13 +15,13 @@ function MainDesktopSecNavigation ({ topCategories, currentTopCategory, navPath,
     }
 
     return (
-        <>
+        <nav>
             {topCategories[currentTopCategory].tree && <SecondNavigationDesktopTree
                 items={topCategories[currentTopCategory].tree.children}
                 navPath={navPath}
                 onSelectItem={handleSelectNavItem}
             />}
-        </>
+        </nav>
     )
 }
 
