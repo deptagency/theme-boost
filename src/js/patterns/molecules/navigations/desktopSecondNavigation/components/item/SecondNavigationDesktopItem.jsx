@@ -4,76 +4,61 @@ import topCategories from '../../../mobileNavigation/topCategories.json'
 import { SecondNavigationDesktopTree } from '../tree'
 
 import {
-    listNavStyle,
     listItemNav,
-    anchorNav,
     dropdown,
     dropdownContent,
+    itemName,
+    itemNameRed,
     secNavDesktop, gridItemColumn,
     boldText,
 } from './second-navigation-desktop-item.module.scss'
 
 export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) {
-    // helper to see if the current item is part of the path.
-    const isItemInPath = (item) => {
-        return navPath.find((item) => {
-            return item.nodeId === item.nodeId
-        })
-    }
+    const sale = item.name === 'Sale%';
+
     const hasSubLevel = (item) => {
         return item && item.length > 0
     }
 
     return (
         <nav className={secNavDesktop}>
-            <ul className={listNavStyle, dropdown}>
-                <li className={`c-navigation__item${isItemInPath(item) ? ' c-navigation__item--active' : ''}`}>
-                    <NodeLink className={anchorNav, listItemNav}
+            <div className={dropdown}>
+                <div>
+                    <NodeLink
                         node={item}
                         onClick={(e) => {
-                                if (onClick && item && item.length > 0) {
-                                    e.preventDefault()
-                                    return onClick(item, level)
-                                }
-                            }}
+                            if (onClick && item && item.length > 0) {
+                                e.preventDefault()
+                                return onClick(item, level)
+                            }
+                        }}
                         title='Startseite'
                     >
-                        {item.name}
-                        <ul className={dropdownContent}>
-                            <li>
-                                <div className={gridItemColumn}>
-                                    <div className={boldText}>
-                                        {topCategories[0].tree.children[1].children[0].configuration.path}
-                                    </div>
-                                    <a>T-shirts</a>
-                                    <a>Blouses</a>
-                                    <a>Jeans</a>
-                                    <a>Skirts</a>
-                                    <a>Pullover</a>
-                                    <a>Jackets</a>
-                                    <a>Trousers</a>
-                                    <a>Shorts</a>
-                                    <a>Dresses</a>
-                                    <a>Basics</a>
-                                    <a>Sportswear</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div className={gridItemColumn}>
-                                    <div className={boldText}>
-                                         Special sizes
-                                    </div>
-                                    <a>28</a>
-                                    <a>30</a>
-                                    <a>32</a>
-                                    <a>44</a>
-                                    <a>46</a>
-                                    <a>48</a>
-                                    <a>50</a>
-                                    <a>52</a>
-                                </div>
-                            </li>
-                        </ul>
+                    <div className={listItemNav}>
+                        <div 
+                        className={itemName}
+                        // { sale ? {itemNameRed} : {itemName}} 
+                        style={{ color: sale ? "#e60000" : "none" }}>
+                            {item.name}
+                        </div>
+                      
+                        {item.children.length > 0 && (
+                            <ul className={dropdownContent}>
+                                {item.children.map(child =>
+                                    <li>
+                                        <div className={gridItemColumn}>
+                                            <div className={boldText}>
+                                                {child.name}
+                                            </div>
+                                            {child.children.map(grandchild =>
+                                                <a href="#">{grandchild.name}</a>
+                                            )}
+                                        </div>
+                                    </li>
+                                )}
+                            </ul>
+                        )}
+                    </div>
                     </NodeLink>
 
                     {hasSubLevel(item) && (
@@ -84,8 +69,8 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
                     />
                     )}
 
-                </li>
-            </ul>
+                </div>
+            </div>
         </nav>
     )
 }

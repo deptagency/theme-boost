@@ -2,6 +2,6 @@
 /// @group Page
 .c-page-body {
   @include breakpoint($layout-breakpoint-m) {
-    margin-top: $spacing-stack-l;
+    margin-top: $spacing-stack-m;
   }
 }

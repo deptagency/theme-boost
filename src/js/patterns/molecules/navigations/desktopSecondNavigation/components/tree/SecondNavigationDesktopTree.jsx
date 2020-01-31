@@ -3,22 +3,16 @@ import PropTypes from 'prop-types'
 
 import { SecondNavigationDesktopItem } from '../item'
 import { categoryTreeType } from '../../../mobileNavigation/types'
+import {
+    navigationContainer
+} from './second-navigation-desktop-tree.module.scss'
+
 
 export function SecondNavigationDesktopTree ({ items, onSelectItem, navPath, level = 0 }) {
     return (
         <div>
-            {/* MAKE A CSS MODULE */}
-            <ul style={{ textAlign: 'center' }}>
-
-                {navPath.length >= 1 && level > 0 && (
-                    <SecondNavigationDesktopItem
-                        item={{ name: 'Alles anzeigen', nodeId: navPath[navPath.length - 1].nodeId }}
-                        navPath={navPath}
-                        level={level}
-                    />
-                )}
-
-                {items && items.map((item, i) => {
+            <ul className={navigationContainer}>
+                {items && items.map((item) => {
                     return (
                         <SecondNavigationDesktopItem
                             key={item.nodeId}
