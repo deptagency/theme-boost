@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
 import { SecondNavigationDesktopTree } from '../tree'
 
@@ -13,7 +13,7 @@ import {
 } from './second-navigation-desktop-item.module.scss'
 
 export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) {
-    const sale = item.name === 'Sale%';
+    const sale = item.name === 'Sale%'
 
     const hasSubLevel = (item) => {
         return item && item.length > 0
@@ -21,44 +21,44 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
 
     return (
         <nav className={secNavDesktop}>
-                <div>
-                    <NodeLink
-                        node={item}
-                        onClick={(e) => {
+            <div>
+                <NodeLink
+                    node={item}
+                    onClick={(e) => {
                             if (onClick && item && item.length > 0) {
                                 e.preventDefault()
                                 return onClick(item, level)
                             }
                         }}
-                        title='Startseite'
+                    title='Startseite'
                     >
                     <div className={itemNameList}>
-                        <div 
-                        className={itemNameUnderline}
-                        style={{ color: sale ? "#e60000" : "none" }}>
+                        <div
+                            className={itemNameUnderline}
+                            style={{ color: sale ? '#e60000' : 'none' }}>
                             {item.name}
                         </div>
-                      
+
                         {item.children.length > 0 && (
                             <ul className={dropdownContent}>
-                                {item.children.map(child =>
-                                    <li>
-                                        <div className={gridItemColumn}>
-                                            <div className={childBoldText}>
-                                                {child.name}
-                                            </div>
-                                            {child.children.map(grandchild =>
-                                                <a className={grandchildText} href="#">{grandchild.name}</a>
+                                {item.children.map(child => {
+ return <li>
+     <div className={gridItemColumn}>
+         <div className={childBoldText}>
+             {child.name}
+         </div>
+         {child.children.map(grandchild => { return <a className={grandchildText} href='#'>{grandchild.name}</a> }
                                             )}
-                                        </div>
-                                    </li>
+     </div>
+ </li>
+}
                                 )}
                             </ul>
                         )}
                     </div>
-                    </NodeLink>
+                </NodeLink>
 
-                    {hasSubLevel(item) && (
+                {hasSubLevel(item) && (
                     <SecondNavigationDesktopTree
                         items={item} navPath={navPath}
                         level={level + 1}
@@ -66,7 +66,7 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
                     />
                     )}
 
-                </div>
+            </div>
         </nav>
     )
 }
@@ -79,4 +79,3 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
 //     navPath: PropTypes.arrayOf(categoryTreeType),
 //     onClick: PropTypes.func,
 // }
-

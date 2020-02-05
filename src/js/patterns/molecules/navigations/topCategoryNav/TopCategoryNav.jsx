@@ -5,7 +5,6 @@ import { topCategoryType } from './../mobileNavigation/types'
 import { TopCatNav } from './top-category-nav.module.scss'
 
 const NavItem = ({ item, onClick }) => {
-
     console.log('item', item)
     return (
         <li className={`${TopCatNav} 'c-service-navigation o-list-inline__item'`}>

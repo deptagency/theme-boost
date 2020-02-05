@@ -4,9 +4,8 @@ import PropTypes from 'prop-types'
 import { SecondNavigationDesktopItem } from '../item'
 import { categoryTreeType } from '../../../mobileNavigation/types'
 import {
-    navigationContainer
+    navigationContainer,
 } from './second-navigation-desktop-tree.module.scss'
-
 
 export function SecondNavigationDesktopTree ({ items, onSelectItem, navPath, level = 0 }) {
     return (
