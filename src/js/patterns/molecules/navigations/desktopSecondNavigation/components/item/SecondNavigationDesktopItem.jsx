@@ -7,7 +7,6 @@ import {
     itemNameList,
     itemNameUnderline,
     dropdownContent,
-    dropdownContentActive,
     childBoldText,
     grandchildText,
     gridItemColumn,
@@ -20,17 +19,8 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
         return item && item.length > 0
     }
 
-    // const [hovered, setHovered] = useState(false);
-    // const toggleHover = (e) => {
-    //     console.log("Here")
-    //     console.log(e.target)
-    //     setHovered(!hovered)
-    // };
-
     return (
-        <nav className={secNavDesktop} 
-        // onMouseEnter={toggleHover} onMouseLeave={toggleHover}
-        >
+        <nav className={secNavDesktop}>
                 <div>
                     <NodeLink
                         node={item}
