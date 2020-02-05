@@ -4,16 +4,10 @@ import PropTypes from 'prop-types'
 import ReferencePropType from '@frontastic/catwalk/src/js/component/reference'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 
-import Header from '../../patterns/organisms/base/header'
+import Header from '../../../patterns/organisms/base/header'
 
 const HeaderTastic = ({ data, context }) => {
-    return (
-        <Header
-            topCategories={data.topCategories}
-            logo={data.logo}
-            loggedIn={context.session.loggedIn}
-        />
-    )
+    return <Header topCategories={data.topCategories} logo={data.logo} loggedIn={context.session.loggedIn} />
 }
 
 HeaderTastic.propTypes = {
@@ -21,7 +15,9 @@ HeaderTastic.propTypes = {
         topCategories: PropTypes.arrayOf(
             PropTypes.shape({
                 name: PropTypes.string,
-                reference: () => { return ReferencePropType },
+                reference: () => {
+                    return ReferencePropType
+                },
             })
         ),
         logo: PropTypes.shape({

@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 
-import PromoboxWithPositioning from '../../patterns/molecules/promobox/promobox-with-positioning'
-import Button from '../../patterns/atoms/buttons/button'
+import PromoboxWithPositioning from '../../../patterns/molecules/promobox/promobox-with-positioning'
+import Button from '../../../patterns/atoms/buttons/button'
 
 class PromoBoxTastic extends Component {
-    render () {
+    render() {
         // eslint-disable-next-line no-unused-vars
         const { verticalPosition, horizontalPosition, buttonLink, buttonText, image, title, topic } = this.props.data
 
@@ -18,9 +18,13 @@ class PromoBoxTastic extends Component {
                 horizontal={horizontalPosition}
                 image={image}
                 customChildrenStyle={{ margin: '32px' }}
-                >
-                <p className='c-topic'><Translatable value={topic} /></p>
-                <h1 className='c-title'><Translatable value={title} /></h1>
+            >
+                <p className='c-topic'>
+                    <Translatable value={topic} />
+                </p>
+                <h1 className='c-title'>
+                    <Translatable value={title} />
+                </h1>
 
                 {/* // TODO Implement reference properly */}
                 <Button

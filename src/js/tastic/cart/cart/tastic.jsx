@@ -1,28 +1,20 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import FullCart from '../../patterns/organisms/cart/full-cart'
-import EmptyCart from '../../patterns/organisms/cart/empty-cart'
+import FullCart from '../../../patterns/organisms/cart/full-cart'
+import EmptyCart from '../../../patterns/organisms/cart/empty-cart'
 import Entity from 'frontastic-catwalk/src/js/app/entity'
 
 class CartTastic extends Component {
-    render () {
+    render() {
         const { cart } = this.props
 
         if (cart.data && cart.data.lineItems.length > 0) {
             const { lineItems, sum, currency } = cart.data
 
-            return (
-                <FullCart
-                    cartItems={lineItems}
-                    sum={sum}
-                    currency={currency}
-                />
-            )
+            return <FullCart cartItems={lineItems} sum={sum} currency={currency} />
         } else {
-            return (
-                <EmptyCart />
-            )
+            return <EmptyCart />
         }
     }
 }
@@ -34,10 +26,8 @@ CartTastic.propTypes = {
     cart: PropTypes.instanceOf(Entity).isRequired,
 }
 
-export default connect(
-    (globalState, props) => {
-        return {
-            cart: globalState.cart.cart,
-        }
+export default connect((globalState, props) => {
+    return {
+        cart: globalState.cart.cart,
     }
-)(CartTastic)
+})(CartTastic)

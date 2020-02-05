@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
-import Login from '../../patterns/templates/checkout-login'
+import Login from '../../../patterns/templates/checkout-login'
 
 class CheckoutTastic extends Component {
-    render () {
-        return (
-            <Login />
-        )
+    render() {
+        return <Login />
     }
 }
 

@@ -6,11 +6,11 @@ import NoImage from '@frontastic/catwalk/src/layout/noImage.svg'
 import Link from '@frontastic/catwalk/src/js/app/link'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 
-import Slider from '../../patterns/templates/slider'
+import Slider from '../../../patterns/templates/slider'
 import { take } from 'lodash'
-import Sticker from '../../patterns/molecules/sticker/sticker'
-import Wishlist from '../../patterns/atoms/wishlist/wishlist'
-import ProductImage from '../../patterns/organisms/products/product-image'
+import Sticker from '../../../patterns/molecules/sticker/sticker'
+import Wishlist from '../../../patterns/atoms/wishlist/wishlist'
+import ProductImage from '../../../patterns/organisms/products/product-image'
 
 const ProductItem = ({ product }) => {
     const { name, variants } = product
@@ -41,7 +41,7 @@ const ProductItem = ({ product }) => {
             <div className='o-product__header o-distance-s'>
                 <div className='o-product__header__large-column'>
                     <h3 className='c-title-level-4'>{name}</h3>
-                    {designer && (<p className='t-text-quiet'>{designer}</p>)}
+                    {designer && <p className='t-text-quiet'>{designer}</p>}
                 </div>
             </div>
         </article>
@@ -53,7 +53,7 @@ ProductItem.propTypes = {
 }
 
 class ProductSliderTastic extends Component {
-    render () {
+    render() {
         const { title, description, stream, productCount } = this.props.data
 
         if (!stream) {
@@ -65,16 +65,22 @@ class ProductSliderTastic extends Component {
         return (
             <Fragment>
                 <header className='o-heading'>
-                    {title && <p className='o-heading__topic c-topic'>
-                        <Translatable value={title} />
-                    </p>}
-                    {description && <h2 className='o-heading__title c-title'>
-                        <Translatable value={description} />
-                    </h2>}
+                    {title && (
+                        <p className='o-heading__topic c-topic'>
+                            <Translatable value={title} />
+                        </p>
+                    )}
+                    {description && (
+                        <h2 className='o-heading__title c-title'>
+                            <Translatable value={description} />
+                        </h2>
+                    )}
                 </header>
                 <div className='o-distance-m'>
                     <Slider>
-                        {productsToShow.map((product, i) => { return <ProductItem key={i} product={product} /> })}
+                        {productsToShow.map((product, i) => {
+                            return <ProductItem key={i} product={product} />
+                        })}
                     </Slider>
                 </div>
             </Fragment>
