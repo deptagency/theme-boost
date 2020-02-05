@@ -1,6 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
 import { SecondNavigationDesktopTree } from '../tree'
+import { categoryTreeType } from '../../types'
 
 import {
     secNavDesktop,
@@ -18,6 +20,8 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
     const hasSubLevel = (item) => {
         return item && item.length > 0
     }
+
+    console.log('item', item)
 
     return (
         <nav className={secNavDesktop}>
@@ -73,9 +77,9 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
 
 // for some reason if propTypes are uncommented it raises a violation of hooks.
 
-// SecondNavigationDesktopItem.propTypes = {
-//     item: categoryTreeType,
-//     level: PropTypes.number,
-//     navPath: PropTypes.arrayOf(categoryTreeType),
-//     onClick: PropTypes.func,
-// }
+SecondNavigationDesktopItem.propTypes = {
+    item: categoryTreeType,
+    level: PropTypes.number,
+    navPath: PropTypes.arrayOf(categoryTreeType),
+    onClick: PropTypes.func,
+}
