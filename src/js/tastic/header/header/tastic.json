@@ -1,0 +1,67 @@
+{
+    "tasticType": "frontastic/boost/header",
+    "name": "Header",
+    "icon": "menu",
+    "category": "Header",
+    "schema": [
+        {
+            "name": "Menu",
+            "fields": [
+                {
+                    "type": "description",
+                    "text": "Choose a few top categories to be displayed on top of the navigation. Selecting a top category will allow the consumer to navigate to its tree."
+                },
+                {
+                    "label": "Top Categories",
+                    "field": "topCategories",
+                    "type": "group",
+                    "itemLabelField": "name",
+                    "fields": [
+                        {
+                            "label": "Name",
+                            "field": "name",
+                            "translatable": false,
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "label": "Navigation Tree",
+                            "field": "tree",
+                            "type": "tree"
+                        },
+                        {
+                            "label": "Link",
+                            "field": "reference",
+                            "required": true,
+                            "type": "reference"
+                        },
+                        {
+                            "label": "Mobile Nav Background",
+                            "field": "mobileNavBackgroundImage",
+                            "type": "media"
+                        },
+                        {
+                            "type": "description",
+                            "text": "Ratio-Setting will currently not be used."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Logo",
+            "fields": [
+                {
+                    "type": "description",
+                    "text": "Select a logo to overwrite the default 'Catwalk'."
+                },
+                {
+                    "label": "Logo",
+                    "field": "logo",
+                    "type": "media",
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

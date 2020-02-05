@@ -1,0 +1,38 @@
+{
+    "tasticType": "frontastic/boost/product-slider",
+    "name": "Product Slider",
+    "icon": "menu",
+    "category": "Boost Theme",
+    "schema": [
+        {
+            "name": "Stream Selection",
+            "fields": [
+                {
+                    "label": "title",
+                    "field": "title",
+                    "type": "string",
+                    "default": ""
+                },
+                {
+                    "label": "Desctiprion",
+                    "field": "description",
+                    "type": "string",
+                    "default": ""
+                },
+                {
+                    "label": "Stream",
+                    "field": "stream",
+                    "type": "stream",
+                    "streamType": "product-list",
+                    "default": null
+                },
+                {
+                    "label": "# Products",
+                    "field": "productCount",
+                    "type": "integer",
+                    "default": 5
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "tasticType": "frontastic/boost/checkout",
+    "name": "Checkout",
+    "icon": "menu",
+    "category": "Checkout",
+    "schema": [
+        {
+            "name": "Company Menu",
+            "fields": []
+        }
+    ]
+}
