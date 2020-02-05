@@ -9,7 +9,7 @@ import { ribbon, ribbonTopRight } from './promobox-with-positioning.module.scss'
 class PromoboxWithPositioning extends Component {
     render () {
         const { children, vertical, horizontal, height, image, customChildrenStyle } = this.props
-
+        console.log('image', image)
         let style = {}
         if (typeof height !== 'undefined') {
             style = { ...style, height }

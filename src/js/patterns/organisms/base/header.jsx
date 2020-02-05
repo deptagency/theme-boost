@@ -9,7 +9,7 @@ import MobileNavigation from '../../molecules/navigations/mobileNavigation'
 import { topCategoryType } from '../../molecules/navigations/mobileNavigation/types'
 import TopCategoryNav from '../../molecules/navigations/topCategoryNav'
 import UserIconNav from '../../molecules/navigations/user-icon-nav'
-import DesktopSecNavigation from '../../molecules/navigations/desktopSecondNavigation'
+import DesktopNavigation from '../../molecules/navigations/desktopNavigation'
 import MobileMenuToggle from '../../atoms/buttons/mobile-menu-toggle'
 import Button from '../../atoms/buttons/button'
 import { FormattedMessage } from 'react-intl'
@@ -98,7 +98,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                 />
             </div>
             <div>
-                <DesktopSecNavigation
+                <DesktopNavigation
                     topCategories={topCategories}
                     currentTopCategory={currentTopCategory}
                     navPath={navPath}

@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
-import { SecondNavigationDesktopTree } from '../tree'
+import Image from '@frontastic/catwalk/src/js/image'
+import Translatable from '@frontastic/catwalk/src/js/component/translatable'
+import { DesktopNavigationTree } from '../tree'
 import { categoryTreeType } from '../../types'
 
 import {
@@ -12,9 +14,10 @@ import {
     childBoldText,
     grandchildText,
     gridItemColumn,
-} from './second-navigation-desktop-item.module.scss'
+    testImage, 
+} from './desktop-navigation-item.module.scss'
 
-export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) {
+export function DesktopNavigationItem ({ item, level, navPath, onClick }) {
     const sale = item.name === 'Sale%'
 
     const hasSubLevel = (item) => {
@@ -25,6 +28,7 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
 
     return (
         <nav className={secNavDesktop}>
+
             <div>
                 <NodeLink
                     node={item}
@@ -46,30 +50,35 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
                         {item.children.length > 0 && (
                             <ul className={dropdownContent}>
                                 {item.children.map(child => {
- return <li>
-     <div className={gridItemColumn}>
-         <div className={childBoldText}>
-             {child.name}
-         </div>
-         {child.children.map(grandchild => { return <a className={grandchildText} href='#'>{grandchild.name}</a> }
-                                            )}
-     </div>
- </li>
-}
-                                )}
+                                console.log('child', child.name, child.configuration.displayMedia)
+                                return <li>
+                                    <div className={gridItemColumn}>
+                                        <div className={childBoldText}>
+                                            {child.name}
+                                            {child.configuration.displayMedia && <Image className={testImage} 
+                                                forceWidth={300}
+                                                media={child.configuration.displayMedia.media}
+                                                alt={<Translatable value={child.configuration.displayMedia.media.title}/>}
+                                                />}
+                                        </div>
+                                        {child.children.map(grandchild => { 
+                                            return <a className={grandchildText} href='#'>{grandchild.name}
+                                            </a> })}
+                                    </div>
+                                </li>
+                                })}
                             </ul>
                         )}
                     </div>
                 </NodeLink>
 
                 {hasSubLevel(item) && (
-                    <SecondNavigationDesktopTree
+                    <DesktopNavigationTree
                         items={item} navPath={navPath}
                         level={level + 1}
                         onSelectItem={onClick}
                     />
-                    )}
-
+                )}
             </div>
         </nav>
     )
@@ -77,7 +86,7 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
 
 // for some reason if propTypes are uncommented it raises a violation of hooks.
 
-SecondNavigationDesktopItem.propTypes = {
+DesktopNavigationItem.propTypes = {
     item: categoryTreeType,
     level: PropTypes.number,
     navPath: PropTypes.arrayOf(categoryTreeType),

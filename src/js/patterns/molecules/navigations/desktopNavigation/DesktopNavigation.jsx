@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-import { SecondNavigationDesktopTree } from './components'
-import { topCategoryType } from './../mobileNavigation/types'
+import { DesktopNavigationTree } from './components'
+import { topCategoryType } from '../mobileNavigation/types'
 
-function MainDesktopSecNavigation ({ topCategories, currentTopCategory, navPath, handleSelectNavItem }) {
+function MainDesktopNavigation ({ topCategories, currentTopCategory, navPath, handleSelectNavItem }) {
     // render nothing if there's no content
     if (!topCategories) {
         return null
@@ -13,7 +13,7 @@ function MainDesktopSecNavigation ({ topCategories, currentTopCategory, navPath,
 
     return (
         <nav>
-            {topCategories[currentTopCategory].tree && <SecondNavigationDesktopTree
+            {topCategories[currentTopCategory].tree && <DesktopNavigationTree
                 items={topCategories[currentTopCategory].tree.children}
                 navPath={navPath}
                 onSelectItem={handleSelectNavItem}
@@ -22,13 +22,13 @@ function MainDesktopSecNavigation ({ topCategories, currentTopCategory, navPath,
     )
 }
 
-MainDesktopSecNavigation.propTypes = {
+MainDesktopNavigation.propTypes = {
     topCategories: PropTypes.arrayOf(topCategoryType),
     navPath: PropTypes.node,
     handleSelectNavItem: PropTypes.node,
     currentTopCategory: PropTypes.node,
 }
 
-MainDesktopSecNavigation.defaultProps = {}
+MainDesktopNavigation.defaultProps = {}
 
-export const DesktopSecNavigation = ComponentInjector.return('DesktopSecNavigation', MainDesktopSecNavigation)
+export const DesktopNavigation = ComponentInjector.return('DesktopNavigation', MainDesktopNavigation)

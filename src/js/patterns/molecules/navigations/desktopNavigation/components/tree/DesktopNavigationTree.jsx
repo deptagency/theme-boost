@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { SecondNavigationDesktopItem } from '../item'
+import { DesktopNavigationItem } from '../item'
 import { categoryTreeType } from '../../types'
-import { navigationContainer } from './second-navigation-desktop-tree.module.scss'
+import { navigationContainer } from './desktop-navigation-tree.module.scss'
 
-export function SecondNavigationDesktopTree ({ items, onSelectItem, navPath, level = 0 }) {
+export function DesktopNavigationTree ({ items, onSelectItem, navPath, level = 0 }) {
     return (
         <div>
             <ul className={navigationContainer}>
                 {items && items.map((item) => {
                     return (
-                        <SecondNavigationDesktopItem
+                        <DesktopNavigationItem
                             key={item.nodeId}
                             item={item}
                             navPath={navPath}
@@ -25,7 +25,7 @@ export function SecondNavigationDesktopTree ({ items, onSelectItem, navPath, lev
     )
 }
 
-SecondNavigationDesktopTree.propTypes = {
+DesktopNavigationTree.propTypes = {
     items: PropTypes.arrayOf(categoryTreeType),
     onSelectItem: PropTypes.func,
     navPath: PropTypes.arrayOf(categoryTreeType),

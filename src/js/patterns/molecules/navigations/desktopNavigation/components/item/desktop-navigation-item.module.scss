@@ -4,6 +4,18 @@
     }
 }
 
+.testImage {
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+
+    span {
+        display: block !important;
+        width: 500px !important;
+        height: 500px !important;
+    }
+}
+
 @media (min-width: 600px) {
 
     .secNavDesktop {
