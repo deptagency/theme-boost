@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
-import topCategories from '../../../mobileNavigation/topCategories.json'
 import { SecondNavigationDesktopTree } from '../tree'
 
 import {
-    listItemNav,
-    dropdown,
+    secNavDesktop,
+    itemNameList,
+    itemNameUnderline,
     dropdownContent,
-    itemName,
-    itemNameRed,
-    secNavDesktop, gridItemColumn,
-    boldText,
+    dropdownContentActive,
+    childBoldText,
+    grandchildText,
+    gridItemColumn,
 } from './second-navigation-desktop-item.module.scss'
 
 export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) {
@@ -20,9 +20,17 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
         return item && item.length > 0
     }
 
+    // const [hovered, setHovered] = useState(false);
+    // const toggleHover = (e) => {
+    //     console.log("Here")
+    //     console.log(e.target)
+    //     setHovered(!hovered)
+    // };
+
     return (
-        <nav className={secNavDesktop}>
-            <div className={dropdown}>
+        <nav className={secNavDesktop} 
+        // onMouseEnter={toggleHover} onMouseLeave={toggleHover}
+        >
                 <div>
                     <NodeLink
                         node={item}
@@ -34,10 +42,9 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
                         }}
                         title='Startseite'
                     >
-                    <div className={listItemNav}>
+                    <div className={itemNameList}>
                         <div 
-                        className={itemName}
-                        // { sale ? {itemNameRed} : {itemName}} 
+                        className={itemNameUnderline}
                         style={{ color: sale ? "#e60000" : "none" }}>
                             {item.name}
                         </div>
@@ -47,11 +54,11 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
                                 {item.children.map(child =>
                                     <li>
                                         <div className={gridItemColumn}>
-                                            <div className={boldText}>
+                                            <div className={childBoldText}>
                                                 {child.name}
                                             </div>
                                             {child.children.map(grandchild =>
-                                                <a href="#">{grandchild.name}</a>
+                                                <a className={grandchildText} href="#">{grandchild.name}</a>
                                             )}
                                         </div>
                                     </li>
@@ -70,7 +77,6 @@ export function SecondNavigationDesktopItem ({ item, level, navPath, onClick }) 
                     )}
 
                 </div>
-            </div>
         </nav>
     )
 }

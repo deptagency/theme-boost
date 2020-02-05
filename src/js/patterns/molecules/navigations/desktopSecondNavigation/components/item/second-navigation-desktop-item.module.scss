@@ -5,30 +5,20 @@
 }
 
 @media (min-width: 600px) {
-    a {
-        text-decoration: none !important;
-        padding-top: 5px;
-        display: block;
-    }
-
-    a,
-    a:after,
-    a:before {
-        transition: all .5s;
-    }
 
     .secNavDesktop {
         font-family: inherit;
         text-align: center;
         display: inline-block;
-        padding-right: 4px;
+        padding: 5px 0 5px 5px;
+        margin-bottom: 5px;
     }
 
-    .listNavStyle {
-        margin-bottom: 0px;
+    .secNavDesktop:hover .dropdownContent {
+        display: block !important;
     }
 
-    .listItemNav {
+    .itemNameList {
         list-style-type: none !important;
         margin-right: 11px !important;
         font-size: 16px;
@@ -40,63 +30,54 @@
         position: absolute !important;
         list-style-type: none;
         background-color: #fff;
-        height: auto;
-        min-width: 160px;
         box-shadow: -1px 20px 20px 0px #444c58;
         z-index: 1;
         right: 0;
         left: 0;
         border-radius: 10px;
-        padding: 20px;
-        padding-left: 10%;
-      }
-    
-    .dropdownContent span {
-        padding: 12px 16px;
-        display: block;
-    }
-    
-    .secNavDesktop:hover .dropdownContent {
-        display: block !important;
-    }
-
-    .dropdown {
-        display: inline-block;
+        padding: 15px 10%;
         text-align: left;
-      }
+    }
 
     .gridItemColumn {
-        padding: 20px;
-        font-size: 15px;
+        font-size: 16px;
         float: left;
         width: 25%;
+    }
 
-        a {
-            display: block;
-            &:hover {
-                color: rgb(73, 121, 165);
-            }
+    .childBoldText, .grandchildText {
+        padding-top: 5px;
+        display: block;
+        &:hover {
+            color: rgb(79, 139, 196);
         }
     }
 
-    .boldText {
+    .childBoldText {
         font-weight: 600;
         font-size: 15px;
         color: black;
         padding-bottom: 10px;
-        &:hover {
-            color: rgb(73, 121, 165);
-        }
+    }
+
+    a,
+    a:after,
+    a:before,
+    .childBoldText,
+    .childBoldText:after,
+    .childBoldText::before {
+        transition: all .3s;
+        text-decoration: none !important;
     }
 }
 
 // underline animation
 
-    .itemName, .itemName:visited {
+    .itemNameUnderline, .itemNameUnderline:visited {
         text-decoration: none;
         position: relative;
     }
-    .itemName:after, .itemName:visited:after {
+    .itemNameUnderline:after, .itemNameUnderline:visited:after {
     content: '';
     position: absolute;
     height: 3px;
@@ -107,40 +88,13 @@
     transition: 0.5s;
     }
 
-    .itemName:hover:after, .itemName:visited:hover:after {
+    .itemNameUnderline:hover:after, .itemNameUnderline:visited:hover:after {
     width: 100%;
     }
-    .itemName.block, .itemName:visited.block {
+    .itemNameUnderline.block, .itemNameUnderline:visited.block {
     display: block;
     padding: 0.5em;
     }
-    .itemName.block:hover, .itemName:visited.block:hover {
+    .itemNameUnderline.block:hover, .itemNameUnderline:visited.block:hover {
     background: #eee;
     }
-
-    .itemNameRed, .itemNameRed:visited {
-    text-decoration: none;
-    position: relative;
-    }
-    .itemNameRed:after, .itemNameRed:visited:after {
-    content: '';
-    position: absolute;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    background: red;
-    transition: 0.5s;
-    }
-
-    .itemNameRed:hover:after, .itemNameRed:visited:hover:after {
-    width: 100%;
-    }
-    .itemNameRed.block, .itemNameRed:visited.block {
-    display: block;
-    padding: 0.5em;
-    }
-    .itemNameRed.block:hover, .itemNameRed:visited.block:hover {
-    background: #eee;
-    }
-
