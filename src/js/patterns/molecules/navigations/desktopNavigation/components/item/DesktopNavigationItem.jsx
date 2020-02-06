@@ -65,11 +65,11 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                                                         {grandchild.name}
                                                     </div>
                                             )
-})}
+                                            })}
                                         </div>
                                     </div>
                                 )
-})}
+                                })}
                             </ul>
                         )}
                     </div>
