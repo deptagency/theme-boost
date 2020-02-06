@@ -14,17 +14,15 @@ import {
     childBoldText,
     grandchildText,
     gridItemColumn,
-    testImage, 
+    fashionImage,
 } from './desktop-navigation-item.module.scss'
 
-export function DesktopNavigationItem ({ item, level, navPath, onClick }) {
+export function DesktopNavigationItem ({ item, level, navPath, onClick, number }) {
     const sale = item.name === 'Sale%'
 
     const hasSubLevel = (item) => {
         return item && item.length > 0
     }
-
-    console.log('item', item)
 
     return (
         <nav className={secNavDesktop}>
@@ -33,40 +31,45 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick }) {
                 <NodeLink
                     node={item}
                     onClick={(e) => {
-                            if (onClick && item && item.length > 0) {
-                                e.preventDefault()
-                                return onClick(item, level)
-                            }
-                        }}
+                        if (onClick && item && item.length > 0) {
+                            e.preventDefault()
+                            return onClick(item, level)
+                        }
+                    }}
                     title='Startseite'
-                    >
+                >
                     <div className={itemNameList}>
-                        <div
-                            className={itemNameUnderline}
+                        <div className={itemNameUnderline}
                             style={{ color: sale ? '#e60000' : 'none' }}>
                             {item.name}
                         </div>
 
                         {item.children.length > 0 && (
                             <ul className={dropdownContent}>
-                                {item.children.map(child => {
-                                console.log('child', child.name, child.configuration.displayMedia)
-                                return <li>
-                                    <div className={gridItemColumn}>
-                                        <div className={childBoldText}>
-                                            {child.name}
-                                            {child.configuration.displayMedia && <Image className={testImage} 
-                                                forceWidth={300}
-                                                media={child.configuration.displayMedia.media}
-                                                alt={<Translatable value={child.configuration.displayMedia.media.title}/>}
+                                {item.children.map((child, number) => {
+                                return (
+                                    <div key={number}>
+                                        <div className={gridItemColumn}>
+                                            <div className={childBoldText}>
+                                                {child.name}
+                                                {child.configuration.displayMedia && <Image
+                                                    className={fashionImage}
+                                                    forceWidth={300}
+                                                    media={child.configuration.displayMedia.media}
+                                                    alt={<Translatable value={child.configuration.displayMedia.media.title} />}
                                                 />}
+                                            </div>
+                                            {child.children.map((grandchild, number) => {
+                                                return (
+                                                    <div key={number} className={grandchildText} href='#'>
+                                                        {grandchild.name}
+                                                    </div>
+                                            )
+})}
                                         </div>
-                                        {child.children.map(grandchild => { 
-                                            return <a className={grandchildText} href='#'>{grandchild.name}
-                                            </a> })}
                                     </div>
-                                </li>
-                                })}
+                                )
+})}
                             </ul>
                         )}
                     </div>
@@ -84,11 +87,10 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick }) {
     )
 }
 
-// for some reason if propTypes are uncommented it raises a violation of hooks.
-
 DesktopNavigationItem.propTypes = {
     item: categoryTreeType,
     level: PropTypes.number,
+    number: PropTypes.number,
     navPath: PropTypes.arrayOf(categoryTreeType),
     onClick: PropTypes.func,
 }

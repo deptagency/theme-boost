@@ -8,7 +8,7 @@ import { navigationContainer } from './desktop-navigation-tree.module.scss'
 export function DesktopNavigationTree ({ items, onSelectItem, navPath, level = 0 }) {
     return (
         <div>
-            <ul className={navigationContainer}>
+            <div className={navigationContainer}>
                 {items && items.map((item) => {
                     return (
                         <DesktopNavigationItem
@@ -20,7 +20,7 @@ export function DesktopNavigationTree ({ items, onSelectItem, navPath, level = 0
                         />
                     )
                 })}
-            </ul>
+            </div>
         </div>
     )
 }

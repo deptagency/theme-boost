@@ -6,7 +6,6 @@ import { DesktopNavigationTree } from './components'
 import { topCategoryType } from '../mobileNavigation/types'
 
 function MainDesktopNavigation ({ topCategories, currentTopCategory, navPath, handleSelectNavItem }) {
-    // render nothing if there's no content
     if (!topCategories) {
         return null
     }

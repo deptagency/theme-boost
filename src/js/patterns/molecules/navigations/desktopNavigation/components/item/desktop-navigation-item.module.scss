@@ -4,20 +4,7 @@
     }
 }
 
-.testImage {
-    width: 500px;
-    height: 500px;
-    border: 1px solid red;
-
-    span {
-        display: block !important;
-        width: 500px !important;
-        height: 500px !important;
-    }
-}
-
 @media (min-width: 600px) {
-
     .secNavDesktop {
         font-family: inherit;
         text-align: center;
@@ -47,14 +34,16 @@
         right: 0;
         left: 0;
         border-radius: 10px;
-        padding: 15px 10%;
+        padding: 20px 16%;
         text-align: left;
+        margin-top: 3px;
     }
 
     .gridItemColumn {
-        font-size: 16px;
+        font-size: 14px;
         float: left;
-        width: 25%;
+        width: 23%;
+        margin-right: 5px;
     }
 
     .childBoldText, .grandchildText {
@@ -79,11 +68,41 @@
     .childBoldText:after,
     .childBoldText::before {
         transition: all .3s;
-        text-decoration: none !important;
+        text-decoration: none;
     }
-}
 
-// underline animation
+    .fashionImage {
+        max-height: 300px;
+        max-width: 180px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }    
+
+    @media  (min-width:600px) and (max-width:800px) {
+
+        .itemNameList {
+            font-size: 15px;
+            margin-right: 0px !important;
+        }
+
+        .dropdownContent {
+            padding: 3px 0px 3px 40px;
+        }
+        
+        .gridItemColumn {
+            font-size: 13px;
+        }
+
+        .childBoldText {
+            font-size: 14px;
+        }
+
+        .fashionImage {
+            max-height: 250px;
+            max-width: 130px;
+        }
+    }
+    // underline animation
 
     .itemNameUnderline, .itemNameUnderline:visited {
         text-decoration: none;
@@ -110,3 +129,4 @@
     .itemNameUnderline.block:hover, .itemNameUnderline:visited.block:hover {
     background: #eee;
     }
+}
