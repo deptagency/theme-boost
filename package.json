@@ -1,6 +1,7 @@
 {
-    "name": "@frontastic/theme-boost",
-    "version": "1.0.0-alpha.1",
+    "name": "frontastic-theme-boost",
+    "version": "1.0.0-alpha",
+    "private": true,
     "resolutions": {
         "unidragger": "2.2.3"
     },
@@ -72,8 +73,8 @@
         "flickity-as-nav-for": "^2.0.1",
         "flickity-imagesloaded": "^2.0.0",
         "focus-trap": "^5.0.1",
-        "@frontastic/catwalk": "1.0.0-alpha.1",
-        "@frontastic/common": "1.0.0-alpha.1",
+        "frontastic-catwalk": "0.1.0",
+        "frontastic-common": "1.0.0-alpha",
         "fs-extra": "8.0.1",
         "html-webpack-plugin": "^3.2.0",
         "i": "^0.3.6",
