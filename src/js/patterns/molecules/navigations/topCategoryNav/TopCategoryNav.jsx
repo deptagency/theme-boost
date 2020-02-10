@@ -7,7 +7,7 @@ import { TopCatNav } from './top-category-nav.module.scss'
 const NavItem = ({ item, onClick }) => {
     console.log('item', item)
     return (
-        <li className={`${TopCatNav} 'c-service-navigation o-list-inline__item'`}>
+        <li className={`${TopCatNav} c-service-navigation o-list-inline__item`}>
             <a
                 onClick={onClick}
                 title='Frauen'
