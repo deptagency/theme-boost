@@ -10,10 +10,6 @@ export const topCategoryType = PropTypes.shape({
      * (see categoryTree)
      */
     tree: PropTypes.shape(categoryTreeType),
-    /**
-     * the background image shown in the tab nav
-     */
-    mobileNavBackgroundImage: PropTypes.object,
 })
 export const categoryTreeType = PropTypes.shape({
     /**

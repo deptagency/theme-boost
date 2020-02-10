@@ -3,7 +3,7 @@ import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
 import MobileNavigation from './'
-import SecondNavigationDesktopItem from '../desktopSecondNavigation/components/item'
+import DesktopNavigationItem from '../desktopNavigation/components/item'
 
 import Button from 'js/patterns/atoms/buttons/button'
 
@@ -30,7 +30,7 @@ export const mobileNavigation = () => {
                 topCategories={topCategories}
                 callToAction={ctaLoggedIn()}
             />
-            <SecondNavigationDesktopItem
+            <DesktopNavigationItem
                 topCategories={topCategories}
             />
         </div>

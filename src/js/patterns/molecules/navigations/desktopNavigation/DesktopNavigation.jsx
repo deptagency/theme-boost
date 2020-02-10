@@ -5,7 +5,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import { DesktopNavigationTree } from './components'
 import { topCategoryType } from '../mobileNavigation/types'
 
-function MainDesktopNavigation ({ topCategories, currentTopCategory, navPath, handleSelectNavItem }) {
+function MainDesktopNavigation ({ topCategories, currentTopCategory, navPath, onSelectNavItem }) {
     if (!topCategories) {
         return null
     }
@@ -15,7 +15,7 @@ function MainDesktopNavigation ({ topCategories, currentTopCategory, navPath, ha
             {topCategories[currentTopCategory].tree && <DesktopNavigationTree
                 items={topCategories[currentTopCategory].tree.children}
                 navPath={navPath}
-                onSelectItem={handleSelectNavItem}
+                onSelectItem={onSelectNavItem}
             />}
         </nav>
     )
@@ -24,7 +24,7 @@ function MainDesktopNavigation ({ topCategories, currentTopCategory, navPath, ha
 MainDesktopNavigation.propTypes = {
     topCategories: PropTypes.arrayOf(topCategoryType),
     navPath: PropTypes.node,
-    handleSelectNavItem: PropTypes.node,
+    onSelectNavItem: PropTypes.func,
     currentTopCategory: PropTypes.node,
 }
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { DesktopNavigationItem } from '../item'
 import { categoryTreeType } from '../../types'
-import { navigationContainer } from './desktop-navigation-tree.module.scss'
+import { navigationContainer } from '../../desktop-navigation.module.scss'
 
 export function DesktopNavigationTree ({ items, onSelectItem, navPath, level = 0 }) {
     return (

@@ -102,7 +102,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                     topCategories={topCategories}
                     currentTopCategory={currentTopCategory}
                     navPath={navPath}
-                    handleSelectNavItem={handleSelectNavItem}
+                    onSelectNavItem={handleSelectNavItem}
                 />
             </div>
         </>

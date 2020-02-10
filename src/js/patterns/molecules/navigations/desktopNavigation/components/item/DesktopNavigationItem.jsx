@@ -11,11 +11,11 @@ import {
     itemNameList,
     itemNameUnderline,
     dropdownContent,
-    childBoldText,
+    gridItemChild,
     grandchildText,
     gridItemColumn,
-    fashionImage,
-} from './desktop-navigation-item.module.scss'
+    gridImage,
+} from '../../desktop-navigation.module.scss'
 
 export function DesktopNavigationItem ({ item, level, navPath, onClick, number }) {
     const sale = item.name === 'Sale%'
@@ -50,10 +50,10 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                                 return (
                                     <div key={number}>
                                         <div className={gridItemColumn}>
-                                            <div className={childBoldText}>
+                                            <div className={gridItemChild}>
                                                 {child.name}
                                                 {child.configuration.displayMedia && <Image
-                                                    className={fashionImage}
+                                                    className={gridImage}
                                                     forceWidth={300}
                                                     media={child.configuration.displayMedia.media}
                                                     alt={<Translatable value={child.configuration.displayMedia.media.title} />}
