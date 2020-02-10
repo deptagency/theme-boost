@@ -1,5 +1,8 @@
 language: php
 
+notifications:
+  email: false
+
 install:
   - yarn install
   - mkdir ../../../integration
