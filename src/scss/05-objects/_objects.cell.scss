@@ -17,7 +17,7 @@
   // Full Rows separates sections. Because of this the margin is higher
   .o-cell--12,
   .o-cell--1\/1 {
-      margin-top: $spacing-stack-xl;
+      margin-top: $spacing-stack-xxxl;
 
       // Children with the same classe shouldn't get the same margin. We don't want to have twice. So remove it.
       .o-cell--12,

@@ -10,10 +10,10 @@ $rating-active-font-color: $color-palette-orange-600 !default;
   flex-wrap: nowrap;
 
   &__symbol {
-    margin-left: $spacing-inline-xxs;
+    margin-left: $spacing-inline-xxxs;
     stroke: currentColor;
     stroke-width: 2px;
-    color: $rating-active-font-color;
+    color: $rating-font-color;
 
     &:first-child {
       margin-left: 0;
@@ -22,6 +22,7 @@ $rating-active-font-color: $color-palette-orange-600 !default;
     &.is-active {
       fill: currentColor;
       stroke: none;
+      color: $rating-active-font-color;
     }
   }
 }

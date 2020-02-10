@@ -19,9 +19,8 @@ const UserIconNav = () => {
                         </div>
                     </IconButton>
                 </li>
-                <li className='o-header__user-navigation__item my-profile--desktop'>
+                <li className='o-header__user-navigation__item u-hidden-until-large'>
                     <IconButton
-                        className='u-hidden-until-large'
                         icon={<MyProfile className='c-icon' />}
                         onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }}>
                         <div className='u-hidden-large-up'>

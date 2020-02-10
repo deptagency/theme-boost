@@ -54,7 +54,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                 */}
                 <MobileMenuToggle
                     isMenuOpen={isMobileMenuOpen}
-                    className='u-hidden-medium-up'
+                    className='u-icon-line-height u-hidden-medium-up'
                     onToggle={() => {
                         return setIsMobileMenuOpen(!isMobileMenuOpen)
                     }}

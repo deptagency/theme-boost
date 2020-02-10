@@ -14,7 +14,7 @@ const Rating = ({ counterMessage, className }) => {
                 })}
             </div>
             {counterMessage ?
-                <div className='u-text-xs u-text-color-quiet'>
+                <div className='u-text-xs u-text-color-quiet o-distance-xxxs'>
                     <FormattedMessage id='product.reviewsWithCount' values={{ count: 7 }} />
                 </div>
             : null}

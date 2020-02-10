@@ -27,7 +27,7 @@ $header-height: 60px !default;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-left: -$spacing-inline-s;
+    margin-left: -$spacing-inline-xs;
     position: absolute;
     right: 0;
     top: 50%;
@@ -41,7 +41,7 @@ $header-height: 60px !default;
     }
 
     &__item {
-      padding-left: $spacing-inline-s;
+      padding-left: $spacing-inline-xs;
 
       @include breakpoint($layout-breakpoint-l) {
         padding-left: $spacing-inline-l;

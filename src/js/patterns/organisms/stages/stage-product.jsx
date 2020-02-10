@@ -30,7 +30,7 @@ class ProductStage extends Component {
                             <span className='c-badge c-badge--danger'>Sale</span>
                         </div>
                     </div>
-                    <div className='o-product__details o-distance-s'>
+                    <div className='o-product__details o-distance-xs'>
                         <div className='o-product__price'>
                             <p className='u-text-color-danger'>{ discountedPrice || price }</p>
                             <span className='u-text-xs u-text-color-quiet o-product__price__info'> inkl. 19% MwSt.</span>

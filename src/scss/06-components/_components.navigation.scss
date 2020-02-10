@@ -14,16 +14,16 @@
     width: 100%;
     z-index: $index-layer-navigation;
 
-    @media (min-width: $layout-breakpoint-l) {
-        background: transparent;
-        box-shadow: none;
+    @include breakpoint($layout-breakpoint-l) {
+        display: none;
         height: auto;
         padding: 0;
         position: relative;
         top: 0;
-        transform: none;
-        width: 300px;
         width: auto;
+        background: transparent;
+        box-shadow: none;
+        transform: none;
     }
 
     &.is-active {
@@ -38,7 +38,7 @@
         margin-top: $spacing-stack-s;
         padding-top: $spacing-stack-s;
 
-        @media (min-width: $layout-breakpoint-l) {
+        @include breakpoint($layout-breakpoint-l) {
             border-top: 0;
             font-size: $font-size-m;
             margin-left: $spacing-inline-l;
@@ -57,7 +57,7 @@
             margin-top: 0;
             padding-top: 0;
 
-            @media (min-width: $layout-breakpoint-l) {
+            @include breakpoint($layout-breakpoint-l) {
                 margin-left: 0;
             }
         }
@@ -81,7 +81,7 @@
         width: 100%;
         z-index: $index-layer-navigation-megamenu;
 
-        @media (min-width: $layout-breakpoint-l) {
+        @include breakpoint($layout-breakpoint-l) {
             height: auto;
             left: auto;
             margin-top: $spacing-stack-m;
@@ -94,7 +94,7 @@
         &:before {
             content: '';
 
-            @media (min-width: $layout-breakpoint-l) {
+            @include breakpoint($layout-breakpoint-l) {
                 border-bottom: 8px solid $color-palette-white;
                 border-left: 8px solid transparent;
                 border-right: 8px solid transparent;
@@ -107,7 +107,7 @@
         &:after {
             content: '';
 
-            @media (min-width: $layout-breakpoint-l) {
+            @include breakpoint($layout-breakpoint-l) {
                 background: transparent;
                 height: $spacing-stack-m;
                 left: 0;
@@ -118,21 +118,21 @@
         }
 
         .c-navigation__item {
-            @media (min-width: $layout-breakpoint-l) {
+            @include breakpoint($layout-breakpoint-l) {
                 font-size: $font-size-s;
                 margin-left: 0;
                 margin-top: $spacing-stack-s;
             }
 
             &:first-child {
-                @media (min-width: $layout-breakpoint-l) {
+                @include breakpoint($layout-breakpoint-l) {
                     margin-top: 0;
                 }
             }
         }
 
         .c-navigation__list {
-            @media (min-width: $layout-breakpoint-l) {
+            @include breakpoint($layout-breakpoint-l) {
                 flex: 0 0 50%;
                 padding-left: $spacing-inline-m;
             }
@@ -151,7 +151,7 @@
             padding-bottom: $spacing-inset-s;
             padding-top: $spacing-inset-s;
 
-            @media (min-width: $layout-breakpoint-l) {
+            @include breakpoint($layout-breakpoint-l) {
                 border-top: 0;
                 padding-bottom: 0;
                 padding-top: 0;
@@ -167,7 +167,7 @@
         overflow: auto;
         position: relative;
 
-        @media (min-width: $layout-breakpoint-l) {
+        @include breakpoint($layout-breakpoint-l) {
             flex-direction: row;
             margin-top: 0;
             overflow: visible;
@@ -180,7 +180,7 @@
         right: $spacing-inset-xs;
         top: $spacing-inset-xs;
 
-        @media (min-width: $layout-breakpoint-l) {
+        @include breakpoint($layout-breakpoint-l) {
             display: none;
         }
     }
@@ -198,7 +198,7 @@
         padding: $spacing-inset-m;
         text-transform: uppercase;
 
-        @media (min-width: $layout-breakpoint-l) {
+        @include breakpoint($layout-breakpoint-l) {
             display: none;
         }
 
@@ -231,13 +231,15 @@
     display: flex;
     flex-direction: row-base;
     font-family: $font-family-spot;
+    font-size: $font-size-m;
     text-transform: uppercase;
 
     &__anchor {
         border: $border-size-base solid transparent;
         color: $color-brand-primary-base;
         font-weight: $font-weight-bold;
-        padding: $spacing-inset-s;
+        padding: $spacing-inset-xxs $spacing-inset-xs;
+        border-radius: $border-radius-base;
         text-decoration: none;
 
         &:hover,
