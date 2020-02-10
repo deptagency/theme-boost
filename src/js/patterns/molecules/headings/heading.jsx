@@ -13,7 +13,7 @@ class Heading extends Component {
                     <h2 className='c-title'>{title}</h2>
                 </div>}
                 {description && <div className='o-heading__topic'>
-                    <p className='c-topic'>{description}</p>
+                    <p className='c-topic u-text-color-600'>{description}</p>
                 </div>}
             </header>
         </div>)

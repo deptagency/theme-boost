@@ -13,7 +13,7 @@ class ProductStage extends Component {
     render () {
         const { images, name, discountedPrice, price, addToCartButton, addToWishlist } = this.props
         return (
-            <div className='o-media-block'>
+            <div className='o-media-block o-media-block--half'>
                 <div className='o-media-block__asset'>
                     <Gallery
                         imagesComponents={(images || []).map((image) => {
@@ -24,7 +24,7 @@ class ProductStage extends Component {
                 </div>
                 <div className='o-media-block__body'>
                     <div className='o-product__header o-product__header--centered'>
-                        <h1 className='c-title o-product__header__large-column'>{name}</h1>
+                        <h1 className='c-title-level-1 o-product__header__large-column'>{name}</h1>
 
                         <div className='o-product__header__offset'>
                             <span className='c-badge c-badge--danger'>Sale</span>
@@ -33,7 +33,7 @@ class ProductStage extends Component {
                     <div className='o-product__details o-distance-s'>
                         <div className='o-product__price'>
                             <p className='u-text-color-danger'>{ discountedPrice || price }</p>
-                            <span className='u-text-s u-text-color-quiet o-product__price__info'> inkl. 19% MwSt.</span>
+                            <span className='u-text-xs u-text-color-quiet o-product__price__info'> inkl. 19% MwSt.</span>
                         </div>
                         {
                             discountedPrice && { price }
@@ -107,7 +107,7 @@ class ProductStage extends Component {
                                         <Wishlist className='c-icon c-icon--m' />
                                     </button>
                                 </div>
-                                <div className='o-distance-m'>
+                                <div className='o-distance-l'>
                                     <ExpressDelivery />
                                 </div>
                             </div>

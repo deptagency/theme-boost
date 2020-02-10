@@ -8,6 +8,9 @@
   @media (min-width: $layout-breakpoint-l) {
     font-size: $font-size-xxl;
   }
+  @media (min-width: $layout-breakpoint-xl) {
+    font-size: $font-size-xxxl;
+  }
 }
 
 /// Different Levels of Titles

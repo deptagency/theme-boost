@@ -41,7 +41,7 @@ const ProductItem = ({ product }) => {
             <div className='o-product__header o-distance-s'>
                 <div className='o-product__header__large-column'>
                     <h3 className='c-title-level-4'>{name}</h3>
-                    {designer && <p className='t-text-quiet'>{designer}</p>}
+                    {designer && <p className='u-text-color-quiet'>{designer}</p>}
                 </div>
             </div>
         </article>
@@ -66,7 +66,7 @@ class ProductSliderTastic extends Component {
             <Fragment>
                 <header className='o-heading'>
                     {title && (
-                        <p className='o-heading__topic c-topic'>
+                        <p className='o-heading__topic c-topic u-text-color-quiet'>
                             <Translatable value={title} />
                         </p>
                     )}

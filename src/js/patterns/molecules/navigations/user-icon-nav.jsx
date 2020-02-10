@@ -10,32 +10,43 @@ import { ReactComponent as MyProfile } from './../../../../icons/my-profile.svg'
 
 const UserIconNav = () => {
     return (
-        <ul className='o-header__top-right o-list-inline c-user-icon-nav'>
-            <li className='o-list-inline__item'>
-                <IconButton icon={<SearchIcon />}>
-                    <FormattedMessage id='header.search' />
-                </IconButton>
-            </li>
-            <li className='o-list-inline__item my-profile--desktop'>
-                <IconButton
-                    icon={<MyProfile />}
-                    onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }}>
-                    <FormattedMessage id='header.myAccount' />
-                </IconButton>
-            </li>
-            <li className='o-list-inline__item'>
-                <IconButton icon={<WishlistIcon />}>
-                    <FormattedMessage id='header.wishlist' />
-                </IconButton>
-            </li>
-            <li className='o-list-inline__item'>
-                <IconButton
-                    icon={<CartIcon />}
-                    onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}>
-                    <FormattedMessage id='header.cart' />
-                </IconButton>
-            </li>
-        </ul>
+        <div className='o-header__top-right'>
+            <ul className='o-header__user-navigation'>
+                <li className='o-header__user-navigation__item'>
+                    <IconButton icon={<SearchIcon className='c-icon' />}>
+                        <div className='u-hidden-large-up'>
+                            <FormattedMessage id='header.search' />
+                        </div>
+                    </IconButton>
+                </li>
+                <li className='o-header__user-navigation__item my-profile--desktop'>
+                    <IconButton
+                        className='u-hidden-until-large'
+                        icon={<MyProfile className='c-icon' />}
+                        onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }}>
+                        <div className='u-hidden-large-up'>
+                            <FormattedMessage id='header.myAccount' />
+                        </div>
+                    </IconButton>
+                </li>
+                <li className='o-header__user-navigation__item'>
+                    <IconButton icon={<WishlistIcon className='c-icon' />}>
+                        <div className='u-hidden-large-up'>
+                            <FormattedMessage id='header.wishlist' />
+                        </div>
+                    </IconButton>
+                </li>
+                <li className='o-header__user-navigation__item'>
+                    <IconButton
+                        icon={<CartIcon className='c-icon' />}
+                        onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}>
+                        <div className='u-hidden-large-up'>
+                            <FormattedMessage id='header.cart' />
+                        </div>
+                    </IconButton>
+                </li>
+            </ul>
+        </div>
     )
 }
 

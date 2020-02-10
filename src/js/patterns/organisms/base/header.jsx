@@ -60,7 +60,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                     }}
                 />
 
-                <a href='/' className='c-logo' title='Catwalk' ref={logoRef}
+                <a href='/' className='c-logo o-header__top__logo' title='Catwalk' ref={logoRef}
                     style={(logo ? {
                        backgroundImage: `url(${backgroundImageUrl})`,
                    } : {})}
@@ -70,7 +70,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                 <UserIconNav open />
             </div>
             <MobileNavigation
-                className='u-hidden-medium-up'
+                className='u-hidden-large-up'
                 callToAction={ctaLoggedIn()}
                 onClose={() => {
                     return setIsMobileMenuOpen(false)
