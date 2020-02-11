@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import NewsletterBlock from '../../../patterns/organisms/blocks/newsletter'
 
 class NewsletterTastic extends Component {
-    render() {
+    render () {
         return <NewsletterBlock />
     }
 }

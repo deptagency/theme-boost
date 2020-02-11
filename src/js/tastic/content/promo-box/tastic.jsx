@@ -8,7 +8,7 @@ import PromoboxWithPositioning from '../../../patterns/molecules/promobox/promob
 import Button from '../../../patterns/atoms/buttons/button'
 
 class PromoBoxTastic extends Component {
-    render() {
+    render () {
         // eslint-disable-next-line no-unused-vars
         const { verticalPosition, horizontalPosition, buttonLink, buttonText, image, title, topic } = this.props.data
 
@@ -18,7 +18,7 @@ class PromoBoxTastic extends Component {
                 horizontal={horizontalPosition}
                 image={image}
                 customChildrenStyle={{ margin: '32px' }}
-            >
+                >
                 <p className='c-topic'>
                     <Translatable value={topic} />
                 </p>

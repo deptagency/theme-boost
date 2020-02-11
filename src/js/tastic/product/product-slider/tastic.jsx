@@ -53,7 +53,7 @@ ProductItem.propTypes = {
 }
 
 class ProductSliderTastic extends Component {
-    render() {
+    render () {
         const { title, description, stream, productCount } = this.props.data
 
         if (!stream) {

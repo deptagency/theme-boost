@@ -11,13 +11,13 @@ const socialIcons = { facebook: <FacebookIcon />, instagram: <InstagramIcon /> }
 // returns an array of objects for the <LinkList/>
 // component. the actual link can be omitted to
 // render just the list of icons
-function socialLinksFromData(socialLinks) {
+function socialLinksFromData (socialLinks) {
     return socialLinks.map((link) => {
         return { ...link, children: socialIcons[link.icon] }
     })
 }
 
-function FooterSocialNav({ data }) {
+function FooterSocialNav ({ data }) {
     const socialLinks = socialLinksFromData(data.socialLinks)
     return (
         <LinkList

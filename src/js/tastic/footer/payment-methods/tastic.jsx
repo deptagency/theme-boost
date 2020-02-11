@@ -14,13 +14,13 @@ const paymentIcons = { paypal: <PayPalIcon />, visa: <VisaIcon />, mastercard: <
 // returns an array of objects for the <LinkList/>
 // component. the actual link can be omitted to
 // render just the list of icons
-function paymentMethodsFromData(paymentMethods) {
+function paymentMethodsFromData (paymentMethods) {
     return paymentMethods.map((method) => {
         return { children: paymentIcons[method.icon] }
     })
 }
 
-function FooterPaymentMethods({ data }) {
+function FooterPaymentMethods ({ data }) {
     const paymentMethods = paymentMethodsFromData(data.paymentMethods)
     return (
         <Column title={<Translatable value={data.header} />}>

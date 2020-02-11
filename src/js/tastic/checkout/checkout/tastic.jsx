@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Login from '../../../patterns/templates/checkout-login'
 
 class CheckoutTastic extends Component {
-    render() {
+    render () {
         return <Login />
     }
 }

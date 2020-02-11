@@ -14,13 +14,10 @@ const CategoryButtonBoxesTastic = (props) => {
     const {
         firstImage,
         firstButtonLabel,
-        firstButtonLink,
         secondImage,
         secondButtonLabel,
-        secondButtonLink,
         thirdImage,
         thirdButtonLabel,
-        thirdButtonLink,
     } = props.data
     let options = {
         vertical: 'middle',

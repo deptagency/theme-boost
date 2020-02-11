@@ -5,7 +5,7 @@ import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 import ContactInfoMini from '../../../patterns/molecules/ContactInfoMini'
 import Column from '../../../patterns/organisms/PageFooter/components/Column'
 
-function FooterContactInfo({ data }) {
+function FooterContactInfo ({ data }) {
     return (
         <Column title={<Translatable value={data.header} />}>
             <ContactInfoMini

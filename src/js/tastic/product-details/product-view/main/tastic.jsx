@@ -6,7 +6,7 @@ import productConnector from 'frontastic-catwalk/src/js/tastic/product/connector
 import OrganismsProductView from '../../../../patterns/organisms/products/product-view'
 
 class Main extends Component {
-    render() {
+    render () {
         const { product, variant } = this.props
 
         if (!product || !variant) {
@@ -14,8 +14,8 @@ class Main extends Component {
         }
 
         // TODO: Make replaceable by integrators
+        // eslint-disable-next-line array-callback-return
         const sizes = product.variants.map((v) => {
-            // eslint-disable-line array-callback-return
             if (v.attributes.size) {
                 return v.attributes.size
             }

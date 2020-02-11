@@ -6,7 +6,7 @@ import EmptyCart from '../../../patterns/organisms/cart/empty-cart'
 import Entity from 'frontastic-catwalk/src/js/app/entity'
 
 class CartTastic extends Component {
-    render() {
+    render () {
         const { cart } = this.props
 
         if (cart.data && cart.data.lineItems.length > 0) {
