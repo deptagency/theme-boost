@@ -7,7 +7,6 @@ import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
 import { TopCatNav } from './top-category-nav.module.scss'
 
 const NavItem = ({ item, onClick }) => {
-    console.log('item', item)
     return (
         <li className={`${TopCatNav} c-service-navigation o-list-inline__item`}>
             <NodeLink

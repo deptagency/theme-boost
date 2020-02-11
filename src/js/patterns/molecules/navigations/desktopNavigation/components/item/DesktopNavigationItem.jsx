@@ -17,7 +17,7 @@ import {
     gridImage,
 } from '../../desktop-navigation.module.scss'
 
-export function DesktopNavigationItem ({ item, level, navPath, onClick, number }) {
+export function DesktopNavigationItem ({ item, level, navPath, onClick }) {
     const sale = item.name === 'Sale%'
 
     const hasSubLevel = (item) => {
