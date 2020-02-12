@@ -18,7 +18,7 @@ class HelpDetail extends Component {
                             <div className='o-distance-l'>
                                 <h2 className='c-title-level-4 o-block-short'>
                                     <span className='o-block-short__body'>
-                                  Reklamation
+                                        Reklamation
                                     </span>
                                     <svg className='c-icon c-icon--s o-block-short__short-item t-spotlight-color' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                         <title>chevron-right</title>
@@ -30,7 +30,7 @@ class HelpDetail extends Component {
                             <div className='o-distance-l'>
                                 <h2 className='c-title-level-4 o-block-short'>
                                     <span className='o-block-short__body'>
-                                  Wie sende ich einen Artikel zurück?
+                                        Wie sende ich einen Artikel zurück?
                                     </span>
                                     <svg className='c-icon c-icon--s o-block-short__short-item t-spotlight-color' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                         <title>chevron-right</title>
@@ -42,7 +42,7 @@ class HelpDetail extends Component {
                             <div className='o-distance-l'>
                                 <h2 className='c-title-level-4 o-block-short'>
                                     <span className='o-block-short__body'>
-                                  Rückerstattung bei Gutscheinen
+                                        Rückerstattung bei Gutscheinen
                                     </span>
                                     <svg className='c-icon c-icon--s o-block-short__short-item t-spotlight-color' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                         <title>chevron-right</title>

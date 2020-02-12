@@ -53,7 +53,7 @@ class GuideBrand extends Component {
                                         <li className='o-list-bare__item'>
                                             <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
                                                 <button>
-                                                Abercrombie & Fitch
+                                                    Abercrombie & Fitch
                                                 </button>
                                                 <svg className='c-icon c-icon--s u-hidden' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                                     <title>Checkmark</title>
@@ -64,7 +64,7 @@ class GuideBrand extends Component {
                                         <li className='o-list-bare__item'>
                                             <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
                                                 <button>
-                                                Abercrombie & Fitch
+                                                    Abercrombie & Fitch
                                                 </button>
                                                 <svg className='c-icon c-icon--s u-hidden' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                                     <title>Checkmark</title>
@@ -75,7 +75,7 @@ class GuideBrand extends Component {
                                         <li className='o-list-bare__item'>
                                             <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
                                                 <button>
-                                                Abercrombie & Fitch
+                                                    Abercrombie & Fitch
                                                 </button>
                                                 <svg className='c-icon c-icon--s u-hidden' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                                     <title>Checkmark</title>
@@ -86,7 +86,7 @@ class GuideBrand extends Component {
                                         <li className='o-list-bare__item'>
                                             <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
                                                 <button>
-                                                Abercrombie & Fitch
+                                                    Abercrombie & Fitch
                                                 </button>
                                                 <svg className='c-icon c-icon--s u-hidden' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                                     <title>Checkmark</title>
@@ -97,7 +97,7 @@ class GuideBrand extends Component {
                                         <li className='o-list-bare__item'>
                                             <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
                                                 <button>
-                                                Abercrombie & Fitch
+                                                    Abercrombie & Fitch
                                                 </button>
                                                 <svg className='c-icon c-icon--s u-hidden' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                                     <title>Checkmark</title>
@@ -108,7 +108,7 @@ class GuideBrand extends Component {
                                         <li className='o-list-bare__item'>
                                             <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform is-active'>
                                                 <button>
-                                                Abercrombie & Fitch
+                                                    Abercrombie & Fitch
                                                 </button>
                                                 <svg className='c-icon c-icon--s' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                                     <title>Checkmark</title>
@@ -127,7 +127,7 @@ class GuideBrand extends Component {
                                         <li className='o-list-bare__item'>
                                             <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform is-active'>
                                                 <button>
-                                                Abercrombie & Fitch
+                                                    Abercrombie & Fitch
                                                 </button>
                                                 <svg className='c-icon c-icon--s' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                                     <title>Checkmark</title>
@@ -138,7 +138,7 @@ class GuideBrand extends Component {
                                         <li className='o-list-bare__item'>
                                             <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform is-active'>
                                                 <button>
-                                                Abercrombie & Fitch
+                                                    Abercrombie & Fitch
                                                 </button>
                                                 <svg className='c-icon c-icon--s' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                                     <title>Checkmark</title>
@@ -149,7 +149,7 @@ class GuideBrand extends Component {
                                         <li className='o-list-bare__item'>
                                             <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
                                                 <button>
-                                                Abercrombie & Fitch
+                                                    Abercrombie & Fitch
                                                 </button>
                                                 <svg className='c-icon c-icon--s u-hidden' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                                     <title>Checkmark</title>
@@ -160,7 +160,7 @@ class GuideBrand extends Component {
                                         <li className='o-list-bare__item'>
                                             <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
                                                 <button>
-                                                Abercrombie & Fitch
+                                                    Abercrombie & Fitch
                                                 </button>
                                                 <svg className='c-icon c-icon--s u-hidden' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                                     <title>Checkmark</title>
@@ -171,7 +171,7 @@ class GuideBrand extends Component {
                                         <li className='o-list-bare__item'>
                                             <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
                                                 <button>
-                                                Abercrombie & Fitch
+                                                    Abercrombie & Fitch
                                                 </button>
                                                 <svg className='c-icon c-icon--s u-hidden' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                                     <title>Checkmark</title>
@@ -182,7 +182,7 @@ class GuideBrand extends Component {
                                         <li className='o-list-bare__item'>
                                             <div className='o-flex o-flex--justified o-flex--center c-link c-link--uniform'>
                                                 <button>
-                                                Abercrombie & Fitch
+                                                    Abercrombie & Fitch
                                                 </button>
                                                 <svg className='c-icon c-icon--s u-hidden' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                                                     <title>Checkmark</title>

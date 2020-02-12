@@ -11,7 +11,7 @@ class OrderSuccess extends Component {
                                 <div className='c-context-header__middle'>
                                     <div className='o-flex o-flex--center'>
                                         <h1 className='c-title-level-3 c-context-header__title o-flex__item'>
-                                    Bestellbestätigung
+                                            Bestellbestätigung
                                         </h1>
                                     </div>
                                 </div>
@@ -42,9 +42,9 @@ class OrderSuccess extends Component {
                                 <h2 className='c-title-level-4 u-text-center'>Lieferadresse</h2>
                                 <address className='o-distance-s'>
                                     <strong>Tim Hartmann</strong><br />
-                                Ewaldstr. 2 <br />
-                                59174 Kamen <br />
-                                Deutschland
+                                    Ewaldstr. 2 <br />
+                                    59174 Kamen <br />
+                                    Deutschland
                                 </address>
                             </section>
                             <span className='c-divider o-distance-m' />
@@ -58,7 +58,7 @@ class OrderSuccess extends Component {
                                 <div className='c-frame t-spotlight-border o-distance-m'>
                                     <p>
                                         <strong>SEPA-Lastschrift</strong><br />
-                                  Das Geld wird in den nächsten fünf Tagen von Ihrem angegebenen Konto abgebucht.
+                                        Das Geld wird in den nächsten fünf Tagen von Ihrem angegebenen Konto abgebucht.
                                     </p>
                                     <dl className='o-distance-m'>
                                         <dt className='t-text-quiet'>Kontoinhaber</dt>

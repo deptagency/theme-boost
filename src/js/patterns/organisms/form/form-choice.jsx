@@ -28,7 +28,7 @@ class OrganismsChoice extends Component {
                 </div>
                 <div className='o-block-short__body'>
                     <label htmlFor='inp-checkbox-02' className='c-form-label'>
-                    Checkbox
+                        Checkbox
                     </label>
                 </div>
             </div>
