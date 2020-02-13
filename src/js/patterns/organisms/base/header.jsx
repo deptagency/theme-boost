@@ -104,7 +104,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                     I've added the media query classes to the top level
                     inside the Header component to have it all in one place.
                 */}
-                
+
             </div>
             <div>
                 <DesktopNavigation

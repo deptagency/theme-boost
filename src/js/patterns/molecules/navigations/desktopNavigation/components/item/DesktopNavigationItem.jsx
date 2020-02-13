@@ -90,7 +90,6 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick }) {
 DesktopNavigationItem.propTypes = {
     item: categoryTreeType,
     level: PropTypes.number,
-    number: PropTypes.number,
     navPath: PropTypes.arrayOf(categoryTreeType),
     onClick: PropTypes.func,
 }
