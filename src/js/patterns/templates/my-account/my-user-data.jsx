@@ -32,13 +32,13 @@ const MyUserData = ({ products }) => {
                                     <FormattedMessage id='account.user.name' />
                                 </dt>
                                 <dd className='u-text-s u-text-strong'>
-                                  John Doe
+                                    John Doe
                                 </dd>
                                 <dt className='u-text-s t-text-quiet o-distance-s'>
                                     <FormattedMessage id='account.user.gender' />
                                 </dt>
                                 <dd className='u-text-s u-text-strong'>
-                                  Männlich
+                                    Männlich
                                 </dd>
                             </div>
                         </div>
@@ -66,7 +66,7 @@ const MyUserData = ({ products }) => {
                                     <FormattedMessage id='account.login.emailAddress' />
                                 </dt>
                                 <dd className='u-text-s u-text-strong'>
-                                  John.Doe@gmail.com
+                                    John.Doe@gmail.com
                                 </dd>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ const MyUserData = ({ products }) => {
                                     <FormattedMessage id='account.login.password' />
                                 </dt>
                                 <dd className='u-text-s u-text-strong'>
-                                  **********
+                                    **********
                                 </dd>
                             </div>
                         </div>

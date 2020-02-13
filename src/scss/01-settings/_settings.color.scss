@@ -9,6 +9,7 @@ $color-palette-green-200: #f5fcf1 !default;
 $color-palette-green-400: #98e076 !default;
 $color-palette-red-200: #faeaea !default;
 $color-palette-red-400: #e07676 !default;
+$color-palette-red-600: #E93F30 !default;
 $color-palette-orange-200: #fff7dc !default;
 $color-palette-orange-400: #ffe274 !default;
 $color-palette-orange-600: #ffce18 !default;
@@ -36,5 +37,5 @@ $color-brand-secondary-lighter: $color-palette-orange-200 !default;
 // @description Meaningful colors for something like error or success messages
 $color-semantic-success-base: $color-palette-green-400 !default;
 $color-semantic-success-light: $color-palette-green-200 !default;
-$color-semantic-danger-base: $color-palette-red-400 !default;
+$color-semantic-danger-base: $color-palette-red-600 !default;
 $color-semantic-danger-light: $color-palette-red-200 !default;

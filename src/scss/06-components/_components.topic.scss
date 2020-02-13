@@ -1,16 +1,18 @@
 // Config
-$topic-font-size: $font-size-m !default;
-$topic-font-size-bp-l: $font-size-l !default;
 $topic-font-family: $font-family-spot-light !default;
 
 // Topic
 .c-topic {
   font-family: $topic-font-family;
-  font-size: $topic-font-size;
+  font-size: $font-size-m;
   font-weight: $font-weight-light;
   line-height: 1.1;
 
-  @media (min-width: $layout-breakpoint-l) {
-    font-size: $topic-font-size-bp-l;
+  @include breakpoint($layout-breakpoint-s) {
+    font-size: $font-size-l;
+  }
+  
+  @include breakpoint($layout-breakpoint-l) {
+    font-size: $font-size-xl;
   }
 }

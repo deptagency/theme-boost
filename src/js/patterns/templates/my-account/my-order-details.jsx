@@ -95,7 +95,7 @@ const MyOrderDetails = ({ products }) => {
                     </div>
                     <div className='o-distance'>
                         <h2 className='c-title-level-3'>
-                        Verschickt am Do., 11.09.2019
+                            Verschickt am Do., 11.09.2019
                         </h2>
                         <div className='o-distance-m'>
                             <BundleListing />

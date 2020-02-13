@@ -1,0 +1,26 @@
+{
+    "tasticType": "frontastic/boost/brand-contentful",
+    "name": "Brand Contentful",
+    "category": "Content",
+    "icon": "wrap_text",
+    "schema": [
+        {
+            "name": "Stream Selection",
+            "fields": [
+                {
+                    "label": "Stream",
+                    "field": "stream",
+                    "type": "stream",
+                    "streamType": "content",
+                    "default": null
+                },
+                {
+                    "label": "Show company logo",
+                    "field": "showLogo",
+                    "type": "boolean",
+                    "default": true
+                }
+            ]
+        }
+    ]
+}

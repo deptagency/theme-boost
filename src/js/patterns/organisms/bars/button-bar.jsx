@@ -8,28 +8,28 @@ class ButtonBar extends Component {
         return (<div>
             <div className='o-buttonbar'>
                 <Button type='primary' className='o-buttonbar__item'>
-              Primary Button
+                    Primary Button
                 </Button>
                 <Button type='quiet' className='o-buttonbar__item'>
-              Quiet Button
+                    Quiet Button
                 </Button>
             </div>
             <h3 className='o-distance'>Buttonbar with full item</h3>
             <div className='o-buttonbar'>
                 <Button type='primary' className='o-buttonbar__item o-buttonbar__item--full'>
-              Primary Button
+                    Primary Button
                 </Button>
                 <Button type='quiet' className='o-buttonbar__item'>
-              Quiet Button
+                    Quiet Button
                 </Button>
             </div>
             <h3 className='o-distance'>Buttonbar Stacked</h3>
             <div className='o-buttonbar o-buttonbar--stacked'>
                 <Button type='primary' className='o-buttonbar__item o-buttonbar__item--full'>
-              Primary Button
+                    Primary Button
                 </Button>
                 <Button type='quiet' className='o-buttonbar__item'>
-              Quiet Button
+                    Quiet Button
                 </Button>
             </div>
         </div>)

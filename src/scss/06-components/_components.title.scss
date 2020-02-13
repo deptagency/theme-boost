@@ -5,8 +5,11 @@
   font-size: $font-size-xl;
   line-height: 1.2;
 
-  @media (min-width: $layout-breakpoint-l) {
+  @media (min-width: $layout-breakpoint-s) {
     font-size: $font-size-xxl;
+  }
+  @media (min-width: $layout-breakpoint-xl) {
+    font-size: $font-size-xxxl;
   }
 }
 

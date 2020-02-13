@@ -19,11 +19,11 @@ const MoreInfoProductDesktop = ({ product }) => {
     return (
         <div className='u-hidden-until-medium'>
             <div className='o-with-sidebar o-distance-xl' style={{ minHeight: '440px' }}>
-                <Tabs className='c-box c-box--l c-tabs u-background-color-default' selectedTabClassName='is-active'>
+                <Tabs className='c-box c-box--xl c-tabs u-background-color-default' selectedTabClassName='is-active'>
                     <TabList className='c-tabs__list'>
                         <Tab className='c-tabs__list__item'>
                             <h3 className={classnames({
-                                    'c-title-level-4': true,
+                                    'c-tabs__list__title': true,
                                     'is-active': selectedTab === 0,
                                 })}
                                 onClick={() => { setSelectedTab(0) }}
@@ -33,7 +33,7 @@ const MoreInfoProductDesktop = ({ product }) => {
                         </Tab>
                         <Tab className='c-tabs__list__item'>
                             <h3 className={classnames({
-                                'c-title-level-4': true,
+                                'c-tabs__list__title': true,
                                 'is-active': selectedTab === 1,
                             })}
                                 onClick={() => { setSelectedTab(1) }}
@@ -43,7 +43,7 @@ const MoreInfoProductDesktop = ({ product }) => {
                         </Tab>
                         <Tab className='c-tabs__list__item'>
                             <h3 className={classnames({
-                                'c-title-level-4': true,
+                                'c-tabs__list__title': true,
                                 'is-active': selectedTab === 2,
                             })}
                                 onClick={() => { setSelectedTab(2) }}
@@ -53,7 +53,7 @@ const MoreInfoProductDesktop = ({ product }) => {
                         </Tab>
                     </TabList>
 
-                    <TabPanel className='o-distance-l'>
+                    <TabPanel className='o-distance-xl'>
                         <h3 className='c-title'>
                             <FormattedMessage id='product.description' />
                         </h3>
@@ -61,7 +61,7 @@ const MoreInfoProductDesktop = ({ product }) => {
                             { attributes && <DetailsDesktop attributes={attributes} /> }
                         </div>
                     </TabPanel>
-                    <TabPanel className='o-distance-l'>
+                    <TabPanel className='o-distance-xl'>
                         <div>
                             <h3 className='c-title'>
                                 <FormattedMessage id='product.shipping' />
@@ -86,7 +86,7 @@ const MoreInfoProductDesktop = ({ product }) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='o-block-short o-block-short--medium o-distance-l'>
+                            <div className='o-block-short o-block-short--medium o-distance-xl'>
                                 <SmallTruck className='c-icon c-icon--m o-block-short__short-item' />
                                 <p className='o-block-short__body'>
                                     <p><FormattedMessage id='product.standardDelivery.title' /></p>

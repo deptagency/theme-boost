@@ -19,7 +19,7 @@ class Guide extends Component {
                             <div className='c-context-header__middle'>
                                 <div className='o-flex o-flex--center'>
                                     <h1 className='c-title-level-3 c-context-header__title o-flex__item'>
-                    Filter
+                                        Filter
                                     </h1>
                                 </div>
                             </div>

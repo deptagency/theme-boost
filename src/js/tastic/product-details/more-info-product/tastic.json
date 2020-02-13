@@ -1,0 +1,20 @@
+{
+    "tasticType": "frontastic/boost/more-info-product",
+    "name": "More Info Product",
+    "icon": "menu",
+    "category": "Product Details",
+    "schema": [
+        {
+            "name": "Main Configuration",
+            "fields": [
+                {
+                    "label": "Stream",
+                    "field": "stream",
+                    "type": "stream",
+                    "streamType": "product",
+                    "default": null
+                }
+            ]
+        }
+    ]
+}

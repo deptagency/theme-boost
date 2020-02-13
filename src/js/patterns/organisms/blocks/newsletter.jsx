@@ -7,13 +7,13 @@ class NewsletterBlock extends Component {
     render () {
         return (
             <div className='c-box t-spotlight'>
-                <div className='o-grid o-grid--medium-half'>
-                    <div>
-                        <p className='c-topic t-text-ghost'><FormattedMessage id='exlusiveDiscounts' /></p>
-                        <h3 className='c-title t-text-ghost'><FormattedMessage id='becomeFamily' /></h3>
+                <div className='o-media-block'>
+                    <div className='o-media-block__body'>
+                        <p className='c-topic u-text-color-ghost'><FormattedMessage id='exlusiveDiscounts' /></p>
+                        <h3 className='c-title-level-1 u-text-color-ghost'><FormattedMessage id='becomeFamily' /></h3>
                     </div>
-                    <div>
-                        <FormattedMessage id='yourEmail' >
+                    <div className='o-media-block__asset'>
+                        <FormattedMessage id='yourEmail'>
                             {placeholder => { return <input type='email' placeholder={placeholder} className='c-input-ghost' /> }}
                         </FormattedMessage>
                         <div className='o-distance-s'>

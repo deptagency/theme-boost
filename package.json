@@ -1,7 +1,6 @@
 {
-    "name": "frontastic-theme-boost",
-    "version": "1.0.0-alpha",
-    "private": true,
+    "name": "@frontastic/theme-boost",
+    "version": "1.0.0-alpha.6",
     "resolutions": {
         "unidragger": "2.2.3"
     },
@@ -20,6 +19,8 @@
         "@babel/plugin-syntax-dynamic-import": "^7.2.0",
         "@babel/preset-env": "^7.5.4",
         "@babel/preset-react": "^7.0.0",
+        "@frontastic/catwalk": "latest",
+        "@frontastic/common": "latest",
         "@rehooks/component-size": "^1.0.3",
         "@rehooks/window-size": "^1.0.2",
         "@storybook/addon-actions": "^5.2.6",
@@ -52,7 +53,7 @@
         "duplicate-package-checker-webpack-plugin": "^3.0.0",
         "empty-string": "^1.1.1",
         "eslint": "5.16.0",
-        "eslint-config-prettier": "^6.4.0",
+        "eslint-config-prettier": "^6.10.0",
         "eslint-config-react": "^1.1.7",
         "eslint-config-react-app": "^4.0.1",
         "eslint-config-standard": "^12.0.0",
@@ -73,8 +74,6 @@
         "flickity-as-nav-for": "^2.0.1",
         "flickity-imagesloaded": "^2.0.0",
         "focus-trap": "^5.0.1",
-        "frontastic-catwalk": "0.1.0",
-        "frontastic-common": "1.0.0-alpha",
         "fs-extra": "8.0.1",
         "html-webpack-plugin": "^3.2.0",
         "i": "^0.3.6",
@@ -149,8 +148,8 @@
         "start": "node bin/start.js",
         "build": "node bin/build.js",
         "test": "node bin/test.js --env=jsdom",
-        "check": "node node_modules/.bin/eslint --ext .js --ext .jsx -c ../../../../paas/integration/eslint.config.json src/js/ test/js/",
-        "fix": "node node_modules/.bin/eslint --fix --ext .js --ext .jsx -c ../../../../paas/integration/eslint.config.json src/js/ test/js/",
+        "check": "node node_modules/.bin/eslint --ext .js --ext .jsx -c ../../../integration/eslint.config.json src/js/ test/js/",
+        "fix": "node node_modules/.bin/eslint --fix --ext .js --ext .jsx -c ../../../integration/eslint.config.json src/js/ test/js/",
         "server:start": "NODE_ENV=development nodemon --legacy-watch --watch src/js/ bin/devServer.js --exec babel-node --presets env,react-app",
         "storybook": "start-storybook -s ./public -p 9001",
         "build-storybook": "build-storybook"

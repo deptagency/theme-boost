@@ -16,19 +16,35 @@ $header-height: 60px !default;
   &__top-left {
     display: none;
 
-    @media (min-width: $layout-breakpoint-l) {
+    @include breakpoint($layout-breakpoint-l) {
       display: block;
     }
   }
 
-  &__top-right {
-    .my-profile--desktop {
-      display: none;
+  &__user-navigation {
+    @include list-reset();
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: -$spacing-inline-xs;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include breakpoint($layout-breakpoint-l) {
+        padding-left: $spacing-inline-l;
+        position: static;
+        top: 0;
+        transform: translate(0);
     }
 
-    @media (min-width: $layout-breakpoint-l) {
-      .my-profile--desktop {
-        display: block;
+    &__item {
+      padding-left: $spacing-inline-xs;
+
+      @include breakpoint($layout-breakpoint-l) {
+        padding-left: $spacing-inline-l;
       }
     }
   }
@@ -37,13 +53,19 @@ $header-height: 60px !default;
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    position: relative;
 
-    .o-list-inline:last-child {
-      margin-left: auto;
+    @include breakpoint($layout-breakpoint-l) {
+      justify-content: space-between;
+      padding-top: 24px;
+      position: static;
+    }
 
-      @media (min-width: $layout-breakpoint-l) {
-        margin-left: initial;
+    &__logo {
+      margin-left: $spacing-inline-m;
+      
+      @include breakpoint($layout-breakpoint-l) {
+        margin-left: 0;
       }
     }
   }
@@ -55,7 +77,7 @@ $header-height: 60px !default;
     justify-content: space-between;
     margin-top: $spacing-stack-m;
 
-    @media (min-width: $layout-breakpoint-l) {
+    @include breakpoint($layout-breakpoint-l) {
       justify-content: center;
       margin-top: $spacing-stack-l;
     }

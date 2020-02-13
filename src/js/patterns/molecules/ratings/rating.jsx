@@ -8,13 +8,13 @@ import { ReactComponent as StarSmallEmpty } from '../../../../icons/star-small-e
 const Rating = ({ counterMessage, className }) => {
     return (
         <div className={className}>
-            <div className='c-rating o-flex o-flex--center'>
+            <div className='c-rating'>
                 {[1, 2, 3, 4, 5].map((s, i) => {
-                    return i < 3 ? <StarSmallFull className='c-rating__symbol is-active o-flex__item' key={i} /> : <StarSmallEmpty className='c-rating__symbol o-flex__item' key={i} />
+                    return i < 3 ? <StarSmallFull className='c-rating__symbol is-active' key={i} /> : <StarSmallEmpty className='c-rating__symbol' key={i} />
                 })}
             </div>
             {counterMessage ?
-                <div className='u-text-s t-text-quiet'>
+                <div className='u-text-xs u-text-color-quiet o-distance-xxxs'>
                     <FormattedMessage id='product.reviewsWithCount' values={{ count: 7 }} />
                 </div>
             : null}

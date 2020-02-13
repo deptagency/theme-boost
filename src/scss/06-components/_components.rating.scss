@@ -4,14 +4,25 @@ $rating-active-font-color: $color-palette-orange-600 !default;
 
 /// Rating
 .c-rating {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
   &__symbol {
+    margin-left: $spacing-inline-xxxs;
     stroke: currentColor;
     stroke-width: 2px;
-    color: $rating-active-font-color;
+    color: $rating-font-color;
+
+    &:first-child {
+      margin-left: 0;
+    }
 
     &.is-active {
       fill: currentColor;
       stroke: none;
+      color: $rating-active-font-color;
     }
   }
 }

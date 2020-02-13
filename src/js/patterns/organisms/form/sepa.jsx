@@ -20,7 +20,7 @@ class Sepa extends Component {
                                         </div>
                                         <div className='o-block-short__body'>
                                             <label htmlFor='inp-radio-02' className='c-form-label'>
-                            Tim Hartmann
+                                                Tim Hartmann
                                                 <p className='o-distance-xs'><span className='t-text-quiet'>IBAN:</span> DE 28 1234 5678 9876 52</p>
                                             </label>
                                         </div>

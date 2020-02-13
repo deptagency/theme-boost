@@ -34,3 +34,23 @@
     grid-column: auto / span 3;
   }
 }
+
+// @object Media Block Half
+// Half columns for items
+.o-media-block--half {
+  @media (min-width: $layout-breakpoint-m) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  
+  .o-media-block__asset {
+    @media (min-width: $layout-breakpoint-m) {
+      grid-column: 1 / span 5;
+    }
+  }
+
+  .o-media-block__body {
+    @media (min-width: $layout-breakpoint-m) {
+      grid-column: 7 / span 6;
+    }
+  }
+}
