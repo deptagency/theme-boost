@@ -25,7 +25,7 @@ class Login extends Component {
                     handleClick={() => { app.getRouter().history.replace('/') }}
                 />
                 <div className='u-hidden-until-medium'>
-                    <h1 className='c-title u-text-center'>
+                    <h1 className='c-title'>
                         <FormattedMessage id='account.login.welcomeBack' />
                     </h1>
                 </div>
@@ -36,7 +36,7 @@ class Login extends Component {
                         </label>
                         <input
                             type='email'
-                            className='o-distance-s'
+                            className='o-distance-xs'
                             value={this.state.login_email}
                             onChange={(event) => {
                                 this.setState({ login_email: event.target.value })
@@ -49,7 +49,7 @@ class Login extends Component {
                         </label>
                         <input
                             type='password'
-                            className='c-form-unit o-distance-s'
+                            className='c-form-unit o-distance-xs'
                             value={this.state.login_password}
                             onChange={(event) => {
                                 this.setState({ login_password: event.target.value })

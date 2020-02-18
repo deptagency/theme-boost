@@ -15,7 +15,7 @@
     z-index: $index-layer-navigation;
 
     @include breakpoint($layout-breakpoint-l) {
-        display: none;
+      display: flex;
         height: auto;
         padding: 0;
         position: relative;

@@ -15,7 +15,7 @@ class Register extends Component {
                     handleClick={() => { app.getRouter().history.replace('/') }}
                 />
                 <div className='u-hidden-until-medium'>
-                    <h2 className='c-title u-text-center'>
+                    <h2 className='c-title'>
                         <FormattedMessage id='account.register.createUser' />
                     </h2>
                 </div>

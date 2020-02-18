@@ -24,7 +24,7 @@ class PromoboxWithPositioning extends Component {
         }
 
         return (
-            <div className='c-promobox t-spotlight u-aspect-ratio-16x9 u-aspect-ratio-21x9-large' style={style}>
+            <div className='c-promobox t-spotlight u-aspect-ratio-16x9' style={style}>
                 <Image
                     media={image.media}
                     alt={<Translatable value={image.media.title} />}

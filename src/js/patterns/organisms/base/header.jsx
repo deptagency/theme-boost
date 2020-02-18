@@ -89,15 +89,16 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                     </a>
                     <UserIconNav open />
                 </div>
-                <MobileNavigation
-                    className='u-hidden-large-up'
-                    callToAction={ctaLoggedIn()}
-                    onClose={() => {
-                        return setIsMobileMenuOpen(false)
-                    }}
-                    open={isMobileMenuOpen}
-                    topCategories={topCategories}
-                />
+                <div className='u-hidden-large-up'>
+                    <MobileNavigation
+                        callToAction={ctaLoggedIn()}
+                        onClose={() => {
+                            return setIsMobileMenuOpen(false)
+                        }}
+                        open={isMobileMenuOpen}
+                        topCategories={topCategories}
+                    />
+                </div>
                 {/*
                     Although <MobileMenuToggle /> and <MobileNavigation />
                     set their own classNames inside the components,
@@ -106,7 +107,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                 */}
 
             </div>
-            <div>
+            <div className='o-distance-m'>
                 <DesktopNavigation
                     topCategories={topCategories}
                     currentTopCategory={currentTopCategory}
