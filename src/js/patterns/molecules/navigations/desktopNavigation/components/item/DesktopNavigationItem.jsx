@@ -27,6 +27,7 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick }) {
     return (
         <div className='c-navigation__item'>
             <NodeLink
+                className='c-navigation__anchor'
                 node={item}
                 onClick={(e) => {
                     if (onClick && item && item.length > 0) {

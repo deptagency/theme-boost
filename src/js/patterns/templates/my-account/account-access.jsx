@@ -21,7 +21,7 @@ class AccountAccessForms extends Component {
                 <Grow in={(this.state.form === 'login')}>
                     <Login />
                     <section className='o-container-small o-distance-l'>
-                        <h2 className='c-title u-text-center'>
+                        <h2 className='c-title'>
                             <FormattedMessage id='account.newHere' />
                         </h2>
                         <Button
@@ -39,7 +39,7 @@ class AccountAccessForms extends Component {
                 <Grow in={(this.state.form === 'register')}>
                     <Register />
                     <section className='o-container-small o-distance-l'>
-                        <h2 className='c-title u-text-center'>
+                        <h2 className='c-title'>
                             <FormattedMessage id='account.login.welcomeBack' />
                         </h2>
                         <Button

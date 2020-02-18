@@ -31,6 +31,10 @@
         transform: translateX(0);
     }
 
+    &__anchor {
+      text-decoration: none;
+    }
+
     &__item {
         border-top: 1px solid $border-color-base;
         font-family: $font-family-spot;
