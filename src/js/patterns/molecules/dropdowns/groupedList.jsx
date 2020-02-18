@@ -19,6 +19,7 @@ import InputWithLabelIcon from '../forms/input-with-label-icon'
 import { ReactComponent as SearchIcon } from '../../../../icons/search.svg'
 import { grayColor } from '../../templates/slide-in-panels/panels.module.scss'
 import { ReactComponent as TickSelected } from '../../../../icons/tick-selected.svg'
+import groupByName from '../../../helpers/groupByName'
 
 const DropdownGroupedList = ({
     searchable,
@@ -27,21 +28,6 @@ const DropdownGroupedList = ({
     resetSelection, title,
     menuStyle = {},
 }) => {
-    // TODO Sanja - duplicate code from src/js/patterns/molecules/lists/selectionList/grouped.jsx
-    const sortedItems = items.sort((a, b) => { return (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : -1 })
-
-    let groupedItems = sortedItems.reduce((r, e) => {
-        let group = e.name[0].toUpperCase()
-        const entryItem = {
-            ...e,
-            isSelected: selectedItems.some(i => { return i.id === e.id }),
-        }
-
-        if (!r[group]) { r[group] = { group, list: [entryItem] } } else { r[group].list.push(entryItem) }
-        return r
-    }, {})
-    // end of duplicate code
-
     const dropdownRef = useRef()
 
     const closeDropdown = () => {
@@ -76,7 +62,7 @@ const DropdownGroupedList = ({
                 </>}
 
                 <Scrollbars className={`dropdownScrollbars ${dropdownScrollbars}`}>
-                    {Object.values(groupedItems).map(({ group, list }, i) => {
+                    {Object.values(groupByName(items, selectedItems)).map(({ group, list }, i) => {
                         return (
                             <Fragment key={i}>
                                 <div className={classnames('u-text-strong', 'o-distance-s', 'groupName', groupName)}>
