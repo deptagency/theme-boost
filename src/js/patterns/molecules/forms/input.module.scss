@@ -1,0 +1,14 @@
+.input {
+  position: relative;
+
+  .iconPosition {
+    position: absolute;
+    left: 16px;
+    top: 15px;
+  }
+
+  .valuePadding {
+    padding-left: 40px;
+    box-sizing: border-box;
+  }
+}

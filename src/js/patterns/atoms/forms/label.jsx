@@ -16,7 +16,7 @@ class Label extends Component {
 }
 
 Label.propTypes = {
-    label: PropTypes.string.isRequired,
+    label: PropTypes.any.isRequired,
     className: PropTypes.string.isRequired,
     htmlFor: PropTypes.string,
 }

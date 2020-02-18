@@ -42,7 +42,7 @@ Button.propTypes = {
     children: PropTypes.node.isRequired,
     component: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     className: PropTypes.string,
-    type: PropTypes.oneOf([null, 'primary', 'quiet', 'ghost', 'plain', 'destructive']),
+    type: PropTypes.oneOf([null, 'primary', 'quiet', 'quieter', 'ghost', 'plain', 'destructive']),
     size: PropTypes.oneOf([null, 'minion', 'boss']),
     htmlType: PropTypes.string,
     icon: PropTypes.bool,

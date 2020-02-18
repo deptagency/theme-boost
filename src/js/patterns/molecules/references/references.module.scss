@@ -1,0 +1,20 @@
+.nextPanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-left: 10px;
+  height: 56px;
+  cursor: pointer;
+}
+
+.selection {
+  display: flex;
+  font-weight: normal;
+  color: #97A5BA;
+
+  .filterSelectionSample {
+    font-size: 15px;
+    margin-right: 16px;
+  }
+}
