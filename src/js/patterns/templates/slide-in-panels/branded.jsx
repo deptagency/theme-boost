@@ -8,11 +8,11 @@ import { Scrollbars } from 'react-custom-scrollbars'
 import Modal from 'react-modal'
 Modal.setAppElement(document.getElementById('app'))
 
-const SlideInPanel = ({ isOpen, children, header, footer, from }) => {
+const BrandedSlideInPanel = ({ isOpen, children, header, footer, from, overlayClassName }) => {
     return (
         <SlidingPane
             className='o-slide-up-panel'
-            overlayClassName='some-custom-overlay-class'
+            overlayClassName={overlayClassName}
             isOpen={isOpen}
             from={from}
             width={'100%'}
@@ -25,7 +25,9 @@ const SlideInPanel = ({ isOpen, children, header, footer, from }) => {
                     <div className='o-television__display__wrapper'>
                         {children}
                     </div>
-                    <div className='u-background-color-default o-television__bouncer o-distance-m' />
+
+                    <div className='c-box u-background-color-default o-television__bouncer' />
+
                 </Scrollbars>
                 <div className='o-television__remote-control u-background-color-default'>
                     {footer}
@@ -36,17 +38,19 @@ const SlideInPanel = ({ isOpen, children, header, footer, from }) => {
     )
 }
 
-SlideInPanel.defaultProps = {
+BrandedSlideInPanel.defaultProps = {
     isOpen: false,
     from: 'bottom',
+    overlayClassName: 'some-custom-overlay-class',
 }
 
-SlideInPanel.propTypes = {
+BrandedSlideInPanel.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     children: PropTypes.node.isRequired,
     header: PropTypes.node.isRequired,
     footer: PropTypes.node.isRequired,
-    from: PropTypes.string.isRequired,
+    from: PropTypes.oneOf(['left', 'right', 'bottom']),
+    overlayClassName: PropTypes.string,
 }
 
-export default SlideInPanel
+export default BrandedSlideInPanel

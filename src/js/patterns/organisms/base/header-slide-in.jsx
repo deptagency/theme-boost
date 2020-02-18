@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import _ from 'lodash'
 import { ReactComponent as CloseMobile } from '../../../../icons/close.svg'
-import { ReactComponent as ArrowLeftWhite } from '../../../../icons/arrow-left.svg'
+import { ReactComponent as ArrowLeftWhite } from '../../../../icons/arrow-left-white.svg'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -26,9 +26,9 @@ const HeaderSlideIn = (props) => {
 
                 <div className='c-context-header__middle'>
                     <div className='o-flex o-flex--justify-center'>
-                        <h4 className='c-title-level-3 c-context-header__title o-flex__item'>
+                        <div className='c-title-level-4 c-context-header__title o-flex__item'>
                             {title}
-                        </h4>
+                        </div>
                     </div>
                 </div>
                 {showRightCloseIcon && <button className='u-icon-line-height' onClick={onClose}>

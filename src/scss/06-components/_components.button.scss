@@ -81,6 +81,20 @@ $button-control-size: 48px !default;
   }
 }
 
+.c-button--quieter {
+  @include border($button-quiet-border-color);
+  background-color: transparent;
+  color: #000000;
+  text-transform: none;
+  font-weight: normal;
+
+  &:hover {
+    border-color: $button-quiet-background-color;
+    background-color: $button-quiet-background-color;
+
+  }
+}
+
 /// Destructive Button
 /// @group Buttons
 .c-button--destructive {
