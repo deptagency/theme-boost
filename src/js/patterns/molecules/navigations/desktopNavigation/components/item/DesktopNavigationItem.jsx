@@ -7,10 +7,8 @@ import { DesktopNavigationTree } from '../tree'
 import { categoryTreeType } from '../../types'
 
 import {
-    secNavDesktop,
     itemNameList,
     itemNameUnderline,
-    dropdownContent,
     gridItemChild,
     grandchildText,
     gridItemColumn,
