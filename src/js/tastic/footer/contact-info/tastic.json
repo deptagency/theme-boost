@@ -31,6 +31,11 @@
                     "label": "E-Mail Overline",
                     "field": "emailOverline",
                     "type": "string"
+                },
+                {
+                    "label": "Card Tastic",
+                    "field": "cardTastic",
+                    "type": "tastic"
                 }
             ]
         }
