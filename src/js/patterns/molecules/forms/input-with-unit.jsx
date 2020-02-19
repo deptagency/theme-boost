@@ -1,21 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import Input from 'js/patterns/atoms/forms/input'
+import Input from '../../atoms/forms/input'
 
-class InputWithUnit extends Component {
-    render () {
-        const prefix = this.props.prefix
-
-        return (
-            <div className='c-form-unit'>
-                {prefix && <div className='c-form-unit__type c-form-unit__type--prefix'>{this.props.unit}</div>}
-                <Input type='text' className={this.props.className + (prefix ? ' c-form-unit__input--last' : (this.props.connected ? ' c-form-unit__input--connected' : ''))} id={this.props.id} />
-                {!prefix && <div className='c-form-unit__type'>{this.props.unit}</div>}
-            </div>
-        )
-    }
+const InputWithUnit = ({ prefix, value, onChange, className, id, unit, connected }) => {
+    return (
+        <div className='c-form-unit'>
+            {prefix && <div className='c-form-unit__type c-form-unit__type--prefix'>{unit}</div>}
+            <Input
+                type='number'
+                value={value}
+                onChange={onChange}
+                className={className + (prefix ? ' c-form-unit__input--last' : (connected ? ' c-form-unit__input--connected' : ''))}
+                id={id}
+            />
+            {!prefix && <div className='c-form-unit__type'>{unit}</div>}
+        </div>
+    )
 }
 
 InputWithUnit.propTypes = {
@@ -24,6 +26,8 @@ InputWithUnit.propTypes = {
     unit: PropTypes.string,
     prefix: PropTypes.bool,
     connected: PropTypes.bool,
+    value: PropTypes.number.isRequired,
+    onChange: PropTypes.func.isRequired,
 }
 
 InputWithUnit.defaultProps = {

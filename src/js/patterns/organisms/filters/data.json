@@ -1,0 +1,184 @@
+{
+  "brands": [
+    {
+      "id": 11,
+      "name": "New Look"
+    },
+    {
+      "id": 1,
+      "name": "Abercrombie & Fitch"
+    },
+    {
+      "id": 10,
+      "name": "Esprit"
+    },
+        {
+      "id": 2,
+      "name": "Absorba"
+    },
+        {
+      "id": 3,
+      "name": "Accessorize"
+    },
+        {
+      "id": 4,
+      "name": "adidas (alle)"
+    },
+        {
+      "id": 5,
+      "name": "adidas Originals"
+    },
+        {
+      "id": 6,
+      "name": "adidas Performance"
+    },
+        {
+      "id": 7,
+      "name": "Angel & Rocket"
+    },
+    {
+      "id": 9,
+      "name": "Arena"
+    }
+  ],
+  "sb": [{
+    "id": 2,
+    "name": "Absorba"
+  }, {
+    "id": 11,
+    "name": "New Look"
+  }],
+
+  "materials": [
+    {
+      "id": 7643,
+      "name": "Cotton"
+    },
+    {
+      "id": 1765,
+      "name": "Denim"
+    },
+    {
+      "id": 10336,
+      "name": "Jersey"
+    },
+    {
+      "id": 983,
+      "name": "Polyester"
+    }
+  ],
+  "sm": [{
+    "id": 7643,
+    "name": "Cotton"
+  }, {
+    "id": 983,
+    "name": "Polyester"
+  }],
+  "patterns": [
+    {
+      "id": 411,
+      "name": "Animal Print"
+    },
+    {
+      "id": 412,
+      "name": "Colourful"
+    },
+    {
+      "id": 413,
+      "name": "Camouflage"
+    },
+    {
+      "id": 414,
+      "name": "Gradient"
+    },
+    {
+      "id": 5411,
+      "name": "Fish bone"
+    },
+    {
+      "id": 5412,
+      "name": "Photo print"
+    },
+    {
+      "id": 5413,
+      "name": "Flowered"
+    },
+    {
+      "id": 5414,
+      "name": "Dotted"
+    },
+    {
+      "id": 65411,
+      "name": "Striped"
+    },
+    {
+      "id": 65412,
+      "name": "Squared"
+    },
+    {
+      "id": 65413,
+      "name": "Mottled"
+    },
+    {
+      "id": 65414,
+      "name": "Pinstripes"
+    },
+    {
+      "id": 9543,
+      "name": "Print"
+    }
+  ],
+  "sp": [
+    {
+      "id": 5412,
+      "name": "Photo print"
+    },
+    {
+      "id": 5413,
+      "name": "Flowered"
+    }
+  ],
+
+  "newArrivals": [
+    {
+      "id": 165413,
+      "name": "This week"
+    },
+    {
+      "id": 165414,
+      "name": "Last week"
+    },
+    {
+      "id": 19543,
+      "name": "Last month"
+    }
+  ],
+  "sna": [
+    {
+      "id": 165414,
+      "name": "Last week"
+    }
+  ],
+
+  "sizes": [34, 36, 38, 40, 42, 44, 46, 48, 100, 101, 102, 103, 104, 105, 106, 107],
+  "sSize": 44,
+
+  "sort": ["Topseller", "Neu hinzugefügt", "Niedrigster Preis", "Hocher Presis"],
+  "sSort": "Neu hinzugefügt",
+  
+  "colors": {
+    "green": "#98E076",
+    "blue": "#3A42F1",
+    "black": "#000000",
+    "white": "#FFFFFF",
+    "gray": "gray",
+    "orange": "#FFCE18",
+    "yellow": "#FCEA46",
+    "brown": "brown",
+    "beige": "beige"
+  },
+  "sColor": { "white": "#FFFFFF" },
+  
+  "sPrice": { "min": 1000, "max": 900000 },
+  "cSustainability": true
+}

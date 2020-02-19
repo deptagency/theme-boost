@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import Input from 'js/patterns/atoms/forms/input'
+import Input from './input'
 
 class Checkbox extends Component {
     constructor (props) {
@@ -12,15 +12,15 @@ class Checkbox extends Component {
 
         this.state = {
             checked: props.checked,
-            diabled: props.disabled,
+            disabled: props.disabled,
             required: props.required,
         }
     }
 
-    onChange () {
-        this.setState({
-            checked: !this.state.checked,
-        })
+    onChange (checked) {
+        this.setState({ checked })
+
+        if (this.props.onChange) { this.props.onChange(checked) }
     }
 
     render () {
@@ -56,6 +56,7 @@ Checkbox.propTypes = {
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
     required: PropTypes.bool,
+    onChange: PropTypes.func,
 }
 
 Checkbox.defaultProps = {

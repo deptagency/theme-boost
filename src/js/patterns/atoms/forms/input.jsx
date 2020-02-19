@@ -18,8 +18,10 @@ class Input extends Component {
         }
     }
 
-    onChange () {
-        this.setState({ value: this.state.value })
+    onChange (e) {
+        const value = this.props.type === 'checkbox' ? e.target.checked : e.target.value
+        this.setState({ value })
+        if (this.props.onChange) { this.props.onChange(value) }
     }
 
     render () {
@@ -48,6 +50,7 @@ Input.propTypes = {
     id: PropTypes.string,
     type: PropTypes.string,
     name: PropTypes.string,
+    onChange: PropTypes.func,
     placeholder: PropTypes.string,
     className: PropTypes.string,
     checked: PropTypes.bool,

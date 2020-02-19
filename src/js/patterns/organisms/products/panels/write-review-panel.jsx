@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
-import SlideInPanel from '../../../templates/slide-in-panel'
+import CleanSlideInPanel from '../../../templates/slide-in-panels/clean'
 import HeaderSlideIn from '../../base/header-slide-in'
 import SmallStars from '../stars/small-stars'
 import Button from '../../../atoms/buttons/button'
+import { margin16 } from './panels.module.scss'
 
 const WriteReviewPanel = ({ isOpen, onClose, product, image, designer }) => {
     const [ rating, setRating ] = useState(0)
     const [reviewText, setReviewText] = useState('')
 
     return (
-        <SlideInPanel
+        <CleanSlideInPanel
             key='2'
             isOpen={isOpen}
             from='right'
@@ -20,6 +21,20 @@ const WriteReviewPanel = ({ isOpen, onClose, product, image, designer }) => {
                 title={<FormattedMessage id='writeReview' />}
                 showRightCloseIcon={false}
             />}
+            footer={
+                <div className={margin16}>
+                    <Button
+                        size='boss'
+                        type='primary'
+                        className='o-distance-m'
+                        onClick={() => {
+                            console.log(`${rating} stars. Review: "${reviewText}"`)
+                        }}
+                    >
+                        <FormattedMessage id='submit' />
+                    </Button>
+                </div>
+            }
             >
 
             <div>
@@ -60,21 +75,9 @@ const WriteReviewPanel = ({ isOpen, onClose, product, image, designer }) => {
                     value={reviewText}
                     onChange={(event => { return (setReviewText(event.target.value)) })}
                 />
-
-                <Button
-                    size='boss'
-                    type='primary'
-                    className='o-distance-m'
-                    onClick={() => {
-                        console.log(`${rating} stars. Review: "${reviewText}"`)
-                    }}
-                >
-                    <FormattedMessage id='submit' />
-                </Button>
-
             </div>
 
-        </SlideInPanel>
+        </CleanSlideInPanel>
     )
 }
 
