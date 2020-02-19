@@ -13,6 +13,7 @@
         "react-tabs": "^3.0.0",
         "rsuite": "^4.2.1",
         "storybook-addon-intl": "^2.4.1",
+        "tailwindcss": "^1.2.0",
         "tiny-slider-react": "^0.4.0"
     },
     "devDependencies": {
