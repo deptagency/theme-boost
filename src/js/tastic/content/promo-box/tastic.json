@@ -6,6 +6,7 @@
     "schema": [
         {
             "name": "Positions",
+            "helpText": "Choose the placement of the tastic",
             "fields": [
                 {
                     "label": "Vertical Position",
@@ -53,6 +54,7 @@
         },
         {
             "name": "Image",
+            "helpText": "Customize your image",
             "fields": [
                 {
                     "label": "Topic",
@@ -80,6 +82,7 @@
         },
         {
             "name": "Button",
+            "helpText": "Customize your button",
             "fields": [
                 {
                     "label": "Text",
