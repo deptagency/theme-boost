@@ -34,7 +34,7 @@ $button-control-size: 48px !default;
   padding: $spacing-squish-l;
   border-radius: $border-radius-base;
   font-family: $font-family-spot;
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   font-weight: bold;
   line-height: 1;
   text-align: center;
@@ -78,6 +78,20 @@ $button-control-size: 48px !default;
   &:hover {
     border-color: $color-brand-primary-light;
     background-color: transparent;
+  }
+}
+
+.c-button--quieter {
+  @include border($button-quiet-border-color);
+  background-color: transparent;
+  color: #000000;
+  text-transform: none;
+  font-weight: normal;
+
+  &:hover {
+    border-color: $button-quiet-background-color;
+    background-color: $button-quiet-background-color;
+
   }
 }
 

@@ -11,13 +11,13 @@ function MainDesktopNavigation ({ topCategories, currentTopCategory, navPath, on
     }
 
     return (
-        <nav>
+        <div className='c-navigation'>
             {topCategories[currentTopCategory].tree && <DesktopNavigationTree
                 items={topCategories[currentTopCategory].tree.children}
                 navPath={navPath}
                 onSelectItem={onSelectNavItem}
             />}
-        </nav>
+        </div>
     )
 }
 

@@ -47,6 +47,16 @@ $header-height: 60px !default;
         padding-left: $spacing-inline-l;
       }
     }
+    
+    &__icon {
+      height: 20px;
+      width: 20px;
+
+      @include breakpoint($layout-breakpoint-l) {
+        height: 24px;
+        width: 24px;
+      }
+    }
   }
 
   &__top {
@@ -59,14 +69,6 @@ $header-height: 60px !default;
       justify-content: space-between;
       padding-top: 24px;
       position: static;
-    }
-
-    &__logo {
-      margin-left: $spacing-inline-m;
-      
-      @include breakpoint($layout-breakpoint-l) {
-        margin-left: 0;
-      }
     }
   }
 

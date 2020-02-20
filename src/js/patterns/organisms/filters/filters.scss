@@ -1,0 +1,12 @@
+.filterPlacements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  // it's hard to target custom plugin with css modules,
+  // that why this had to go to regular *.scss file
+  .rs-dropdown {
+    margin-right: 12px;
+    margin-bottom: 14px;
+  }
+}

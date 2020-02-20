@@ -34,13 +34,14 @@ const ProductItem = ({ product }) => {
                         </div>
                         <div className='o-head-up__item o-head-up__item--top-right'>
                             <Wishlist />
+
                         </div>
                     </div>
                 </Link>
             </div>
             <div className='o-product__header o-distance-s'>
                 <div className='o-product__header__large-column'>
-                    <h3 className='c-title-level-4'>{name}</h3>
+                    <h3 className='u-text-xs u-text-strong'>{name}</h3>
                     {designer && <p className='u-text-color-quiet'>{designer}</p>}
                 </div>
             </div>

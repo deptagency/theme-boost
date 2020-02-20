@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 import HeaderSlideIn from '../../base/header-slide-in'
 import Button from '../../../atoms/buttons/button'
-import SlideInPanel from '../../../templates/slide-in-panel'
+import BrandedSlideInPanel from '../../../templates/slide-in-panels/branded'
 import ReviewsList from '../reviews-list'
 import WriteReviewPanel from './write-review-panel'
 
@@ -23,7 +23,7 @@ const ReviewsPanel = ({ isOpen, onClose, product, image, designer }) => {
     }
 
     return [
-        <SlideInPanel
+        <BrandedSlideInPanel
             key='1'
             isOpen={isOpen}
             header={<HeaderSlideIn
@@ -37,7 +37,7 @@ const ReviewsPanel = ({ isOpen, onClose, product, image, designer }) => {
                 <SubmitReviewButton />
             </div>
             <ReviewsList />
-        </SlideInPanel>,
+        </BrandedSlideInPanel>,
         <WriteReviewPanel key='2'
             isOpen={reviewFormOpen}
             onClose={() => { setReviewFormOpen(false) }}

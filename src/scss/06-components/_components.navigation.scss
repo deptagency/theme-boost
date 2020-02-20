@@ -15,7 +15,7 @@
     z-index: $index-layer-navigation;
 
     @include breakpoint($layout-breakpoint-l) {
-        display: none;
+      display: flex;
         height: auto;
         padding: 0;
         position: relative;
@@ -29,6 +29,10 @@
     &.is-active {
         @include box-shadow();
         transform: translateX(0);
+    }
+
+    &__anchor {
+      text-decoration: none;
     }
 
     &__item {

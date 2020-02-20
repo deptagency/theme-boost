@@ -13,7 +13,7 @@ const UserIconNav = () => {
         <div className='o-header__top-right'>
             <ul className='o-header__user-navigation'>
                 <li className='o-header__user-navigation__item'>
-                    <IconButton icon={<SearchIcon className='c-icon' />}>
+                    <IconButton icon={<SearchIcon className='o-header__user-navigation__icon' />}>
                         <div className='u-hidden-large-up'>
                             <FormattedMessage id='header.search' />
                         </div>
@@ -21,7 +21,7 @@ const UserIconNav = () => {
                 </li>
                 <li className='o-header__user-navigation__item u-hidden-until-large'>
                     <IconButton
-                        icon={<MyProfile className='c-icon' />}
+                        icon={<MyProfile className='o-header__user-navigation__icon' />}
                         onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }}>
                         <div className='u-hidden-large-up'>
                             <FormattedMessage id='header.myAccount' />
@@ -29,7 +29,7 @@ const UserIconNav = () => {
                     </IconButton>
                 </li>
                 <li className='o-header__user-navigation__item'>
-                    <IconButton icon={<WishlistIcon className='c-icon' />}>
+                    <IconButton icon={<WishlistIcon className='o-header__user-navigation__icon' />}>
                         <div className='u-hidden-large-up'>
                             <FormattedMessage id='header.wishlist' />
                         </div>
@@ -37,7 +37,7 @@ const UserIconNav = () => {
                 </li>
                 <li className='o-header__user-navigation__item'>
                     <IconButton
-                        icon={<CartIcon className='c-icon' />}
+                        icon={<CartIcon className='o-header__user-navigation__icon' />}
                         onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}>
                         <div className='u-hidden-large-up'>
                             <FormattedMessage id='header.cart' />
