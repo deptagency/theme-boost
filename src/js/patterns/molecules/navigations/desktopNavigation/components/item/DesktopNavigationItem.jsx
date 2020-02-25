@@ -7,15 +7,17 @@ import { DesktopNavigationTree } from '../tree'
 import { categoryTreeType } from '../../types'
 
 import {
+    secNavDesktop,
     itemNameList,
     itemNameUnderline,
+    dropdownContent,
     gridItemChild,
     grandchildText,
     gridItemColumn,
     gridImage,
 } from '../../desktop-navigation.module.scss'
 
-export function DesktopNavigationItem ({ item, level, navPath, onClick }) {
+export function DesktopNavigationItem ({ item, level, navPath, onClick, number }) {
     const sale = item.name === 'Sale%'
 
     const hasSubLevel = (item) => {
@@ -23,69 +25,72 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick }) {
     }
 
     return (
-        <div className='c-navigation__item'>
-            <NodeLink
-                className='c-navigation__anchor'
-                node={item}
-                onClick={(e) => {
-                    if (onClick && item && item.length > 0) {
-                        e.preventDefault()
-                        return onClick(item, level)
-                    }
-                }}
-                title='Startseite'
-            >
-                <div className={itemNameList}>
-                    <div className={itemNameUnderline}
-                        style={{ color: sale ? '#e60000' : 'none' }}>
-                        {item.name}
-                    </div>
+        <nav className={secNavDesktop}>
 
-                    {item.children.length > 0 && (
-                        <ul className='c-navigation__megamenu'>
-                            {item.children.map((child, number) => {
-                            return (
-                                <div key={number}>
-                                    <div className={gridItemColumn}>
-                                        <div className={gridItemChild}>
-                                            {child.name}
-                                            {child.configuration.displayMedia && <Image
-                                                className={gridImage}
-                                                forceWidth={300}
-                                                media={child.configuration.displayMedia.media}
-                                                alt={<Translatable value={child.configuration.displayMedia.media.title} />}
-                                            />}
+            <div>
+                <NodeLink
+                    node={item}
+                    onClick={(e) => {
+                        if (onClick && item && item.length > 0) {
+                            e.preventDefault()
+                            return onClick(item, level)
+                        }
+                    }}
+                    title='Startseite'
+                >
+                    <div className={itemNameList}>
+                        <div className={itemNameUnderline}
+                            style={{ color: sale ? '#e60000' : 'none' }}>
+                            {item.name}
+                        </div>
+
+                        {item.children.length > 0 && (
+                            <ul className={dropdownContent}>
+                                {item.children.map((child, number) => {
+                                return (
+                                    <div key={number}>
+                                        <div className={gridItemColumn}>
+                                            <div className={gridItemChild}>
+                                                {child.name}
+                                                {child.configuration.displayMedia && <Image
+                                                    className={gridImage}
+                                                    forceWidth={300}
+                                                    media={child.configuration.displayMedia.media}
+                                                    alt={<Translatable value={child.configuration.displayMedia.media.title} />}
+                                                />}
+                                            </div>
+                                            {child.children.map((grandchild, number) => {
+                                                return (
+                                                    <div key={number} className={grandchildText} href='#'>
+                                                        {grandchild.name}
+                                                    </div>
+                                            )
+                                            })}
                                         </div>
-                                        {child.children.map((grandchild, number) => {
-                                            return (
-                                                <div key={number} className={grandchildText} href='#'>
-                                                    {grandchild.name}
-                                                </div>
-                                        )
-                                        })}
                                     </div>
-                                </div>
-                            )
-                            })}
-                        </ul>
-                    )}
-                </div>
-            </NodeLink>
+                                )
+                                })}
+                            </ul>
+                        )}
+                    </div>
+                </NodeLink>
 
-            {hasSubLevel(item) && (
-                <DesktopNavigationTree
-                    items={item} navPath={navPath}
-                    level={level + 1}
-                    onSelectItem={onClick}
-                />
-            )}
-        </div>
+                {hasSubLevel(item) && (
+                    <DesktopNavigationTree
+                        items={item} navPath={navPath}
+                        level={level + 1}
+                        onSelectItem={onClick}
+                    />
+                )}
+            </div>
+        </nav>
     )
 }
 
 DesktopNavigationItem.propTypes = {
     item: categoryTreeType,
     level: PropTypes.number,
+    number: PropTypes.number,
     navPath: PropTypes.arrayOf(categoryTreeType),
     onClick: PropTypes.func,
 }
