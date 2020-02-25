@@ -1,6 +1,21 @@
+// START OF TAILWIND CSS
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@import "tailwind/slider";
+
+// Tailwind doesn't have justify-self classes yet
+.justify-self-center {
+  justify-self: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+// END OF TAILWIND CSS
+
 
 // Settings
 @import '01-settings/settings.color';
