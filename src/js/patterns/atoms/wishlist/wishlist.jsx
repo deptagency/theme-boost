@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
+// TODO Sanja - do we still use this class
 class Wishlist extends Component {
     render () {
         return (<div>

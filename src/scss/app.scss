@@ -1,6 +1,13 @@
+// START OF TAILWIND CSS
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.justify-self-end {
+  justify-self: end;
+}
+// END OF TAILWIND CSS
+
 
 // Settings
 @import '01-settings/settings.color';
