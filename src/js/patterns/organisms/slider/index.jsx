@@ -6,29 +6,25 @@ import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 import TinySlider from '../../templates/slider'
 import ProductItem from '../../molecules/product/item'
 
-// TODO Sanja - tailwindcss
 const ProductSlider = ({ products, title = '', description = '' }) => {
     return (
-        <>
-            <header className='o-heading'>
-                {title && (
-                    <p className='o-heading__topic c-topic u-text-color-quiet'>
-                        <Translatable value={title} />
-                    </p>
-                )}
-                {description && (
-                    <h2 className='o-heading__title c-title'>
-                        <Translatable value={description} />
-                    </h2>
-                )}
-            </header>
-
+        <div className='select-none'>
+            {title && (
+                <p className='text-center font-hairline text-gray-500'>
+                    <Translatable value={title} />
+                </p>
+            )}
+            {description && (
+                <h2 className='text-center font-bold'>
+                    <Translatable value={description} />
+                </h2>
+            )}
             <div className='mt-8' />
 
             <TinySlider>
                 {products.map((product, i) => {
                     return (
-                        <div key={i} className='height-256px'>
+                        <div key={i}>
                             <ProductItem
                                 product={product}
                                 itemClassName={classnames({
@@ -39,7 +35,7 @@ const ProductSlider = ({ products, title = '', description = '' }) => {
                     )
                 })}
             </TinySlider>
-        </>
+        </div>
     )
 }
 
