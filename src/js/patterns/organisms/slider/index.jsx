@@ -8,7 +8,6 @@ import ProductItem from '../../molecules/product/item'
 
 // TODO Sanja - tailwindcss
 const ProductSlider = ({ products, title = '', description = '' }) => {
-
     return (
         <>
             <header className='o-heading'>
@@ -23,26 +22,23 @@ const ProductSlider = ({ products, title = '', description = '' }) => {
                     </h2>
                 )}
             </header>
-            <div className='o-distance-m'>
-                <TinySlider>
-                    {products.map((product, i) => {
-                        return (
-                            <div key={i}>
-                                <ProductItem
-                                     product={product}
-                                     itemClassName={classnames({
-                                         'mr-6': (i + 1 < products.length),
-                                     })}
-                                     itemStyle={{
-                                         height: '250px',
-                                         width: '162px'
-                                     }}
-                                />
-                            </div>
-                        )
-                    })}
-                </TinySlider>
-            </div>
+
+            <div className='mt-8' />
+
+            <TinySlider>
+                {products.map((product, i) => {
+                    return (
+                        <div key={i} className='height-256px'>
+                            <ProductItem
+                                product={product}
+                                itemClassName={classnames({
+                                     'mr-6': (i + 1 < products.length),
+                                 })}
+                            />
+                        </div>
+                    )
+                })}
+            </TinySlider>
         </>
     )
 }

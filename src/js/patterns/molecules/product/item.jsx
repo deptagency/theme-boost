@@ -4,10 +4,9 @@ import classnames from 'classnames'
 
 import NoImage from '@frontastic/catwalk/src/layout/noImage.svg'
 import Link from '@frontastic/catwalk/src/js/app/link'
-import ProductImage from '../../../patterns/organisms/products/product-image'
 import { ReactComponent as WishlistHeart } from '../../../../icons/wishlist-heart.svg'
 
-const ProductItem = ({ product, itemClassName = '', itemStyle = {} }) => {
+const ProductItem = ({ product, itemClassName = '' }) => {
     const { name, variants } = product
     return (
         <div
@@ -15,21 +14,16 @@ const ProductItem = ({ product, itemClassName = '', itemStyle = {} }) => {
                 'grid': true,
                 'grid-cols-1': true,
                 'grid-rows-1': true,
-                'border': true,
-                [itemClassName]: true
+                'h-full': true,
+                [itemClassName]: true,
             })}
-            style={itemStyle}
-        >
+            >
             <Link
-                className='row-start-1 row-end-2 col-start-1 col-end-2'
+                className='row-start-1 row-end-2 col-start-1 col-end-2 justify-self-center'
                 itemProp='url'
                 path={product._url || ''}
             >
-                <ProductImage
-                    imageClassName='tns-lazy aaa h-full'
-                    // imageStyle={itemStyle}
-                    imageUrl={variants[0].images[0] || NoImage}
-                />
+                <img src={variants[0].images[0] || NoImage} className='h-full' alt={name} />
             </Link>
             <WishlistHeart className='row-start-1 row-end-2 col-start-1 col-end-2 justify-self-end m-3' />
         </div>
