@@ -13,7 +13,7 @@ a named export and a default export.
 The Default export returns a base64 string for use with image tags:
 
 ```
-import cartIcon from './../../icons/cart.svg'
+import cartIcon from './../../icons/tailwind-icons/icon-cart.svg'
 
 <img src={cartIcon} />
 ```
@@ -22,7 +22,7 @@ The named export (named `ReactComponent`) returns a React Component
 width an SVGO optimized SVG Element:
 
 ```
-import { ReactComponent } from './../../icon/cart.svg'
+import { ReactComponent } from './../../icon/tailwind-icons/icon-cart.svg'
 
 <ReactComponent />
 ```
@@ -30,7 +30,7 @@ import { ReactComponent } from './../../icon/cart.svg'
 It is recommended to rename the named export like so:
 
 ```
-import { ReactComponent as CartIcon } from './../../icons/cart.svg';
+import { ReactComponent as CartIcon } from './../../icons/tailwind-icons/icon-cart.svg';
 
 <CartIcon />
 ```
@@ -40,7 +40,7 @@ means the size can be controlled via CSS, by giving the parent element
 a font-size:
 
 ```
-import { ReactComponent as CartIcon } from './../../icons/cart.svg';
+import { ReactComponent as CartIcon } from './../../icons/tailwind-icons/icon-cart.svg';
 
 <div className="myIcon">
     <CartIcon />

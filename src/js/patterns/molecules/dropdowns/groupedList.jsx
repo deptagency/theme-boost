@@ -16,7 +16,7 @@ import {
 } from '../../organisms/filters/filters.module.scss'
 import Button from '../../atoms/buttons/button'
 import InputWithLabelIcon from '../forms/input-with-label-icon'
-import { ReactComponent as SearchIcon } from '../../../../icons/search.svg'
+import { ReactComponent as SearchIcon } from '../../../../icons/tailwind-icons/icon-search.svg'
 import { grayColor } from '../../templates/slide-in-panels/panels.module.scss'
 import { ReactComponent as TickSelected } from '../../../../icons/tick-selected.svg'
 import groupByName from '../../../helpers/groupByName'

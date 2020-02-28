@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import { ReactComponent as CartIcon } from './../../../../icons/cart.svg'
+import { ReactComponent as CartIcon } from './../../../../icons/tailwind-icons/icon-cart.svg'
 
 class Chart extends Component {
     render () {

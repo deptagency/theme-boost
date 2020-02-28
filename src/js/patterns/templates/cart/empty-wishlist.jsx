@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import Button from '../../atoms/buttons/button'
-import { ReactComponent as WishlistIcon } from 'icons/wishlist-heart.svg'
+import { ReactComponent as WishlistIcon } from 'icons/tailwind-icons/icon-heart.svg'
 import NewsletterBlock from 'js/patterns/organisms/blocks/newsletter'
 import HeaderMobile from 'js/patterns/organisms/base/header-mobile'
 import ProductSwiper from 'js/patterns/organisms/swiper/product-swiper'

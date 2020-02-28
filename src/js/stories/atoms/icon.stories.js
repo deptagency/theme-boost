@@ -21,7 +21,7 @@ import { ReactComponent as InformationCircle } from '../../../icons/information-
 import { ReactComponent as Instagram } from '../../../icons/instagram.svg'
 import { ReactComponent as Mastercard } from '../../../icons/mastercard.svg'
 import { ReactComponent as Menu } from '../../../icons/menu.svg'
-import { ReactComponent as MyProfile } from '../../../icons/my-profile.svg'
+import { ReactComponent as MyProfile } from '../../../icons/tailwind-icons/icon-user.svg'
 import { ReactComponent as PackageSmall } from '../../../icons/package-small.svg'
 import { ReactComponent as Package } from '../../../icons/package.svg'
 import { ReactComponent as Paypal } from '../../../icons/paypal.svg'

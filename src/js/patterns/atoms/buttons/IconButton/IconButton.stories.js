@@ -1,7 +1,7 @@
 import React from 'react'
 
 import IconButton from './'
-import { ReactComponent as CartIcon } from '../../../../../icons/cart.svg'
+import { ReactComponent as CartIcon } from '../../../../../icons/tailwind-icons/icon-cart.svg'
 
 export default {
     title: '2.Atoms|Buttons|IconButton',

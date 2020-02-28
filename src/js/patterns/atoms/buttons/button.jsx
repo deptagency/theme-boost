@@ -14,10 +14,9 @@ class Button extends Component {
                 {..._.omit(this.props, ['children', 'component', 'className', 'type', 'htmlType'])}
                 type={this.props.htmlType}
                 className={classnames(
-                    'c-button',
                     this.props.className,
-                    this.props.type ? 'c-button--' + this.props.type : null,
-                    this.props.size ? 'c-button--' + this.props.size : null
+                    this.props.type ? this.props.type : null,
+                    this.props.size ? this.props.size : null
                 )}
                 >
                 {this.props.icon ?

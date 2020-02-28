@@ -16,8 +16,8 @@ class NewsletterBlock extends Component {
                         <FormattedMessage id='yourEmail'>
                             {placeholder => { return <input type='email' placeholder={placeholder} className='c-input-ghost' /> }}
                         </FormattedMessage>
-                        <div className='o-distance-s'>
-                            <button type='submit' className='c-button c-button--boss c-button--ghost'><FormattedMessage id='submit' /></button>
+                        <div className='o-distance-s'> {/* ghost BUTTON */}
+                            <button type='submit' className='px-40 bg-white font-semibold hover:bg-indigo-700 text-indigo-500 text-2xl py-4 sm:px-64 rounded-md'><FormattedMessage id='submit' /></button>
                             <p className='u-text-xs o-distance-s u-text-color-ghost'><FormattedMessage id='submitAgree' /></p>
                         </div>
                     </div>

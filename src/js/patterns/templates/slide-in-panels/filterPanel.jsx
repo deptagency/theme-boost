@@ -7,7 +7,7 @@ import GroupedSelectionList from '../../molecules/lists/selectionList/grouped'
 import FilterSubPanel from './filterSubPanel'
 import PanelReference from '../../molecules/references/panelReference'
 import InputWithLabelIcon from '../../molecules/forms/input-with-label-icon'
-import { ReactComponent as SearchIcon } from '../../../../icons/search.svg'
+import { ReactComponent as SearchIcon } from '../../../../icons/tailwind-icons/icon-search.svg'
 import { grayColor } from './panels.module.scss'
 import { FormattedMessage } from 'react-intl'
 

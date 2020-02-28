@@ -1,47 +1,42 @@
 import React from 'react'
 import app from 'frontastic-catwalk/src/js/app/app'
-import { FormattedMessage } from 'react-intl'
 
 import IconButton from '../../atoms/buttons/IconButton'
-import { ReactComponent as CartIcon } from '../../../../icons/cart.svg'
-import { ReactComponent as WishlistIcon } from '../../../../icons/wishlist-favorite.svg'
-import { ReactComponent as SearchIcon } from '../../../../icons/search.svg'
-import { ReactComponent as MyProfile } from './../../../../icons/my-profile.svg'
+import { ReactComponent as CartIcon } from '../../../../icons/tailwind-icons/icon-cart.svg'
+import { ReactComponent as WishlistIcon } from '../../../../icons/tailwind-icons/icon-heart.svg'
+import { ReactComponent as SearchIcon } from '../../../../icons/tailwind-icons/icon-search.svg'
+import { ReactComponent as MyProfile } from './../../../../icons/tailwind-icons/icon-user.svg'
 
 const UserIconNav = () => {
     return (
-        <div className='o-header__top-right'>
-            <ul className='o-header__user-navigation'>
-                <li className='o-header__user-navigation__item'>
-                    <IconButton icon={<SearchIcon className='o-header__user-navigation__icon' />}>
-                        <div className='u-hidden-large-up'>
-                            <FormattedMessage id='header.search' />
-                        </div>
+        <div className='flex'>
+            <ul className='flex right-0 absolute'>
+                <li className="mr-5">
+                    <IconButton 
+                        icon={<SearchIcon/>}>
+                        {/* className='o-header__user-navigation__icon'  */}
+                        {/* <div className='u-hidden-large-up'/> */}
                     </IconButton>
                 </li>
-                <li className='o-header__user-navigation__item u-hidden-until-large'>
+
+                        {/* MAMYBE WE WOULD NEED TO CUSTOMIZE THAT */}
+                <li 
+                // className="hidden sm:block md:inline-flex lg:inline-flex xl:inline-flex"
+                > 
                     <IconButton
-                        icon={<MyProfile className='o-header__user-navigation__icon' />}
+                        icon={<MyProfile/>}
                         onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }}>
-                        <div className='u-hidden-large-up'>
-                            <FormattedMessage id='header.myAccount' />
-                        </div>
                     </IconButton>
                 </li>
-                <li className='o-header__user-navigation__item'>
-                    <IconButton icon={<WishlistIcon className='o-header__user-navigation__icon' />}>
-                        <div className='u-hidden-large-up'>
-                            <FormattedMessage id='header.wishlist' />
-                        </div>
+                <li className="mr-5">
+                    <IconButton 
+                        icon={<WishlistIcon/>}>
                     </IconButton>
                 </li>
-                <li className='o-header__user-navigation__item'>
+                <li className="mr-5">
                     <IconButton
-                        icon={<CartIcon className='o-header__user-navigation__icon' />}
+                        icon={<CartIcon/>}
                         onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}>
-                        <div className='u-hidden-large-up'>
-                            <FormattedMessage id='header.cart' />
-                        </div>
                     </IconButton>
                 </li>
             </ul>

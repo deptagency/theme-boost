@@ -29,8 +29,8 @@ class PromoBoxTastic extends Component {
                 {/* // TODO Implement reference properly */}
                 <Button
                     // component='a'
-                    // href={buttonLink.target}
-                    type='primary'
+                    // href={buttonLink.target} {/* primary BUTTON */}
+                    className='bg-indigo-500 font-semibold hover:bg-indigo-700 text-2xl py-4 px-6 rounded-md'
                 >
                     <Translatable value={buttonText} />
                 </Button>
