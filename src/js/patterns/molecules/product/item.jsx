@@ -20,7 +20,7 @@ const ProductItem = ({ product, itemClassName = '' }) => {
                     'grid': true,
                     'grid-cols-1': true,
                     'grid-rows-1': true,
-                    'height-256px': true, // TODO Sanja - do we need this class?
+                    'h-fix-240px': true, // tailwindcss customized class
                     [itemClassName]: true,
                 })}
             >
