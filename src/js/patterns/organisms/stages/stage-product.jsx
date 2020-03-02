@@ -16,7 +16,7 @@ class ProductStage extends Component {
                 <div className='o-media-block__asset'>
                     <Gallery
                         imagesComponents={(images || []).map((image) => {
-                            return (<img imageUrl={image} alt={name} />)
+                            return (<img src={image} alt={name} />)
                         })}
                         addToWishlist={addToWishlist}
                     />

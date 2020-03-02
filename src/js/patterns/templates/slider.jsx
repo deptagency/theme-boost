@@ -8,22 +8,24 @@ const sliderSettings = {
     lazyloadSelector: '.tns-lazy',
     mouseDrag: true,
     controls: false,
-    items: 2,
+    items: 1.5,
     center: true,
     nav: false,
     responsive: {
+        420: {
+            items: 2.4,
+        },
         660: {
-            items: 3,
+            items: 3.4,
         },
         935: {
-            items: 4,
+            items: 4.5,
         },
         1200: {
-            items: 5,
+            items: 5.5,
         },
     },
 }
-
 const Slider = ({ children, options }) => {
     return (
         <TinySlider settings={{ ...sliderSettings, ...options }}>
