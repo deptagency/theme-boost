@@ -3,7 +3,10 @@ import { FormattedMessage } from 'react-intl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-// TODO Sanja - do we still use this class
+// Deprecated - will be removed
+// Instead, use: import { ReactComponent as WishlistHeart } from 'src/icons/wishlist-heart.svg' instead
+
+// TODO - remove when nowhere referenced
 class Wishlist extends Component {
     render () {
         return (<div>

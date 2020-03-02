@@ -24,6 +24,9 @@ const sliderSettings = {
         1200: {
             items: 5.5,
         },
+        1400: {
+            items: 6.5,
+        },
     },
 }
 const Slider = ({ children, options }) => {
