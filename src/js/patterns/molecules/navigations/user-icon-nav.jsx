@@ -6,7 +6,6 @@ import { ReactComponent as CartIcon } from '../../../../icons/tailwind-icons/ico
 import { ReactComponent as WishlistIcon } from '../../../../icons/tailwind-icons/icon-heart.svg'
 import { ReactComponent as SearchIcon } from '../../../../icons/tailwind-icons/icon-search.svg'
 import { ReactComponent as MyProfile } from './../../../../icons/tailwind-icons/icon-user.svg'
-import './user-icon-nav.scss'
 
 const UserIconNav = () => {
     return (

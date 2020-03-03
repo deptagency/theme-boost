@@ -24,12 +24,12 @@ class PromoboxWithPositioning extends Component {
         }
 
         return (
-            <div className={`${aspectRatioPromobox} relative rounded-lg mr-4`}>
+            <div className='aspectRatioPromobox relative rounded-lg mr-4'>
                 <Image
                     media={image.media}
                     alt={<Translatable value={image.media.title} />}
-                    className={`${aspectRatioPromoboxInside} lock h-full w-full top-0 left-0 absolute opacity-75 rounded-md`}
-                    />
+                    className='aspectRatioPromoboxInside lock h-full w-full top-0 left-0 absolute opacity-75 rounded-md'
+                />
                 <div className='h-full w-full'>
                     {showRibbon && (
                         <div className={`${ribbonTopRight} ${ribbon}`}>
