@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Image from '@frontastic/catwalk/src/js/image'
 import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
-import { ribbon, ribbonTopRight, aspectRatioPromobox, aspectRatioPromoboxInside } from './promobox-with-positioning.module.scss'
+import { ribbon, ribbonTopRight } from './promobox-with-positioning.module.scss'
 
 class PromoboxWithPositioning extends Component {
     render () {
