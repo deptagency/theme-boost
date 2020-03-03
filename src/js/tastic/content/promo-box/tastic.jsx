@@ -13,28 +13,29 @@ class PromoBoxTastic extends Component {
         const { verticalPosition, horizontalPosition, buttonLink, buttonText, image, title, topic } = this.props.data
 
         return (
-            <PromoboxWithPositioning
-                vertical={verticalPosition}
-                horizontal={horizontalPosition}
-                image={image}
-                customChildrenStyle={{ margin: '32px' }}
-                >
-                <p className='c-topic'>
-                    <Translatable value={topic} />
-                </p>
-                <h1 className='c-title'>
-                    <Translatable value={title} />
-                </h1>
+            <div>
+                <PromoboxWithPositioning
+                    vertical={verticalPosition}
+                    horizontal={horizontalPosition}
+                    image={image}
+                    >
+                    <p className='text-xl text-white sm:text-2xl md:text-3xl mb-2'>
+                        <Translatable value={topic} />
+                    </p>
+                    <h1 className='text-5xl text-white md:text-6xl font-bold mb-2 leading-tight'>
+                        <Translatable value={title} />
+                    </h1>
 
-                {/* // TODO Implement reference properly */}
-                <Button
-                    // component='a'
-                    // href={buttonLink.target} {/* primary BUTTON */}
-                    className='bg-indigo-500 font-semibold hover:bg-indigo-700 text-2xl py-4 px-6 rounded-lg'
-                >
-                    <Translatable value={buttonText} />
-                </Button>
-            </PromoboxWithPositioning>
+                    {/* // TODO Implement reference properly */}
+                    <Button
+                        // component='a'
+                        // href={buttonLink.target} {/* primary BUTTON */}
+                        className='bg-indigo-500 font-semibold hover:bg-indigo-700 text-2xl py-4 px-6 rounded-lg'
+                    >
+                        <Translatable value={buttonText} />
+                    </Button>
+                </PromoboxWithPositioning>
+            </div>
         )
     }
 }

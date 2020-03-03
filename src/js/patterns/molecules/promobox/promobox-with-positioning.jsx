@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Image from '@frontastic/catwalk/src/js/image'
 import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
-import { ribbon, ribbonTopRight } from './promobox-with-positioning.module.scss'
+import { ribbon, ribbonTopRight, aspectRatioPromobox, aspectRatioPromoboxInside } from './promobox-with-positioning.module.scss'
 
 class PromoboxWithPositioning extends Component {
     render () {
@@ -24,19 +24,20 @@ class PromoboxWithPositioning extends Component {
         }
 
         return (
-            <div className='c-promobox t-spotlight u-aspect-ratio-16x9' style={style}>
+            <div className={`${aspectRatioPromobox} relative rounded-lg mr-4`}>
                 <Image
                     media={image.media}
                     alt={<Translatable value={image.media.title} />}
-                    className='c-promobox__backdrop tns-lazy' />
-                <div className={`c-promobox__overlay c-promobox__overlay--${vertical}-${horizontal}`}>
+                    className={`${aspectRatioPromoboxInside} lock h-full w-full top-0 left-0 absolute opacity-75 rounded-md`}
+                    />
+                <div className='h-full w-full'>
                     {showRibbon && (
                         <div className={`${ribbonTopRight} ${ribbon}`}>
                             <span>BETA</span>
                         </div>
                     )}
-                    <div className={`c-promobox__overlay__inner`}>
-                        <div style={customChildrenStyle}>
+                    <div className={`${vertical}-0 ${horizontal}-0 flex absolute rounded-lg p-4 md:p-8 ${(vertical === 'middle') ? 'items-center top-0 bottom-0' : ''} ${(horizontal === 'center') ? 'justify-center left-0 right-0' : ''}`}>
+                        <div div style={customChildrenStyle}>
                             {children}
                         </div>
                     </div>

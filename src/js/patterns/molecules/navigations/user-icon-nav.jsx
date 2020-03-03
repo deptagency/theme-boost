@@ -6,38 +6,29 @@ import { ReactComponent as CartIcon } from '../../../../icons/tailwind-icons/ico
 import { ReactComponent as WishlistIcon } from '../../../../icons/tailwind-icons/icon-heart.svg'
 import { ReactComponent as SearchIcon } from '../../../../icons/tailwind-icons/icon-search.svg'
 import { ReactComponent as MyProfile } from './../../../../icons/tailwind-icons/icon-user.svg'
+import './user-icon-nav.scss'
 
 const UserIconNav = () => {
     return (
         <div className='flex'>
             <ul className='flex right-0 absolute'>
-                <li className="mr-5">
-                    <IconButton 
-                        icon={<SearchIcon/>}>
-                        {/* className='o-header__user-navigation__icon'  */}
-                        {/* <div className='u-hidden-large-up'/> */}
-                    </IconButton>
-                </li>
-
-                        {/* MAMYBE WE WOULD NEED TO CUSTOMIZE THAT */}
-                <li 
-                // className="hidden sm:block md:inline-flex lg:inline-flex xl:inline-flex"
-                > 
+                <li className='mr-5'>
                     <IconButton
-                        icon={<MyProfile/>}
-                        onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }}>
-                    </IconButton>
+                        icon={<SearchIcon />} />
                 </li>
-                <li className="mr-5">
-                    <IconButton 
-                        icon={<WishlistIcon/>}>
-                    </IconButton>
-                </li>
-                <li className="mr-5">
+                <li className='mr-5 hidden! block!'>
                     <IconButton
-                        icon={<CartIcon/>}
-                        onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}>
-                    </IconButton>
+                        icon={<MyProfile />}
+                        onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }} />
+                </li>
+                <li className='mr-5'>
+                    <IconButton
+                        icon={<WishlistIcon />} />
+                </li>
+                <li className='mr-5'>
+                    <IconButton
+                        icon={<CartIcon />}
+                        onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }} />
                 </li>
             </ul>
         </div>

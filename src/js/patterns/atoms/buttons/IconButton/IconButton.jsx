@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 export function IconButton ({ icon, onClick, className, children }) {
     return (
-        <button onClick={onClick} className={`${className ? `${className} ` : ''}c-link c-link--uniform`}>
+        <button onClick={onClick} className='text-4xl'>
             {icon && icon}
-            {children && <p className='u-text-xxs o-distance-xs'>{children}</p>}
+            {children && <p>{children}</p>}
         </button>
     )
 }

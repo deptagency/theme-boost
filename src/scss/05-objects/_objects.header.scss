@@ -6,7 +6,7 @@ $header-height: 60px !default;
 .o-header {
   display: flex;
   flex-direction: column;
-  height: $header-height;
+  // height: $header-height;
   justify-content: center;
   margin-left: -$layout-edge-width;
   padding-left: $layout-edge-width;
@@ -35,7 +35,7 @@ $header-height: 60px !default;
 
     @include breakpoint($layout-breakpoint-l) {
         padding-left: $spacing-inline-l;
-        position: static;
+        // position: static;
         top: 0;
         transform: translate(0);
     }
@@ -68,7 +68,7 @@ $header-height: 60px !default;
     @include breakpoint($layout-breakpoint-l) {
       justify-content: space-between;
       padding-top: 24px;
-      position: static;
+      // position: static;
     }
   }
 

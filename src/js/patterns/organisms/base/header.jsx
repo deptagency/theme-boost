@@ -52,8 +52,8 @@ const Head = ({ topCategories, logo, loggedIn }) => {
     }
 
     return (
-        <>  
-            <div className='o-header'>
+        <>
+            <div className='o-header h-10'>
                 <div className='o-header__top'>
                     <div
                         className='o-header__top-left u-hidden-until-medium'
@@ -79,7 +79,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                         open={isMobileMenuOpen}
                         topCategories={topCategories}
                     />
-                    <a href='/' className='no-underline hover:no-underline hover:text-indigo-700 text-gray-800 text-5xl font-semibold pl-8' title='Catwalk' ref={logoRef}>
+                    <a href='/' className='no-underline hover:no-underline hover:text-indigo-700 text-gray-800 text-5xl font-semibold pl-6 pt-8' title='Catwalk' ref={logoRef}>
                         Catwalk
                     </a>
                     <UserIconNav open />

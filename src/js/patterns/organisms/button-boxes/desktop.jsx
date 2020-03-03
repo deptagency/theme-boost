@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const ButtonBoxesDesktop = ({ children }) => {
     return (
-        <div className='o-grid o-grid--third'>
+        <div className='w-full grid gap-4 grid-cols-3'>
             {children}
         </div>
     )
