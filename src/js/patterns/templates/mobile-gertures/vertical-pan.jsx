@@ -10,7 +10,6 @@ const getMarginValue = (container) => {
 class VerticalPan extends Component {
     constructor (props) {
         super(props)
-        this.myRef = React.createRef()
 
         this.globalMarginValue = React.createRef()
         this.swipeContent = React.createRef()

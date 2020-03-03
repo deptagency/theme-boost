@@ -12,11 +12,8 @@ class AtomsPrice extends Component {
     render () {
         return (
             <span className={classnames({
-                    'c-price': true,
-                    'c-price--normal': this.props.normal,
-                    'c-price--old': this.props.old,
-                    'c-price--l': this.props.large,
-                    'c-price--xl': this.props.xlarge,
+                    'font-hairline': this.props.thin,
+                    'text-gray-500': this.props.quiet,
                 })}
                 >
                 {(this.props.value / 100).toLocaleString(
@@ -35,23 +32,12 @@ AtomsPrice.propTypes = {
     context: PropTypes.object.isRequired,
     value: PropTypes.number.isRequired,
     currency: PropTypes.string,
-    normal: PropTypes.bool,
-    old: PropTypes.bool,
-    large: PropTypes.bool,
-    xlarge: PropTypes.bool,
+    thin: PropTypes.bool,
+    quiet: PropTypes.bool,
 }
 
 AtomsPrice.defaultProps = {
     currency: null,
-    old: false,
-    normal: false,
-    large: false,
-    xlarge: false,
-}
-
-// These are just default props for the pattern library
-AtomsPrice.testProps = {
-    value: 19999,
 }
 
 export default connect(

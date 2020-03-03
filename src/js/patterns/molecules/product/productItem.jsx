@@ -7,6 +7,11 @@ import AtomsPrice from '../../atoms/prices/price'
 import IconButton from '../../../patterns/atoms/buttons/IconButton'
 import { ReactComponent as CloseX } from '../../../../icons/close.svg'
 
+// Depredicated - will be removed
+// Use product/item.jsx instead
+
+// TODO - remove when nowhere referenced
+
 const ProductItem = (props) => {
     let product = props.product
     const { name, variant } = product
