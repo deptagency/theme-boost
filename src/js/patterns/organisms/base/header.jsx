@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import app from 'frontastic-catwalk/src/js/app/app'
-import useBackgroundImageUrl from 'frontastic-catwalk/src/js/helper/hooks/useBackgroundImageUrl'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import MobileNavigation from '../../molecules/navigations/mobileNavigation'
@@ -17,7 +16,6 @@ import { FormattedMessage } from 'react-intl'
 const Head = ({ topCategories, logo, loggedIn }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const logoRef = useRef(null)
-    const backgroundImageUrl = useBackgroundImageUrl(logoRef, logo)
     const [currentTopCategory, setCurrentTopCategory] = useState(0)
     const [navPath, setNavPath] = useState([])
 
