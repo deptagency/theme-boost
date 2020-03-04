@@ -12,13 +12,9 @@
     }
 }
 
-
-// .active-gray {
-//     a {&:active {
-//         color: #B25500 !important;
-//     }
-// }
-// }
-
-
-
+.text-underline {
+    &:hover, &:focus{
+        transform: scaleX(1);
+        border-bottom: solid 2px #2D3748;
+    }
+}

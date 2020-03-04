@@ -6,12 +6,12 @@ import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
 
 const NavItem = ({ item, onClick }) => {
     return (
-        <li className='text-gray-500 active:text-gray-800 nav-hide nav-block text-2xl'>
+        <li className='text-gray-500 active:text-gray-800 nav-hide nav-block text-xl'>
             <NodeLink
                 node={item}
                 onClick={onClick}
                 title='Frauen'
-                className='p-4 font-bold'
+                className='mr-6 pb-1 font-bold text-underline focus:text-gray-800 hover:text-gray-800'
             >
                 {item.name}
             </NodeLink>

@@ -24,7 +24,7 @@ class PromoboxWithPositioning extends Component {
         }
 
         return (
-            <div className='aspectRatioPromobox relative rounded-lg mr-4'>
+            <div className='aspectRatioPromobox relative mr-4'>
                 <Image
                     media={image.media}
                     alt={<Translatable value={image.media.title} />}
