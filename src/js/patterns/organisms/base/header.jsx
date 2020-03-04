@@ -73,7 +73,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                     <a href='/' className='no-underline hover:no-underline hover:text-indigo-700 text-gray-800 text-5xl font-semibold pl-6 pt-8' title='Catwalk' ref={logoRef}>
                         Catwalk
                     </a>
-                    
+
                     <TopCategoryNav
                         items={topCategories}
                         onCategorySelect={handleSelectTopCategory}
