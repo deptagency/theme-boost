@@ -24,8 +24,6 @@ const Head = ({ topCategories, logo, loggedIn }) => {
     const ctaLoggedIn = () => {
         return (
             <Button
-                type='quiet'
-                size='boss'
                 onClick={() => {
                     app.getRouter().push('Frontastic.Frontend.Master.Account.profile')
                     setIsMobileMenuOpen(false)
@@ -53,7 +51,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
 
     return (
         <>
-            <div className='flex flex-col justify-center h-12 mb-6 sm:mb-0'>
+            <div className='flex flex-col justify-center h-12 mb-6'>
                 <div className='items-center flex flex-row relative border-b'>
                     <MobileMenuToggle
                         isMenuOpen={isMobileMenuOpen}
@@ -64,12 +62,22 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                         open={isMobileMenuOpen}
                         topCategories={topCategories}
                     />
-                    {/*
+                     {/*
                         Although <MobileMenuToggle /> and <MobileNavigation />
                         set their own classNames inside the components,
                         I've added the media query classes to the top level
                         inside the Header component to have it all in one place.
                     */}
+                <div className='u-hidden-large-up'>
+                    <MobileNavigation
+                        callToAction={ctaLoggedIn()}
+                        onClose={() => {
+                            return setIsMobileMenuOpen(false)
+                        }}
+                        open={isMobileMenuOpen}
+                        topCategories={topCategories}
+                    />
+                </div>
                     <a href='/' className='no-underline hover:no-underline hover:text-indigo-700 text-gray-800 text-5xl font-semibold pl-6 pr-8 pt-8' title='Catwalk' ref={logoRef}>
                         Catwalk
                     </a>
@@ -80,16 +88,6 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                         activeId={currentTopCategory}
                     />
                     <UserIconNav open />
-                </div>
-                <div className='u-hidden-large-up'>
-                    <MobileNavigation
-                        callToAction={ctaLoggedIn()}
-                        onClose={() => {
-                            return setIsMobileMenuOpen(false)
-                        }}
-                        open={isMobileMenuOpen}
-                        topCategories={topCategories}
-                    />
                 </div>
             </div>
             <div className='mt-10 nav-hide'>

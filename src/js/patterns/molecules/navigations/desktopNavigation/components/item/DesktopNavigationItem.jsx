@@ -7,7 +7,6 @@ import { DesktopNavigationTree } from '../tree'
 import { categoryTreeType } from '../../types'
 
 import {
-    secNavDesktop,
     itemNameList,
     itemNameUnderline,
     dropdownContent,
@@ -18,15 +17,14 @@ import {
 } from '../../desktop-navigation.module.scss'
 
 export function DesktopNavigationItem ({ item, level, navPath, onClick, number }) {
-    const sale = item.name === 'Sale%'
+    const sale = item.name === 'SALE'
 
     const hasSubLevel = (item) => {
         return item && item.length > 0
     }
 
     return (
-        <nav className={secNavDesktop}>
-
+        <nav className='inline-block text-gray-800 font-bold text-2xl hover-trigger'>  {/* .secNavDesktop */}
             <div>
                 <NodeLink
                     node={item}
@@ -38,22 +36,24 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                     }}
                     title='Startseite'
                 >
-                    <div className={itemNameList}>
-                        <div className={itemNameUnderline}
-                            style={{ color: sale ? '#e60000' : 'none' }}>
-                            {item.name}
-                        </div>
+                    <div className='mr-8'> {/* .itemNameList */}
+                <div className='text-underline-h focus:text-gray-800 hover:text-indigo-700'
+                    style={{ color: sale ? '#667EEA' : 'none' }}>
+                    {item.name}
+                    {/* itemNameUnderline */}
+                </div>
 
                         {item.children.length > 0 && (
-                            <ul className={dropdownContent}>
+                            <ul className='hover-target absolute bg-white shadow-xl z-10 right-0 left-0 py-10 lg:pl-24 xl:pl-64'>
+                                {/* dropdownContent */}
                                 {item.children.map((child, number) => {
                                 return (
                                     <div key={number}>
-                                        <div className={gridItemColumn}>
-                                            <div className={gridItemChild}>
-                                                {child.name}
+                                        <div className='float-left w-1/4'>  {/* gridItemColumn */}
+                                            <div className='text-gray-800 font-bold text-2xl pb-8'>  {/* gridItemChild */}
+                                                {child.name}  {/* gridImage*/}
                                                 {child.configuration.displayMedia && <Image
-                                                    className={gridImage}
+                                                    className='max-image'
                                                     forceWidth={300}
                                                     media={child.configuration.displayMedia.media}
                                                     alt={<Translatable value={child.configuration.displayMedia.media.title} />}
@@ -61,7 +61,10 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                                             </div>
                                             {child.children.map((grandchild, number) => {
                                                 return (
-                                                    <div key={number} className={grandchildText} href='#'>
+                                                    <div 
+                                                        key={number}
+                                                        className='pt-1 block text-gray-800 font-normal mb-4' 
+                                                        href='#'> {/* grandchildText */}
                                                         {grandchild.name}
                                                     </div>
                                             )

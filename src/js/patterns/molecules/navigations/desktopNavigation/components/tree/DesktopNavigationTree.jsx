@@ -3,24 +3,21 @@ import PropTypes from 'prop-types'
 
 import { DesktopNavigationItem } from '../item'
 import { categoryTreeType } from '../../types'
-import { navigationContainer } from '../../desktop-navigation.module.scss'
 
 export function DesktopNavigationTree ({ items, onSelectItem, navPath, level = 0 }) {
     return (
-        <div>
-            <div className={navigationContainer}>
-                {items && items.map((item) => {
-                    return (
-                        <DesktopNavigationItem
-                            key={item.nodeId}
-                            item={item}
-                            navPath={navPath}
-                            level={level}
-                            onClick={onSelectItem}
-                        />
-                    )
-                })}
-            </div>
+        <div className='pl-6 pb-6 border-b'> {/* .navigationContainer */}
+            {items && items.map((item) => {
+                return (
+                    <DesktopNavigationItem
+                        key={item.nodeId}
+                        item={item}
+                        navPath={navPath}
+                        level={level}
+                        onClick={onSelectItem}
+                    />
+                )
+            })}
         </div>
     )
 }

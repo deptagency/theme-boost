@@ -12,8 +12,15 @@
     }
 }
 
-.text-underline {
-    &:hover, &:focus{
+.text-underline-f {
+    &:focus{
+        transform: scaleX(1);
+        border-bottom: solid 2px #2D3748;
+    }
+}
+
+.text-underline-h {
+    &:hover{
         transform: scaleX(1);
         border-bottom: solid 2px #2D3748;
     }
