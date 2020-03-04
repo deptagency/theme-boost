@@ -62,22 +62,22 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                         open={isMobileMenuOpen}
                         topCategories={topCategories}
                     />
-                     {/*
+                    {/*
                         Although <MobileMenuToggle /> and <MobileNavigation />
                         set their own classNames inside the components,
                         I've added the media query classes to the top level
                         inside the Header component to have it all in one place.
                     */}
-                <div className='u-hidden-large-up'>
-                    <MobileNavigation
-                        callToAction={ctaLoggedIn()}
-                        onClose={() => {
+                    <div className='u-hidden-large-up'>
+                        <MobileNavigation
+                            callToAction={ctaLoggedIn()}
+                            onClose={() => {
                             return setIsMobileMenuOpen(false)
                         }}
-                        open={isMobileMenuOpen}
-                        topCategories={topCategories}
+                            open={isMobileMenuOpen}
+                            topCategories={topCategories}
                     />
-                </div>
+                    </div>
                     <a href='/' className='no-underline hover:no-underline hover:text-indigo-700 text-gray-800 text-5xl font-semibold pl-6 pr-8 pt-8' title='Catwalk' ref={logoRef}>
                         Catwalk
                     </a>
