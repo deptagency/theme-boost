@@ -4,16 +4,14 @@ import PropTypes from 'prop-types'
 import { topCategoryType } from './../mobileNavigation/types'
 import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
 
-import { TopCatNav } from './top-category-nav.module.scss'
-
 const NavItem = ({ item, onClick }) => {
     return (
-        <li className={`${TopCatNav} c-service-navigation o-list-inline__item`}>
+        <li className='text-gray-500 active:text-gray-800 nav-hide nav-block text-2xl'>
             <NodeLink
                 node={item}
                 onClick={onClick}
                 title='Frauen'
-                className={`c-service-navigation__anchor`}
+                className='p-4 font-bold'
             >
                 {item.name}
             </NodeLink>
@@ -27,7 +25,7 @@ NavItem.propTypes = {
 
 export const TopCategoryNav = ({ items, onCategorySelect = 0 }) => {
     return (
-        <ul className='c-service-navigation o-list-inline'>
+        <ul className='mt-10 pl-4 list-none align-center flex flex-row'>
             {items &&
                 items.map((item, i) => {
                     if (!item.tree) {

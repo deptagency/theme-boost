@@ -53,23 +53,8 @@ const Head = ({ topCategories, logo, loggedIn }) => {
 
     return (
         <>
-            <div className='o-header h-10'>
-                <div className='o-header__top'>
-                    <div
-                        className='o-header__top-left u-hidden-until-medium'
-                    >
-                        <TopCategoryNav
-                            items={topCategories}
-                            onCategorySelect={handleSelectTopCategory}
-                            activeId={currentTopCategory}
-                        />
-                    </div>
-                    {/*
-                        Although <MobileMenuToggle /> and <MobileNavigation />
-                        set their own classNames inside the components,
-                        I've added the media query classes to the top level
-                        inside the Header component to have it all in one place.
-                    */}
+            <div className='flex flex-col justify-center h-12 mb-6 sm:mb-0'>
+                <div className='items-center flex flex-row relative border-b'>
                     <MobileMenuToggle
                         isMenuOpen={isMobileMenuOpen}
                         className='u-icon-line-height u-hidden-medium-up'
@@ -79,9 +64,21 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                         open={isMobileMenuOpen}
                         topCategories={topCategories}
                     />
+                    {/*
+                        Although <MobileMenuToggle /> and <MobileNavigation />
+                        set their own classNames inside the components,
+                        I've added the media query classes to the top level
+                        inside the Header component to have it all in one place.
+                    */}
                     <a href='/' className='no-underline hover:no-underline hover:text-indigo-700 text-gray-800 text-5xl font-semibold pl-6 pt-8' title='Catwalk' ref={logoRef}>
                         Catwalk
                     </a>
+                    
+                    <TopCategoryNav
+                        items={topCategories}
+                        onCategorySelect={handleSelectTopCategory}
+                        activeId={currentTopCategory}
+                    />
                     <UserIconNav open />
                 </div>
                 <div className='u-hidden-large-up'>
@@ -94,15 +91,8 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                         topCategories={topCategories}
                     />
                 </div>
-                {/*
-                    Although <MobileMenuToggle /> and <MobileNavigation />
-                    set their own classNames inside the components,
-                    I've added the media query classes to the top level
-                    inside the Header component to have it all in one place.
-                */}
-
             </div>
-            <div className='o-distance-m'>
+            <div className='mt-10 nav-hide'>
                 <DesktopNavigation
                     topCategories={topCategories}
                     currentTopCategory={currentTopCategory}

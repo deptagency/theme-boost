@@ -1,0 +1,24 @@
+@media (max-width: 1023px) {
+    .nav-hide {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-block {
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+
+// .active-gray {
+//     a {&:active {
+//         color: #B25500 !important;
+//     }
+// }
+// }
+
+
+
