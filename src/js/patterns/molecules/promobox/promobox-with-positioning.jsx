@@ -8,11 +8,7 @@ import { ribbon, ribbonTopRight } from './promobox-with-positioning.module.scss'
 
 class PromoboxWithPositioning extends Component {
     render () {
-        const { children, vertical, horizontal, height, image, customChildrenStyle } = this.props
-        let style = {}
-        if (typeof height !== 'undefined') {
-            style = { ...style, height }
-        }
+        const { children, vertical, horizontal, image, customChildrenStyle } = this.props
 
         if (!image || !image.media) {
             return null
@@ -37,7 +33,7 @@ class PromoboxWithPositioning extends Component {
                         </div>
                     )}
                     <div className={`${vertical}-0 ${horizontal}-0 flex absolute rounded-lg p-4 md:p-8 ${(vertical === 'middle') ? 'items-center top-0 bottom-0' : ''} ${(horizontal === 'center') ? 'justify-center left-0 right-0' : ''}`}>
-                        <div div style={customChildrenStyle}>
+                        <div style={customChildrenStyle}>
                             {children}
                         </div>
                     </div>
@@ -57,7 +53,6 @@ PromoboxWithPositioning.propTypes = {
     children: PropTypes.node.isRequired,
     vertical: PropTypes.string,
     horizontal: PropTypes.string,
-    height: PropTypes.string,
     image: PropTypes.object.isRequired,
     customChildrenStyle: PropTypes.object,
 }

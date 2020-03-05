@@ -65,9 +65,15 @@ const ProductSlider = ({ products, title = '', description = '' }) => {
 }
 
 ProductSlider.propTypes = {
-    products: PropTypes.object.isRequired,
-    title: PropTypes.string,
-    description: PropTypes.string,
+    products: PropTypes.array.isRequired,
+    title: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object,
+    ]),
+    description: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object,
+    ]),
 }
 
 export default ProductSlider

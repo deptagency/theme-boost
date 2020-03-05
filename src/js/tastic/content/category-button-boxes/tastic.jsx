@@ -25,18 +25,18 @@ const CategoryButtonBoxesTastic = (props) => {
     }
 
     const buttonBoxes = [
-        <div>
-            <PromoboxWithPositioning key='1' image={firstImage} {...options}>
+        <div key='1'>
+            <PromoboxWithPositioning image={firstImage} {...options}>
                 <Button className='bg-transparent hover:bg-indigo-700 text-white font-semibold hover:text-white text-2xl py-4 px-6 border border-white hover:border-transparent rounded-lg' style={{ borderStyle: 'solid' }}>{firstButtonLabel}</Button>
             </PromoboxWithPositioning>
         </div>,
-        <div>
-            <PromoboxWithPositioning key='2' image={secondImage} {...options}>
+        <div key='2'>
+            <PromoboxWithPositioning image={secondImage} {...options}>
                 <Button className='bg-transparent hover:bg-indigo-700 text-white font-semibold hover:text-white text-2xl py-4 px-6 border border-white hover:border-transparent rounded-lg' style={{ borderStyle: 'solid' }}>{secondButtonLabel}</Button>
             </PromoboxWithPositioning>
         </div>,
-        <div>
-            <PromoboxWithPositioning key='3' image={thirdImage} {...options}>
+        <div key='3'>
+            <PromoboxWithPositioning image={thirdImage} {...options}>
                 <Button className='bg-transparent hover:bg-indigo-700 text-white font-semibold hover:text-white text-2xl py-4 px-6 border border-white hover:border-transparent rounded-lg' style={{ borderStyle: 'solid' }}>{thirdButtonLabel}</Button>
             </PromoboxWithPositioning>
         </div>,
