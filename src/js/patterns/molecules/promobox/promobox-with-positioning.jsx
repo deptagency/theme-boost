@@ -6,6 +6,9 @@ import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 import { ribbon, ribbonTopRight } from './promobox-with-positioning.module.scss'
 
+// Deprecated - will be removed
+// Use content/tiles/tile.jx
+
 class PromoboxWithPositioning extends Component {
     render () {
         const { children, vertical, horizontal, image, customChildrenStyle } = this.props

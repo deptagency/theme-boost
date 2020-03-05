@@ -7,6 +7,10 @@ import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import PromoboxWithPositioning from '../../../patterns/molecules/promobox/promobox-with-positioning'
 import Button from '../../../patterns/atoms/buttons/button'
 
+// Deprecated - will be removed
+// Use TileTastic, and content/tiles/tile.jx
+
+// TODO - remove when nowhere referenced
 class PromoBoxTastic extends Component {
     render () {
         // eslint-disable-next-line no-unused-vars

@@ -22,6 +22,7 @@ import FooterMetaNavTastic from './footer/meta-nav/tastic'
 import FooterSocialNavTastic from './footer/social-nav/tastic'
 import WishlistTastic from './account/wishlist/tastic'
 import FiltersTastic from './product/filters/tastic'
+import TileTastic from './content/tile/tastic'
 
 export default (() => {
     return {
@@ -49,5 +50,6 @@ export default (() => {
         'frontastic/boost/footer-social-nav': FooterSocialNavTastic,
         'frontastic/boost/wishlist': WishlistTastic,
         'frontastic/boost/filters': FiltersTastic,
+        'frontastic/boost/tile': TileTastic,
     }
 })()
