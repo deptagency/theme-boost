@@ -11,7 +11,7 @@ const NavItem = ({ item, onClick }) => {
                 node={item}
                 onClick={onClick}
                 title='Frauen'
-                className='mr-6 pb-1 font-bold text-underline-f focus:text-gray-800 hover:text-gray-800'
+                className='mr-6 pb-1 font-bold text-underline-f focus:text-gray-800 hover:text-gray-800 hover:no-underline'
             >
                 {item.name}
             </NodeLink>

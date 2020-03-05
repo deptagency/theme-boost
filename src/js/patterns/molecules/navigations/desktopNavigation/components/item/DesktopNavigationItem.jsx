@@ -25,6 +25,7 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                         }
                     }}
                     title='Startseite'
+                    className='hover:no-underline'
                 >
                     <div className='mr-8'> {/* .itemNameList */}
                         <div className='text-underline-h focus:text-gray-800 hover:text-indigo-700'
