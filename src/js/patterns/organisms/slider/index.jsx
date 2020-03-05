@@ -11,18 +11,19 @@ const ProductSlider = ({ products, title = '', description = '', viewportWidth }
     const pageRef = useRef(null)
     const productSliderWrapperRef = useRef(null)
 
+    const moveToLeftMargin = (distanceRecalc) => {
+        if (productSliderWrapperRef.current) {
+            productSliderWrapperRef.current
+                .getElementsByClassName('tns-inner')[0]
+                .setAttribute('style', `transform: translateX(${distanceRecalc}px)`)
+        }
+    }
+
     useEffect(() => {
-        console.log('viewportWidth', viewportWidth)
         if (pageRef.current) {
-            const distanceRecalc = (viewportWidth - pageRef.current.offsetWidth) / 2
-
-            if (productSliderWrapperRef.current) {
-                productSliderWrapperRef.current
-                    .getElementsByClassName('tns-inner')[0]
-                    .setAttribute('style', `transform: translateX(${distanceRecalc}px)`)
-            }
-
-            setDistance(distanceRecalc)
+            const newDistance = (viewportWidth - pageRef.current.offsetWidth) / 2
+            moveToLeftMargin(newDistance)
+            setDistance(newDistance)
         }
     }, [viewportWidth])
 
