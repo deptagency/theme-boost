@@ -1,5 +1,4 @@
-import React, {Component, useRef} from 'react'
-
+import React, { useRef, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
@@ -7,86 +6,48 @@ import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 import TinySlider from '../../templates/slider'
 import ProductItem from '../../molecules/product/item'
 
-import { useWindowWidth } from '@react-hook/window-size'
+const ProductSlider = ({ products, title = '', description = '', viewportWidth }) => {
+    const [distance, setDistance] = useState(0)
+    const pageRef = useRef(null)
+    const productSliderWrapperRef = useRef(null)
 
-class ProductSlider extends Component {
-    constructor (props) {
-        super(props)
+    useEffect(() => {
+        console.log('viewportWidth', viewportWidth)
+        if (pageRef.current) {
+            const distanceRecalc = (viewportWidth - pageRef.current.offsetWidth) / 2
 
-        this.pageRef = React.createRef()
-        this.productSliderWrapperRef = React.createRef()
-
-
-        this.state = {
-            wrapperStyle: {},
-            distance: 0
-        }
-    }
-
-    componentDidMount() {
-        const distance = (window.innerWidth - this.pageRef.current.offsetWidth) / 2
-
-        const wrapperStyle = {
-            margin: `0 ${distance * -1}px`,
-        }
-
-        if (this.productSliderWrapperRef.current) {
-            this.productSliderWrapperRef.current
-                .getElementsByClassName('tns-inner')[0]
-                .setAttribute('style', `transform: translateX(${distance}px)`)
-        }
-
-        this.setState({wrapperStyle, distance})
-    }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log(`prevProps, prevState, snapshot`)
-        console.log(prevProps, prevState, snapshot)
-
-        console.log('this.pageRef.current', this.pageRef.current)
-
-        console.log('window.innerWidth','this.pageRef.current.offsetWidth')
-        console.log(window.innerWidth, this.pageRef.current.offsetWidth)
-
-        if (this.pageRef.current && prevState.distance !== this.state.distance) {
-            const distance = (window.innerWidth - this.pageRef.current.offsetWidth) / 2
-
-            const wrapperStyle = {
-                margin: `0 ${distance * -1}px`,
-            }
-
-            if (this.productSliderWrapperRef.current) {
-                this.productSliderWrapperRef.current
+            if (productSliderWrapperRef.current) {
+                productSliderWrapperRef.current
                     .getElementsByClassName('tns-inner')[0]
-                    .setAttribute('style', `transform: translateX(${distance}px)`)
+                    .setAttribute('style', `transform: translateX(${distanceRecalc}px)`)
             }
 
-            this.setState({wrapperStyle, distance})
+            setDistance(distanceRecalc)
         }
-    }
+    }, [viewportWidth])
 
-    render() {
-        const { products, title = '', description = '' } = this.props
+    return (
+        <>
+            <div ref={pageRef} />
+            {title && (
+                <p className='text-center font-hairline text-gray-500'>
+                    <Translatable value={title} />
+                </p>
+            )}
+            {description && (
+                <h2 className='text-center font-bold'>
+                    <Translatable value={description} />
+                </h2>
+            )}
 
-        console.log('wrapperStyle', this.state.wrapperStyle)
-
-        return (
-            <div className='select-none' ref={this.pageRef}>
-                {title && (
-                    <p className='text-center font-hairline text-gray-500'>
-                        <Translatable value={title} />
-                    </p>
-                )}
-                {description && (
-                    <h2 className='text-center font-bold'>
-                        <Translatable value={description} />
-                    </h2>
-                )}
-
+            <div className='select-none'>
                 <div
                     className='boost-product-slider mt-8'
-                    style={this.state.wrapperStyle}
-                    ref={this.productSliderWrapperRef}
+                    style={{
+                        margin: `0 ${distance * -1}px`,
+                        transition: 'margin 0.3s ease',
+                    }}
+                    ref={productSliderWrapperRef}
                 >
                     <TinySlider>
                         {products.map((product, i) => {
@@ -105,9 +66,8 @@ class ProductSlider extends Component {
                     </TinySlider>
                 </div>
             </div>
-        )
-    }
-
+        </>
+    )
 }
 
 ProductSlider.propTypes = {
@@ -120,6 +80,7 @@ ProductSlider.propTypes = {
         PropTypes.string,
         PropTypes.object,
     ]),
+    viewportWidth: PropTypes.number.isRequired,
 }
 
 export default ProductSlider
