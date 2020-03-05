@@ -14,7 +14,7 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
     }
 
     return (
-        <nav className='inline-block text-gray-800 font-bold text-2xl hover-trigger'>  {/* .secNavDesktop */}
+        <nav className='inline-block text-gray-800 font-bold text-2xl hover-trigger'>
             <div>
                 <NodeLink
                     node={item}
@@ -27,22 +27,19 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                     title='Startseite'
                     className='hover:no-underline'
                 >
-                    <div className='mr-8'> {/* .itemNameList */}
+                    <div className='mr-8'>
                         <div className='text-underline-h focus:text-gray-800 hover:text-indigo-700'
                             style={{ color: sale ? '#667EEA' : 'none' }}>
                             {item.name}
-                            {/* itemNameUnderline */}
                         </div>
-
                         {item.children.length > 0 && (
                             <ul className='hover-target absolute bg-white shadow-xl z-10 right-0 left-0 py-10 lg:pl-24 xl:pl-64'>
-                                {/* dropdownContent */}
                                 {item.children.map((child, number) => {
                                 return (
                                     <div key={number}>
-                                        <div className='float-left w-1/4'>  {/* gridItemColumn */}
-                                            <div className='text-gray-800 font-bold text-2xl pb-8'>  {/* gridItemChild */}
-                                                {child.name}  {/* gridImage */}
+                                        <div className='float-left w-1/4'>
+                                            <div className='text-gray-800 font-bold text-2xl pb-8'>
+                                                {child.name}
                                                 {child.configuration.displayMedia && <Image
                                                     className='max-image'
                                                     forceWidth={300}
@@ -55,10 +52,10 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                                                     <div
                                                         key={number}
                                                         className='pt-1 block text-gray-800 font-normal mb-4'
-                                                        href='#'> {/* grandchildText */}
+                                                        href='#'>
                                                         {grandchild.name}
                                                     </div>
-                                            )
+                                                )
                                             })}
                                         </div>
                                     </div>

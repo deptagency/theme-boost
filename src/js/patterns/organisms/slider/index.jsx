@@ -40,7 +40,7 @@ const ProductSlider = ({ products, title = '', description = '' }) => {
             )}
 
             <div
-                className='boost-product-slider mt-8'
+                className='boost-product-slider'
                 style={wrapperStyle}
                 ref={productSliderWrapperRef}
             >
