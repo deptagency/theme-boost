@@ -5,31 +5,22 @@ import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 
 import TinySlider from '../../templates/slider'
 import ProductItem from '../../molecules/product/item'
+import MarginBreakout from '../../molecules/layout/marginBreakout'
 
-const ProductSlider = ({ products, title = '', description = '', viewportWidth }) => {
-    const [distance, setDistance] = useState(0)
-    const pageRef = useRef(null)
+const ProductSlider = ({ products, title = '', description = '' }) => {
     const productSliderWrapperRef = useRef(null)
+    const [sliderIndent, setSliderIndent] = useState(0)
 
-    const moveToLeftMargin = (distanceRecalc) => {
+    useEffect(() => {
         if (productSliderWrapperRef.current) {
             productSliderWrapperRef.current
                 .getElementsByClassName('tns-inner')[0]
-                .setAttribute('style', `transform: translateX(${distanceRecalc}px)`)
+                .setAttribute('style', `transform: translateX(${sliderIndent}px)`)
         }
-    }
-
-    useEffect(() => {
-        if (pageRef.current) {
-            const newDistance = (viewportWidth - pageRef.current.offsetWidth) / 2
-            moveToLeftMargin(newDistance)
-            setDistance(newDistance)
-        }
-    }, [viewportWidth])
+    }, [sliderIndent])
 
     return (
-        <>
-            <div ref={pageRef} />
+        <MarginBreakout onChange={setSliderIndent}>
             {title && (
                 <p className='text-center font-hairline text-gray-500'>
                     <Translatable value={title} />
@@ -41,15 +32,8 @@ const ProductSlider = ({ products, title = '', description = '', viewportWidth }
                 </h2>
             )}
 
-            <div className='select-none'>
-                <div
-                    className='boost-product-slider mt-8'
-                    style={{
-                        margin: `0 ${distance * -1}px`,
-                        transition: 'margin 0.3s ease',
-                    }}
-                    ref={productSliderWrapperRef}
-                >
+            <div className='boost-product-slider mt-8 select-none'>
+                <div ref={productSliderWrapperRef}>
                     <TinySlider>
                         {products.map((product, i) => {
                             return (
@@ -67,7 +51,7 @@ const ProductSlider = ({ products, title = '', description = '', viewportWidth }
                     </TinySlider>
                 </div>
             </div>
-        </>
+        </MarginBreakout>
     )
 }
 
@@ -81,7 +65,6 @@ ProductSlider.propTypes = {
         PropTypes.string,
         PropTypes.object,
     ]),
-    viewportWidth: PropTypes.number.isRequired,
 }
 
 export default ProductSlider
