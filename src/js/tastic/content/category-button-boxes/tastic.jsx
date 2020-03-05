@@ -1,15 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useWindowWidth } from '@react-hook/window-size'
-
+import { connect } from 'react-redux'
 import PromoboxWithPositioning from '../../../patterns/molecules/promobox/promobox-with-positioning'
 import Button from '../../../patterns/atoms/buttons/button'
 import ButtonBoxesDesktop from '../../../patterns/organisms/button-boxes/desktop'
 import ButtonBoxesMobile from '../../../patterns/organisms/button-boxes/mobile'
 
-const CategoryButtonBoxesTastic = (props) => {
-    const width = useWindowWidth()
-
+const CategoryButtonBoxesTastic = ({ data, viewportWidth }) => {
     // eslint-disable-next-line no-unused-vars
     const {
         firstImage,
@@ -18,7 +15,7 @@ const CategoryButtonBoxesTastic = (props) => {
         secondButtonLabel,
         thirdImage,
         thirdButtonLabel,
-    } = props.data
+    } = data
     let options = {
         vertical: 'middle',
         horizontal: 'center',
@@ -42,7 +39,7 @@ const CategoryButtonBoxesTastic = (props) => {
         </div>,
     ]
 
-    if (width < 880) {
+    if (viewportWidth < 880) {
         return <ButtonBoxesMobile>{buttonBoxes}</ButtonBoxesMobile>
     }
 
@@ -52,8 +49,14 @@ const CategoryButtonBoxesTastic = (props) => {
 CategoryButtonBoxesTastic.propTypes = {
     data: PropTypes.object.isRequired,
     // tastic: PropTypes.object.isRequired,
+    viewportWidth: PropTypes.number.isRequired,
 }
 
 CategoryButtonBoxesTastic.defaultProps = {}
 
-export default CategoryButtonBoxesTastic
+export default connect((globalState, props) => {
+    return {
+        ...props,
+        viewportWidth: globalState.renderContext.viewportDimension.width,
+    }
+})(CategoryButtonBoxesTastic)
