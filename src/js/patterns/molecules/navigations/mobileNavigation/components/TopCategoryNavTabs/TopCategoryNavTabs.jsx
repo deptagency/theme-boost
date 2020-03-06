@@ -5,8 +5,12 @@ import { topCategoryType } from './../../types'
 
 const TabItem = ({ item, onClick, isActive }) => {
     return (
-        <li className={`c-top-category-tab-nav__item${isActive ? ' is-active' : ''}`}>
-            <a onClick={onClick} title='Frauen'>
+        <li>
+            <a 
+                onClick={onClick} 
+                title='Frauen'
+                className='font-bold hover:no-underline hover:text-gray-400 cursor-pointer'
+            >
                 {item.name}
             </a>
         </li>
@@ -20,7 +24,7 @@ TabItem.propTypes = {
 
 export const TopCategoryNavTabs = ({ items, onCategorySelect, activeId = 0 }) => {
     return (
-        <ul className='c-top-category-tab-nav o-head-up__item o-head-up__item--bottom'>
+        <ul className='absolute flex w-full bottom-0 left-0 m-2 justify-between p-8'>
             {items &&
                 items.map((item, i) => {
                     if (!item.tree) {

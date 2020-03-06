@@ -54,7 +54,7 @@ function MainMobileNavigation ({ open, topCategories, onClose, callToAction, cla
     }
 
     return (
-        <nav role='navigation' className={`c-navigation${open ? ' is-active' : ''} ${className}`}>
+        <nav role='navigation' className={`c-navigation${open ? ' is-active' : ''}`}>
             <div
                 className={`c-navigation__body c-mobile-navigation__body c-mobile-navigation__body--current-level-${level} `}
             >
@@ -83,7 +83,7 @@ function MainMobileNavigation ({ open, topCategories, onClose, callToAction, cla
                 {/** Optional Call to Action Button.
                         Example: Sign up, My account, ...
                  */}
-                {callToAction && <div className='c-mobile-navigation__cta-wrapper o-distance-m o-prevent-space'>{callToAction}</div>}
+                {/* {callToAction && <div className='c-mobile-navigation__cta-wrapper o-distance-m o-prevent-space'>{callToAction}</div>} */}
 
                 {/** Scrollable menu wrapper + MobileNavTree */}
                 <div
