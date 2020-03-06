@@ -28,7 +28,7 @@ const CategoryButtonBoxesTastic = ({ data, viewportWidth }) => {
             </PromoboxWithPositioning>
         </div>,
         <div key='2'>
-            <PromoboxWithPositioning image={secondImage} {...options}>
+            <PromoboxWithPositioning image={secondImage} {...options} childrenClassName={'mx-4'}>
                 <Button className='bg-transparent hover:bg-indigo-700 text-white font-semibold hover:text-white text-2xl py-4 px-6 border border-white hover:border-transparent rounded-lg' style={{ borderStyle: 'solid' }}>{secondButtonLabel}</Button>
             </PromoboxWithPositioning>
         </div>,

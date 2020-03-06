@@ -11,7 +11,7 @@ import { ribbon, ribbonTopRight } from './promobox-with-positioning.module.scss'
 
 class PromoboxWithPositioning extends Component {
     render () {
-        const { children, vertical, horizontal, image, customChildrenStyle } = this.props
+        const { children, vertical, horizontal, image, childrenClassName } = this.props
 
         if (!image || !image.media) {
             return null
@@ -23,7 +23,7 @@ class PromoboxWithPositioning extends Component {
         }
 
         return (
-            <div className='aspectRatioPromobox relative'>
+            <div className={`aspectRatioPromobox relative rounded-md ${childrenClassName}`}>
                 <Image
                     media={image.media}
                     alt={<Translatable value={image.media.title} />}
@@ -36,9 +36,9 @@ class PromoboxWithPositioning extends Component {
                         </div>
                     )}
                     <div className={`${vertical}-0 ${horizontal}-0 flex absolute rounded-lg p-4 md:p-8 ${(vertical === 'middle') ? 'items-center top-0 bottom-0' : ''} ${(horizontal === 'center') ? 'justify-center left-0 right-0' : ''}`}>
-                        <div style={customChildrenStyle}>
-                            {children}
-                        </div>
+                        {/* <div style={customChildrenStyle}> */}
+                        {children}
+                        {/* </div> */}
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@ class PromoboxWithPositioning extends Component {
 PromoboxWithPositioning.defaultProps = {
     vertical: 'middle',
     horizontal: 'center',
-    customChildrenStyle: {},
+    childrenClassName: '',
 }
 
 PromoboxWithPositioning.propTypes = {
@@ -57,7 +57,7 @@ PromoboxWithPositioning.propTypes = {
     vertical: PropTypes.string,
     horizontal: PropTypes.string,
     image: PropTypes.object.isRequired,
-    customChildrenStyle: PropTypes.object,
+    childrenClassName: PropTypes.object,
 }
 
 export default ComponentInjector.return('PromoboxWithPositioning', PromoboxWithPositioning)
