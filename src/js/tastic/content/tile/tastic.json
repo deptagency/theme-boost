@@ -93,8 +93,8 @@
             "helpText": "Customize your call to action",
             "fields": [
                 {
-                    "label": "Text",
-                    "field": "buttonText",
+                    "label": "Button label",
+                    "field": "buttonLabel",
                     "translatable": true,
                     "type": "string",
                     "required": false,
@@ -102,7 +102,7 @@
                 },
                 {
                     "label": "Link",
-                    "field": "buttonLink",
+                    "field": "tileReference",
                     "translatable": false,
                     "required": false,
                     "type": "reference",

@@ -1,15 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import Tile from '../../../patterns/molecules/tiles/tile'
 
-const TileTastic = ({ data }) => {
+const TileTastic = ({ data, tastic, context }) => {
     return (
-        <Tile {... data} />
+        <Tile {... data} tastic={tastic} context={context} />
     )
 }
 
 TileTastic.propTypes = {
     data: PropTypes.object.isRequired,
+    tastic: PropTypes.object.isRequired,
+    context: PropTypes.object.isRequired,
 }
 
-export default TileTastic
+export default connect(
+    (globalState, props) => {
+        return {
+            ...props,
+            context: globalState.app.context,
+        }
+    }
+)(TileTastic)
