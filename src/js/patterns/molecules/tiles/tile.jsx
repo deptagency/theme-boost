@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 import Image from '@frontastic/catwalk/src/js/image'
-import Button from '../../atoms/buttons/button'
-import classnames from 'classnames'
+import Reference from '@frontastic/catwalk/src/js/component/reference'
 
 const Tile = ({ tileImage, topic, title, verticalPosition, horizontalPosition, buttonText, buttonLink, wholeTileClickable }) => {
     if (!tileImage || !tileImage.media) {
@@ -41,27 +41,28 @@ const Tile = ({ tileImage, topic, title, verticalPosition, horizontalPosition, b
                     })}
                 >
 
-                    <p
+                    {topic && <p
                         className={classnames({
                             'text-xl text-white sm:text-2xl md:text-3xl mb-2': true,
                             ...selfAlign,
                         })}
                     >
                         <Translatable value={topic} />
-                    </p>
-                    <h1
+                    </p>}
+                    {title && <h1
                         className={classnames({
                             'text-5xl text-white md:text-6xl font-bold mb-2 leading-tight': true,
                             ...selfAlign,
                         })}
                     >
                         <Translatable value={title} />
-                    </h1>
+                    </h1>}
 
-                    {/* // TODO Implement reference properly */}
-                    <Button
-                        // component='a'
-                        // href={buttonLink.target} {/* primary BUTTON */}
+                    {buttonText && buttonLink && <Reference
+                        reference={buttonLink || {
+                            type: null,
+                            target: null,
+                        }}
                         className={classnames({
                             'bg-indigo-500 font-semibold hover:bg-indigo-700 text-2xl py-4 px-6 rounded-lg': true,
                             ...selfAlign,
@@ -69,7 +70,7 @@ const Tile = ({ tileImage, topic, title, verticalPosition, horizontalPosition, b
 
                     >
                         <Translatable value={buttonText} />
-                    </Button>
+                    </Reference>}
                 </div>
             </div>
         </div>

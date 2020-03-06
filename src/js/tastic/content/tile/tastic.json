@@ -47,7 +47,8 @@
                     "field": "verticalPosition",
                     "translatable": false,
                     "type": "enum",
-                    "required": true,
+                    "required": false,
+                    "default": "bottom",
                     "values": [
                         {
                             "value": "top",
@@ -68,7 +69,8 @@
                     "field": "horizontalPosition",
                     "translatable": false,
                     "type": "enum",
-                    "required": true,
+                    "required": false,
+                    "default": "left",
                     "values": [
                         {
                             "value": "left",
@@ -95,8 +97,8 @@
                     "field": "buttonText",
                     "translatable": true,
                     "type": "string",
-                    "required": true,
-                    "default": "Shop now"
+                    "required": false,
+                    "default": ""
                 },
                 {
                     "label": "Link",
