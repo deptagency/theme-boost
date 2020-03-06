@@ -60,7 +60,7 @@ function MainMobileNavigation ({ open, topCategories, onClose, callToAction, cla
             >
                 {/** Header (background image with tab nav) */}
                 <div
-                    className='c-mobile-navigation__header o-head-up'
+                    className='mobile-height text-white relative'
                     ref={ref}
                     style={{
                         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImageUrl})`,
@@ -76,7 +76,7 @@ function MainMobileNavigation ({ open, topCategories, onClose, callToAction, cla
                             activeId={currentTopCategory}
                         />
                     ) : (
-                        <span>{navPath[navPath.length - 1].name}</span>
+                        <span className='hidden'>{navPath[navPath.length - 1].name}</span>
                     )}
                 </div>
 

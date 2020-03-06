@@ -6,10 +6,10 @@ import { topCategoryType } from './../../types'
 const TabItem = ({ item, onClick, isActive }) => {
     return (
         <li>
-            <a 
-                onClick={onClick} 
+            <a
+                onClick={onClick}
                 title='Frauen'
-                className='font-bold hover:no-underline hover:text-gray-400 cursor-pointer'
+                className='font-bold hover:no-underline focus:no-underline hover:text-gray-400 cursor-pointer'
             >
                 {item.name}
             </a>

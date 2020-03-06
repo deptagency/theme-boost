@@ -30,7 +30,7 @@ class PromoBoxTastic extends Component {
                     <Button
                         // component='a'
                         // href={buttonLink.target} {/* primary BUTTON */}
-                        className='bg-indigo-500 font-semibold hover:bg-indigo-700 text-2xl py-4 px-6 rounded-lg'
+                        className='bg-indigo-500 text-white font-semibold hover:bg-indigo-700 text-2xl py-4 px-6 rounded-lg'
                     >
                         <Translatable value={buttonText} />
                     </Button>
