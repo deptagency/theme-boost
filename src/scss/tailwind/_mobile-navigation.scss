@@ -4,20 +4,18 @@
     }
 }
 
-.mobile-navigation { 
-        transform: translateX(-100%);
-        transition: (transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s);
-        height: -webkit-fill-available;
-        height: 100%;
-      
-        &.is-active {
-            transform: translateX(0)
-        }
+.mobile-navigation {
+    transform: translateX(-100%);
+    transition: (transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s);
 
-        .mobile-navigation-list {
-            flex: 0 0 50%;
-        }
+    &.is-active {
+        transform: translateX(0)
     }
+
+    .mobile-navigation-list {
+        flex: 0 0 50%;
+    }
+}
 
 .mobile-height {
     height: 130px;
