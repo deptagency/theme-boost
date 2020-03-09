@@ -93,7 +93,7 @@ const MobileSwipe = ({ sliderId, children, slideOffset, className }) => {
     }
 
     return (
-        <div className='catwalk-mobile-swipe user-select--disabled' ref={swiper}>
+        <div className='catwalk-mobile-swipe select-none' ref={swiper}>
             <Swipe
                 className={`${getSliderId()} ${className}`}
                 allowMouseEvents

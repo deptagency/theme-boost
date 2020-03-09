@@ -20,6 +20,11 @@
   justify-self: end;
 }
 
+
+// Remove "Server Side Rendering Failed" overlay
+#frssrw1 {
+  display: none;
+}
 // END OF TAILWIND CSS
 
 
@@ -169,4 +174,3 @@
 
 // utilities form Catwalk
 @import 'utilities/utilities.transitions';
-@import 'temporary';
