@@ -40,7 +40,7 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                                             <div className='text-gray-800 font-bold text-2xl pb-8'>
                                                 {child.name}
                                                 {child.configuration.displayMedia && <Image
-                                                    className='max-image'
+                                                    className='max-h-316px max-w-192px'
                                                     forceWidth={300}
                                                     media={child.configuration.displayMedia.media}
                                                     alt={<Translatable value={child.configuration.displayMedia.media.title} />}

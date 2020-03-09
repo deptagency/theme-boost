@@ -5,6 +5,12 @@ module.exports = {
         extend: {
             height: {
                 'fix-240px': '240px',
+            },
+            maxHeight: {
+                '316px': '316px',
+            },
+            maxWidth: {
+                '192px': '192px',
             }
         }
     },
