@@ -19,13 +19,22 @@
 .justify-self-end {
   justify-self: end;
 }
+// END OF TAILWIND CSS
+
+// BOOST THEME
+@import 'vendors/tiny-slider';
+@import 'vendors/slide-pane';
+
+
+// utilities form Catwalk
+@import 'utilities/utilities.transitions';
 
 
 // Remove "Server Side Rendering Failed" overlay
-#frssrw1 {
+#frssrw {
   display: none;
 }
-// END OF TAILWIND CSS
+// END OF BOOST THEME
 
 
 // Settings
@@ -167,10 +176,5 @@
 @import '07-utilities/utilities.box-shadow';
 @import '07-utilities/utilities.background';
 
-@import 'vendors/tiny-slider';
-@import 'vendors/slide-pane';
-
 @import '~flickity/dist/flickity';
 
-// utilities form Catwalk
-@import 'utilities/utilities.transitions';
