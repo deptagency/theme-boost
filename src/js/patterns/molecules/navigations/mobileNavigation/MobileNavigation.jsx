@@ -54,9 +54,9 @@ function MainMobileNavigation ({ open, topCategories, onClose, callToAction, cla
     }
 
     return (
-        <nav role='navigation' className={`c-navigation${open ? ' is-active' : ''}`}>
+        <nav role='navigation' className={`mobile-navigation bg-white h-full w-full left-0 top-0 fixed z-10${open ? ' is-active' : ''}`}>
             <div
-                className={`c-navigation__body c-mobile-navigation__body c-mobile-navigation__body--current-level-${level} `}
+                className={`flex flex-col h-full navigation-level-${level}`}
             >
                 {/** Header (background image with tab nav) */}
                 <div
@@ -87,7 +87,7 @@ function MainMobileNavigation ({ open, topCategories, onClose, callToAction, cla
 
                 {/** Scrollable menu wrapper + MobileNavTree */}
                 <div
-                    className='c-mobile-navigation__scrollcontainer'
+                    className='w-full mobile-scroll-container'
                     style={{ transform: `translateX(${level * -100}%)` }}
                 >
                     {topCategories[currentTopCategory].tree && <MobileNavTree

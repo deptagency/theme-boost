@@ -35,7 +35,7 @@ export function MobileNavItem ({ item, level, navPath, onClick }) {
     const sale = item.name === 'SALE'
 
     return (
-        <li className={`flex px-5 justify-between border-b${isItemInPath(item) ? ' c-navigation__item--active' : ''}`}>
+        <li className={`flex px-5 justify-between border-b${isItemInPath(item) ? ' mobile-navigation-item-active' : ''}`}>
             <NodeLink
                 node={item}
                 onClick={(e) => {
@@ -44,7 +44,7 @@ export function MobileNavItem ({ item, level, navPath, onClick }) {
                         return onClick(item, level)
                     }
                 }}
-                className='hover:no-underline hover:text-gray-500 p-5 font-bold' style={{ color: sale ? '#667EEA' : 'none' }}>
+                className='hover:no-underline hover:text-gray-500 p-5' style={{ color: sale ? '#667EEA' : 'none' }}>
                 {item.name}
             </NodeLink>
             {hasSubLevel(item) && <NextButton />}

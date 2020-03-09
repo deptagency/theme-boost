@@ -19,10 +19,10 @@ class PromoBoxTastic extends Component {
                     horizontal={horizontalPosition}
                     image={image}
                 >
-                    <p className='text-xl text-white sm:text-2xl md:text-3xl mb-2'>
+                    <p className='text-2xl text-white md:text-3xl mb-2'>
                         <Translatable value={topic} />
                     </p>
-                    <h1 className='text-5xl text-white md:text-6xl font-bold mb-2 leading-tight'>
+                    <h1 className='text-4xl text-white sm:text-6xl font-bold mb-2 leading-tight'>
                         <Translatable value={title} />
                     </h1>
 

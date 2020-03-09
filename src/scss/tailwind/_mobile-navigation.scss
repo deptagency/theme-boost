@@ -2,44 +2,63 @@
     .mobile-hide {
         display: none;
     }
-    // .mobile-navigation { 
-
-    //     background: white;
-    //     height: 100%;
-    //     left: 0;
-    //     position: fixed;
-    //     top: 0px;
-    //     transform: translateX(-100%);
-    //     transition: (transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s);
-    //     width: 100%;
-    //     z-index: 10;
-    //     // display: flex;
-    //     // height: auto;
-    //     // padding: 0;
-    //     // position: relative;
-    //     // top: 0;
-    //     // width: auto;
-    //     // background: transparent;
-    //     // box-shadow: none;
-    //     // transform: none;
-        
-    //     &:active {
-    //         transform: translateX(0)
-    //     }
-    // }
 }
+
+.mobile-navigation { 
+        transform: translateX(-100%);
+        transition: (transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s);
+      
+        &.is-active {
+            transform: translateX(0)
+        }
+
+        .mobile-navigation-list {
+            flex: 0 0 50%;
+        }
+    }
+
+.mobile-height {
+    height: 130px;
+}
+
+.navigation-level-0 {
+    font-weight: 600 !important;
+}
+
+.navigation-level-1 {
+    font-weight: 600 !important;
+}
+
+.navigation-level-2 {
+    font-weight: 400 !important;
+}
+
+.mobile-scroll-container {
+    transition: 0.2s 
+    cubic-bezier(0.39, 0.58, 0.57, 1);
+}
+
+.mobile-navigation-tree {
+    transition: opacity 600ms, visibility 600ms;
+    left: 100%;
+}
+
+.mobile-navigation-tree-level-0 {
+    left: 0;
+}
+
+.mobile-navigation-item-active > .mobile-navigation-tree,
+.mobile-scroll-container > .mobile-navigation-tree {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 
 // .mobile-active {
 //     &:focus, &:focus-within, &:active {
 //         border-bottom: solid black 3px !important;
 //         text-decoration: none !important;
 //         transform: scaleX(1);
-
 //     }
 // }
-
-.mobile-height {
-    height: 130px;
-}
-
-
