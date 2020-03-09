@@ -19,7 +19,7 @@ const CloseIcon = () => {
             fill='none'
             width='24'
             height='24'
-            className='c-icon o-block-short__short-item'
+            className='h-6 w-6'
             xmlns='http://www.w3.org/2000/svg'
             >
             <path
@@ -32,7 +32,7 @@ const CloseIcon = () => {
 
 const MobileMenuToggle = ({ isMenuOpen, onToggle, className }) => {
     return (
-        <a onClick={onToggle} title='Menü' className='mt-8 lg:hidden'>
+        <a onClick={onToggle} title='Menü' className='mt-8 lg:hidden cursor-pointer'>
             {!isMenuOpen ? <MenuIcon /> : <CloseIcon />}
         </a>
     )

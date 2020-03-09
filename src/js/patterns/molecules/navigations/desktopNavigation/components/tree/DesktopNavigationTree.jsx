@@ -6,7 +6,7 @@ import { categoryTreeType } from '../../types'
 
 export function DesktopNavigationTree ({ items, onSelectItem, navPath, level = 0 }) {
     return (
-        <div className='pl-6 pb-6 border-b'> {/* .navigationContainer */}
+        <div className='pl-6 pb-6 border-b'>
             {items && items.map((item) => {
                 return (
                     <DesktopNavigationItem
