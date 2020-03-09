@@ -1,9 +1,9 @@
 .hover-trigger .hover-target {
-  display: none;
+ @apply hidden
 }
 
 .hover-trigger:hover .hover-target {
-  display: inline-block;
+  @apply inline-block
 }
 
 .max-image {
