@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
 // TODO: that path hurts! resolve into webpack or something like that
-import { ReactComponent as ArrowRight } from './../../../../../../../icons/arrow-right.svg'
+import { ReactComponent as ArrowRight } from './../../../../../../../icons/tailwind-icons/icon-cheveron-right.svg'
 
 import { MobileNavTree } from '../MobileNavTree'
 import { categoryTreeType } from '../../types'
@@ -26,13 +26,16 @@ export function MobileNavItem ({ item, level, navPath, onClick }) {
                     return onClick(item, level)
                 }}
                 title='Startseite'
-                className='c-navigation__next-level-button'>
+                className='text-4xl mr-4'>
                 <ArrowRight />
             </button>
         )
     }
+
+    const sale = item.name === 'SALE'
+
     return (
-        <li className={`c-navigation__item${isItemInPath(item) ? ' c-navigation__item--active' : ''}`}>
+        <li className={`flex px-5 justify-between border-b${isItemInPath(item) ? ' mobile-navigation-item-active' : ''}`}>
             <NodeLink
                 node={item}
                 onClick={(e) => {
@@ -41,8 +44,7 @@ export function MobileNavItem ({ item, level, navPath, onClick }) {
                         return onClick(item, level)
                     }
                 }}
-                title='Startseite'
-                className='c-navigation__anchor'>
+                className='hover:no-underline hover:text-gray-500 p-5' style={{ color: sale ? '#667EEA' : 'none' }}>
                 {item.name}
             </NodeLink>
             {hasSubLevel(item) && <NextButton />}

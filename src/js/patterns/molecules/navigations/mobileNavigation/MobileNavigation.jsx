@@ -54,13 +54,13 @@ function MainMobileNavigation ({ open, topCategories, onClose, callToAction, cla
     }
 
     return (
-        <nav role='navigation' className={`c-navigation${open ? ' is-active' : ''} ${className}`}>
+        <nav role='navigation' className={`mobile-navigation bg-white h-full w-full left-0 top-0 fixed z-10${open ? ' is-active' : ''}`}>
             <div
-                className={`c-navigation__body c-mobile-navigation__body c-mobile-navigation__body--current-level-${level} `}
+                className={`flex flex-col h-full navigation-level-${level}`}
             >
                 {/** Header (background image with tab nav) */}
                 <div
-                    className='c-mobile-navigation__header o-head-up'
+                    className='mobile-height text-white relative'
                     ref={ref}
                     style={{
                         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImageUrl})`,
@@ -76,18 +76,18 @@ function MainMobileNavigation ({ open, topCategories, onClose, callToAction, cla
                             activeId={currentTopCategory}
                         />
                     ) : (
-                        <span>{navPath[navPath.length - 1].name}</span>
+                        <span className='hidden'>{navPath[navPath.length - 1].name}</span>
                     )}
                 </div>
 
                 {/** Optional Call to Action Button.
                         Example: Sign up, My account, ...
                  */}
-                {callToAction && <div className='c-mobile-navigation__cta-wrapper o-distance-m o-prevent-space'>{callToAction}</div>}
+                {/* {callToAction && <div className='c-mobile-navigation__cta-wrapper o-distance-m o-prevent-space'>{callToAction}</div>} */}
 
                 {/** Scrollable menu wrapper + MobileNavTree */}
                 <div
-                    className='c-mobile-navigation__scrollcontainer'
+                    className='w-full mobile-scroll-container'
                     style={{ transform: `translateX(${level * -100}%)` }}
                 >
                     {topCategories[currentTopCategory].tree && <MobileNavTree

@@ -5,7 +5,7 @@
 .o-grid {
     display: grid;
     column-gap: $layout-gutter-width;
-    max-width: $layout-wrapper-width;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding-left: $layout-edge-width;

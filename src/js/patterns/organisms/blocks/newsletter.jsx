@@ -6,7 +6,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 class NewsletterBlock extends Component {
     render () {
         return (
-            <div className='block bg-indigo-500 p-10 rounded-lg text-center grid'>
+            <div className='block bg-indigo-500 p-10 rounded-lg text-center grid -mx-10'>
                 <p className='text-3xl text-white pb-3'><FormattedMessage id='exlusiveDiscounts' /></p>
                 <p className='text-5xl md:text-6xl font-semibold text-white pb-8'><FormattedMessage id='becomeFamily' /></p>
                 <div>
