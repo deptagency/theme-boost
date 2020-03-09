@@ -49,7 +49,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
 
     return (
         <>
-            <div className='flex flex-col justify-center h-12 -mx-10 px-8 mb-6'>
+            <div className='flex flex-col justify-center h-12 -mx-10 px-8 -mt-6'>
                 <div className='items-center flex flex-row relative border-b'>
                     <MobileMenuToggle
                         isMenuOpen={isMobileMenuOpen}
@@ -88,7 +88,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                     <UserIconNav open />
                 </div>
             </div>
-            <div className='mt-10 nav-hide -mx-10 shadow-md px-10'>
+            <div className='mt-2 -mx-10 nav-hide shadow-md px-10'>
                 <DesktopNavigation
                     topCategories={topCategories}
                     currentTopCategory={currentTopCategory}

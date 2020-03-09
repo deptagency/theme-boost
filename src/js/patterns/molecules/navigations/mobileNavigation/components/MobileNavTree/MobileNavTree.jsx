@@ -6,7 +6,7 @@ import { categoryTreeType } from '../../types'
 
 export function MobileNavTree ({ items, onSelectItem, navPath, level = 0 }) {
     return (
-        <div className={`opacity-0 invisible absolute top-0 w-full mobile-navigation-tree mobile-navigation-tree-level-${level}`}>
+        <div className={`opacity-0 invisible absolute top-0 w-full bg-white mobile-navigation-tree mobile-navigation-tree-level-${level}`}>
             <ul className='mobile-navigation-list'>
                 {/**
                     If the user is not on the top level anymore,
