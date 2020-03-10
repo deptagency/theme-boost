@@ -65,7 +65,7 @@
                     ]
                 },
                 {
-                    "label": "Horisontal Position",
+                    "label": "Horizontal Position",
                     "field": "horizontalPosition",
                     "translatable": false,
                     "type": "enum",
