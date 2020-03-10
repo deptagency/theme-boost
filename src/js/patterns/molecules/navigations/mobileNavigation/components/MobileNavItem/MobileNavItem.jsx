@@ -35,7 +35,7 @@ export function MobileNavItem ({ item, level, navPath, onClick }) {
     const sale = item.name === 'SALE'
 
     return (
-        <li className={`flex px-5 justify-between border-b${isItemInPath(item) ? ' mobile-navigation-item-active' : ''}`}>
+        <li className='flex px-5 justify-between border-b'>
             <NodeLink
                 node={item}
                 onClick={(e) => {
@@ -50,7 +50,13 @@ export function MobileNavItem ({ item, level, navPath, onClick }) {
             {hasSubLevel(item) && <NextButton />}
 
             {hasSubLevel(item) && (
-                <MobileNavTree items={item.children} navPath={navPath} level={level + 1} onSelectItem={onClick} />
+                <MobileNavTree
+                    items={item.children}
+                    navPath={navPath}
+                    level={level + 1}
+                    onSelectItem={onClick}
+                    isActive={isItemInPath(item)}
+                />
             )}
         </li>
     )

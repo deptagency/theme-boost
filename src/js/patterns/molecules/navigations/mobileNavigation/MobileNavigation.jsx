@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import useBackgroundImageUrl from 'frontastic-catwalk/src/js/helper/hooks/useBackgroundImageUrl'
@@ -54,13 +55,25 @@ function MainMobileNavigation ({ open, topCategories, onClose, callToAction, cla
     }
 
     return (
-        <nav role='navigation' className={`mobile-navigation bg-white h-full w-full left-0 top-0 fixed z-10${open ? ' is-active' : ''}`}>
+        <nav
+            role='navigation'
+            className={classnames({
+                'bg-white h-full w-full left-0 top-0 fixed z-10': true,
+                'translate-right': open,
+                'translate-left': !open,
+                'transition-transform duration-30 transition-shadow duration-30 webkit-transition duration-30': true,
+            })}
+            >
             <div
-                className={`flex flex-col h-full navigation-level-${level}`}
+                className={classnames({
+                    'flex flex-col h-full': true,
+                    'font-semibold': level === 0 || level === 1,
+                    'font-normal': level > 1,
+                })}
             >
                 {/** Header (background image with tab nav) */}
                 <div
-                    className='mobile-height text-white relative'
+                    className='h-fix-132px text-white relative'
                     ref={ref}
                     style={{
                         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImageUrl})`,
@@ -87,13 +100,14 @@ function MainMobileNavigation ({ open, topCategories, onClose, callToAction, cla
 
                 {/** Scrollable menu wrapper + MobileNavTree */}
                 <div
-                    className='w-full mobile-scroll-container'
+                    className='w-full ease-out-expo duration-20'
                     style={{ transform: `translateX(${level * -100}%)` }}
                 >
                     {topCategories[currentTopCategory].tree && <MobileNavTree
                         items={topCategories[currentTopCategory].tree.children}
                         navPath={navPath}
                         onSelectItem={handleSelectNavItem}
+                        isActive={open}
                     />}
                 </div>
             </div>

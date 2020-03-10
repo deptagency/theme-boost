@@ -53,7 +53,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                 <div className='items-center flex flex-row relative border-b'>
                     <MobileMenuToggle
                         isMenuOpen={isMobileMenuOpen}
-                        className='mobile-hide'
+                        className='lg:hidden'
                         onToggle={() => {
                             return setIsMobileMenuOpen(!isMobileMenuOpen)
                         }}
@@ -66,7 +66,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                         I've added the media query classes to the top level
                         inside the Header component to have it all in one place.
                     */}
-                    <div className='mobile-hide'>
+                    <div className='lg:hidden'>
                         <MobileNavigation
                             callToAction={ctaLoggedIn()}
                             onClose={() => {
