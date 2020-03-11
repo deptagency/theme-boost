@@ -20,6 +20,13 @@
     }
 }
 
+.text-underline-f-m {
+    &:focus{
+        border-bottom: solid 3px #2D3748;
+        text-decoration: none !important;
+    }
+}
+
 .text-underline-h {
     &:hover{
         transform: scaleX(1);
