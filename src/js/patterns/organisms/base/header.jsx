@@ -49,7 +49,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
 
     return (
         <>
-            <div className='flex flex-col justify-center h-full -mx-10 px-8 -mt-6'>
+            <div className='flex flex-col justify-center h-full -mt-6'>
                 <div className='items-center flex flex-row relative border-b'>
                     <MobileMenuToggle
                         isMenuOpen={isMobileMenuOpen}

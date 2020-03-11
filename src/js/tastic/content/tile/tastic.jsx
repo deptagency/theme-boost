@@ -5,7 +5,11 @@ import Tile from '../../../patterns/molecules/tiles/tile'
 
 const TileTastic = ({ data, tastic, context }) => {
     return (
-        <Tile {... data} tastic={tastic} context={context} />
+        <Tile
+            {... data}
+            tastic={tastic}
+            context={context}
+        />
     )
 }
 

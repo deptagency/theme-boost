@@ -13,10 +13,7 @@
                     "field": "tileImage",
                     "translatable": false,
                     "type": "media",
-                    "required": true,
-                    "options": {
-                        "ratio": "16:9"
-                    }
+                    "required": true
                 }
             ]
         },
