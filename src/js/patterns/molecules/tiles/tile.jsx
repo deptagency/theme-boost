@@ -38,7 +38,7 @@ const Tile = ({
 
     return (
         <Component
-            className='grid grid-cols-1 grid-rows-1 rounded-lg h-fix-288px lg:max-h-456px lg:h-full overflow-hidden'
+            className='grid grid-cols-1 grid-rows-1 rounded-lg max-h-288px lg:max-h-456px lg:h-full overflow-hidden'
             reference={tileReference || {
                 type: null,
                 target: null,

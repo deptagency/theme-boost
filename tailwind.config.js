@@ -9,9 +9,9 @@ module.exports = {
             height: {
                 'fix-132px': '132px',
                 'fix-240px': '240px',
-                'fix-288px': '288px',
             },
             maxHeight: {
+                '288px': '288px',
                 '316px': '316px',
                 '456px': '456px'
             },
