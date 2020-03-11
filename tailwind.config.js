@@ -10,10 +10,10 @@ module.exports = {
                 'fix-132px': '132px',
                 'fix-240px': '240px',
                 'fix-288px': '288px',
-                'fix-456px': '456px'
             },
             maxHeight: {
                 '316px': '316px',
+                '456px': '456px'
             },
             maxWidth: {
                 '192px': '192px',
