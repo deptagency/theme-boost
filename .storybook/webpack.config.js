@@ -45,13 +45,36 @@ module.exports = async ({ config, mode }) => {
      * */
     config.module.rules.push({
         test: /(?<!\.module)\.scss$/,
-        use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'],
+        use: [
+            'style-loader',
+            'css-loader',
+            {
+                loader: require.resolve('postcss-loader'),
+                options: {
+                    ident: 'postcss',
+                    plugins: () => {
+                        return [require('postcss-flexbugs-fixes'), require('tailwindcss'), autoprefixer()]
+                    },
+                },
+            },
+            'resolve-url-loader',
+            'sass-loader',
+        ],
     })
     config.module.rules.push({
         test: /\.module\.s?css$/,
         use: [
             'style-loader',
             { loader: 'css-loader', options: { modules: true } },
+            {
+                loader: require.resolve('postcss-loader'),
+                options: {
+                    ident: 'postcss',
+                    plugins: () => {
+                        return [require('postcss-flexbugs-fixes'), require('tailwindcss'), autoprefixer()]
+                    },
+                },
+            },
             'resolve-url-loader',
             {
                 loader: 'sass-loader',
