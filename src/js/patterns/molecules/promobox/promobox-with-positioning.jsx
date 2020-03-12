@@ -57,7 +57,7 @@ PromoboxWithPositioning.propTypes = {
     vertical: PropTypes.string,
     horizontal: PropTypes.string,
     image: PropTypes.object.isRequired,
-    childrenClassName: PropTypes.object,
+    childrenClassName: PropTypes.string,
 }
 
 export default ComponentInjector.return('PromoboxWithPositioning', PromoboxWithPositioning)

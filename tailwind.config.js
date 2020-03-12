@@ -11,7 +11,9 @@ module.exports = {
                 'fix-240px': '240px',
             },
             maxHeight: {
+                '288px': '288px',
                 '316px': '316px',
+                '456px': '456px'
             },
             maxWidth: {
                 '192px': '192px',
@@ -48,6 +50,9 @@ module.exports = {
                 },
                 '.webkit-transition': {
                     transitionProperty: '-webkit-transform'
+                },
+                '.tile-image-gradient': {
+                    background: 'linear-gradient(38.36deg, #000000 0%, rgba(196, 196, 196, 0) 106.19%)'
                 }
             }
 
