@@ -10,7 +10,7 @@ const TabItem = ({ item, onClick, isActive }) => {
                 tabIndex='0'
                 onClick={onClick}
                 title='Frauen'
-                className='font-bold hover:no-underline hover:text-gray-400 text-underline-f-m cursor-pointer'
+                className='font-bold hover:no-underline hover:text-gray-400 text-underline-f-m focus:text-gray-400 cursor-pointer'
             >
                 {item.name}
             </a>
