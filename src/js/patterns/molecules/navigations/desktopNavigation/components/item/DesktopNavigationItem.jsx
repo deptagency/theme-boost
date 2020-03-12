@@ -28,7 +28,7 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                     className='hover:no-underline active:no-underline'
                 >
                     <div className='mr-8'>
-                        <div className='text-underline-h focus:text-gray-800 hover:text-indigo-700' style={{ color: sale ? '#667EEA' : 'none' }}>
+                        <div className='hover:border-b-2px border-gray-800 hover:no-underline focus:text-gray-800 hover:text-indigo-700' style={{ color: sale ? '#667EEA' : 'none' }}>
                             {item.name}
                         </div>
                         {item.children.length > 0 && (

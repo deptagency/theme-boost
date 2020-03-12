@@ -6,12 +6,12 @@ import NodeLink from 'frontastic-catwalk/src/js/app/nodeLink.jsx'
 
 const NavItem = ({ item, onClick }) => {
     return (
-        <li className='text-gray-500 active:text-gray-800 nav-hide nav-block text-2xl'>
+        <li className='text-gray-500 active:text-gray-800 text-2xl'>
             <NodeLink
                 node={item}
                 onClick={onClick}
                 title='Frauen'
-                className='mr-6 pb-1 font-bold text-underline-f focus:text-gray-800 hover:text-gray-800 hover:no-underline'
+                className='mr-6 pb-1 font-bold focus:border-b-2px border-gray-800 focus:no-underline focus:text-gray-800 hover:text-gray-800 hover:no-underline'
             >
                 {item.name}
             </NodeLink>
@@ -25,7 +25,7 @@ NavItem.propTypes = {
 
 export const TopCategoryNav = ({ items, onCategorySelect = 0 }) => {
     return (
-        <ul className='mt-10 pl-4 list-none align-center flex flex-row'>
+        <ul className='mt-10 pl-4 list-none align-center flex flex-row hidden-override lg:flex'>
             {items &&
                 items.map((item, i) => {
                     if (!item.tree) {

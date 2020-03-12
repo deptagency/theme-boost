@@ -15,7 +15,7 @@ const UserIconNav = () => {
                     <IconButton
                         icon={<SearchIcon />} />
                 </li>
-                <li className='mr-5 hidden! block!'>
+                <li className='mr-5 hidden-override lg:block'>
                     <IconButton
                         icon={<MyProfile />}
                         onClick={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }} />
