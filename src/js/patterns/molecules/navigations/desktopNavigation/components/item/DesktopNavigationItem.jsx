@@ -28,7 +28,7 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                     className='hover:no-underline active:no-underline'
                 >
                     <div className='mr-8'>
-                        <div className='hover:border-b-2px border-gray-800 hover:no-underline focus:text-gray-800 hover:text-indigo-700' style={{ color: sale ? '#667EEA' : 'none' }}>
+                        <div className='border-b-2px border-transparent hover:border-b-2px hover:border-gray-800 hover:no-underline focus:text-gray-800 hover:text-indigo-700' style={{ color: sale ? '#667EEA' : 'none' }}>
                             {item.name}
                         </div>
                         {item.children.length > 0 && (
@@ -37,7 +37,7 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                                 return (
                                     <div key={number}>
                                         <div className='float-left w-1/4'>
-                                            <div className='text-gray-800 font-bold text-2xl pb-8'>
+                                            <div className='text-gray-800 font-bold text-2xl pb-8 hover:text-indigo-700'>
                                                 {child.name}
                                                 {child.configuration.displayMedia && <Image
                                                     className='max-h-316px max-w-192px'
@@ -50,7 +50,7 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                                                 return (
                                                     <div
                                                         key={number}
-                                                        className='pt-1 block text-gray-800 font-normal mb-4'
+                                                        className='pt-1 block text-gray-800 font-normal hover:text-indigo-700 mb-4'
                                                         href='#'>
                                                         {grandchild.name}
                                                     </div>
