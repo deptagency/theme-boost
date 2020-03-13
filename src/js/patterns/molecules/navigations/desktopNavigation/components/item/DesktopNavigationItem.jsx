@@ -32,7 +32,7 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
                             {item.name}
                         </div>
                         {item.children.length > 0 && (
-                            <ul className='hover-target absolute bg-white shadow-xl z-10 right-0 left-0 py-10 lg:pl-24 xl:pl-64'>
+                            <ul className='hover-target absolute bg-white shadow-xl z-10 right-0 left-0 py-10 lg:px-12 xl:px-40 m-auto max-w-1218px'>
                                 {item.children.map((child, number) => {
                                 return (
                                     <div key={number}>

@@ -15,6 +15,7 @@ module.exports = {
             },
             maxWidth: {
                 '192px': '192px',
+                '1218px' : '1218px',
             },
             transitionProperty: {
                 'visibility': 'visibility',

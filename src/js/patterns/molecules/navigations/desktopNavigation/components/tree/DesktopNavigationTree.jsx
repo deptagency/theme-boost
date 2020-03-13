@@ -6,7 +6,7 @@ import { categoryTreeType } from '../../types'
 
 export function DesktopNavigationTree ({ items, onSelectItem, navPath, level = 0 }) {
     return (
-        <div className='pl-6 pb-4 border-b'>
+        <div className='pl-6 pb-4 border-b hidden-override lg:flex'>
             {items && items.map((item) => {
                 return (
                     <DesktopNavigationItem
