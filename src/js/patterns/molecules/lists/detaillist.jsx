@@ -5,11 +5,11 @@ import { FormattedMessage } from 'react-intl'
 
 const Detaillist = ({ color, size }) => {
     return (
-        <dl className='o-detaillist'>
-            <dt className='u-text-color-quiet u-text-s'><FormattedMessage id='colorProduct' /></dt>
-            <dd className='u-text-strong u-text-s'>{color}</dd>
-            <dt className='u-text-color-quiet u-text-s'><FormattedMessage id='sizeProduct' /></dt>
-            <dd className='u-text-strong u-text-s'>{size}</dd>
+        <dl className='grid grid-cols-2-max-content col-gap-8 row-gap-6 items-start justify-start'>
+            <dt className='text-3xl text-gray-600'><FormattedMessage id='colorProduct' /></dt>
+            <dd className='text-3xl font-bold'>{color}</dd>
+            <dt className='text-3xl text-gray-600'><FormattedMessage id='sizeProduct' /></dt>
+            <dd className='text-3xl font-bold'>{size}</dd>
         </dl>
     )
 }

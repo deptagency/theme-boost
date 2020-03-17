@@ -12,14 +12,14 @@ const Bundle = ({ itemId, image, name, designer, count, price, color, size }) =>
     const productCounter = Array.from(Array(10).keys())
 
     return (
-        <div className='o-bundle'>
-            <div className='o-bundle__asset'>
+        <div className='grid gap-6 grid-cols-120-3xfr grid-rows-auto-1fr-auto'>
+            <div className='col-start-1 row-start-1 row-end-span-3'>
                 <img src={image} alt='' />
             </div>
-            <div className='o-bundle__header'>
+            <div className='grid row-start-1 col-start-2 col-end-span-3 grid-cols-1-auto items-start'>
                 <div>
-                    <div className='c-title-level-4'>{name}</div>
-                    <div className='u-text-s t-text-quiet'>{designer}</div>
+                    <div className='text-4xl leading-tight font-bold'>{name}</div>
+                    <div className='text-3xl text-gray-600'>{designer}</div>
                 </div>
                 <button className='c-button-single-icon c-button-single-icon--primary' onClick={() => {
                     app.getLoader('cart').removeLineItem({ lineItemId: itemId })
@@ -27,13 +27,13 @@ const Bundle = ({ itemId, image, name, designer, count, price, color, size }) =>
                     <CartBin />
                 </button>
             </div>
-            <div className='o-bundle__body'>
+            <div className='row-start-2 col-start-2 col-end-span-3'>
                 <Detaillist
                     color={color}
                     size={size}
                 />
                 <select
-                    className='o-distance-m'
+                    className='mt-8'
                     onChange={(event) => {
                         app.getLoader('cart').updateLineItem({
                             lineItemId: itemId,
@@ -47,7 +47,7 @@ const Bundle = ({ itemId, image, name, designer, count, price, color, size }) =>
                     })}
                 </select>
             </div>
-            <div className='o-bundle__footer'>
+            <div className='row-start-3 grid-col-start-2 col-end-span-3 text-right'>
                 <Price value={price} normal />
             </div>
         </div>

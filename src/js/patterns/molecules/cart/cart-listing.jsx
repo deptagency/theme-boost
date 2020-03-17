@@ -7,21 +7,21 @@ import OrganismsPaymentListingIcons from '../../organisms/listings/payment-listi
 const CartListing = ({ cartItems, outerClassName }) => {
     return (
         <div className={outerClassName}>
-            <section className='c-frame-large-up'>
-                <h1 className='c-title-area'><FormattedMessage id='cart.myCart' /></h1>
+            <section className='md:block md:p-8 md:border-2 md:border-solid md:border-gray-200 md:rounded-lg'>
+                <h1 className='leading-tight md:text-5xl'><FormattedMessage id='cart.myCart' /></h1>
                 <div>
                     <OrganismsBundleListing cartItems={cartItems} />
                 </div>
             </section>
-            <div className='o-with-sidebar__boundless o-distance u-hidden-large-up'>
-                <span className='c-divider c-divider--break' />
+            <div className='mt-12 -mx-6 md:hidden'>
+                <div className='w-full h-2 bg-gray-200' />
             </div>
-            <section className='o-container o-distance-l c-frame-large-up'>
-                <h2 className='c-title-area'><FormattedMessage id='cart.paymentMethods' /></h2>
+            <section className='w-full max-w-1120px mt-12 md:block md:p-8 md:border-2 md:border-solid md:border-gray-200 md:rounded-lg'>
+                <h2 className='leading-tight md:text-5xl'><FormattedMessage id='cart.paymentMethods' /></h2>
                 <OrganismsPaymentListingIcons image={''} />
             </section>
-            <div className='o-with-sidebar__boundless o-distance u-hidden-large-up'>
-                <span className='c-divider c-divider--break' />
+            <div className='mt-12 -mx-6 md:hidden'>
+                <div className='w-full h-2 bg-gray-200' />
             </div>
         </div>
     )

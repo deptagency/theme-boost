@@ -8,16 +8,16 @@ import { FormattedMessage } from 'react-intl'
 const CartSummary = ({ sum, outerClassName }) => {
     return (
         <div className={`${outerClassName}`}>
-            <section className='o-container'>
-                <h2 className='c-title-area'><FormattedMessage id='cart.totalSum' /></h2>
-                <div className='o-distance-s'>
+            <section className='w-full max-w-1120px'>
+                <h2 className='leading-tight md:text-5xl'><FormattedMessage id='cart.totalSum' /></h2>
+                <div className='mt-6'>
                     <Summary sum={sum} />
-                    <p className='o-distance-m u-text-s t-text-quiet'>
+                    <p className='mt-8 text-3xl text-gray-600'>
                         <FormattedMessage id='cart.enterVouchers' />
                     </p>
                 </div>
             </section>
-            <div className='o-container o-distance'>
+            <div className='w-full max-w-1120px md:mt-16'>
                 <Button size='boss' type='primary'>
                     <FormattedMessage id='cart.checkout' />
                 </Button>
