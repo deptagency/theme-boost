@@ -8,36 +8,36 @@ import AtomsPrice from '../../atoms/prices/price'
 const Summary = ({ sum, subtotal }) => {
     return (
         <div>
-            <div className='o-summary'>
+            <div className='grid grid-cols-2-auto col-gap-6 row-gap-6'>
                 {subtotal ?
                     <Fragment>
-                        <div className='o-summary__item'>
-                            <p className='u-text-s u-text-strong'>
+                        <div>
+                            <p className='text-3xl font-bold'>
                                 <FormattedMessage id='cart.subtotal' />
                             </p>
                         </div>
-                        <div className='o-summary__item o-summary__item--offset'>
-                            <p className='u-text-s u-text-strong'>
+                        <div className='text-right'>
+                            <p className='text-3xl font-bold'>
                                 <AtomsPrice value={sum} />
                             </p>
                         </div>
                     </Fragment>
                 : null}
-                <p className='o-summary__item u-text-s'>
+                <p className='text-3xl'>
                     <FormattedMessage id='cart.shippingCosts' />
                 </p>
-                <p className='o-summary__item o-summary__item--offset u-text-s'>
+                <p className='text-right text-3xl'>
                     <FormattedMessage id='cart.gratis' />
                 </p>
-                <span className='o-summary__full-item c-divider' />
-                <div className='o-summary__item'>
-                    <p className='u-text-strong'>
+                <span className='block w-full h-px bg-gray-400 col-start-auto col-end-span-2' />
+                <div>
+                    <p className='font-bold'>
                         <FormattedMessage id='cart.totalAmount' />
                     </p>
-                    <p className='u-text-s t-text-quiet'><FormattedMessage id='cart.inclVat' /></p>
+                    <p className='text-3xl text-gray-600'><FormattedMessage id='cart.inclVat' /></p>
                 </div>
-                <div className='o-summary__item o-summary__item--offset'>
-                    <p className='u-text-m u-text-strong'><AtomsPrice value={sum} /></p>
+                <div className='text-right'>
+                    <p className='text-4xl font-bold'><AtomsPrice value={sum} /></p>
                 </div>
             </div>
         </div>

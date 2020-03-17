@@ -6,12 +6,11 @@ import CartSummary from '../../molecules/cart/cart-summary'
 
 const FullCart = ({ cartItems, sum }) => {
     return (
-        <div className='o-with-sidebar o-distance-s'>
-            <div className='o-with-sidebar__main'>
-                <CartListing cartItems={cartItems} />
-            </div>
-            <div className='o-with-sidebar__sidebar is-sticky'>
-                <CartSummary outerClassName='c-box u-background-color-default' sum={sum} />
+        <div className='mt-6 md:grid md:gap-10 md:grid-cols-1-340'>
+            <CartListing cartItems={cartItems} />
+
+            <div className='mt-3 self-baseline md:sticky md:top-3 md:mt-0'>
+                <CartSummary outerClassName='block p-8 bg-gray-200 rounded-lg leading-none' sum={sum} />
             </div>
         </div>
     )

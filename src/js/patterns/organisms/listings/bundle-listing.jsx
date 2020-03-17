@@ -7,13 +7,13 @@ import { map } from 'lodash'
 
 const BundleListing = ({ cartItems }) => {
     return (
-        <div className='o-distance-l'>
+        <div className='mt-12'>
             <section>
                 {map(cartItems, (item, index) => {
                     // TODO attributes.**.label - make it more robust
                     return (
                         <Fragment key={index}>
-                            <div className='o-distance-m'>
+                            <div className='mt-8'>
                                 <Bundle
                                     itemId={item.lineItemId}
                                     name={item.name}
@@ -25,7 +25,7 @@ const BundleListing = ({ cartItems }) => {
                                     size={item.variant.attributes.size}
                                 />
                             </div>
-                            {cartItems.length - 1 > index && <span style={{ marginTop: '12px' }} className='c-divider' />}
+                            {cartItems.length - 1 > index && <span style={{ marginTop: '12px' }} className='block w-full h-px bg-gray-200' />}
                         </Fragment>
 
                     )
