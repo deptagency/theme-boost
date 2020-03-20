@@ -2,22 +2,25 @@ import React, { Component } from 'react'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import Product from '../products/product'
+import Product from '../../molecules/product/productTeaser'
 import Heading from '../../molecules/headings/heading'
 
 class ProductListing extends Component {
     render () {
         return (
-            <div>
-                <section className='o-distance o-prevent-space'>
-                    <Heading />
-                    <div className='o-grid o-grid--large-forth'>
+            <div className="flex flex-wrap p-4 -mx-2">
                         <Product />
                         <Product />
                         <Product />
                         <Product />
-                    </div>
-                </section>
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
             </div>
         )
     }

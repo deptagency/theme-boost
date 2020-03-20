@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
+import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 
 import fixture from '../../fixture'
 
 import AtomsPrice from '../../atoms/prices/price'
 
-import NoImage from '../../../../../layout/noImage.svg'
-import RemoteImage from '../../../../remoteImage'
+import NoImage from '@frontastic/catwalk/src/layout/noImage.svg'
+import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
 
 class ProductTeaser extends Component {
     render () {
