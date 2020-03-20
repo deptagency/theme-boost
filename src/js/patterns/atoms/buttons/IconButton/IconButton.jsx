@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export function IconButton ({ icon, onClick, className, children }) {
     return (
-        <button onClick={onClick} className='text-4xl'>
+        <button onClick={onClick} className='text-2xl'>
             {icon && icon}
             {children && <p>{children}</p>}
         </button>

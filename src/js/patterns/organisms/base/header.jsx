@@ -76,7 +76,7 @@ const Head = ({ topCategories, logo, loggedIn }) => {
                             topCategories={topCategories}
                     />
                     </div>
-                    <a href='/' className='no-underline active:no-uderline focus:no-underline hover:no-underline hover:text-indigo-700 text-gray-800 text-5xl font-semibold pl-6 pr-8 pt-8' title='Catwalk' ref={logoRef}>
+                    <a href='/' className='no-underline active:no-uderline focus:no-underline hover:no-underline hover:text-indigo-700 text-gray-800 text-2xl font-semibold pl-6 pr-8 pt-8' title='Catwalk' ref={logoRef}>
                         Catwalk
                     </a>
 

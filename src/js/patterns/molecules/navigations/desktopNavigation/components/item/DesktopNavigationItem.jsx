@@ -14,7 +14,7 @@ export function DesktopNavigationItem ({ item, level, navPath, onClick, number }
     }
 
     return (
-        <nav className='inline-block text-gray-800 font-bold text-2xl hover-trigger'>
+        <nav className='inline-block text-gray-800 font-bold text-sm hover-trigger'>
             <div>
                 <NodeLink
                     node={item}
