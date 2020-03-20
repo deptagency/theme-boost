@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 class ShowcaseTextTastic extends Component {
     render () {
         return (
-            <div>{this.props.data.showcaseText}</div>
+            <div className='border m-2 p-2'>{this.props.data.showcaseText}</div>
         )
     }
 }

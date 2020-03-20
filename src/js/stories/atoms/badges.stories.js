@@ -1,30 +1,17 @@
 import React from 'react'
 
-import Badge from 'js/patterns/atoms/badges/badge'
-
 export default {
-    title: '2.Atoms|Badges',
+    title: 'Start storybook',
 }
 
-export const allBadges = () => {
+export const start = () => {
     return (
         <div>
-            <p className='o-distance-m'>
-                <Badge>Neu</Badge>
-            </p>
-            <p className='o-distance-m'>
-                <Badge type='quiet'>Neu</Badge>
-            </p>
-            <p className='o-distance-m'>
-                <Badge type='spot'>Neu</Badge>
-            </p>
-            <p className='o-distance-m'>
-                <Badge type='danger'>Sale</Badge>
-            </p>
+            Storybook works
         </div>
     )
 }
 
-allBadges.story = {
-    name: 'All Badges',
+start.story = {
+    name: 'Start',
 }

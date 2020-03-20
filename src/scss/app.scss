@@ -1,22 +1,12 @@
-// START OF TAILWIND CSS
+@import "backstage/settings";
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import "tailwind/promo-box-with-positioning";
-@import "tailwind/desktop-navigation.scss";
-// END OF TAILWIND CSS
-
-// BOOST THEME
-@import 'vendors/slide-pane';
-
-// utilities form Catwalk
-@import 'utilities/utilities.transitions';
-
+@import 'layout';
 // Remove "Server Side Rendering Failed" overlay
 #frssrw {
-  @apply hidden
+    @apply hidden
 }
-// END OF BOOST THEME
 
-@import "deprecated";

@@ -1,5 +1,0 @@
-// @name Aspect Ratio
-// @description Calculating aspect ratio with this mixin
-@mixin aspect-ratio($width, $height) {
-  padding-top: 100%/($width/$height);
-}

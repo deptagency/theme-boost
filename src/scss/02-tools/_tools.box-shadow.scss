@@ -1,5 +1,0 @@
-// @name Box Shadow
-// @description Using standard box shadow the easy way
-@mixin box-shadow() {
-  box-shadow: $shadow-size-base rgba($shadow-color-base, $shadow-opacity-base);
-}
