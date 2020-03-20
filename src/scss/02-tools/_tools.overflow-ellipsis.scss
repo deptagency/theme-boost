@@ -1,7 +1,0 @@
-// @name Overflow Ellipsis
-// @description Putting text in one line and add ellipses to the end
-@mixin overflow-ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
