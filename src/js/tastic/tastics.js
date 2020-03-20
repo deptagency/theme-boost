@@ -1,6 +1,4 @@
 import HeaderTastic from './header/header/tastic.jsx'
-import PromoBoxTastic from './content/promo-box/tastic.jsx'
-import CategoryButtonBoxesTastic from './content/category-button-boxes/tastic.jsx'
 import ProductSliderTastic from './product/product-slider/tastic.jsx'
 import NewsletterTastic from './forms/newsletter/tastic'
 import MarkdownTastic from './content/markdown/tastic'
@@ -28,8 +26,6 @@ import ProductListingTastic from './product-listing/tastic.jsx'
 export default (() => {
     return {
         'frontastic/boost/header': HeaderTastic,
-        'frontastic/boost/promobox': PromoBoxTastic,
-        'frontastic/boost/category-button-boxes': CategoryButtonBoxesTastic,
         'frontastic/boost/product-slider': ProductSliderTastic,
         'frontastic/boost/newsletter': NewsletterTastic,
         'frontastic/boost/markdown': MarkdownTastic,
