@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import app from '@frontastic/catwalk/src/js/app/app'
 
 import ProductTeaser from '../../patterns/molecules/product/productTeaser'
 
-function ProductListingTastic({ data, tastic }) {
+function ProductListingTastic ({ data, tastic }) {
     let productList = data.stream.items
     if (!productList) {
         return null

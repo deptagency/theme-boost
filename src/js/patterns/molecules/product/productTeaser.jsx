@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
@@ -9,9 +9,13 @@ import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
 import Sticker from '../../atoms/sticker/sticker'
 import WishlistButton from '../../atoms/buttons/wishlistButton'
 
-function ProductTeaser({ product, onAddToWishlist, showPercent, showStrikePrice }) {
-    const context = useSelector((state) => state.app.context)
-    const wishlist = useSelector((state) => state.wishlist.wishlist)
+function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice }) {
+    const context = useSelector((state) => {
+        return state.app.context
+    })
+    const wishlist = useSelector((state) => {
+        return state.wishlist.wishlist
+    })
 
     const variant = product.variants[0]
 
@@ -19,7 +23,9 @@ function ProductTeaser({ product, onAddToWishlist, showPercent, showStrikePrice 
     // You'd give it a product and it does the rest, as a smart drop in component.
     const isWishlisted = () => {
         if (wishlist.loaded) {
-            return wishlist.data.lineItems.find((item) => item.variant.sku === variant.sku)
+            return wishlist.data.lineItems.find((item) => {
+                return item.variant.sku === variant.sku
+            })
         }
 
         return false
@@ -44,12 +50,12 @@ function ProductTeaser({ product, onAddToWishlist, showPercent, showStrikePrice 
             className='w-1/2 lg:w-1/3 overflow-hidden px-2 pb-5 text-gray-900'
             itemScope
             itemType='http://schema.org/Product'
-        >
+            >
             <Link itemProp='url' className='z-10 hover:no-underline hover:text-gray-900' to={product._url || ''}>
                 <div className='relative pb-3/2 mb-2'>
                     <figure className='absolute flex items-center h-full w-full object-cover'>
                         <RemoteImage
-                            url={variant.images[0] || NoImage}
+                            url={variant.images[0]}
                             alt={product.name}
                             cropRatio='1:1'
                             itemProp='image'
