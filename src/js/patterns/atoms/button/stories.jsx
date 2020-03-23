@@ -1,6 +1,9 @@
 import React from 'react'
 
 import Button from 'Atoms/button'
+import IconButton from 'Atoms/button/IconButton'
+
+import { ReactComponent as CartIcon } from 'Icons/tailwind-icons/icon-cart.svg'
 
 export default {
     title: 'Button',
@@ -44,6 +47,17 @@ export const elevated = () => {
         <div>
             <p>
                 <Button variant='btn-elevated'>Start</Button>
+            </p>
+        </div>
+    )
+}
+
+export const withIcon = () => {
+    return (
+        <div>
+            <p>
+                <IconButton variant='p-6' icon={<CartIcon />} />
+                <IconButton variant='p-6 btn-elevated' icon={<CartIcon />} />
             </p>
         </div>
     )

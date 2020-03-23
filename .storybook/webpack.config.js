@@ -7,7 +7,7 @@ module.exports = async ({ config, mode }) => {
         Molecules: path.resolve(__dirname, '../src/js/patterns/molecules'),
         Organisms: path.resolve(__dirname, '../src/js/patterns/organisms'),
         Templates: path.resolve(__dirname, '../src/js/patterns/templates'),
-        Icons: path.resolve(__dirname, '../src/js'),
+        Icons: path.resolve(__dirname, '../src/icons'),
     }
 
     // This is specific to storybook and does not make sense to extract

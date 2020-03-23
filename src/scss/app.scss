@@ -5,11 +5,17 @@
 @import "tailwindcss/utilities";
 
 @import 'layout';
+@import 'animation';
 
 @import "../js/patterns/atoms/button/index.scss";
 @import "../js/patterns/atoms/input/index.scss";
 
 // Remove "Server Side Rendering Failed" overlay
 #frssrw {
+    @apply hidden
+}
+
+// hiding broken loader for now
+.u-fade {
     @apply hidden
 }
