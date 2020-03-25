@@ -20,7 +20,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
     type: 'button',
-    className: ''
+    className: '',
 }
 
 export default ComponentInjector.return('Button', Button)

@@ -5,8 +5,8 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import Input from 'Atoms/forms/input'
 import Button from 'Atoms/buttons/button'
 
-const NewsletterBlock = ({ intl }) => {   
-    const placeholder = intl.formatMessage({id: 'myEmail'});
+const NewsletterBlock = ({ intl }) => {
+    const placeholder = intl.formatMessage({ id: 'myEmail' })
 
     return (
         <div className='bg-gray-800 rounded'>
@@ -20,8 +20,8 @@ const NewsletterBlock = ({ intl }) => {
 
                 <div className='my-6 flex flex-col sm:flex-row'>
                     <div className='w-full mb-2 sm:mb-0 mr-0 sm:-mr-2 lg:mr-2'>
-                        <Input 
-                            type='email' 
+                        <Input
+                            type='email'
                             placeholder={placeholder}
                             className='form-input h-10'
                         />

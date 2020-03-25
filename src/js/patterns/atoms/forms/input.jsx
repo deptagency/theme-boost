@@ -3,9 +3,8 @@ import PropTypes from 'prop-types'
 
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-const Input = ({ id, type, name, placeholder, className, checked, disabled, required, hidden, 
-            onChange, value, min, max, step }) => {
-
+const Input = ({ id, type, name, placeholder, className, checked, disabled, required, hidden,
+    onChange, value, min, max, step }) => {
     return (
         <input
             id={id}
