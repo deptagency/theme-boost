@@ -5,7 +5,7 @@ import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.s
 import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
 import { ReactComponent as IconLockClosed } from 'Icons/tailwind-icons/icon-lock-closed.svg'
 
-const FeatureService = () => {   
+const FeatureService = () => {
     return (
         <div className='flex flex-col md:flex-row'>
             <div className='w-full h-12 px-4 flex items-center md:justify-center border-b border-solid md:border-b-0 md:border-r'>
