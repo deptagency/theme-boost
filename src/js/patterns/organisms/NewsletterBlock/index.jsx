@@ -23,7 +23,7 @@ const NewsletterBlock = ({ intl }) => {
                         <Input 
                             type='email' 
                             placeholder={placeholder}
-                            className='form-input'
+                            className='form-input h-10'
                         />
                     </div>
 
