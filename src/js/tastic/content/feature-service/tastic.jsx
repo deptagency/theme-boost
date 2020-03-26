@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import FeatureService from 'Organisms/FeatureService'
+import FeatureService from 'Organisms/FeatureService/FeatureService'
 
 class FeatureServiceTastic extends Component {
     render () {
