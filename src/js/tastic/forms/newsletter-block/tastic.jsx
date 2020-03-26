@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import NewsletterBlock from 'Organisms/NewsletterBlock/NewsletterBlock'
+import NewsletterBlock from 'Organisms/NewsletterBlock'
 
 class NewsletterBlockTastic extends Component {
     render () {

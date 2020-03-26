@@ -6,8 +6,8 @@
 
 @import 'layout';
 
-@import "elements/input";
-@import "elements/button";
+@import "../js/patterns/atoms/button/index.scss";
+@import "../js/patterns/atoms/input/index.scss";
 
 // Remove "Server Side Rendering Failed" overlay
 #frssrw {

@@ -2,8 +2,8 @@ import React from 'react'
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl'
 import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 
-import Input from 'Atoms/forms/Input'
-import Button from 'Atoms/buttons/Button'
+import Input from 'Atoms/input'
+import Button from 'Atoms/button'
 
 const NewsletterBlock = ({ intl }) => {
     const placeholder = intl.formatMessage({ id: 'myEmail' })
