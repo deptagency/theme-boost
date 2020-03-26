@@ -23,6 +23,9 @@ module.exports = {
                 'span-2': 'span 2',
                 'span-3': 'span 3',
             },
+            width: {
+                'fix-560px': '560px',
+            },
             height: {
                 'fix-132px': '132px',
                 'fix-240px': '240px',
@@ -31,6 +34,7 @@ module.exports = {
                 '316px': '316px',
             },
             maxWidth: {
+                '126px': '126px',
                 '192px': '192px',
                 '480px': '480px',
                 '1120px': '1120px',
