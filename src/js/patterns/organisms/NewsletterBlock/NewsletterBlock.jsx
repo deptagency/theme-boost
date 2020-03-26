@@ -43,7 +43,7 @@ const NewsletterBlock = ({ intl }) => {
 }
 
 NewsletterBlock.propTypes = {
-    intl: intlShape.isRequired
+    intl: intlShape.isRequired,
 }
 
 NewsletterBlock.defaultProps = {

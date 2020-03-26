@@ -10,7 +10,7 @@ export const simple = () => {
     return (
         <div>
             <p>
-                <Button variant='btn btn-blue mr-2'>Start</Button> 
+                <Button variant='btn btn-blue mr-2'>Start</Button>
                 <Button variant='btn btn-gray'>Start</Button>
             </p>
         </div>
