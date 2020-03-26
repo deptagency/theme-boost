@@ -2,7 +2,6 @@ const path = require('path')
 const autoprefixer = require('autoprefixer')
 
 module.exports = async ({ config, mode }) => {
-    // This is specific to storybook and does not make sense to extract
     config.resolve.alias = {
         Atoms: path.resolve(__dirname, '../src/js/patterns/atoms'),
         Molecules: path.resolve(__dirname, '../src/js/patterns/molecules'),
@@ -10,7 +9,8 @@ module.exports = async ({ config, mode }) => {
         Templates: path.resolve(__dirname, '../src/js/patterns/templates'),
         Icons: path.resolve(__dirname, '../src/js'),
     }
-    
+
+    // This is specific to storybook and does not make sense to extract
     config.resolve.modules.push(
         path.resolve(__dirname, '../'),
         path.resolve(__dirname, '../src')

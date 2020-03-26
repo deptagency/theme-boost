@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Input from 'Atoms/forms/input'
+import Input from 'Atoms/forms/Input'
 
 export default {
     title: 'Form',

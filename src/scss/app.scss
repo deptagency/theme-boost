@@ -4,10 +4,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import 'layout';
+
 @import "elements/input";
 @import "elements/button";
 
-@import 'layout';
 // Remove "Server Side Rendering Failed" overlay
 #frssrw {
     @apply hidden

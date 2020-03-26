@@ -1,11 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 
-import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
-
-const Button = ({ type, className, children, onClick }) => {
+const Button = ({ 
+    type = 'button', 
+    variant = '', 
+    children, 
+    onClick = () => {},
+}) => {
     return (
-        <button type={type} className={className} onClick={onClick}>
+        <button type={type} className={variant} onClick={onClick}>
             {children}
         </button>
     )
@@ -13,14 +17,9 @@ const Button = ({ type, className, children, onClick }) => {
 
 Button.propTypes = {
     type: PropTypes.string,
-    className: PropTypes.string,
+    variant: PropTypes.string,
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func,
-}
-
-Button.defaultProps = {
-    type: 'button',
-    className: '',
 }
 
 export default ComponentInjector.return('Button', Button)
