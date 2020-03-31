@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 
 import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
-import MarginBreakout from 'Molecules/layout/MarginBreakout'
+import MarginBreakout from 'Molecules/Layout/MarginBreakout'
 
 import Modal from './Modal'
 import Widgets from '../Widgets'
