@@ -3,7 +3,10 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import TopCategories from './TopCategories'
 import Navigation from './Navigation'
-import { categoryTreeType, topCategoryType } from '../types'
+import {
+    categoryTreeType,
+    topCategoryType,
+} from '../types'
 
 const Modal = ({
     isOpen,
