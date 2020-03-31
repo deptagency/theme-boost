@@ -1,0 +1,117 @@
+{
+    "tasticType": "content--tile",
+    "name": "Tile",
+    "category": "Content",
+    "icon": "image",
+    "schema": [
+        {
+            "name": "Image",
+            "helpText": "Customize your image",
+            "fields": [
+                {
+                    "label": "Image",
+                    "field": "tileImage",
+                    "translatable": false,
+                    "type": "media",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "Message",
+            "helpText": "Customize your tile message",
+            "fields": [
+                {
+                    "label": "Topic",
+                    "field": "topic",
+                    "type": "string",
+                    "default": ""
+                },
+                {
+                    "label": "Title",
+                    "field": "title",
+                    "type": "string",
+                    "default": ""
+                }
+            ]
+        },
+        {
+            "name": "Message placement",
+            "helpText": "Choose the placement of the tastic",
+            "fields": [
+                {
+                    "label": "Vertical Position",
+                    "field": "verticalPosition",
+                    "translatable": false,
+                    "type": "enum",
+                    "required": false,
+                    "default": "bottom",
+                    "values": [
+                        {
+                            "value": "top",
+                            "name": "Top"
+                        },
+                        {
+                            "value": "middle",
+                            "name": "Middle"
+                        },
+                        {
+                            "value": "bottom",
+                            "name": "Bottom"
+                        }
+                    ]
+                },
+                {
+                    "label": "Horizontal Position",
+                    "field": "horizontalPosition",
+                    "translatable": false,
+                    "type": "enum",
+                    "required": false,
+                    "default": "left",
+                    "values": [
+                        {
+                            "value": "left",
+                            "name": "Left"
+                        },
+                        {
+                            "value": "center",
+                            "name": "Center"
+                        },
+                        {
+                            "value": "right",
+                            "name": "Right"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Call to action",
+            "helpText": "Customize your call to action",
+            "fields": [
+                {
+                    "label": "Button label",
+                    "field": "buttonLabel",
+                    "translatable": true,
+                    "type": "string",
+                    "required": false,
+                    "default": ""
+                },
+                {
+                    "label": "Link",
+                    "field": "tileReference",
+                    "translatable": false,
+                    "required": false,
+                    "type": "reference",
+                    "default": null
+                },
+                {
+                    "label": "Whole tile clickable",
+                    "field": "wholeTileClickable",
+                    "type": "boolean",
+                    "default": false
+                }
+            ]
+        }
+    ]
+}

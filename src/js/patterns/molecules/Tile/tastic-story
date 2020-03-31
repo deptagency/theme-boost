@@ -1,0 +1,433 @@
+tastic ={
+  "tasticId": "657e50cf-ae9c-4503-aa39-6fa8c46ea899",
+  "tasticType": "content--tile",
+  "configuration": {
+    "_type": "Frontastic\\Catwalk\\FrontendBundle\\Domain\\Tastic\\Configuration",
+    "mobile": true,
+    "tablet": true,
+    "desktop": true,
+    "tileImage": {
+      "media": {
+        "_type": "Frontastic\\Backstage\\MediaApiBundle\\Domain\\MediaApi\\Media",
+        "mediaId": "sfup2px2fcraddv1cb24",
+        "name": "Tyler-nix-BQrxXytYaHI-unsplash",
+        "tags": [
+          "Jacket",
+          "Mens"
+        ],
+        "file": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1583133271/sfup2px2fcraddv1cb24.jpg",
+        "size": 1686720,
+        "width": 3840,
+        "height": 5760,
+        "format": "jpg",
+        "created": "2020-03-02T07:14:31+00:00",
+        "metaData": "_FILTERED_"
+      },
+      "title": {
+        "en_GB@EUR": "Amazing Discounts"
+      },
+      "ratio": "16:9"
+    },
+    "topic": {
+      "en_GB@EUR": "Are you ready?"
+    },
+    "buttonLabel": {
+      "en_GB@EUR": "Buy now"
+    },
+    "tileReference": {
+      "type": "link",
+      "target": null
+    }
+  },
+  "schema": {
+    "schema": [
+      {
+        "name": "General",
+        "folded": true,
+        "fields": [
+          {
+            "label": "Name",
+            "field": "name",
+            "type": "string"
+          },
+          {
+            "label": "Show on Mobile",
+            "field": "mobile",
+            "type": "boolean",
+            "default": true
+          },
+          {
+            "label": "Show on Tablet",
+            "field": "tablet",
+            "type": "boolean",
+            "default": true
+          },
+          {
+            "label": "Show on Desktop",
+            "field": "desktop",
+            "type": "boolean",
+            "default": true
+          },
+          {
+            "label": "Anchor",
+            "field": "tasticId",
+            "type": "string",
+            "translatable": false,
+            "disabled": true,
+            "default": "#657e50cf-ae9c-4503-aa39-6fa8c46ea899"
+          }
+        ]
+      },
+      {
+        "name": "Image",
+        "helpText": "Customize your image",
+        "fields": [
+          {
+            "label": "Image",
+            "field": "tileImage",
+            "translatable": false,
+            "type": "media",
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Message",
+        "helpText": "Customize your tile message",
+        "fields": [
+          {
+            "label": "Topic",
+            "field": "topic",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "label": "Title",
+            "field": "title",
+            "type": "string",
+            "default": ""
+          }
+        ]
+      },
+      {
+        "name": "Message placement",
+        "helpText": "Choose the placement of the tastic",
+        "fields": [
+          {
+            "label": "Vertical Position",
+            "field": "verticalPosition",
+            "translatable": false,
+            "type": "enum",
+            "required": false,
+            "default": "bottom",
+            "values": [
+              {
+                "value": "top",
+                "name": "Top"
+              },
+              {
+                "value": "middle",
+                "name": "Middle"
+              },
+              {
+                "value": "bottom",
+                "name": "Bottom"
+              }
+            ]
+          },
+          {
+            "label": "Horizontal Position",
+            "field": "horizontalPosition",
+            "translatable": false,
+            "type": "enum",
+            "required": false,
+            "default": "left",
+            "values": [
+              {
+                "value": "left",
+                "name": "Left"
+              },
+              {
+                "value": "center",
+                "name": "Center"
+              },
+              {
+                "value": "right",
+                "name": "Right"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Call to action",
+        "helpText": "Customize your call to action",
+        "fields": [
+          {
+            "label": "Button label",
+            "field": "buttonLabel",
+            "translatable": true,
+            "type": "string",
+            "required": false,
+            "default": ""
+          },
+          {
+            "label": "Link",
+            "field": "tileReference",
+            "translatable": false,
+            "required": false,
+            "type": "reference",
+            "default": null
+          },
+          {
+            "label": "Whole tile clickable",
+            "field": "wholeTileClickable",
+            "type": "boolean",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "configuration": {
+      "_type": "Frontastic\\Catwalk\\FrontendBundle\\Domain\\Tastic\\Configuration",
+      "mobile": true,
+      "tablet": true,
+      "desktop": true,
+      "tileImage": {
+        "media": {
+          "_type": "Frontastic\\Backstage\\MediaApiBundle\\Domain\\MediaApi\\Media",
+          "mediaId": "sfup2px2fcraddv1cb24",
+          "name": "Tyler-nix-BQrxXytYaHI-unsplash",
+          "tags": [
+            "Jacket",
+            "Mens"
+          ],
+          "file": "https://res.cloudinary.com/dlwdq84ig/image/upload/v1583133271/sfup2px2fcraddv1cb24.jpg",
+          "size": 1686720,
+          "width": 3840,
+          "height": 5760,
+          "format": "jpg",
+          "created": "2020-03-02T07:14:31+00:00",
+          "metaData": "_FILTERED_"
+        },
+        "title": {
+          "en_GB@EUR": "Amazing Discounts"
+        },
+        "ratio": "16:9"
+      },
+      "topic": {
+        "en_GB@EUR": "Are you ready?"
+      },
+      "buttonLabel": {
+        "en_GB@EUR": "Buy now"
+      },
+      "tileReference": {
+        "type": "link",
+        "target": null
+      }
+    },
+    "fields": {
+      "name": {
+        "field": "name",
+        "type": "string",
+        "sectionName": "General",
+        "values": [],
+        "default": "",
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": false,
+        "disabled": false
+      },
+      "mobile": {
+        "field": "mobile",
+        "type": "boolean",
+        "sectionName": "General",
+        "values": [],
+        "default": true,
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": false,
+        "disabled": false
+      },
+      "tablet": {
+        "field": "tablet",
+        "type": "boolean",
+        "sectionName": "General",
+        "values": [],
+        "default": true,
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": false,
+        "disabled": false
+      },
+      "desktop": {
+        "field": "desktop",
+        "type": "boolean",
+        "sectionName": "General",
+        "values": [],
+        "default": true,
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": false,
+        "disabled": false
+      },
+      "tasticId": {
+        "field": "tasticId",
+        "type": "string",
+        "sectionName": "General",
+        "values": [],
+        "default": "#657e50cf-ae9c-4503-aa39-6fa8c46ea899",
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": false,
+        "disabled": true,
+        "translatable": false
+      },
+      "tileImage": {
+        "field": "tileImage",
+        "type": "media",
+        "sectionName": "Image",
+        "values": [],
+        "default": null,
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": true,
+        "disabled": false,
+        "translatable": false
+      },
+      "topic": {
+        "field": "topic",
+        "type": "string",
+        "sectionName": "Message",
+        "values": [],
+        "default": "",
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": false,
+        "disabled": false
+      },
+      "title": {
+        "field": "title",
+        "type": "string",
+        "sectionName": "Message",
+        "values": [],
+        "default": "",
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": false,
+        "disabled": false
+      },
+      "verticalPosition": {
+        "field": "verticalPosition",
+        "type": "enum",
+        "sectionName": "Message placement",
+        "values": [
+          {
+            "value": "top",
+            "name": "Top"
+          },
+          {
+            "value": "middle",
+            "name": "Middle"
+          },
+          {
+            "value": "bottom",
+            "name": "Bottom"
+          }
+        ],
+        "default": "bottom",
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": false,
+        "disabled": false,
+        "translatable": false
+      },
+      "horizontalPosition": {
+        "field": "horizontalPosition",
+        "type": "enum",
+        "sectionName": "Message placement",
+        "values": [
+          {
+            "value": "left",
+            "name": "Left"
+          },
+          {
+            "value": "center",
+            "name": "Center"
+          },
+          {
+            "value": "right",
+            "name": "Right"
+          }
+        ],
+        "default": "left",
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": false,
+        "disabled": false,
+        "translatable": false
+      },
+      "buttonLabel": {
+        "field": "buttonLabel",
+        "type": "string",
+        "sectionName": "Call to action",
+        "values": [],
+        "default": "",
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": false,
+        "disabled": false,
+        "translatable": true
+      },
+      "tileReference": {
+        "field": "tileReference",
+        "type": "reference",
+        "sectionName": "Call to action",
+        "values": [],
+        "default": null,
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": false,
+        "disabled": false,
+        "translatable": false
+      },
+      "wholeTileClickable": {
+        "field": "wholeTileClickable",
+        "type": "boolean",
+        "sectionName": "Call to action",
+        "values": [],
+        "default": false,
+        "validate": {},
+        "fields": null,
+        "min": 1,
+        "max": 16,
+        "required": false,
+        "disabled": false
+      }
+    }
+  }
+}
