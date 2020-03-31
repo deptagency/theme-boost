@@ -1,4 +1,4 @@
-context ={
+{
   "environment": "dev",
   "locale": "en_GB@EUR",
   "currency": "EUR",

@@ -10,7 +10,7 @@
             "fields": [
                 {
                     "label": "Image",
-                    "field": "tileImage",
+                    "field": "image",
                     "translatable": false,
                     "type": "media",
                     "required": true
@@ -99,7 +99,7 @@
                 },
                 {
                     "label": "Link",
-                    "field": "tileReference",
+                    "field": "reference",
                     "translatable": false,
                     "required": false,
                     "type": "reference",
@@ -107,7 +107,7 @@
                 },
                 {
                     "label": "Whole tile clickable",
-                    "field": "wholeTileClickable",
+                    "field": "isClickable",
                     "type": "boolean",
                     "default": false
                 }

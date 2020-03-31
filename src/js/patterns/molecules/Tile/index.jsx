@@ -9,16 +9,16 @@ import MoleculesHero from '@frontastic/catwalk/src/js/patterns/molecules/heros/h
 const Tile = ({
     tastic,
     context,
-    tileImage,
+    image,
     topic,
     title,
     verticalPosition,
     horizontalPosition,
     buttonLabel,
-    tileReference,
+    reference,
     wholeTileClickable,
 }) => {
-    if (!tileImage || !tileImage.media) {
+    if (!image || !image.media) {
         return null
     }
 
@@ -36,29 +36,17 @@ const Tile = ({
 
     const Component = wholeTileClickable ? Reference : 'div'
 
-
-    console.log('topic', JSON.stringify(topic))
-    console.log('title', title)
-    console.log('verticalPosition', verticalPosition)
-    console.log('horizontalPosition', horizontalPosition)
-    console.log('buttonLabel', buttonLabel)
-    console.log('tileReference', tileReference)
-    console.log('wholeTileClickable', wholeTileClickable)
-
-
-
-
     return (
         <Component
             className='grid grid-cols-1 grid-rows-1 rounded-lg max-h-288px lg:max-h-456px lg:h-full overflow-hidden'
-            reference={tileReference || {
+            reference={reference || {
                 type: null,
                 target: null,
             }}
             >
             <MoleculesHero
                 className='row-start-1 row-end-2 col-start-1 col-end-2'
-                media={tileImage}
+                media={image}
                 caption={getTranslation(
                     tastic.schema.get('caption'),
                     context.locale,
@@ -94,8 +82,8 @@ const Tile = ({
                     <Translatable value={title} />
                 </h1>}
 
-                {buttonLabel && tileReference && <Reference
-                    reference={tileReference || {
+                {buttonLabel && reference && <Reference
+                    reference={reference || {
                         type: null,
                         target: null,
                     }}
@@ -115,13 +103,13 @@ const Tile = ({
 Tile.propTypes = {
     tastic: PropTypes.object.isRequired,
     context: PropTypes.object.isRequired,
-    tileImage: PropTypes.object.isRequired,
+    image: PropTypes.object.isRequired,
     topic: PropTypes.object.isRequired,
     title: PropTypes.object.isRequired,
     verticalPosition: PropTypes.string.isRequired,
     horizontalPosition: PropTypes.string.isRequired,
     buttonLabel: PropTypes.object.isRequired,
-    tileReference: PropTypes.object.isRequired,
+    reference: PropTypes.object.isRequired,
     wholeTileClickable: PropTypes.bool.isRequired,
 }
 

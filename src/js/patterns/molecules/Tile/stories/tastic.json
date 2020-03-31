@@ -1,4 +1,4 @@
-tastic ={
+{
   "tasticId": "657e50cf-ae9c-4503-aa39-6fa8c46ea899",
   "tasticType": "content--tile",
   "configuration": {
@@ -6,7 +6,7 @@ tastic ={
     "mobile": true,
     "tablet": true,
     "desktop": true,
-    "tileImage": {
+    "image": {
       "media": {
         "_type": "Frontastic\\Backstage\\MediaApiBundle\\Domain\\MediaApi\\Media",
         "mediaId": "sfup2px2fcraddv1cb24",
@@ -34,7 +34,7 @@ tastic ={
     "buttonLabel": {
       "en_GB@EUR": "Buy now"
     },
-    "tileReference": {
+    "reference": {
       "type": "link",
       "target": null
     }
@@ -84,7 +84,7 @@ tastic ={
         "fields": [
           {
             "label": "Image",
-            "field": "tileImage",
+            "field": "image",
             "translatable": false,
             "type": "media",
             "required": true
@@ -173,7 +173,7 @@ tastic ={
           },
           {
             "label": "Link",
-            "field": "tileReference",
+            "field": "reference",
             "translatable": false,
             "required": false,
             "type": "reference",
@@ -181,7 +181,7 @@ tastic ={
           },
           {
             "label": "Whole tile clickable",
-            "field": "wholeTileClickable",
+            "field": "isClickable",
             "type": "boolean",
             "default": false
           }
@@ -193,7 +193,7 @@ tastic ={
       "mobile": true,
       "tablet": true,
       "desktop": true,
-      "tileImage": {
+      "image": {
         "media": {
           "_type": "Frontastic\\Backstage\\MediaApiBundle\\Domain\\MediaApi\\Media",
           "mediaId": "sfup2px2fcraddv1cb24",
@@ -221,7 +221,7 @@ tastic ={
       "buttonLabel": {
         "en_GB@EUR": "Buy now"
       },
-      "tileReference": {
+      "reference": {
         "type": "link",
         "target": null
       }
@@ -293,8 +293,8 @@ tastic ={
         "disabled": true,
         "translatable": false
       },
-      "tileImage": {
-        "field": "tileImage",
+      "image": {
+        "field": "image",
         "type": "media",
         "sectionName": "Image",
         "values": [],
@@ -401,8 +401,8 @@ tastic ={
         "disabled": false,
         "translatable": true
       },
-      "tileReference": {
-        "field": "tileReference",
+      "reference": {
+        "field": "reference",
         "type": "reference",
         "sectionName": "Call to action",
         "values": [],
@@ -415,8 +415,8 @@ tastic ={
         "disabled": false,
         "translatable": false
       },
-      "wholeTileClickable": {
-        "field": "wholeTileClickable",
+      "isClickable": {
+        "field": "isClickable",
         "type": "boolean",
         "sectionName": "Call to action",
         "values": [],
