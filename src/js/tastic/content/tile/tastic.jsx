@@ -7,9 +7,14 @@ import getTranslation from "@frontastic/catwalk/src/js/getTranslation";
 const TileTastic = ({ data, tastic, context }) => {
     return (
         <Tile
-            {/*{... data}*/}
             image={data.image}
-            {/* ... */}
+            topic={data.topic}
+            title={data.title}
+            verticalPosition={data.verticalPosition}
+            horizontalPosition={data.horizontalPosition}
+            buttonLabel={data.buttonLabel}
+            reference={data.reference}
+            isClickable={data.isClickable}
             caption={getTranslation(
                 tastic.schema.get('caption'),
                 context.locale,

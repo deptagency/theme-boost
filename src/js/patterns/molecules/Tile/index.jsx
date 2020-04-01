@@ -14,7 +14,7 @@ const Tile = ({
     horizontalPosition,
     buttonLabel,
     reference,
-    wholeTileClickable,
+    isClickable,
     caption
 }) => {
     if (!image || !image.media) {
@@ -33,7 +33,7 @@ const Tile = ({
         'justify-end': verticalPosition === 'bottom',
     }
 
-    const Component = wholeTileClickable ? Reference : 'div'
+    const Component = isClickable ? Reference : 'div'
 
     return (
         <Component
@@ -106,7 +106,7 @@ Tile.propTypes = {
     horizontalPosition: PropTypes.string.isRequired,
     buttonLabel: PropTypes.object.isRequired,
     reference: PropTypes.object.isRequired,
-    wholeTileClickable: PropTypes.bool.isRequired,
+    isClickable: PropTypes.bool.isRequired,
 }
 
 export default Tile
