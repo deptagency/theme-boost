@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Mobile from './Mobile/index'
-import Desktop from './Desktop/index'
+import Mobile from './Mobile'
+import Desktop from './Desktop'
 import { topCategoryType } from './types'
 import { useCurrentTopCategory, useNavPath } from './mainMenuState'
 
