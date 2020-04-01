@@ -38,7 +38,7 @@ module.exports = {
                 '192px': '192px',
                 '480px': '480px',
                 '1120px': '1120px',
-                '1218px' : '1218px',
+                '1218px': '1218px',
             },
             transitionProperty: {
                 'visibility': 'visibility',

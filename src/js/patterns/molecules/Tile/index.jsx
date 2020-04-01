@@ -38,7 +38,7 @@ const Tile = ({
 
     return (
         <Component
-            className='grid grid-cols-1 grid-rows-1 rounded-lg max-h-288px lg:max-h-456px lg:h-full overflow-hidden'
+            className='grid grid-cols-1 grid-rows-1 rounded-lg max-h-288px lg:max-h-456px lg:h-full overflow-hidden py-2'
             reference={reference || {
                 type: null,
                 target: null,
@@ -67,20 +67,21 @@ const Tile = ({
 
                 {topic && <p
                     className={classnames({
-                        'text-xl text-white sm:text-2xl md:text-3xl mb-2': true,
+                        'text-white text-sm md:text-lg mb-2': true,
                         ...selfAlign,
                     })}
                 >
                     <Translatable value={topic} />
                 </p>}
+
                 {title && <h1
                     className={classnames({
-                        'text-5xl text-white md:text-6xl font-bold mb-2 leading-tight': true,
-                        ...selfAlign,
-                    })}
-                >
+                            'text-3xl text-white md:text-5xl font-bold mb-2 leading-tight': true,
+                            ...selfAlign,
+                        })}
+                    >
                     <Translatable value={title} />
-                </h1>}
+                    </h1>}
 
                 {buttonLabel && reference && <Reference
                     reference={reference || {
@@ -88,7 +89,7 @@ const Tile = ({
                         target: null,
                     }}
                     className={classnames({
-                        'bg-indigo-500 font-semibold hover:bg-indigo-700 text-2xl py-4 px-6 rounded-lg': true,
+                        'bg-indigo-500 text-base font-semibold hover:bg-indigo-700 text-white py-3 px-4 rounded': true,
                         ...selfAlign,
                     })}
 
