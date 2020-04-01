@@ -2,13 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Tile from 'Molecules/Tile'
+import getTranslation from "@frontastic/catwalk/src/js/getTranslation";
 
 const TileTastic = ({ data, tastic, context }) => {
     return (
         <Tile
-            {... data}
-            tastic={tastic}
-            context={context}
+            {/*{... data}*/}
+            image={data.image}
+            {/* ... */}
+            caption={getTranslation(
+                tastic.schema.get('caption'),
+                context.locale,
+                context.project.defaultLanguage
+            ).text}
         />
     )
 }

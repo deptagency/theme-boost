@@ -7,8 +7,6 @@ import Reference from '@frontastic/catwalk/src/js/component/reference'
 import MoleculesHero from '@frontastic/catwalk/src/js/patterns/molecules/heros/hero'
 
 const Tile = ({
-    tastic,
-    context,
     image,
     topic,
     title,
@@ -17,6 +15,7 @@ const Tile = ({
     buttonLabel,
     reference,
     wholeTileClickable,
+    caption
 }) => {
     if (!image || !image.media) {
         return null
@@ -47,11 +46,7 @@ const Tile = ({
             <MoleculesHero
                 className='row-start-1 row-end-2 col-start-1 col-end-2'
                 media={image}
-                caption={getTranslation(
-                    tastic.schema.get('caption'),
-                    context.locale,
-                    context.project.defaultLanguage
-                ).text}
+                caption={caption}
             />
             <div
                 className={classnames({
