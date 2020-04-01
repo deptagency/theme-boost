@@ -14,7 +14,7 @@ const Widgets = ({ variant = '' }) => {
     return (
         <div
             className={classnames({
-                'flex justify-end': true,
+                'flex justify-end text-2xl': true,
                 [variant]: true,
             })}
             >

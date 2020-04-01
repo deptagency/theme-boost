@@ -7,7 +7,7 @@ import { ReactComponent as IconLockClosed } from 'Icons/tailwind-icons/icon-lock
 
 const FeatureService = () => {
     return (
-        <div className='flex flex-col md:flex-row max-w-840px mx-auto'>
+        <div className='flex flex-col md:flex-row max-w-840px mx-auto py-4'>
             <div className='w-full h-12 flex items-center border-b border-solid md:border-b-0 md:border-r'>
                 <IconRocket className='inline-block mr-3 w-5 h-5 md:w-6 md:h-6 fill-current text-indigo-600' />
                 <span className='text-sm text-gray-800 leading-tight'>

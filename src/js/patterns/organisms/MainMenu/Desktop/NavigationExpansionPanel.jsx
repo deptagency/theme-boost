@@ -13,7 +13,7 @@ const NavigationExpansionPanel = ({ item, expanded = false, handleClick }) => {
     return (
         <div
             className={classnames({
-                'absolute bg-white border-t w-full p-5': true,
+                'absolute bg-white border-t w-full p-5 z-10': true,
                 'transition-transform duration-300 ease-out origin-top': true,
                 'transform scale-y-100': expanded,
                 'transform scale-y-0': !expanded,

@@ -1,0 +1,72 @@
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import PropTypes from 'prop-types'
+import app from 'frontastic-catwalk/src/js/app/app'
+
+import StarRating from './StarRating'
+
+import Button from 'Atoms/button'
+import Price from 'Atoms/price'
+import ColorSelector from './selectors/ColorSelector'
+import SizeSelector from './selectors/SizeSelector'
+
+import { ReactComponent as IconHeartBorder } from 'Icons/tailwind-icons/icon-heart-border.svg'
+import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.svg'
+import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
+import IconButton from '../../atoms/button/IconButton'
+
+const ProductData = ({ name, variants, selectedVariant, setSelectedVariantIndex }) => {
+    return (
+        <div className='mt-4 md:mt-6 lg:mt-12'>
+            <div className='text-xl font-bold text-gray-900'>{name}</div>
+            <Price value={selectedVariant.price} currency={selectedVariant.currency} />
+
+            <StarRating />
+            <ColorSelector
+                value={selectedVariant.attributes.color}
+                variants={variants}
+                setSelectedVariantIndex={setSelectedVariantIndex}
+            />
+
+            <SizeSelector
+                value={selectedVariant.attributes.size}
+                variants={variants}
+                setSelectedVariantIndex={setSelectedVariantIndex}
+            />
+
+            <div className='flex pb-6'>
+                <Button
+                    variant='btn bg-indigo-500 text-white w-full pt-2 h-10 lg:mr-4'
+                    onClick={() => {
+                        app.getLoader('cart').add(null, selectedVariant, 1, null)
+                    }}
+                >
+                    <FormattedMessage id='inCartProduct' />
+                </Button>
+                <IconButton variant='text-icon-size hidden lg:block' icon={<IconHeartBorder />} />
+            </div>
+
+            <div className='flex flex-col md:flex-row md:border-b border-gray-300'>
+                <div className='flex p-4 border-b md:border-b-0 lg:border-b-0 border-gray-300'>
+                    <IconRocket className='text-xl' />
+                    <FormattedMessage id='product.delivery24hs' />
+                </div>
+
+                <div className='flex p-4'>
+                    <IconRefresh className='text-xl' />
+                    <FormattedMessage id='product.freeReturns' />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+ProductData.propTypes = {
+    name: PropTypes.string.isRequired,
+    variants: PropTypes.array.isRequired,
+    selectedVariant: PropTypes.object.isRequired,
+    setSelectedVariantIndex: PropTypes.func.isRequired,
+
+}
+
+export default ProductData
