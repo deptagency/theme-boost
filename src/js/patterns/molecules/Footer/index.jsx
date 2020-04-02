@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 
-import MarginBreakout from 'Molecules/layout/MarginBreakout'
+import MarginBreakout from 'Molecules/Layout/MarginBreakout'
 import ContactInfo from './ContactInfo'
 import LinkList from './LinkList'
 import MetaNav from './MetaNav'
