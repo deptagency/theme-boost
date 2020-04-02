@@ -23,21 +23,39 @@ module.exports = {
                 'span-2': 'span 2',
                 'span-3': 'span 3',
             },
+            width: {
+                'fix-560px': '560px',
+            },
             height: {
+                'fix-24px': '24px',
+                'fix-40px': '40px',
+                'fix-48px': '48px',
+                'fix-120px': '120px',
                 'fix-132px': '132px',
                 'fix-240px': '240px',
+            },
+            minHeight: {
+                '400px': '400px',
             },
             maxHeight: {
                 '316px': '316px',
             },
             maxWidth: {
+                '124px': '124px',
+                '126px': '126px',
                 '192px': '192px',
                 '480px': '480px',
+                '840px': '840px',
                 '1120px': '1120px',
                 '1218px' : '1218px',
+                '1240px' : '1240px',
+            },
+            margin: {
+                'center': '0 auto'
             },
             transitionProperty: {
                 'visibility': 'visibility',
+                'height': 'height'
             },
             inset: {
                 '3': '3rem',
@@ -53,7 +71,7 @@ module.exports = {
             borderWidth: {
                 '2px': '2px',
                 '3px': '3px'
-            }
+            },
         }
     },
     plugins: [
@@ -66,16 +84,13 @@ module.exports = {
                     justifySelf: 'end'
                 },
                 '.translate-right': {
-                    'transform': 'translateX(0)'
+                    'transform': 'translateX(0)',
                 },
                 '.translate-left': {
-                    'transform': 'translateX(-100%)'
+                    'transform': 'translateX(-135%)',
                 },
                 '.webkit-transition': {
                     transitionProperty: '-webkit-transform'
-                },
-                '.hidden-override': {
-                    display: 'none'
                 },
                 '.self-baseline': {
                     alignSelf: 'baseline'

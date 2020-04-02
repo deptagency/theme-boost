@@ -109,5 +109,5 @@ setIntlConfig({
 addDecorator(withIntl);
 // END OF SETTING UP TRANSLATIONS
 
-// automatically import all files ending in *.stories.js
-configure(require.context('../src', true, /\.stories\.(js|mdx)$/), module)
+// automatically import all file  stories.js|stories.jsx
+configure(require.context('../src', true, /stories\.(js|jsx|mdx)$/), module)
