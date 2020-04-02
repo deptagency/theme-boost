@@ -1,0 +1,20 @@
+{
+  "tasticType": "product--product-details",
+  "name": "Product Details",
+  "category": "Product Details",
+  "icon": "card_giftcard",
+  "schema": [
+    {
+      "name": "Main Configuration",
+      "fields": [
+        {
+          "label": "Stream",
+          "field": "stream",
+          "type": "stream",
+          "streamType": "product",
+          "default": null
+        }
+      ]
+    }
+  ]
+}

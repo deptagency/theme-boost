@@ -1,0 +1,20 @@
+{
+    "tasticType": "content--feature-service",
+    "name": "Feature service",
+    "category": "Content",
+    "icon": "menu",
+    "schema": [
+        {
+            "name": "Showcase Text",
+            "fields": [
+                {
+                    "label": "Showcase text",
+                    "field": "showcaseText",
+                    "type": "string",
+                    "translatable": false,
+                    "default": ""
+                }
+            ]
+        }
+    ]
+}

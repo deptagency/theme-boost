@@ -6,13 +6,12 @@ const IconButton = ({
     icon,
     onClick = () => {},
     children,
-    variant = '',
+    variant = 'text-2xl',
 }) => {
     return (
         <button
             onClick={onClick}
             className={classnames({
-                'text-2xl': true,
                 [variant]: true,
             })}
             >

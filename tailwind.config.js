@@ -6,6 +6,9 @@ module.exports = {
             flex: {
                 '0-0-05': '0 0 50%'
             },
+            fontSize: {
+                'icon-size': '2.5rem'
+            },
             gridTemplateColumns: {
                 '1-auto': '1fr auto',
                 '1-340': '1fr 340px',
@@ -39,12 +42,15 @@ module.exports = {
             },
             maxHeight: {
                 '316px': '316px',
+                '736px': '736px',
             },
             maxWidth: {
                 '124px': '124px',
                 '126px': '126px',
                 '192px': '192px',
                 '480px': '480px',
+                '424px': '424px',
+                '840px': '840px',
                 '1120px': '1120px',
                 '1218px' : '1218px',
                 '1240px' : '1240px',

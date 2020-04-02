@@ -38,12 +38,10 @@ const MarginBreakout = ({
         </>
     )
 }
-
 MarginBreakout.propTypes = {
     children: PropTypes.any,
     onChange: PropTypes.func,
     variant: PropTypes.string,
     transition: PropTypes.bool,
 }
-
 export default MarginBreakout
