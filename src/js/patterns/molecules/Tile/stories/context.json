@@ -1,0 +1,1886 @@
+{
+  "environment": "dev",
+  "locale": "en_GB@EUR",
+  "currency": "EUR",
+  "session": {
+    "_type": "Frontastic\\Common\\AccountApiBundle\\Domain\\Session",
+    "loggedIn": false,
+    "account": {
+      "_type": "Frontastic\\Common\\AccountApiBundle\\Domain\\Account",
+      "accountId": "50a404637d71be82d9a7383812051d37",
+      "email": null,
+      "salutation": null,
+      "firstName": null,
+      "lastName": null,
+      "birthday": null,
+      "data": [],
+      "groups": [],
+      "confirmationToken": null,
+      "confirmed": false,
+      "tokenValidUntil": null,
+      "addresses": []
+    },
+    "message": null
+  },
+  "featureFlags": [],
+  "_type": "Frontastic\\Catwalk\\ApiCoreBundle\\Domain\\Context",
+  "customer": {
+    "_type": "Frontastic\\Common\\ReplicatorBundle\\Domain\\Customer",
+    "name": "demo",
+    "secret": "_FILTERED_",
+    "edition": "micro",
+    "features": [],
+    "isTransient": false,
+    "configuration": {
+      "account": {
+        "clientId": "_FILTERED_",
+        "clientSecret": "_FILTERED_",
+        "engine": "commercetools",
+        "projectKey": "frontastic-1"
+      },
+      "cart": {
+        "clientId": "_FILTERED_",
+        "clientSecret": "_FILTERED_",
+        "engine": "commercetools",
+        "projectKey": "frontastic-1"
+      },
+      "cloudinary": {
+        "apiKey": "_FILTERED_",
+        "apiSecret": "_FILTERED_",
+        "autoTaggingMinConfidence": 0.8,
+        "autoTaggingService": "",
+        "cloudName": "dlwdq84ig",
+        "mediaPoolName": "global"
+      },
+      "commercetools": {
+        "clientId": "_FILTERED_",
+        "clientSecret": "_FILTERED_",
+        "projectKey": "frontastic-1"
+      },
+      "content": {
+        "accessToken": "_FILTERED_",
+        "engine": "contentful",
+        "previewToken": "_FILTERED_",
+        "spaceId": "2yke74xvylnq"
+      },
+      "contentful": {
+        "accessToken": "_FILTERED_",
+        "previewToken": "_FILTERED_",
+        "spaceId": "2yke74xvylnq"
+      },
+      "media": {
+        "apiKey": "_FILTERED_",
+        "apiSecret": "_FILTERED_",
+        "autoTaggingMinConfidence": 0.8,
+        "autoTaggingService": "",
+        "cloudName": "dlwdq84ig",
+        "engine": "cloudinary",
+        "mediaPoolName": "global"
+      },
+      "product": {
+        "clientId": "_FILTERED_",
+        "clientSecret": "_FILTERED_",
+        "engine": "commercetools",
+        "projectKey": "frontastic-1"
+      },
+      "search": {
+        "clientId": "_FILTERED_",
+        "clientSecret": "_FILTERED_",
+        "engine": "commercetools",
+        "projectKey": "frontastic-1"
+      },
+      "wishlist": {
+        "clientId": "_FILTERED_",
+        "clientSecret": "_FILTERED_",
+        "engine": "commercetools",
+        "projectKey": "frontastic-1"
+      }
+    },
+    "environments": [
+      "production",
+      "staging",
+      "development"
+    ],
+    "projects": [
+      {
+        "_type": "Frontastic\\Common\\ReplicatorBundle\\Domain\\Project",
+        "projectId": "english",
+        "name": "English Catwalk",
+        "customer": "demo",
+        "apiKey": "_FILTERED_",
+        "previewUrl": "http://english-demo.frontastic.io.local/preview",
+        "publicUrl": null,
+        "webpackPort": 3001,
+        "ssrPort": null,
+        "configuration": {
+          "account": {
+            "clientId": "_FILTERED_",
+            "clientSecret": "_FILTERED_",
+            "engine": "commercetools",
+            "projectKey": "frontastic-1"
+          },
+          "cart": {
+            "clientId": "_FILTERED_",
+            "clientSecret": "_FILTERED_",
+            "engine": "commercetools",
+            "projectKey": "frontastic-1"
+          },
+          "cloudinary": {
+            "apiKey": "_FILTERED_",
+            "apiSecret": "_FILTERED_",
+            "autoTaggingMinConfidence": 0.8,
+            "autoTaggingService": "",
+            "cloudName": "dlwdq84ig",
+            "mediaPoolName": "global"
+          },
+          "commercetools": {
+            "clientId": "_FILTERED_",
+            "clientSecret": "_FILTERED_",
+            "projectKey": "frontastic-1"
+          },
+          "content": {
+            "accessToken": "_FILTERED_",
+            "engine": "contentful",
+            "previewToken": "_FILTERED_",
+            "spaceId": "2yke74xvylnq"
+          },
+          "contentful": {
+            "accessToken": "_FILTERED_",
+            "previewToken": "_FILTERED_",
+            "spaceId": "2yke74xvylnq"
+          },
+          "media": {
+            "apiKey": "_FILTERED_",
+            "apiSecret": "_FILTERED_",
+            "autoTaggingMinConfidence": 0.8,
+            "autoTaggingService": "",
+            "cloudName": "dlwdq84ig",
+            "engine": "cloudinary",
+            "mediaPoolName": "global"
+          },
+          "product": {
+            "clientId": "_FILTERED_",
+            "clientSecret": "_FILTERED_",
+            "engine": "commercetools",
+            "projectKey": "frontastic-1"
+          },
+          "search": {
+            "clientId": "_FILTERED_",
+            "clientSecret": "_FILTERED_",
+            "engine": "commercetools",
+            "projectKey": "frontastic-1"
+          },
+          "wishlist": {
+            "clientId": "_FILTERED_",
+            "clientSecret": "_FILTERED_",
+            "engine": "commercetools",
+            "projectKey": "frontastic-1"
+          }
+        },
+        "data": {
+          "layout": {
+            "breakpoints": [
+              {
+                "identifier": "mobile",
+                "name": "Mobile",
+                "userAgentRegexp": "/(Android|webOS|iPhone|iPod|BlackBerry|Windows Phone)/i",
+                "maxWidth": 480
+              },
+              {
+                "identifier": "tablet",
+                "name": "Tablet",
+                "userAgentRegexp": "/iPad/i",
+                "maxWidth": 767
+              },
+              {
+                "identifier": "desktop",
+                "name": "Desktop"
+              }
+            ]
+          }
+        },
+        "languages": [
+          "en_GB@EUR",
+          "de_DE@EUR"
+        ],
+        "defaultLanguage": "en_GB@EUR",
+        "projectSpecific": [],
+        "endpoints": [
+          {
+            "name": "english",
+            "push": true,
+            "url": "http://english-demo.frontastic.io.local/api/endpoint"
+          }
+        ]
+      }
+    ]
+  },
+  "project": {
+    "_type": "Frontastic\\Common\\ReplicatorBundle\\Domain\\Project",
+    "projectId": "english",
+    "name": "English Catwalk",
+    "customer": "demo",
+    "apiKey": "_FILTERED_",
+    "previewUrl": "http://english-demo.frontastic.io.local/preview",
+    "publicUrl": null,
+    "webpackPort": 3001,
+    "ssrPort": null,
+    "configuration": {
+      "account": {
+        "clientId": "_FILTERED_",
+        "clientSecret": "_FILTERED_",
+        "engine": "commercetools",
+        "projectKey": "frontastic-1"
+      },
+      "cart": {
+        "clientId": "_FILTERED_",
+        "clientSecret": "_FILTERED_",
+        "engine": "commercetools",
+        "projectKey": "frontastic-1"
+      },
+      "cloudinary": {
+        "apiKey": "_FILTERED_",
+        "apiSecret": "_FILTERED_",
+        "autoTaggingMinConfidence": 0.8,
+        "autoTaggingService": "",
+        "cloudName": "dlwdq84ig",
+        "mediaPoolName": "global"
+      },
+      "commercetools": {
+        "clientId": "_FILTERED_",
+        "clientSecret": "_FILTERED_",
+        "projectKey": "frontastic-1"
+      },
+      "content": {
+        "accessToken": "_FILTERED_",
+        "engine": "contentful",
+        "previewToken": "_FILTERED_",
+        "spaceId": "2yke74xvylnq"
+      },
+      "contentful": {
+        "accessToken": "_FILTERED_",
+        "previewToken": "_FILTERED_",
+        "spaceId": "2yke74xvylnq"
+      },
+      "media": {
+        "apiKey": "_FILTERED_",
+        "apiSecret": "_FILTERED_",
+        "autoTaggingMinConfidence": 0.8,
+        "autoTaggingService": "",
+        "cloudName": "dlwdq84ig",
+        "engine": "cloudinary",
+        "mediaPoolName": "global"
+      },
+      "product": {
+        "clientId": "_FILTERED_",
+        "clientSecret": "_FILTERED_",
+        "engine": "commercetools",
+        "projectKey": "frontastic-1"
+      },
+      "search": {
+        "clientId": "_FILTERED_",
+        "clientSecret": "_FILTERED_",
+        "engine": "commercetools",
+        "projectKey": "frontastic-1"
+      },
+      "wishlist": {
+        "clientId": "_FILTERED_",
+        "clientSecret": "_FILTERED_",
+        "engine": "commercetools",
+        "projectKey": "frontastic-1"
+      }
+    },
+    "data": {
+      "layout": {
+        "breakpoints": [
+          {
+            "identifier": "mobile",
+            "name": "Mobile",
+            "userAgentRegexp": "/(Android|webOS|iPhone|iPod|BlackBerry|Windows Phone)/i",
+            "maxWidth": 480
+          },
+          {
+            "identifier": "tablet",
+            "name": "Tablet",
+            "userAgentRegexp": "/iPad/i",
+            "maxWidth": 767
+          },
+          {
+            "identifier": "desktop",
+            "name": "Desktop"
+          }
+        ]
+      }
+    },
+    "languages": [
+      "en_GB@EUR",
+      "de_DE@EUR"
+    ],
+    "defaultLanguage": "en_GB@EUR",
+    "projectSpecific": [],
+    "endpoints": [
+      {
+        "name": "english",
+        "push": true,
+        "url": "http://english-demo.frontastic.io.local/api/endpoint"
+      }
+    ]
+  },
+  "projectConfiguration": [],
+  "projectConfigurationSchema": [],
+  "routes": {
+    "_twig_error_test": {
+      "path": "/_error/{code}.{_format}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": {
+        "code": "\\d+"
+      }
+    },
+    "Frontastic.Core.System.version": {
+      "path": "/api/version",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Node.view": {
+      "path": "/node/{nodeId}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Node.tree": {
+      "path": "/tree",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Product.view": {
+      "path": "/{url}/p/{identifier}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": {
+        "url": ".+"
+      }
+    },
+    "Frontastic.Frontend.Master.Search.search": {
+      "path": "/q/{phrase}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Category.view": {
+      "path": "/c/{id}/{slug}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Category.all": {
+      "path": "/categories",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Error.recordFrontendError": {
+      "path": "/_recordFrontendError",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Error.view": {
+      "path": "/__error",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Checkout.cart": {
+      "path": "/checkout/cart",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Checkout.checkout": {
+      "path": "/checkout/checkout",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Checkout.finished": {
+      "path": "/checkout/finished",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Account.index": {
+      "path": "/account",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Account.forgotPassword": {
+      "path": "/account/forgotPassword/{token}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Account.confirm": {
+      "path": "/account/confirm/{token}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Account.profile": {
+      "path": "/account/profile",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Account.addresses": {
+      "path": "/account/addresses",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Account.orders": {
+      "path": "/account/orders",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Account.wishlists": {
+      "path": "/account/wishlists",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Master.Account.vouchers": {
+      "path": "/account/vouchers",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Preview.view": {
+      "path": "/p/{preview}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Preview.store": {
+      "path": "/preview",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Tastic.all": {
+      "path": "/tastic",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Facet.all": {
+      "path": "/facet",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.Proxy": {
+      "path": "/proxy",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.PatternLibrary.overview": {
+      "path": "/_patterns",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.Frontend.PatternLibrary.view": {
+      "path": "/_patterns/show",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.CartApi.Cart.get": {
+      "path": "/api/cart/cart",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.CartApi.Cart.getOrder": {
+      "path": "/api/cart/order/{order}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.CartApi.Cart.add": {
+      "path": "/api/cart/cart/add",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.CartApi.Cart.addMultiple": {
+      "path": "/api/cart/cart/addMultiple",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.CartApi.Cart.updateLineItem": {
+      "path": "/api/cart/cart/lineItem",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.CartApi.Cart.removeLineItem": {
+      "path": "/api/cart/cart/lineItem/remove",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.CartApi.Cart.redeemDiscount": {
+      "path": "/api/cart/cart/discount/{code}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.CartApi.Cart.removeDiscount": {
+      "path": "/api/cart/cart/discount-remove",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.CartApi.Cart.update": {
+      "path": "/api/cart/cart/update",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.CartApi.Cart.checkout": {
+      "path": "/api/cart/cart/checkout",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.WishlistApi.Wishlist.get": {
+      "path": "/api/cart/wishlist",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.WishlistApi.Wishlist.create": {
+      "path": "/api/cart/wishlist/create",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.WishlistApi.Wishlist.add": {
+      "path": "/api/cart/wishlist/add",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.WishlistApi.Wishlist.addMultiple": {
+      "path": "/api/cart/wishlist/addMultiple",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.WishlistApi.Wishlist.updateLineItem": {
+      "path": "/api/cart/wishlist/lineItem",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.WishlistApi.Wishlist.removeLineItem": {
+      "path": "/api/cart/wishlist/lineItem/remove",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.WishlistApi.Wishlist.checkout": {
+      "path": "/api/cart/wishlist/checkout",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ProductApi.Api.categories": {
+      "path": "/api/product/categories",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ProductApi.Api.productTypes": {
+      "path": "/api/product/productTypes",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ProductApi.Api.search": {
+      "path": "/api/product/search",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ProjectApi.Api.searchableAttributes": {
+      "path": "/api/project/searchableAttributes",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ContentApi.Api.contentTypes": {
+      "path": "/api/contents/contentTypes",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ContentApi.Api.get": {
+      "path": "/api/contents/get",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ContentApi.Api.search": {
+      "path": "/api/contents/search",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ContentApi.Api.contentId": {
+      "path": "/api/contents/contentId",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.session": {
+      "path": "/api/account/",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.login": {
+      "path": "/api/account/login",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.logout": {
+      "path": "/api/account/logout",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.register": {
+      "path": "/api/account/register",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.resendInvitation": {
+      "path": "/api/account/resendinvitation",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.confirm": {
+      "path": "/api/account/confirm/{token}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.requestReset": {
+      "path": "/api/account/request",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.reset": {
+      "path": "/api/account/reset/{token}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.changePassword": {
+      "path": "/api/account/password",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.update": {
+      "path": "/api/account/update",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.addAddress": {
+      "path": "/api/account/address/new",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.updateAddress": {
+      "path": "/api/account/address/update",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.removeAddress": {
+      "path": "/api/account/address/remove",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.setDefaultBillingAddress": {
+      "path": "/api/account/address/setDefaultBilling",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.AccountApi.Api.setDefaultShippingAddress": {
+      "path": "/api/account/address/setDefaultShipping",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ApiCoreBundle.Api.context": {
+      "path": "/api/context",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ApiCoreBundle.Api.endpoint": {
+      "path": "/api/endpoint",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ApiCoreBundle.Api.version": {
+      "path": "/api/endpoint/version",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ApiCoreBundle.App.data": {
+      "path": "/api/{app}/data",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.ApiCoreBundle.App.get": {
+      "path": "/api/{app}/{dataId}",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.DevVmBundle.sync": {
+      "path": "/devvm/sync",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "Frontastic.DevVmBundle.Ngrok.tunnels": {
+      "path": "/devvm/tunnel",
+      "_locale": null,
+      "_frontastic_canonical_route": null,
+      "requirements": []
+    },
+    "node_4227ff948b38e5bdf74d4e77ef02a446.en_GB@EUR": {
+      "path": "/static",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4227ff948b38e5bdf74d4e77ef02a446",
+      "requirements": []
+    },
+    "node_4227ff948b38e5bdf74d4e77ef02a446.de_DE@EUR": {
+      "path": "/static",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_4227ff948b38e5bdf74d4e77ef02a446",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c817b32f.en_GB@EUR": {
+      "path": "/clean",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c817b32f",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c817b32f.de_DE@EUR": {
+      "path": "/clean",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c817b32f",
+      "requirements": []
+    },
+    "node_76c45b3c0c39b00287f28cb7ac0285c8.en_GB@EUR": {
+      "path": "/",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_76c45b3c0c39b00287f28cb7ac0285c8",
+      "requirements": []
+    },
+    "node_76c45b3c0c39b00287f28cb7ac0285c8.de_DE@EUR": {
+      "path": "/",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_76c45b3c0c39b00287f28cb7ac0285c8",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c814eded.en_GB@EUR": {
+      "path": "/clean-boost",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c814eded",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c814eded.de_DE@EUR": {
+      "path": "/clean-boost",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c814eded",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c008f51.en_GB@EUR": {
+      "path": "/women",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c008f51",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c008f51.de_DE@EUR": {
+      "path": "/women",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c008f51",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb50778ac.en_GB@EUR": {
+      "path": "/abmelden",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb50778ac",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb50778ac.de_DE@EUR": {
+      "path": "/abmelden",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb50778ac",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c01c01f.en_GB@EUR": {
+      "path": "/children",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c01c01f",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c01c01f.de_DE@EUR": {
+      "path": "/children",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c01c01f",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb5063e83.en_GB@EUR": {
+      "path": "/accessouires",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb5063e83",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb5063e83.de_DE@EUR": {
+      "path": "/accessouires",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb5063e83",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb505a2aa.en_GB@EUR": {
+      "path": "/sport",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb505a2aa",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb505a2aa.de_DE@EUR": {
+      "path": "/sport",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb505a2aa",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb506edd3.en_GB@EUR": {
+      "path": "/sale",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb506edd3",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb506edd3.de_DE@EUR": {
+      "path": "/sale",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb506edd3",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb505016f.en_GB@EUR": {
+      "path": "/schuhe",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb505016f",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb505016f.de_DE@EUR": {
+      "path": "/schuhe",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb505016f",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c014068.en_GB@EUR": {
+      "path": "/men",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c014068",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c014068.de_DE@EUR": {
+      "path": "/men",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c014068",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a8820336a6.en_GB@EUR": {
+      "path": "/neu",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a8820336a6",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a8820336a6.de_DE@EUR": {
+      "path": "/neu",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a8820336a6",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb516121a.en_GB@EUR": {
+      "path": "/brand",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb516121a",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb516121a.de_DE@EUR": {
+      "path": "/brand",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb516121a",
+      "requirements": []
+    },
+    "node_4227ff948b38e5bdf74d4e77ef034bc6.en_GB@EUR": {
+      "path": "/static/imprint",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4227ff948b38e5bdf74d4e77ef034bc6",
+      "requirements": []
+    },
+    "node_4227ff948b38e5bdf74d4e77ef034bc6.de_DE@EUR": {
+      "path": "/static/imprint",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_4227ff948b38e5bdf74d4e77ef034bc6",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a88200904a.en_GB@EUR": {
+      "path": "/bekleidung",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a88200904a",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a88200904a.de_DE@EUR": {
+      "path": "/bekleidung",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a88200904a",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0bcb05.en_GB@EUR": {
+      "path": "/men/designer",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0bcb05",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0bcb05.de_DE@EUR": {
+      "path": "/men/designer",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0bcb05",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c086c0f.en_GB@EUR": {
+      "path": "/men/new",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c086c0f",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c086c0f.de_DE@EUR": {
+      "path": "/men/new",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c086c0f",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c092b8f.en_GB@EUR": {
+      "path": "/men/clothing",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c092b8f",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c092b8f.de_DE@EUR": {
+      "path": "/men/clothing",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c092b8f",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c09da10.en_GB@EUR": {
+      "path": "/men/shoes",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c09da10",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c09da10.de_DE@EUR": {
+      "path": "/men/shoes",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c09da10",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0a60ce.en_GB@EUR": {
+      "path": "/men/accessories",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0a60ce",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0a60ce.de_DE@EUR": {
+      "path": "/men/accessories",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0a60ce",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0b1904.en_GB@EUR": {
+      "path": "/men/sports",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0b1904",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0b1904.de_DE@EUR": {
+      "path": "/men/sports",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0b1904",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0e2844.en_GB@EUR": {
+      "path": "/children/shoes",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0e2844",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0e2844.de_DE@EUR": {
+      "path": "/children/shoes",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0e2844",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0c7048.en_GB@EUR": {
+      "path": "/men/brands",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0c7048",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0c7048.de_DE@EUR": {
+      "path": "/men/brands",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0c7048",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0d10dc.en_GB@EUR": {
+      "path": "/men/sale",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0d10dc",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0d10dc.de_DE@EUR": {
+      "path": "/men/sale",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0d10dc",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0db598.en_GB@EUR": {
+      "path": "/children/clothing",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0db598",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0db598.de_DE@EUR": {
+      "path": "/children/clothing",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0db598",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0ec366.en_GB@EUR": {
+      "path": "/children/accessories",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0ec366",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0ec366.de_DE@EUR": {
+      "path": "/children/accessories",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0ec366",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0f7502.en_GB@EUR": {
+      "path": "/children/sports",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0f7502",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0f7502.de_DE@EUR": {
+      "path": "/children/sports",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0f7502",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c1033de.en_GB@EUR": {
+      "path": "/children/designer",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c1033de",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c1033de.de_DE@EUR": {
+      "path": "/children/designer",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c1033de",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c10d958.en_GB@EUR": {
+      "path": "/children/brands",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c10d958",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c10d958.de_DE@EUR": {
+      "path": "/children/brands",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c10d958",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c07d500.en_GB@EUR": {
+      "path": "/men/get-the-look",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c07d500",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c07d500.de_DE@EUR": {
+      "path": "/men/get-the-look",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c07d500",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c1179ae.en_GB@EUR": {
+      "path": "/children/sale",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c1179ae",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c1179ae.de_DE@EUR": {
+      "path": "/children/sale",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c1179ae",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0658db.en_GB@EUR": {
+      "path": "/women/brands",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0658db",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0658db.de_DE@EUR": {
+      "path": "/women/brands",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0658db",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a882012aa9.en_GB@EUR": {
+      "path": "/bekleidung/alles-anzeigen",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a882012aa9",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a882012aa9.de_DE@EUR": {
+      "path": "/bekleidung/alles-anzeigen",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a882012aa9",
+      "requirements": []
+    },
+    "node_e472046e56fccbc83b5d47a18c01479b.en_GB@EUR": {
+      "path": "/bekleidung/neu-in-bekleidung",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_e472046e56fccbc83b5d47a18c01479b",
+      "requirements": []
+    },
+    "node_e472046e56fccbc83b5d47a18c01479b.de_DE@EUR": {
+      "path": "/bekleidung/neu-in-bekleidung",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_e472046e56fccbc83b5d47a18c01479b",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c025d23.en_GB@EUR": {
+      "path": "/women/get-the-look",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c025d23",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c025d23.de_DE@EUR": {
+      "path": "/women/get-the-look",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c025d23",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c02f65c.en_GB@EUR": {
+      "path": "/women/new",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c02f65c",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c02f65c.de_DE@EUR": {
+      "path": "/women/new",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c02f65c",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c041967.en_GB@EUR": {
+      "path": "/women/shoes",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c041967",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c041967.de_DE@EUR": {
+      "path": "/women/shoes",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c041967",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c047cd1.en_GB@EUR": {
+      "path": "/women/accessories",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c047cd1",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c047cd1.de_DE@EUR": {
+      "path": "/women/accessories",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c047cd1",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c052d1e.en_GB@EUR": {
+      "path": "/women/sports",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c052d1e",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c052d1e.de_DE@EUR": {
+      "path": "/women/sports",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c052d1e",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c05bdf9.en_GB@EUR": {
+      "path": "/women/designer",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c05bdf9",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c05bdf9.de_DE@EUR": {
+      "path": "/women/designer",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c05bdf9",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c072a44.en_GB@EUR": {
+      "path": "/women/sale",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c072a44",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c072a44.de_DE@EUR": {
+      "path": "/women/sale",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c072a44",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c038675.en_GB@EUR": {
+      "path": "/women/clothing",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c038675",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c038675.de_DE@EUR": {
+      "path": "/women/clothing",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c038675",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88087aa4.en_GB@EUR": {
+      "path": "/women/new/new-this-week",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88087aa4",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88087aa4.de_DE@EUR": {
+      "path": "/women/new/new-this-week",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88087aa4",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a88201e23e.en_GB@EUR": {
+      "path": "/bekleidung/alles-anzeigen/weekender",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a88201e23e",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a88201e23e.de_DE@EUR": {
+      "path": "/bekleidung/alles-anzeigen/weekender",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a88201e23e",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a8820278db.en_GB@EUR": {
+      "path": "/bekleidung/alles-anzeigen/handtaschen",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a8820278db",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a8820278db.de_DE@EUR": {
+      "path": "/bekleidung/alles-anzeigen/handtaschen",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a8820278db",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c80d9a5f.en_GB@EUR": {
+      "path": "/women/get-the-look/latest-combinations",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c80d9a5f",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c80d9a5f.de_DE@EUR": {
+      "path": "/women/get-the-look/latest-combinations",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c80d9a5f",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c826e8e4.en_GB@EUR": {
+      "path": "/women/new/gala-dresses",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c826e8e4",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c826e8e4.de_DE@EUR": {
+      "path": "/women/new/gala-dresses",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c826e8e4",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee8801cef0.en_GB@EUR": {
+      "path": "/women/get-the-look/trends",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee8801cef0",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee8801cef0.de_DE@EUR": {
+      "path": "/women/get-the-look/trends",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee8801cef0",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88152fba.en_GB@EUR": {
+      "path": "/women/clothing/maternity",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88152fba",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88152fba.de_DE@EUR": {
+      "path": "/women/clothing/maternity",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88152fba",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88148db7.en_GB@EUR": {
+      "path": "/women/clothing/trending",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88148db7",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88148db7.de_DE@EUR": {
+      "path": "/women/clothing/trending",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88148db7",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c8241fe2.en_GB@EUR": {
+      "path": "/women/clothing/trousers",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c8241fe2",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c8241fe2.de_DE@EUR": {
+      "path": "/women/clothing/trousers",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c8241fe2",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c80ce96d.en_GB@EUR": {
+      "path": "/women/clothing/shirts",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c80ce96d",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c80ce96d.de_DE@EUR": {
+      "path": "/women/clothing/shirts",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c80ce96d",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88121505.en_GB@EUR": {
+      "path": "/women/new/photo",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88121505",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88121505.de_DE@EUR": {
+      "path": "/women/new/photo",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88121505",
+      "requirements": []
+    },
+    "node_f5959993b4a79d5d428e53dafc014397.en_GB@EUR": {
+      "path": "/women/new/yoga-trousers",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_f5959993b4a79d5d428e53dafc014397",
+      "requirements": []
+    },
+    "node_f5959993b4a79d5d428e53dafc014397.de_DE@EUR": {
+      "path": "/women/new/yoga-trousers",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_f5959993b4a79d5d428e53dafc014397",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee8802653d.en_GB@EUR": {
+      "path": "/women/get-the-look/photo",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee8802653d",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee8802653d.de_DE@EUR": {
+      "path": "/women/get-the-look/photo",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee8802653d",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee880b94e3.en_GB@EUR": {
+      "path": "/women/new/new-this-week/sport",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee880b94e3",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee880b94e3.de_DE@EUR": {
+      "path": "/women/new/new-this-week/sport",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee880b94e3",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee880af224.en_GB@EUR": {
+      "path": "/women/new/new-this-week/shoes",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee880af224",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee880af224.de_DE@EUR": {
+      "path": "/women/new/new-this-week/shoes",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee880af224",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee8809b2af.en_GB@EUR": {
+      "path": "/women/new/new-this-week/clothing",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee8809b2af",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee8809b2af.de_DE@EUR": {
+      "path": "/women/new/new-this-week/clothing",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee8809b2af",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88092531.en_GB@EUR": {
+      "path": "/women/new/new-this-week/accessories",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88092531",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88092531.de_DE@EUR": {
+      "path": "/women/new/new-this-week/accessories",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88092531",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c82399b5.en_GB@EUR": {
+      "path": "/women/new/new-this-week/trousers",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c82399b5",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c82399b5.de_DE@EUR": {
+      "path": "/women/new/new-this-week/trousers",
+      "_locale": "de_DE@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c82399b5",
+      "requirements": []
+    },
+    "node_4227ff948b38e5bdf74d4e77ef02a446": {
+      "path": "/static",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4227ff948b38e5bdf74d4e77ef02a446",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c817b32f": {
+      "path": "/clean",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c817b32f",
+      "requirements": []
+    },
+    "node_76c45b3c0c39b00287f28cb7ac0285c8": {
+      "path": "/",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_76c45b3c0c39b00287f28cb7ac0285c8",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c814eded": {
+      "path": "/clean-boost",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c814eded",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c008f51": {
+      "path": "/women",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c008f51",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb50778ac": {
+      "path": "/abmelden",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb50778ac",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c01c01f": {
+      "path": "/children",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c01c01f",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb5063e83": {
+      "path": "/accessouires",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb5063e83",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb505a2aa": {
+      "path": "/sport",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb505a2aa",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb506edd3": {
+      "path": "/sale",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb506edd3",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb505016f": {
+      "path": "/schuhe",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb505016f",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c014068": {
+      "path": "/men",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c014068",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a8820336a6": {
+      "path": "/neu",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a8820336a6",
+      "requirements": []
+    },
+    "node_0810fca8c16d523e24b2ea9bb516121a": {
+      "path": "/brand",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_0810fca8c16d523e24b2ea9bb516121a",
+      "requirements": []
+    },
+    "node_4227ff948b38e5bdf74d4e77ef034bc6": {
+      "path": "/static/imprint",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4227ff948b38e5bdf74d4e77ef034bc6",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a88200904a": {
+      "path": "/bekleidung",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a88200904a",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0bcb05": {
+      "path": "/men/designer",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0bcb05",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c086c0f": {
+      "path": "/men/new",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c086c0f",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c092b8f": {
+      "path": "/men/clothing",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c092b8f",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c09da10": {
+      "path": "/men/shoes",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c09da10",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0a60ce": {
+      "path": "/men/accessories",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0a60ce",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0b1904": {
+      "path": "/men/sports",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0b1904",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0e2844": {
+      "path": "/children/shoes",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0e2844",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0c7048": {
+      "path": "/men/brands",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0c7048",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0d10dc": {
+      "path": "/men/sale",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0d10dc",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0db598": {
+      "path": "/children/clothing",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0db598",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0ec366": {
+      "path": "/children/accessories",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0ec366",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0f7502": {
+      "path": "/children/sports",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0f7502",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c1033de": {
+      "path": "/children/designer",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c1033de",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c10d958": {
+      "path": "/children/brands",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c10d958",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c07d500": {
+      "path": "/men/get-the-look",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c07d500",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c1179ae": {
+      "path": "/children/sale",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c1179ae",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c0658db": {
+      "path": "/women/brands",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c0658db",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a882012aa9": {
+      "path": "/bekleidung/alles-anzeigen",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a882012aa9",
+      "requirements": []
+    },
+    "node_e472046e56fccbc83b5d47a18c01479b": {
+      "path": "/bekleidung/neu-in-bekleidung",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_e472046e56fccbc83b5d47a18c01479b",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c025d23": {
+      "path": "/women/get-the-look",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c025d23",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c02f65c": {
+      "path": "/women/new",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c02f65c",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c041967": {
+      "path": "/women/shoes",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c041967",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c047cd1": {
+      "path": "/women/accessories",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c047cd1",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c052d1e": {
+      "path": "/women/sports",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c052d1e",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c05bdf9": {
+      "path": "/women/designer",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c05bdf9",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c072a44": {
+      "path": "/women/sale",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c072a44",
+      "requirements": []
+    },
+    "node_dd63c4eab6fae4fc3657e62a3c038675": {
+      "path": "/women/clothing",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_dd63c4eab6fae4fc3657e62a3c038675",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88087aa4": {
+      "path": "/women/new/new-this-week",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88087aa4",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a88201e23e": {
+      "path": "/bekleidung/alles-anzeigen/weekender",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a88201e23e",
+      "requirements": []
+    },
+    "node_2715283e5d7f2c1c2ad999a8820278db": {
+      "path": "/bekleidung/alles-anzeigen/handtaschen",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_2715283e5d7f2c1c2ad999a8820278db",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c80d9a5f": {
+      "path": "/women/get-the-look/latest-combinations",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c80d9a5f",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c826e8e4": {
+      "path": "/women/new/gala-dresses",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c826e8e4",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee8801cef0": {
+      "path": "/women/get-the-look/trends",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee8801cef0",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88152fba": {
+      "path": "/women/clothing/maternity",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88152fba",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88148db7": {
+      "path": "/women/clothing/trending",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88148db7",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c8241fe2": {
+      "path": "/women/clothing/trousers",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c8241fe2",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c80ce96d": {
+      "path": "/women/clothing/shirts",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c80ce96d",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88121505": {
+      "path": "/women/new/photo",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88121505",
+      "requirements": []
+    },
+    "node_f5959993b4a79d5d428e53dafc014397": {
+      "path": "/women/new/yoga-trousers",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_f5959993b4a79d5d428e53dafc014397",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee8802653d": {
+      "path": "/women/get-the-look/photo",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee8802653d",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee880b94e3": {
+      "path": "/women/new/new-this-week/sport",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee880b94e3",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee880af224": {
+      "path": "/women/new/new-this-week/shoes",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee880af224",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee8809b2af": {
+      "path": "/women/new/new-this-week/clothing",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee8809b2af",
+      "requirements": []
+    },
+    "node_4580a28c336b12da3ae4f6ee88092531": {
+      "path": "/women/new/new-this-week/accessories",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_4580a28c336b12da3ae4f6ee88092531",
+      "requirements": []
+    },
+    "node_462d9bf504a5baabbc94d115c82399b5": {
+      "path": "/women/new/new-this-week/trousers",
+      "_locale": "en_GB@EUR",
+      "_frontastic_canonical_route": "node_462d9bf504a5baabbc94d115c82399b5",
+      "requirements": []
+    }
+  },
+  "host": "english-demo.frontastic.io.local"
+}
