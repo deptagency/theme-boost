@@ -4,19 +4,17 @@ import classnames from 'classnames'
 
 import Markdown from '@frontastic/catwalk/src/js/component/markdown'
 
-class MarkdownTastic extends Component {
-    render () {
+const MarkdownTastic = ({ data }) => {
         return <Markdown
-            text={this.props.data.text}
+            text={data.text}
             className={classnames(
                 's-text',
                 'c-markdown',
-                'c-markdown--align-' + this.props.data.align,
-                'c-markdown--padding-' + this.props.data.padding
+                'c-markdown--align-' + data.align,
+                'c-markdown--padding-' + data.padding
             )}
         />
     }
-}
 
 MarkdownTastic.propTypes = {
     data: PropTypes.object.isRequired,
