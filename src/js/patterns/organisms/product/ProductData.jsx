@@ -17,7 +17,7 @@ import IconButton from '../../atoms/button/IconButton'
 
 const ProductData = ({ name, variants, selectedVariant, setSelectedVariantIndex }) => {
     return (
-        <div className='mt-4 md:mt-6 lg:mt-12'>
+        <div className='mt-4 md:mt-6'>
             <div className='text-xl font-bold text-gray-900'>{name}</div>
             <Price value={selectedVariant.price} currency={selectedVariant.currency} />
 

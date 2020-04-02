@@ -4,7 +4,7 @@ import Slider from 'Molecules/Slider'
 
 const ProductImages = ({ images }) => {
     return (
-        <div className='max-h-736px mt-4 md:mt-6 lg:mt-12'>
+        <div className='max-h-736px mt-4 md:mt-6'>
             <Slider options={{ items: 1, loop: true, responsive: {} }}>
                 {images.map((image, i) => {
                     return (
