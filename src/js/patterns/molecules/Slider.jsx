@@ -29,6 +29,7 @@ const sliderSettings = {
         },
     },
 }
+
 const Slider = ({ children, options = {} }) => {
     return (
         <TinySlider settings={{ ...sliderSettings, ...options }}>
