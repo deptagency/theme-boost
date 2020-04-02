@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
-import getTranslation from '@frontastic/catwalk/src/js/getTranslation'
 import Reference from '@frontastic/catwalk/src/js/component/reference'
 import MoleculesHero from '@frontastic/catwalk/src/js/patterns/molecules/heros/hero'
 
@@ -15,7 +14,7 @@ const Tile = ({
     buttonLabel,
     reference,
     isClickable,
-    caption
+    caption,
 }) => {
     if (!image || !image.media) {
         return null
@@ -97,8 +96,6 @@ const Tile = ({
 }
 
 Tile.propTypes = {
-    tastic: PropTypes.object.isRequired,
-    context: PropTypes.object.isRequired,
     image: PropTypes.object.isRequired,
     topic: PropTypes.object.isRequired,
     title: PropTypes.object.isRequired,
@@ -107,6 +104,7 @@ Tile.propTypes = {
     buttonLabel: PropTypes.object.isRequired,
     reference: PropTypes.object.isRequired,
     isClickable: PropTypes.bool.isRequired,
+    caption: PropTypes.object.isRequired,
 }
 
 export default Tile

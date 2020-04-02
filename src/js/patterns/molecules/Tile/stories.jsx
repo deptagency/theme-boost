@@ -35,6 +35,4 @@ export const tile = () => {
     )
 }
 
-tile.story = {
-    name:'Tile',
-}
+tile.story = { name: 'Tile' }
