@@ -25,4 +25,3 @@ ProductDetails.propTypes = {
 }
 
 export default ProductDetails
-
