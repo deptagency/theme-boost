@@ -1,5 +1,5 @@
 {
-  "tasticType": "product--product-details",
+  "tasticType": "frontastic/boost/product/product-details",
   "name": "Product Details",
   "category": "Product Details",
   "icon": "card_giftcard",

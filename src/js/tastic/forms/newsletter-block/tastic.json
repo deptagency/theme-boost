@@ -1,5 +1,5 @@
 {
-    "tasticType": "forms--newsletter-block",
+    "tasticType": "frontastic/boost/forms/newsletter-block",
     "name": "Newsletter",
     "icon": "menu",
     "category": "Forms",

@@ -1,8 +1,6 @@
 import React from 'react'
 import Tile from 'Molecules/Tile'
 import image from './stories/image'
-import tastic from './stories/tastic'
-import context from './stories/context'
 import topic from './stories/topic'
 import title from './stories/title'
 import buttonLabel from './stories/buttonLabel'
@@ -21,8 +19,6 @@ export const tile = () => {
         <div>
             <Tile
                 image={image}
-                tastic={tastic}
-                context={context}
                 topic={topic}
                 title={title}
                 verticalPosition={'bottom'}

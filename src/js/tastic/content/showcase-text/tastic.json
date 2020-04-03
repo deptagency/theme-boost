@@ -1,5 +1,5 @@
 {
-    "tasticType": "content--showcase-text",
+    "tasticType": "frontastic/boost/content/showcase-text",
     "name": "Showcase Text",
     "category": "Content",
     "icon": "menu",

@@ -11,15 +11,19 @@ import Footer from './footer/tastic'
 
 export default (() => {
     return {
-        'content--markdown': MarkdownTastic,
-        'content--showcase-text': ShowcaseTextTastic,
-        'forms--newsletter-block': NewsletterBlockTastic,
-        'content--tile': TileTastic,
-        'header--main-menu': MainMenuTastic,
-        'product--product-slider': ProductSlider,
-        'product--product-details': ProductDetailsTastic,
-        'helpers--horizontal-spacer': HorizontalSpacerTastic,
-        'content--feature-service': FeatureServiceTastic,
-        'footer': Footer,
+        'frontastic/boost/content/markdown': MarkdownTastic,
+        'frontastic/boost/content/showcase-text': ShowcaseTextTastic,
+        'frontastic/boost/forms/newsletter-block': NewsletterBlockTastic,
+        'frontastic/boost/content/tile': TileTastic,
+        'frontastic/boost/header/main-menu': MainMenuTastic,
+        'frontastic/boost/product/product-slider': ProductSlider,
+        'frontastic/boost/product/product-details': ProductDetailsTastic,
+        'frontastic/boost/helpers/horizontal-spacer': HorizontalSpacerTastic,
+        'frontastic/boost/content/feature-service': FeatureServiceTastic,
+        'frontastic/boost/footer': Footer,
     }
 })()
+
+
+
+
