@@ -23,7 +23,3 @@ export default (() => {
         'frontastic/boost/footer': Footer,
     }
 })()
-
-
-
-

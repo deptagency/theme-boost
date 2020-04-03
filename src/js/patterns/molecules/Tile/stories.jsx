@@ -11,10 +11,6 @@ export default {
 }
 
 export const tile = () => {
-    tastic.schema.get = function () {
-        return null
-    }
-
     return (
         <div>
             <Tile
