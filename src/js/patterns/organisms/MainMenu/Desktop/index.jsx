@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
 
-import MarginBreakout from 'Molecules/layout/MarginBreakout'
+import MarginBreakout from 'Molecules/Layout/MarginBreakout'
 import TopCategories from './TopCategories'
 import DesktopMenu from './Navigation'
 import NavigationExpansionPanel from './NavigationExpansionPanel'

@@ -1,0 +1,196 @@
+{
+    "tasticType": "footer",
+    "name": "Footer",
+    "icon": "list",
+    "category": "Footer",
+    "schema": [
+        {
+            "name": "Meta Navigation",
+            "fields": [
+                {
+                    "label": "Title",
+                    "field": "title",
+                    "type": "string"
+                },
+                {
+                    "label": "Links",
+                    "field": "links",
+                    "type": "group",
+                    "itemLabelField": "label",
+                    "fields": [
+                        {
+                            "label": "Label",
+                            "field": "label",
+                            "type": "string"
+                        },
+                        {
+                            "label": "Link",
+                            "field": "reference",
+                            "type": "reference"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Help & Information Links",
+            "fields": [
+                {
+                    "label": "Header",
+                    "field": "infoHeader",
+                    "type": "string"
+                },
+                {
+                    "label": "Header icon",
+                    "field": "infoHeaderIcon",
+                    "translatable": false,
+                    "type": "enum",
+                    "required": false,
+                    "values": [
+                        {
+                            "value": "help",
+                            "name": "Help"
+                        },
+                        {
+                            "value": "chat",
+                            "name": "Chat"
+                        },
+                        {
+                            "value": "announcement",
+                            "name": "Announcement"
+                        }
+                    ]
+                },
+                {
+                    "label": "Links",
+                    "field": "infoLinks",
+                    "type": "group",
+                    "itemLabelField": "label",
+                    "fields": [
+                        {
+                            "label": "Label",
+                            "field": "label",
+                            "type": "string"
+                        },
+                        {
+                            "label": "Link",
+                            "field": "reference",
+                            "type": "reference"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Contact Info",
+            "fields": [
+                {
+                    "label": "Header",
+                    "field": "contacHeader",
+                    "type": "string"
+                },
+                {
+                    "label": "Phone Number",
+                    "field": "phoneNumber",
+                    "type": "string"
+                },
+                {
+                    "label": "Phone Number Subline",
+                    "field": "phoneNumberSubline",
+                    "type": "string"
+                },
+                {
+                    "label": "E-Mail",
+                    "field": "email",
+                    "type": "string"
+                },
+                {
+                    "label": "E-Mail Overline",
+                    "field": "emailOverline",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "About Links",
+            "fields": [
+                {
+                    "label": "About Header",
+                    "field": "aboutHeader",
+                    "type": "string"
+                },
+                {
+                    "label": "Header icon",
+                    "field": "aboutHeaderIcon",
+                    "translatable": false,
+                    "type": "enum",
+                    "required": false,
+                    "values": [
+                        {
+                            "value": "help",
+                            "name": "Help"
+                        },
+                        {
+                            "value": "chat",
+                            "name": "Chat"
+                        },
+                        {
+                            "value": "announcement",
+                            "name": "Announcement"
+                        }
+                    ]
+                },
+                {
+                    "label": "Links",
+                    "field": "aboutLinks",
+                    "type": "group",
+                    "itemLabelField": "label",
+                    "fields": [
+                        {
+                            "label": "Label",
+                            "field": "label",
+                            "type": "string"
+                        },
+                        {
+                            "label": "Link",
+                            "field": "reference",
+                            "type": "reference"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Payment Methods",
+            "fields": [
+                {
+                    "label": "Payment Methods",
+                    "field": "paymentMethods",
+                    "type": "group",
+                    "itemLabelField": "icon",
+                    "fields": [
+                        {
+                            "label": "Icon",
+                            "field": "playmentIcon",
+                            "type": "enum",
+                            "values": [
+                                {
+                                    "name": "PayPal",
+                                    "value": "paypal"
+                                },
+                                {
+                                    "name": "Visa",
+                                    "value": "visa"
+                                },
+                                {
+                                    "name": "Mastercard",
+                                    "value": "mastercard"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
