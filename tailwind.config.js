@@ -14,7 +14,7 @@ module.exports = {
                 '1-340': '1fr 340px',
                 '2-auto': 'repeat(2, auto)',
                 '2-max-content': 'repeat(2, max-content)',
-                '120-3xfr':'120px 1fr 1fr 1fr',
+                '120-2xfr': '120px 1fr 1fr',
             },
             gridTemplateRows: {
                 'auto-1fr-auto': 'auto 1fr auto',

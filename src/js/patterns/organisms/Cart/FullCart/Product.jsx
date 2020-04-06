@@ -4,55 +4,68 @@ import { FormattedMessage } from 'react-intl'
 import app from 'frontastic-catwalk/src/js/app/app'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import { ReactComponent as CartBin } from 'Icons/cart-bin.svg'
 import Price from 'Atoms/price'
+import Select from 'Atoms/select'
+import { ReactComponent as CartBin } from 'Icons/cart-bin.svg'
 
 const Product = ({ itemId, image, name, designer, count, price, color, size }) => {
-    const productCounter = Array.from(Array(10).keys())
+    /*const productCounter = Array.from(Array(10).keys())
+
+    <select
+        className='mt-3'
+        onChange={(event) => {
+            app.getLoader('cart').updateLineItem({
+                lineItemId: itemId,
+                count: event.target.value,
+            })
+        }}
+        value={count} >
+        {productCounter.map((i) => {
+            const count = i + 1
+            return <option key={count} value={count}>{count}</option>
+        })}
+    </select>*/
 
     return (
-        <div className='grid gap-6 grid-cols-120-3xfr grid-rows-auto-1fr-auto'>
-            <div className='col-start-1 row-start-1 row-end-span-3'>
+        <div className='grid grid-cols-120-2xfr grid-rows-auto-1fr-auto col-gap-4 row-gap-2'>
+            <div>
                 <img src={image} alt='' />
             </div>
 
-            <div className='grid row-start-1 col-start-2 col-end-span-3 grid-cols-1-auto items-start'>
-                <div>
-                    <div className='text-4xl leading-tight font-bold'>{name}</div>
-                    <div className='text-3xl text-gray-600'>{designer}</div>
+            <div className=''>
+                <div className='text-md font-bold leading-tight'>{name}</div>
+                <div className='text-sm text-gray-600 leading-tight'>{designer}</div>
+                <div className='text-sm text-gray-600 leading-tight'>
+                    <FormattedMessage id='colorProduct' /> {color}
                 </div>
-                <button className='c-button-single-icon c-button-single-icon--primary' onClick={() => {
+                <div className='text-sm text-gray-600 leading-tight'>
+                    <FormattedMessage id='sizeProduct' /> {size}
+                </div>                
+
+                <div className='block'>
+                    <Select
+                        values={variants}
+                        formatLabel={(option) => { return option.attributes.color.label }}
+                        onSelect={(i) => { return setSelectedVariantIndex(i) }}
+                    />
+                </div>
+
+                <div className='mt-3'>
+                    <Price variant='text-sm text-gray-700 font-bold leading-tight' value={price} />
+                </div>
+            </div>
+
+            <div>
+                <button className='flex items-center justify-center'
+                    onClick={() => {
                     app.getLoader('cart').removeLineItem({ lineItemId: itemId })
                 }}>
-                    <CartBin />
+                    <CartBin className='inline-block' />
+
+                    <div className='ml-2 text-sm text-gray-800 leading-tight'>
+                        <FormattedMessage id='cart.remove' />
+                    </div>
                 </button>
-            </div>
-
-            <div className='row-start-2 col-start-2 col-end-span-3'>
-                <dl className='grid grid-cols-2-max-content col-gap-8 row-gap-6 items-start justify-start'>
-                    <dt className='text-3xl text-gray-600'><FormattedMessage id='colorProduct' /></dt>
-                    <dd className='text-3xl font-bold'>{color}</dd>
-                    <dt className='text-3xl text-gray-600'><FormattedMessage id='sizeProduct' /></dt>
-                    <dd className='text-3xl font-bold'>{size}</dd>
-                </dl>
-
-                <select
-                    className='mt-8'
-                    onChange={(event) => {
-                        app.getLoader('cart').updateLineItem({
-                            lineItemId: itemId,
-                            count: event.target.value,
-                        })
-                    }}
-                    value={count} >
-                    {productCounter.map((i) => {
-                        const count = i + 1
-                        return <option key={count} value={count}>{count}</option>
-                    })}
-                </select>
-            </div>
-            <div className='row-start-3 grid-col-start-2 col-end-span-3 text-right'>
-                <Price value={price} normal />
             </div>
         </div>
     )

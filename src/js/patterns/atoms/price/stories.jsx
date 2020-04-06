@@ -6,8 +6,8 @@ export default {
     title: 'Price',
 }
 
-export const price = () => {
+export const simple = () => {
     return (
-        <Price value={1000} />
+        <Price variant='text-md' value={1000} />
     )
 }
