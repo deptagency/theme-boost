@@ -10,7 +10,7 @@ const ProductList = ({ items }) => {
         <section>
             {items.map((item, index) => {
                 return (
-                    <div key={index} className={classnames({ 'mt-8' : index > 0 })}>
+                    <div key={index} className={classnames({ 'mt-8': index > 0 })}>
                         <Product
                             itemId={item.lineItemId}
                             name={item.name}

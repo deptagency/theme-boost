@@ -9,7 +9,7 @@ import Select from 'Atoms/select'
 import { ReactComponent as CartBin } from 'Icons/cart-bin.svg'
 
 const Product = ({ itemId, image, name, designer, count, price, color, size }) => {
-    const productCounter = Array.from(Array(10).keys()).map(i => i + 1);
+    const productCounter = Array.from(Array(10).keys()).map(i => { return i + 1 })
 
     return (
         <div className='grid grid-cols-120-1xfr grid-rows-auto-1fr sm:grid-cols-120-2xfr sm:grid-rows-1 col-gap-4 row-gap-3'>
@@ -25,7 +25,7 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
                 </div>
                 <div className='text-sm text-gray-600 leading-tight'>
                     <FormattedMessage id='sizeProduct' /> {size}
-                </div>                
+                </div>
 
                 <div className='mt-3 w-24'>
                     <Select
@@ -33,7 +33,7 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
                         value={count}
                         values={productCounter}
                         formatLabel={(option) => { return option }}
-                        onSelect={(i) => { 
+                        onSelect={(i) => {
                             app.getLoader('cart').updateLineItem({
                                 lineItemId: itemId,
                                 count: i,

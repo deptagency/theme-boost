@@ -7,7 +7,7 @@ export default {
 }
 
 export const empty = () => {
-    const cart = {        
+    const cart = {
     }
 
     return (
@@ -29,20 +29,20 @@ export const full = () => {
                 price: 20,
                 variant: {
                     images: [
-                        'https://res.cloudinary.com/dlwdq84ig/image/upload/c_fill,f_auto,g_faces:auto,h_264,q_auto,w_176/sds9ezhfscrzjp3kdi2y'
+                        'https://res.cloudinary.com/dlwdq84ig/image/upload/c_fill,f_auto,g_faces:auto,h_264,q_auto,w_176/sds9ezhfscrzjp3kdi2y',
                     ],
                     attributes: {
                         size: 2,
                         color: {
-                            label: 'Green'
+                            label: 'Green',
                         },
                         designer: {
-                            label: 'Designer'
-                        }
-                    }
-                }
-            }]
-        }
+                            label: 'Designer',
+                        },
+                    },
+                },
+            }],
+        },
     }
 
     return (

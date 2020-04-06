@@ -19,10 +19,10 @@ const ProductData = ({ name, variants, selectedVariant, setSelectedVariantIndex 
     return (
         <div className='mt-4 md:mt-6'>
             <div className='text-xl font-bold text-gray-900'>{name}</div>
-            <Price 
+            <Price
                 variant='text-lg text-gray-600 py-1'
-                value={selectedVariant.price} 
-                currency={selectedVariant.currency} 
+                value={selectedVariant.price}
+                currency={selectedVariant.currency}
             />
 
             <StarRating />

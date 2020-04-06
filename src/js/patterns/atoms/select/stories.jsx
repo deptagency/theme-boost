@@ -6,12 +6,12 @@ export default {
     title: 'Form',
 }
 
-function selectLabel(option) {
+function selectLabel (option) {
     return `Custom label ${option}`
 }
 
 export const select = () => {
-    const values = [1, 2, 3, 4, 5];
+    const values = [1, 2, 3, 4, 5]
 
     return (
         <div className='p-4'>

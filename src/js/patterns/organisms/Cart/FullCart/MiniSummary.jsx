@@ -34,4 +34,3 @@ MiniSummary.defaultProps = {
 }
 
 export default ComponentInjector.return('MiniSummary', MiniSummary)
-

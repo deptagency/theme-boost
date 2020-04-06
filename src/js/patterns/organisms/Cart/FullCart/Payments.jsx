@@ -1,7 +1,7 @@
 import React from 'react'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-const Payments = () => {    
+const Payments = () => {
     return (
         <section className='flex'>
             <div className='mr-3'>

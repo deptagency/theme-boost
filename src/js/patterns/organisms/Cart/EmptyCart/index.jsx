@@ -9,7 +9,7 @@ const EmptyCart = () => {
         <div className='flex flex-col items-center justify-center h-64'>
             <div className='mx-auto text-center'>
                 <EmptyCartIcon className='mx-auto mb-3 w-6 h-6 text-gray-800 fillCurrent' />
-            
+
                 <div className='text-2xl leading-none font-bold text-gray-800'>
                     <FormattedMessage id='cart.emptyCart.text' />
                 </div>
