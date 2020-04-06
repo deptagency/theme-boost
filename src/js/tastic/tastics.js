@@ -22,5 +22,6 @@ export default (() => {
         'frontastic/boost/helpers/horizontal-spacer': HorizontalSpacerTastic,
         'frontastic/boost/content/feature-service': FeatureServiceTastic,
         'frontastic/boost/footer': Footer,
+        'frontastic/boost/cart': CartTastic
     }
 })()

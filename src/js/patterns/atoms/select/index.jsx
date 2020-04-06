@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ReactComponent as IconSelectDown } from 'Icons/tailwind-icons/icon-select-down.svg'
 
-const Select = ({ values, onSelect, formatLabel }) => {
+const Select = ({ values, variant, onSelect, formatLabel }) => {
     let listed = []
 
     return (
         <>
             <select
-                className='appearance-none w-full bg-white border border-gray-300 text-base text-gray-800 font-bold py-3 px-4 pr-8 rounded leading-tight focus:outline-none bg-white focus:border-gray-500'
+                className={variant}
                 onChange={(e) => { return onSelect(e.target.options.selectedIndex) }}
             >
                 {values.map((v, i) => {
