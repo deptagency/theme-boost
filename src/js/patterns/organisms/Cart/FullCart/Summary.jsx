@@ -6,7 +6,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import Price from 'Atoms/price'
 import Button from 'Atoms/button'
 
-const Summary = ({ sum, subtotal }) => {
+const Summary = ({ sum, subtotal = ''}) => {
     return (
         <section className='p-4'>
             <div className='mb-4 grid grid-cols-2 col-gap-6 row-gap-2'>
@@ -54,10 +54,6 @@ const Summary = ({ sum, subtotal }) => {
 Summary.propTypes = {
     subtotal: PropTypes.string,
     sum: PropTypes.number.isRequired,
-}
-
-Summary.defaultProps = {
-    subtotal: '',
 }
 
 export default ComponentInjector.return('Summary', Summary)

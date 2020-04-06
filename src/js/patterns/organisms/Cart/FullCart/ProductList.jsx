@@ -32,6 +32,4 @@ ProductList.propTypes = {
     items: PropTypes.array.isRequired,
 }
 
-ProductList.defaultProps = {}
-
 export default ComponentInjector.return('ProductList', ProductList)

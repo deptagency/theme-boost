@@ -30,7 +30,4 @@ MiniSummary.propTypes = {
     sum: PropTypes.number.isRequired,
 }
 
-MiniSummary.defaultProps = {
-}
-
 export default ComponentInjector.return('MiniSummary', MiniSummary)

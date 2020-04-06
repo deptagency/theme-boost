@@ -74,7 +74,4 @@ Product.propTypes = {
     size: PropTypes.string.isRequired,
 }
 
-Product.defaultProps = {
-}
-
 export default ComponentInjector.return('Product', Product)

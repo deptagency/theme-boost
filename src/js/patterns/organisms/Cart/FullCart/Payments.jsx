@@ -34,8 +34,4 @@ const Payments = () => {
     )
 }
 
-Payments.propTypes = {}
-
-Payments.defaultProps = {}
-
 export default ComponentInjector.return('Payments', Payments)

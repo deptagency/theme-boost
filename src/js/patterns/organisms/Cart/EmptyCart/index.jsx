@@ -10,7 +10,7 @@ const EmptyCart = () => {
             <div className='mx-auto text-center'>
                 <EmptyCartIcon className='mx-auto mb-3 w-6 h-6 text-gray-800 fillCurrent' />
 
-                <div className='text-2xl leading-none font-bold text-gray-800'>
+                <div className='text-2xl text-gray-800 leading-none font-bold'>
                     <FormattedMessage id='cart.emptyCart.text' />
                 </div>
 
