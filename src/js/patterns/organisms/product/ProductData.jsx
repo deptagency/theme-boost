@@ -3,17 +3,19 @@ import { FormattedMessage } from 'react-intl'
 import PropTypes from 'prop-types'
 import app from 'frontastic-catwalk/src/js/app/app'
 
+import MarginBreakout from 'Molecules/Layout/MarginBreakout'
 import StarRating from './StarRating'
 
 import Button from 'Atoms/button'
 import Price from 'Atoms/price'
+import IconButton from 'Atoms/button/IconButton'
+
 import ColorSelector from './selectors/ColorSelector'
 import SizeSelector from './selectors/SizeSelector'
 
 import { ReactComponent as IconHeartBorder } from 'Icons/tailwind-icons/icon-heart-border.svg'
 import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.svg'
 import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
-import IconButton from '../../atoms/button/IconButton'
 
 const ProductData = ({ name, variants, selectedVariant, setSelectedVariantIndex }) => {
     return (
@@ -56,6 +58,7 @@ const ProductData = ({ name, variants, selectedVariant, setSelectedVariantIndex 
                     <IconRefresh className='text-xl' />
                     <FormattedMessage id='product.freeReturns' />
                 </div>
+                <MarginBreakout variant='border-b-4 border-gray-100 md:hidden' />
             </div>
         </div>
     )
