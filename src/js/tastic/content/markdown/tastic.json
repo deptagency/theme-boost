@@ -1,5 +1,5 @@
 {
-    "tasticType": "content--markdown",
+    "tasticType": "frontastic/boost/content/markdown",
     "name": "Markdown",
     "category": "Content",
     "icon": "wrap_text",

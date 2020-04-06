@@ -1,5 +1,5 @@
 {
-    "tasticType": "footer",
+    "tasticType": "frontastic/boost/footer",
     "name": "Footer",
     "icon": "list",
     "category": "Footer",

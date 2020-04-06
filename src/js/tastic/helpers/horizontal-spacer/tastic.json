@@ -1,5 +1,5 @@
 {
-    "tasticType": "helpers--horizontal-spacer",
+    "tasticType": "frontastic/boost/helpers/horizontal-spacer",
     "name": "Horizontal Spacer",
     "category": "Helpers",
     "icon": "photo_size_select_small",

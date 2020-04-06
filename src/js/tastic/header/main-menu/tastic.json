@@ -1,5 +1,5 @@
 {
-    "tasticType": "header--main-menu",
+    "tasticType": "frontastic/boost/header/main-menu",
     "name": "Main Menu",
     "icon": "menu",
     "category": "Header",

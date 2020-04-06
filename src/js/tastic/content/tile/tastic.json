@@ -1,5 +1,5 @@
 {
-    "tasticType": "content--tile",
+    "tasticType": "frontastic/boost/content/tile",
     "name": "Tile",
     "category": "Content",
     "icon": "image",
