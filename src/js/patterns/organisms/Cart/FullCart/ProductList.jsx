@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import Product from './Product'
@@ -9,7 +10,7 @@ const ProductList = ({ items }) => {
         <section>
             {items.map((item, index) => {
                 return (
-                    <div className='mt-8' key={index}>
+                    <div key={index} className={classnames({ 'mt-8' : index > 0 })}>
                         <Product
                             itemId={item.lineItemId}
                             name={item.name}

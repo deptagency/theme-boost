@@ -2,6 +2,16 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
     theme: {
+        boxShadow: {
+            default: '0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06)',
+            md: ' 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, .05)',
+            lg: ' 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05)',
+            xl: ' 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04)',
+            inner: 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
+            outline: '0 0 0 3px rgba(66,153,225,0.5)',
+            focus: '0 0 0 3px rgba(66,153,225,0.5)',
+            'none': 'none',
+        },
         extend: {
             flex: {
                 '0-0-05': '0 0 50%'
@@ -10,14 +20,12 @@ module.exports = {
                 'icon-size': '2.5rem'
             },
             gridTemplateColumns: {
-                '1-auto': '1fr auto',
                 '1-340': '1fr 340px',
-                '2-auto': 'repeat(2, auto)',
-                '2-max-content': 'repeat(2, max-content)',
+                '120-1xfr': '120px 1fr',
                 '120-2xfr': '120px 1fr 1fr',
             },
             gridTemplateRows: {
-                'auto-1fr-auto': 'auto 1fr auto',
+                'auto-1fr': 'auto 1fr',
             },
             gridRowEnd: {
                 'span-3': 'span 3',
@@ -51,6 +59,7 @@ module.exports = {
                 '480px': '480px',
                 '424px': '424px',
                 '840px': '840px',
+                '960px': '960px',
                 '1120px': '1120px',
                 '1218px' : '1218px',
                 '1240px' : '1240px',
@@ -63,7 +72,6 @@ module.exports = {
                 'height': 'height'
             },
             inset: {
-                '3': '3rem',
                 'full': '100%'
             },
             transitionDuration: {

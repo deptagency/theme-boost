@@ -7,11 +7,9 @@ import Price from 'Atoms/price'
 import Button from 'Atoms/button'
 
 const Summary = ({ sum, subtotal }) => {
-    subtotal = 10
-
     return (
-        <section>
-            <div className='mb-4 grid grid-cols-2-auto col-gap-6 row-gap-2'>
+        <section className='p-4'>
+            <div className='mb-4 grid grid-cols-2 col-gap-6 row-gap-2'>
                 {subtotal ?
                     <Fragment>
                         <p className='text-md text-gray-800 leading-normal'>
@@ -28,16 +26,16 @@ const Summary = ({ sum, subtotal }) => {
                 <p className='text-md text-right text-gray-800 uppercase leading-normal'>
                     <FormattedMessage id='cart.gratis' />
                 </p>
-                <span className='block w-full h-px bg-gray-300 col-start-auto col-end-span-2' />
+                <span className='mb-3 block w-full h-px bg-gray-300 col-start-auto col-end-span-2' />
                 <div>
-                    <p className='mb-1 text-md text-gray-800 leading-normal font-bold'>
+                    <p className='mb-1 text-md text-gray-800 leading-none font-bold'>
                         <FormattedMessage id='cart.totalAmount' />
                     </p>
-                    <p className='text-sm text-gray-500 leading-tight'>
+                    <p className='text-sm text-gray-500 leading-none'>
                         <FormattedMessage id='cart.inclVat' />
                     </p>
                 </div>
-                <p className='text-md text-right text-gray-800 leading-normal font-bold'>
+                <p className='text-md text-right text-gray-800 leading-none font-bold'>
                     <Price value={sum} />
                 </p>
             </div>

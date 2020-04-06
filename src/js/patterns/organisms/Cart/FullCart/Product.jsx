@@ -9,27 +9,28 @@ import Select from 'Atoms/select'
 import { ReactComponent as CartBin } from 'Icons/cart-bin.svg'
 
 const Product = ({ itemId, image, name, designer, count, price, color, size }) => {
-    const productCounter = Array.from(Array(10).keys())
+    const productCounter = Array.from(Array(10).keys()).map(i => i + 1);
 
     return (
-        <div className='grid grid-cols-120-2xfr grid-rows-auto-1fr-auto col-gap-4 row-gap-2'>
+        <div className='grid grid-cols-120-1xfr grid-rows-auto-1fr sm:grid-cols-120-2xfr sm:grid-rows-1 col-gap-4 row-gap-3'>
             <div>
                 <img src={image} alt='' />
             </div>
 
-            <div className=''>
+            <div>
                 <div className='text-md font-bold leading-tight'>{name}</div>
                 <div className='text-sm text-gray-600 leading-tight'>{designer}</div>
-                <div className='mt-4 text-sm text-gray-600 leading-tight'>
+                <div className='mt-3 text-sm text-gray-600 leading-tight'>
                     <FormattedMessage id='colorProduct' /> {color}
                 </div>
                 <div className='text-sm text-gray-600 leading-tight'>
                     <FormattedMessage id='sizeProduct' /> {size}
                 </div>                
 
-                <div className='relative mt-4 w-24'>
+                <div className='mt-3 w-24'>
                     <Select
                         variant='form-select'
+                        value={count}
                         values={productCounter}
                         formatLabel={(option) => { return option }}
                         onSelect={(i) => { 
@@ -47,13 +48,13 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
             </div>
 
             <div>
-                <button className='flex items-center justify-center'
+                <button className='flex sm:flex-row-reverse sm:ml-auto items-center justify-center'
                     onClick={() => {
                     app.getLoader('cart').removeLineItem({ lineItemId: itemId })
                 }}>
-                    <CartBin className='inline-block' />
+                    <CartBin className='inline-block mx-1' />
 
-                    <div className='ml-2 text-sm text-gray-800 leading-tight'>
+                    <div className='mx-1 text-sm text-gray-800 leading-tight'>
                         <FormattedMessage id='cart.remove' />
                     </div>
                 </button>
