@@ -8,10 +8,9 @@ const MarkdownTastic = ({ data }) => {
     return <Markdown
         text={data.text}
         className={classnames(
-                's-text',
-                'c-markdown',
-                'c-markdown--align-' + data.align,
-                'c-markdown--padding-' + data.padding
+                'markdown-text',
+                'markdown-position--align-' + data.align,
+                'markdown-position--padding-' + data.padding
             )}
         />
 }

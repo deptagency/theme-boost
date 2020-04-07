@@ -1,89 +1,87 @@
-.s-text { 
-    padding: 12px;
+.markdown-text { 
+    @apply p-3;
 
     ul {
-        margin-left: 1.3em;
+        @apply ml-4 inline-block;
 
         li {
-            list-style-type: circle;
+            @apply list-disc;
 
             + li {
-                margin-top: .3em;
+                @apply m-1;
             }
         }
     }
 
     h1, h2, h3, h4, h5, h6 {
-        font-weight: $fw-bold;
-        color: $color-gray-dark;
+       @apply font-bold text-gray-600;
     }
 
     h1 {
-        font-size: $fs-h1;
+        @apply text-3xl;
     }
     
     h2 {
-        font-size: $fs-h2;
+        @apply text-2xl;
     }
     
     h3 {
-        font-size: $fs-h3;
+        @apply text-xl;
     }
     
     h4 {
-        font-size: $fs-h4;
+        @apply text-base;
     }
     
     h5 {
-        font-size: $fs-h5;
+        @apply text-base;
     }
     
     h6 {
-        font-size: $fs-h6;
+        @apply text-base;
     }
 
     strong, b {
-        font-weight: $fw-bold;
+        @apply font-bold;
     }
 
     a {
-        text-decoration: underline;
-        color: $color-brand;
+       @apply underline text-red-600;
     }
 
     blockquote {
-        margin-left: 1.3em;
+       @apply m-4;
     }
 
     code {
-        color: $color-secondary;
+        @apply text-red-600;
     }
 }
 
-.c-markdown--align-center {
-    text-align: center;
+.markdown-position--align-center {
+    @apply text-center;
 }
 
-.c-markdown--align-right {
-    text-align: right;
+.markdown-position--align-right {
+    @apply text-right;
 }
 
-.c-markdown--align-justify {
-    text-align: justify;
+.markdown-position--align-justify {
+    @apply text-justify;
 }
 
-.c-markdown--padding-none {
-    padding: 0px;
+.markdown-position--padding-none {
+    @apply p-0;
 }
 
-.c-markdown--padding-small {
-    padding: 12px;
+.markdown-position--padding-small {
+    @apply p-3;
 }
 
-.c-markdown--padding-middle {
-    padding: 48px;
+.markdown-position--padding-middle {
+    @apply p-12;
 }
 
-.c-markdown--padding-large {
-    padding: 96px;
+.markdown-position--padding-large {
+    @apply p-24;
 }
