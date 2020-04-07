@@ -35,6 +35,7 @@ module.exports = {
                 'span-3': 'span 3',
             },
             width: {
+                '9': '2.25rem',
                 'fix-560px': '560px',
             },
             height: {

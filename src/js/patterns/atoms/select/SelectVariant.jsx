@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ReactComponent as IconSelectDown } from 'Icons/tailwind-icons/icon-select-down.svg'
 
-const Select = ({ values, value, variant, onSelect, formatLabel }) => {
+const SelectVariant = ({ values, value, variant, onSelect, formatLabel }) => {
+    let listed = []
+
     return (
         <div className='relative'>
             <select
@@ -13,6 +15,9 @@ const Select = ({ values, value, variant, onSelect, formatLabel }) => {
                 {values.map((v, i) => {
                     const label = formatLabel ? formatLabel(v) : v
 
+                    if (listed.includes(label)) { return null }
+
+                    listed.push(label)
                     return <option key={i}>{label}</option>
                 })}
             </select>
@@ -23,7 +28,7 @@ const Select = ({ values, value, variant, onSelect, formatLabel }) => {
     )
 }
 
-Select.propTypes = {
+SelectVariant.propTypes = {
     value: PropTypes.string,
     variant: PropTypes.string,
     values: PropTypes.array.isRequired,
@@ -31,4 +36,4 @@ Select.propTypes = {
     formatLabel: PropTypes.func,
 }
 
-export default Select
+export default SelectVariant
