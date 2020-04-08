@@ -7,9 +7,9 @@ import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
 
 import Sticker from '../../atoms/sticker/sticker'
-import WishlistButton from '../../atoms/buttons/wishlistButton'
+import WishlistButton from '../../atoms/button/wishlistButton'
 
-function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice }) {
+function ProductTeaser({ product, onAddToWishlist, showPercent, showStrikePrice }) {
     const context = useSelector((state) => {
         return state.app.context
     })
@@ -50,7 +50,7 @@ function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice
             className='w-1/2 lg:w-1/3 overflow-hidden px-2 pb-5 text-gray-900'
             itemScope
             itemType='http://schema.org/Product'
-            >
+        >
             <Link itemProp='url' className='z-10 hover:no-underline hover:text-gray-900' to={product._url || ''}>
                 <div className='relative pb-3/2 mb-2'>
                     <figure className='absolute flex items-center h-full w-full object-cover'>
