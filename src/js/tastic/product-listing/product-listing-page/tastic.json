@@ -1,5 +1,5 @@
 {
-    "tasticType": "frontastic/boost/product-listing-page",
+    "tasticType": "frontastic/boost/product-listing/product-listing-page",
     "name": "Product Listing Page",
     "category": "Product Listing",
     "icon": "list",
