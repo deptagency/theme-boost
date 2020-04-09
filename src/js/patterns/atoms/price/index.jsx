@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 
-const Price = ({ value, currency: variantCurrency }) => {
+const Price = ({ value, variant = '', currency: variantCurrency }) => {
     const { locale, currency } = useSelector((state) => {
         return {
             locale: state.app.context.locale.replace('_', '-').split('@')[0],
@@ -11,7 +11,7 @@ const Price = ({ value, currency: variantCurrency }) => {
     })
 
     return (
-        <span className='text-lg text-gray-600 py-1'>
+        <span className={variant}>
             {(value / 100).toLocaleString(locale, { style: 'currency', currency })}
         </span>
     )
@@ -19,6 +19,7 @@ const Price = ({ value, currency: variantCurrency }) => {
 
 Price.propTypes = {
     value: PropTypes.number.isRequired,
+    variant: PropTypes.string,
     currency: PropTypes.string,
 }
 

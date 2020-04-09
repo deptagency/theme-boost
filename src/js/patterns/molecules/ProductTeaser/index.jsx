@@ -30,7 +30,7 @@ const ProductTeaser = ({ product: { variants, name, _url }, itemVariant = '' }) 
             </div>
             <div className='p-4'>
                 <div className='font-bold'>{name}</div>
-                <Price thin quiet value={discountedPrice || price} />
+                <Price variant='text-lg text-gray-600 py-1' value={discountedPrice || price} />
             </div>
         </div>
     )
