@@ -10,14 +10,12 @@ module.exports = {
                 'icon-size': '2.5rem'
             },
             gridTemplateColumns: {
-                '1-auto': '1fr auto',
                 '1-340': '1fr 340px',
-                '2-auto': 'repeat(2, auto)',
-                '2-max-content': 'repeat(2, max-content)',
-                '120-3xfr':'120px 1fr 1fr 1fr',
+                '120-1xfr': '120px 1fr',
+                '120-2xfr': '120px 1fr 1fr',
             },
             gridTemplateRows: {
-                'auto-1fr-auto': 'auto 1fr auto',
+                'auto-1fr': 'auto 1fr',
             },
             gridRowEnd: {
                 'span-3': 'span 3',
@@ -27,6 +25,7 @@ module.exports = {
                 'span-3': 'span 3',
             },
             width: {
+                '9': '2.25rem',
                 'fix-560px': '560px',
             },
             height: {
@@ -51,6 +50,7 @@ module.exports = {
                 '480px': '480px',
                 '424px': '424px',
                 '840px': '840px',
+                '960px': '960px',
                 '1120px': '1120px',
                 '1218px' : '1218px',
                 '1240px' : '1240px',
@@ -63,7 +63,6 @@ module.exports = {
                 'height': 'height'
             },
             inset: {
-                '3': '3rem',
                 'full': '100%'
             },
             transitionDuration: {

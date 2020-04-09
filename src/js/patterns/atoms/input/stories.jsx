@@ -8,10 +8,8 @@ export default {
 
 export const input = () => {
     return (
-        <div>
-            <p>
-                <Input className='form-input' placeholder='Enter your email' />
-            </p>
+        <div className='p-4'>
+            <Input className='form-input' placeholder='Enter your email' />
         </div>
     )
 }
