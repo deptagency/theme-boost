@@ -10,9 +10,9 @@ export default {
 export const markdown = () => {
     return (
         <div>
-                <Markdown
-                    data={data}
-                />
+            <Markdown
+                data={data}
+            />
         </div>
     )
 }
