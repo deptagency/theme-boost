@@ -2,26 +2,11 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 import app from '@frontastic/catwalk/src/js/app/app'
+import withTranslatedTasticData from '@frontastic/catwalk/src/js/component/withTranslatedTasticData'
 
 import ProductListing from '../../../patterns/organisms/product/ProductListing'
 //import Filters from '../../patterns/organisms/filters/filters'
-
-function Sidebar({ header = 'Sidebar' }) {
-    return (
-        <div>
-            <h4 className='text-sm font-bold mb-4'>{header}</h4>
-            <ul className='pl-4'>
-                <CategoryLink>Rugs</CategoryLink>
-                <CategoryLink>T-shirts</CategoryLink>
-                <CategoryLink>Jeans</CategoryLink>
-            </ul>
-        </div>
-    )
-}
-
-function CategoryLink({ children = 'Link' }) {
-    return <li className='mb-1 leading-normal'>{children}</li>
-}
+import CategoryNavigation from '../../../patterns/molecules/product/CategoryNavigation'
 
 function ProductListingPageTastic({ data, tastic }) {
     const [itemsPerPage, setItemsPerPage] = useState(6)
@@ -42,7 +27,7 @@ function ProductListingPageTastic({ data, tastic }) {
     return (
         <div className='flex flex-row'>
             <div className='hidden md:block md:w-1/4'>
-                <Sidebar />
+                <CategoryNavigation title={data.sidebarHeader} navTree={data.tree} />
             </div>
             <div className='w-full md:w-3/4'>
                 <div className='flex flex-col'>
@@ -70,4 +55,4 @@ ProductListingPageTastic.propTypes = {
 
 ProductListingPageTastic.defaultProps = {}
 
-export default ProductListingPageTastic
+export default withTranslatedTasticData(ProductListingPageTastic)
