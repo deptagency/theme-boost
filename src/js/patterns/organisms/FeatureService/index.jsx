@@ -20,9 +20,9 @@ const FeatureService = () => {
                     Free returns
                 </span>
             </div>
-            <div className='w-full h-12 flex md:justify-end lg:justify-end items-center md:border-b-0'>
+            <div className='w-full h-12 flex md:justify-end items-center md:border-b-0 md:pl-8'>
                 <IconLockClosed className='inline-block mr-3 w-5 h-5 md:w-6 md:h-6 fill-current text-indigo-600' />
-                <span className='text-sm text-gray-800 leading-tight w-auto'>
+                <span className='text-sm text-gray-800 leading-tight w-auto justify-end'>
                     Safe payment and data protection
                 </span>
             </div>
