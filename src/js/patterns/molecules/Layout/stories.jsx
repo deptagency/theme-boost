@@ -8,7 +8,7 @@ export default {
 export const tile = () => {
     return (
         <StickyRightColumn
-            variant='m-5 max-w-960px'
+            variant='max-w-960px m-auto my-5 px-5'
             leftColumn={
                 <div className='shadow rounded bg-gray-200'>
                     <p className='m-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
