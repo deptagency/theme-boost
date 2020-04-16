@@ -11,8 +11,9 @@ import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 const FullCart = ({ items, sum }) => {
     return (
         <StickyRightColumn
+            variant='my-4 max-w-960px md:px-4 mx-auto'
             leftColumn={
-                <>
+                <div className=''>
                     <div className='md:hidden border-b-4 border-gray-100'>
                         <MiniSummary sum={sum} />
                     </div>
@@ -36,7 +37,7 @@ const FullCart = ({ items, sum }) => {
                             </div>
                         </div>
                     </div>
-                </>
+                </div>
             }
 
             rightColumn={

@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
-const StickyRightColumn = ({ leftColumn, rightColumn }) => {
+const StickyRightColumn = ({ variant = '', leftColumn, rightColumn }) => {
     return (
-        <div className='my-4 max-w-960px md:px-4 mx-auto md:grid md:gap-4 md:grid-cols-1-340 md:grid-rows-1'>
+        <div className={classnames('md:grid md:gap-4 md:grid-cols-1-340 md:grid-rows-1', variant)}>
             {leftColumn}
 
             <div className='self-baseline md:sticky md:top-0'>
@@ -14,6 +15,7 @@ const StickyRightColumn = ({ leftColumn, rightColumn }) => {
 }
 
 StickyRightColumn.propTypes = {
+    variant: PropTypes.string,
     leftColumn: PropTypes.node.isRequired,
     rightColumn: PropTypes.node.isRequired,
 }
