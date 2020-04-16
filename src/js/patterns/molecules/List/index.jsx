@@ -8,7 +8,7 @@ const List = ({ links, variant, itemVariant }) => {
             {links.map((link, i) => {
                 return (
                     <li key={`${i}-${link.label}`} className={itemVariant}>
-                        {link.reference ? (
+                        {link.reference && link.reference.nodeId ? (
                             <NodeLink node={link.reference}>{link.item || link.label}</NodeLink>
                         ) : (
                             link.item
