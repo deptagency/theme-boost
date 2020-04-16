@@ -46,8 +46,8 @@ export const tile = () => {
                 }
             rightColumn={
                 <div className='shadow rounded bg-gray-500 h-fix-240px' />
-                }
-            />
+            }
+        />
     )
 }
 
