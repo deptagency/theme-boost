@@ -32,7 +32,7 @@ const Summary = ({ sum, subtotal = '' }) => {
                 <p className='mb-1 text-md text-gray-800 leading-none font-bold'>
                     <FormattedMessage id='cart.totalAmount' />
                 </p>
-            
+
                 <p className='text-md text-right text-gray-800 leading-none font-bold'>
                     <Price value={sum} />
                 </p>
