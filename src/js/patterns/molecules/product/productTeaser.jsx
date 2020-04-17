@@ -22,10 +22,9 @@ function ProductTeaser({ product, onAddToWishlist, showPercent, showStrikePrice 
     // Alternatively could the wishlist button directly be connected to the store.
     // You'd give it a product and it does the rest, as a smart drop in component.
     const isWishlisted = () => {
-        if (wishlist.loaded) {
-            return wishlist.data.lineItems.find((item) => {
-                return item.variant.sku === variant.sku
-            })
+        // need to check for length > 0 too, because find() returns undefined if lineItems is empty.
+        if (wishlist.loaded && wishlist.data.lineItems && wishlist.data.lineItems.length > 0) {
+            return wishlist.data.lineItems.find((item) => item.variant.sku === variant.sku)
         }
 
         return false
@@ -74,7 +73,7 @@ function ProductTeaser({ product, onAddToWishlist, showPercent, showStrikePrice 
                         active={isWishlisted()}
                     />
                 </div>
-                <h3 className='text-sm font-bold whitespace-no-wrap truncate ... -mb-1'>{product.name}</h3>
+                <h3 className='text-sm font-bold whitespace-no-wrap truncate ... '>{product.name}</h3>
                 <div itemScope itemType='http://schema.org/Offer'>
                     {variant.discountedPrice && showStrikePrice ? (
                         <p className='text-sm'>
