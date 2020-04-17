@@ -4,6 +4,7 @@ import NewsletterBlockTastic from './forms/newsletter-block/tastic'
 import TileTastic from './content/tile/tastic'
 import MainMenuTastic from './header/main-menu/tastic'
 import CartTastic from './cart/tastic'
+import CheckoutTastic from './checkout/tastic'
 import ProductSlider from './product/product-slider/tastic'
 import ProductDetailsTastic from './product/product-details/tastic'
 import HorizontalSpacerTastic from './helpers/horizontal-spacer/tastic'
@@ -23,5 +24,6 @@ export default (() => {
         'frontastic/boost/content/feature-service': FeatureServiceTastic,
         'frontastic/boost/footer': Footer,
         'frontastic/boost/cart': CartTastic,
+        'frontastic/boost/checkout': CheckoutTastic,
     }
 })()
