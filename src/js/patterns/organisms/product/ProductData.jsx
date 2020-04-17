@@ -54,12 +54,12 @@ const ProductData = ({ name, variants, selectedVariant, setSelectedVariantIndex 
 
             <div className='flex flex-col md:flex-row md:border-b border-gray-300'>
                 <div className='flex p-4 border-b md:border-b-0 lg:border-b-0 border-gray-300'>
-                    <IconRocket className='text-xl' />
+                    <IconRocket className='text-xl mr-3' />
                     <FormattedMessage id='product.delivery24hs' />
                 </div>
 
                 <div className='flex p-4'>
-                    <IconRefresh className='text-xl' />
+                    <IconRefresh className='text-xl mr-3' />
                     <FormattedMessage id='product.freeReturns' />
                 </div>
                 <MarginBreakout variant='border-b-4 border-gray-100 md:hidden' />

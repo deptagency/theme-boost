@@ -11,7 +11,7 @@ const DesktopMenu = ({
     onHoverItem,
 }) => {
     return (
-        <div className='mx-10 py-4'>
+        <div className='mx-5 xl:mx-5 py-4'>
             {currentTree && currentTree.children && currentTree.children.map((item) => {
                 return (
                     <NodeLink

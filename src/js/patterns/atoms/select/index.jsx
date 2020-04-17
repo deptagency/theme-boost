@@ -24,7 +24,10 @@ const Select = ({ values, value, variant, onSelect, formatLabel }) => {
 }
 
 Select.propTypes = {
-    value: PropTypes.string,
+    value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+    ]),
     variant: PropTypes.string,
     values: PropTypes.array.isRequired,
     onSelect: PropTypes.func.isRequired,

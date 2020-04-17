@@ -26,15 +26,13 @@ const Summary = ({ sum, subtotal = '' }) => {
                 <p className='text-md text-right text-gray-800 uppercase leading-normal'>
                     <FormattedMessage id='cart.gratis' />
                 </p>
+
                 <span className='mb-3 block w-full h-px bg-gray-300 col-start-auto col-end-span-2' />
-                <div>
-                    <p className='mb-1 text-md text-gray-800 leading-none font-bold'>
-                        <FormattedMessage id='cart.totalAmount' />
-                    </p>
-                    <p className='text-sm text-gray-500 leading-none'>
-                        <FormattedMessage id='cart.inclVat' />
-                    </p>
-                </div>
+
+                <p className='mb-1 text-md text-gray-800 leading-none font-bold'>
+                    <FormattedMessage id='cart.totalAmount' />
+                </p>
+
                 <p className='text-md text-right text-gray-800 leading-none font-bold'>
                     <Price value={sum} />
                 </p>

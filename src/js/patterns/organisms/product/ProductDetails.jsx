@@ -8,7 +8,7 @@ const ProductDetails = ({ product }) => {
     const selectedVariant = product.variants[selectedVariantIndex]
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 col-gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 col-gap-8 mx-5'>
             <ProductImages images={selectedVariant.images} />
             <ProductData
                 name={product.name}

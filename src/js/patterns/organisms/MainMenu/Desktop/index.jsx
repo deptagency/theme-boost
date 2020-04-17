@@ -37,7 +37,7 @@ const Desktop = ({
     return (
         <MarginBreakout variant='hidden lg:grid shadow-lg'>
             <div className='grid grid-cols-2 w-full max-w-1240px m-center'>
-                <div className='flex ml-10'>
+                <div className='flex ml-5 xl:ml-5'>
                     <div
                         className='self-center h-fix-24px w-full max-w-124px'
                         ref={ref}
@@ -53,7 +53,7 @@ const Desktop = ({
                         }}
                     />
                 </div>
-                <Widgets variant='mr-10' />
+                <Widgets variant='mr-5 xl:mr-5' />
                 <div
                     className='relative col-span-2'
                     onMouseLeave={() => { setIsExpanded(false) }}
