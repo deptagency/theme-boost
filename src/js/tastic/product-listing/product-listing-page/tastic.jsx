@@ -2,13 +2,17 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 import app from '@frontastic/catwalk/src/js/app/app'
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import withTranslatedTasticData from '@frontastic/catwalk/src/js/component/withTranslatedTasticData'
 
 import ProductListing from '../../../patterns/organisms/product/ProductListing'
 //import Filters from '../../patterns/organisms/filters/filters'
-import CategoryNavigation from '../../../patterns/molecules/product/CategoryNavigation'
+import CategoryNavigationTree from '../../../patterns/molecules/product/CategoryNavigationTree'
 
-function ProductListingPageTastic({ data, tastic }) {
+// Ideally this is 3 tastics using the layout facilities
+// in backstage, but that's currently not possible, so
+// that's the reason this tastic exists. *marcel
+function ProductListingPageTastic({ data, node }) {
     const [itemsPerPage, setItemsPerPage] = useState(6)
     let productList = data.stream.items
     if (!productList) {
@@ -20,18 +24,18 @@ function ProductListingPageTastic({ data, tastic }) {
     }
 
     const handleLoadMore = () => {
-        // This is only temporary
+        // This is only temporary and shall soon be replaced by async product loading
         setItemsPerPage(itemsPerPage + 6)
     }
 
     return (
         <div className='flex flex-row'>
-            <div className='hidden md:block md:w-1/4'>
-                <CategoryNavigation title={data.sidebarHeader} navTree={data.tree} />
+            <div className='hidden md:block md:w-1/4 pt-4 pl-4'>
+                <CategoryNavigationTree title={data.sidebarHeader} navTree={data.tree} currentPage={node} />
             </div>
             <div className='w-full md:w-3/4'>
                 <div className='flex flex-col'>
-                    <div className='h-24 border-b border-gray-300 '>Filters go here</div>
+                    <div className='h-24 border-b border-gray-300 '>{/* Filters go here */}</div>
 
                     <div>
                         <ProductListing
@@ -50,9 +54,9 @@ function ProductListingPageTastic({ data, tastic }) {
 
 ProductListingPageTastic.propTypes = {
     data: PropTypes.object.isRequired,
-    tastic: PropTypes.object.isRequired,
+    node: PropTypes.object.isRequired,
 }
 
 ProductListingPageTastic.defaultProps = {}
 
-export default withTranslatedTasticData(ProductListingPageTastic)
+export default withTranslatedTasticData(tastify({ connect: { node: true } })(ProductListingPageTastic))
