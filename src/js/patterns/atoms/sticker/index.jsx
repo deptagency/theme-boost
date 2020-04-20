@@ -13,7 +13,7 @@ Sticker.propTypes = {
 }
 
 Sticker.defaultProps = {
-    text: '20%',
+    children: '20%',
 }
 
 export default ComponentInjector.return('Sticker', Sticker)
