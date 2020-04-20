@@ -53,10 +53,3 @@ export const CartLikeLayout = () => {
 }
 
 CartLikeLayout.story = { name: 'Sticky right column' }
-
-export const CheckoutPanelsLayout = () => {
-    return (
-        <CheckoutPanels />
-    )
-}
-CheckoutPanelsLayout.story = { name: 'Checkout panels' }
