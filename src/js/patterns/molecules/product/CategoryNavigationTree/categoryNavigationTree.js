@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import NodeLink from '@frontastic/catwalk/src/js/app/nodeLink.jsx'
 
-export function CategoryNavigationTree({ navTree, title, currentPage }) {
+export function CategoryNavigationTree ({ navTree, title, currentPage }) {
     // This function determines if a subtree needs to be rendered.
     // It works as follows:
     // - A tree should only render subnodes if the current node is in it's path (parent nodes)
@@ -26,7 +27,9 @@ export function CategoryNavigationTree({ navTree, title, currentPage }) {
         )
     }
 
-    const isCurrentNode = (node, currentPage) => node.nodeId === currentPage.nodeId
+    const isCurrentNode = (node, currentPage) => {
+        return node.nodeId === currentPage.nodeId
+    }
 
     // recursive function to render the tree
     const renderTree = (children) => {
@@ -52,4 +55,10 @@ export function CategoryNavigationTree({ navTree, title, currentPage }) {
             {renderTree(navTree.children)}
         </div>
     )
+}
+
+CategoryNavigationTree.propTypes = {
+    navTree: PropTypes.object.isRequired,
+    title: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
+    currentPage: PropTypes.object.isRequired,
 }

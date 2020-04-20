@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import app from '@frontastic/catwalk/src/js/app/app'
+import ProductTeaser from 'Molecules/product/productTeaser'
 
-import ProductTeaser from '../../../molecules/product/productTeaser'
-
-export function ProductListing({ products, onAddToWishlist, showPercent, showStrikePrice }) {
+export function ProductListing ({ products, onAddToWishlist, showPercent, showStrikePrice }) {
     const [itemsPerPage, setItemsPerPage] = useState(6)
 
     const handleLoadMore = () => {
