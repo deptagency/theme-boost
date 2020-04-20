@@ -18,9 +18,9 @@ const Panels = forwardRef(({ steps, current, setCurrent }, ts) => {
             }}
             >
 
-            {steps.map((step) => {
+            {steps.map((step, i) => {
                 const PanelComponent = step.component
-                return (<PanelComponent step={step} />)
+                return (<PanelComponent key={i} step={step} />)
             })}
 
         </TinySlider>
