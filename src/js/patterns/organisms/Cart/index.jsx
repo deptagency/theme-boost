@@ -6,7 +6,7 @@ import FullCart from './FullCart'
 import EmptyCart from './EmptyCart'
 
 const Cart = ({ cart }) => {
-    if (cart.data && cart.data.lineItems.length > 0) {
+    if (cart && cart.data && cart.data.lineItems.length > 0) {
         const { lineItems, sum, currency } = cart.data
 
         return <FullCart items={lineItems} sum={sum} currency={currency} />
