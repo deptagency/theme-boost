@@ -12,9 +12,6 @@ import { ReactComponent as SearchIcon } from 'Icons/tailwind-icons/icon-search.s
 import { ReactComponent as MyProfile } from 'Icons/tailwind-icons/icon-user.svg'
 
 const Widgets = ({ cartItemsCount, variant = '' }) => {
-    function cardIconClickHandler () {
-        return app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart')
-    }
     return (
         <div
             className={classnames({
@@ -32,7 +29,7 @@ const Widgets = ({ cartItemsCount, variant = '' }) => {
 
             <IconButton variant='pl-6' icon={<WishlistIcon />} />
 
-            <Badge count={cartItemsCount} onClick={cardIconClickHandler}>
+            <Badge count={cartItemsCount} onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}>
                 <IconButton icon={<CartIcon />} />
             </Badge>
         </div>
@@ -41,11 +38,11 @@ const Widgets = ({ cartItemsCount, variant = '' }) => {
 
 Widgets.propTypes = {
     variant: PropTypes.string,
-    cardItemsCount: PropTypes.number,
+    cartItemsCount: PropTypes.number,
 }
 
 Widgets.defaultProps = {
-    cardItemsCount: 0,
+    cartItemsCount: 0,
 }
 
 export default Widgets

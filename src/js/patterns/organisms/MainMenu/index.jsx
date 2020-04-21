@@ -23,7 +23,10 @@ const MainMenu = ({ topCategories, logo }) => {
     const { cartItemsCount } = useSelector((state) => {
         const cartLineItems = get(state, 'cart.cart.data.lineItems', [])
         return {
-            cartItemsCount: cartLineItems.length
+            cartItemsCount: cartLineItems.reduce(
+                (accumulator, currentValue) => {
+                    return accumulator + currentValue.count
+                }, 0),
         }
     })
 
