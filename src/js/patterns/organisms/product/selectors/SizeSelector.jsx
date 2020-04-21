@@ -14,7 +14,7 @@ const SizeSelector = ({ variants, onChange }) => {
                     values={variants}
                     variant='form-select'
                     formatLabel={(option) => { return option.attributes.size }}
-                    onSelect={(i) => { return onChange(i) }}
+                    onSelect={onChange}
                 />
             </div>
         </div>

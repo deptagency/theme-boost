@@ -9,17 +9,11 @@ const ProductImages = ({ images }) => {
                 {images.map((image, i) => {
                     return (
                         <div
+                            className="product-image-wrapper"
                             key={i}
-                            style={{
-                                backgroundImage: `url(${image})`,
-                                backgroundSize: 'contain',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: 'center',
-                                width: '100%',
-                                minWidth: '288px',
-                                minHeight: '399px',
-                            }}
-                        />
+                        >
+                            <img src={image} alt="Product Image" />
+                        </div>
                     )
                 })}
             </Slider>
