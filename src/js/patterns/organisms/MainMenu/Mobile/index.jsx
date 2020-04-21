@@ -40,11 +40,13 @@ const Mobile = ({
                             className='self-center cursor-pointer text-2xl'
                             onClick={() => { setIsOpen(true) }}
                         />
-                        <div
-                            className='self-center h-fix-24px w-full max-w-124px ml-4'
+                        <a
+                            className='self-center h-fix-24px w-full max-w-124px'
                             ref={ref}
-                            style={{ backgroundImage: `url(${backgroundImageUrl})` }}
-                        />
+                            href={window.location.origin}
+                        >
+                            <img src={backgroundImageUrl} alt='Logo' />
+                        </a>
                     </div>
                     <Widgets cartItemsCount={cartItemsCount} />
                 </div>
