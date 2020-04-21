@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { stepObject } from 'Molecules/Layout/CheckoutPanels/stepObject'
 
-const OverviewPanel = ({ step }) => {
+const OverviewPanel = ({ name }) => {
     return (
         <div
             className={classnames({
@@ -11,13 +10,13 @@ const OverviewPanel = ({ step }) => {
                 'text-gray-600 bold text-xl italic text-center pt-40': true,
             })}
             >
-            {step.name} Panel
+            {name} Panel
         </div>
     )
 }
 
 OverviewPanel.propTypes = {
-    step: PropTypes.shape(stepObject).isRequired,
+    name: PropTypes.node.isRequired,
 }
 
 export default OverviewPanel

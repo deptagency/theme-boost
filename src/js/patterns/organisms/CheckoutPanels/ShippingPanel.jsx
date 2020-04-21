@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { stepObject } from 'Molecules/Layout/CheckoutPanels/stepObject'
 
-const ShippingPanel = ({ step }) => {
+const ShippingPanel = ({ name }) => {
     return (
         <div
             className={classnames({
@@ -11,13 +10,13 @@ const ShippingPanel = ({ step }) => {
                 'text-gray-600 bold text-xl italic text-center pt-40': true,
             })}
             >
-            {step.name} Panel
+            {name} Panel
         </div>
     )
 }
 
 ShippingPanel.propTypes = {
-    step: PropTypes.shape(stepObject).isRequired,
+    name: PropTypes.node.isRequired,
 }
 
 export default ShippingPanel

@@ -1,6 +1,5 @@
 import React from 'react'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
-import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
 export default {
     title: 'Layouts',
