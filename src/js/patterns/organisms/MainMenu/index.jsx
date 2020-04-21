@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
+import get from 'lodash/get'
 import Mobile from './Mobile'
 import Desktop from './Desktop'
 import { topCategoryType } from './types'
@@ -18,6 +20,13 @@ const MainMenu = ({ topCategories, logo }) => {
         setNavPath([...navPath, item])
     }
 
+    const { cartItemsCount } = useSelector((state) => {
+        const cartLineItems = get(state, 'cart.cart.data.lineItems', [])
+        return {
+            cartItemsCount: cartLineItems.length
+        }
+    })
+
     if (!topCategories) {
         return null
     }
@@ -31,6 +40,7 @@ const MainMenu = ({ topCategories, logo }) => {
                 handleSelectTopCategory={handleSelectTopCategory}
                 navPath={navPath}
                 setNavPath={setNavPath}
+                cartItemsCount={cartItemsCount}
             />
             <Desktop
                 topCategories={topCategories}
@@ -39,6 +49,7 @@ const MainMenu = ({ topCategories, logo }) => {
                 handleSelectTopCategory={handleSelectTopCategory}
                 navPath={navPath}
                 onSelectNavItem={handleSelectNavItem}
+                cartItemsCount={cartItemsCount}
             />
         </>
     )

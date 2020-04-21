@@ -18,6 +18,7 @@ const Desktop = ({
     handleSelectTopCategory,
     navPath,
     onSelectNavItem,
+    cartItemsCount,
 }) => {
     const [isExpanded, setIsExpanded] = useState(false)
     const [hoveredMenuItem, setHoveredMenuItem] = useState(undefined)
@@ -53,7 +54,7 @@ const Desktop = ({
                         }}
                     />
                 </div>
-                <Widgets variant='mr-5 xl:mr-5' />
+                <Widgets variant='mr-5 xl:mr-5' cartItemsCount={cartItemsCount} />
                 <div
                     className='relative col-span-2'
                     onMouseLeave={() => { setIsExpanded(false) }}
@@ -89,6 +90,11 @@ Desktop.propTypes = {
     currentTopCategory: PropTypes.number.isRequired,
     handleSelectTopCategory: PropTypes.func.isRequired,
     onSelectNavItem: PropTypes.func.isRequired,
+    cartItemsCount: PropTypes.number,
+}
+
+Desktop.defaultProps = {
+    cardItemsCount: 0,
 }
 
 export default Desktop

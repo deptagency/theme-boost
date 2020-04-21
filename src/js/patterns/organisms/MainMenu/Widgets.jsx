@@ -4,13 +4,17 @@ import app from '@frontastic/catwalk/src/js/app/app'
 import classnames from 'classnames'
 
 import IconButton from 'Atoms/button/IconButton'
+import Badge from 'Atoms/badge'
 
 import { ReactComponent as CartIcon } from 'Icons/tailwind-icons/icon-cart.svg'
 import { ReactComponent as WishlistIcon } from 'Icons/tailwind-icons/icon-heart.svg'
 import { ReactComponent as SearchIcon } from 'Icons/tailwind-icons/icon-search.svg'
 import { ReactComponent as MyProfile } from 'Icons/tailwind-icons/icon-user.svg'
 
-const Widgets = ({ variant = '' }) => {
+const Widgets = ({ cartItemsCount, variant = '' }) => {
+    function cardIconClickHandler () {
+        return app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart')
+    }
     return (
         <div
             className={classnames({
@@ -28,17 +32,20 @@ const Widgets = ({ variant = '' }) => {
 
             <IconButton variant='pl-6' icon={<WishlistIcon />} />
 
-            <IconButton
-                variant='pl-6'
-                icon={<CartIcon />}
-                onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}
-            />
+            <Badge count={cartItemsCount} onClick={cardIconClickHandler}>
+                <IconButton icon={<CartIcon />} />
+            </Badge>
         </div>
     )
 }
 
 Widgets.propTypes = {
     variant: PropTypes.string,
+    cardItemsCount: PropTypes.number,
+}
+
+Widgets.defaultProps = {
+    cardItemsCount: 0,
 }
 
 export default Widgets

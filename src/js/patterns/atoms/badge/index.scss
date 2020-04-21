@@ -1,0 +1,22 @@
+.badge {
+    &-wrapper {
+        position: relative;
+        display: flex;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &-count {
+        @apply bg-indigo-500 text-white;
+
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        right: -6px;
+        top: 8px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
