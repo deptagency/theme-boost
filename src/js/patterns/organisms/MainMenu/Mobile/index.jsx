@@ -19,6 +19,7 @@ const Mobile = ({
     handleSelectTopCategory,
     navPath,
     setNavPath,
+    cartItemsCount,
 }) => {
     const [isOpen, setIsOpen] = useState(false)
     const [level, setLevel] = useLevel(0)
@@ -45,7 +46,7 @@ const Mobile = ({
                             style={{ backgroundImage: `url(${backgroundImageUrl})` }}
                         />
                     </div>
-                    <Widgets />
+                    <Widgets cartItemsCount={cartItemsCount} />
                 </div>
             </MarginBreakout>
 
@@ -81,6 +82,11 @@ Mobile.propTypes = {
     handleSelectTopCategory: PropTypes.func.isRequired,
     navPath: PropTypes.arrayOf(categoryTreeType),
     setNavPath: PropTypes.func.isRequired,
+    cartItemsCount: PropTypes.number,
+}
+
+Mobile.defaultProps = {
+    cardItemsCount: 0,
 }
 
 export default Mobile
