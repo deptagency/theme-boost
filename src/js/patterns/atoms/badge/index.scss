@@ -1,24 +1,18 @@
-.badge {
-    &-wrapper {
-        position: relative;
-        display: flex;
-        &:hover {
-            cursor: pointer;
-        }
-        min-height: 52px;
-        width: max-content;
+.badge-wrapper {
+    @apply flex relative;
+    
+    min-height: 52px;
+    width: max-content;
+    
+    &:hover {
+        cursor: pointer;
     }
-    &-count {
-        @apply bg-indigo-500 text-white;
 
-        position: absolute;
-        width: 16px;
-        height: 16px;
+    .badge-count {
+        @apply bg-indigo-600 text-white w-4 h-4 rounded-full flex justify-center absolute;
+
         right: -6px;
         top: 8px;
-        border-radius: 50%;
-        display: flex;
         align-items: center;
-        justify-content: center;
     }
 }
