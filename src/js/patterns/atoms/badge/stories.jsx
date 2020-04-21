@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Badge from 'Atoms/Badge'
+import Badge from 'Atoms/badge'
 import IconButton from 'Atoms/button/IconButton'
 
 import { ReactComponent as CartIcon } from 'Icons/tailwind-icons/icon-cart.svg'

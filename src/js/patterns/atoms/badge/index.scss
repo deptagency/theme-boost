@@ -5,6 +5,8 @@
         &:hover {
             cursor: pointer;
         }
+        min-height: 52px;
+        width: max-content;
     }
     &-count {
         @apply bg-indigo-500 text-white;
