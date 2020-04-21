@@ -29,11 +29,7 @@ module.exports = {
                 'fix-560px': '560px',
             },
             height: {
-                'fix-24px': '24px',
-                'fix-40px': '40px',
-                'fix-48px': '48px',
                 'fix-120px': '120px',
-                'fix-132px': '132px',
                 'fix-240px': '240px',
             },
             minHeight: {
@@ -45,14 +41,9 @@ module.exports = {
             },
             maxWidth: {
                 '124px': '124px',
-                '126px': '126px',
                 '192px': '192px',
-                '480px': '480px',
-                '424px': '424px',
                 '840px': '840px',
                 '960px': '960px',
-                '1120px': '1120px',
-                '1218px' : '1218px',
                 '1240px' : '1240px',
             },
             margin: {
