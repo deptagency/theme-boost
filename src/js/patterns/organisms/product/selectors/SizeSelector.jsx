@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 import SelectVariant from 'Atoms/select/SelectVariant'
 
-const SizeSelector = ({ variants, setSelectedVariantIndex }) => {
+const SizeSelector = ({ variants, onChange }) => {
     return (
         <div className='flex-col md:pb-6'>
             <div className='pb-2'>
@@ -14,7 +14,7 @@ const SizeSelector = ({ variants, setSelectedVariantIndex }) => {
                     values={variants}
                     variant='form-select'
                     formatLabel={(option) => { return option.attributes.size }}
-                    onSelect={(i) => { return setSelectedVariantIndex(i) }}
+                    onSelect={(i) => { return onChange(i) }}
                 />
             </div>
         </div>
@@ -23,7 +23,7 @@ const SizeSelector = ({ variants, setSelectedVariantIndex }) => {
 
 SizeSelector.propTypes = {
     variants: PropTypes.array.isRequired,
-    setSelectedVariantIndex: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired,
 }
 
 export default SizeSelector

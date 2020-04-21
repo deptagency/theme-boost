@@ -14,7 +14,7 @@ const ProductDetails = ({ product }) => {
                 name={product.name}
                 variants={product.variants}
                 selectedVariant={selectedVariant}
-                setSelectedVariantIndex={setSelectedVariantIndex}
+                onChange={setSelectedVariantIndex}
             />
         </div>
     )
