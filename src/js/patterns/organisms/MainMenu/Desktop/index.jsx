@@ -39,7 +39,7 @@ const Desktop = ({
             <div className='grid grid-cols-2 w-full max-w-1240px m-center'>
                 <div className='flex ml-5 xl:ml-5'>
                     <div
-                        className='self-center h-6 w-full max-w-124px'
+                        className='self-center h-8 w-3/12'
                         ref={ref}
                         style={{ backgroundImage: `url(${backgroundImageUrl})` }}
                     />

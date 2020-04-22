@@ -26,7 +26,6 @@ module.exports = {
             },
             width: {
                 '9': '2.25rem',
-                'fix-560px': '560px',
             },
             height: {
                 'fix-120px': '120px',
@@ -40,9 +39,7 @@ module.exports = {
                 '736px': '736px',
             },
             maxWidth: {
-                '124px': '124px',
                 '192px': '192px',
-                '840px': '840px',
                 '960px': '960px',
                 '1240px' : '1240px',
             },
@@ -62,10 +59,6 @@ module.exports = {
             },
             transitionTimingFunction: {
                 'ease-out-expo': 'cubic-bezier(0.39, 0.58, 0.57, 1)',
-            },
-            borderWidth: {
-                '2px': '2px',
-                '3px': '3px'
             },
         }
     },

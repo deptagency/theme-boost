@@ -10,7 +10,7 @@ const NewsletterBlock = ({ intl }) => {
 
     return (
         <div className='bg-gray-800 rounded mx-5'>
-            <div className='px-6 py-10 mx-auto w-full sm:w-fix-560px'>
+            <div className='px-6 py-10 mx-auto w-full sm:w-11/12 md:w-8/12'>
                 <p className='mb-1 text-sm text-center text-white leading-tight'>
                     <FormattedMessage id='joinNewsletter' />
                 </p>
