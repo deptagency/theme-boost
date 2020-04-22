@@ -28,17 +28,19 @@ const ProductData = ({ name, variants, selectedVariant, setSelectedVariantIndex 
             />
 
             <StarRating />
+            {selectedVariant.attributes.color &&
             <ColorSelector
                 value={selectedVariant.attributes.color}
                 variants={variants}
                 setSelectedVariantIndex={setSelectedVariantIndex}
-            />
+            />}
 
+            {selectedVariant.attributes.size &&
             <SizeSelector
                 value={selectedVariant.attributes.size}
                 variants={variants}
                 setSelectedVariantIndex={setSelectedVariantIndex}
-            />
+            />}
 
             <div className='flex pb-6'>
                 <Button
