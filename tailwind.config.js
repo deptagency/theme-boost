@@ -13,6 +13,13 @@ module.exports = {
             fontSize: {
                 'icon-size': '2.5rem',
             },
+            gridColumnEnd: {
+                'span-2': 'span 2',
+                'span-3': 'span 3',
+            },
+            gridRowEnd: {
+                'span-3': 'span 3',
+            },
             gridTemplateColumns: {
                 '1-340': '1fr 340px',
                 '120-1xfr': '120px 1fr',
@@ -22,21 +29,10 @@ module.exports = {
             gridTemplateRows: {
                 'auto-1fr': 'auto 1fr',
             },
-            gridRowEnd: {
-                'span-3': 'span 3',
-            },
-            gridColumnEnd: {
-                'span-2': 'span 2',
-                'span-3': 'span 3',
-            },
-            width: {
-                '9': '2.25rem',
-                'fix-560px': '560px',
-            },
             height: {
                 'fix-120px': '120px',
                 'fix-240px': '240px',
-                'full-84px': 'calc(100vh - 84px)'
+                'full-84px': 'calc(100vh - 84px)',
             },
             inset: {
                 full: '100%',
@@ -51,7 +47,7 @@ module.exports = {
             maxWidth: {
                 '192px': '192px',
                 '960px': '960px',
-                '1240px' : '1240px',
+                '1240px': '1240px',
                 '3/4': '75%',
             },
             minHeight: {
@@ -97,6 +93,11 @@ module.exports = {
             transitionTimingFunction: {
                 'ease-out-expo': 'cubic-bezier(0.39, 0.58, 0.57, 1)',
             },
+            width: {
+                '9': '2.25rem',
+                'fix-560px': '560px',
+            },
+        },
     },
     plugins: [
         plugin(function({ addUtilities }) {
