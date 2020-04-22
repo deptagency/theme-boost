@@ -8,8 +8,7 @@ import Cart from 'Organisms/Cart'
 const CartTastic = ({ cart }) => {
     if (cart.loaded) {
         return <Cart data={cart.data} />
-    }
-    else {
+    } else {
         return ''
     }
 }
