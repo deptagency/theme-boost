@@ -13,7 +13,7 @@ export const empty = () => {
 
     return (
         <div>
-            <Cart cart={cart} />
+            <Cart data={cart} />
         </div>
     )
 }
@@ -21,7 +21,7 @@ export const empty = () => {
 export const full = () => {
     return (
         <div>
-            <Cart cart={CartData} />
+            <Cart data={CartData} />
         </div>
     )
 }

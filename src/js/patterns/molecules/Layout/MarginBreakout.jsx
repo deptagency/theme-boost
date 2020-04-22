@@ -12,7 +12,7 @@ const MarginBreakout = ({
     const pageRef = useRef(null)
 
     const viewportWidth = useSelector((state) => {
-        return state.renderContext.viewportDimension.width
+        return state.renderContext.viewportDimension ? state.renderContext.viewportDimension.width : window.innerWidth
     })
 
     useEffect(() => {

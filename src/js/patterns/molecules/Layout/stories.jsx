@@ -2,10 +2,10 @@ import React from 'react'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
 export default {
-    title: 'Cart-like layout',
+    title: 'Layouts',
 }
 
-export const tile = () => {
+export const CartLikeLayout = () => {
     return (
         <StickyRightColumn
             variant='max-w-960px m-auto my-5 px-5'
@@ -51,4 +51,4 @@ export const tile = () => {
     )
 }
 
-tile.story = { name: 'Sticky right column' }
+CartLikeLayout.story = { name: 'Sticky right column' }
