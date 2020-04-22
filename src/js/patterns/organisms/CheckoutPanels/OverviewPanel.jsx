@@ -46,7 +46,7 @@ const OverviewPanel = ({ name, errorMessage, goToPreviousPanel }) => {
                         return
                     }
 
-                    valid && console.log('redirect to the final (success/unsuccess) page')
+                    valid && alert('Redirect to the final (success/unsuccess) page')
                 }}
 
             >
