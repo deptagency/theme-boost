@@ -41,7 +41,7 @@ const Mobile = ({
                             onClick={() => { setIsOpen(true) }}
                         />
                         <div
-                            className='self-center h-6 w-full max-w-124px ml-4'
+                            className='self-center h-8 w-4/12 ml-4'
                             ref={ref}
                             style={{ backgroundImage: `url(${backgroundImageUrl})` }}
                         />
