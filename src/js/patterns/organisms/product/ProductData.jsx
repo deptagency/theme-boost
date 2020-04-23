@@ -28,12 +28,14 @@ const ProductData = ({ name, variants, selectedVariant, onChange }) => {
             />
 
             <StarRating />
+            {selectedVariant.attributes.color &&
             <ColorSelector
                 value={selectedVariant.attributes.color}
                 variants={variants}
                 onChange={onChange}
             />
 
+            {selectedVariant.attributes.size &&
             <SizeSelector
                 value={selectedVariant.attributes.size}
                 variants={variants}

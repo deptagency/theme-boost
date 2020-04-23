@@ -6,7 +6,7 @@ const ProductImages = ({ images }) => {
     return (
         <div className='max-h-736px mt-4 md:mt-6'>
             <Slider options={{ items: 1, loop: true, responsive: {} }}>
-                {images.map((image, i) => {
+                {images.slice(0, 1).map((image, i) => {
                     return (
                         <div
                             className="product-image-wrapper"

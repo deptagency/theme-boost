@@ -6,9 +6,11 @@ import Entity from 'frontastic-catwalk/src/js/app/entity'
 import Cart from 'Organisms/Cart'
 
 const CartTastic = ({ cart }) => {
-    return (
-        <Cart cart={cart} />
-    )
+    if (cart.loaded) {
+        return <Cart data={cart.data} />
+    } else {
+        return ''
+    }
 }
 
 CartTastic.defaultProps = {}
