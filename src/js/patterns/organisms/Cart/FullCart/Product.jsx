@@ -36,7 +36,7 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
                         onSelect={(i) => {
                             app.getLoader('cart').updateLineItem({
                                 lineItemId: itemId,
-                                count: i,
+                                count: productCounter[i],
                             })
                         }}
                     />
