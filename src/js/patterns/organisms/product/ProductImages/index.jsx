@@ -9,10 +9,10 @@ const ProductImages = ({ images }) => {
                 {images.slice(0, 1).map((image, i) => {
                     return (
                         <div
-                            className="product-image-wrapper"
+                            className='product-image-wrapper'
                             key={i}
                         >
-                            <img src={image} alt="Product Image" />
+                            <img src={image} alt='Product' />
                         </div>
                     )
                 })}
