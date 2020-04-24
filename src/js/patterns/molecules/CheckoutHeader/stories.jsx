@@ -9,7 +9,7 @@ export default {
 export const checkoutHeader = () => {
     return (
         <div>
-            <CheckoutHeader 
+            <CheckoutHeader
                 logoStoryBook={logo}
             />
         </div>
