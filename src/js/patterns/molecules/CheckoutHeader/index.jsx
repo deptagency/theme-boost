@@ -15,9 +15,9 @@ const CheckoutHeader = ({ logoStoryBook }) => {
                 ref={ref}
                 style={{ backgroundImage: `url(${backgroundImageUrl})` }}
             />
-            <div className='self-center flex w-11/12 justify-end mr-4 text-xs'>
+            <div className='self-center flex w-11/12 justify-end mr-4 text-xs text-gray-800'>
                 Checkout
-                <IconLockClosed className='text-sm ml-1'/>
+                <IconLockClosed className='text-sm ml-1 fill-current text-gray-800'/>
             </div>      
         </div>
     )
