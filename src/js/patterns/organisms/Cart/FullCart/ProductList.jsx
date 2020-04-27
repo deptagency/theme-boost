@@ -14,12 +14,12 @@ const ProductList = ({ items }) => {
                         <Product
                             itemId={item.lineItemId}
                             name={item.name}
-                            designer={item.variant.attributes.designer.label}
+                            designer={item.variant.attributes.designer?.label}
                             image={item.variant.images[0]}
                             count={item.count}
                             price={item.price}
-                            color={item.variant.attributes.color.label}
-                            size={item.variant.attributes.size}
+                            color={item.variant.attributes.color?.label}
+                            size={item.variant.attributes?.size}
                         />
                     </div>
                 )

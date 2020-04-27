@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 import SelectVariant from 'Atoms/select/SelectVariant'
 
-const ColorSelector = ({ variants, setSelectedVariantIndex }) => {
+const ColorSelector = ({ variants, onChange }) => {
     return (
         <div className='flex-col pt-4 md:pb-4'>
             <div className='pb-2'>
@@ -14,7 +14,7 @@ const ColorSelector = ({ variants, setSelectedVariantIndex }) => {
                     values={variants}
                     variant='form-select'
                     formatLabel={(option) => { return option.attributes.color.label }}
-                    onSelect={(i) => { return setSelectedVariantIndex(i) }}
+                    onSelect={(i) => { return onChange(i) }}
                 />
             </div>
         </div>
@@ -23,7 +23,7 @@ const ColorSelector = ({ variants, setSelectedVariantIndex }) => {
 
 ColorSelector.propTypes = {
     variants: PropTypes.array.isRequired,
-    setSelectedVariantIndex: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired,
 }
 
 export default ColorSelector

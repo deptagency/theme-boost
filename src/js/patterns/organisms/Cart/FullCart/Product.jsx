@@ -19,13 +19,13 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
 
             <div>
                 <div className='text-md font-bold leading-tight'>{name}</div>
-                <div className='text-sm text-gray-600 leading-tight'>{designer}</div>
-                <div className='mt-3 text-sm text-gray-600 leading-tight'>
+                {designer && <div className='text-sm text-gray-600 leading-tight'>{designer}</div>}
+                {color && <div className='mt-3 text-sm text-gray-600 leading-tight'>
                     <FormattedMessage id='colorProduct' /> {color}
-                </div>
-                <div className='text-sm text-gray-600 leading-tight'>
+                </div>}
+                {size && <div className='text-sm text-gray-600 leading-tight'>
                     <FormattedMessage id='sizeProduct' /> {size}
-                </div>
+                </div>}
 
                 <div className='mt-3 w-24'>
                     <Select
@@ -36,7 +36,7 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
                         onSelect={(i) => {
                             app.getLoader('cart').updateLineItem({
                                 lineItemId: itemId,
-                                count: i,
+                                count: productCounter[i],
                             })
                         }}
                     />
@@ -67,11 +67,11 @@ Product.propTypes = {
     itemId: PropTypes.string.isRequired,
     image: PropTypes.string,
     name: PropTypes.string.isRequired,
-    designer: PropTypes.string.isRequired,
+    designer: PropTypes.string,
     price: PropTypes.number.isRequired,
     count: PropTypes.number.isRequired,
-    color: PropTypes.string.isRequired,
-    size: PropTypes.string.isRequired,
+    color: PropTypes.string,
+    size: PropTypes.string,
 }
 
 export default ComponentInjector.return('Product', Product)

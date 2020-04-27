@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 import { ReactComponent as IconStar } from 'Icons/tailwind-icons/icon-star.svg'
 import { ReactComponent as IconStarFull } from 'Icons/tailwind-icons/icon-star-full.svg'
 
-const StarRating = props => {
+const StarRating = () => {
     return (
         <div className='flex py-1'>
             <IconStarFull />
@@ -17,10 +17,6 @@ const StarRating = props => {
             </div>
         </div>
     )
-}
-
-StarRating.propTypes = {
-
 }
 
 export default StarRating

@@ -17,7 +17,7 @@ import { ReactComponent as IconHeartBorder } from 'Icons/tailwind-icons/icon-hea
 import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.svg'
 import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
 
-const ProductData = ({ name, variants, selectedVariant, setSelectedVariantIndex }) => {
+const ProductData = ({ name, variants, selectedVariant, onChange }) => {
     return (
         <div className='mt-4 md:mt-6'>
             <div className='text-xl font-bold text-gray-900'>{name}</div>
@@ -28,17 +28,19 @@ const ProductData = ({ name, variants, selectedVariant, setSelectedVariantIndex 
             />
 
             <StarRating />
+            {selectedVariant.attributes.color &&
             <ColorSelector
                 value={selectedVariant.attributes.color}
                 variants={variants}
-                setSelectedVariantIndex={setSelectedVariantIndex}
-            />
+                onChange={onChange}
+            />}
 
+            {selectedVariant.attributes.size &&
             <SizeSelector
                 value={selectedVariant.attributes.size}
                 variants={variants}
-                setSelectedVariantIndex={setSelectedVariantIndex}
-            />
+                onChange={onChange}
+            />}
 
             <div className='flex pb-6'>
                 <Button
@@ -72,7 +74,7 @@ ProductData.propTypes = {
     name: PropTypes.string.isRequired,
     variants: PropTypes.array.isRequired,
     selectedVariant: PropTypes.object.isRequired,
-    setSelectedVariantIndex: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired,
 
 }
 
