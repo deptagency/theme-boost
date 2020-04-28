@@ -13,9 +13,20 @@ const CheckoutPanels = () => {
     const ts = useRef(null)
 
     const steps = [
-        { name: <FormattedMessage id='checkout.shipping' />, component: ShippingPanel },
-        { name: <FormattedMessage id='checkout.payment' />, component: PaymentPanel },
-        { name: <FormattedMessage id='checkout.overview' />, component: OverviewPanel },
+        {
+            name: <FormattedMessage id='checkout.shipping' />,
+            component: ShippingPanel,
+            errorMessage: 'Please enter required contact information',
+        },
+        { name: <FormattedMessage id='checkout.payment' />,
+            component: PaymentPanel,
+            errorMessage: 'Please enter required invoice information',
+        },
+        {
+            name: <FormattedMessage id='checkout.overview' />,
+            component: OverviewPanel,
+            errorMessage: 'Please enter required information',
+        },
     ]
 
     return (
@@ -24,7 +35,6 @@ const CheckoutPanels = () => {
                 steps={steps}
                 current={current}
                 setCurrent={setCurrent}
-                ref={ts}
             />
             <Panels
                 steps={steps}
