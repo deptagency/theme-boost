@@ -8,7 +8,7 @@ import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
 import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
-const CheckoutPanels = ({ cart }) => {
+const CheckoutPanels = () => {
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
