@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { injectIntl, intlShape } from 'react-intl'
 
-import Button from 'Atoms/button'
-import Input from 'Atoms/input'
+import Checkbox from 'Atoms/checkbox'
 
 import AddressForm from './Forms/Address'
 import BillingForm from './Forms/Billing'
@@ -13,56 +12,63 @@ import ShippingForm from './Forms/Shipping'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const ShippingPanel = ({ name, errorMessage, goToNextPanel, intl }) => {
-    const [ valid, setValid ] = useState(true)
-    const [ email, setEmail ] = useState('')
+class ShippingPanel extends React.Component {
+    constructor(props) {
+        super(props)
 
-    const buttonLabel = 'Next: Payment' //intl.formatMessage({id: 'checkout.nextPayment'});
+        this.state = {
+            isBillingAddress: false
+        }
+    }
 
-    return (
-        <div className='flex items-center p-4'>
-            <StickyRightColumn
-                variant='my-4 max-w-960px md:px-4 mx-auto'
-                leftColumn={
-                    <div className='md:shadow-md md:rounded md:px-6 md:pt-5 md:pb-6'>
-                        <ShippingForm />
+    render() {
+        const { errorMessage, goToNextPanel, intl } = this.props
 
-                        <AddressForm />
+        const buttonLabel = 'Next: Payment' //intl.formatMessage({id: 'checkout.nextPayment'});
 
-                        <Input
-                            className={classnames({
-                                'form-input': true,
-                                'border border-red-600': !valid,
-                            })}
-                            placeholder='Enter your email'
-                            onChange={(e) => {
-                                setValid(e.target.value.length > 0)
-                                setEmail(e.target.value)
-                            }}
-                        />
-                        {!valid && <div className='text-red-600 font-bold'>
-                            {errorMessage}
-                        </div>}
-                    </div>
-                }
+        return (
+            <div className='flex items-center p-4'>
+                <StickyRightColumn
+                    variant='my-4 max-w-960px md:px-4 mx-auto'
+                    leftColumn={
+                        <div className='md:shadow-md md:rounded md:px-6 md:pt-5 md:pb-6'>
+                            <ShippingForm />
 
-                rightColumn={
-                    <div className='md:shadow-md md:rounded md:p-4'>
-                        <Summary sum={10} label={buttonLabel} showVouchers={false}
-                             onClick={() => {
-                                 if (email.length === 0) {
-                                     setValid(false)
-                                     return
-                                 }
+                            <AddressForm />
 
-                                 valid && goToNextPanel()
-                             }}
-                        />
-                    </div>
-                }
-            />
-        </div>
-    )
+                            <div className='p-4 bg-gray-200 rounded'>
+                                <Checkbox 
+                                    label={'Use different billing details'} 
+                                    onClick={() => { 
+                                        this.setState({
+                                            isBillingAddress: !this.state.isBillingAddress
+                                        })
+                                    }}
+                                />
+                            </div>
+
+                            <div className={classnames({
+                                'block': this.state.isBillingAddress,
+                                'hidden': !this.state.isBillingAddress
+                            })}>
+                                <BillingForm />
+                            </div>
+                        </div>
+                    }
+
+                    rightColumn={
+                        <div className='md:shadow-md md:rounded md:p-4'>
+                            <Summary sum={10} label={buttonLabel} disabled={false} showVouchers={false}
+                                onClick={() => {
+                                    goToNextPanel()
+                                }}
+                            />
+                        </div>
+                    }
+                />
+            </div>
+        )
+    }
 }
 
 ShippingPanel.propTypes = {

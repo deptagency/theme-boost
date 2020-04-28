@@ -8,7 +8,7 @@ import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
 import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
-const CheckoutPanels = () => {
+const CheckoutPanels = ({ cart }) => {
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
@@ -18,7 +18,8 @@ const CheckoutPanels = () => {
             component: ShippingPanel,
             errorMessage: 'Please enter required contact information',
         },
-        { name: <FormattedMessage id='checkout.payment' />,
+        { 
+            name: <FormattedMessage id='checkout.payment' />,
             component: PaymentPanel,
             errorMessage: 'Please enter required invoice information',
         },

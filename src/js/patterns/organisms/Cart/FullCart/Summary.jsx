@@ -6,7 +6,7 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import Price from 'Atoms/price'
 import Button from 'Atoms/button'
 
-const Summary = ({ sum, subtotal = '', onClick, label, showVouchers = true }) => {
+const Summary = ({ sum, subtotal = '', disabled = false, onClick, label, showVouchers = true }) => {
     return (
         <section>
             <div className='mb-4 grid grid-cols-2 col-gap-6 row-gap-2'>
@@ -38,7 +38,7 @@ const Summary = ({ sum, subtotal = '', onClick, label, showVouchers = true }) =>
                 </p>
             </div>
 
-            <Button variant='btn btn-indigo w-full' onClick={onClick}>
+            <Button variant='btn btn-indigo w-full' onClick={onClick} disabled={disabled}>
                 {label}
             </Button>
 

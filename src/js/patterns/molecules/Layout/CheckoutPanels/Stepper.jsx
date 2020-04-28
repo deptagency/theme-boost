@@ -9,7 +9,7 @@ const Stepper = ({ steps, current }) => {
 
     return (
         <>
-            <div className='grid grid-rows-2 max-w-3/4 m-auto p-5'>
+            <div className='grid grid-rows-2 max-w-3/4 m-auto p-5 md:shadow-md md:rounded md:mt-4'>
                 <div className='grid grid-cols-1.25rem-1fr-1.25rem-1fr-1.25rem w-full m-auto px-4'>
                     {steps.map(({ name }, i) => {
                         return (

@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 
 const Checkbox = ({ value='', className='', label='', onClick = () => {} }) => {
     return (
-        <div className=''>
-            <input type="checkbox" className={className} value={value} onClick={onClick} /> {label}
-        </div>
+        <>
+            <input type="checkbox" className={className} value={value} onClick={onClick} /> 
+            <label>{label}</label>
+        </>
     )
 }
 
