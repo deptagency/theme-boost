@@ -1,22 +1,40 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import { injectIntl, intlShape } from 'react-intl'
 
-const ShippingPanel = ({ name }) => {
+import AddressForm from './Forms/Address'
+import BillingForm from './Forms/Billing'
+import ShippingForm from './Forms/Shipping'
+
+import Summary from 'Organisms/Cart/FullCart/Summary'
+import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
+
+const ShippingPanel = (intl) => {
+    const buttonLabel = 'Next: Payment' //intl.formatMessage({id: 'checkout.nextPayment'});
+
     return (
-        <div
-            className={classnames({
-                'flex items-center h-full-84px bg-gray-300 rounded p-4': true,
-                'text-gray-600 bold text-xl italic text-center pt-40': true,
-            })}
-            >
-            {name} Panel
+        <div className='flex items-center p-4'>
+            <StickyRightColumn
+                variant='my-4 max-w-960px md:px-4 mx-auto'
+                leftColumn={
+                    <div className='md:shadow-md md:rounded md:px-6 md:pt-5 md:pb-6'>
+                        <ShippingForm />
+
+                        <AddressForm />
+                    </div>
+                }
+
+                rightColumn={
+                    <div className='md:shadow-md md:rounded md:p-4'>
+                        <Summary sum={10} label={buttonLabel} showVouchers={false} onClick={() => {}}/>
+                    </div>
+                }
+            />
         </div>
     )
 }
 
 ShippingPanel.propTypes = {
-    name: PropTypes.node.isRequired,
+    intl: intlShape.isRequired,
 }
 
-export default ShippingPanel
+export default injectIntl(ShippingPanel);

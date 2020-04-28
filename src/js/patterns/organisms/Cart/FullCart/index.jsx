@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
 import Summary from './Summary'
 import MiniSummary from './MiniSummary'
@@ -8,14 +8,16 @@ import Payments from './Payments'
 import ProductList from './ProductList'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const FullCart = ({ items, sum }) => {
+const FullCart = ({ items, sum, intl }) => {
+    const buttonLabel = intl.formatMessage({id: 'cart.checkout'});
+
     return (
         <StickyRightColumn
             variant='my-4 max-w-960px md:px-4 mx-auto'
             leftColumn={
                 <div className=''>
                     <div className='md:hidden border-b-4 border-gray-100'>
-                        <MiniSummary sum={sum} />
+                        <MiniSummary sum={sum} label={buttonLabel} />
                     </div>
 
                     <div className='md:shadow-md md:rounded'>
@@ -41,8 +43,8 @@ const FullCart = ({ items, sum }) => {
             }
 
             rightColumn={
-                <div className='border-b-4 border-gray-100 md:border-0 md:shadow-md md:rounded'>
-                    <Summary sum={sum} />
+                <div className='p-4 border-b-4 border-gray-100 md:border-0 md:shadow-md md:rounded'>
+                    <Summary sum={sum} label={buttonLabel} />
                 </div>
             }
         />
@@ -50,8 +52,9 @@ const FullCart = ({ items, sum }) => {
 }
 
 FullCart.propTypes = {
+    intl: intlShape.isRequired,
     items: PropTypes.array.isRequired,
     sum: PropTypes.number.isRequired,
 }
 
-export default FullCart
+export default injectIntl(FullCart);

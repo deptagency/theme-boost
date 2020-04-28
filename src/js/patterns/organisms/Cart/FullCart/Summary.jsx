@@ -6,9 +6,9 @@ import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import Price from 'Atoms/price'
 import Button from 'Atoms/button'
 
-const Summary = ({ sum, subtotal = '' }) => {
+const Summary = ({ sum, subtotal = '', onClick, label, showVouchers = true }) => {
     return (
-        <section className='p-4'>
+        <section>
             <div className='mb-4 grid grid-cols-2 col-gap-6 row-gap-2'>
                 {subtotal ?
                     <Fragment>
@@ -38,13 +38,15 @@ const Summary = ({ sum, subtotal = '' }) => {
                 </p>
             </div>
 
-            <Button variant='btn btn-indigo w-full'>
-                <FormattedMessage id='cart.checkout' />
+            <Button variant='btn btn-indigo w-full' onClick={onClick}>
+                {label}
             </Button>
 
+            {showVouchers &&
             <p className='mt-4 text-xs text-gray-800 text-center'>
                 <FormattedMessage id='cart.enterVouchers' />
             </p>
+            }
         </section>
     )
 }
