@@ -56,6 +56,15 @@
     }
 }
 
+.btn-outline-black {
+    @apply border-gray-800;
+
+    &:hover {
+        @apply bg-gray-400 text-white;
+    }
+}
+
+
 
 .btn-elevated {
     @apply btn bg-white text-gray-800 border border-gray-400 shadow;

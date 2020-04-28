@@ -37,6 +37,7 @@ export const outline = () => {
             <p>
                 <Button variant='btn-outline btn-outline-blue mr-2'>Start</Button>
                 <Button variant='btn-outline btn-outline-gray'>Start</Button>
+                <Button variant='btn-outline btn-outline-black'>Start</Button>
             </p>
         </div>
     )
