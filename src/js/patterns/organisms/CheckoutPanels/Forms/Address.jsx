@@ -25,7 +25,7 @@ const Address = () => {
                 <Input name='zip' className='form-input mt-2' />
             </div>
 
-            <div className='mb-4'>
+            <div className=''>
                 <label className='text-sm text-gray-700 leading-tight'>Country *</label>
                 <Input name='country' className='form-input mt-2' />
             </div>

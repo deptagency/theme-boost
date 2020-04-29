@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
+import app from '@frontastic/catwalk/src/js/app/app'
 
 import Summary from './Summary'
 import MiniSummary from './MiniSummary'
@@ -17,7 +18,7 @@ const FullCart = ({ items, sum, intl }) => {
             leftColumn={
                 <div className=''>
                     <div className='md:hidden border-b-4 border-gray-100'>
-                        <MiniSummary sum={sum} label={buttonLabel} />
+                        <MiniSummary sum={sum} label={buttonLabel} onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout') }} />
                     </div>
 
                     <div className='md:shadow-md md:rounded'>
@@ -44,7 +45,7 @@ const FullCart = ({ items, sum, intl }) => {
 
             rightColumn={
                 <div className='p-4 border-b-4 border-gray-100 md:border-0 md:shadow-md md:rounded'>
-                    <Summary sum={sum} label={buttonLabel} />
+                    <Summary sum={sum} label={buttonLabel} onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout') }} />
                 </div>
             }
         />

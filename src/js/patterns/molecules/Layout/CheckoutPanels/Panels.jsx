@@ -4,7 +4,7 @@ import { stepObject } from './stepObject'
 
 import TinySlider from 'tiny-slider-react'
 
-const Panels = forwardRef(({ steps, current, setCurrent }, ts) => {
+const Panels = forwardRef(({ steps, current, setCurrent, data }, ts) => {
     const goToPanel = (panel) => {
         ts.current.slider.goTo(panel)
         setCurrent(panel)
@@ -29,7 +29,11 @@ const Panels = forwardRef(({ steps, current, setCurrent }, ts) => {
                     <PanelComponent
                         key={i}
                         name={step.name}
+                        data={data}
                         errorMessage={step.errorMessage}
+                        goToPanelIndex={panel => {
+                            goToPanel(panel)
+                        }}
                         goToNextPanel={() => {
                             goToPanel(current + 1)
                         }}

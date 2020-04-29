@@ -28,7 +28,7 @@ const Shipping = () => {
                 <Input name='phone' className='form-input mt-2' />
             </div>
 
-            <div className='mb-4'>
+            <div className=''>
                 <label className='text-sm text-gray-700 leading-tight'>E-mail *</label>
                 <Input name='email' className='form-input mt-2' />
             </div>

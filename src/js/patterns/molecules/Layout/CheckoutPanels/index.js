@@ -8,7 +8,7 @@ import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
 import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
-const CheckoutPanels = () => {
+const CheckoutPanels = ({ data }) => {
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
@@ -38,6 +38,7 @@ const CheckoutPanels = () => {
                 setCurrent={setCurrent}
             />
             <Panels
+                data={data}
                 steps={steps}
                 current={current}
                 setCurrent={setCurrent}

@@ -22,43 +22,49 @@ class ShippingPanel extends React.Component {
     }
 
     render() {
-        const { errorMessage, goToNextPanel, intl } = this.props
+        const { errorMessage, goToNextPanel, intl, data } = this.props
 
         const buttonLabel = 'Next: Payment' //intl.formatMessage({id: 'checkout.nextPayment'});
 
         return (
-            <div className='flex items-center p-4'>
+            <div className='flex items-center'>
                 <StickyRightColumn
                     variant='my-4 max-w-960px md:px-4 mx-auto'
                     leftColumn={
-                        <div className='md:shadow-md md:rounded md:px-6 md:pt-5 md:pb-6'>
-                            <ShippingForm />
-
-                            <AddressForm />
-
-                            <div className='p-4 bg-gray-200 rounded'>
-                                <Checkbox 
-                                    label={'Use different billing details'} 
-                                    onClick={() => { 
-                                        this.setState({
-                                            isBillingAddress: !this.state.isBillingAddress
-                                        })
-                                    }}
-                                />
+                        <div className='md:shadow-md md:rounded'>
+                            <div className='px-4 py-6 md:px-6 border-b-4 border-gray-100 border-t-4 md:border-t-0'>
+                                <ShippingForm />
                             </div>
 
-                            <div className={classnames({
-                                'block': this.state.isBillingAddress,
-                                'hidden': !this.state.isBillingAddress
-                            })}>
-                                <BillingForm />
+                            <div className='px-4 py-6 md:px-6 border-b-4 md:border-b-0 border-gray-100'>
+                                <AddressForm />
+
+                                <div className='mt-4 p-4 bg-gray-200 rounded flex items-center text-gray-800'>
+                                    <Checkbox 
+                                        className='mr-2'
+                                        label={'Use different billing details'} 
+                                        onClick={() => { 
+                                            this.setState({
+                                                isBillingAddress: !this.state.isBillingAddress
+                                            })
+                                        }}
+                                    />
+                                </div>
+
+                                <div className={classnames({
+                                    'mt-4': true,
+                                    'block': this.state.isBillingAddress,
+                                    'hidden': !this.state.isBillingAddress
+                                })}>
+                                    <BillingForm />
+                                </div>
                             </div>
                         </div>
                     }
 
                     rightColumn={
-                        <div className='md:shadow-md md:rounded md:p-4'>
-                            <Summary sum={10} label={buttonLabel} disabled={false} showVouchers={false}
+                        <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded'>
+                            <Summary sum={data.sum} label={buttonLabel} disabled={false} showVouchers={false}
                                 onClick={() => {
                                     goToNextPanel()
                                 }}

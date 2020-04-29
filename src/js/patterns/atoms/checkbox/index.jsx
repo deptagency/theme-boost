@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 const Checkbox = ({ value='', className='', label='', onClick = () => {} }) => {
     return (
         <>
-            <input type="checkbox" className={className} value={value} onClick={onClick} /> 
-            <label>{label}</label>
+            <input id='checkbox-input' type="checkbox" className={className} value={value} onClick={onClick} /> 
+            <label htmlFor='checkbox-input'>{label}</label>
         </>
     )
 }

@@ -26,7 +26,7 @@ const Billing = () => {
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight'>email *</label>
+                <label className='text-sm text-gray-700 leading-tight'>Email *</label>
                 <Input name='email' className='form-input mt-2' />
             </div>
 
@@ -36,17 +36,17 @@ const Billing = () => {
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight'>city *</label>
+                <label className='text-sm text-gray-700 leading-tight'>City *</label>
                 <Input name='city' className='form-input mt-2' />
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight'>zip *</label>
+                <label className='text-sm text-gray-700 leading-tight'>Zip *</label>
                 <Input name='zip' className='form-input mt-2' />
             </div>
 
-            <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight'>country *</label>
+            <div className=''>
+                <label className='text-sm text-gray-700 leading-tight'>Country *</label>
                 <Input name='country' className='form-input mt-2' />
             </div>
         </div>
