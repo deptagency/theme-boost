@@ -7,16 +7,16 @@ import PaymentMethodForm from './Forms/PaymentMethod'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const PaymentPanel = ({ name, errorMessage, goToNextPanel, goToPreviousPanel, data }) => {
-    const buttonLabel = 'Next: Overview' //intl.formatMessage({id: 'checkout.nextOverview'});
+const PaymentPanel = ({ goToNextPanel, intl, data }) => {
+    const buttonLabel = intl.formatMessage({id: 'checkout.nextOverview'});
 
     return (
-        <div className='flex items-center'>
+        <div>
             <StickyRightColumn
                 variant='my-4 max-w-960px md:px-4 mx-auto'
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
-                        <div className='px-4 py-6 md:px-6 border-b-4 md:border-b-0 border-gray-100 border-t-4 md:border-t-0'>
+                        <div className='px-4 py-6 md:px-6 border-b-4 md:border-b-0 border-t-4 md:border-t-0 border-gray-100'>
                             <PaymentMethodForm />
                         </div>
                     </div>
@@ -37,7 +37,6 @@ const PaymentPanel = ({ name, errorMessage, goToNextPanel, goToPreviousPanel, da
 }
 
 PaymentPanel.propTypes = {
-    name: PropTypes.node.isRequired,
     errorMessage: PropTypes.string,
     goToNextPanel: PropTypes.func.isRequired,
     goToPreviousPanel: PropTypes.func.isRequired,

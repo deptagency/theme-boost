@@ -22,7 +22,7 @@ const Product = ({ image, name, designer, count, price, color, size }) => {
                 </div>}
 
                 <div className='text-sm text-gray-600 leading-tight'>
-                    Qty: {count}
+                    <FormattedMessage id='quantityProduct' /> {count}
                 </div>
 
                 <div className='mt-3'>

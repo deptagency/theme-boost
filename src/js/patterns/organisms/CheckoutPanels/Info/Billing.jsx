@@ -5,14 +5,14 @@ import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 
 const Billing = ({ onClick }) => {
     return (
-        <div className=''>
+        <>
             <div className='mb-3 flex items-center justify-between'>
                 <span className='text-xs text-gray-500 font-bold leading-tight uppercase'>
-                    Billing information
+                    <FormattedMessage id={'checkout.billingInformation'} />
                 </span>
 
                 <span className='text-sm text-indigo-500 leading-tight flex items-center' onClick={onClick}>
-                    Edit <EditIcon className='inline fill-current text-sm ml-2' />
+                    <FormattedMessage id={'checkout.edit'} /> <EditIcon className='inline fill-current text-sm ml-2' />
                 </span>
             </div>
 
@@ -28,7 +28,7 @@ const Billing = ({ onClick }) => {
                 <p>030 98 29381</p>
                 <p>wmahler@patriks.com</p>
             </div>
-        </div>
+        </>
     )
 }
 

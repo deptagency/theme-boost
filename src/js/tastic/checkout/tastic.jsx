@@ -5,16 +5,6 @@ import Entity from 'frontastic-catwalk/src/js/app/entity'
 
 import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
-/*
-const CheckoutTastic = () => {
-    return (
-        <CheckoutPanels />
-    )
-}
-
-export default CheckoutTastic*/
-
-
 const CheckoutTastic = ({ cart }) => {
     if (cart.loaded) {
         return <CheckoutPanels data={cart.data} />

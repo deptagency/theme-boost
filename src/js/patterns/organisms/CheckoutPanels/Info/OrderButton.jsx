@@ -2,7 +2,7 @@ import React from 'react'
 
 import Button from 'Atoms/button'
 
-const OrderSummary = ({ label, onClick }) => {
+const OrderButton = ({ label, onClick }) => {
     return (
         <Button variant='btn btn-indigo w-full' onClick={onClick}>
             {label}
@@ -10,4 +10,4 @@ const OrderSummary = ({ label, onClick }) => {
     )
 }
 
-export default OrderSummary
+export default OrderButton

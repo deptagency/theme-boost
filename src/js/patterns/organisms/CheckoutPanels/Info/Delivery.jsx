@@ -3,16 +3,16 @@ import { FormattedMessage } from 'react-intl'
 
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 
-const Shipping = ({ onClick }) => {
+const Delivery = ({ onClick }) => {
     return (
-        <div className=''>
+        <>
             <div className='mb-3 flex items-center justify-between'>
                 <span className='text-xs text-gray-500 font-bold leading-tight uppercase'>
-                    Shipping information
+                    <FormattedMessage id={'checkout.shippingInformation'} />
                 </span>
 
                 <span className='text-sm text-indigo-500 leading-tight flex items-center' onClick={onClick}>
-                    Edit <EditIcon className='inline fill-current text-sm ml-2' />
+                    <FormattedMessage id={'checkout.edit'} /> <EditIcon className='inline fill-current text-sm ml-2' />
                 </span>
             </div>
 
@@ -28,8 +28,8 @@ const Shipping = ({ onClick }) => {
                 <p>030 98 29381</p>
                 <p>wmahler@patriks.com</p>
             </div>
-        </div>
+        </>
     )
 }
 
-export default Shipping
+export default Delivery
