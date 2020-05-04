@@ -41,7 +41,7 @@ const Mobile = ({
                             onClick={() => { setIsOpen(true) }}
                         />
                         <a
-                            className='sself-center h-8 max-w-124px w-full ml-3'
+                            className='self-center h-8 max-w-124px w-full ml-3'
                             ref={ref}
                             href={window.location.origin}
                         >
