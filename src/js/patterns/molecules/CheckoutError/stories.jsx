@@ -1,14 +1,14 @@
 import React from 'react'
-import CheckoutConfirmation from './index'
+import CheckoutError from './index'
 
 export default {
     title: 'Checkout Confirmation',
 }
 
-export const checkoutConfirmation = () => {
+export const checkoutError = () => {
     return (
         <div>
-            <CheckoutConfirmation />
+            <CheckoutError />
         </div>
     )
 }
