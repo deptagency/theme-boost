@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
 import { ReactComponent as IconLockClosed } from 'Icons/tailwind-icons/icon-lock-closed.svg'
 
-const CheckoutHeader = ({ logoStoryBook }) => {
+const CheckoutHeader = ({ logo }) => {
     const ref = useRef(null)
-    const backgroundImageUrl = useBackgroundImageUrl(ref, logoStoryBook)
+    const backgroundImageUrl = useBackgroundImageUrl(ref, logo)
 
     return (
         <div className='flex h-12 shadow-lg'>
@@ -23,7 +23,7 @@ const CheckoutHeader = ({ logoStoryBook }) => {
 }
 
 CheckoutHeader.propTypes = {
-    logoStoryBook: PropTypes.object.isRequired,
+    logo: PropTypes.object,
 }
 
 export default CheckoutHeader

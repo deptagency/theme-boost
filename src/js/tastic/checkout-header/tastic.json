@@ -2,7 +2,7 @@
     "tasticType": "frontastic/boost/checkout-header",
     "name": "Checkout Header",
     "icon": "menu",
-    "category": "Checkout",
+    "category": "Content",
     "schema": [
         {
             "name": "Logo",
