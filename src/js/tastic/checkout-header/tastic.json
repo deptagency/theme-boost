@@ -1,0 +1,23 @@
+{
+    "tasticType": "frontastic/boost/checkout-header",
+    "name": "Checkout Header",
+    "icon": "menu",
+    "category": "Checkout",
+    "schema": [
+        {
+            "name": "Logo",
+            "fields": [
+                {
+                    "type": "description",
+                    "text": "Select a logo to overwrite the default 'Catwalk'."
+                },
+                {
+                    "label": "Logo",
+                    "field": "logo",
+                    "type": "media",
+                    "required": false
+                }
+            ]
+        }
+    ]
+}
