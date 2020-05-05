@@ -4,7 +4,7 @@ import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import CheckoutHeader from 'Molecules/CheckoutHeader'
 import ReferencePropType from '@frontastic/catwalk/src/js/component/reference'
 
-const CheckoutHeaderTastic = ({ data }) => {
+const CheckoutHeaderTastic = ( data ) => {
     console.log('data', data)
     return (
         <CheckoutHeader
@@ -14,14 +14,6 @@ const CheckoutHeaderTastic = ({ data }) => {
 }
 CheckoutHeaderTastic.propTypes = {
     data: PropTypes.shape({
-        topCategories: PropTypes.arrayOf(
-            PropTypes.shape({
-                name: PropTypes.string,
-                reference: () => {
-                    return ReferencePropType
-                },
-            })
-        ),
         logo: PropTypes.shape({
             media: PropTypes.object,
         }),
