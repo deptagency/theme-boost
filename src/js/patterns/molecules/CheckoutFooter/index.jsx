@@ -10,11 +10,11 @@ const CheckoutFooter = () => {
                 className='flex'
                 onClick={(event) => {
                     event.preventDefault()
-                    app.getRouter().history.replace('/')
+                    app.getRouter().replace('Frontastic.Frontend.Master.Checkout.cart')
                 }}
             >
                 <IconArrowLeft className='mr-2 text-base fill-current text-gray-800' />
-                <FormattedMessage id='checkout.backToShop' />
+                <FormattedMessage id='checkout.backToCart' />
             </button>
         </div>
     )
