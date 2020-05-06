@@ -9,8 +9,8 @@ export default {
 export const errorMessage = () => {
     const errors = {
         name: {
-            message: 'This field is required'
-        }
+            message: 'This field is required',
+        },
     }
 
     return (

@@ -6,10 +6,10 @@ import { ErrorMessage as Message } from 'react-hook-form'
 const ErrorMessage = ({ errors, name, as = 'div' }) => {
     return (
         <>
-            {errors[name] && 
-                <Message 
-                    className='mt-1 text-sm text-red-600 leading-tight' 
-                    errors={errors} 
+            {errors[name] &&
+                <Message
+                    className='mt-1 text-sm text-red-600 leading-tight'
+                    errors={errors}
                     name={name}
                     as={as}
                 />
@@ -21,7 +21,7 @@ const ErrorMessage = ({ errors, name, as = 'div' }) => {
 ErrorMessage.propTypes = {
     errors: PropTypes.object.isRequired,
     name: PropTypes.string.isRequired,
-    as: PropTypes.string
+    as: PropTypes.string,
 }
 
 export default ErrorMessage

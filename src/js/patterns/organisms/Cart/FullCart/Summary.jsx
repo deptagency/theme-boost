@@ -54,6 +54,10 @@ const Summary = ({ sum, subtotal = '', disabled = false, onClick, label, showVou
 Summary.propTypes = {
     subtotal: PropTypes.string,
     sum: PropTypes.number.isRequired,
+    onClick: PropTypes.func.isRequired,
+    label: PropTypes.string.isRequired,
+    disabled: PropTypes.bool,
+    showVouchers: PropTypes.bool,
 }
 
 export default ComponentInjector.return('Summary', Summary)

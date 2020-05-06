@@ -32,7 +32,7 @@ const Products = ({ products }) => {
 }
 
 Products.propTypes = {
-    products: PropTypes.array
+    products: PropTypes.array,
 }
 
 export default Products

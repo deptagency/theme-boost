@@ -24,7 +24,7 @@ const Delivery = ({ delivery, onClick }) => {
                 <p>{delivery.zip}</p>
                 <p>{delivery.country}</p>
 
-                <div className='my-4 h-px bg-gray-200'></div>
+                <div className='my-4 h-px bg-gray-200' />
 
                 <p>{delivery.phone}</p>
                 <p>{delivery.email}</p>

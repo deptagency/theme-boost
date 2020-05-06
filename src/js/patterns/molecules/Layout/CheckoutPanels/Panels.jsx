@@ -52,6 +52,7 @@ Panels.propTypes = {
     steps: PropTypes.arrayOf(stepObject),
     current: PropTypes.oneOf([0, 1, 2]).isRequired,
     setCurrent: PropTypes.func.isRequired,
+    data: PropTypes.object.isRequired,
 }
 
 export default Panels

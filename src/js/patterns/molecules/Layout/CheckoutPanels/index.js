@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
 import Stepper from './Stepper'
@@ -12,11 +13,11 @@ const CheckoutPanels = ({ data }) => {
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
-    const [checkoutDetails, setCheckoutDetails] = useState({ 
+    const [checkoutDetails, setCheckoutDetails] = useState({
         delivery: {},
         billing: {},
         isBillingSameAsDelivery: true,
-        payment: '', 
+        payment: '',
     })
 
     const steps = [
@@ -26,7 +27,7 @@ const CheckoutPanels = ({ data }) => {
             checkoutDetails: checkoutDetails,
             setCheckoutDetails: setCheckoutDetails,
         },
-        { 
+        {
             name: <FormattedMessage id='checkout.payment' />,
             component: PaymentPanel,
             checkoutDetails: checkoutDetails,
@@ -56,6 +57,10 @@ const CheckoutPanels = ({ data }) => {
             />
         </>
     )
+}
+
+CheckoutPanels.propTypes = {
+    data: PropTypes.object.isRequired,
 }
 
 export default CheckoutPanels

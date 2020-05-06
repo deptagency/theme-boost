@@ -8,7 +8,7 @@ import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
 const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutDetails }) => {
-    const buttonLabel = intl.formatMessage({id: 'checkout.nextOverview'});
+    const buttonLabel = intl.formatMessage({ id: 'checkout.nextOverview' })
 
     const isValid = () => {
         return checkoutDetails.payment
@@ -24,9 +24,9 @@ const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutD
                             <PaymentMethodForm onClick={(payment) => {
                                 setCheckoutDetails({
                                     ...checkoutDetails,
-                                    payment: payment
+                                    payment: payment,
                                 })
-                            }}/>
+                            }} />
                         </div>
                     </div>
                 }
@@ -55,4 +55,4 @@ PaymentPanel.propTypes = {
     setCheckoutDetails: PropTypes.func.isRequired,
 }
 
-export default injectIntl(PaymentPanel);
+export default injectIntl(PaymentPanel)

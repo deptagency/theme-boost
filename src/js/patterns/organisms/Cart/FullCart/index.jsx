@@ -10,7 +10,7 @@ import ProductList from './ProductList'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
 const FullCart = ({ items, sum, intl }) => {
-    const buttonLabel = intl.formatMessage({id: 'cart.checkout'});
+    const buttonLabel = intl.formatMessage({ id: 'cart.checkout' })
 
     return (
         <StickyRightColumn
@@ -58,4 +58,4 @@ FullCart.propTypes = {
     sum: PropTypes.number.isRequired,
 }
 
-export default injectIntl(FullCart);
+export default injectIntl(FullCart)

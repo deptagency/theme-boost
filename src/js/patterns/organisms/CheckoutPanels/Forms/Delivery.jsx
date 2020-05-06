@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
 import { useForm } from 'react-hook-form'
@@ -6,8 +7,8 @@ import { useForm } from 'react-hook-form'
 import ErrorMessage from 'Atoms/errorMessage'
 
 const Delivery = ({ intl, onSubmit }) => {
-    const validEmail = intl.formatMessage({id: 'validation.email' })
-    const requiredField = intl.formatMessage({id: 'validation.required' })
+    const validEmail = intl.formatMessage({ id: 'validation.email' })
+    const requiredField = intl.formatMessage({ id: 'validation.required' })
 
     const { register, errors, getValues } = useForm({ mode: 'onBlur' })
 
@@ -39,7 +40,7 @@ const Delivery = ({ intl, onSubmit }) => {
                 <label className='text-sm text-gray-700 leading-tight' htmlFor='delivery-surname'>
                     <FormattedMessage id={'checkout.form.lastName'} /> *
                 </label>
-                <input id='delivery-surname' name='surname' type='text' 
+                <input id='delivery-surname' name='surname' type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.surname,
@@ -62,7 +63,7 @@ const Delivery = ({ intl, onSubmit }) => {
                 <label className='text-sm text-gray-700 leading-tight' htmlFor='delivery-email'>
                     <FormattedMessage id={'checkout.form.email'} /> *
                 </label>
-                <input id='delivery-email' name='email' 
+                <input id='delivery-email' name='email'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.email,
@@ -73,15 +74,13 @@ const Delivery = ({ intl, onSubmit }) => {
                             // TODO - please double check if this regex is ok
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/i,
                             message: validEmail,
-                        }
+                        },
                     })}
                 />
                 <ErrorMessage errors={errors} name='email' />
             </div>
 
-
-            <div className='-mx-4 my-6 border-b-4 md:border-b-0 border-gray-100'></div>
-
+            <div className='-mx-4 my-6 border-b-4 md:border-b-0 border-gray-100' />
 
             <div className='mb-4 text-xs text-gray-500 font-bold leading-tight uppercase'>
                 <FormattedMessage id={'checkout.shippingAddress'} />
@@ -144,6 +143,11 @@ const Delivery = ({ intl, onSubmit }) => {
             </div>
         </form>
     )
+}
+
+Delivery.propTypes = {
+    intl: PropTypes.object.isRequired,
+    onSubmit: PropTypes.func.isRequired,
 }
 
 export default Delivery

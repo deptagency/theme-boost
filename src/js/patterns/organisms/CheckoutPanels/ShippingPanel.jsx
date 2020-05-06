@@ -11,8 +11,8 @@ import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
 const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutDetails }) => {
-    const buttonLabel = intl.formatMessage({id: 'checkout.nextPayment' });
-    const billingDetailsLabel = intl.formatMessage({id: 'checkout.billingDetailsLabel' })
+    const buttonLabel = intl.formatMessage({ id: 'checkout.nextPayment' })
+    const billingDetailsLabel = intl.formatMessage({ id: 'checkout.billingDetailsLabel' })
 
     const isValid = () => {
         const { delivery, billing, isBillingSameAsDelivery } = checkoutDetails
@@ -36,23 +36,23 @@ const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckout
                                 onSubmit={(data) => {
                                     setCheckoutDetails({
                                         ...checkoutDetails,
-                                        delivery: data
+                                        delivery: data,
                                     })
                                 }}
                             />
 
                             <div className='mt-4 p-4 bg-gray-200 rounded'>
                                 <div className='text-sm text-gray-800 flex items-center'>
-                                    <Checkbox 
+                                    <Checkbox
                                         className='text-xl'
-                                        label={billingDetailsLabel} 
-                                        value={checkoutDetails.isBillingSameAsDelivery} 
+                                        label={billingDetailsLabel}
+                                        value={checkoutDetails.isBillingSameAsDelivery}
                                         onClick={() => {
                                             setCheckoutDetails({
                                                 ...checkoutDetails,
-                                                isBillingSameAsDelivery: !checkoutDetails.isBillingSameAsDelivery
+                                                isBillingSameAsDelivery: !checkoutDetails.isBillingSameAsDelivery,
                                             })
-                                        }} 
+                                        }}
                                     />
                                 </div>
                             </div>
@@ -64,7 +64,7 @@ const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckout
                                     onSubmit={(data) => {
                                         setCheckoutDetails({
                                             ...checkoutDetails,
-                                            billing: data
+                                            billing: data,
                                         })
                                     }}
                                 />
@@ -97,4 +97,4 @@ ShippingPanel.propTypes = {
     setCheckoutDetails: PropTypes.func.isRequired,
 }
 
-export default injectIntl(ShippingPanel);
+export default injectIntl(ShippingPanel)

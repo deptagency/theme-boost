@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
 import { useForm } from 'react-hook-form'
@@ -6,8 +7,8 @@ import { useForm } from 'react-hook-form'
 import ErrorMessage from 'Atoms/errorMessage'
 
 const Billing = ({ intl, onSubmit }) => {
-    const validEmail = intl.formatMessage({id: 'validation.email' })
-    const requiredField = intl.formatMessage({id: 'validation.required' })
+    const validEmail = intl.formatMessage({ id: 'validation.email' })
+    const requiredField = intl.formatMessage({ id: 'validation.required' })
 
     const { register, errors, getValues } = useForm({ mode: 'onBlur' })
 
@@ -25,7 +26,7 @@ const Billing = ({ intl, onSubmit }) => {
                 <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-name'>
                     <FormattedMessage id={'checkout.form.firstName'} /> *
                 </label>
-                <input id='billing-name' name='name' type='text' 
+                <input id='billing-name' name='name' type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.name,
@@ -39,7 +40,7 @@ const Billing = ({ intl, onSubmit }) => {
                 <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-surname'>
                     <FormattedMessage id={'checkout.form.lastName'} /> *
                 </label>
-                <input id='billing-surname' name='surname' type='text' 
+                <input id='billing-surname' name='surname' type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.surname,
@@ -53,7 +54,7 @@ const Billing = ({ intl, onSubmit }) => {
                 <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-phone'>
                     <FormattedMessage id={'checkout.form.phone'} />
                 </label>
-                <input id='billing-phone' name='phone' type='text' className='form-input mt-2' type='text' 
+                <input id='billing-phone' name='phone' type='text' className='form-input mt-2'
                     ref={register()}
                 />
             </div>
@@ -62,7 +63,7 @@ const Billing = ({ intl, onSubmit }) => {
                 <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-email'>
                     <FormattedMessage id={'checkout.form.email'} /> *
                 </label>
-                <input id='billing-email' name='email' type='text' 
+                <input id='billing-email' name='email' type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.phone,
@@ -73,7 +74,7 @@ const Billing = ({ intl, onSubmit }) => {
                             // TODO - please double check if this regex is ok
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/i,
                             message: validEmail,
-                        }
+                        },
                     })}
                 />
                 <ErrorMessage errors={errors} name='email' />
@@ -83,7 +84,7 @@ const Billing = ({ intl, onSubmit }) => {
                 <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-address'>
                     <FormattedMessage id={'checkout.form.address'} /> *
                 </label>
-                <input id='billing-address' name='address' type='text' 
+                <input id='billing-address' name='address' type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.address,
@@ -97,7 +98,7 @@ const Billing = ({ intl, onSubmit }) => {
                 <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-city'>
                     <FormattedMessage id={'checkout.form.city'} /> *
                 </label>
-                <input id='billing-city' name='city' type='text' 
+                <input id='billing-city' name='city' type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.city,
@@ -111,7 +112,7 @@ const Billing = ({ intl, onSubmit }) => {
                 <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-zipcode'>
                     <FormattedMessage id={'checkout.form.zipCode'} /> *
                 </label>
-                <input id='billing-zipcode' name='zip' type='text' 
+                <input id='billing-zipcode' name='zip' type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.zip,
@@ -136,6 +137,11 @@ const Billing = ({ intl, onSubmit }) => {
             </div>
         </form>
     )
+}
+
+Billing.propTypes = {
+    intl: PropTypes.object.isRequired,
+    onSubmit: PropTypes.func.isRequired,
 }
 
 export default Billing

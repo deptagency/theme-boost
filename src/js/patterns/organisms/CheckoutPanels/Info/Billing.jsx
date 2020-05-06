@@ -24,7 +24,7 @@ const Billing = ({ billing, onClick }) => {
                 <p>{billing.zip}</p>
                 <p>{billing.country}</p>
 
-                <div className='my-4 h-px bg-gray-200'></div>
+                <div className='my-4 h-px bg-gray-200' />
 
                 <p>{billing.phone}</p>
                 <p>{billing.email}</p>

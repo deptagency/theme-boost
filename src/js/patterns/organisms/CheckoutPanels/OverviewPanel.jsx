@@ -12,10 +12,10 @@ import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
 const OverviewPanel = ({ intl, data, goToPanelIndex, checkoutDetails }) => {
-    const buttonLabel = intl.formatMessage({id: 'checkout.placeOrder'});
+    const buttonLabel = intl.formatMessage({ id: 'checkout.placeOrder' })
 
     const placeOrderClicked = () => {
-        //TODO implement API call
+        // TODO implement API call
     }
 
     return (
@@ -61,4 +61,4 @@ OverviewPanel.propTypes = {
     checkoutDetails: PropTypes.object,
 }
 
-export default injectIntl(OverviewPanel);
+export default injectIntl(OverviewPanel)

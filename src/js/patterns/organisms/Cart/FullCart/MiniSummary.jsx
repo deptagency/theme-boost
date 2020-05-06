@@ -28,6 +28,8 @@ const MiniSummary = ({ sum, label, onClick }) => {
 
 MiniSummary.propTypes = {
     sum: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
 }
 
 export default ComponentInjector.return('MiniSummary', MiniSummary)
