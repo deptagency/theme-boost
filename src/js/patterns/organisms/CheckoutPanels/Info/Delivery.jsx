@@ -3,10 +3,10 @@ import { FormattedMessage } from 'react-intl'
 
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 
-const Delivery = ({ onClick }) => {
+const Delivery = ({ delivery, onClick }) => {
     return (
         <>
-            <div className='mb-3 flex items-center justify-between'>
+            <div className='mb-3 flex items-center justify-between cursor-pointer'>
                 <span className='text-xs text-gray-500 font-bold leading-tight uppercase'>
                     <FormattedMessage id={'checkout.shippingInformation'} />
                 </span>
@@ -17,16 +17,16 @@ const Delivery = ({ onClick }) => {
             </div>
 
             <div className='text-md text-gray-800 leading-tight'>
-                <p className='font-bold'>Alexandra Jones</p>
-                <p>Praesidenten Str. 79</p>
-                <p>Rheinland Pfalz</p>
-                <p>67727</p>
-                <p>Germnay</p>
+                <p className='font-bold'>{delivery.name} {delivery.surname}</p>
+                <p>{delivery.address}</p>
+                <p>{delivery.city}</p>
+                <p>{delivery.zip}</p>
+                <p>{delivery.country}</p>
 
                 <div className='my-4 h-px bg-gray-200'></div>
 
-                <p>030 98 29381</p>
-                <p>wmahler@patriks.com</p>
+                <p>{delivery.phone}</p>
+                <p>{delivery.email}</p>
             </div>
         </>
     )

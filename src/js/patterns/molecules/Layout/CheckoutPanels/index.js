@@ -12,21 +12,31 @@ const CheckoutPanels = ({ data }) => {
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
+    const [checkoutDetails, setCheckoutDetails] = useState({ 
+        delivery: {},
+        billing: {},
+        isBillingSameAsDelivery: true,
+        payment: '', 
+    })
+
     const steps = [
         {
             name: <FormattedMessage id='checkout.shipping' />,
             component: ShippingPanel,
-            errorMessage: 'Please enter required contact information',
+            checkoutDetails: checkoutDetails,
+            setCheckoutDetails: setCheckoutDetails,
         },
         { 
             name: <FormattedMessage id='checkout.payment' />,
             component: PaymentPanel,
-            errorMessage: 'Please enter required invoice information',
+            checkoutDetails: checkoutDetails,
+            setCheckoutDetails: setCheckoutDetails,
         },
         {
             name: <FormattedMessage id='checkout.overview' />,
             component: OverviewPanel,
-            errorMessage: 'Please enter required information',
+            checkoutDetails: checkoutDetails,
+            setCheckoutDetails: setCheckoutDetails,
         },
     ]
 

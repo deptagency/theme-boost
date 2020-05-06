@@ -11,11 +11,15 @@ import OrderButton from './Info/OrderButton'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const OverviewPanel = ({ goToPanelIndex, intl, data }) => {
+const OverviewPanel = ({ intl, data, goToPanelIndex, checkoutDetails }) => {
     const buttonLabel = intl.formatMessage({id: 'checkout.placeOrder'});
 
     return (
         <div>
+            <pre className='mx-auto'>
+                {JSON.stringify(checkoutDetails, null, 2)}
+            </pre>
+
             <StickyRightColumn
                 variant='my-4 max-w-960px md:px-4 mx-auto'
                 leftColumn={
@@ -27,13 +31,13 @@ const OverviewPanel = ({ goToPanelIndex, intl, data }) => {
                             <Products products={data.lineItems} />
                         </div>
                         <div className='px-4 py-6 md:px-6 border-b-4 border-gray-100'>
-                            <Delivery onClick={() => { goToPanelIndex(0) }} />
+                            <Delivery delivery={checkoutDetails.delivery} onClick={() => { goToPanelIndex(0) }} />
                         </div>
                         <div className='px-4 py-6 md:px-6 border-b-4 border-gray-100'>
-                            <Billing onClick={() => { goToPanelIndex(0) }} />
+                            <Billing billing={checkoutDetails.isBillingSameAsDelivery ? checkoutDetails.delivery : checkoutDetails.billing} onClick={() => { goToPanelIndex(0) }} />
                         </div>
                         <div className='px-4 py-6 md:px-6 border-b-4 md:border-b-0 border-gray-100'>
-                            <PaymentMethod onClick={() => { goToPanelIndex(1) }} />
+                            <PaymentMethod payment={checkoutDetails.payment} onClick={() => { goToPanelIndex(1) }} />
                         </div>
                     </div>
                 }
@@ -41,7 +45,9 @@ const OverviewPanel = ({ goToPanelIndex, intl, data }) => {
                 rightColumn={
                     <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded'>
                         <Summary sum={data.sum} label={buttonLabel} disabled={false} showVouchers={false}
-                            onClick={() => {}}
+                            onClick={() => {
+                                console.log('call API with data:', checkoutDetails)
+                            }}
                         />
                     </div>
                 }
@@ -51,8 +57,8 @@ const OverviewPanel = ({ goToPanelIndex, intl, data }) => {
 }
 
 OverviewPanel.propTypes = {
-    goToPanelIndex: PropTypes.func.isRequired,
     intl: intlShape.isRequired,
+    goToPanelIndex: PropTypes.func.isRequired,
 }
 
 export default injectIntl(OverviewPanel);

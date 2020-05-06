@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 
 const Input = ({ id, type, name, placeholder, className, checked, disabled, required, hidden,
-    onChange, value, min, max, step }) => {
+    onChange, value, min, max, step, ref }) => {
     return (
         <input
             id={id}
@@ -20,6 +20,7 @@ const Input = ({ id, type, name, placeholder, className, checked, disabled, requ
             min={min}
             max={max}
             step={step}
+            ref={ref}
         />
     )
 }
@@ -55,6 +56,7 @@ Input.defaultProps = {
     min: undefined,
     max: undefined,
     step: undefined,
+    ref: undefined,
 }
 
 export default ComponentInjector.return('Input', Input)

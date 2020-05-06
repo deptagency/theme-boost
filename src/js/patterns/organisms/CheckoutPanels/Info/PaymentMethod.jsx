@@ -3,10 +3,10 @@ import { FormattedMessage } from 'react-intl'
 
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 
-const PaymentMethod = ({ onClick }) => {
+const PaymentMethod = ({ payment, onClick }) => {
     return (
         <>
-            <div className='mb-3 flex items-center justify-between'>
+            <div className='mb-3 flex items-center justify-between cursor-pointer'>
                 <span className='text-xs text-gray-500 font-bold leading-tight uppercase'>
                     <FormattedMessage id={'checkout.paymentMethod'} />
                 </span>
@@ -16,9 +16,7 @@ const PaymentMethod = ({ onClick }) => {
                 </span>
             </div>
 
-            <div className='text-md text-gray-800 leading-tight'>
-                Invoice
-            </div>
+            <div className='text-md text-gray-800 leading-tight'>{payment}</div>
         </>
     )
 }

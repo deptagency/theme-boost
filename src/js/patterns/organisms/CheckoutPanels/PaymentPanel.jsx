@@ -7,8 +7,12 @@ import PaymentMethodForm from './Forms/PaymentMethod'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const PaymentPanel = ({ goToNextPanel, intl, data }) => {
+const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutDetails }) => {
     const buttonLabel = intl.formatMessage({id: 'checkout.nextOverview'});
+
+    const isValid = () => {
+        return checkoutDetails.payment
+    }
 
     return (
         <div>
@@ -17,16 +21,23 @@ const PaymentPanel = ({ goToNextPanel, intl, data }) => {
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
                         <div className='px-4 py-6 md:px-6 border-b-4 md:border-b-0 border-t-4 md:border-t-0 border-gray-100'>
-                            <PaymentMethodForm />
+                            <PaymentMethodForm onClick={(payment) => {
+                                setCheckoutDetails({
+                                    ...checkoutDetails,
+                                    payment: payment
+                                })
+                            }}/>
                         </div>
                     </div>
                 }
 
                 rightColumn={
                     <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded'>
-                        <Summary sum={data.sum} label={buttonLabel} disabled={false} showVouchers={false}
+                        <Summary sum={data.sum} label={buttonLabel} disabled={!isValid()} showVouchers={false}
                             onClick={() => {
-                                goToNextPanel()
+                                if (isValid()) {
+                                    goToNextPanel()
+                                }
                             }}
                         />
                     </div>
@@ -37,10 +48,10 @@ const PaymentPanel = ({ goToNextPanel, intl, data }) => {
 }
 
 PaymentPanel.propTypes = {
-    errorMessage: PropTypes.string,
-    goToNextPanel: PropTypes.func.isRequired,
-    goToPreviousPanel: PropTypes.func.isRequired,
     intl: intlShape.isRequired,
+    goToNextPanel: PropTypes.func.isRequired,
+    checkoutDetails: PropTypes.object,
+    setCheckoutDetails: PropTypes.func.isRequired,
 }
 
 export default injectIntl(PaymentPanel);
