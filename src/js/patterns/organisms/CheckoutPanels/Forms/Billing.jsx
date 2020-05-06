@@ -1,15 +1,15 @@
 import React from 'react'
 import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
-import { ErrorMessage } from 'react-hook-form'
 import { useForm } from 'react-hook-form'
 
-import Input from 'Atoms/input'
+import ErrorMessage from 'Atoms/errorMessage'
 
-const Billing = ({ onSubmit }) => {
+const Billing = ({ intl, onSubmit }) => {
+    const validEmail = intl.formatMessage({id: 'validation.email' })
+    const requiredField = intl.formatMessage({id: 'validation.required' })
+
     const { register, errors, getValues } = useForm({ mode: 'onBlur' })
-
-    const requiredField = 'This field is required'
 
     const onBlur = () => {
         onSubmit(getValues())
@@ -32,7 +32,7 @@ const Billing = ({ onSubmit }) => {
                     })}
                     ref={register({ required: requiredField })}
                 />
-                {errors.name && <ErrorMessage className='mt-1 text-sm text-red-600 leading-tight' errors={errors} name='name' as='div' />}
+                <ErrorMessage errors={errors} name='name' />
             </div>
 
             <div className='mb-4'>
@@ -46,7 +46,7 @@ const Billing = ({ onSubmit }) => {
                     })}
                     ref={register({ required: requiredField })}
                 />
-                {errors.surname && <ErrorMessage className='mt-1 text-sm text-red-600 leading-tight' errors={errors} name='surname' as='div' />}
+                <ErrorMessage errors={errors} name='surname' />
             </div>
 
             <div className='mb-4'>
@@ -67,9 +67,16 @@ const Billing = ({ onSubmit }) => {
                         'form-input mt-2': true,
                         'border border-red-600': errors.phone,
                     })}
-                    ref={register({ required: requiredField })}
+                    ref={register({
+                        required: requiredField,
+                        pattern: {
+                            // TODO - please double check if this regex is ok
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/i,
+                            message: validEmail,
+                        }
+                    })}
                 />
-                {errors.email && <ErrorMessage className='mt-1 text-sm text-red-600 leading-tight' errors={errors} name='email' as='div' />}
+                <ErrorMessage errors={errors} name='email' />
             </div>
 
             <div className='mb-4'>
@@ -83,7 +90,7 @@ const Billing = ({ onSubmit }) => {
                     })}
                     ref={register({ required: requiredField })}
                 />
-                {errors.address && <ErrorMessage className='mt-1 text-sm text-red-600 leading-tight' errors={errors} name='address' as='div' />}
+                <ErrorMessage errors={errors} name='address' />
             </div>
 
             <div className='mb-4'>
@@ -97,7 +104,7 @@ const Billing = ({ onSubmit }) => {
                     })}
                     ref={register({ required: requiredField })}
                 />
-                {errors.city && <ErrorMessage className='mt-1 text-sm text-red-600 leading-tight' errors={errors} name='city' as='div' />}
+                <ErrorMessage errors={errors} name='city' />
             </div>
 
             <div className='mb-4'>
@@ -111,7 +118,7 @@ const Billing = ({ onSubmit }) => {
                     })}
                     ref={register({ required: requiredField })}
                 />
-                {errors.zip && <ErrorMessage className='mt-1 text-sm text-red-600 leading-tight' errors={errors} name='zip' as='div' />}
+                <ErrorMessage errors={errors} name='zip' />
             </div>
 
             <div>
@@ -125,7 +132,7 @@ const Billing = ({ onSubmit }) => {
                     })}
                     ref={register({ required: requiredField })}
                 />
-                {errors.country && <ErrorMessage className='mt-1 text-sm text-red-600 leading-tight' errors={errors} name='country' as='div' />}
+                <ErrorMessage errors={errors} name='country' />
             </div>
         </form>
     )

@@ -49,6 +49,7 @@ const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutD
 
 PaymentPanel.propTypes = {
     intl: intlShape.isRequired,
+    data: PropTypes.object.isRequired,
     goToNextPanel: PropTypes.func.isRequired,
     checkoutDetails: PropTypes.object,
     setCheckoutDetails: PropTypes.func.isRequired,

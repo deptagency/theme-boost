@@ -17,7 +17,6 @@ const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckout
     const isValid = () => {
         const { delivery, billing, isBillingSameAsDelivery } = checkoutDetails
 
-        //TODO: i am not sure if we need separate validation, 
         if (isBillingSameAsDelivery) {
             return delivery.name && delivery.surname && delivery.email && delivery.zip && delivery.country
         } else {
@@ -33,7 +32,7 @@ const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckout
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
                         <div className='px-4 py-6 md:px-6 border-t-4 md:border-t-0 border-gray-100'>
-                            <DeliveryForm 
+                            <DeliveryForm intl={intl}
                                 onSubmit={(data) => {
                                     setCheckoutDetails({
                                         ...checkoutDetails,
@@ -42,22 +41,26 @@ const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckout
                                 }}
                             />
 
-                            <div className='mt-4 p-4 bg-gray-200 rounded flex items-center text-gray-800'>
-                                <input type='checkbox' defaultChecked={checkoutDetails.isBillingSameAsDelivery} className='mr-2' label={billingDetailsLabel} 
-                                    onChange={() => {
-                                        setCheckoutDetails({
-                                            ...checkoutDetails,
-                                            isBillingSameAsDelivery: !checkoutDetails.isBillingSameAsDelivery
-                                        })
-                                    }} 
-                                />
-                                <label>{billingDetailsLabel}</label>
+                            <div className='mt-4 p-4 bg-gray-200 rounded'>
+                                <div className='text-sm text-gray-800 flex items-center'>
+                                    <Checkbox 
+                                        className='text-xl'
+                                        label={billingDetailsLabel} 
+                                        value={checkoutDetails.isBillingSameAsDelivery} 
+                                        onClick={() => {
+                                            setCheckoutDetails({
+                                                ...checkoutDetails,
+                                                isBillingSameAsDelivery: !checkoutDetails.isBillingSameAsDelivery
+                                            })
+                                        }} 
+                                    />
+                                </div>
                             </div>
                         </div>
 
                         {!checkoutDetails.isBillingSameAsDelivery &&
                             <div className='px-4 py-6 md:px-6 border-t-4 border-gray-100'>
-                                <BillingForm 
+                                <BillingForm intl={intl}
                                     onSubmit={(data) => {
                                         setCheckoutDetails({
                                             ...checkoutDetails,
@@ -88,6 +91,7 @@ const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckout
 
 ShippingPanel.propTypes = {
     intl: intlShape.isRequired,
+    data: PropTypes.object.isRequired,
     goToNextPanel: PropTypes.func.isRequired,
     checkoutDetails: PropTypes.object,
     setCheckoutDetails: PropTypes.func.isRequired,

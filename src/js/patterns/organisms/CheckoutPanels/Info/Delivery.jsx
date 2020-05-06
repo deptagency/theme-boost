@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
@@ -6,12 +7,12 @@ import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 const Delivery = ({ delivery, onClick }) => {
     return (
         <>
-            <div className='mb-3 flex items-center justify-between cursor-pointer'>
+            <div className='mb-3 flex items-center justify-between'>
                 <span className='text-xs text-gray-500 font-bold leading-tight uppercase'>
                     <FormattedMessage id={'checkout.shippingInformation'} />
                 </span>
 
-                <span className='text-sm text-indigo-500 leading-tight flex items-center' onClick={onClick}>
+                <span className='text-sm text-indigo-500 leading-tight cursor-pointer flex items-center' onClick={onClick}>
                     <FormattedMessage id={'checkout.edit'} /> <EditIcon className='inline fill-current text-sm ml-2' />
                 </span>
             </div>
@@ -30,6 +31,11 @@ const Delivery = ({ delivery, onClick }) => {
             </div>
         </>
     )
+}
+
+Delivery.propTypes = {
+    delivery: PropTypes.object.isRequired,
+    onClick: PropTypes.func.isRequired,
 }
 
 export default Delivery

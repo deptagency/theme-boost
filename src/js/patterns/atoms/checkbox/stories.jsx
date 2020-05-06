@@ -13,7 +13,7 @@ export const checkbox = () => {
                 <Checkbox
                     className='border border-gray-400 rounded'
                     label={'Join our mailing list for early access to new products, new arrivals, trends and promotions via mail.'}
-                    onSelect={(i) => {}}
+                    onClick={(i) => {}}
                 />
             </div>
 
@@ -21,7 +21,7 @@ export const checkbox = () => {
                 <Checkbox
                     className=''
                     label={'Use different billing details'}
-                    onSelect={(i) => {}}
+                    onClick={(i) => {}}
                 />
             </div>
         </>

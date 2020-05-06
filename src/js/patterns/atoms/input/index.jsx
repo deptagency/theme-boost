@@ -40,6 +40,7 @@ Input.propTypes = {
     min: PropTypes.number,
     max: PropTypes.number,
     step: PropTypes.number,
+    ref: PropTypes.func,
 }
 
 Input.defaultProps = {

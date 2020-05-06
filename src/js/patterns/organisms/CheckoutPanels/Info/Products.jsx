@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
 
@@ -15,7 +16,6 @@ const Products = ({ products }) => {
                 return (
                     <div key={index} className={classnames({ 'mt-8': index > 0 })}>
                         <Product
-                            itemId={item.lineItemId}
                             name={item.name}
                             designer={item.variant.attributes.designer?.label}
                             image={item.variant.images[0]}
@@ -29,6 +29,10 @@ const Products = ({ products }) => {
             })}
         </>
     )
+}
+
+Products.propTypes = {
+    products: PropTypes.array
 }
 
 export default Products
