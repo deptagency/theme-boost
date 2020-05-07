@@ -10,7 +10,7 @@ import BillingForm from './Forms/Billing'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutDetails }) => {
+const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutDetails, updateHeight }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextPayment' })
     const billingDetailsLabel = intl.formatMessage({ id: 'checkout.billingDetailsLabel' })
 
@@ -48,6 +48,8 @@ const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckout
                                         label={billingDetailsLabel}
                                         value={checkoutDetails.isBillingSameAsDelivery}
                                         onClick={() => {
+                                            updateHeight()
+
                                             setCheckoutDetails({
                                                 ...checkoutDetails,
                                                 isBillingSameAsDelivery: !checkoutDetails.isBillingSameAsDelivery,
@@ -95,6 +97,7 @@ ShippingPanel.propTypes = {
     goToNextPanel: PropTypes.func.isRequired,
     checkoutDetails: PropTypes.object,
     setCheckoutDetails: PropTypes.func.isRequired,
+    updateHeight: PropTypes.func.isRequired,
 }
 
 export default injectIntl(ShippingPanel)

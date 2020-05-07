@@ -10,6 +10,10 @@ const Panels = forwardRef(({ steps, current, setCurrent, data }, ts) => {
         setCurrent(panel)
     }
 
+    const updateSliderHeight = () => {
+        ts.current.slider.refresh()
+    }
+
     return (
         <TinySlider
             ref={ts}
@@ -30,6 +34,9 @@ const Panels = forwardRef(({ steps, current, setCurrent, data }, ts) => {
                         key={i}
                         name={name}
                         data={data}
+                        updateHeight={() => {
+                            updateSliderHeight()
+                        }}
                         goToPanelIndex={panel => {
                             goToPanel(panel)
                         }}
