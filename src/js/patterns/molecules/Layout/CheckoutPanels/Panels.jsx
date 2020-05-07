@@ -17,6 +17,7 @@ const Panels = forwardRef(({ steps, current, setCurrent, data }, ts) => {
                 loop: false,
                 touch: false,
                 controls: false,
+                autoHeight: true,
             }}
             onIndexChanged={(ev) => {
                 setCurrent(ev.index)
