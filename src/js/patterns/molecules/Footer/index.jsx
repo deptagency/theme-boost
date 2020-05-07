@@ -16,7 +16,6 @@ const Footer = ({
     paymentMethods,
 
 }) => {
-    console.log('DATA FOOTER2', links, title)
     return (
         <MarginBreakout variant='bg-gray-700 text-gray-200'>
             <div className='hidden lg:flex max-w-840px mx-auto py-10 justify-between'>
