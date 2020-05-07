@@ -12,11 +12,11 @@ const MetaNav = ({ title, links }) => {
                 </div>
             )}
 
-            <List
+            {links && links.lenght > 0 && <List 
                 links={links}
                 variant='ml-auto flex justify-end items-center h-full'
                 itemVariant='mx-2 text-sm leading-none'
-            />
+            />}
         </div>
     )
 }

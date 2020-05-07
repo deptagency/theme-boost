@@ -3,5 +3,34 @@
     "name": "Checkout Footer",
     "icon": "menu",
     "category": "Checkout",
-    "schema": []
+    "schema": [
+        {
+            "name": "Meta Navigation",
+            "fields": [
+                {
+                    "label": "Title",
+                    "field": "title",
+                    "type": "string"
+                },
+                {
+                    "label": "Links",
+                    "field": "links",
+                    "type": "group",
+                    "itemLabelField": "label",
+                    "fields": [
+                        {
+                            "label": "Label",
+                            "field": "label",
+                            "type": "string"
+                        },
+                        {
+                            "label": "Link",
+                            "field": "reference",
+                            "type": "reference"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
