@@ -2,42 +2,11 @@
     "tasticType": "frontastic/boost/checkout-header",
     "name": "Checkout Header",
     "icon": "menu",
-    "category": "Content",
+    "category": "Checkout",
     "schema": [
         {
             "name": "Logo",
             "fields": [
-                {
-                    "label": "Content",
-                    "field": "text",
-                    "type": "markdown",
-                    "default": "* Enter\n* some\n* Markdown",
-                    "translatable": true
-                },
-                {
-                    "label": "Alignment",
-                    "field": "align",
-                    "type": "enum",
-                    "default": "left",
-                    "values": [
-                        { "value": "left", "name": "Left" },
-                        { "value": "center", "name": "Center" },
-                        { "value": "right", "name": "Right" },
-                        { "value": "justify", "name": "Justify" }
-                    ]
-                },
-                {
-                    "label": "Padding",
-                    "field": "padding",
-                    "type": "enum",
-                    "default": "none",
-                    "values": [
-                        { "value": "none", "name": "No Padding" },
-                        { "value": "small", "name": "Small" },
-                        { "value": "middle", "name": "Middle" },
-                        { "value": "large", "name": "Large" }
-                    ]
-                },
                 {
                     "type": "description",
                     "text": "Select a logo to overwrite the default 'Catwalk'."
