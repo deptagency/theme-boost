@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
+import { FormattedMessage } from 'react-intl'
 import MarginBreakout from 'Molecules/Layout/MarginBreakout'
 import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
 import { ReactComponent as IconLockClosed } from 'Icons/tailwind-icons/icon-lock-closed.svg'
@@ -16,7 +17,7 @@ const CheckoutHeader = ({ logo }) => {
                 style={{ backgroundImage: `url(${backgroundImageUrl})` }}
             />
             <div className='self-center flex w-11/12 justify-end mr-4 text-xs text-gray-800'>
-                Checkout
+                <FormattedMessage id='cart.checkout' />
                 <IconLockClosed className='text-sm ml-1 fill-current text-gray-800' />
             </div>
         </MarginBreakout>

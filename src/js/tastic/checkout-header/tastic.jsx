@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import CheckoutHeader from 'Molecules/CheckoutHeader'
 
-const CheckoutHeaderTastic = ( data ) => {
-    console.log('data', data)
+const CheckoutHeaderTastic = ({ data }) => {
     return (
         <CheckoutHeader
             logo={data.logo}
