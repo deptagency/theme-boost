@@ -1,6 +1,6 @@
 .checkout-panels-slider {
   .tns-outer {
     // @apply doesn't work for custom classes, as this is an edge case for checkout panels
-    min-height: calc(100vh - 244px);
+    min-height: calc(100vh - 240px);
   }
 }
