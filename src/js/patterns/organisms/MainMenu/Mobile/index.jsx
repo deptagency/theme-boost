@@ -34,14 +34,14 @@ const Mobile = ({
     return (
         <>
             <MarginBreakout variant='lg:hidden shadow-lg'>
-                <div className='grid grid-cols-2 h-fix-48px max-w-1240px m-center px-5'>
+                <div className='grid grid-cols-2 h-12 max-w-1240px m-center px-5'>
                     <div className='flex'>
                         <MenuOpen
                             className='self-center cursor-pointer text-2xl'
                             onClick={() => { setIsOpen(true) }}
                         />
                         <a
-                            className='self-center h-fix-24px w-full max-w-124px'
+                            className='sself-center h-8 max-w-124px w-full ml-3'
                             ref={ref}
                             href={window.location.origin}
                         >

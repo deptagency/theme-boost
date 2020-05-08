@@ -18,7 +18,7 @@ const Footer = ({
 }) => {
     return (
         <MarginBreakout variant='bg-gray-700 text-gray-200'>
-            <div className='hidden lg:flex max-w-840px mx-auto py-10 justify-between'>
+            <div className='hidden lg:flex mx-auto py-10 justify-between lg:w-9/12 xl:w-7/12'>
                 <LinkList
                     header={<Translatable value={infoHeader} />}
                     headerIcon={infoHeaderIcon}

@@ -39,7 +39,7 @@ const TopCategories = ({
                 onClick={onClose}
             />
 
-            <div className='col-start-1 col-end-3 grid grid-cols-3 self-end h-fix-40px justify-between text-lg text-center text-white'>
+            <div className='col-start-1 col-end-3 grid grid-cols-3 self-end h-10 justify-between text-lg text-center text-white'>
                 {level === 0 ? (
                     <>
                         {topCategories &&

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import productConnector from '@frontastic/catwalk/src/js/tastic/product/connector'
-import ProductDetails from 'Organisms/product/ProductDetails'
+import ProductDetails from 'Organisms/Product/ProductDetails'
 
 const ProductDetailsTastic = ({ product }) => {
     if (!product) {
