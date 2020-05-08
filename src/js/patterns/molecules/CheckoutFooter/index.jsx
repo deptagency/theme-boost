@@ -9,7 +9,9 @@ import app from 'frontastic-catwalk/src/js/app/app'
 
 const CheckoutFooter = ({ links, title }) => {
     return (
-        <MarginBreakout>
+        <MarginBreakout 
+        // variant='fixed bottom-0 w-full'
+        >
             <div className='bg-gray-200 h-12 text-sm pt-3 pl-4 text-gray-800'>
                 <button
                     className='flex'

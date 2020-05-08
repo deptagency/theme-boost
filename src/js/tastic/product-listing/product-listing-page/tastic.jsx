@@ -5,9 +5,9 @@ import app from '@frontastic/catwalk/src/js/app/app'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import withTranslatedTasticData from '@frontastic/catwalk/src/js/component/withTranslatedTasticData'
 
-import ProductListing from 'Organisms/Product/ProductListing'
+import ProductListing from 'Organisms/product/ProductListing'
 // import Filters from '../../patterns/organisms/filters/filters'
-import CategoryNavigationTree from 'Molecules/Product/CategoryNavigationTree'
+import CategoryNavigationTree from 'Molecules/product/CategoryNavigationTree'
 
 // Ideally this is 3 tastics using the layout facilities
 // in backstage, but that's currently not possible, so
