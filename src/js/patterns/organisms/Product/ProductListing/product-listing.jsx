@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import ProductTeaser from 'Molecules/product/productTeaser'
+import ProductTeaser from 'Molecules/Product/productTeaser'
 
 export function ProductListing ({ products, onAddToWishlist, showPercent, showStrikePrice }) {
     const [itemsPerPage, setItemsPerPage] = useState(6)
