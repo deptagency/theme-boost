@@ -1,4 +1,7 @@
 import React from 'react'
+import Button from 'Atoms/button'
+import { ReactComponent as IconCheckmarkCircle } from 'Icons/tailwind-icons/icon-check-circle.svg'
+
 export default {
     title: 'Checkout Confirmation',
 }

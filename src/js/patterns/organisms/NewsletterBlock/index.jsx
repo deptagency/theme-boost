@@ -1,7 +1,6 @@
 import React from 'react'
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl'
 import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
-import CheckoutConfirmation from '../../molecules/CheckoutConfirmation/index'
 
 import Input from 'Atoms/input'
 import Button from 'Atoms/button'
@@ -12,10 +11,7 @@ const NewsletterBlock = ({ intl }) => {
     return (
         <div className='bg-gray-800 rounded mx-5'>
             <div className='px-6 py-10 mx-auto w-full sm:w-11/12 md:w-8/12'>
-                <p className='mb-1 text-sm text-center text-white leading-tight'>
-                    {/* <FormattedMessage id='joinNewsletter' /> */}
-                    LALALALALL
-                </p>
+                <p className='mb-1 text-sm text-center text-white leading-tight' />
                 <p className='text-2xl lg:text-3xl text-center text-white font-bold leading-none'>
                     <FormattedMessage id='exclusiveAccess' />
                 </p>
@@ -39,7 +35,6 @@ const NewsletterBlock = ({ intl }) => {
                 <p className='px-4 sm:px-24 text-xs text-center text-gray-500 leading-tight'>
                     <FormattedMessage id='submitAgree' />
                 </p>
-                <CheckoutConfirmation />
             </div>
         </div>
     )
