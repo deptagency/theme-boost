@@ -4,7 +4,7 @@ import { stepObject } from './stepObject'
 
 import TinySlider from 'tiny-slider-react'
 import './index.scss'
-const Panels = forwardRef(({ steps, current, setCurrent, data }, ts) => {
+const Panels = forwardRef(({ steps, current, setCurrent, loading, data }, ts) => {
     const goToPanel = (panel) => {
         ts.current.slider.goTo(panel)
         setCurrent(panel)
@@ -34,6 +34,7 @@ const Panels = forwardRef(({ steps, current, setCurrent, data }, ts) => {
                         <PanelComponent
                             key={i}
                             name={name}
+                            loading={loading} // TODO Sanja - pass this ot every panel, and grab from every panel
                             data={data}
                             updateHeight={() => {
                                 updateSliderHeight()

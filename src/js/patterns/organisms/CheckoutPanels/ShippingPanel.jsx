@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 import { injectIntl, intlShape } from 'react-intl'
 
 import Checkbox from 'Atoms/checkbox'
@@ -10,9 +11,22 @@ import BillingForm from './Forms/Billing'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutDetails, updateHeight }) => {
+// This should be added on a tastic level
+import app from 'frontastic-catwalk/src/js/app/app'
+
+const ShippingPanel = ({ intl, loading, loaded, error, data, goToNextPanel, checkoutDetails, setCheckoutDetails, updateHeight }) => {
+    console.log('*&^', loading, loaded, error, data)
+
+    const [didMount, setDidMount] = useState(false);
+
+    const [showServerError, setShowServerError] = useState(false)
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextPayment' })
     const billingDetailsLabel = intl.formatMessage({ id: 'checkout.billingDetailsLabel' })
+
+    const viewportWidth = useSelector((state, a, b) => {
+        console.log('* state.user.notifications *', state.user.notifications)
+        return state
+    })
 
     const isValid = () => {
         const { delivery, billing, isBillingSameAsDelivery } = checkoutDetails
@@ -25,12 +39,55 @@ const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckout
         }
     }
 
+    const updateAddresses = () => {
+        if (isValid()) {
+            // Add nice loaders here
+
+            app.getLoader('cart')
+                .updateCart({
+                    billing1: {
+                        firstName: checkoutDetails.delivery.name,
+                        lastName: checkoutDetails.delivery.surname,
+                        country: 'DE',
+                        postalCode: '12345',
+                        streetName: 'bla bla',
+                        city: 'cityyyyyyy',
+                    },
+                    shipping: {
+                        firstName: checkoutDetails.delivery.name,
+                        lastName: checkoutDetails.delivery.surname,
+                        country: 'DE',
+                        postalCode: '12345',
+                        streetName: 'bla bla',
+                        city: 'cityyyyyyy',
+                    },
+                })
+                .then((info) => {
+                    console.log('... info ...', info, data)
+                    goToNextPanel()
+                })
+                .catch((error) => {
+                    console.log('*** error ...', error)
+                    setShowServerError(true)
+                    // return <div>'ERROR >..'</div>
+                })
+
+        }
+    }
+
+    if(loading)
+        return <div>... Loading ...</div>
+
+    if(error)
+        return `Error ${error.message}`
+
     return (
         <div>
             <StickyRightColumn
                 variant='my-4 max-w-960px md:px-4 mx-auto'
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
+                        {showServerError && <div className='text-red-700 font-bold'>Server Error Occurred</div>}
                         <div className='px-4 py-6 md:px-6 border-t-4 md:border-t-0 border-gray-100'>
                             <DeliveryForm intl={intl}
                                 onSubmit={(data) => {
@@ -77,12 +134,12 @@ const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckout
 
                 rightColumn={
                     <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-gray-100'>
-                        <Summary sum={data.sum} label={buttonLabel} disabled={!isValid()} showVouchers={false}
-                            onClick={() => {
-                                if (isValid()) {
-                                    goToNextPanel()
-                                }
-                            }}
+                        <Summary
+                            sum={data.sum}
+                            label={buttonLabel}
+                            disabled={!isValid()}
+                            showVouchers={false}
+                            onClick={updateAddresses}
                         />
                     </div>
                 }

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
@@ -9,7 +9,9 @@ import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
 import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
-const CheckoutPanels = ({ data }) => {
+const CheckoutPanels = ({ loading, loaded, error, data }) => {
+    console.log('aaaa', loading, loaded, error, data)
+    const [previousData, setPreviousData] = useState(null)
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
@@ -41,6 +43,12 @@ const CheckoutPanels = ({ data }) => {
         },
     ]
 
+    useEffect(() => {
+        if(data !== null)
+            setPreviousData(data)
+    }, [data])
+
+    console.log('previousData: ', previousData)
     return (
         <>
             <Stepper
@@ -48,13 +56,34 @@ const CheckoutPanels = ({ data }) => {
                 current={current}
                 setCurrent={setCurrent}
             />
-            <Panels
+            {loading && <div>Loading</div>}
+            {error &&
+                <>
+                    <div>Oops! Error on our side: {error.message}. Sorry!</div>
+                    <Panels
+                        loading={loading}
+                        loaded={loaded}
+                        error={error}
+                        data={previousData}
+                        steps={steps}
+                        current={current}
+                        setCurrent={setCurrent}
+                        ref={ts}
+                    />
+                </>}
+
+
+            {/*// this one is `.isComplete()`*/}
+            {loaded && !error && <Panels
+                loading={loading}
+                loaded={loaded}
+                error={error}
                 data={data}
                 steps={steps}
                 current={current}
                 setCurrent={setCurrent}
                 ref={ts}
-            />
+            />}
         </>
     )
 }
