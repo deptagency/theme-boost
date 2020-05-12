@@ -11,15 +11,12 @@ import BillingForm from './Forms/Billing'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-// This should be added on a tastic level
+// TODO Sanja - This should be added on a tastic level
 import app from 'frontastic-catwalk/src/js/app/app'
 
 const ShippingPanel = ({ intl, loading, loaded, error, data, goToNextPanel, checkoutDetails, setCheckoutDetails, updateHeight }) => {
     console.log('*&^', loading, loaded, error, data)
 
-    const [didMount, setDidMount] = useState(false);
-
-    const [showServerError, setShowServerError] = useState(false)
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextPayment' })
     const billingDetailsLabel = intl.formatMessage({ id: 'checkout.billingDetailsLabel' })
 
@@ -45,7 +42,7 @@ const ShippingPanel = ({ intl, loading, loaded, error, data, goToNextPanel, chec
 
             app.getLoader('cart')
                 .updateCart({
-                    billing1: {
+                    billing: {
                         firstName: checkoutDetails.delivery.name,
                         lastName: checkoutDetails.delivery.surname,
                         country: 'DE',
@@ -68,8 +65,6 @@ const ShippingPanel = ({ intl, loading, loaded, error, data, goToNextPanel, chec
                 })
                 .catch((error) => {
                     console.log('*** error ...', error)
-                    setShowServerError(true)
-                    // return <div>'ERROR >..'</div>
                 })
 
         }
@@ -87,7 +82,6 @@ const ShippingPanel = ({ intl, loading, loaded, error, data, goToNextPanel, chec
                 variant='my-4 max-w-960px md:px-4 mx-auto'
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
-                        {showServerError && <div className='text-red-700 font-bold'>Server Error Occurred</div>}
                         <div className='px-4 py-6 md:px-6 border-t-4 md:border-t-0 border-gray-100'>
                             <DeliveryForm intl={intl}
                                 onSubmit={(data) => {
