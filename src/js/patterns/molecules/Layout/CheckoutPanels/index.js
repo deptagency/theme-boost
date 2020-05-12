@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
 import Stepper from './Stepper'
@@ -8,24 +9,35 @@ import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
 import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
-const CheckoutPanels = () => {
+const CheckoutPanels = ({ data }) => {
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
+
+    const [checkoutDetails, setCheckoutDetails] = useState({
+        delivery: {},
+        billing: {},
+        isBillingSameAsDelivery: true,
+        payment: '',
+    })
 
     const steps = [
         {
             name: <FormattedMessage id='checkout.shipping' />,
             component: ShippingPanel,
-            errorMessage: 'Please enter required contact information',
+            checkoutDetails: checkoutDetails,
+            setCheckoutDetails: setCheckoutDetails,
         },
-        { name: <FormattedMessage id='checkout.payment' />,
+        {
+            name: <FormattedMessage id='checkout.payment' />,
             component: PaymentPanel,
-            errorMessage: 'Please enter required invoice information',
+            checkoutDetails: checkoutDetails,
+            setCheckoutDetails: setCheckoutDetails,
         },
         {
             name: <FormattedMessage id='checkout.overview' />,
             component: OverviewPanel,
-            errorMessage: 'Please enter required information',
+            checkoutDetails: checkoutDetails,
+            setCheckoutDetails: setCheckoutDetails,
         },
     ]
 
@@ -37,6 +49,7 @@ const CheckoutPanels = () => {
                 setCurrent={setCurrent}
             />
             <Panels
+                data={data}
                 steps={steps}
                 current={current}
                 setCurrent={setCurrent}
@@ -44,6 +57,10 @@ const CheckoutPanels = () => {
             />
         </>
     )
+}
+
+CheckoutPanels.propTypes = {
+    data: PropTypes.object.isRequired,
 }
 
 export default CheckoutPanels

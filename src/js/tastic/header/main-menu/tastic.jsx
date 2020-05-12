@@ -7,6 +7,7 @@ import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import MainMenu from 'Organisms/MainMenu'
 
 const MainMenuTastic = ({ data }) => {
+    console.log('MENU DATA', data)
     return (
         <MainMenu
             topCategories={data.topCategories}
