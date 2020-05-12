@@ -3,7 +3,7 @@ import React from 'react'
 import FullCartLoader from './index'
 
 export default {
-    title: 'Loader full cart',
+    title: 'Loader',
 }
 
 export const fullCart = () => {

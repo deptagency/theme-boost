@@ -1,60 +1,64 @@
 import React, { Component } from 'react'
-
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 import ContentLoader from 'react-content-loader'
-// import { smallScreen, largeScreen } from './loaders.module.scss'
 
 class FullCartLoader extends Component {
     render () {
         return (<div>
             <ContentLoader
-                height={950}
-                width={800}
+                height={896}
+                width={1000}
                 speed={3}
                 primaryColor='#d9d9d9'
                 secondaryColor='#787878'
-                >
-                <rect  x='40' y='15' rx='20' ry='20' width='150' height='200' />
+            >
+                {/* Large screen  */}
 
-                <rect  x='220' y='17' rx='10' ry='10' width='290' height='18' />
+                <rect className='hidden md:block' x='600' y='40' rx='20' ry='20' width='350' height='170' /> {/* checkout box */}
+                <rect x='40' y='40' rx='20' ry='20' width='150' height='30' /> {/* my cart */}
+                {/* First product  */}
+                <rect x='40' y='100' rx='20' ry='20' width='150' height='200' /> {/* product photo */}
+                <rect className='hidden md:block' x='220' y='102' rx='10' ry='10' width='170' height='18' /> {/* product name */}
+                <rect className='hidden md:block' x='470' y='102' rx='10' ry='10' width='50' height='18' /> {/* product remove */}
+                <rect className='hidden md:block' x='220' y='135' rx='10' ry='10' width='130' height='12' /> {/* product name detail */}
+                <rect x='220' y='170' rx='5' ry='5' width='100' height='8' /> {/* product color */}
+                <rect x='220' y='185' rx='5' ry='5' width='100' height='8' /> {/* product size */}
+                <rect x='220' y='210' rx='8' ry='8' width='100' height='50' /> {/* product quantiy */}
+                <rect x='220' y='275' rx='5' ry='5' width='70' height='20' /> {/* product price */}
+                {/* Second product  */}
+                <rect x='40' y='335' rx='20' ry='20' width='150' height='200' />
+                <rect className='hidden md:block' x='220' y='337' rx='10' ry='10' width='170' height='18' />
+                <rect className='hidden md:block' x='470' y='337' rx='10' ry='10' width='50' height='18' />
+                <rect className='hidden md:block' x='220' y='370' rx='10' ry='10' width='130' height='12' />
+                <rect x='220' y='405' rx='5' ry='5' width='100' height='8' />
+                <rect x='220' y='420' rx='5' ry='5' width='100' height='8' />
+                <rect x='220' y='445' rx='8' ry='8' width='100' height='50' />
+                <rect x='220' y='510' rx='5' ry='5' width='70' height='20' />
+                {/* Third product  */}
+                <rect x='40' y='565' rx='20' ry='20' width='150' height='200' />
+                <rect className='hidden md:block' x='220' y='567' rx='10' ry='10' width='170' height='18' />
+                <rect className='hidden md:block' x='470' y='567' rx='10' ry='10' width='50' height='18' />
+                <rect className='hidden md:block' x='220' y='600' rx='10' ry='10' width='130' height='12' />
+                <rect x='220' y='635' rx='5' ry='5' width='100' height='8' />
+                <rect x='220' y='650' rx='5' ry='5' width='100' height='8' />
+                <rect x='220' y='675' rx='8' ry='8' width='100' height='50' />
+                <rect x='220' y='740' rx='5' ry='5' width='70' height='20' />
 
-                <rect  x='220' y='50' rx='10' ry='10' width='233' height='12' />
+                {/* Small screen */}
 
-                <rect x='220' y='110' rx='5' ry='5' width='165' height='8' />
-                <rect  x='220' y='130' rx='5' ry='5' width='165' height='8' />
-
-                <rect x='220' y='180' rx='8' ry='8' width='100' height='29' />
-                <rect x='550' y='15' rx='20' ry='20' width='220' height='200' />
-
-                <rect  x='40' y='320' rx='5' ry='5' width='45' height='35' />
-                <rect  x='100' y='320' rx='5' ry='5' width='45' height='35' />
-                <rect  x='160' y='320' rx='5' ry='5' width='45' height='35' />
-                <rect  x='220' y='320' rx='5' ry='5' width='45' height='35' />
-
-                {/* small screen */}
-
-                {/* <rect className={smallScreen} x='30' y='15' rx='20' ry='20' width='200' height='250' />
-                <rect className={smallScreen} x='730' y='17' rx='5' ry='5' width='50' height='50' />
-                <rect className={smallScreen} x='250' y='17' rx='10' ry='10' width='250' height='16' />
-                <rect className={smallScreen} x='250' y='50' rx='10' ry='10' width='200' height='12' />
-                <rect className={smallScreen} x='250' y='130' rx='5' ry='5' width='120' height='8' />
-                <rect className={smallScreen} x='250' y='150' rx='5' ry='5' width='120' height='8' />
-                <rect className={smallScreen} x='250' y='210' rx='8' ry='8' width='120' height='40' />
-
-                <rect className={smallScreen} x='30' y='315' rx='20' ry='20' width='200' height='250' />
-                <rect className={smallScreen} x='730' y='317' rx='5' ry='5' width='50' height='50' />
-                <rect className={smallScreen} x='250' y='317' rx='10' ry='10' width='250' height='16' />
-                <rect className={smallScreen} x='250' y='350' rx='10' ry='10' width='200' height='12' />
-                <rect className={smallScreen} x='250' y='430' rx='5' ry='5' width='120' height='8' />
-                <rect className={smallScreen} x='250' y='450' rx='5' ry='5' width='120' height='8' />
-                <rect className={smallScreen} x='250' y='510' rx='8' ry='8' width='120' height='40' />
-
-                <rect className={smallScreen} x='30' y='600' rx='5' ry='5' width='60' height='40' />
-                <rect className={smallScreen} x='110' y='600' rx='5' ry='5' width='60' height='40' />
-                <rect className={smallScreen} x='190' y='600' rx='5' ry='5' width='60' height='40' />
-                <rect className={smallScreen} x='270' y='600' rx='5' ry='5' width='60' height='40' />
-
-                <rect className={smallScreen} x='30' y='690' rx='20' ry='20' width='740' height='300' /> */}
+                <rect className='md:hidden' x='700' y='40' rx='20' ry='20' width='270' height='30' /> {/* my cart checkout */}
+                {/* First product  */}
+                <rect className='md:hidden' x='220' y='102' rx='10' ry='10' width='250' height='18' /> {/* product name */}
+                <rect className='md:hidden' x='220' y='135' rx='10' ry='10' width='210' height='12' /> {/* product name detail */}
+                <rect className='md:hidden' x='800' y='102' rx='20' ry='20' width='170' height='25' /> {/* product remove */}
+                {/* Second product  */}
+                <rect className='md:hidden' x='220' y='335' rx='10' ry='10' width='250' height='18' /> {/* product name */}
+                <rect className='md:hidden' x='220' y='367' rx='10' ry='10' width='210' height='12' /> {/* product name detail */}
+                <rect className='md:hidden' x='800' y='335' rx='20' ry='20' width='170' height='25' /> {/* product remove */}
+                {/* Third product  */}
+                <rect className='md:hidden' x='220' y='565' rx='10' ry='10' width='250' height='18' /> {/* product name */}
+                <rect className='md:hidden' x='220' y='597' rx='10' ry='10' width='210' height='12' /> {/* product name detail */}
+                <rect className='md:hidden' x='800' y='565' rx='20' ry='20' width='170' height='25' /> {/* product remove */}
             </ContentLoader>
         </div>)
     }
