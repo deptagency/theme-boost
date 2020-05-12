@@ -1,7 +1,6 @@
 import React from 'react'
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl'
 import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
-import CheckoutConfirmation from '../../molecules/CheckoutConfirmation/index'
 import Input from 'Atoms/input'
 import Button from 'Atoms/button'
 
@@ -9,38 +8,34 @@ const NewsletterBlock = ({ intl }) => {
     const placeholder = intl.formatMessage({ id: 'myEmail' })
 
     return (
-        <div>
-            <div className='bg-gray-800 rounded mx-5'>
-                <div className='px-6 py-10 mx-auto w-full sm:w-11/12 md:w-8/12'>
-                    <p className='mb-1 text-sm text-center text-white leading-tight' />
-                    <p className='text-2xl lg:text-3xl text-center text-white font-bold leading-none'>
-                        <FormattedMessage id='exclusiveAccess' />
-                    </p>
+        <div className='bg-gray-800 rounded mx-5'>
+            <div className='px-6 py-10 mx-auto w-full sm:w-11/12 md:w-8/12'>
+                <p className='mb-1 text-sm text-center text-white leading-tight' />
+                <p className='text-2xl lg:text-3xl text-center text-white font-bold leading-none'>
+                    <FormattedMessage id='exclusiveAccess' />
+                </p>
 
-                    <div className='my-6 flex flex-col sm:flex-row'>
-                        <div className='w-full mb-2 sm:mb-0 mr-0 sm:-mr-2 lg:mr-2'>
-                            <Input
-                                type='email'
-                                placeholder={placeholder}
-                                className='form-input h-10'
-                        />
-                        </div>
-
-                        <div className='w-full sm:max-w-124px'>
-                            <Button variant='btn btn-indigo w-full h-10'>
-                                <FormattedMessage id='submit' />
-                            </Button>
-                        </div>
+                <div className='my-6 flex flex-col sm:flex-row'>
+                    <div className='w-full mb-2 sm:mb-0 mr-0 sm:-mr-2 lg:mr-2'>
+                        <Input
+                            type='email'
+                            placeholder={placeholder}
+                            className='form-input h-10'
+                    />
                     </div>
 
-                    <p className='px-4 sm:px-24 text-xs text-center text-gray-500 leading-tight'>
-                        <FormattedMessage id='submitAgree' />
-                    </p>
+                    <div className='w-full sm:max-w-124px'>
+                        <Button variant='btn btn-indigo w-full h-10'>
+                            <FormattedMessage id='submit' />
+                        </Button>
+                    </div>
                 </div>
-            </div>
-            <CheckoutConfirmation />
-        </div>
 
+                <p className='px-4 sm:px-24 text-xs text-center text-gray-500 leading-tight'>
+                    <FormattedMessage id='submitAgree' />
+                </p>
+            </div>
+        </div>
     )
 }
 
