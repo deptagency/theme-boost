@@ -9,14 +9,11 @@ const CheckoutError = () => {
         <div className='text-center mt-10 md:mt-20'>
             <IconEmotionSad className='w-20 h-20 inline-block text-gray-400 fill-current ' />
             <div className='text-center text-gray-800 mt-4'>
-                <p className='text-2xl font-bold'>
-                    <FormattedMessage id='checkout.something' /> <br />
-                    <FormattedMessage id='checkout.wentWrong' />  <br />
-                    <FormattedMessage id='checkout.duringPayment' />
+                <p className='text-2xl font-bold w-6/12 md:w-3/12 m-auto'>
+                    <FormattedMessage id='checkout.wentWrong' />
                 </p>
-                <p className='mt-3 text-sm'>
-                    <FormattedMessage id='checkout.beenCharged' /> <br />
-                    <FormattedMessage id='checkout.youCan' />
+                <p className='mt-3 text-sm m-auto w-1/3'>
+                    <FormattedMessage id='checkout.beenCharged' />
                 </p>
                 <Button
                     variant='btn-outline btn-outline-black mt-6'
