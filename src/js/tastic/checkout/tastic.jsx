@@ -6,10 +6,10 @@ import Entity from 'frontastic-catwalk/src/js/app/entity'
 import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
 const CheckoutTastic = ({ cart }) => {
-    if (cart.loaded) {
+    if (cart.isComplete()) {
         return <CheckoutPanels data={cart.data} />
     } else {
-        return ''
+        return null
     }
 }
 
