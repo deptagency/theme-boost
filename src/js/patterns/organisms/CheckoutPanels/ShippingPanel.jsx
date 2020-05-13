@@ -28,10 +28,10 @@ const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckout
     return (
         <div>
             <StickyRightColumn
-                variant='my-4 max-w-960px md:px-4 mx-auto'
+                variant='md:my-4 md:px-4 max-w-960px mx-auto'
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
-                        <div className='px-4 py-6 md:px-6 border-t-4 md:border-t-0 border-gray-100'>
+                        <div className='px-4 py-5 md:px-6 border-t-4 md:border-t-0 border-gray-100'>
                             <DeliveryForm intl={intl}
                                 onSubmit={(data) => {
                                     setCheckoutDetails({
@@ -61,7 +61,7 @@ const ShippingPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckout
                         </div>
 
                         {!checkoutDetails.isBillingSameAsDelivery &&
-                            <div className='px-4 py-6 md:px-6 border-t-4 border-gray-100'>
+                            <div className='px-4 py-5 md:px-6 border-t-4 border-gray-100'>
                                 <BillingForm intl={intl}
                                     onSubmit={(data) => {
                                         setCheckoutDetails({

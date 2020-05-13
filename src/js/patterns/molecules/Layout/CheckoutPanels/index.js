@@ -47,6 +47,7 @@ const CheckoutPanels = ({ data }) => {
                 steps={steps}
                 current={current}
                 setCurrent={setCurrent}
+                ref={ts}
             />
             <Panels
                 data={data}
