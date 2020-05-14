@@ -6,7 +6,7 @@ import { ReactComponent as TealTick } from 'Icons/tailwind-icons/teal-tick.svg'
 
 const Step = ({ current = false, completed = false, onSelect }) => {
     return (
-        <div 
+        <div
             className='flex flex-col items-center'
             onClick={onSelect}
             >
