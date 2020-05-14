@@ -4,6 +4,7 @@ import { stepObject } from './stepObject'
 
 import TinySlider from 'tiny-slider-react'
 import './index.scss'
+
 const Panels = forwardRef(({ steps, current, setCurrent, data }, ts) => {
     const goToPanel = (panel) => {
         ts.current.slider.goTo(panel)
@@ -19,6 +20,7 @@ const Panels = forwardRef(({ steps, current, setCurrent, data }, ts) => {
             <TinySlider
                 ref={ts}
                 settings={{
+                    nav: false,
                     loop: false,
                     touch: false,
                     controls: false,

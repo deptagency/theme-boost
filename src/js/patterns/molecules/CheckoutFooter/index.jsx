@@ -10,17 +10,19 @@ import app from 'frontastic-catwalk/src/js/app/app'
 const CheckoutFooter = ({ links, title }) => {
     return (
         <MarginBreakout>
-            <div className='bg-gray-200 h-12 text-sm pt-3 pl-4 text-gray-800'>
-                <button
-                    className='flex'
-                    onClick={(event) => {
-                        event.preventDefault()
-                        app.getRouter().replace('Frontastic.Frontend.Master.Checkout.cart')
-                    }}
-                >
-                    <IconArrowLeft className='mr-2 text-base fill-current text-gray-800' />
-                    <FormattedMessage id='checkout.backToCart' />
-                </button>
+            <div className='h-15 bg-gray-200 p-4'>
+                <div className='flex items-center h-full'>
+                    <button
+                        className='flex items-center text-sm text-gray-800'
+                        onClick={(event) => {
+                            event.preventDefault()
+                            app.getRouter().replace('Frontastic.Frontend.Master.Checkout.cart')
+                        }}
+                    >
+                        <IconArrowLeft className='mr-2 text-base fill-current text-gray-800' />
+                        <FormattedMessage id='checkout.backToCart' />
+                    </button>
+                </div>
             </div>
             <MetaNav
                 title={<Translatable value={title} />}
