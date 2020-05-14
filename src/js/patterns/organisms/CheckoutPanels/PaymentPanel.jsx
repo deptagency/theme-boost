@@ -8,7 +8,7 @@ import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
 // TODO Sanja - This should be added on a tastic level
-import app from 'frontastic-catwalk/src/js/app/app'
+import app from '@frontastic/catwalk/src/js/app/app'
 
 const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutDetails }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextOverview' })
@@ -17,28 +17,12 @@ const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutD
         return checkoutDetails.payment
     }
 
-    const updateCrt = () => {
+    const addInvoicePayment = () => {
         if (isValid()) {
-            // goToNextPanel()
-
             // put nice loaders here
 
-            /*return new Payment(
-                [
-                    'id' => $paymentData['key'] ?? null,
-                'paymentId' => $paymentData['interfaceId'] ?? null,
-                'paymentProvider' => $paymentData['paymentMethodInfo']['paymentInterface'] ?? null,
-                'paymentMethod' => $paymentData['paymentMethodInfo']['method'] ?? null,
-                'amount' => $paymentData['amountPlanned']['centAmount'] ?? null,
-                'currency' => $paymentData['amountPlanned']['currencyCode'] ?? null,
-                'debug' => json_encode($paymentData),
-                'paymentStatus' => $paymentData['paymentStatus']['interfaceCode'] ?? null,
-                'version' => $paymentData['version'] ?? 0,
-        ]
-        );*/
-
             app.getLoader('cart')
-                .updateCart({
+                .addPayment({
                     paymentInfo: {
                         payments: [
                             {
@@ -54,9 +38,9 @@ const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutD
                 })
                 .catch((error) => {
                     console.log('Payment invoice error', error)
-                    // setShowServerError(true)
-                    // return <div>'ERROR >..'</div>
                 })
+
+
         }
 
     }
@@ -80,7 +64,7 @@ const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutD
                 rightColumn={
                     <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded'>
                         <Summary sum={data.sum} label={buttonLabel} disabled={!isValid()} showVouchers={false}
-                            onClick={updateCrt}
+                            onClick={addInvoicePayment}
                         />
                     </div>
                 }
