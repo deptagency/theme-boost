@@ -96,7 +96,9 @@ module.exports = {
             },
             width: {
                 '9': '2.25rem',
+                'fix-250px': '250px',
                 'fix-560px': '560px',
+
             },
         },
     },

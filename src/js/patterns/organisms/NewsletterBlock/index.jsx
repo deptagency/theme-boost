@@ -1,7 +1,6 @@
 import React from 'react'
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl'
 import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
-
 import Input from 'Atoms/input'
 import Button from 'Atoms/button'
 
@@ -11,9 +10,7 @@ const NewsletterBlock = ({ intl }) => {
     return (
         <div className='bg-gray-800 rounded mx-5'>
             <div className='px-6 py-10 mx-auto w-full sm:w-11/12 md:w-8/12'>
-                <p className='mb-1 text-sm text-center text-white leading-tight'>
-                    <FormattedMessage id='joinNewsletter' />
-                </p>
+                <p className='mb-1 text-sm text-center text-white leading-tight' />
                 <p className='text-2xl lg:text-3xl text-center text-white font-bold leading-none'>
                     <FormattedMessage id='exclusiveAccess' />
                 </p>
@@ -24,7 +21,7 @@ const NewsletterBlock = ({ intl }) => {
                             type='email'
                             placeholder={placeholder}
                             className='form-input h-10'
-                        />
+                    />
                     </div>
 
                     <div className='w-full sm:max-w-124px'>
