@@ -23,14 +23,7 @@ const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutD
 
             app.getLoader('cart')
                 .addPayment({
-                    paymentInfo: {
-                        payments: [
-                            {
-                                paymentMethod: 'invoice'
-                            }
-                        ]
-                    },
-
+                    paymentId: 'invoice'
                 })
                 .then((info) => {
                     console.log('... info ...', info, data)
