@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Entity from 'frontastic-catwalk/src/js/app/entity'
 
+import FullCartLoader from '../../patterns/organisms/Loaders/FullCart/index'
 import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
 const CheckoutTastic = ({ cart }) => {
-    if (cart.loaded) {
+    if (cart.isComplete()) {
         return <CheckoutPanels data={cart.data} />
     } else {
-        return ''
+        return <FullCartLoader />
     }
 }
 
