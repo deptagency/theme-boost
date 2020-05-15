@@ -3,15 +3,17 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Entity from 'frontastic-catwalk/src/js/app/entity'
 
+import FullCartLoader from 'Organisms/Loaders/FullCart'
 import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
-const CheckoutTastic = ({ cart }) => {
+const CheckoutTastic = ({ cart, data }) => {
     return (
         <CheckoutPanels
             loading={cart.loading}
             loaded={cart.loaded}
             error={cart.error}
             data={cart.data}
+            countries={data.countries}
         />
     )
 
@@ -25,12 +27,14 @@ const CheckoutTastic = ({ cart }) => {
     } else {
         console.log('CheckoutTastic :: cart: ', cart, 'Comlete? : ',cart.isComplete())
         return 'Loading/Reloading'
+        //return <FullCartLoader />
     }
 }
 
 CheckoutTastic.defaultProps = {}
 
 CheckoutTastic.propTypes = {
+    data: PropTypes.object.isRequired,
     cart: PropTypes.instanceOf(Entity).isRequired,
 }
 

@@ -21,22 +21,22 @@ const OverviewPanel = ({ intl, data, goToPanelIndex, checkoutDetails }) => {
     return (
         <div>
             <StickyRightColumn
-                variant='my-4 max-w-960px md:px-4 mx-auto'
+                variant='md:my-4 md:px-4 max-w-960px mx-auto'
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
-                        <div className='sm:hidden p-4 md:px-6 border-b-4 border-gray-100 border-t-4 md:border-t-0'>
+                        <div className='sm:hidden px-4 py-3 md:px-6 border-b-4 border-gray-100 border-t-4 md:border-t-0'>
                             <OrderButton label={buttonLabel} onClick={placeOrderClicked} />
                         </div>
-                        <div className='px-4 py-6 md:px-6 border-b-4 border-gray-100'>
+                        <div className='px-4 py-5 md:px-6 border-b-4 border-gray-100'>
                             <Products products={data.lineItems} />
                         </div>
-                        <div className='px-4 py-6 md:px-6 border-b-4 border-gray-100'>
+                        <div className='px-4 py-5 md:px-6 border-b-4 border-gray-100'>
                             <Delivery delivery={checkoutDetails.delivery} onClick={() => { goToPanelIndex(0) }} />
                         </div>
-                        <div className='px-4 py-6 md:px-6 border-b-4 border-gray-100'>
+                        <div className='px-4 py-5 md:px-6 border-b-4 border-gray-100'>
                             <Billing billing={checkoutDetails.isBillingSameAsDelivery ? checkoutDetails.delivery : checkoutDetails.billing} onClick={() => { goToPanelIndex(0) }} />
                         </div>
-                        <div className='px-4 py-6 md:px-6 border-b-4 md:border-b-0 border-gray-100'>
+                        <div className='px-4 py-5 md:px-6 border-b-4 md:border-b-0 border-gray-100'>
                             <PaymentMethod payment={checkoutDetails.payment} onClick={() => { goToPanelIndex(1) }} />
                         </div>
                     </div>

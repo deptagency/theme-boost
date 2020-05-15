@@ -55,6 +55,7 @@ const CheckoutPanels = ({ loading, loaded, error, data }) => {
                 steps={steps}
                 current={current}
                 setCurrent={setCurrent}
+                ref={ts}
             />
             {loading && <div>Loading</div>}
             {error &&

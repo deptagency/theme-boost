@@ -7,7 +7,7 @@ export default {
 
 export const checkoutHeader = () => {
     return (
-        <div className='flex h-12 shadow-lg'>
+        <div className='flex h-12 shadow-md'>
             <div
                 className='self-center h-6 w-full max-w-124px ml-4'
                 style={{ backgroundImage: `url("https://res.cloudinary.com/dlwdq84ig/image/upload/c_fill,f_auto,g_faces:auto,h_24,q_auto,w_124/wdl9ur94jedxlaem3c52")` }}

@@ -33,7 +33,7 @@ const Mobile = ({
 
     return (
         <>
-            <MarginBreakout variant='lg:hidden shadow-lg'>
+            <MarginBreakout variant='lg:hidden shadow-md'>
                 <div className='grid grid-cols-2 h-12 max-w-1240px m-center px-5'>
                     <div className='flex'>
                         <MenuOpen

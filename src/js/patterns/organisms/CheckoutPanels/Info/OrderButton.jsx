@@ -5,7 +5,7 @@ import Button from 'Atoms/button'
 
 const OrderButton = ({ label, onClick }) => {
     return (
-        <Button variant='btn btn-indigo w-full' onClick={onClick}>
+        <Button variant='btn btn-indigo w-full h-10' onClick={onClick}>
             {label}
         </Button>
     )

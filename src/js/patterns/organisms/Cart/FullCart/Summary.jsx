@@ -38,7 +38,7 @@ const Summary = ({ sum, subtotal = '', disabled = false, onClick, label, showVou
                 </p>
             </div>
 
-            <Button variant='btn btn-indigo w-full' onClick={onClick} disabled={disabled}>
+            <Button variant='btn btn-indigo w-full h-10' onClick={onClick} disabled={disabled}>
                 {label}
             </Button>
 

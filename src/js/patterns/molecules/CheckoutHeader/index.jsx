@@ -10,7 +10,7 @@ const CheckoutHeader = ({ logo }) => {
     const backgroundImageUrl = useBackgroundImageUrl(ref, logo)
 
     return (
-        <MarginBreakout variant='flex h-12 shadow-lg'>
+        <MarginBreakout variant='flex h-12 shadow-md'>
             <div
                 className='self-center h-6 w-full max-w-124px ml-4'
                 ref={ref}
