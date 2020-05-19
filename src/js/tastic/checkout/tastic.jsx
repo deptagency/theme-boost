@@ -27,13 +27,11 @@ const CheckoutTastic = ({ cart, data }) => {
             />
         )
     } else {
-        console.log('CheckoutTastic :: cart: ', cart, 'Comlete? : ',cart.isComplete())
+        console.log('CheckoutTastic :: cart: ', cart, 'Comlete? : ', cart.isComplete())
         return 'Loading/Reloading'
-        //return <FullCartLoader />
+        // return <FullCartLoader />
     }
 }
-
-CheckoutTastic.defaultProps = {}
 
 CheckoutTastic.propTypes = {
     data: PropTypes.object.isRequired,

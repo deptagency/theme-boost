@@ -64,6 +64,7 @@ const Panels = forwardRef(({ steps, current, setCurrent, app, loading, data, cou
 })
 
 Panels.propTypes = {
+    app: PropTypes.object.isRequired,
     steps: PropTypes.arrayOf(stepObject),
     current: PropTypes.oneOf([0, 1, 2]).isRequired,
     setCurrent: PropTypes.func.isRequired,

@@ -11,6 +11,7 @@ import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
 const CheckoutPanels = ({ app, loading, loaded, error, data, countries }) => {
     console.log('aaaa', loading, loaded, error, data, countries)
+
     const [previousData, setPreviousData] = useState(null)
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
@@ -44,8 +45,7 @@ const CheckoutPanels = ({ app, loading, loaded, error, data, countries }) => {
     ]
 
     useEffect(() => {
-        if(data !== null)
-            setPreviousData(data)
+        if (data !== null) { setPreviousData(data) }
     }, [data])
 
     console.log('previousData: ', previousData)
@@ -75,8 +75,7 @@ const CheckoutPanels = ({ app, loading, loaded, error, data, countries }) => {
                     />
                 </>}
 
-
-            {/*// this one is `.isComplete()`*/}
+            {/* // this one is `.isComplete()` */}
             {loaded && !error && <Panels
                 app={app}
                 loading={loading}
@@ -94,6 +93,7 @@ const CheckoutPanels = ({ app, loading, loaded, error, data, countries }) => {
 }
 
 CheckoutPanels.propTypes = {
+    app: PropTypes.object.isRequired,
     data: PropTypes.object.isRequired,
     countries: PropTypes.array.isRequired,
 }

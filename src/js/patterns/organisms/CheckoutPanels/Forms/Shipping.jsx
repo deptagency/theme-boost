@@ -139,7 +139,7 @@ const Shipping = ({ intl, countries, onSubmit }) => {
                     })}
                     ref={register({ required: requiredField })}
                     >
-                    <option value=''></option>
+                    <option value='' />
                     {countries.map((country) => {
                         return (<option value={country.code}>{country.name}</option>)
                     })}
@@ -153,6 +153,7 @@ const Shipping = ({ intl, countries, onSubmit }) => {
 
 Shipping.propTypes = {
     intl: PropTypes.object.isRequired,
+    countries: PropTypes.array.isRequired,
     onSubmit: PropTypes.func.isRequired,
 }
 

@@ -15,7 +15,8 @@ const OverviewPanel = ({ app, intl, data, goToPanelIndex, checkoutDetails }) => 
     const buttonLabel = intl.formatMessage({ id: 'checkout.placeOrder' })
 
     const placeOrderClicked = () => {
-        // TODO implement API call
+        app.getLoader('cart')
+            .checkout()
     }
 
     return (
@@ -44,10 +45,10 @@ const OverviewPanel = ({ app, intl, data, goToPanelIndex, checkoutDetails }) => 
 
                 rightColumn={
                     <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded'>
-                        <Summary 
-                            sum={data.sum} 
-                            label={buttonLabel} 
-                            disabled={false} 
+                        <Summary
+                            sum={data.sum}
+                            label={buttonLabel}
+                            disabled={false}
                             showVouchers={false}
                             onClick={placeOrderClicked}
                         />
@@ -59,6 +60,7 @@ const OverviewPanel = ({ app, intl, data, goToPanelIndex, checkoutDetails }) => 
 }
 
 OverviewPanel.propTypes = {
+    app: PropTypes.object.isRequired,
     intl: intlShape.isRequired,
     data: PropTypes.object.isRequired,
     goToPanelIndex: PropTypes.func.isRequired,

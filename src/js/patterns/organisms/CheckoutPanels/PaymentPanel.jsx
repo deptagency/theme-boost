@@ -20,7 +20,7 @@ const PaymentPanel = ({ app, intl, data, goToNextPanel, checkoutDetails, setChec
 
             app.getLoader('cart')
                 .addPayment({
-                    paymentId: 'invoice'
+                    paymentId: 'invoice',
                 })
                 .then((info) => {
                     console.log('... info ...', info, data)
@@ -51,10 +51,10 @@ const PaymentPanel = ({ app, intl, data, goToNextPanel, checkoutDetails, setChec
 
                 rightColumn={
                     <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded'>
-                        <Summary 
-                            sum={data.sum} 
-                            label={buttonLabel} 
-                            disabled={!isValid()} 
+                        <Summary
+                            sum={data.sum}
+                            label={buttonLabel}
+                            disabled={!isValid()}
                             showVouchers={false}
                             onClick={addInvoicePayment}
                         />
@@ -66,6 +66,7 @@ const PaymentPanel = ({ app, intl, data, goToNextPanel, checkoutDetails, setChec
 }
 
 PaymentPanel.propTypes = {
+    app: PropTypes.object.isRequired,
     intl: intlShape.isRequired,
     data: PropTypes.object.isRequired,
     goToNextPanel: PropTypes.func.isRequired,

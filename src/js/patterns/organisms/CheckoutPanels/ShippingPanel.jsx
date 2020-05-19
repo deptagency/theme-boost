@@ -51,7 +51,7 @@ const ShippingPanel = ({ app, intl, loading, loaded, error, data, countries, goT
                     console.log('*** error ...', error)
                 })
 
-/*          
+            /*
             app.getLoader('cart')
                 .updateCart({
                     shipping: {
@@ -82,11 +82,9 @@ const ShippingPanel = ({ app, intl, loading, loaded, error, data, countries, goT
         }
     }
 
-    if(loading)
-        return <div>... Loading ...</div>
+    if (loading) { return <div>... Loading ...</div> }
 
-    if(error)
-        return `Error ${error.message}`
+    if (error) { return `Error ${error.message}` }
 
     return (
         <div>
@@ -155,6 +153,7 @@ const ShippingPanel = ({ app, intl, loading, loaded, error, data, countries, goT
 }
 
 ShippingPanel.propTypes = {
+    app: PropTypes.object.isRequired,
     intl: intlShape.isRequired,
     data: PropTypes.object.isRequired,
     countries: PropTypes.array.isRequired,
