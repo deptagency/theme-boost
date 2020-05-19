@@ -40,6 +40,9 @@ const ShippingPanel = ({ app, intl, loading, loaded, error, data, countries, goT
         if (isValid()) {
             app.getLoader('cart')
                 .updateCart({
+                    account: {
+                        email: email
+                    },
                     shipping: shippingAddress,
                     billing: isBillingSameAsShipping ? shippingAddress : billing,
                 })
@@ -50,35 +53,6 @@ const ShippingPanel = ({ app, intl, loading, loaded, error, data, countries, goT
                 .catch((error) => {
                     console.log('*** error ...', error)
                 })
-
-            /*
-            app.getLoader('cart')
-                .updateCart({
-                    shipping: {
-                        firstName: checkoutDetails.shipping.firstName,
-                        lastName: checkoutDetails.shipping.lastName,
-                        country: 'DE',
-                        postalCode: '12345',
-                        streetName: 'bla bla',
-                        city: 'cityyyyyyy',
-                    },
-                    billing: {
-                        firstName: checkoutDetails.shipping.firstName,
-                        lastName: checkoutDetails.shipping.lastName,
-                        country: 'DE',
-                        postalCode: '12345',
-                        streetName: 'bla bla',
-                        city: 'cityyyyyyy',
-                    },
-                })
-                .then((info) => {
-                    console.log('... info ...', info, data)
-                    goToNextPanel()
-                })
-                .catch((error) => {
-                    console.log('*** error ...', error)
-                })
-*/
         }
     }
 
@@ -93,7 +67,10 @@ const ShippingPanel = ({ app, intl, loading, loaded, error, data, countries, goT
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
                         <div className='px-4 py-5 md:px-6 border-t-4 md:border-t-0 border-gray-100'>
-                            <ShippingForm intl={intl} countries={countries}
+                            <ShippingForm 
+                                intl={intl} 
+                                countries={countries} 
+                                defaultValues={data.shippingAddress}
                                 onSubmit={(data) => {
                                     setCheckoutDetails({
                                         ...checkoutDetails,
@@ -123,7 +100,9 @@ const ShippingPanel = ({ app, intl, loading, loaded, error, data, countries, goT
 
                         {!checkoutDetails.isBillingSameAsShipping &&
                             <div className='px-4 py-5 md:px-6 border-t-4 border-gray-100'>
-                                <BillingForm intl={intl} countries={countries}
+                                <BillingForm intl={intl} 
+                                    countries={countries} 
+                                    defaultValues={data.billingAddress}
                                     onSubmit={(data) => {
                                         setCheckoutDetails({
                                             ...checkoutDetails,

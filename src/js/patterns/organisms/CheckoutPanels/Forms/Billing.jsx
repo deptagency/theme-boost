@@ -6,10 +6,10 @@ import { useForm } from 'react-hook-form'
 
 import ErrorMessage from 'Atoms/errorMessage'
 
-const Billing = ({ intl, countries, onSubmit }) => {
+const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
     const requiredField = intl.formatMessage({ id: 'validation.required' })
 
-    const { register, errors, getValues } = useForm({ mode: 'onChange' })
+    const { register, errors, getValues } = useForm({ mode: 'onChange', defaultValues })
 
     const onChange = () => {
         onSubmit(getValues())
@@ -125,6 +125,7 @@ const Billing = ({ intl, countries, onSubmit }) => {
 Billing.propTypes = {
     intl: PropTypes.object.isRequired,
     countries: PropTypes.array.isRequired,
+    defaultValues: PropTypes.object,
     onSubmit: PropTypes.func.isRequired,
 }
 

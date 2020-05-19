@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { injectIntl, intlShape } from 'react-intl'
+import _ from 'lodash'
 
 import PaymentMethodForm from './Forms/PaymentMethod'
 
@@ -10,17 +11,17 @@ import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 const PaymentPanel = ({ app, intl, data, goToNextPanel, checkoutDetails, setCheckoutDetails }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextOverview' })
 
+    const [ id ] = useState(() => { return _.uniqueId('invoice-') })
+
     const isValid = () => {
         return checkoutDetails.payment
     }
 
     const addInvoicePayment = () => {
         if (isValid()) {
-            // put nice loaders here
-
             app.getLoader('cart')
                 .addPayment({
-                    paymentId: 'invoice',
+                    paymentId: id,
                 })
                 .then((info) => {
                     console.log('... info ...', info, data)
