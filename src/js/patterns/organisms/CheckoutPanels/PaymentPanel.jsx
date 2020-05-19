@@ -7,10 +7,7 @@ import PaymentMethodForm from './Forms/PaymentMethod'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-// TODO Sanja - This should be added on a tastic level
-import app from '@frontastic/catwalk/src/js/app/app'
-
-const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutDetails }) => {
+const PaymentPanel = ({ app, intl, data, goToNextPanel, checkoutDetails, setCheckoutDetails }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextOverview' })
 
     const isValid = () => {
@@ -32,11 +29,9 @@ const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutD
                 .catch((error) => {
                     console.log('Payment invoice error', error)
                 })
-
-
         }
-
     }
+
     return (
         <div>
             <StickyRightColumn
@@ -44,7 +39,7 @@ const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutD
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
                         <div className='px-4 py-5 md:px-6 border-b-4 md:border-b-0 border-t-4 md:border-t-0 border-gray-100'>
-                            <PaymentMethodForm onClick={(payment) => {
+                            <PaymentMethodForm onSubmit={(payment) => {
                                 setCheckoutDetails({
                                     ...checkoutDetails,
                                     payment: payment,
@@ -56,7 +51,11 @@ const PaymentPanel = ({ intl, data, goToNextPanel, checkoutDetails, setCheckoutD
 
                 rightColumn={
                     <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded'>
-                        <Summary sum={data.sum} label={buttonLabel} disabled={!isValid()} showVouchers={false}
+                        <Summary 
+                            sum={data.sum} 
+                            label={buttonLabel} 
+                            disabled={!isValid()} 
+                            showVouchers={false}
                             onClick={addInvoicePayment}
                         />
                     </div>

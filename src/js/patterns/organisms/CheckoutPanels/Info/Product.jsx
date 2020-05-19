@@ -6,7 +6,7 @@ import Price from 'Atoms/price'
 
 const Product = ({ image, name, designer, count, price, color, size }) => {
     return (
-        <div className='grid grid-cols-120-1xfr grid-rows-auto-1fr col-gap-4 row-gap-4'>
+        <div className='grid grid-cols-120-1xfr col-gap-4'>
             <div>
                 <img src={image} alt='' />
             </div>

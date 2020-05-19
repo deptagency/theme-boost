@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import app from 'frontastic-catwalk/src/js/app/app'
 import Entity from 'frontastic-catwalk/src/js/app/entity'
 
 import FullCartLoader from 'Organisms/Loaders/FullCart'
@@ -9,6 +10,7 @@ import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 const CheckoutTastic = ({ cart, data }) => {
     return (
         <CheckoutPanels
+            app={app}
             loading={cart.loading}
             loaded={cart.loaded}
             error={cart.error}

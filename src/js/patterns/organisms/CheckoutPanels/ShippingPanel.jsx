@@ -5,16 +5,13 @@ import { injectIntl, intlShape } from 'react-intl'
 
 import Checkbox from 'Atoms/checkbox'
 
-import DeliveryForm from './Forms/Delivery'
+import ShippingForm from './Forms/Shipping'
 import BillingForm from './Forms/Billing'
 
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-// TODO Sanja - This should be added on a tastic level
-import app from 'frontastic-catwalk/src/js/app/app'
-
-const ShippingPanel = ({ intl, loading, loaded, error, data, goToNextPanel, checkoutDetails, setCheckoutDetails, updateHeight }) => {
+const ShippingPanel = ({ app, intl, loading, loaded, error, data, countries, goToNextPanel, checkoutDetails, setCheckoutDetails, updateHeight }) => {
     console.log('*&^', loading, loaded, error, data)
 
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextPayment' })
@@ -26,33 +23,48 @@ const ShippingPanel = ({ intl, loading, loaded, error, data, goToNextPanel, chec
     })
 
     const isValid = () => {
-        const { delivery, billing, isBillingSameAsDelivery } = checkoutDetails
+        const { shipping, billing, isBillingSameAsShipping } = checkoutDetails
 
-        if (isBillingSameAsDelivery) {
-            return delivery.name && delivery.surname && delivery.email && delivery.zip && delivery.country
+        if (isBillingSameAsShipping) {
+            return shipping.firstName && shipping.lastName && shipping.email && shipping.streetName && shipping.postalCode && shipping.country
         } else {
-            return delivery.name && delivery.surname && delivery.email && delivery.zip && delivery.country &&
-                billing.name && billing.surname && billing.email && billing.zip && billing.country
+            return shipping.firstName && shipping.lastName && shipping.email && shipping.streetName && shipping.postalCode && shipping.country &&
+                billing.firstName && billing.lastName && billing.email && billing.streetName && billing.postalCode && billing.country
         }
     }
 
     const updateAddresses = () => {
-        if (isValid()) {
-            // Add nice loaders here
+        const { shipping, billing, isBillingSameAsShipping } = checkoutDetails
+        const { email, ...shippingAddress } = shipping
 
+        if (isValid()) {
             app.getLoader('cart')
                 .updateCart({
-                    billing: {
-                        firstName: checkoutDetails.delivery.name,
-                        lastName: checkoutDetails.delivery.surname,
+                    shipping: shippingAddress,
+                    billing: isBillingSameAsShipping ? shippingAddress : billing,
+                })
+                .then((info) => {
+                    console.log('... info ...', info, data)
+                    goToNextPanel()
+                })
+                .catch((error) => {
+                    console.log('*** error ...', error)
+                })
+
+/*          
+            app.getLoader('cart')
+                .updateCart({
+                    shipping: {
+                        firstName: checkoutDetails.shipping.firstName,
+                        lastName: checkoutDetails.shipping.lastName,
                         country: 'DE',
                         postalCode: '12345',
                         streetName: 'bla bla',
                         city: 'cityyyyyyy',
                     },
-                    shipping: {
-                        firstName: checkoutDetails.delivery.name,
-                        lastName: checkoutDetails.delivery.surname,
+                    billing: {
+                        firstName: checkoutDetails.shipping.firstName,
+                        lastName: checkoutDetails.shipping.lastName,
                         country: 'DE',
                         postalCode: '12345',
                         streetName: 'bla bla',
@@ -66,7 +78,7 @@ const ShippingPanel = ({ intl, loading, loaded, error, data, goToNextPanel, chec
                 .catch((error) => {
                     console.log('*** error ...', error)
                 })
-
+*/
         }
     }
 
@@ -83,11 +95,11 @@ const ShippingPanel = ({ intl, loading, loaded, error, data, goToNextPanel, chec
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
                         <div className='px-4 py-5 md:px-6 border-t-4 md:border-t-0 border-gray-100'>
-                            <DeliveryForm intl={intl}
+                            <ShippingForm intl={intl} countries={countries}
                                 onSubmit={(data) => {
                                     setCheckoutDetails({
                                         ...checkoutDetails,
-                                        delivery: data,
+                                        shipping: data,
                                     })
                                 }}
                             />
@@ -97,13 +109,13 @@ const ShippingPanel = ({ intl, loading, loaded, error, data, goToNextPanel, chec
                                     <Checkbox
                                         className='text-xl'
                                         label={billingDetailsLabel}
-                                        value={checkoutDetails.isBillingSameAsDelivery}
+                                        value={checkoutDetails.isBillingSameAsShipping}
                                         onClick={() => {
                                             updateHeight()
 
                                             setCheckoutDetails({
                                                 ...checkoutDetails,
-                                                isBillingSameAsDelivery: !checkoutDetails.isBillingSameAsDelivery,
+                                                isBillingSameAsShipping: !checkoutDetails.isBillingSameAsShipping,
                                             })
                                         }}
                                     />
@@ -111,9 +123,9 @@ const ShippingPanel = ({ intl, loading, loaded, error, data, goToNextPanel, chec
                             </div>
                         </div>
 
-                        {!checkoutDetails.isBillingSameAsDelivery &&
+                        {!checkoutDetails.isBillingSameAsShipping &&
                             <div className='px-4 py-5 md:px-6 border-t-4 border-gray-100'>
-                                <BillingForm intl={intl}
+                                <BillingForm intl={intl} countries={countries}
                                     onSubmit={(data) => {
                                         setCheckoutDetails({
                                             ...checkoutDetails,
@@ -145,6 +157,7 @@ const ShippingPanel = ({ intl, loading, loaded, error, data, goToNextPanel, chec
 ShippingPanel.propTypes = {
     intl: intlShape.isRequired,
     data: PropTypes.object.isRequired,
+    countries: PropTypes.array.isRequired,
     goToNextPanel: PropTypes.func.isRequired,
     checkoutDetails: PropTypes.object,
     setCheckoutDetails: PropTypes.func.isRequired,

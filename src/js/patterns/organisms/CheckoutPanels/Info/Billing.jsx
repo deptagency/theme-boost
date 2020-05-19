@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 
-const Billing = ({ billing, onClick }) => {
+const Billing = ({ address, onClick }) => {
     return (
         <>
             <div className='mb-3 flex items-center justify-between'>
@@ -18,23 +18,23 @@ const Billing = ({ billing, onClick }) => {
             </div>
 
             <div className='text-md text-gray-800 leading-tight'>
-                <p className='font-bold'>{billing.name} {billing.surname}</p>
-                <p>{billing.address}</p>
-                <p>{billing.city}</p>
-                <p>{billing.zip}</p>
-                <p>{billing.country}</p>
+                <p className='font-bold'>{address.name} {address.surname}</p>
+                <p>{address.address}</p>
+                <p>{address.city}</p>
+                <p>{address.zip}</p>
+                <p>{address.country}</p>
 
                 <div className='my-4 h-px bg-gray-200' />
 
-                <p>{billing.phone}</p>
-                <p>{billing.email}</p>
+                <p>{address.phone}</p>
+                <p>{address.email}</p>
             </div>
         </>
     )
 }
 
 Billing.propTypes = {
-    billing: PropTypes.object.isRequired,
+    address: PropTypes.object.isRequired,
     onClick: PropTypes.func.isRequired,
 }
 

@@ -9,16 +9,16 @@ import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
 import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
-const CheckoutPanels = ({ loading, loaded, error, data }) => {
-    console.log('aaaa', loading, loaded, error, data)
+const CheckoutPanels = ({ app, loading, loaded, error, data, countries }) => {
+    console.log('aaaa', loading, loaded, error, data, countries)
     const [previousData, setPreviousData] = useState(null)
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
     const [checkoutDetails, setCheckoutDetails] = useState({
-        delivery: {},
+        shipping: {},
         billing: {},
-        isBillingSameAsDelivery: true,
+        isBillingSameAsShipping: true,
         payment: '',
     })
 
@@ -62,10 +62,12 @@ const CheckoutPanels = ({ loading, loaded, error, data }) => {
                 <>
                     <div>Oops! Error on our side: {error.message}. Sorry!</div>
                     <Panels
+                        app={app}
                         loading={loading}
                         loaded={loaded}
                         error={error}
                         data={previousData}
+                        countries={countries}
                         steps={steps}
                         current={current}
                         setCurrent={setCurrent}
@@ -76,9 +78,11 @@ const CheckoutPanels = ({ loading, loaded, error, data }) => {
 
             {/*// this one is `.isComplete()`*/}
             {loaded && !error && <Panels
+                app={app}
                 loading={loading}
                 loaded={loaded}
                 error={error}
+                countries={countries}
                 data={data}
                 steps={steps}
                 current={current}
@@ -91,6 +95,7 @@ const CheckoutPanels = ({ loading, loaded, error, data }) => {
 
 CheckoutPanels.propTypes = {
     data: PropTypes.object.isRequired,
+    countries: PropTypes.array.isRequired,
 }
 
 export default CheckoutPanels
