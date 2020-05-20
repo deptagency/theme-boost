@@ -9,7 +9,7 @@ import Payments from './Payments'
 import ProductList from './ProductList'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const FullCart = ({ items, sum, intl }) => {
+const FullCart = ({ intl, items, sum, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'cart.checkout' })
 
     return (
@@ -18,7 +18,12 @@ const FullCart = ({ items, sum, intl }) => {
             leftColumn={
                 <div className=''>
                     <div className='md:hidden border-b-4 border-gray-100'>
-                        <MiniSummary sum={sum} label={buttonLabel} onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout') }} />
+                        <MiniSummary
+                            isLoading={isLoading}
+                            sum={sum}
+                            label={buttonLabel}
+                            onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout') }}
+                        />
                     </div>
 
                     <div className='md:shadow-md md:rounded'>
@@ -45,7 +50,12 @@ const FullCart = ({ items, sum, intl }) => {
 
             rightColumn={
                 <div className='p-4 border-b-4 border-gray-100 md:border-0 md:shadow-md md:rounded'>
-                    <Summary sum={sum} label={buttonLabel} onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout') }} />
+                    <Summary
+                        isLoading={isLoading}
+                        sum={sum}
+                        label={buttonLabel}
+                        onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout') }}
+                    />
                 </div>
             }
         />
@@ -56,6 +66,7 @@ FullCart.propTypes = {
     intl: intlShape.isRequired,
     items: PropTypes.array.isRequired,
     sum: PropTypes.number.isRequired,
+    isLoading: PropTypes.bool,
 }
 
 export default injectIntl(FullCart)

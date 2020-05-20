@@ -34,6 +34,10 @@ module.exports = {
                 'fix-120px': '120px',
                 'fix-240px': '240px',
                 'full-84px': 'calc(100vh - 84px)',
+                'cart-loader':  'calc(100vh - 280px)',
+                'cart-loader-md':  'calc(100vh - 184px)',
+                'cart-loader-lg':  'calc(100vh - 405px)',
+                'checkout-loader':  'calc(100vh - 146px)'
             },
             inset: {
                 full: '100%',

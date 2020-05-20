@@ -21,5 +21,6 @@
 
 // hiding broken loader for now
 .u-fade {
+    // Hiding loader from Catwalk, as we're using the custom one
     @apply hidden
 }

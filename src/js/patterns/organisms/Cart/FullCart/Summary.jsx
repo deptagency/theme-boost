@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
+import LoaderButton from 'Molecules/Loaders/LoaderButton/index'
 import Price from 'Atoms/price'
 import Button from 'Atoms/button'
 
-const Summary = ({ sum, subtotal = '', disabled = false, onClick, label, showVouchers = true }) => {
+const Summary = ({ sum, subtotal = '', disabled = false, isLoading, onClick, label, showVouchers = true }) => {
     return (
         <section>
             <div className='mb-4 grid grid-cols-2 col-gap-6 row-gap-2'>
@@ -38,8 +39,8 @@ const Summary = ({ sum, subtotal = '', disabled = false, onClick, label, showVou
                 </p>
             </div>
 
-            <Button variant='btn btn-indigo w-full h-10' onClick={onClick} disabled={disabled}>
-                {label}
+            <Button variant='btn btn-indigo w-full h-10' onClick={onClick} disabled={disabled || isLoading}>
+                {isLoading ? <LoaderButton /> : label}
             </Button>
 
             {showVouchers &&
@@ -58,6 +59,7 @@ Summary.propTypes = {
     label: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     showVouchers: PropTypes.bool,
+    isLoading: PropTypes.bool.isRequired,
 }
 
 export default ComponentInjector.return('Summary', Summary)

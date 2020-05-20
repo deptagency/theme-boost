@@ -1,15 +1,15 @@
 import React from 'react'
 
-import FullCartLoader from './index'
+import DefaultLoader from './index'
 
 export default {
     title: 'Loader',
 }
 
-export const fullCart = () => {
+export const defaultLoaderBig = () => {
     return (
         <div>
-            <FullCartLoader />
+            <DefaultLoader />
         </div>
     )
 }
