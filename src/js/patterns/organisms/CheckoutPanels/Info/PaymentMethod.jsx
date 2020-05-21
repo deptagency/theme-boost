@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
 
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 
-const PaymentMethod = ({ payment, onClick }) => {
+const PaymentMethod = ({ payments, onClick }) => {
     return (
         <>
             <div className='mb-3 flex items-center justify-between'>
@@ -17,13 +18,21 @@ const PaymentMethod = ({ payment, onClick }) => {
                 </span>
             </div>
 
-            <div className='text-md text-gray-800 leading-tight'>{payment}</div>
+            <div className='text-md text-gray-800 leading-tight'>
+                {payments.map((payment, index) => {
+                    return (
+                        <span key={index} className={classnames({ 'mt-8': index > 0 })}>
+                            {payment.paymentMethod}
+                        </span>
+                    )
+                })}
+            </div>
         </>
     )
 }
 
 PaymentMethod.propTypes = {
-    payment: PropTypes.string.isRequired,
+    payments: PropTypes.array.isRequired,
     onClick: PropTypes.func.isRequired,
 }
 

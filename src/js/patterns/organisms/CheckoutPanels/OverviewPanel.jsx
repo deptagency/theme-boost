@@ -11,7 +11,7 @@ import OrderButton from './Info/OrderButton'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const OverviewPanel = ({ app, intl, data, goToPanelIndex, checkoutDetails }) => {
+const OverviewPanel = ({ app, intl, data, countries, goToPanelIndex }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.placeOrder' })
 
     const placeOrderClicked = () => {
@@ -32,13 +32,25 @@ const OverviewPanel = ({ app, intl, data, goToPanelIndex, checkoutDetails }) => 
                             <Products products={data.lineItems} />
                         </div>
                         <div className='px-4 py-5 md:px-6 border-b-4 border-gray-100'>
-                            <Shipping address={checkoutDetails.shipping} onClick={() => { goToPanelIndex(0) }} />
+                            {data.shippingAddress &&
+                                <Shipping
+                                    address={data.shippingAddress}
+                                    countries={countries}
+                                    onClick={() => { goToPanelIndex(0) }}
+                                />
+                            }
                         </div>
                         <div className='px-4 py-5 md:px-6 border-b-4 border-gray-100'>
-                            <Billing address={checkoutDetails.isBillingSameAsShipping ? checkoutDetails.shipping : checkoutDetails.billing} onClick={() => { goToPanelIndex(0) }} />
+                            {data.billingAddress &&
+                                <Billing
+                                    address={data.billingAddress}
+                                    countries={countries}
+                                    onClick={() => { goToPanelIndex(0) }}
+                                />
+                            }
                         </div>
                         <div className='px-4 py-5 md:px-6 border-b-4 md:border-b-0 border-gray-100'>
-                            <PaymentMethod payment={checkoutDetails.payment} onClick={() => { goToPanelIndex(1) }} />
+                            <PaymentMethod payments={data.payments} onClick={() => { goToPanelIndex(1) }} />
                         </div>
                     </div>
                 }
@@ -48,7 +60,6 @@ const OverviewPanel = ({ app, intl, data, goToPanelIndex, checkoutDetails }) => 
                         <Summary
                             sum={data.sum}
                             label={buttonLabel}
-                            disabled={false}
                             showVouchers={false}
                             onClick={placeOrderClicked}
                         />
@@ -63,8 +74,8 @@ OverviewPanel.propTypes = {
     app: PropTypes.object.isRequired,
     intl: intlShape.isRequired,
     data: PropTypes.object.isRequired,
+    countries: PropTypes.array.isRequired,
     goToPanelIndex: PropTypes.func.isRequired,
-    checkoutDetails: PropTypes.object,
 }
 
 export default injectIntl(OverviewPanel)

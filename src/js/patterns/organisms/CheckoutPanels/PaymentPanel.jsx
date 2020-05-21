@@ -1,35 +1,37 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { injectIntl, intlShape } from 'react-intl'
-import _ from 'lodash'
+import { v4 as uuidv4 } from 'uuid'
 
 import PaymentMethodForm from './Forms/PaymentMethod'
 
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const PaymentPanel = ({ app, intl, data, goToNextPanel, checkoutDetails, setCheckoutDetails }) => {
+const PaymentPanel = ({ app, intl, data, goToNextPanel }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextOverview' })
 
-    const [ id ] = useState(() => { return _.uniqueId('invoice-') })
+    const [payment, setPayment] = useState(data.payments.length ? data.payments[data.payments.length - 1] : null)
 
     const isValid = () => {
-        return checkoutDetails.payment
+        return payment
     }
 
-    const addInvoicePayment = () => {
-        if (isValid()) {
+    const addPayment = () => {
+        if (!data.payments.length) {
+            // TODO BE API should accept payment method
             app.getLoader('cart')
                 .addPayment({
-                    paymentId: id,
+                    paymentId: uuidv4(),
                 })
-                .then((info) => {
-                    console.log('... info ...', info, data)
+                .then(() => {
                     goToNextPanel()
                 })
                 .catch((error) => {
                     console.log('Payment invoice error', error)
                 })
+        } else {
+            goToNextPanel()
         }
     }
 
@@ -40,12 +42,10 @@ const PaymentPanel = ({ app, intl, data, goToNextPanel, checkoutDetails, setChec
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
                         <div className='px-4 py-5 md:px-6 border-b-4 md:border-b-0 border-t-4 md:border-t-0 border-gray-100'>
-                            <PaymentMethodForm onSubmit={(payment) => {
-                                setCheckoutDetails({
-                                    ...checkoutDetails,
-                                    payment: payment,
-                                })
-                            }} />
+                            <PaymentMethodForm
+                                defaultValues={payment}
+                                onSubmit={payment => { return setPayment(payment) }}
+                            />
                         </div>
                     </div>
                 }
@@ -57,7 +57,7 @@ const PaymentPanel = ({ app, intl, data, goToNextPanel, checkoutDetails, setChec
                             label={buttonLabel}
                             disabled={!isValid()}
                             showVouchers={false}
-                            onClick={addInvoicePayment}
+                            onClick={addPayment}
                         />
                     </div>
                 }
@@ -71,8 +71,6 @@ PaymentPanel.propTypes = {
     intl: intlShape.isRequired,
     data: PropTypes.object.isRequired,
     goToNextPanel: PropTypes.func.isRequired,
-    checkoutDetails: PropTypes.object,
-    setCheckoutDetails: PropTypes.func.isRequired,
 }
 
 export default injectIntl(PaymentPanel)

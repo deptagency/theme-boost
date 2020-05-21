@@ -31,7 +31,7 @@ const Panels = forwardRef(({ steps, current, setCurrent, app, loading, data, cou
                 }}
             >
 
-                {steps.map(({ component: PanelComponent, name, checkoutDetails, setCheckoutDetails }, i) => {
+                {steps.map(({ component: PanelComponent, name }, i) => {
                     return (
                         <PanelComponent
                             key={i}
@@ -52,8 +52,6 @@ const Panels = forwardRef(({ steps, current, setCurrent, app, loading, data, cou
                             goToPreviousPanel={() => {
                                 goToPanel(current - 1)
                             }}
-                            checkoutDetails={checkoutDetails}
-                            setCheckoutDetails={setCheckoutDetails}
                         />
                     )
                 })}

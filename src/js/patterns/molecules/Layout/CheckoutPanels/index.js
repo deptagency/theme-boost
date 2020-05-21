@@ -16,31 +16,17 @@ const CheckoutPanels = ({ app, loading, loaded, error, data, countries }) => {
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
-    const [checkoutDetails, setCheckoutDetails] = useState({
-        shipping: {},
-        billing: {},
-        isBillingSameAsShipping: true,
-        payment: '',
-    })
-
     const steps = [
         {
             name: <FormattedMessage id='checkout.shipping' />,
             component: ShippingPanel,
-            checkoutDetails: checkoutDetails,
-            setCheckoutDetails: setCheckoutDetails,
         },
         {
             name: <FormattedMessage id='checkout.payment' />,
-            component: PaymentPanel,
-            checkoutDetails: checkoutDetails,
-            setCheckoutDetails: setCheckoutDetails,
-        },
+            component: PaymentPanel },
         {
             name: <FormattedMessage id='checkout.overview' />,
             component: OverviewPanel,
-            checkoutDetails: checkoutDetails,
-            setCheckoutDetails: setCheckoutDetails,
         },
     ]
 

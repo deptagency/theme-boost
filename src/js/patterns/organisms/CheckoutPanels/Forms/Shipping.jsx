@@ -6,11 +6,18 @@ import { useForm } from 'react-hook-form'
 
 import ErrorMessage from 'Atoms/errorMessage'
 
-const Shipping = ({ intl, countries, defaultValues = {}, onSubmit }) => {
+const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSubmit }) => {
     const validEmail = intl.formatMessage({ id: 'validation.email' })
     const requiredField = intl.formatMessage({ id: 'validation.required' })
 
-    const { register, errors, getValues } = useForm({ mode: 'onChange', defaultValues })
+    if (defaultEmail) {
+        defaultValues = {
+            ...defaultValues,
+            email: defaultEmail,
+        }
+    }
+
+    const { register, errors, getValues } = useForm({ mode: 'onChange', defaultValues: defaultValues || {} })
 
     const onChange = () => {
         onSubmit(getValues())
@@ -140,8 +147,8 @@ const Shipping = ({ intl, countries, defaultValues = {}, onSubmit }) => {
                     ref={register({ required: requiredField })}
                     >
                     <option value='' />
-                    {countries.map((country) => {
-                        return (<option value={country.code}>{country.name}</option>)
+                    {countries.map(country => {
+                        return (<option key={country.code} value={country.code}>{country.name}</option>)
                     })}
                 </select>
 
@@ -155,6 +162,7 @@ Shipping.propTypes = {
     intl: PropTypes.object.isRequired,
     countries: PropTypes.array.isRequired,
     defaultValues: PropTypes.object,
+    defaultEmail: PropTypes.string,
     onSubmit: PropTypes.func.isRequired,
 }
 

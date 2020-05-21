@@ -1,10 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
+import _ from 'lodash'
 
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 
-const Billing = ({ address, onClick }) => {
+const Billing = ({ address, countries, onClick }) => {
+    const country = _.find(countries, c => { return c.code === address.country })
+
     return (
         <>
             <div className='mb-3 flex items-center justify-between'>
@@ -18,11 +21,11 @@ const Billing = ({ address, onClick }) => {
             </div>
 
             <div className='text-md text-gray-800 leading-tight'>
-                <p className='font-bold'>{address.name} {address.surname}</p>
-                <p>{address.address}</p>
+                <p className='font-bold'>{address.firstName} {address.lastName}</p>
+                <p>{address.streetName}</p>
                 <p>{address.city}</p>
-                <p>{address.zip}</p>
-                <p>{address.country}</p>
+                <p>{address.postalCode}</p>
+                <p>{country.name}</p>
 
                 <div className='my-4 h-px bg-gray-200' />
 
@@ -35,6 +38,7 @@ const Billing = ({ address, onClick }) => {
 
 Billing.propTypes = {
     address: PropTypes.object.isRequired,
+    countries: PropTypes.array.isRequired,
     onClick: PropTypes.func.isRequired,
 }
 
