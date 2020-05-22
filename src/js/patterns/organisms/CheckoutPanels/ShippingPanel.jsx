@@ -10,9 +10,7 @@ import BillingForm from './Forms/Billing'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const ShippingPanel = ({ app, intl, loading, loaded, error, data, countries, goToNextPanel, updateHeight }) => {
-    console.log('*&^', loading, loaded, error, data, countries)
-
+const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextPayment' })
     const billingDetailsLabel = intl.formatMessage({ id: 'checkout.billingDetailsLabel' })
 
@@ -72,10 +70,6 @@ const ShippingPanel = ({ app, intl, loading, loaded, error, data, countries, goT
                 })
         }
     }
-
-    if (loading) { return <div>... Loading ...</div> }
-
-    if (error) { return `Error ${error.message}` }
 
     return (
         <div>

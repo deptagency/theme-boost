@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
@@ -9,10 +9,8 @@ import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
 import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
-const CheckoutPanels = ({ app, loading, loaded, error, data, countries }) => {
-    console.log('aaaa', loading, loaded, error, data, countries)
-
-    const [previousData, setPreviousData] = useState(null)
+const CheckoutPanels = ({ app, data, countries }) => {
+    // const [previousData, setPreviousData] = useState(null)
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
@@ -30,11 +28,10 @@ const CheckoutPanels = ({ app, loading, loaded, error, data, countries }) => {
         },
     ]
 
-    useEffect(() => {
+    /* useEffect(() => {
         if (data !== null) { setPreviousData(data) }
-    }, [data])
+    }, [data]) */
 
-    console.log('previousData: ', previousData)
     return (
         <>
             <Stepper
@@ -43,37 +40,15 @@ const CheckoutPanels = ({ app, loading, loaded, error, data, countries }) => {
                 setCurrent={setCurrent}
                 ref={ts}
             />
-            {loading && <div>Loading</div>}
-            {error &&
-                <>
-                    <div>Oops! Error on our side: {error.message}. Sorry!</div>
-                    <Panels
-                        app={app}
-                        loading={loading}
-                        loaded={loaded}
-                        error={error}
-                        data={previousData}
-                        countries={countries}
-                        steps={steps}
-                        current={current}
-                        setCurrent={setCurrent}
-                        ref={ts}
-                    />
-                </>}
-
-            {/* // this one is `.isComplete()` */}
-            {loaded && !error && <Panels
+            <Panels
                 app={app}
-                loading={loading}
-                loaded={loaded}
-                error={error}
                 countries={countries}
                 data={data}
                 steps={steps}
                 current={current}
                 setCurrent={setCurrent}
                 ref={ts}
-            />}
+            />
         </>
     )
 }
