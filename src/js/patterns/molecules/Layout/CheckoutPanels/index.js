@@ -10,7 +10,6 @@ import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
 const CheckoutPanels = ({ app, data, countries }) => {
-    // const [previousData, setPreviousData] = useState(null)
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
@@ -27,10 +26,6 @@ const CheckoutPanels = ({ app, data, countries }) => {
             component: OverviewPanel,
         },
     ]
-
-    /* useEffect(() => {
-        if (data !== null) { setPreviousData(data) }
-    }, [data]) */
 
     return (
         <>
