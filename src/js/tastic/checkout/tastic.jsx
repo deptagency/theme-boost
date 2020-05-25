@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import app from '@frontastic/catwalk/src/js/app/app'
 import Entity from '@frontastic/catwalk/src/js/app/entity'
 
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
@@ -13,7 +14,13 @@ const CheckoutTastic = ({ cart, data }) => {
 
     if (cart.loaded) {
         if (cart.data && data.countries) {
-            return <CheckoutPanels data={cart.data} countries={data.countries} />
+            return (
+                <CheckoutPanels
+                    app={app}
+                    data={cart.data}
+                    countries={data.countries}
+                />
+            )
         }
 
         if (cart.error) {
