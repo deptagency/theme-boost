@@ -7,8 +7,6 @@ import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
 const CheckoutTastic = ({ cart, data }) => {
-    // return <DefaultLoader variant='checkout' />
-
     if (cart.loading) {
         return <DefaultLoader variant='checkout' />
     }

@@ -7,8 +7,6 @@ import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 import Cart from 'Organisms/Cart'
 
 const CartTastic = ({ cart }) => {
-    // return <DefaultLoader variant='cart' />
-
     if (cart.loading) {
         if (!cart.data) { return <DefaultLoader variant='cart' /> } else { return <Cart isLoading data={cart.data} /> }
     }
