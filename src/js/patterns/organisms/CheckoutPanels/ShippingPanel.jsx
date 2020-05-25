@@ -65,9 +65,6 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                 .then(() => {
                     goToNextPanel()
                 })
-                .catch((error) => {
-                    console.log('*** error ...', error)
-                })
         }
     }
 
