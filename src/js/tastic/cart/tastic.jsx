@@ -11,14 +11,8 @@ const CartTastic = ({ cart }) => {
         if (!cart.data) { return <DefaultLoader variant='cart' /> } else { return <Cart isLoading data={cart.data} /> }
     }
 
-    if (cart.loaded) {
-        if (cart.data) {
-            return <Cart data={cart.data} />
-        }
-
-        if (cart.error) {
-            return <div>Error component here</div>
-        }
+    if (cart.isComplete()) {
+        return <Cart data={cart.data} />
     }
 }
 
