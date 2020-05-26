@@ -1,20 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import { ErrorMessage as Message } from 'react-hook-form'
 
+import './style.scss'
+
 const ErrorMessage = ({ errors, name, as = 'div' }) => {
+    const slideDown = 'slideDown 0.4s'
+
     return (
-        <>
+        <div style={{ animation: errors[name] ? slideDown : 'none' }}>
             {errors[name] &&
-                <Message
-                    className='mt-1 text-sm text-red-600 leading-tight'
-                    errors={errors}
-                    name={name}
-                    as={as}
-                />
+                <div style={{ animation: slideDown }}>
+                    <div className='w-0 h-0 border-l-4 border-r-4 border-b-4 border-x-transparent border-bottom-solid border-bottom-red-500 mt-1 ml-10' />
+                    <Message
+                        className='text-sm text-white bg-red-500 p-2 leading-tight rounded w-auto inline-block'
+                        errors={errors}
+                        name={name}
+                        as={as}
+                    />
+                </div>
             }
-        </>
+        </div>
     )
 }
 

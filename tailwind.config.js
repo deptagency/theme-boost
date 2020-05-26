@@ -109,6 +109,16 @@ module.exports = {
                 '.bg-transparent-50': {
                     backgroundColor: 'rgba(253, 250, 250, 0.5)'
                 },
+                '.border-bottom-solid': {
+                    borderBottomStyle: 'solid',
+                },
+                '.border-bottom-red-500': {
+                    borderBottomColor: '#f56565',
+                },
+                '.border-x-transparent': {
+                    borderLeftColor: 'transparent',
+                    borderRightColor: 'transparent'
+                },
                 '.justify-self-center': {
                     justifySelf: 'center',
                 },
