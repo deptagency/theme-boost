@@ -26,9 +26,10 @@ module.exports = {
                 '120-1xfr': '120px 1fr',
                 '120-2xfr': '120px 1fr 1fr',
                 '1.25rem-1fr-1.25rem-1fr-1.25rem': '1.25rem 1fr 1.25rem 1fr 1.25rem',
+                'auto-1fr-auto': 'auto 1fr auto'
             },
             gridTemplateRows: {
-                'auto-1fr': 'auto 1fr',
+                'auto-1fr': 'auto 1fr'
             },
             height: {
                 'fix-120px': '120px',

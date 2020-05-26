@@ -24,3 +24,17 @@
     // Hiding loader from Catwalk, as we're using the custom one
     @apply hidden
 }
+
+.s-node, .s-preview {
+    // There is no tailwindcss class for
+    // grid-template-rows: auto 1fr auto;
+    // and @apply can't be used with custom class
+    // so here we have to use plain css
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+}
+
+.c-page-foot {
+    @apply row-start-3 row-end-4
+}
