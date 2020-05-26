@@ -34,10 +34,6 @@ module.exports = {
                 'fix-120px': '120px',
                 'fix-240px': '240px',
                 'full-84px': 'calc(100vh - 84px)',
-                'cart-loader':  'calc(100vh - 280px)',
-                'cart-loader-md':  'calc(100vh - 184px)',
-                'cart-loader-lg':  'calc(100vh - 405px)',
-                'checkout-loader':  'calc(100vh - 146px)'
             },
             inset: {
                 full: '100%',
@@ -110,6 +106,9 @@ module.exports = {
     plugins: [
         plugin(function({ addUtilities }) {
             const utilities = {
+                '.bg-transparent-50': {
+                    backgroundColor: 'rgba(253, 250, 250, 0.5)'
+                },
                 '.justify-self-center': {
                     justifySelf: 'center',
                 },

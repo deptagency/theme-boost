@@ -1,18 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import './style.scss'
 
-const DefaultLoader = ({ variant }) => {
+const DefaultLoader = () => {
     return (
-        <div>
-            {/* <div className={`loading h-${variant}-loader md:h-${variant}-loader-md lg:h-${variant}-loader-lg`}> */}
-            <div className='loading-catwalk' />
+        <div className='grid absolute inset-0 bg-transparent-50'>
+            <div className='loading-full-screen flex self-center justify-center' />
         </div>
     )
-}
-
-DefaultLoader.propTypes = {
-    variant: PropTypes.oneOf(['cart', 'checkout']).isRequired,
 }
 
 export default DefaultLoader

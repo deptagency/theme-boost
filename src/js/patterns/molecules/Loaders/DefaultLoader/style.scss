@@ -1,12 +1,4 @@
-.loading {
-  @apply flex justify-center
-}
-
-.loading-catwalk {
-  @apply self-center
-}
-
-.loading-catwalk:after {
+.loading-full-screen:after {
   content: " ";
   display: block;
   width: 64px;
@@ -15,9 +7,9 @@
   border-radius: 50%;
   border: 6px solid #667EEA;
   border-color: #667EEA transparent #667EEA transparent;
-  animation: loading-catwalk 1.5s linear infinite;
+  animation: loading-full-screen 1.5s linear infinite;
 }
-  @keyframes loading-catwalk {
+  @keyframes loading-full-screen {
     0% {
       transform: rotate(0deg);
     }
