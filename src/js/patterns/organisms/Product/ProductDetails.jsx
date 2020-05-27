@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ProductImages from './ProductImages'
 import ProductData from './ProductData'
 
-const ProductDetails = ({ product }) => {
+const ProductDetails = ({ product, addToCart }) => {
     const [selectedVariantIndex, setSelectedVariantIndex] = useState(0)
     const selectedVariant = product.variants[selectedVariantIndex]
 
@@ -15,6 +15,7 @@ const ProductDetails = ({ product }) => {
                 variants={product.variants}
                 selectedVariant={selectedVariant}
                 onChange={setSelectedVariantIndex}
+                addToCart={addToCart}
             />
         </div>
     )
@@ -22,6 +23,7 @@ const ProductDetails = ({ product }) => {
 
 ProductDetails.propTypes = {
     product: PropTypes.object.isRequired,
+    addToCart: PropTypes.func.isRequired,
 }
 
 export default ProductDetails
