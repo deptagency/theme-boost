@@ -14,6 +14,9 @@ import ProductListingPageTastic from './product-listing/product-listing-page/tas
 import HorizontalSpacerTastic from './helpers/horizontal-spacer/tastic'
 import FeatureServiceTastic from './content/feature-service/tastic'
 import Footer from './footer/tastic'
+import AccountAccessTastic from './account/access/tastic'
+import AccountConfirmTastic from './account/confirm/tastic'
+import AccountProfileTastic from './account/profile/tastic'
 
 export default (() => {
     return {
@@ -33,5 +36,8 @@ export default (() => {
         'frontastic/boost/checkout-success': CheckoutSuccessTastic,
         'frontastic/boost/checkout-header': CheckoutHeaderTastic,
         'frontastic/boost/checkout-footer': CheckoutFooterTastic,
+        'frontastic/boost/account/access': AccountAccessTastic,
+        'frontastic/boost/account/confirm': AccountConfirmTastic,
+        'frontastic/boost/account/profile': AccountProfileTastic,
     }
 })()

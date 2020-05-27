@@ -94,7 +94,6 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                                         value={isBillingSameAsShipping}
                                         onClick={() => {
                                             updateHeight()
-
                                             setBillingIsSameAsShipping(!isBillingSameAsShipping)
                                         }}
                                     />
