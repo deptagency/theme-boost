@@ -11,7 +11,7 @@ import OrderButton from './Info/OrderButton'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const OverviewPanel = ({ app, intl, data, countries, goToPanelIndex }) => {
+const OverviewPanel = ({ app, intl, data, countries, goToPanelIndex, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.placeOrder' })
 
     const placeOrderClicked = () => {
@@ -59,6 +59,7 @@ const OverviewPanel = ({ app, intl, data, countries, goToPanelIndex }) => {
                     <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded'>
                         <Summary
                             sum={data.sum}
+                            isLoading={isLoading}
                             label={buttonLabel}
                             showVouchers={false}
                             onClick={placeOrderClicked}
@@ -76,6 +77,7 @@ OverviewPanel.propTypes = {
     data: PropTypes.object.isRequired,
     countries: PropTypes.array.isRequired,
     goToPanelIndex: PropTypes.func.isRequired,
+    isLoading: PropTypes.bool,
 }
 
 export default injectIntl(OverviewPanel)
