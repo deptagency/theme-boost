@@ -26,13 +26,7 @@
 }
 
 .s-node, .s-preview {
-    // There is no tailwindcss class for
-    // grid-template-rows: auto 1fr auto;
-    // and @apply can't be used with custom class
-    // so here we have to use plain css
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100%;
+    @apply grid grid-rows-auto-1fr-auto min-h-full
 }
 
 .c-page-foot {

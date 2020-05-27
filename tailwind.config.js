@@ -28,7 +28,8 @@ module.exports = {
                 '1.25rem-1fr-1.25rem-1fr-1.25rem': '1.25rem 1fr 1.25rem 1fr 1.25rem',
             },
             gridTemplateRows: {
-                'auto-1fr': 'auto 1fr'
+                'auto-1fr': 'auto 1fr',
+                'auto-1fr-auto': 'auto 1fr auto'
             },
             height: {
                 'fix-120px': '120px',
