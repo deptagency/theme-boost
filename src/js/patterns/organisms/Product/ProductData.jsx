@@ -20,7 +20,7 @@ import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.s
 import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
 
 const ProductData = ({ name, variants, selectedVariant, onChange, addToCart }) => {
-    /* preventing showing loader on initial page load */
+    /* preventing showing LoaderButton on initial page load */
     const [showLoader, setShowLoader] = useState(false)
     const isLoading = useSelector((globalState) => {
         return globalState.cart && globalState.cart.cart.loading
