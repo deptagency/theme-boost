@@ -1,0 +1,18 @@
+@keyframes slideDown {
+  0% {
+    transform: scaleY(0);
+    height: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    height: 32px;
+  }
+}
+
+.arrow-up-red-500 {
+  @apply w-0 h-0 border-l-4 border-r-4 border-b-4 border-x-transparent border-bottom-solid border-bottom-red-500 mt-1 ml-10
+}
+
+.error-message-text-red-500 {
+  @apply text-sm text-white bg-red-500 p-2 leading-tight rounded w-auto inline-block
+}
