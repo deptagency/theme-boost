@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
-import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 import MarginBreakout from 'Molecules/Layout/MarginBreakout'
 import LoaderButton from 'Molecules/Loaders/LoaderButton'
@@ -21,10 +22,10 @@ import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh
 const ProductData = ({ name, variants, selectedVariant, onChange, addToCart }) => {
     /* preventing showing loader on initial page load */
     const [showLoader, setShowLoader] = useState(false)
-
     const isLoading = useSelector((globalState) => {
         return globalState.cart && globalState.cart.cart.loading
     })
+    let loading = showLoader && isLoading
 
     return (
         <div className='mt-4 md:mt-6'>
@@ -52,15 +53,18 @@ const ProductData = ({ name, variants, selectedVariant, onChange, addToCart }) =
 
             <div className='flex pb-6'>
                 <Button
-                    variant='btn bg-indigo-500 text-white w-full pt-2 h-10 lg:mr-4'
+                    variant={classnames({
+                        'btn bg-indigo-500 text-white w-full pt-2 h-10 lg:mr-4': true,
+                        'cursor-default': loading,
+                    })}
                     onClick={() => {
                         setShowLoader(true)
                         addToCart(selectedVariant)
                             .then(() => { return setShowLoader(false) })
                     }}
-                    disabled={showLoader && isLoading}
+                    disabled={loading}
                 >
-                    {showLoader && isLoading ? <LoaderButton /> : <FormattedMessage id='inCartProduct' />}
+                    {loading ? <LoaderButton /> : <FormattedMessage id='inCartProduct' />}
                 </Button>
                 <IconButton variant='text-icon-size hidden lg:block' icon={<IconHeartBorder />} />
             </div>
