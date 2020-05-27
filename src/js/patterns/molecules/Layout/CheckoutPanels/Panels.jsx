@@ -5,7 +5,7 @@ import { stepObject } from './stepObject'
 import TinySlider from 'tiny-slider-react'
 import './index.scss'
 
-const Panels = forwardRef(({ steps, current, setCurrent, app, data, countries }, ts) => {
+const Panels = forwardRef(({ steps, current, setCurrent, app, data, countries, isLoading = false }, ts) => {
     const goToPanel = (panel) => {
         ts.current.slider.goTo(panel)
         setCurrent(panel)
@@ -51,6 +51,7 @@ const Panels = forwardRef(({ steps, current, setCurrent, app, data, countries },
                             goToPreviousPanel={() => {
                                 goToPanel(current - 1)
                             }}
+                            isLoading={isLoading}
                         />
                     )
                 })}
@@ -67,6 +68,7 @@ Panels.propTypes = {
     setCurrent: PropTypes.func.isRequired,
     data: PropTypes.object.isRequired,
     countries: PropTypes.array.isRequired,
+    isLoading: PropTypes.bool,
 }
 
 export default Panels

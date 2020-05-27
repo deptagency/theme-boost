@@ -9,7 +9,18 @@ import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
 const CheckoutTastic = ({ cart, data }) => {
     if (cart.loading) {
-        return <DefaultLoader />
+        if (!cart.data || !data.countries) {
+            return <DefaultLoader />
+        } else {
+            return (
+                <CheckoutPanels
+                    isLoading
+                    app={app}
+                    data={cart.data}
+                    countries={data.countries}
+                />
+            )
+        }
     }
 
     if (cart.loaded) {

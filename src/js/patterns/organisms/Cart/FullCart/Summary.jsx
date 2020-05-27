@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -39,7 +40,14 @@ const Summary = ({ sum, subtotal = '', disabled = false, isLoading = false, onCl
                 </p>
             </div>
 
-            <Button variant='btn btn-indigo w-full h-10' onClick={onClick} disabled={disabled || isLoading}>
+            <Button
+                variant={classnames({
+                    'btn btn-indigo w-full h-10': true,
+                    'cursor-default': isLoading || disabled,
+                })}
+                onClick={onClick}
+                disabled={disabled || isLoading}
+            >
                 {isLoading ? <LoaderButton /> : label}
             </Button>
 

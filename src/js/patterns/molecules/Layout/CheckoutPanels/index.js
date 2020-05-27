@@ -9,7 +9,7 @@ import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
 import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
-const CheckoutPanels = ({ app, data, countries }) => {
+const CheckoutPanels = ({ app, data, countries, isLoading = false }) => {
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
@@ -43,6 +43,7 @@ const CheckoutPanels = ({ app, data, countries }) => {
                 current={current}
                 setCurrent={setCurrent}
                 ref={ts}
+                isLoading={isLoading}
             />
         </>
     )
@@ -52,6 +53,7 @@ CheckoutPanels.propTypes = {
     app: PropTypes.object.isRequired,
     data: PropTypes.object.isRequired,
     countries: PropTypes.array.isRequired,
+    isLoading: PropTypes.bool,
 }
 
 export default CheckoutPanels
