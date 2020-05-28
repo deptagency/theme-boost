@@ -6,16 +6,22 @@ import Entity from '@frontastic/catwalk/src/js/app/entity'
 import emptyEntity from '@frontastic/catwalk/src/js/helper/emptyEntity'
 
 import CheckoutSuccess from 'Molecules/CheckoutSuccess'
+import CheckoutError from 'Molecules/CheckoutError'
 
 const CheckoutSuccessTastic = ({ order }) => {
-    if (order && order.data) {
+    if (order.isComplete()) {
         return <CheckoutSuccess
             id={order.data.orderId}
             email={order.data.email}
             onClick={() => { return app.getRouter().history.replace('/') }}
                 />
+    } else if (order.loaded && order.error) {
+        return <CheckoutError onClick={() => {
+            app.getRouter().replace('Frontastic.Frontend.Master.Checkout.checkout')
+        }} />
     } else {
-        return ''
+        app.getRouter().history.replace('/')
+        return null
     }
 }
 
