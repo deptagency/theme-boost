@@ -9,16 +9,15 @@ import CheckoutSuccess from 'Molecules/CheckoutSuccess'
 
 const CheckoutSuccessTastic = ({ order }) => {
     if (order && order.data) {
-        return <CheckoutSuccess 
-                    id={order.data.orderId} 
-                    email={order.data.email} 
-                    onClick={() => app.getRouter().history.replace('/') }
+        return <CheckoutSuccess
+            id={order.data.orderId}
+            email={order.data.email}
+            onClick={() => { return app.getRouter().history.replace('/') }}
                 />
     } else {
         return ''
     }
 }
-
 
 CheckoutSuccessTastic.defaultProps = {}
 

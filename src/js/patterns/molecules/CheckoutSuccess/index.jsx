@@ -38,7 +38,7 @@ const CheckoutSuccess = ({ id, email, onClick }) => {
 CheckoutSuccess.propTypes = {
     id: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
 }
 
 export default CheckoutSuccess
