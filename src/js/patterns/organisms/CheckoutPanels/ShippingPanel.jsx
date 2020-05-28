@@ -10,7 +10,7 @@ import BillingForm from './Forms/Billing'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight }) => {
+const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextPayment' })
     const billingDetailsLabel = intl.formatMessage({ id: 'checkout.billingDetailsLabel' })
 
@@ -118,6 +118,7 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                     <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-gray-100'>
                         <Summary
                             sum={data.sum}
+                            isLoading={isLoading}
                             label={buttonLabel}
                             disabled={!isValid()}
                             showVouchers={false}
@@ -137,6 +138,7 @@ ShippingPanel.propTypes = {
     countries: PropTypes.array.isRequired,
     goToNextPanel: PropTypes.func.isRequired,
     updateHeight: PropTypes.func.isRequired,
+    isLoading: PropTypes.bool,
 }
 
 export default injectIntl(ShippingPanel)

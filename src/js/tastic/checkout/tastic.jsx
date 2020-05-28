@@ -9,30 +9,41 @@ import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
 const CheckoutTastic = ({ cart, data }) => {
-    if (cart) {
-        if (cart.loading) {
-            return <DefaultLoader />
-        }
+    if (!cart) {
+        return ''
+    }
 
-        if (cart.loaded) {
-            if (cart.data && data.countries) {
-                return (
-                    <CheckoutPanels
-                        app={app}
-                        data={cart.data}
-                        countries={data.countries}
-                    />
-                )
-            }
+    if (cart.loading) {
+        if (!cart.data || !data.countries) {
+            return <DefaultLoader />
+        } else {
+            return (
+                <CheckoutPanels
+                    isLoading
+                    app={app}
+                    data={cart.data}
+                    countries={data.countries}
+                />
+            )
+        }
+    }
+
+    if (cart.loaded) {
+        if (cart.data && data.countries) {
+            return (
+                <CheckoutPanels
+                    app={app}
+                    data={cart.data}
+                    countries={data.countries}
+                />
+            )
         }
 
         if (cart.error) {
             return <CheckoutError onClick={() => {
-                    app.getRouter().replace('Frontastic.Frontend.Master.Checkout.checkout')
+                app.getRouter().replace('Frontastic.Frontend.Master.Checkout.checkout')
             }} />
         }
-    } else {
-        return ''
     }
 }
 

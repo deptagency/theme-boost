@@ -8,7 +8,7 @@ import PaymentMethodForm from './Forms/PaymentMethod'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const PaymentPanel = ({ app, intl, data, goToNextPanel }) => {
+const PaymentPanel = ({ app, intl, data, goToNextPanel, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextOverview' })
 
     const [payment, setPayment] = useState(data.payments.length ? data.payments[data.payments.length - 1] : null)
@@ -54,6 +54,7 @@ const PaymentPanel = ({ app, intl, data, goToNextPanel }) => {
                     <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded'>
                         <Summary
                             sum={data.sum}
+                            isLoading={isLoading}
                             label={buttonLabel}
                             disabled={!isValid()}
                             showVouchers={false}
@@ -71,6 +72,7 @@ PaymentPanel.propTypes = {
     intl: intlShape.isRequired,
     data: PropTypes.object.isRequired,
     goToNextPanel: PropTypes.func.isRequired,
+    isLoading: PropTypes.bool,
 }
 
 export default injectIntl(PaymentPanel)
