@@ -3,7 +3,7 @@ import Button from 'Atoms/button'
 import { ReactComponent as IconEmotionSad } from 'Icons/tailwind-icons/icon-emotion-sad.svg'
 
 export default {
-    title: 'Checkout Confirmation',
+    title: 'Checkout Status',
 }
 
 export const checkoutError = () => {
