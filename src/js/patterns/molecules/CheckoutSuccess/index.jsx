@@ -15,7 +15,7 @@ const CheckoutSuccess = ({ id, email, onClick }) => {
                     <FormattedMessage id='checkout.orderConfirmed' />
                 </p>
                 <p className='mt-2 text-sm font-bold'>
-                    Order ID: {id}
+                    <FormattedMessage id='checkout.orderId' /> {id}
                 </p>
                 <p className='mt-3 text-sm'>
                     <FormattedMessage id='checkout.orderConfirmation' />
