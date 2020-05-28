@@ -141,7 +141,7 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
                 </label>
                 <select id='shipping-country' name='country'
                     className={classnames({
-                        'form-input mt-2': true,
+                        'form-input mt-2 bg-white': true,
                         'border border-red-600': errors.country,
                     })}
                     ref={register({ required: requiredField })}

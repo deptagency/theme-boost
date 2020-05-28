@@ -13,7 +13,7 @@ const ColorSelector = ({ variants, onChange }) => {
                 <SelectVariant
                     values={variants}
                     variant='form-select'
-                    formatLabel={(option) => { return option.attributes.color.label }}
+                    formatLabel={(option) => { return option.attributes.color ? option.attributes.color.label : '' }}
                     onSelect={(i) => { return onChange(i) }}
                 />
             </div>

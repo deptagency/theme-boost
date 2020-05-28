@@ -106,7 +106,7 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
                 </label>
                 <select id='billing-country' name='country'
                     className={classnames({
-                        'form-input mt-2': true,
+                        'form-input mt-2 bg-white': true,
                         'border border-red-600': errors.country,
                     })}
                     ref={register({ required: requiredField })}
