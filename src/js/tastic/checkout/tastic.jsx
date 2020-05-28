@@ -28,22 +28,18 @@ const CheckoutTastic = ({ cart, data }) => {
         }
     }
 
-    if (cart.loaded) {
-        if (cart.data && data.countries) {
-            return (
-                <CheckoutPanels
-                    app={app}
-                    data={cart.data}
-                    countries={data.countries}
-                />
-            )
-        }
-
-        if (cart.error) {
-            return <CheckoutError onClick={() => {
-                app.getRouter().replace('Frontastic.Frontend.Master.Checkout.checkout')
-            }} />
-        }
+    if (cart.isComplete() && data.countries) {
+        return (
+            <CheckoutPanels
+                app={app}
+                data={cart.data}
+                countries={data.countries}
+            />
+        )
+    } else {
+        return <CheckoutError onClick={() => {
+            app.getRouter().replace('Frontastic.Frontend.Master.Checkout.checkout')
+        }} />
     }
 }
 
