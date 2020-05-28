@@ -44,7 +44,7 @@ const PaymentPanel = ({ app, intl, data, goToNextPanel, isLoading = false }) => 
                         <div className='px-4 py-5 md:px-6 border-b-4 md:border-b-0 border-t-4 md:border-t-0 border-gray-100'>
                             <PaymentMethodForm
                                 defaultValues={payment}
-                                onSubmit={payment => { return setPayment(payment) }}
+                                onSubmit={payment => setPayment(payment)}
                             />
                         </div>
                     </div>

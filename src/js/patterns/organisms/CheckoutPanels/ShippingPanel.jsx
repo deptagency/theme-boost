@@ -107,7 +107,7 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                                 <BillingForm intl={intl}
                                     countries={countries}
                                     defaultValues={data.billingAddress}
-                                    onSubmit={data => { return setBilling(data) }}
+                                    onSubmit={data => setBilling(data)}
                                 />
                             </div>
                         }
