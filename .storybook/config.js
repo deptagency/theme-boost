@@ -17,51 +17,43 @@ import de from 'frontastic-catwalk/src/js/app/i18n/de'
 addParameters({
     viewport: {
         viewports: {
-            full: {
-                name: 'Full',
-                styles: {
-                    width: '100%',
-                    height: '100%',
-                },
-            },
-            desk: {
-                name: 'Desk',
+            xi: {
+                name: 'xi',
                 styles: {
                     width: '1280px',
                     height: '100%',
                 },
             },
-            LapSmall: {
-                name: 'Lap Small',
+            lg: {
+                name: 'lg',
                 styles: {
-                    width: '769px',
+                    width: '1022px',
                     height: '100%',
                 },
             },
-            LapBig: {
-                name: 'Lap Big',
-                styles: {
-                    width: '1280px',
-                    height: '100%',
-                },
-            },
-            handSmall: {
-                name: 'Hand Small',
-                styles: {
-                    width: '360px',
-                    height: '800px',
-                    // height: '100%',
-                },
-            },
-            handBig: {
-                name: 'Hand Big',
+            md: {
+                name: 'md',
                 styles: {
                     width: '768px',
                     height: '100%',
                 },
             },
+            sm: {
+                name: 'sm',
+                styles: {
+                    width: '640px',
+                    height: '100%',
+                },
+            },
+            mobile: {
+                name: 'mobile',
+                styles: {
+                    width: '320px',
+                    height: '800px',
+                },
+            },
         },
-        defaultViewport: 'handSmall',
+        defaultViewport: 'mobile',
     },
 })
 

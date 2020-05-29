@@ -41,7 +41,7 @@
 
 
 .btn-outline {
-    @apply btn bg-transparent font-semibold border;
+    @apply btn bg-transparent font-semibold border-2;
 
     &:hover {
         @apply border-transparent;
