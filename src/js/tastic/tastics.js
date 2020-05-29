@@ -5,6 +5,7 @@ import TileTastic from './content/tile/tastic'
 import MainMenuTastic from './header/main-menu/tastic'
 import CartTastic from './cart/tastic'
 import CheckoutTastic from './checkout/tastic'
+import CheckoutSuccessTastic from './checkout-success/tastic'
 import CheckoutHeaderTastic from './checkout-header/tastic'
 import CheckoutFooterTastic from './checkout-footer/tastic'
 import ProductSlider from './product/product-slider/tastic'
@@ -29,6 +30,7 @@ export default (() => {
         'frontastic/boost/footer': Footer,
         'frontastic/boost/cart': CartTastic,
         'frontastic/boost/checkout': CheckoutTastic,
+        'frontastic/boost/checkout-success': CheckoutSuccessTastic,
         'frontastic/boost/checkout-header': CheckoutHeaderTastic,
         'frontastic/boost/checkout-footer': CheckoutFooterTastic,
     }

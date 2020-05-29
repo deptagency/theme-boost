@@ -4,10 +4,15 @@ import { connect } from 'react-redux'
 import app from '@frontastic/catwalk/src/js/app/app'
 import Entity from '@frontastic/catwalk/src/js/app/entity'
 
+import CheckoutError from 'Molecules/CheckoutError'
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
 const CheckoutTastic = ({ cart, data }) => {
+    if (!cart) {
+        return <DefaultLoader />
+    }
+
     if (cart.loading) {
         if (!cart.data || !data.countries) {
             return <DefaultLoader />
@@ -23,20 +28,18 @@ const CheckoutTastic = ({ cart, data }) => {
         }
     }
 
-    if (cart.loaded) {
-        if (cart.data && data.countries) {
-            return (
-                <CheckoutPanels
-                    app={app}
-                    data={cart.data}
-                    countries={data.countries}
-                />
-            )
-        }
-
-        if (cart.error) {
-            return <div>Error component here</div>
-        }
+    if (cart.isComplete() && data.countries) {
+        return (
+            <CheckoutPanels
+                app={app}
+                data={cart.data}
+                countries={data.countries}
+            />
+        )
+    } else {
+        return <CheckoutError onClick={() => {
+            app.getRouter().replace('Frontastic.Frontend.Master.Checkout.checkout')
+        }} />
     }
 }
 
@@ -44,7 +47,7 @@ CheckoutTastic.defaultProps = {}
 
 CheckoutTastic.propTypes = {
     data: PropTypes.object.isRequired,
-    cart: PropTypes.instanceOf(Entity).isRequired,
+    cart: PropTypes.instanceOf(Entity),
 }
 
 export default connect((globalState) => {

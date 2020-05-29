@@ -116,8 +116,8 @@ module.exports = {
                 '.border-bottom-solid': {
                     borderBottomStyle: 'solid',
                 },
-                '.border-bottom-red-500': {
-                    borderBottomColor: '#f56565',
+                '.border-bottom-red-700': {
+                    borderBottomColor: '#c53030',
                 },
                 '.border-x-transparent': {
                     borderLeftColor: 'transparent',

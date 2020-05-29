@@ -27,9 +27,6 @@ const PaymentPanel = ({ app, intl, data, goToNextPanel, isLoading = false }) => 
                 .then(() => {
                     goToNextPanel()
                 })
-                .catch((error) => {
-                    console.log('Payment invoice error', error)
-                })
         } else {
             goToNextPanel()
         }

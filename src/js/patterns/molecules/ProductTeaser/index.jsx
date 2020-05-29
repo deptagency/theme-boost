@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-import NoImage from '@frontastic/catwalk/src/layout/noImage.svg'
 import Link from '@frontastic/catwalk/src/js/app/link'
 import { ReactComponent as WishlistHeart } from 'Icons/wishlist-heart.svg'
+import { ReactComponent as NoImage } from 'Icons/no-image.svg'
 import Price from 'Atoms/price'
 
 const ProductTeaser = ({ product: { variants, name, _url }, itemVariant = '' }) => {
@@ -24,7 +24,7 @@ const ProductTeaser = ({ product: { variants, name, _url }, itemVariant = '' }) 
                     itemProp='url'
                     path={_url || ''}
                 >
-                    <img src={images[0] || NoImage} className='h-full' alt={name} />
+                    {images[0] ? <img src={images[0]} height={240} className='h-full' alt={name} /> : <NoImage className='h-full w-fix-250px' />}
                 </Link>
                 <WishlistHeart className='row-start-1 row-end-2 col-start-1 col-end-2 justify-self-end m-3' />
             </div>
