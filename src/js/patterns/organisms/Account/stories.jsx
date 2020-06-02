@@ -40,7 +40,7 @@ export const login = () => {
                     </form>
                 </div>
 
-                <div className='-mx-4 w-full h-1 bg-gray-100 md:none'></div>
+                <div className='-mx-4 w-full h-1 bg-gray-100 md:none' />
 
                 <div className='px-4 my-5 w-full md:w-100 text-center'>
                     <div className='mb-5 text-lg text-center text-gray-500 font-bold'>
@@ -56,7 +56,7 @@ export const login = () => {
     )
 }
 
-export const signup  = () => {
+export const signup = () => {
     return (
         <div className='bg-gray-200'>
             <div className='flex items-center justify-center py-4'>
@@ -111,7 +111,7 @@ export const signup  = () => {
                             </div>
                         </div>
 
-                        <div className='my-5 h-2px bg-gray-100'></div>
+                        <div className='my-5 h-2px bg-gray-100' />
 
                         <div className=''>
                             <div className='mb-4 text-base text-gray-800 leading-tight font-bold'>
@@ -124,15 +124,15 @@ export const signup  = () => {
                             </div>
 
                             <div>
-                                <input id='interested-men' type='checkbox' value='men' className='mr-2' /> 
+                                <input id='interested-men' type='checkbox' value='men' className='mr-2' />
                                 <label htmlFor='interested-men' className='text-sm text-gray-800 leading-tight'>Menswear</label>
                             </div>
                         </div>
 
-                        <div className='my-5 h-2px bg-gray-100'></div>
+                        <div className='my-5 h-2px bg-gray-100' />
 
                         <div className='mb-6 text-sm text-gray-800'>
-                            <input id='promo' type="checkbox" value="promo" className='mr-2' /> 
+                            <input id='promo' type='checkbox' value='promo' className='mr-2' />
                             <label htmlFor='promo'>
                                 We'll send you only the good stuff: Exclusive early access to Sale, new arrivals and promotions.
                             </label>
