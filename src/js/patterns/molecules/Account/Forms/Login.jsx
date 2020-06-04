@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from 'Atoms/button'
-import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import { useForm } from 'react-hook-form'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
+import Button from 'Atoms/button'
 import ErrorMessage from 'Atoms/errorMessage'
 
-const Login = ({ intl, showRegisterForm, handleLogin }) => {
+const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin }) => {
     const { register, handleSubmit, errors } = useForm()
     const validEmail = intl.formatMessage({ id: 'validation.email' })
     const requiredField = intl.formatMessage({ id: 'validation.required' })
@@ -63,7 +63,10 @@ const Login = ({ intl, showRegisterForm, handleLogin }) => {
                             <FormattedMessage id='account.login.login' />
                         </Button>
 
-                        <div className='mt-4 text-sm text-center text-gray-800 leading-tight'>
+                        <div
+                            className='cursor-pointer mt-4 text-sm text-center text-gray-800 leading-tight'
+                            onClick={showForgottenPasswordForm}
+                        >
                             <FormattedMessage id='account.login.forgotPassword' />
                         </div>
                     </form>
@@ -91,6 +94,7 @@ const Login = ({ intl, showRegisterForm, handleLogin }) => {
 Login.propTypes = {
     intl: intlShape.isRequired,
     showRegisterForm: PropTypes.func.isRequired,
+    showForgottenPasswordForm: PropTypes.func.isRequired,
     handleLogin: PropTypes.func.isRequired,
 }
 

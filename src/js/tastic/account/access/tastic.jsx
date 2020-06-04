@@ -17,6 +17,7 @@ const AccountAccessTastic = () => {
         <AccountAccess
             handleRegister={app.getLoader('context').register}
             handleLogin={app.getLoader('context').login}
+            handleRequestPasswordReset={app.getLoader('context').requestPasswordReset}
         />
     )
 }
