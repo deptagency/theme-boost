@@ -34,7 +34,7 @@ const AccountOverview = () => {
                         <div className='flex'>
                             <CartIcon className='mr-2 text-2xl text-gray-500 fill-current' />
                             <div>
-                                <FormattedMessage id='account.orders' />
+                                <FormattedMessage id='account.orders2' />
                             </div>
                         </div>
                         <RightIcon className='md:hidden' />
