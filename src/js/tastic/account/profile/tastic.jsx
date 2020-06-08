@@ -2,8 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import app from '@frontastic/catwalk/src/js/app/app'
 
-import { FormattedMessage } from 'react-intl'
-import Button from 'Atoms/button'
+import AccountOverview from 'Organisms/Account/AccountOverview/index'
 
 const AccountProfileTastic = () => {
     const { session } = useSelector((state) => {
@@ -18,15 +17,7 @@ const AccountProfileTastic = () => {
 
     return (
         <div>
-            <div>
-                { session.account.firstName } { session.account.lastName }
-            </div>
-            <Button
-                variant='btn btn-indigo mt-4'
-                onClick={() => { app.getLoader('context').logout() }}
-            >
-                <FormattedMessage id='account.logout' />
-            </Button>
+            <AccountOverview firstName={session.account.firstName} />
         </div>
     )
 }
