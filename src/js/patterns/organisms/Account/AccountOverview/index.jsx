@@ -1,70 +1,88 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
+import WelcomeOverview from './welcomeOverview'
+import AccountDetails from '../AccountDetails/index'
+import MenuItem from './menuItem'
 
-import { ReactComponent as HappyIcon } from 'Icons/tailwind-icons/icon-emotion-happy.svg'
 import { ReactComponent as CartIcon } from 'Icons/tailwind-icons/icon-cart.svg'
 import { ReactComponent as RightIcon } from 'Icons/tailwind-icons/icon-chevron-right.svg'
 import { ReactComponent as HomeIcon } from 'Icons/tailwind-icons/icon-home.svg'
 import { ReactComponent as UserIcon } from 'Icons/tailwind-icons/icon-user.svg'
 
-const AccountOverview = ({ firstName }) => {
+const AccountOverview = ({ firstName, lastName, email, handleLogout }) => {
+    const [showAccountDetails, setShowAccountDetails] = useState(false)
+    const toggleShowDetails = () => { return setShowAccountDetails(!showAccountDetails) }
+
     return (
-        <>
-            <div className='m-auto md:flex md:w-11/12 text-gray-800'>
-                <div className='flex-auto md:shadow-lg md:order-2 md:mt-10 md:w-7/12 md:ml-4 lg:ml-5'>
-                    <div className='flex flex-col text-center justify-center w-64 mx-auto my-5 md:pb-56'>
-                        <div className='mx-auto mb-5'>
-                            <HappyIcon className='w-20 h-20 text-indigo-200 fill-current' />
-                        </div>
+        <div className='m-auto md:grid grid-cols-2 grid-rows-1 grid-cols-1fr-2fr md:w-11/12 md:mt-4 text-gray-800'>
+
+            <div className='md:hidden'>
+                <WelcomeOverview firstName={firstName} />
+            </div>
+
+            <div className='flex-auto md:shadow-lg'>
+                <MenuItem className='profileMenuItem'>
+                    <div className='flex'>
+                        <CartIcon className='mr-2 text-2xl text-gray-500 fill-current' />
                         <div>
-                            <div className='font-bold text-2xl mb-2'>
-                                <FormattedMessage id='account.welcome' />
-                                { firstName }
-                            </div>
-                            <div className='text-sm text-gray-600'>
-                                <FormattedMessage id='account.latestDetails' />
-                            </div>
+                            <FormattedMessage id='account.placedOrders' />
                         </div>
                     </div>
-                </div>
-
-                <div className='flex-auto mt-10 md:shadow-lg md:w-4/12'>
-                    <button className='flex mx-auto w-5/6 sm:w-8/12 md:w-5/6 md:mt-5 justify-between border-b pb-4 mb-6'>
-                        <div className='flex'>
-                            <CartIcon className='mr-2 text-2xl text-gray-500 fill-current' />
-                            <div>
-                                <FormattedMessage id='account.orders2' />
-                            </div>
+                    <RightIcon className='md:hidden' />
+                </MenuItem>
+                <MenuItem>
+                    <div className='flex'>
+                        <HomeIcon className='mr-2 text-2xl text-gray-500 fill-current' />
+                        <div>
+                            <FormattedMessage id='account.addresses' />
                         </div>
-                        <RightIcon className='md:hidden' />
-                    </button>
-                    <button className='flex mx-auto w-5/6 sm:w-8/12 md:w-5/6 md:mt-5 justify-between border-b pb-4 mb-6'>
-                        <div className='flex'>
-                            <HomeIcon className='mr-2 text-2xl text-gray-500 fill-current' />
-                            <div>
-                                <FormattedMessage id='account.addresses' />
-                            </div>
+                    </div>
+                    <RightIcon className='md:hidden' />
+                </MenuItem>
+                <MenuItem
+                    onClick={toggleShowDetails}
+                    selected={showAccountDetails}
+                >
+                    <div className='flex'>
+                        <UserIcon className={classnames({
+                            'mr-2 text-2xl text-gray-500 fill-current': true,
+                            'text-indigo-500': showAccountDetails,
+                        })} />
+                        <div>
+                            <FormattedMessage id='account.accountDetails' />
                         </div>
-                        <RightIcon className='md:hidden' />
-                    </button>
-                    <button className='flex mx-auto w-5/6 sm:w-8/12 md:w-5/6 md:mt-5 justify-between border-b pb-4 mb-6'>
-                        <div className='flex'>
-                            <UserIcon className='mr-2 text-2xl text-gray-500 fill-current' />
-                            <div>
-                                <FormattedMessage id='account.accountDetails' />
-                            </div>
-                        </div>
-                        <RightIcon className='md:hidden' />
-                    </button>
-                </div>
+                    </div>
+                    <RightIcon className='md:hidden' />
+                </MenuItem>
+                <MenuItem onClick={handleLogout}>
+                    <div className='flex'>
+                        <UserIcon className='mr-2 text-2xl text-gray-500 fill-current' />
+                        <FormattedMessage id='account.logout' />
+                    </div>
+                </MenuItem>
             </div>
-        </>
+
+            {!showAccountDetails && <WelcomeOverview variant='hidden md:flex row-start-1 col-start-2' firstName={firstName} />}
+
+            <AccountDetails
+                showAccountDetails={showAccountDetails}
+                setShowAccountDetails={setShowAccountDetails}
+                firstName={firstName}
+                lastName={lastName}
+                email={email}
+            />
+
+        </div>
     )
 }
 
 AccountOverview.propTypes = {
-    firstName: PropTypes.string,
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    handleLogout: PropTypes.func.isRequired,
 }
 
 export default AccountOverview
