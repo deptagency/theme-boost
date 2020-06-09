@@ -1,0 +1,7 @@
+{
+    "tasticType": "frontastic/boost/account/reset-password",
+    "name": "Reset Password Form",
+    "category": "Account",
+    "icon": "security",
+    "schema": []
+}
