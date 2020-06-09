@@ -20,11 +20,11 @@ const AccountProfileTastic = () => {
     return (
         <div>
             <AccountOverview firstName={session.account.firstName} />
-            <Button	
-                variant='btn btn-indigo mt-4'	
-                onClick={() => { app.getLoader('context').logout() }}	
-            >	
-                <FormattedMessage id='account.logout' />	
+            <Button
+                variant='btn btn-indigo mt-4'
+                onClick={() => { app.getLoader('context').logout() }}
+            >
+                <FormattedMessage id='account.logout' />
             </Button>
         </div>
     )
