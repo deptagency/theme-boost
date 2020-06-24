@@ -1,18 +1,21 @@
 import React from 'react'
 import { configure, addDecorator, addParameters } from '@storybook/react'
-import { setIntlConfig, withIntl } from 'storybook-addon-intl';
-import { addLocaleData } from 'react-intl';
-import enLocaleData from 'react-intl/locale-data/en';
-import deLocaleData from 'react-intl/locale-data/de';
+import { setIntlConfig, withIntl } from 'storybook-addon-intl'
+import { addLocaleData, IntlProvider } from 'react-intl'
+import enLocaleData from 'react-intl/locale-data/en'
+import deLocaleData from 'react-intl/locale-data/de'
 import StoryRouter from 'storybook-react-router'
 import { create } from '@storybook/theming'
-import { withFrontasticRedux } from 'frontastic-catwalk/src/js/helper/storybook/redux'
+import { withFrontasticRedux } from '@frontastic/catwalk/src/js/helper/storybook/redux'
+import flatten from 'flat'
 
 import Container from './Container'
 import '../src/scss/app.scss'
 
-import en from 'frontastic-catwalk/src/js/app/i18n/en'
-import de from 'frontastic-catwalk/src/js/app/i18n/de'
+//import en from '@frontastic/catwalk/src/js/app/i18n/en'
+//import de from '@frontastic/catwalk/src/js/app/i18n/de'
+import en from '../../../../catwalk/src/js/app/i18n/en'
+import de from '../../../../catwalk/src/js/app/i18n/de'
 
 addParameters({
     viewport: {
@@ -59,10 +62,12 @@ addParameters({
 
 addParameters({
     options: {
-       storySort: (a, b) =>
-        a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, {
-           numeric: true
-        }),
+        storySort: (a, b) =>
+            a[1].kind === b[1].kind
+                ? 0
+                : a[1].id.localeCompare(b[1].id, {
+                      numeric: true,
+                  }),
         theme: create({
             base: 'light',
             brandTitle: 'Frontastic',
@@ -86,19 +91,21 @@ addDecorator((Story) => (
 ))
 
 // SETTING UP TRANSLATIONS
-addLocaleData(enLocaleData);
-addLocaleData(deLocaleData);
+addLocaleData(enLocaleData)
+addLocaleData(deLocaleData)
 
-const messages = { en, de };
-const getMessages = (locale) => messages[locale];
+const messages = { en: flatten(en), de: flatten(de) }
+
+const getMessages = (locale) => messages[locale]
 
 setIntlConfig({
     locales: ['en', 'de'],
     defaultLocale: 'en',
     getMessages,
-});
+})
+console.log('messages EN', getMessages('en'), en)
 
-addDecorator(withIntl);
+addDecorator(withIntl)
 // END OF SETTING UP TRANSLATIONS
 
 // automatically import all file  stories.js|stories.jsx
