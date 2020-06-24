@@ -1,7 +1,7 @@
 import React from 'react'
 import { configure, addDecorator, addParameters } from '@storybook/react'
 import { setIntlConfig, withIntl } from 'storybook-addon-intl'
-import { addLocaleData, IntlProvider } from 'react-intl'
+import { addLocaleData } from 'react-intl'
 import enLocaleData from 'react-intl/locale-data/en'
 import deLocaleData from 'react-intl/locale-data/de'
 import StoryRouter from 'storybook-react-router'
