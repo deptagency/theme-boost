@@ -5,12 +5,19 @@ import TileTastic from './content/tile/tastic'
 import MainMenuTastic from './header/main-menu/tastic'
 import CartTastic from './cart/tastic'
 import CheckoutTastic from './checkout/tastic'
+import CheckoutSuccessTastic from './checkout-success/tastic'
+import CheckoutHeaderTastic from './checkout-header/tastic'
+import CheckoutFooterTastic from './checkout-footer/tastic'
 import ProductSlider from './product/product-slider/tastic'
 import ProductDetailsTastic from './product/product-details/tastic'
 import ProductListingPageTastic from './product-listing/product-listing-page/tastic'
 import HorizontalSpacerTastic from './helpers/horizontal-spacer/tastic'
 import FeatureServiceTastic from './content/feature-service/tastic'
 import Footer from './footer/tastic'
+import AccountAccessTastic from './account/access/tastic'
+import AccountConfirmTastic from './account/confirm/tastic'
+import AccountProfileTastic from './account/profile/tastic'
+import ResetPasswordTastic from './account/reset-password/tastic'
 
 export default (() => {
     return {
@@ -27,5 +34,12 @@ export default (() => {
         'frontastic/boost/footer': Footer,
         'frontastic/boost/cart': CartTastic,
         'frontastic/boost/checkout': CheckoutTastic,
+        'frontastic/boost/checkout-success': CheckoutSuccessTastic,
+        'frontastic/boost/checkout-header': CheckoutHeaderTastic,
+        'frontastic/boost/checkout-footer': CheckoutFooterTastic,
+        'frontastic/boost/account/access': AccountAccessTastic,
+        'frontastic/boost/account/confirm': AccountConfirmTastic,
+        'frontastic/boost/account/profile': AccountProfileTastic,
+        'frontastic/boost/account/reset-password': ResetPasswordTastic,
     }
 })()

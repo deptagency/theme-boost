@@ -36,7 +36,7 @@ const Desktop = ({
     }
 
     return (
-        <MarginBreakout variant='hidden lg:grid shadow-lg'>
+        <MarginBreakout variant='hidden lg:grid shadow-md'>
             <div className='grid grid-cols-2 w-full max-w-1240px m-center'>
                 <div className='flex ml-5 xl:ml-5'>
                     <a
@@ -61,7 +61,7 @@ const Desktop = ({
                     className='relative col-span-2'
                     onMouseLeave={() => { setIsExpanded(false) }}
                 >
-                    <MarginBreakout variant='border border-gray-300' />
+                    <MarginBreakout variant='border-0.5px border-gray-300' />
 
                     <DesktopMenu
                         currentTree={currentTree}

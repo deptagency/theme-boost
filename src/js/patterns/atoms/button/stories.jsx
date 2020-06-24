@@ -14,7 +14,8 @@ export const simple = () => {
         <div>
             <p>
                 <Button variant='btn btn-blue mr-2'>Start</Button>
-                <Button variant='btn btn-gray'>Start</Button>
+                <Button variant='btn btn-gray mr-2'>Start</Button>
+                <Button variant='btn btn-blue' disabled>Disabled</Button>
             </p>
         </div>
     )
@@ -37,6 +38,7 @@ export const outline = () => {
             <p>
                 <Button variant='btn-outline btn-outline-blue mr-2'>Start</Button>
                 <Button variant='btn-outline btn-outline-gray'>Start</Button>
+                <Button variant='btn-outline btn-outline-black'>Start</Button>
             </p>
         </div>
     )

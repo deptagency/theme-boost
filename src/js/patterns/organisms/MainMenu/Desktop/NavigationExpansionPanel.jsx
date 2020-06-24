@@ -14,7 +14,7 @@ const NavigationExpansionPanel = ({ item, expanded = false, handleClick }) => {
         <div
             className={classnames({
                 'absolute bg-white border-t w-full p-5 z-20': true,
-                'transition-transform duration-300 ease-out origin-top': true,
+                'transition-transform duration-300 delay-200 ease-out origin-top': true,
                 'transform scale-y-100': expanded,
                 'transform scale-y-0': !expanded,
             })}

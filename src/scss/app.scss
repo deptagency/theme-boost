@@ -12,7 +12,6 @@
 @import "../js/patterns/atoms/button/index.scss";
 @import "../js/patterns/atoms/input/index.scss";
 @import "../js/patterns/atoms/select/index.scss";
-@import "../js/patterns/organisms/product/ProductImages/index.scss";
 
 // Remove "Server Side Rendering Failed" overlay
 #frssrw {
@@ -21,5 +20,14 @@
 
 // hiding broken loader for now
 .u-fade {
+    // Hiding loader from Catwalk, as we're using the custom one
     @apply hidden
+}
+
+.s-node, .s-preview {
+    @apply grid grid-rows-auto-1fr-auto min-h-full
+}
+
+.c-page-foot {
+    @apply row-start-3 row-end-4
 }

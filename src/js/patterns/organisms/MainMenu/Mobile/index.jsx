@@ -33,7 +33,7 @@ const Mobile = ({
 
     return (
         <>
-            <MarginBreakout variant='lg:hidden shadow-lg'>
+            <MarginBreakout variant='lg:hidden shadow-md'>
                 <div className='grid grid-cols-2 h-12 max-w-1240px m-center px-5'>
                     <div className='flex'>
                         <MenuOpen
@@ -41,7 +41,7 @@ const Mobile = ({
                             onClick={() => { setIsOpen(true) }}
                         />
                         <a
-                            className='sself-center h-8 max-w-124px w-full ml-3'
+                            className='self-center h-8 max-w-124px w-full ml-3'
                             ref={ref}
                             href={window.location.origin}
                         >

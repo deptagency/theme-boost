@@ -1,5 +1,13 @@
 .btn {
     @apply font-bold py-2 px-4 rounded;
+
+    &:disabled {
+        @apply bg-gray-400;
+
+        &:hover {
+            @apply bg-gray-400;
+        }
+    }
 }
 
 .btn-blue {
@@ -33,7 +41,7 @@
 
 
 .btn-outline {
-    @apply btn bg-transparent font-semibold border;
+    @apply btn bg-transparent font-semibold border-2;
 
     &:hover {
         @apply border-transparent;
@@ -56,6 +64,13 @@
     }
 }
 
+.btn-outline-black {
+    @apply border-gray-800;
+
+    &:hover {
+        @apply bg-gray-400 text-white;
+    }
+}
 
 .btn-elevated {
     @apply btn bg-white text-gray-800 border border-gray-400 shadow;

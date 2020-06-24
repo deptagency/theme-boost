@@ -1,0 +1,20 @@
+.loading-button:after {
+    content: " ";
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid rgb(66, 97, 233);
+    border-color: rgb(66, 97, 233) transparent rgb(66, 97, 233) transparent;
+    animation: loading-button 1.5s linear infinite;
+}
+
+@keyframes loading-button {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
 import Stepper from './Stepper'
@@ -8,7 +9,7 @@ import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
 import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
-const CheckoutPanels = () => {
+const CheckoutPanels = ({ app, data, countries, isLoading = false }) => {
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
@@ -16,16 +17,13 @@ const CheckoutPanels = () => {
         {
             name: <FormattedMessage id='checkout.shipping' />,
             component: ShippingPanel,
-            errorMessage: 'Please enter required contact information',
         },
-        { name: <FormattedMessage id='checkout.payment' />,
-            component: PaymentPanel,
-            errorMessage: 'Please enter required invoice information',
-        },
+        {
+            name: <FormattedMessage id='checkout.payment' />,
+            component: PaymentPanel },
         {
             name: <FormattedMessage id='checkout.overview' />,
             component: OverviewPanel,
-            errorMessage: 'Please enter required information',
         },
     ]
 
@@ -35,15 +33,27 @@ const CheckoutPanels = () => {
                 steps={steps}
                 current={current}
                 setCurrent={setCurrent}
+                ref={ts}
             />
             <Panels
+                app={app}
+                countries={countries}
+                data={data}
                 steps={steps}
                 current={current}
                 setCurrent={setCurrent}
                 ref={ts}
+                isLoading={isLoading}
             />
         </>
     )
+}
+
+CheckoutPanels.propTypes = {
+    app: PropTypes.object.isRequired,
+    data: PropTypes.object.isRequired,
+    countries: PropTypes.array.isRequired,
+    isLoading: PropTypes.bool,
 }
 
 export default CheckoutPanels

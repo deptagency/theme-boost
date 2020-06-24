@@ -4,9 +4,12 @@ import classnames from 'classnames'
 
 import { ReactComponent as TealTick } from 'Icons/tailwind-icons/teal-tick.svg'
 
-const Step = ({ current = false, completed = false }) => {
+const Step = ({ current = false, completed = false, onSelect }) => {
     return (
-        <div className='flex flex-col items-center'>
+        <div
+            className='flex flex-col items-center'
+            onClick={onSelect}
+            >
             <div className={classnames({
                 'rounded-full border-2 mx-1 h-5 w-5 cursor-pointer z-10': true,
                 'border-teal-500': current || completed,
@@ -23,7 +26,7 @@ const Step = ({ current = false, completed = false }) => {
 Step.propTypes = {
     current: PropTypes.bool.isRequired,
     completed: PropTypes.bool.isRequired,
-
+    onSelect: PropTypes.func.isRequired,
 }
 
 export default Step

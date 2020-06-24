@@ -4,6 +4,7 @@ module.exports = {
     theme: {
         extend: {
             borderWidth: {
+                '0.5px': '0.5px',
                 '2px': '2px',
                 '3px': '3px',
             },
@@ -28,6 +29,7 @@ module.exports = {
             },
             gridTemplateRows: {
                 'auto-1fr': 'auto 1fr',
+                'auto-1fr-auto': 'auto 1fr auto'
             },
             height: {
                 'fix-120px': '120px',
@@ -55,6 +57,9 @@ module.exports = {
                 '400px': '400px',
             },
             spacing: {
+                '2px': '2px',
+                '100': '25rem',
+                '160': '40rem',
                 '1/2': '50%',
                 '3/2': '150%',
                 '1/3': '33.333333%',
@@ -96,13 +101,28 @@ module.exports = {
             },
             width: {
                 '9': '2.25rem',
+                'fix-250px': '250px',
                 'fix-560px': '560px',
+
             },
         },
     },
     plugins: [
         plugin(function({ addUtilities }) {
             const utilities = {
+                '.bg-transparent-50': {
+                    backgroundColor: 'rgba(253, 250, 250, 0.5)'
+                },
+                '.border-bottom-solid': {
+                    borderBottomStyle: 'solid',
+                },
+                '.border-bottom-red-700': {
+                    borderBottomColor: '#c53030',
+                },
+                '.border-x-transparent': {
+                    borderLeftColor: 'transparent',
+                    borderRightColor: 'transparent'
+                },
                 '.justify-self-center': {
                     justifySelf: 'center',
                 },

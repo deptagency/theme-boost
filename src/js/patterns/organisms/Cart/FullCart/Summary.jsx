@@ -1,14 +1,16 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
+import LoaderButton from 'Molecules/Loaders/LoaderButton/index'
 import Price from 'Atoms/price'
 import Button from 'Atoms/button'
 
-const Summary = ({ sum, subtotal = '' }) => {
+const Summary = ({ sum, subtotal = '', disabled = false, isLoading = false, onClick, label, showVouchers = true }) => {
     return (
-        <section className='p-4'>
+        <section>
             <div className='mb-4 grid grid-cols-2 col-gap-6 row-gap-2'>
                 {subtotal ?
                     <Fragment>
@@ -38,13 +40,22 @@ const Summary = ({ sum, subtotal = '' }) => {
                 </p>
             </div>
 
-            <Button variant='btn btn-indigo w-full'>
-                <FormattedMessage id='cart.checkout' />
+            <Button
+                variant={classnames({
+                    'btn btn-indigo w-full h-10': true,
+                    'cursor-default': isLoading || disabled,
+                })}
+                onClick={onClick}
+                disabled={disabled || isLoading}
+            >
+                {isLoading ? <LoaderButton /> : label}
             </Button>
 
+            {showVouchers &&
             <p className='mt-4 text-xs text-gray-800 text-center'>
                 <FormattedMessage id='cart.enterVouchers' />
             </p>
+            }
         </section>
     )
 }
@@ -52,6 +63,11 @@ const Summary = ({ sum, subtotal = '' }) => {
 Summary.propTypes = {
     subtotal: PropTypes.string,
     sum: PropTypes.number.isRequired,
+    onClick: PropTypes.func.isRequired,
+    label: PropTypes.string.isRequired,
+    disabled: PropTypes.bool,
+    showVouchers: PropTypes.bool,
+    isLoading: PropTypes.bool,
 }
 
 export default ComponentInjector.return('Summary', Summary)

@@ -1,9 +1,11 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import app from 'frontastic-catwalk/src/js/app/app'
+import { useSelector } from 'react-redux'
+import { FormattedMessage } from 'react-intl'
+import classnames from 'classnames'
 
 import MarginBreakout from 'Molecules/Layout/MarginBreakout'
+import LoaderButton from 'Molecules/Loaders/LoaderButton'
 import StarRating from './StarRating'
 
 import Button from 'Atoms/button'
@@ -17,7 +19,14 @@ import { ReactComponent as IconHeartBorder } from 'Icons/tailwind-icons/icon-hea
 import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.svg'
 import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
 
-const ProductData = ({ name, variants, selectedVariant, onChange }) => {
+const ProductData = ({ name, variants, selectedVariant, onChange, addToCart }) => {
+    /* preventing showing LoaderButton on initial page load */
+    const [showLoader, setShowLoader] = useState(false)
+    const isLoading = useSelector((globalState) => {
+        return globalState.cart && globalState.cart.cart.loading
+    })
+    let loading = showLoader && isLoading
+
     return (
         <div className='mt-4 md:mt-6'>
             <div className='text-xl font-bold text-gray-900'>{name}</div>
@@ -44,12 +53,18 @@ const ProductData = ({ name, variants, selectedVariant, onChange }) => {
 
             <div className='flex pb-6'>
                 <Button
-                    variant='btn bg-indigo-500 text-white w-full pt-2 h-10 lg:mr-4'
+                    variant={classnames({
+                        'btn bg-indigo-500 text-white w-full pt-2 h-10 lg:mr-4': true,
+                        'cursor-default': loading,
+                    })}
                     onClick={() => {
-                        app.getLoader('cart').add(null, selectedVariant, 1, null)
+                        setShowLoader(true)
+                        addToCart(selectedVariant)
+                            .then(() => { return setShowLoader(false) })
                     }}
+                    disabled={loading}
                 >
-                    <FormattedMessage id='inCartProduct' />
+                    {loading ? <LoaderButton /> : <FormattedMessage id='inCartProduct' />}
                 </Button>
                 <IconButton variant='text-icon-size hidden lg:block' icon={<IconHeartBorder />} />
             </div>
@@ -75,6 +90,7 @@ ProductData.propTypes = {
     variants: PropTypes.array.isRequired,
     selectedVariant: PropTypes.object.isRequired,
     onChange: PropTypes.func.isRequired,
+    addToCart: PropTypes.func.isRequired,
 
 }
 
