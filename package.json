@@ -5,9 +5,10 @@
         "unidragger": "2.2.3"
     },
     "dependencies": {
+        "@frontastic/catwalk": "latest",
         "classnames": "^2.2.6",
         "cloudinary-core": "^2.5.0",
-        "@frontastic/catwalk": "latest",
+        "flat": "^5.0.0",
         "lodash": "^4.17.10",
         "mime": "^1.4.1",
         "react": "^16.8.6",
