@@ -103,7 +103,6 @@ setIntlConfig({
     defaultLocale: 'en',
     getMessages,
 })
-console.log('messages EN', getMessages('en'), en)
 
 addDecorator(withIntl)
 // END OF SETTING UP TRANSLATIONS
