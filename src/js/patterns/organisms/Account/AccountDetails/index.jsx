@@ -11,7 +11,12 @@ import PersonalDetailsForm from '../Forms/PersonalDetailsForm'
 import ChangePasswordForm from '../Forms/ChangePasswordForm'
 import AccountDetailsOverview from './Overview'
 
-const AccountDetails = ({ showAccountDetails, setShowAccountDetails, firstName, lastName, email, handlePasswordChange, handleUpdateUserDetails }) => {
+const AccountDetails = ({
+    firstName, lastName, email,
+    openPanel, onClose,
+    handlePasswordChange,
+    handleUpdateUserDetails,
+}) => {
     const [showEditDetailsPanel, setShowEditDetailsPanel] = useState(false)
     const [showEditDetailsModal, setShowEditDetailsModal] = useState(false)
     const [showChangePasswordPanel, setShowChangePasswordPanel] = useState(false)
@@ -31,8 +36,8 @@ const AccountDetails = ({ showAccountDetails, setShowAccountDetails, firstName, 
         <>
             <PanelBlockResponsive
                 title={<FormattedMessage id='account.accountDetails' />}
-                isOpen={showAccountDetails}
-                onClose={() => { setShowAccountDetails(false) }}
+                isOpen={openPanel}
+                onClose={onClose}
                 >
                 <AccountDetailsOverview
                     firstName={firstName}
@@ -92,8 +97,8 @@ AccountDetails.propTypes = {
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    showAccountDetails: PropTypes.bool.isRequired,
-    setShowAccountDetails: PropTypes.func.isRequired,
+    openPanel: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
     handlePasswordChange: PropTypes.func.isRequired,
     handleUpdateUserDetails: PropTypes.func.isRequired,
 }

@@ -18,6 +18,7 @@ import AccountAccessTastic from './account/access/tastic'
 import AccountConfirmTastic from './account/confirm/tastic'
 import AccountProfileTastic from './account/profile/tastic'
 import ResetPasswordTastic from './account/reset-password/tastic'
+import AccountOrdersTastic from './account/orders/tastic'
 
 export default (() => {
     return {
@@ -41,5 +42,6 @@ export default (() => {
         'frontastic/boost/account/confirm': AccountConfirmTastic,
         'frontastic/boost/account/profile': AccountProfileTastic,
         'frontastic/boost/account/reset-password': ResetPasswordTastic,
+        'frontastic/boost/account/orders': AccountOrdersTastic,
     }
 })()

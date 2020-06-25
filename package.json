@@ -12,6 +12,7 @@
         "lodash": "^4.17.10",
         "mime": "^1.4.1",
         "react": "^16.8.6",
+        "react-scrollbars-custom": "4.0.25",
         "react-dev-utils": "^9.0.1",
         "react-dom": "^16.8.6",
         "react-helmet": "^5.2.0",

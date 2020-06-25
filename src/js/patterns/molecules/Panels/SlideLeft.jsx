@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SlidingPane from 'react-sliding-pane'
+import Scrollbars from 'react-scrollbars-custom'
 
 import { ReactComponent as IconLeft } from 'Icons/tailwind-icons/icon-panel-left.svg'
 
@@ -27,7 +28,9 @@ const SlideLeft = ({ isOpen, onClose, title = '', overlayVariant = '', children 
                 />
                 {title}
             </div>
-            {children}
+            <Scrollbars style={{ height: 'calc(100vh - 100px)' }}>
+                {children}
+            </Scrollbars>
         </SlidingPane>
 
     )

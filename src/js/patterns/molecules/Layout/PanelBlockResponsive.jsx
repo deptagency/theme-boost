@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
 import SlideLeft from 'Molecules/Panels/SlideLeft'
 
 const PanelBlockResponsive = ({ title = '', isOpen, onClose, children }) => {
@@ -18,15 +17,15 @@ const PanelBlockResponsive = ({ title = '', isOpen, onClose, children }) => {
                 >
                 {children}
             </SlideLeft>
-
-            {isOpen && <div className='hidden md:flex'>
-                <div className='grid w-full md:ml-5'>
+            <div className='hidden md:flex row-start-1 col-start-2'>
+                <div className='grid w-full md:ml-4'>
                     <div className='font-bold text-2xl my-4 md:ml-6 flex'>
-                        <FormattedMessage id='account.accountDetails' />
+                        {title}
                     </div>
                     {children}
                 </div>
-            </div>}
+            </div>
+
         </>
     )
 }

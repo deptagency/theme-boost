@@ -1,0 +1,20 @@
+{
+    "tasticType": "frontastic/boost/account/orders",
+    "name": "Orders",
+    "category": "Account",
+    "icon": "menu",
+    "schema": [
+        {
+            "name": "Stream Selection",
+            "fields": [
+                {
+                    "label": "Stream",
+                    "field": "stream",
+                    "type": "stream",
+                    "streamType": "account-orders",
+                    "default": null
+                }
+            ]
+        }   
+    ]
+}
