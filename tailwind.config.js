@@ -25,6 +25,7 @@ module.exports = {
                 '1-340': '1fr 340px',
                 '120-1xfr': '120px 1fr',
                 '120-2xfr': '120px 1fr 1fr',
+                '1fr-2fr': '1fr 2fr',
                 '1.25rem-1fr-1.25rem-1fr-1.25rem': '1.25rem 1fr 1.25rem 1fr 1.25rem',
             },
             gridTemplateRows: {
@@ -38,6 +39,7 @@ module.exports = {
             },
             inset: {
                 full: '100%',
+                '3.3': '3.3rem'
             },
             margin: {
                 center: '0 auto',
@@ -102,6 +104,7 @@ module.exports = {
             width: {
                 '9': '2.25rem',
                 'fix-250px': '250px',
+                'fix-488px': '488px',
                 'fix-560px': '560px',
 
             },
@@ -148,5 +151,6 @@ module.exports = {
     ],
     variants: {
         borderWidth: ['responsive', 'hover', 'focus'],
+        textColor: ['active'],
     },
 }
