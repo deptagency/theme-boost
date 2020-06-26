@@ -1,0 +1,19 @@
+.boost-slide-left-panel {
+  .slide-pane {
+    @apply shadow-none
+  }
+
+  .slide-pane__header {
+    @apply hidden
+    }
+
+  .slide-pane__content {
+    @apply p-0
+    }
+
+
+}
+
+.slide-pane__overlay.ReactModal__Overlay--after-open {
+  @apply bg-transparent transition-none
+  }

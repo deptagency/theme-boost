@@ -114,18 +114,18 @@
 }
 */
 
-.o-cell--hidden-hand {
-    @include mq($until: lap) {
-        display: none;
-    }
-}
-.o-cell--hidden-lap {
-    @include mq($from: lap, $until: desk) {
-        display: none;
-    }
-}
-.o-cell--hidden-desk {
-    @include mq($from: desk) {
-        display: none;
-    }
-}
+//.o-cell--hidden-hand {
+//    @include mq($until: lap) {
+//        display: none;
+//    }
+//}
+//.o-cell--hidden-lap {
+//    @include mq($from: lap, $until: desk) {
+//        display: none;
+//    }
+//}
+//.o-cell--hidden-desk {
+//    @include mq($from: desk) {
+//        display: none;
+//    }
+//}
