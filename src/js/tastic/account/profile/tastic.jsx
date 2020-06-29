@@ -21,6 +21,7 @@ const AccountProfileTastic = () => {
             lastName={session.account.lastName}
             email={session.account.email}
             handleLogout={app.getLoader('context').logout}
+            handlePasswordChange={app.getLoader('context').updatePassword}
         />
     )
 }
