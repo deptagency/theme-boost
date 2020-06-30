@@ -4,9 +4,10 @@ import { useForm } from 'react-hook-form'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
 import Button from 'Atoms/button'
+import ButtonWithLoader from 'Atoms/button/WithLoader'
 import ErrorMessage from 'Atoms/errorMessage'
 
-const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin }) => {
+const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin, showLoader }) => {
     const { register, handleSubmit, errors } = useForm()
     const validEmail = intl.formatMessage({ id: 'validation.email' })
     const requiredField = intl.formatMessage({ id: 'validation.required' })
@@ -59,9 +60,13 @@ const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin 
                             <ErrorMessage errors={errors} name='password' />
                         </div>
 
-                        <Button type='submit' variant='btn btn-indigo w-full h-10'>
+                        <ButtonWithLoader
+                            showLoader={showLoader}
+                            type='submit'
+                            variant='btn btn-indigo w-full h-10'
+                        >
                             <FormattedMessage id='account.login.login' />
-                        </Button>
+                        </ButtonWithLoader>
 
                         <div
                             className='cursor-pointer mt-4 text-sm text-center text-gray-800 leading-tight'
@@ -96,6 +101,7 @@ Login.propTypes = {
     showRegisterForm: PropTypes.func.isRequired,
     showForgottenPasswordForm: PropTypes.func.isRequired,
     handleLogin: PropTypes.func.isRequired,
+    showLoader: PropTypes.bool.isRequired,
 }
 
 export default injectIntl(Login)

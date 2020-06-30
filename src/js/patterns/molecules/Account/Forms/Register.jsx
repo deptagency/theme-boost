@@ -4,9 +4,10 @@ import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import { useForm } from 'react-hook-form'
 
 import Button from 'Atoms/button'
+import ButtonWithLoader from 'Atoms/button/WithLoader'
 import ErrorMessage from 'Atoms/errorMessage'
 
-const Register = ({ intl, showLoginForm, handleRegister }) => {
+const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
     const { register, handleSubmit, errors } = useForm()
     const validEmail = intl.formatMessage({ id: 'validation.email' })
     const requiredField = intl.formatMessage({ id: 'validation.required' })
@@ -115,9 +116,9 @@ const Register = ({ intl, showLoginForm, handleRegister }) => {
 
                         <div className='my-5 h-2px bg-gray-100' />
 
-                        <Button variant='btn btn-indigo w-full h-10' type='submit'>
+                        <ButtonWithLoader showLoader={showLoader} variant='btn btn-indigo w-full h-10' type='submit'>
                             <FormattedMessage id='account.register.joinCatwalk' />
-                        </Button>
+                        </ButtonWithLoader>
 
                         <div className='mt-5 text-xs text-gray-600 leading-tight'>
                             <FormattedMessage id='account.register.tcConfirm' />
@@ -133,6 +134,7 @@ Register.propTypes = {
     intl: intlShape.isRequired,
     showLoginForm: PropTypes.func.isRequired,
     handleRegister: PropTypes.func.isRequired,
+    showLoader: PropTypes.bool.isRequired,
 }
 
 export default injectIntl(Register)
