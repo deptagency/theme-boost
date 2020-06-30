@@ -11,7 +11,6 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
     const requiredField = intl.formatMessage({ id: 'validation.required' })
     const minLength = intl.formatMessage({ id: 'validation.minLength' })
     const passwordMatch = intl.formatMessage({ id: 'validation.passwordMatch' })
-    const strongPassword = intl.formatMessage({ id: 'validation.strongPassword' })
     const { register, errors, getValues, watch, handleSubmit } = useForm({ mode: 'onChange' })
 
     const onNewPasswordSubmit = () => {
@@ -25,9 +24,6 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
                 <span><FormattedMessage id='account.inOrder' /></span><span className='font-bold'> <FormattedMessage id='account.protect' /> </span><span><FormattedMessage id='account.passwordContain' /></span>
                 <ul className='list-disc m-4'>
                     <li><FormattedMessage id='account.characters' /></li>
-                    <li><FormattedMessage id='account.upperCase' /></li>
-                    <li><FormattedMessage id='account.number' /></li>
-                    <li><FormattedMessage id='account.specialCharacter' /></li>
                 </ul>
             </div>
 
@@ -52,12 +48,8 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
                         ref={register({
                             required: requiredField,
                             minLength: {
-                                value: 10,
+                                value: 6,
                                 message: minLength,
-                            },
-                            pattern: {
-                                value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{10,}$/i,
-                                message: strongPassword,
                             },
                         })}
                     />
