@@ -11,7 +11,7 @@ import PersonalDetailsForm from '../Forms/PersonalDetailsForm'
 import ChangePasswordForm from '../Forms/ChangePasswordForm'
 import AccountDetailsOverview from './Overview'
 
-const AccountDetails = ({ showAccountDetails, setShowAccountDetails, firstName, lastName, email, handlePasswordChange }) => {
+const AccountDetails = ({ showAccountDetails, setShowAccountDetails, firstName, lastName, email, handlePasswordChange, handleUpdateUserDetails }) => {
     const [showEditDetailsPanel, setShowEditDetailsPanel] = useState(false)
     const [showEditDetailsModal, setShowEditDetailsModal] = useState(false)
     const [showChangePasswordPanel, setShowChangePasswordPanel] = useState(false)
@@ -60,6 +60,11 @@ const AccountDetails = ({ showAccountDetails, setShowAccountDetails, firstName, 
                     firstName={firstName}
                     lastName={lastName}
                     email={email}
+                    showLoader={showLoader}
+                    onSubmit={(data) => {
+                        setShowLoader(true)
+                        handleUpdateUserDetails(data)
+                    }}
                 />
             </PanelModalResponsive>
 
@@ -71,11 +76,11 @@ const AccountDetails = ({ showAccountDetails, setShowAccountDetails, firstName, 
                 closeModal={() => { return setShowChangePasswordModal(false) }}
                 >
                 <ChangePasswordForm
+                    showLoader={showLoader}
                     onSubmit={(oldPassword, newPassword) => {
                         setShowLoader(true)
                         handlePasswordChange(oldPassword, newPassword)
                     }}
-                    showLoader={showLoader}
                 />
             </PanelModalResponsive>
 
@@ -91,6 +96,7 @@ AccountDetails.propTypes = {
     showAccountDetails: PropTypes.bool.isRequired,
     setShowAccountDetails: PropTypes.func.isRequired,
     handlePasswordChange: PropTypes.func.isRequired,
+    handleUpdateUserDetails: PropTypes.func.isRequired,
 }
 
 export default AccountDetails
