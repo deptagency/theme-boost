@@ -18,6 +18,7 @@ const ButtonWithLoader = ({
                 <Button
                     variant={variant}
                     onClick={onClick}
+                    style={{ transition: 'all .15s ease' }}
                     {...otherProps}
                     >
                     {children}

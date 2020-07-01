@@ -3,9 +3,8 @@ import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import { useForm } from 'react-hook-form'
 
-import Button from 'Atoms/button'
+import ButtonWithLoader from 'Atoms/button/WithLoader'
 import ErrorMessage from 'Atoms/errorMessage'
-import LoaderButton from 'Molecules/Loaders/LoaderButton'
 
 const PersonalDetailsForm = ({ intl, firstName, lastName, email, onSubmit, showLoader }) => {
     const requiredField = intl.formatMessage({ id: 'validation.required' })
@@ -69,15 +68,13 @@ const PersonalDetailsForm = ({ intl, firstName, lastName, email, onSubmit, showL
                 <ErrorMessage errors={errors} name='emailComfirmation' />
             </div>
             <div className='text-center mt-6'>
-                {showLoader ?
-                    <LoaderButton /> :
-                    <Button
-                        variant='btn btn-indigo w-full'
-                        type='submit'
-                        style={{ transition: 'all .15s ease' }}
-                    >
-                        <FormattedMessage id='account.save' />
-                    </Button>}
+                <ButtonWithLoader
+                    showLoader={showLoader}
+                    type='submit'
+                    variant='btn btn-indigo w-full'
+                >
+                    <FormattedMessage id='account.save' />
+                </ButtonWithLoader>
             </div>
         </form>
     )
