@@ -59,7 +59,6 @@ const AccountDetails = ({ showAccountDetails, setShowAccountDetails, firstName, 
                 <PersonalDetailsForm
                     firstName={firstName}
                     lastName={lastName}
-                    email={email}
                     showLoader={showLoader}
                     onSubmit={(data) => {
                         setShowLoader(true)
