@@ -6,15 +6,12 @@ import { useForm } from 'react-hook-form'
 import ButtonWithLoader from 'Atoms/button/WithLoader'
 import ErrorMessage from 'Atoms/errorMessage'
 
-const PersonalDetailsForm = ({ intl, firstName, lastName, email, onSubmit, showLoader }) => {
+const PersonalDetailsForm = ({ intl, firstName, lastName, onSubmit, showLoader }) => {
     const requiredField = intl.formatMessage({ id: 'validation.required' })
-    const emailMatch = intl.formatMessage({ id: 'validation.emailMatch' })
 
-    const { register, errors, getValues, watch, handleSubmit } = useForm({
+    const { register, errors, getValues, handleSubmit } = useForm({
         mode: 'onChange',
-        defaultValues: {
-            firstName, lastName, email, emailComfirmation: email,
-        },
+        defaultValues: { firstName, lastName },
     })
 
     const onNewDetailsSubmit = () => {
@@ -44,29 +41,6 @@ const PersonalDetailsForm = ({ intl, firstName, lastName, email, onSubmit, showL
                 />
                 <ErrorMessage errors={errors} name='lastName' />
             </div>
-            <div className='mb-4'>
-                <div className='text-sm text-gray-600'><FormattedMessage id='checkout.form.email' /></div>
-                <input
-                    name='email'
-                    type='text'
-                    className='form-input mt-2'
-                    ref={register({ required: requiredField })}
-                />
-                <ErrorMessage errors={errors} name='email' />
-            </div>
-            <div className='mb-4'>
-                <div className='text-sm text-gray-600'><FormattedMessage id='account.repeatEmail' /></div>
-                <input
-                    name='emailComfirmation'
-                    type='text'
-                    className='form-input mt-2'
-                    ref={register({
-                        required: requiredField,
-                        validate: value => { return value === watch('email') || emailMatch },
-                    })}
-                />
-                <ErrorMessage errors={errors} name='emailComfirmation' />
-            </div>
             <div className='text-center mt-6'>
                 <ButtonWithLoader
                     showLoader={showLoader}
@@ -84,7 +58,6 @@ PersonalDetailsForm.propTypes = {
     intl: intlShape.isRequired,
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
     onSubmit: PropTypes.func.isRequired,
     showLoader: PropTypes.bool.isRequired,
 }
