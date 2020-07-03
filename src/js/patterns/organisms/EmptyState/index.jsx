@@ -1,11 +1,11 @@
 import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import PropTypes from 'prop-types'
 
 import Button from 'Atoms/button'
 
 import { getIconComponent } from './Icons'
 
-function EmptyState({ icon: iconSrc, iconColor, image, title, subtitle, body, action, actionLabel, children }) {
+function EmptyState ({ icon: iconSrc, iconColor, title, subtitle, action, actionLabel, children }) {
     return (
         <div className='my-10 md:mt-20 w-64 mx-auto text-center'>
             {/*
@@ -14,7 +14,7 @@ function EmptyState({ icon: iconSrc, iconColor, image, title, subtitle, body, ac
                 - a component
                 - a string constant (selected from icons in Icons.js
             */}
-            {getIconComponent(iconSrc, iconColor)}
+            {iconSrc && getIconComponent(iconSrc, iconColor)}
 
             <div className='mt-4 text-center text-gray-800'>
                 <h1 className='text-2xl font-bold'>{title}</h1>
@@ -28,6 +28,16 @@ function EmptyState({ icon: iconSrc, iconColor, image, title, subtitle, body, ac
             </div>
         </div>
     )
+}
+
+EmptyState.propTypes = {
+    icon: PropTypes.node,
+    iconColor: PropTypes.string,
+    title: PropTypes.node,
+    subtitle: PropTypes.node,
+    children: PropTypes.element,
+    action: PropTypes.func,
+    actionLabel: PropTypes.node,
 }
 
 export { icons } from './Icons'
