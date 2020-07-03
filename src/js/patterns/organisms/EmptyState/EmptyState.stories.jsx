@@ -3,7 +3,8 @@ import { action } from '@storybook/addon-actions'
 import { FormattedMessage } from 'react-intl'
 
 import Button from 'Atoms/button'
-import EmptyState from 'Organisms/EmptyState/EmptyState'
+// TODO: import statement not conform with Airbnb. Pls fix webpack config
+import EmptyState, { icons } from 'Organisms/EmptyState/index'
 import { ReactComponent as IconCheckmarkCircle } from 'Icons/tailwind-icons/icon-check-circle.svg'
 import { ReactComponent as IconEmotionSad } from 'Icons/tailwind-icons/icon-emotion-sad.svg'
 
@@ -40,6 +41,29 @@ export const error = () => {
             subtitle={<FormattedMessage id='checkout.beenCharged' />}
             action={action('try again click')}
             actionLabel={<FormattedMessage id='checkout.tryAgain' />}
+        ></EmptyState>
+    )
+}
+
+export const iconAsString = () => {
+    return (
+        <EmptyState
+            icon={icons.CHECKMARK_CIRCLE}
+            iconColor='text-red-500'
+            title={<FormattedMessage id='checkout.wentWrong' />}
+            subtitle={<FormattedMessage id='checkout.beenCharged' />}
+            action={action('try again click')}
+            actionLabel={<FormattedMessage id='checkout.tryAgain' />}
+        ></EmptyState>
+    )
+}
+
+export const smile = () => {
+    return (
+        <EmptyState
+            icon={icons.EMOTION_HAPPY}
+            iconColor='text-yellow-500'
+            title={'Everyday you should smile at least twice!'}
         ></EmptyState>
     )
 }
