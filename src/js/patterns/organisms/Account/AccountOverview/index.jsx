@@ -11,7 +11,7 @@ import { ReactComponent as RightIcon } from 'Icons/tailwind-icons/icon-chevron-r
 import { ReactComponent as HomeIcon } from 'Icons/tailwind-icons/icon-home.svg'
 import { ReactComponent as UserIcon } from 'Icons/tailwind-icons/icon-user.svg'
 
-const AccountOverview = ({ firstName, lastName, email, handleLogout }) => {
+const AccountOverview = ({ firstName, lastName, email, handleLogout, handlePasswordChange, handleUpdateUserDetails }) => {
     const [showAccountDetails, setShowAccountDetails] = useState(false)
     const toggleShowDetails = () => { return setShowAccountDetails(!showAccountDetails) }
 
@@ -72,6 +72,8 @@ const AccountOverview = ({ firstName, lastName, email, handleLogout }) => {
                 firstName={firstName}
                 lastName={lastName}
                 email={email}
+                handlePasswordChange={handlePasswordChange}
+                handleUpdateUserDetails={handleUpdateUserDetails}
             />
 
         </div>
@@ -83,6 +85,8 @@ AccountOverview.propTypes = {
     lastName: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     handleLogout: PropTypes.func.isRequired,
+    handlePasswordChange: PropTypes.func.isRequired,
+    handleUpdateUserDetails: PropTypes.func.isRequired,
 }
 
 export default AccountOverview

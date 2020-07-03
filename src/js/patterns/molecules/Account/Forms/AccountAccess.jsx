@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 import Register from './Register'
 import Login from './Login'
 import ForgottenPassword from './ForgottenPassword'
 import './style.scss'
+
+import DefaultNotifications from 'Molecules/Notifications/Default'
 
 const FORM_TYPE = {
     LOGIN: 'LOGIN',
@@ -12,30 +15,53 @@ const FORM_TYPE = {
 }
 
 const AccountAccess = ({ handleRegister, handleLogin, handleRequestPasswordReset }) => {
+    const [showLoader, setShowLoader] = useState(false)
     const [form, setFrom] = useState(FORM_TYPE.LOGIN)
     const showEasy = 'showEasy 0.4s'
+
+    const notifications = useSelector((state) => {
+        return state.user.notifications || {}
+    })
+
+    useEffect(() => {
+        setShowLoader(false)
+    }, [notifications])
 
     return (
         <>
             {(form === FORM_TYPE.LOGIN) && <div style={{ animation: showEasy }}>
                 <Login
+                    showLoader={showLoader}
                     showRegisterForm={() => { setFrom(FORM_TYPE.REGISTER) }}
                     showForgottenPasswordForm={() => { setFrom(FORM_TYPE.FORGOTTEN_PASSWORD) }}
-                    handleLogin={handleLogin}
+                    handleLogin={(email, password) => {
+                        setShowLoader(true)
+                        handleLogin(email, password)
+                    }}
                 />
             </div>}
             {(form === FORM_TYPE.REGISTER) && <div style={{ animation: showEasy }}>
                 <Register
+                    showLoader={showLoader}
                     showLoginForm={() => { setFrom(FORM_TYPE.LOGIN) }}
-                    handleRegister={handleRegister}
+                    handleRegister={(data) => {
+                        setShowLoader(true)
+                        handleRegister(data)
+                    }}
                 />
             </div>}
             {(form === FORM_TYPE.FORGOTTEN_PASSWORD) && <div style={{ animation: showEasy }}>
                 <ForgottenPassword
-                    handleRequestPasswordReset={handleRequestPasswordReset}
+                    showLoader={showLoader}
                     showLoginForm={() => { setFrom(FORM_TYPE.LOGIN) }}
+                    handleRequestPasswordReset={(email) => {
+                        setShowLoader(true)
+                        handleRequestPasswordReset(email)
+                    }}
                 />
             </div>}
+
+            <DefaultNotifications notifications={notifications} />
         </>
     )
 }

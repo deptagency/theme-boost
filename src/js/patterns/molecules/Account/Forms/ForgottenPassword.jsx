@@ -4,9 +4,10 @@ import { useForm } from 'react-hook-form'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
 import Button from 'Atoms/button'
+import ButtonWithLoader from 'Atoms/button/WithLoader'
 import ErrorMessage from 'Atoms/errorMessage'
 
-const ForgottenPassword = ({ intl, handleRequestPasswordReset, showLoginForm }) => {
+const ForgottenPassword = ({ intl, showLoader, handleRequestPasswordReset, showLoginForm }) => {
     const { register, handleSubmit, errors } = useForm()
     const validEmail = intl.formatMessage({ id: 'validation.email' })
     const requiredField = intl.formatMessage({ id: 'validation.required' })
@@ -39,9 +40,9 @@ const ForgottenPassword = ({ intl, handleRequestPasswordReset, showLoginForm }) 
                     <ErrorMessage errors={errors} name='email' />
                 </div>
 
-                <Button type='submit' variant='btn btn-indigo w-full h-10'>
+                <ButtonWithLoader showLoader={showLoader} type='submit' variant='btn btn-indigo w-full h-10'>
                     <FormattedMessage id='account.requestResetPassword' />
-                </Button>
+                </ButtonWithLoader>
 
                 <Button onClick={showLoginForm} variant='btn btn-indigo w-full h-10 mt-5'>
                     <FormattedMessage id='account.login.login' />
@@ -55,6 +56,7 @@ ForgottenPassword.propTypes = {
     intl: intlShape.isRequired,
     handleRequestPasswordReset: PropTypes.func.isRequired,
     showLoginForm: PropTypes.func.isRequired,
+    showLoader: PropTypes.bool.isRequired,
 }
 
 export default injectIntl(ForgottenPassword)

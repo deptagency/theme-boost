@@ -1,19 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
-import useMdBreakpoint from '../../../molecules/Layout/Breakpoints/useMdBreakpoint'
+
+import useMdBreakpoint from 'Molecules/Layout/Breakpoints/useMdBreakpoint'
 import PanelModalResponsive from 'Molecules/Layout/PanelModalResponsive'
 import PanelBlockResponsive from 'Molecules/Layout/PanelBlockResponsive'
+import DefaultNotifications from 'Molecules/Notifications/Default'
 import PersonalDetailsForm from '../Forms/PersonalDetailsForm'
 import ChangePasswordForm from '../Forms/ChangePasswordForm'
 import AccountDetailsOverview from './Overview'
 
-const AccountDetails = ({ showAccountDetails, setShowAccountDetails, firstName, lastName, email }) => {
+const AccountDetails = ({ showAccountDetails, setShowAccountDetails, firstName, lastName, email, handlePasswordChange, handleUpdateUserDetails }) => {
     const [showEditDetailsPanel, setShowEditDetailsPanel] = useState(false)
     const [showEditDetailsModal, setShowEditDetailsModal] = useState(false)
     const [showChangePasswordPanel, setShowChangePasswordPanel] = useState(false)
     const [showChangePasswordModal, setShowChangePasswordModal] = useState(false)
+    const [showLoader, setShowLoader] = useState(false)
     const { showPanel, showModal } = useMdBreakpoint()
+
+    const notifications = useSelector((state) => {
+        return state.user.notifications || {}
+    })
+
+    useEffect(() => {
+        setShowLoader(false)
+    }, [notifications])
 
     return (
         <>
@@ -47,7 +59,11 @@ const AccountDetails = ({ showAccountDetails, setShowAccountDetails, firstName, 
                 <PersonalDetailsForm
                     firstName={firstName}
                     lastName={lastName}
-                    email={email}
+                    showLoader={showLoader}
+                    onSubmit={(data) => {
+                        setShowLoader(true)
+                        handleUpdateUserDetails(data)
+                    }}
                 />
             </PanelModalResponsive>
 
@@ -58,8 +74,16 @@ const AccountDetails = ({ showAccountDetails, setShowAccountDetails, firstName, 
                 openModal={showChangePasswordModal}
                 closeModal={() => { return setShowChangePasswordModal(false) }}
                 >
-                <ChangePasswordForm />
+                <ChangePasswordForm
+                    showLoader={showLoader}
+                    onSubmit={(oldPassword, newPassword) => {
+                        setShowLoader(true)
+                        handlePasswordChange(oldPassword, newPassword)
+                    }}
+                />
             </PanelModalResponsive>
+
+            <DefaultNotifications notifications={notifications} />
         </>
     )
 }
@@ -70,6 +94,8 @@ AccountDetails.propTypes = {
     email: PropTypes.string.isRequired,
     showAccountDetails: PropTypes.bool.isRequired,
     setShowAccountDetails: PropTypes.func.isRequired,
+    handlePasswordChange: PropTypes.func.isRequired,
+    handleUpdateUserDetails: PropTypes.func.isRequired,
 }
 
 export default AccountDetails
