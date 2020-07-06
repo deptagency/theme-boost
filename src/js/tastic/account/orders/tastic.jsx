@@ -28,8 +28,7 @@ const AccountOrdersTastic = ({ data: { stream } }) => {
             welcome={<WelcomeOverview firstName={firstName} />}
             handleLogout={app.getLoader('context').logout}
             openPanel={() => { setOpenPanel(true) }}
-            router={app.getRouter}
-            >
+        >
             <AccountOrders
                 orders={stream}
                 openPanel={openPanel}
