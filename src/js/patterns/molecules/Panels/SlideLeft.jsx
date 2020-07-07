@@ -41,7 +41,7 @@ SlideLeft.propTypes = {
     onClose: PropTypes.func.isRequired,
     title: PropTypes.oneOfType([PropTypes.string, PropTypes.node, PropTypes.object]),
     overlayVariant: PropTypes.string,
-    children: PropTypes.any.isRequired,
+    children: PropTypes.any,
 }
 
 export default SlideLeft

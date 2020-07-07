@@ -5,14 +5,14 @@ import Price from 'Atoms/price'
 
 import { ReactComponent as FileIcon } from 'Icons/tailwind-icons/icon-file.svg'
 
-const ListOrders = ({ orders }) => {
+const ListOrders = ({ orders, selectOrder }) => {
     const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
     return (
-        <div className='md:shadow-lg md:mb-24'>
+        <div className='md:shadow-lg'>
             <div className='border-b-4 border-gray-100' />
-            <div className='md:pb-4 text-gray-800'>
-                {orders.map(order => {
+            <div className='text-gray-800'>
+                {orders.map((order, index) => {
                     var lineItemSum = 0
                     order.lineItems.map(lineItem => {
                         return (
@@ -52,12 +52,13 @@ const ListOrders = ({ orders }) => {
                                 </div>
                                 <button
                                     className='text-sm text-indigo-500 leading-tight flex items-center my-4'
+                                    onClick={() => { selectOrder(order) }}
                                 >
                                     <FormattedMessage id='account.viewOrder' />
                                     <FileIcon className='inline fill-current text-sm ml-2' />
                                 </button>
                             </div>
-                            <div className='border-b-4 border-gray-100' />
+                            {(index + 1 < orders.length) && <div className='border-b-4 border-gray-100' />}
                         </div>
                     )
                 })}
@@ -69,6 +70,7 @@ const ListOrders = ({ orders }) => {
 
 ListOrders.propTypes = {
     orders: PropTypes.array.isRequired,
+    selectOrder: PropTypes.func.isRequired,
 }
 
 export default ListOrders
