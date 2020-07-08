@@ -41,9 +41,18 @@ const AccountMenu = ({ selectedMenuItem, welcome, children, handleLogout, openPa
                     </div>
                     <RightIcon className='md:hidden' />
                 </MenuItem>
-                <MenuItem>
+                <MenuItem
+                    onClick={() => {
+                        (selectedMenuItem !== MENU_ITEMS.ADDRESSES) && app.getRouter().push('Frontastic.Frontend.Master.Account.addresses')
+                        usePanel && openPanel()
+                    }}
+                    selected={selectedMenuItem === MENU_ITEMS.ADDRESSES}
+                >
                     <div className='flex'>
-                        <HomeIcon className='mr-2 text-2xl text-gray-500 fill-current' />
+                        <HomeIcon className={classnames({
+                            'mr-2 text-2xl text-gray-500 fill-current': true,
+                            'text-indigo-500': selectedMenuItem === MENU_ITEMS.ADDRESSES,
+                        })} />
                         <div>
                             <FormattedMessage id='account.addresses' />
                         </div>

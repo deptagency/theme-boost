@@ -30,7 +30,7 @@ addParameters({
             lg: {
                 name: 'lg',
                 styles: {
-                    width: '1022px',
+                    width: '1024px',
                     height: '100%',
                 },
             },
