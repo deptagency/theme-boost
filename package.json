@@ -23,6 +23,7 @@
         "react-router-dom": "^5.0.1",
         "react-scrollbars-custom": "4.0.25",
         "react-sliding-pane": "^4.1.0",
+        "react-toastify": "^6.0.8",
         "redux": "^4.0.0",
         "tailwindcss": "^1.2.0",
         "tiny-slider-react": "^0.4.0",
