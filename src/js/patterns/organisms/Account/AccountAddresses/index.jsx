@@ -16,7 +16,7 @@ import RemoveAddressForm from '../Forms/RemoveAddressForm'
 import EmptyList from './EmptyList'
 import AddressCard from './AddressCard'
 
-const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddAddress, handleUpdateAddress, handleRemoveAddress, handleSetDefaultBillingAddress, handleSetDefaultShippingAddress }) => {
+const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddAddress, handleUpdateAddress, handleRemoveAddress }) => {
     const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false)
     const [showCreateAddressModal, setShowCreateAddressModal] = useState(false)
     const [showEditAddressPanel, setShowEditAddressPanel] = useState(false)
@@ -124,14 +124,6 @@ const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddA
                             setShowLoader(true)
 
                             handleUpdateAddress(address)
-
-                            if (address.isDefaultShippingAddress) {
-                                handleSetDefaultBillingAddress(address)
-                            }
-
-                            if (address.isDefaultBillingAddress) {
-                                handleSetDefaultShippingAddress(address)
-                            }
                         }}
                     />
                 </PanelModalResponsive>
@@ -171,8 +163,6 @@ AccountAddresses.propTypes = {
     handleAddAddress: PropTypes.func.isRequired,
     handleUpdateAddress: PropTypes.func.isRequired,
     handleRemoveAddress: PropTypes.func.isRequired,
-    handleSetDefaultBillingAddress: PropTypes.func.isRequired,
-    handleSetDefaultShippingAddress: PropTypes.func.isRequired,
 }
 
 export default AccountAddresses
