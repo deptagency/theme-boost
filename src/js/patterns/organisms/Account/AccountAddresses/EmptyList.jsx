@@ -2,7 +2,7 @@ import React from 'react'
 
 const EmptyList = () => {
     return (
-        <div>
+        <div className='p-4'>
             Empty list
         </div>
     )

@@ -9,9 +9,7 @@ import AccountAddresses from 'Organisms/Account/AccountAddresses'
 
 import MENU_ITEMS from 'Molecules/Account/Menu/MENU_ITEMS'
 
-const AccountAddressTastic = () => {
-    console.log('i am here')
-    
+const AccountAddressTastic = ({ data }) => {
     const [ openPanel, setOpenPanel ] = useState(true)
 
     const { session: { loggedIn, account: { addresses, firstName } } } = useSelector((state) => {
@@ -34,6 +32,7 @@ const AccountAddressTastic = () => {
             <AccountAddresses
                 addresses={addresses}
                 openPanel={openPanel}
+                countries={data.countries}
                 onClose={() => { setOpenPanel(false) }}
                 handleAddAddress={app.getLoader('context').addAddress}
                 handleUpdateAddress={app.getLoader('context').updateAddress}
@@ -43,6 +42,10 @@ const AccountAddressTastic = () => {
             />
         </AccountMenu>
     )
+}
+
+AccountAddressTastic.propTypes = {
+    data: PropTypes.object.isRequired,    
 }
 
 export default AccountAddressTastic

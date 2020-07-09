@@ -1,17 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
+import _ from 'lodash'
 
 import ButtonWithLoader from 'Atoms/button/WithLoader'
 
-const RemoveAddressForm = ({ address, onRemoveAddressClicked, showLoader }) => {
+const RemoveAddressForm = ({ address, countries, onRemoveAddressClicked, showLoader }) => {
+    const country = _.find(countries, c => c.code == address.country)
+
     return (
         <>
             <div className='text-base text-gray-800 leading-normal'>
                 <p>{address.streetName}</p>
                 <p>{address.city}</p>
                 <p>{address.postalCode}</p>
-                <p>{address.country}</p>
+                <p>{country.name}</p>
             </div>
 
             <div className='text-center mt-6'>
@@ -29,6 +32,7 @@ const RemoveAddressForm = ({ address, onRemoveAddressClicked, showLoader }) => {
 
 RemoveAddressForm.propTypes = {
    address: PropTypes.object,
+   countries: PropTypes.array.isRequired,
    onRemoveAddressClicked: PropTypes.func.isRequired,
    showLoader: PropTypes.bool.isRequired,
 }

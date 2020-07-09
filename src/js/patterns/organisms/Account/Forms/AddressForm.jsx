@@ -3,23 +3,20 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { FormattedMessage, injectIntl } from 'react-intl'
 import { useForm } from 'react-hook-form'
+import _ from 'lodash'
 
 import ErrorMessage from 'Atoms/errorMessage'
 
 import ButtonWithLoader from 'Atoms/button/WithLoader'
 
-const AddressForm = ({ intl, defaultValues = {}, onSubmit, showLoader }) => {
+const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader }) => {
     const requiredField = intl.formatMessage({ id: 'validation.required' })
     
     const { register, errors, getValues, handleSubmit } = useForm({ 
         mode: 'onChange', 
         defaultValues: defaultValues || {}
     })
-
-    const countries = [
-        { code: 'DE', name: 'Germany' }
-    ]
-
+    
     const onFormSubmit = () => {
         onSubmit(getValues())
     }
@@ -76,15 +73,6 @@ const AddressForm = ({ intl, defaultValues = {}, onSubmit, showLoader }) => {
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='address-phone'>
-                    <FormattedMessage id={'checkout.form.phone'} />
-                </label>
-                <input id='address-phone' name='phone' className='form-input mt-2' type='text'
-                    ref={register()}
-                />
-            </div>
-
-            <div className='mb-4'>
                 <label className='text-sm text-gray-700 leading-tight' htmlFor='address-streetName'>
                     <FormattedMessage id={'checkout.form.address'} /> *
                 </label>
@@ -135,6 +123,15 @@ const AddressForm = ({ intl, defaultValues = {}, onSubmit, showLoader }) => {
                 <ErrorMessage errors={errors} name='postalCode' />
             </div>
 
+            <div className='mb-4'>
+                <label className='text-sm text-gray-700 leading-tight' htmlFor='address-phone'>
+                    <FormattedMessage id={'checkout.form.phone'} />
+                </label>
+                <input id='address-phone' name='phone' className='form-input mt-2' type='text'
+                    ref={register()}
+                />
+            </div>
+
             <div className='mb-2 bg-gray-200 px-4 py-4 flex items-center'>
                 <input id='shipping-default' type="checkbox" className='mr-2' name='isDefaultShippingAddress' ref={register()} />
 
@@ -166,6 +163,7 @@ const AddressForm = ({ intl, defaultValues = {}, onSubmit, showLoader }) => {
 
 AddressForm.propTypes = {
     intl: PropTypes.object.isRequired,
+    countries: PropTypes.array.isRequired,
     defaultValues: PropTypes.object,
     onSubmit: PropTypes.func.isRequired,
     showLoader: PropTypes.bool.isRequired,

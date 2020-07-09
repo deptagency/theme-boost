@@ -16,7 +16,7 @@ import RemoveAddressForm from '../Forms/RemoveAddressForm'
 import EmptyList from './EmptyList'
 import AddressCard from './AddressCard'
 
-const AccountAddresses = ({ active, setActive, addresses, handleAddAddress, handleUpdateAddress, handleRemoveAddress, handleSetDefaultBillingAddress, handleSetDefaultShippingAddress }) => {
+const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddAddress, handleUpdateAddress, handleRemoveAddress, handleSetDefaultBillingAddress, handleSetDefaultShippingAddress }) => {
     const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false)
     const [showCreateAddressModal, setShowCreateAddressModal] = useState(false)
     const [showEditAddressPanel, setShowEditAddressPanel] = useState(false)
@@ -39,8 +39,8 @@ const AccountAddresses = ({ active, setActive, addresses, handleAddAddress, hand
         <>
             <PanelBlockResponsive
                 title={<FormattedMessage id='account.accountDetails' />}
-                isOpen={active == 'address'}
-                onClose={() => { setActive(false) }}
+                isOpen={openPanel}
+                onClose={onClose}
                 >
                 <div className='md:shadow-lg'>
                     <div className='border-b-4 border-gray-100' />
@@ -65,6 +65,7 @@ const AccountAddresses = ({ active, setActive, addresses, handleAddAddress, hand
                                 <div className='mx-4 mt-5 mb-6'>
                                     <AddressCard
                                         address={address}
+                                        countries={countries}
                                         onEditClicked={() => { 
                                             showPanel && setShowEditAddressPanel(true)
                                             showModal && setShowEditAddressModal(true)
@@ -97,6 +98,7 @@ const AccountAddresses = ({ active, setActive, addresses, handleAddAddress, hand
                 closeModal={() => { return setShowCreateAddressModal(false) }}
                 >
                 <AddressForm
+                    countries={countries}
                     showLoader={showLoader}
                     onSubmit={(address) => {
                         setShowLoader(true)
@@ -115,6 +117,7 @@ const AccountAddresses = ({ active, setActive, addresses, handleAddAddress, hand
                     closeModal={() => { return setShowEditAddressModal(false) }}
                     >
                     <AddressForm
+                        countries={countries}
                         defaultValues={activeAddress}
                         showLoader={showLoader}
                         onSubmit={(address) => {
@@ -143,6 +146,7 @@ const AccountAddresses = ({ active, setActive, addresses, handleAddAddress, hand
                     closeModal={() => { return setShowDeleteAddressModal(false) }}
                     >
                     <RemoveAddressForm
+                        countries={countries}
                         address={activeAddress}
                         showLoader={showLoader}
                         onRemoveAddressClicked={() => {
@@ -160,9 +164,10 @@ const AccountAddresses = ({ active, setActive, addresses, handleAddAddress, hand
 }
 
 AccountAddresses.propTypes = {
-    active: PropTypes.any.isRequired,
-    setActive: PropTypes.func.isRequired,
+    openPanel: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
     addresses: PropTypes.array.isRequired,
+    countries: PropTypes.array.isRequired,
     handleAddAddress: PropTypes.func.isRequired,
     handleUpdateAddress: PropTypes.func.isRequired,
     handleRemoveAddress: PropTypes.func.isRequired,
