@@ -24,7 +24,7 @@ const AccountMenu = ({ selectedMenuItem, welcome, children, handleLogout, openPa
                 {welcome}
             </div>
 
-            <div className='flex-auto md:shadow-lg'>
+            <div className='flex-auto md:shadow-lg h-64'>
                 <MenuItem
                     onClick={() => {
                         (selectedMenuItem !== MENU_ITEMS.ORDERS) && app.getRouter().push('Frontastic.Frontend.Master.Account.orders')
