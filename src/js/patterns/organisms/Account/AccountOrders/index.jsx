@@ -29,7 +29,7 @@ const AccountOrders = ({ openPanel, onClose, orders }) => {
             <PanelBlockResponsive
                 title={selectedOrder &&
                     <div className='grid grid-cols-2'>
-                        <div className='pt-3'>
+                        <div className='pt-3 md:pt-0'>
                             <FormattedMessage id='account.order' />
                             <div>#{selectedOrder.orderId}</div>
                         </div>
