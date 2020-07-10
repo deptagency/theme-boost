@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SlidingPane from 'react-sliding-pane'
-import Scrollbars from 'react-scrollbars-custom'
+import Scrollbars from 'react-custom-scrollbars'
 
 import { ReactComponent as PanelClose } from 'Icons/tailwind-icons/icon-panel-close.svg'
 
@@ -29,7 +29,7 @@ const SlideBottom = ({ isOpen, onClose, title = '', overlayVariant = '', childre
                 />
             </div>
             <div className='border-b-4 border-gray-100' />
-            <Scrollbars style={{ height: 'calc(100vh - 100px)' }}>
+            <Scrollbars style={{ height: 'calc(100vh - 116px)' }}>
                 {children}
             </Scrollbars>
         </SlidingPane>
