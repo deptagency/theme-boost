@@ -30,7 +30,7 @@ const ButtonWithLoader = ({
 ButtonWithLoader.propTypes = {
     onClick: PropTypes.func,
     showLoader: PropTypes.bool,
-    variant: PropTypes.bool,
+    variant: PropTypes.string,
     children: PropTypes.any.isRequired,
 }
 
