@@ -84,7 +84,7 @@ const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddA
                         )
                     })}
 
-                    {addresses.length == 0 &&
+                    {addresses.length === 0 &&
                         <EmptyList />
                     }
                 </div>

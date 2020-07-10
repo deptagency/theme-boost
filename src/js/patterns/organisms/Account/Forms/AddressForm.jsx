@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { FormattedMessage, injectIntl } from 'react-intl'
 import { useForm } from 'react-hook-form'
-import _ from 'lodash'
 
 import ErrorMessage from 'Atoms/errorMessage'
 

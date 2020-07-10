@@ -6,7 +6,7 @@ import _ from 'lodash'
 import ButtonWithLoader from 'Atoms/button/WithLoader'
 
 const RemoveAddressForm = ({ address, countries, onRemoveAddressClicked, showLoader }) => {
-    const country = _.find(countries, c => { return c.code == address.country })
+    const country = _.find(countries, c => { return c.code === address.country })
 
     return (
         <>
