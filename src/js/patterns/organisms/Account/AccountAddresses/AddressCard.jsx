@@ -8,7 +8,7 @@ import { ReactComponent as TrashIcon } from 'Icons/tailwind-icons/icon-trash.svg
 import { ReactComponent as CheckCircleIcon } from 'Icons/tailwind-icons/icon-check-circle.svg'
 
 const AddressCard = ({ address, countries, onEditClicked, onDeleteClicked }) => {
-    const country = _.find(countries, c => c.code == address.country)
+    const country = _.find(countries, c => { return c.code == address.country })
 
     return (
         <div className='text-base text-gray-800 leading-tight'>

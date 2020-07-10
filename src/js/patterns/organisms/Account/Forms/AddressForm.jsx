@@ -11,12 +11,12 @@ import ButtonWithLoader from 'Atoms/button/WithLoader'
 
 const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader }) => {
     const requiredField = intl.formatMessage({ id: 'validation.required' })
-    
-    const { register, errors, getValues, handleSubmit } = useForm({ 
-        mode: 'onChange', 
-        defaultValues: defaultValues || {}
+
+    const { register, errors, getValues, handleSubmit } = useForm({
+        mode: 'onChange',
+        defaultValues: defaultValues || {},
     })
-    
+
     const onFormSubmit = () => {
         onSubmit(getValues())
     }
@@ -133,7 +133,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
             </div>
 
             <div className='mb-2 bg-gray-200 px-4 py-4 flex items-center'>
-                <input id='shipping-default' type="checkbox" className='mr-2' name='isDefaultShippingAddress' ref={register()} />
+                <input id='shipping-default' type='checkbox' className='mr-2' name='isDefaultShippingAddress' ref={register()} />
 
                 <label className='text-sm text-gray-800 leading-tight' htmlFor='shipping-default'>
                     <FormattedMessage id='account.address.standardShipping' />
@@ -141,7 +141,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
             </div>
 
             <div className='bg-gray-200 px-4 py-4 flex items-center'>
-                <input id='billing-default' type="checkbox" className='mr-2' name='isDefaultBillingAddress' ref={register()} />
+                <input id='billing-default' type='checkbox' className='mr-2' name='isDefaultBillingAddress' ref={register()} />
 
                 <label className='text-sm text-gray-800 leading-tight' htmlFor='billing-default'>
                     <FormattedMessage id='account.address.standardBilling' />

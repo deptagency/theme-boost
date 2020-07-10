@@ -66,12 +66,12 @@ const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddA
                                     <AddressCard
                                         address={address}
                                         countries={countries}
-                                        onEditClicked={() => { 
+                                        onEditClicked={() => {
                                             showPanel && setShowEditAddressPanel(true)
                                             showModal && setShowEditAddressModal(true)
                                             setActiveAddress(address)
                                         }}
-                                        onDeleteClicked={() => { 
+                                        onDeleteClicked={() => {
                                             showPanel && setShowDeleteAddressPanel(true)
                                             showModal && setShowDeleteAddressModal(true)
                                             setActiveAddress(address)
@@ -84,7 +84,7 @@ const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddA
                         )
                     })}
 
-                    {addresses.length == 0 && 
+                    {addresses.length == 0 &&
                         <EmptyList />
                     }
                 </div>
@@ -92,7 +92,7 @@ const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddA
 
             <PanelModalResponsive
                 title={<FormattedMessage id='account.address.newAddress' />}
-                openPanel={showCreateAddressPanel} 
+                openPanel={showCreateAddressPanel}
                 closePanel={() => { return setShowCreateAddressPanel(false) }}
                 openModal={showCreateAddressModal}
                 closeModal={() => { return setShowCreateAddressModal(false) }}
@@ -130,9 +130,9 @@ const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddA
             }
 
             {activeAddress &&
-                <PanelModalResponsive                   
+                <PanelModalResponsive
                     title={<FormattedMessage id='account.address.removeAddress' />}
-                    openPanel={showDeleteAddressPanel} 
+                    openPanel={showDeleteAddressPanel}
                     closePanel={() => { return setShowDeleteAddressPanel(false) }}
                     openModal={showDeleteAddressModal}
                     closeModal={() => { return setShowDeleteAddressModal(false) }}
