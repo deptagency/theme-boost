@@ -1,8 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import Scrollbars from 'react-custom-scrollbars'
+
 import TopCategories from './TopCategories'
 import Navigation from './Navigation'
+import AccountLinks from './AccountLinks'
+
 import {
     categoryTreeType,
     topCategoryType,
@@ -42,17 +46,26 @@ const Modal = ({
                     onClose={onClose}
                 />
 
-                <div
-                    className='w-full ease-out-expo duration-20'
-                    style={{ transform: `translateX(${level * -100}%)` }}
+                <Scrollbars
+                    style={{ height: 'calc(100vh - 200px)' }}
+                    autoHide
+                    // hiding horizontal scrollbar
+                    hideTracksWhenNotNeeded
+                    renderView={p => { return <div {...p} style={{ ...p.style, overflowX: 'hidden' }} /> }}
                 >
-                    {currentTree && <Navigation
-                        items={currentTree.children}
-                        navPath={navPath}
-                        onSelectItem={handleSelectNavItem}
-                        isActive={isOpen}
-                    />}
-                </div>
+                    <div
+                        className='w-full ease-out-expo duration-20'
+                        style={{ transform: `translateX(${level * -100}%)` }}
+                    >
+                        {currentTree && <Navigation
+                            items={currentTree.children}
+                            navPath={navPath}
+                            onSelectItem={handleSelectNavItem}
+                            isActive={isOpen}
+                        />}
+                    </div>
+                </Scrollbars>
+                <AccountLinks closeMobileMenu={onClose} />
             </div>
         </div>
     )
