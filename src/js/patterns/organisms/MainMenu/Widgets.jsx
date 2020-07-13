@@ -19,18 +19,27 @@ const Widgets = ({ cartItemsCount, variant = '' }) => {
                 [variant]: true,
             })}
             >
-            <IconButton icon={<SearchIcon />} />
+            <IconButton 
+                variant='outline-none focus:outline-none'
+                icon={<SearchIcon />} 
+            />
 
             <IconButton
-                variant='hidden lg:block pl-6'
+                variant='hidden lg:block ml-6 outline-none focus:outline-none'
                 icon={<MyProfile />}
                 onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }}
             />
 
-            <IconButton variant='pl-6' icon={<WishlistIcon />} />
+            <IconButton 
+                variant='ml-6 outline-none focus:outline-none' 
+                icon={<WishlistIcon />} 
+            />
 
             <Badge count={cartItemsCount} onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}>
-                <IconButton icon={<CartIcon />} />
+                <IconButton 
+                    variant='outline-none focus:outline-none'
+                    icon={<CartIcon />} 
+                />
             </Badge>
         </div>
     )

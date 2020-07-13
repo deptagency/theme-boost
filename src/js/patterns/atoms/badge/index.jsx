@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export default function Badge ({ count, children, displayZeroCount, onClick }) {
     return (
-        <div className='badge-wrapper pl-6' onClick={onClick}>
+        <div className='badge-wrapper ml-6' onClick={onClick}>
             {children}
             {(displayZeroCount || count !== 0) && (
                 <span className='badge-count text-xs'>
