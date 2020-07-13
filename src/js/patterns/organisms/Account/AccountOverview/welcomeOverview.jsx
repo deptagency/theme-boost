@@ -6,7 +6,6 @@ import { ReactComponent as HappyIcon } from 'Icons/tailwind-icons/icon-emotion-h
 const WelcomeOverview = ({ firstName, variant = '' }) => {
     return (
         <div className={`flex-auto md:shadow-lg md:order-2 md:ml-5 ${variant}`}>
-            {/* <div className={`flex-auto md:shadow-lg md:order-2 md:w-7/12 md:ml-5 ${variant}`}> */}
             <div className='flex flex-col text-center justify-center w-64 mx-auto my-5 md:pb-56'>
                 <div className='mx-auto mb-5'>
                     <HappyIcon className='w-20 h-20 text-indigo-200 fill-current' />
