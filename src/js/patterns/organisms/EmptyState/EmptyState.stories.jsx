@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 import { FormattedMessage } from 'react-intl'
 import classnames from 'classnames'
 
-import MenuItem from 'Organisms/Account/AccountOverview/menuItem'
+import MenuItem from 'Molecules/Account/Menu/MenuItem'
 
 import { ReactComponent as CartIcon } from 'Icons/tailwind-icons/icon-cart.svg'
 import { ReactComponent as RightIcon } from 'Icons/tailwind-icons/icon-chevron-right.svg'
