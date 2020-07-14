@@ -2,17 +2,18 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
+import NoOrders from './NoOrders'
 import PanelBlockResponsive from 'Molecules/Layout/PanelBlockResponsive'
 import ListOrders from './ListOrders'
 import SelectedOrder from './SelectedOrder'
 
 import useSlidePanel from 'Molecules/Layout/Breakpoints/useSlidePanel'
-
 import { ReactComponent as CloseIcon } from 'Icons/tailwind-icons/icon-close-black.svg'
 
 const AccountOrders = ({ openPanel, onClose, orders }) => {
     const [selectedOrder, setSelectedOrder] = useState(null)
     const { usePanel } = useSlidePanel()
+    console.log('ORDERS', orders)
 
     return (
         <PanelBlockResponsive
@@ -21,10 +22,11 @@ const AccountOrders = ({ openPanel, onClose, orders }) => {
             onClose={onClose}
             >
 
-            {!selectedOrder && <ListOrders
-                orders={orders}
-                selectOrder={setSelectedOrder}
-            />}
+            {orders.length ? (
+                !selectedOrder && <ListOrders orders={orders} selectOrder={setSelectedOrder} />
+            ) : (
+                <NoOrders />
+            )}
 
             <PanelBlockResponsive
                 title={selectedOrder &&
