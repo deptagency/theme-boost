@@ -7,7 +7,16 @@ import Desktop from './Desktop'
 import { topCategoryType } from './types'
 import { useCurrentTopCategory, useNavPath } from './mainMenuState'
 
-const MainMenu = ({ topCategories, logo }) => {
+const MainMenu = ({
+    topCategories,
+    logo,
+    infoHeader,
+    infoHeaderIcon,
+    aboutHeader,
+    aboutHeaderIcon,
+    contacHeader,
+    contactHeaderIcon,
+}) => {
     const [currentTopCategory, setCurrentTopCategory] = useCurrentTopCategory(0)
     const [navPath, setNavPath] = useNavPath([])
 
@@ -44,6 +53,12 @@ const MainMenu = ({ topCategories, logo }) => {
                 navPath={navPath}
                 setNavPath={setNavPath}
                 cartItemsCount={cartItemsCount}
+                infoHeader={infoHeader}
+                infoHeaderIcon={infoHeaderIcon}
+                aboutHeader={aboutHeader}
+                aboutHeaderIcon={aboutHeaderIcon}
+                contacHeader={contacHeader}
+                contactHeaderIcon={contactHeaderIcon}
             />
             <Desktop
                 topCategories={topCategories}
@@ -61,6 +76,12 @@ const MainMenu = ({ topCategories, logo }) => {
 MainMenu.propTypes = {
     topCategories: PropTypes.arrayOf(topCategoryType),
     logo: PropTypes.object,
+    infoHeader: PropTypes.object,
+    aboutHeaderIcon: PropTypes.string,
+    aboutHeader: PropTypes.object,
+    infoHeaderIcon: PropTypes.string,
+    contacHeader: PropTypes.object,
+    contactHeaderIcon: PropTypes.string,
 }
 
 export default MainMenu

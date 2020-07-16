@@ -27,7 +27,7 @@ const NavigationItem = ({ item, level, navPath, onClick }) => {
     }
 
     return (
-        <li className='flex justify-between border-b'>
+        <li className='flex justify-between border-t'>
             <NodeLink
                 node={item}
                 onClick={handleOpenPage}
