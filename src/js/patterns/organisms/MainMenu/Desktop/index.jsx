@@ -2,8 +2,6 @@ import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 
 import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
-
-import MarginBreakout from 'Molecules/Layout/MarginBreakout'
 import TopCategories from './TopCategories'
 import DesktopMenu from './Navigation'
 import NavigationExpansionPanel from './NavigationExpansionPanel'
@@ -24,7 +22,7 @@ const Desktop = ({
     const [hoveredMenuItem, setHoveredMenuItem] = useState(undefined)
 
     const ref = useRef(null)
-    const backgroundImageUrl = useBackgroundImageUrl(ref, logo)
+    const logoUrl = useBackgroundImageUrl(ref, logo)
 
     const currentTree = topCategories[currentTopCategory].tree
 
@@ -36,52 +34,53 @@ const Desktop = ({
     }
 
     return (
-        <MarginBreakout variant='hidden lg:grid shadow-md'>
-            <div className='grid grid-cols-2 w-full max-w-1240px m-center'>
-                <div className='flex ml-5 xl:ml-5'>
-                    <a
-                        className='self-center h-8 w-3/12'
-                        ref={ref}
-                        href={window.location.origin}
-                    >
-                        <img src={backgroundImageUrl} alt='Logo' />
-                    </a>
+        <div className='hidden lg:block'>
+            <div className='o-wrapper'>
+                <div className='flex justify-between h-16'>
+                    <div className='inline-flex'>
+                        <a className='self-center w-32 mr-3' ref={ref} href={window.location.origin}>
+                            <img src={logoUrl} alt={logo.media.name} />
+                        </a>
 
-                    <TopCategories
-                        topCategories={topCategories}
-                        currentTopCategory={currentTopCategory}
-                        handleClick={(e, i) => {
-                            e.preventDefault()
-                            handleSelectTopCategory(i)
-                        }}
-                    />
-                </div>
-                <Widgets variant='mr-5 xl:mr-5' cartItemsCount={cartItemsCount} />
-                <div
-                    className='relative col-span-2'
-                    onMouseLeave={() => { setIsExpanded(false) }}
-                >
-                    <MarginBreakout variant='border-0.5px border-gray-300' />
-
-                    <DesktopMenu
-                        currentTree={currentTree}
-                        handleClick={handleClick}
-                        onHoverItem={(item) => {
-                            setHoveredMenuItem(item)
-                            setIsExpanded(item.children && item.children.length > 0)
-                        }}
-                    />
-
-                    <NavigationExpansionPanel
-                        expanded={isExpanded}
-                        item={hoveredMenuItem}
-                        navPath={navPath}
-                        handleClick={handleClick}
-                    />
-
+                        <TopCategories
+                            topCategories={topCategories}
+                            currentTopCategory={currentTopCategory}
+                            handleClick={(e, i) => {
+                                e.preventDefault()
+                                handleSelectTopCategory(i)
+                            }}
+                        />
+                    </div>
+                    <Widgets cartItemsCount={cartItemsCount} />
                 </div>
             </div>
-        </MarginBreakout>
+            <div className='border-t border-solid border-gray-200'>
+                <div className='o-wrapper'>
+                    <div
+                        className='relative col-span-2'
+                        onMouseLeave={() => {
+                            setIsExpanded(false)
+                        }}
+                    >
+                        <DesktopMenu
+                            currentTree={currentTree}
+                            handleClick={handleClick}
+                            onHoverItem={(item) => {
+                                setHoveredMenuItem(item)
+                                setIsExpanded(item.children && item.children.length > 0)
+                            }}
+                        />
+
+                        <NavigationExpansionPanel
+                            expanded={isExpanded}
+                            item={hoveredMenuItem}
+                            navPath={navPath}
+                            handleClick={handleClick}
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 

@@ -15,19 +15,20 @@ const Navigation = ({ items, onSelectItem, navPath, level = 0, isActive = false 
                 'opacity-0 invisible': !isActive,
                 'opacity-100 visible': isActive,
             })}
-            >
-            <ul className='flex-0-0-05 mx-5'>
-                {items && items.map((item, i) => {
-                    return (
-                        <NavigationItem
-                            key={item.nodeId}
-                            item={item}
-                            navPath={navPath}
-                            level={level}
-                            onClick={onSelectItem}
-                        />
-                    )
-                })}
+        >
+            <ul className='flex-0-0-05 mx-4'>
+                {items &&
+                    items.map((item, i) => {
+                        return (
+                            <NavigationItem
+                                key={item.nodeId}
+                                item={item}
+                                navPath={navPath}
+                                level={level}
+                                onClick={onSelectItem}
+                            />
+                        )
+                    })}
             </ul>
         </div>
     )

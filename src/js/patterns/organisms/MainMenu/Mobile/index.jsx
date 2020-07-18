@@ -25,7 +25,7 @@ const Mobile = ({
     const [level, setLevel] = useLevel(0)
 
     const ref = useRef(null)
-    const backgroundImageUrl = useBackgroundImageUrl(ref, logo)
+    const logoUrl = useBackgroundImageUrl(ref, logo)
 
     if (!topCategories) {
         return null
@@ -38,14 +38,12 @@ const Mobile = ({
                     <div className='flex'>
                         <MenuOpen
                             className='self-center cursor-pointer text-2xl'
-                            onClick={() => { setIsOpen(true) }}
+                            onClick={() => {
+                                setIsOpen(true)
+                            }}
                         />
-                        <a
-                            className='self-center h-8 max-w-124px w-full ml-3'
-                            ref={ref}
-                            href={window.location.origin}
-                        >
-                            <img src={backgroundImageUrl} alt='Logo' />
+                        <a className='self-center max-w-124px w-full ml-3' ref={ref} href={window.location.origin}>
+                            <img src={logoUrl} alt={logo.media.name} />
                         </a>
                     </div>
                     <Widgets cartItemsCount={cartItemsCount} />
@@ -65,13 +63,14 @@ const Mobile = ({
                 handleSelectNavItem={(item, toLevel) => {
                     setLevel(toLevel + 1)
                     setNavPath([...navPath, item])
-                }
-                }
+                }}
                 handleGoBack={() => {
                     setLevel(level - 1)
                     setNavPath(navPath.slice(0, -1))
                 }}
-                onClose={() => { setIsOpen(false) }}
+                onClose={() => {
+                    setIsOpen(false)
+                }}
             />
         </>
     )
