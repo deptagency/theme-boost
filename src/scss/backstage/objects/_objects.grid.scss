@@ -2,21 +2,40 @@
    # GRID
 ========================================================================== */
 
+/* Note: the grid gets usually wrapped inside a .o-wrapper
+ * to make sure the spacings to the viewport are correct
+ * */
 .o-grid {
     display: grid;
-    column-gap: 20px;
+    width: 100%;
     margin: 0 auto;
     grid-template-columns: [content-start] repeat(12, minmax(0, 1fr)) [content-end];
-    max-width: 1240px;
+
+    column-gap: 16px;
+    @media (min-width: map-get($breakpoints, desk)) {
+        column-gap: 24px;
+    }
+    /* The row-gap provides consistency on the y-axis.
+     * There are situations where vertical adjacent elements
+     * shouldn't have a gap, but this is currently not the
+     * case in boost theme. But if it were, tastics/patterns
+     * could be placed inside the same cell, which would remove
+     * the vertical spacing. If a custom spacing value is needed,
+     * it could be controlled using custom css classes and the
+     * adjacent sibling selector (+) or similar.
+     *
+     * In general patterns/tastics should neither have vertical
+     * or horizontal spacing, as this is controlled by the grid.
+     */
+    row-gap: 16px;
+    @media (min-width: map-get($breakpoints, desk)) {
+        row-gap: 24px;
+    }
 
     &.o-grid--debug > *:nth-child(odd) {
         background-color: rgba(203, 0, 114, 0.65);
     }
     &.o-grid--debug > *:nth-child(even) {
         background-color: rgba(95, 31, 156, 0.65);
-    }
-    .o-grid {
-        margin: 0 auto;
-        width: 100%;
     }
 }

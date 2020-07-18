@@ -1,0 +1,24 @@
+/*  If a page doesn't fill out the whole horizontal viewport,
+ *  the o-page-wrapper is basically the wrapper that holds the
+ *  grid(s). It makes sure that the page is centered for example,
+ *  has always the right spacings to the viewport edges, etc.
+ *
+ *  TODO: all those things are specific too boost theme, yet I see
+ *  the grid/cell reponsibility in catwalk. A solution might be to
+ *  unload the pixel values to env variables or something similar.
+ * */
+.o-wrapper {
+    margin: 0 16px;
+    width: calc(100% - 32px);
+    @media (min-width: map-get($breakpoints, desk)) {
+        margin: 0 32px;
+        width: calc(100% - 64px);
+    }
+    // breakpoint at which the viewport is bigger than
+    // the page-wrapper plus spacings and can therefore
+    // be just centered
+    @media (min-width: 1302px) {
+        margin: 0 auto;
+    }
+    max-width: 1240px;
+}
