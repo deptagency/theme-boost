@@ -7,7 +7,7 @@ import TinySlider from 'Templates/Slider'
 import ProductTeaser from 'Molecules/ProductTeaser'
 import MarginBreakout from 'Molecules/Layout/MarginBreakout'
 
-const ProductSlider = ({ products, title = '', description = '' }) => {
+const ProductSlider = ({ products, title = '', description = '', handleAddToWishlist, handleRemoveFromWishlist }) => {
     const productSliderWrapperRef = useRef(null)
     const [sliderIndent, setSliderIndent] = useState(0)
 
@@ -35,7 +35,7 @@ const ProductSlider = ({ products, title = '', description = '' }) => {
             <div className='mt-8 select-none'>
                 <div ref={productSliderWrapperRef}>
                     <TinySlider>
-                        {products.map((product, i) => {
+                        {products && products.map((product, i) => {
                             return (
                                 <div key={i}>
                                     <ProductTeaser
@@ -43,6 +43,9 @@ const ProductSlider = ({ products, title = '', description = '' }) => {
                                         itemClassName={classnames({
                                             'mr-6': (i + 1 < products.length),
                                         })}
+                                        wishlisted={product.wishlisted}
+                                        handleAddToWishlist={() => { handleAddToWishlist && handleAddToWishlist(product) }}
+                                        handleRemoveFromWishlist={() => { handleRemoveFromWishlist && handleRemoveFromWishlist(product) }}
                                     />
                                 </div>
                             )
@@ -65,6 +68,8 @@ ProductSlider.propTypes = {
         PropTypes.string,
         PropTypes.object,
     ]),
+    handleAddToWishlist: PropTypes.func,
+    handleRemoveFromWishlist: PropTypes.func,
 }
 
 export default ProductSlider

@@ -16,10 +16,11 @@ import ColorSelector from './selectors/ColorSelector'
 import SizeSelector from './selectors/SizeSelector'
 
 import { ReactComponent as IconHeartBorder } from 'Icons/tailwind-icons/icon-heart-border.svg'
+import { ReactComponent as IconHeartFullBorder } from 'Icons/tailwind-icons/icon-heart-full-border.svg'
 import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.svg'
 import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
 
-const ProductData = ({ name, variants, selectedVariant, onChange, addToCart }) => {
+const ProductData = ({ name, variants, selectedVariant, onChange, handleAddToCart, handleAddToWishlist, handleRemoveFromWishlist, wishlisted = false }) => {
     /* preventing showing LoaderButton on initial page load */
     const [showLoader, setShowLoader] = useState(false)
     const isLoading = useSelector((globalState) => {
@@ -59,14 +60,21 @@ const ProductData = ({ name, variants, selectedVariant, onChange, addToCart }) =
                     })}
                     onClick={() => {
                         setShowLoader(true)
-                        addToCart(selectedVariant)
+                        handleAddToCart(selectedVariant)
                             .then(() => { return setShowLoader(false) })
                     }}
                     disabled={loading}
                 >
                     {loading ? <LoaderButton /> : <FormattedMessage id='inCartProduct' />}
                 </Button>
-                <IconButton variant='text-icon-size hidden lg:block' icon={<IconHeartBorder />} />
+                <IconButton
+                    variant='text-icon-size ml-2 lg:block lg:ml-0'
+                    icon={wishlisted ? <IconHeartFullBorder /> : <IconHeartBorder />}
+                    onClick={() => {
+                        !wishlisted && handleAddToWishlist()
+                        wishlisted && handleRemoveFromWishlist()
+                    }}
+                />
             </div>
 
             <div className='flex flex-col md:flex-row md:border-b border-gray-300'>
@@ -90,8 +98,10 @@ ProductData.propTypes = {
     variants: PropTypes.array.isRequired,
     selectedVariant: PropTypes.object.isRequired,
     onChange: PropTypes.func.isRequired,
-    addToCart: PropTypes.func.isRequired,
-
+    handleAddToCart: PropTypes.func.isRequired,
+    handleAddToWishlist: PropTypes.func.isRequired,
+    handleRemoveFromWishlist: PropTypes.func.isRequired,
+    wishlisted: PropTypes.bool,
 }
 
 export default ProductData

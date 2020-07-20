@@ -20,6 +20,7 @@ import AccountProfileTastic from './account/profile/tastic'
 import ResetPasswordTastic from './account/reset-password/tastic'
 import AccountOrdersTastic from './account/orders/tastic'
 import AccountAddressesTastic from './account/addresses/tastic'
+import AccountWishlistsTastic from './account/wishlist/tastic'
 
 export default (() => {
     return {
@@ -45,5 +46,6 @@ export default (() => {
         'frontastic/boost/account/reset-password': ResetPasswordTastic,
         'frontastic/boost/account/orders': AccountOrdersTastic,
         'frontastic/boost/account/addresses': AccountAddressesTastic,
+        'frontastic/boost/account/wishlists': AccountWishlistsTastic,
     }
 })()

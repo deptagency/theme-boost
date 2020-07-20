@@ -20,6 +20,10 @@ const Mobile = ({
     navPath,
     setNavPath,
     cartItemsCount,
+    goToCartPage,
+    wishListLineItemsCount,
+    goToWishlistPage,
+    goToProfilePage,
 }) => {
     const [isOpen, setIsOpen] = useState(false)
     const [level, setLevel] = useLevel(0)
@@ -48,7 +52,13 @@ const Mobile = ({
                             <img src={backgroundImageUrl} alt='Logo' />
                         </a>
                     </div>
-                    <Widgets cartItemsCount={cartItemsCount} />
+                    <Widgets
+                        cartItemsCount={cartItemsCount}
+                        goToCartPage={goToCartPage}
+                        wishListLineItemsCount={wishListLineItemsCount}
+                        goToWishlistPage={goToWishlistPage}
+                        goToProfilePage={goToProfilePage}
+                    />
                 </div>
             </MarginBreakout>
 
@@ -85,10 +95,15 @@ Mobile.propTypes = {
     navPath: PropTypes.arrayOf(categoryTreeType),
     setNavPath: PropTypes.func.isRequired,
     cartItemsCount: PropTypes.number,
+    goToCartPage: PropTypes.func,
+    wishListLineItemsCount: PropTypes.number,
+    goToWishlistPage: PropTypes.func,
+    goToProfilePage: PropTypes.func,
 }
 
 Mobile.defaultProps = {
     cardItemsCount: 0,
+    wishListLineItemsCount: 0,
 }
 
 export default Mobile

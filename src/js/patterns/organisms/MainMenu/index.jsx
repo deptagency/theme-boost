@@ -7,7 +7,7 @@ import Desktop from './Desktop'
 import { topCategoryType } from './types'
 import { useCurrentTopCategory, useNavPath } from './mainMenuState'
 
-const MainMenu = ({ topCategories, logo }) => {
+const MainMenu = ({ topCategories, logo, goToCartPage, goToWishlistPage, goToProfilePage }) => {
     const [currentTopCategory, setCurrentTopCategory] = useCurrentTopCategory(0)
     const [navPath, setNavPath] = useNavPath([])
 
@@ -20,10 +20,15 @@ const MainMenu = ({ topCategories, logo }) => {
         setNavPath([...navPath, item])
     }
 
-    const { cartItemsCount } = useSelector((state) => {
+    const { cartItemsCount, wishListLineItemsCount } = useSelector((state) => {
         const cartLineItems = get(state, 'cart.cart.data.lineItems', [])
+        const wishListLineItems = get(state, 'wishlist.wishlist.data.lineItems', [])
         return {
             cartItemsCount: cartLineItems.reduce(
+                (accumulator, currentValue) => {
+                    return accumulator + currentValue.count
+                }, 0),
+            wishListLineItemsCount: wishListLineItems.reduce(
                 (accumulator, currentValue) => {
                     return accumulator + currentValue.count
                 }, 0),
@@ -44,6 +49,10 @@ const MainMenu = ({ topCategories, logo }) => {
                 navPath={navPath}
                 setNavPath={setNavPath}
                 cartItemsCount={cartItemsCount}
+                wishListLineItemsCount={wishListLineItemsCount}
+                goToCartPage={goToCartPage}
+                goToWishlistPage={goToWishlistPage}
+                goToProfilePage={goToProfilePage}
             />
             <Desktop
                 topCategories={topCategories}
@@ -53,6 +62,10 @@ const MainMenu = ({ topCategories, logo }) => {
                 navPath={navPath}
                 onSelectNavItem={handleSelectNavItem}
                 cartItemsCount={cartItemsCount}
+                wishListLineItemsCount={wishListLineItemsCount}
+                goToCartPage={goToCartPage}
+                goToWishlistPage={goToWishlistPage}
+                goToProfilePage={goToProfilePage}
             />
         </>
     )
@@ -61,6 +74,9 @@ const MainMenu = ({ topCategories, logo }) => {
 MainMenu.propTypes = {
     topCategories: PropTypes.arrayOf(topCategoryType),
     logo: PropTypes.object,
+    goToCartPage: PropTypes.func,
+    goToWishlistPage: PropTypes.func,
+    goToProfilePage: PropTypes.func,
 }
 
 export default MainMenu
