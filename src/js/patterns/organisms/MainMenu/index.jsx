@@ -7,12 +7,17 @@ import Desktop from './Desktop'
 import { topCategoryType } from './types'
 import { useCurrentTopCategory, useNavPath } from './mainMenuState'
 
-const MainMenu = ({ topCategories, logo, goToCartPage, goToWishlistPage, goToProfilePage, infoHeader,
-                      infoHeaderIcon,
-                      aboutHeader,
-                      aboutHeaderIcon,
-                      contacHeader,
-                      contactHeaderIcon, }) => {
+const MainMenu = ({
+    topCategories,
+    logo, goToCartPage,
+    goToWishlistPage,
+    goToProfilePage,
+    infoHeader,
+    infoHeaderIcon,
+    aboutHeader,
+    aboutHeaderIcon,
+    contacHeader,
+    contactHeaderIcon }) => {
     const [currentTopCategory, setCurrentTopCategory] = useCurrentTopCategory(0)
     const [navPath, setNavPath] = useNavPath([])
 

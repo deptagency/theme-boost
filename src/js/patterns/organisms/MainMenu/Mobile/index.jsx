@@ -24,12 +24,12 @@ const Mobile = ({
     wishListLineItemsCount,
     goToWishlistPage,
     goToProfilePage,
-                    infoHeader,
-                    infoHeaderIcon,
-                    aboutHeader,
-                    aboutHeaderIcon,
-                    contacHeader,
-                    contactHeaderIcon,
+    infoHeader,
+    infoHeaderIcon,
+    aboutHeader,
+    aboutHeaderIcon,
+    contacHeader,
+    contactHeaderIcon,
 }) => {
     const [isOpen, setIsOpen] = useState(false)
     const [level, setLevel] = useLevel(0)
