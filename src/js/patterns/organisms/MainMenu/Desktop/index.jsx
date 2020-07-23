@@ -19,6 +19,10 @@ const Desktop = ({
     navPath,
     onSelectNavItem,
     cartItemsCount,
+    wishListLineItemsCount,
+    goToCartPage,
+    goToWishlistPage,
+    goToProfilePage,
 }) => {
     const [isExpanded, setIsExpanded] = useState(false)
     const [hoveredMenuItem, setHoveredMenuItem] = useState(undefined)
@@ -56,7 +60,14 @@ const Desktop = ({
                         }}
                     />
                 </div>
-                <Widgets variant='mr-5 xl:mr-5' cartItemsCount={cartItemsCount} />
+                <Widgets
+                    variant='mr-5 xl:mr-5'
+                    cartItemsCount={cartItemsCount}
+                    goToCartPage={goToCartPage}
+                    wishListLineItemsCount={wishListLineItemsCount}
+                    goToWishlistPage={goToWishlistPage}
+                    goToProfilePage={goToProfilePage}
+                />
                 <div
                     className='relative col-span-2'
                     onMouseLeave={() => { setIsExpanded(false) }}
@@ -93,10 +104,15 @@ Desktop.propTypes = {
     handleSelectTopCategory: PropTypes.func.isRequired,
     onSelectNavItem: PropTypes.func.isRequired,
     cartItemsCount: PropTypes.number,
+    goToCartPage: PropTypes.func,
+    wishListLineItemsCount: PropTypes.number,
+    goToWishlistPage: PropTypes.func,
+    goToProfilePage: PropTypes.func,
 }
 
 Desktop.defaultProps = {
     cardItemsCount: 0,
+    wishListLineItemsCount: 0,
 }
 
 export default Desktop

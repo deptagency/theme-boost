@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ProductImages from './ProductImages'
 import ProductData from './ProductData'
 
-const ProductDetails = ({ product, addToCart }) => {
+const ProductDetails = ({ product, handleAddToCart, handleAddToWishlist, handleRemoveFromWishlist, wishlisted }) => {
     const [selectedVariantIndex, setSelectedVariantIndex] = useState(0)
     const selectedVariant = product.variants[selectedVariantIndex]
 
@@ -15,7 +15,10 @@ const ProductDetails = ({ product, addToCart }) => {
                 variants={product.variants}
                 selectedVariant={selectedVariant}
                 onChange={setSelectedVariantIndex}
-                addToCart={addToCart}
+                handleAddToCart={handleAddToCart}
+                handleAddToWishlist={handleAddToWishlist}
+                handleRemoveFromWishlist={handleRemoveFromWishlist}
+                wishlisted={wishlisted}
             />
         </div>
     )
@@ -23,7 +26,10 @@ const ProductDetails = ({ product, addToCart }) => {
 
 ProductDetails.propTypes = {
     product: PropTypes.object.isRequired,
-    addToCart: PropTypes.func.isRequired,
+    handleAddToCart: PropTypes.func.isRequired,
+    handleAddToWishlist: PropTypes.func.isRequired,
+    handleRemoveFromWishlist: PropTypes.func.isRequired,
+    wishlisted: PropTypes.bool,
 }
 
 export default ProductDetails
