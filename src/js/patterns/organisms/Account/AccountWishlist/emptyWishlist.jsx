@@ -7,14 +7,7 @@ import Button from 'Atoms/button'
 import { ReactComponent as IconEmotionSad } from 'Icons/tailwind-icons/icon-emotion-sad.svg'
 
 const EmptyWishlist = ({ returnToHomePage }) => {
-    const fading = useSpring({
-        from: {
-            opacity: 0,
-        },
-        to: {
-            opacity: 1,
-        },
-    })
+    const fading = useSpring({ opacity: 1, from: { opacity: 0 } })
 
     return (
         <animated.div style={fading} className='z-50 pt-2 mt-10'>

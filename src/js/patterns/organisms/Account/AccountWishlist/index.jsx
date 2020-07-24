@@ -62,47 +62,43 @@ const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage 
                 <EmptyWishlist returnToHomePage={returnToHomePage} />}
 
             {wishlist.isComplete() && wishlistItems.length > 0 &&
-                wishlistContainerTransition.map(({ item }) => {
-                    var lineItemSum = 0
-                    wishlist.data.lineItems.map(lineItem => {
-                        return (
-                            lineItemSum += lineItem.count
-                        )
-                    })
-                    return (
-                        <div className='border-b-4 border-gray-100 mb-4'>
-                            {item && <animated.div className='z-50 pt-2 min-h-354px'>
+                wishlistContainerTransition.map(({ item, key, props: containerProps }) => {
+                    return <>
+                        {item && <animated.div style={containerProps}>
+                            <div ref={wishlistContainerRef}>
                                 <div className='text-center my-3'>
                                     <div className='font-bold text-2xl'>
                                         <FormattedMessage id='wishlist.myWishlist' />
                                     </div>
                                     <div className='text-sm text-gray-500'>
-                                        {lineItemSum === 1 && <div>{lineItemSum} <FormattedMessage id='wishlist.product' /></div>}
-                                        {lineItemSum > 1 && <div>{lineItemSum} <FormattedMessage id='wishlist.products' /></div>}
+                                        {wishlistItems.length === 1 ?
+                                            <FormattedMessage id='wishlist.product' /> :
+                                            <FormattedMessage id='wishlist.products' values={{ count: wishlistItems.length }} />}
                                     </div>
                                 </div>
-                                <div ref={wishlistContainerRef} className='grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+                                <div className='grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
                                     {wishlistItemsTransitions.map(({ item, key, props }) => {
-                                        return (
-                                            <animated.div key={key} style={{ ...props }}>
-                                                <div ref={itemRef}>
-                                                    <ProductTeaser
-                                                        product={item}
-                                                        showHeartIcon={false}
-                                                        showCloseIcon
-                                                        handleRemoveFromWishlist={() => {
-                                                            setWishlistChanging(true)
-                                                            handleRemoveFromWishlist(item.lineItemId)
-                                                        }}
-                                                    />
-                                                </div>
-                                            </animated.div>
-                                        )
-                                    })}
+                                            return (
+                                                <animated.div key={key} style={{ ...props, minHeight: '354px' }}>
+                                                    <div ref={itemRef}>
+                                                        <ProductTeaser
+                                                            product={item}
+                                                            showHeartIcon={false}
+                                                            showCloseIcon
+                                                            handleRemoveFromWishlist={() => {
+                                                                setWishlistChanging(true)
+                                                                handleRemoveFromWishlist(item.lineItemId)
+                                                            }}
+                                                        />
+                                                    </div>
+                                                </animated.div>
+                                            )
+                                        })}
                                 </div>
-                            </animated.div>}
-                        </div>
-                    )
+                            </div>
+                        </animated.div>}
+                        <div className='border-t-4 border-gray-100 h-10' />
+                    </>
                 })
             }
         </>
