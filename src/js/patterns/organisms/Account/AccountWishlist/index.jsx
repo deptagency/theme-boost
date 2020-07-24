@@ -11,7 +11,7 @@ import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 
 const AccountWishlist = ({ wishlist }) => {
     const [ wishlistChanging, setWishlistChanging ] = useState(false)
-    const [wishlistItems, setWishlistItems] = useState([])
+    const [ wishlistItems, setWishlistItems ] = useState([])
     const wishlistContainerRef = useRef(null)
     const itemRef = useRef(null)
     const { height: wishlistHeight } = useComponentSize(wishlistContainerRef)
@@ -51,19 +51,16 @@ const AccountWishlist = ({ wishlist }) => {
             },
         })
 
-    if (wishlistItems.length === 0) {
-        return (
-            <EmptyWishlist />
-        )
-    }
-
     return (
         <>
             {!wishlist.isComplete() && <div className='relative h-screen'><DefaultLoader /></div>}
 
-            {wishlist.isComplete() && wishlistContainerTransition.map(({ item, key, props: containerProps }) => {
-                return (
-                    <>
+            {wishlist.isComplete() && wishlistItems.length === 0 &&
+                <EmptyWishlist />}
+
+            {wishlist.isComplete() && wishlistItems.length > 0 &&
+                wishlistContainerTransition.map(({ item, key, props: containerProps }) => {
+                    return <>
                         {item && <animated.div style={containerProps} className='z-50 pt-2'>
                             <div ref={wishlistContainerRef} className='grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
                                 {wishlistItemsTransitions.map(({ item, key, props }) => {
@@ -88,8 +85,9 @@ const AccountWishlist = ({ wishlist }) => {
                             </div>
                         </animated.div>}
                     </>
+                }
                 )
-            })}
+            }
         </>
     )
 }
