@@ -7,7 +7,17 @@ import Desktop from './Desktop'
 import { topCategoryType } from './types'
 import { useCurrentTopCategory, useNavPath } from './mainMenuState'
 
-const MainMenu = ({ topCategories, logo, goToCartPage, goToWishlistPage, goToProfilePage }) => {
+const MainMenu = ({
+    topCategories,
+    logo, goToCartPage,
+    goToWishlistPage,
+    goToProfilePage,
+    infoHeader,
+    infoHeaderIcon,
+    aboutHeader,
+    aboutHeaderIcon,
+    contacHeader,
+    contactHeaderIcon }) => {
     const [currentTopCategory, setCurrentTopCategory] = useCurrentTopCategory(0)
     const [navPath, setNavPath] = useNavPath([])
 
@@ -53,6 +63,12 @@ const MainMenu = ({ topCategories, logo, goToCartPage, goToWishlistPage, goToPro
                 goToCartPage={goToCartPage}
                 goToWishlistPage={goToWishlistPage}
                 goToProfilePage={goToProfilePage}
+                infoHeader={infoHeader}
+                infoHeaderIcon={infoHeaderIcon}
+                aboutHeader={aboutHeader}
+                aboutHeaderIcon={aboutHeaderIcon}
+                contacHeader={contacHeader}
+                contactHeaderIcon={contactHeaderIcon}
             />
             <Desktop
                 topCategories={topCategories}
@@ -77,6 +93,12 @@ MainMenu.propTypes = {
     goToCartPage: PropTypes.func,
     goToWishlistPage: PropTypes.func,
     goToProfilePage: PropTypes.func,
+    infoHeader: PropTypes.object,
+    aboutHeaderIcon: PropTypes.string,
+    aboutHeader: PropTypes.object,
+    infoHeaderIcon: PropTypes.string,
+    contacHeader: PropTypes.object,
+    contactHeaderIcon: PropTypes.string,
 }
 
 export default MainMenu

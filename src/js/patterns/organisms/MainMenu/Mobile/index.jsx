@@ -24,6 +24,12 @@ const Mobile = ({
     wishListLineItemsCount,
     goToWishlistPage,
     goToProfilePage,
+    infoHeader,
+    infoHeaderIcon,
+    aboutHeader,
+    aboutHeaderIcon,
+    contacHeader,
+    contactHeaderIcon,
 }) => {
     const [isOpen, setIsOpen] = useState(false)
     const [level, setLevel] = useLevel(0)
@@ -68,6 +74,12 @@ const Mobile = ({
                 navPath={navPath}
                 topCategories={topCategories}
                 currentTopCategory={currentTopCategory}
+                infoHeader={infoHeader}
+                infoHeaderIcon={infoHeaderIcon}
+                aboutHeader={aboutHeader}
+                aboutHeaderIcon={aboutHeaderIcon}
+                contacHeader={contacHeader}
+                contactHeaderIcon={contactHeaderIcon}
                 handleSelectTopCategory={(categoryId) => {
                     setLevel(0)
                     handleSelectTopCategory(categoryId)
@@ -99,6 +111,12 @@ Mobile.propTypes = {
     wishListLineItemsCount: PropTypes.number,
     goToWishlistPage: PropTypes.func,
     goToProfilePage: PropTypes.func,
+    infoHeader: PropTypes.object,
+    infoHeaderIcon: PropTypes.string,
+    aboutHeader: PropTypes.object,
+    aboutHeaderIcon: PropTypes.string,
+    contacHeader: PropTypes.object,
+    contactHeaderIcon: PropTypes.string,
 }
 
 Mobile.defaultProps = {

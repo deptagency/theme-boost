@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Scrollbars from 'react-custom-scrollbars'
+import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 
 import TopCategories from './TopCategories'
 import Navigation from './Navigation'
@@ -22,6 +23,12 @@ const Modal = ({
     handleGoBack,
     navPath,
     onClose,
+    infoHeader,
+    infoHeaderIcon,
+    aboutHeader,
+    aboutHeaderIcon,
+    contacHeader,
+    contactHeaderIcon,
 }) => {
     const currentTree = topCategories[currentTopCategory].tree
 
@@ -47,7 +54,7 @@ const Modal = ({
                 />
 
                 <Scrollbars
-                    style={{ height: 'calc(100vh - 200px)' }}
+                    style={{ height: 'calc(100vh - 308px)' }}
                     autoHide
                     // hiding horizontal scrollbar
                     hideTracksWhenNotNeeded
@@ -65,7 +72,15 @@ const Modal = ({
                         />}
                     </div>
                 </Scrollbars>
-                <AccountLinks closeMobileMenu={onClose} />
+                <AccountLinks
+                    closeMobileMenu={onClose}
+                    infoHeader={<Translatable value={infoHeader} />}
+                    infoHeaderIcon={infoHeaderIcon}
+                    aboutHeader={<Translatable value={aboutHeader} />}
+                    aboutHeaderIcon={aboutHeaderIcon}
+                    contacHeader={<Translatable value={contacHeader} />}
+                    contactHeaderIcon={contactHeaderIcon}
+                />
             </div>
         </div>
     )
@@ -81,6 +96,12 @@ Modal.propTypes = {
     handleGoBack: PropTypes.func.isRequired,
     navPath: PropTypes.arrayOf(categoryTreeType),
     onClose: PropTypes.func.isRequired,
+    infoHeader: PropTypes.object,
+    infoHeaderIcon: PropTypes.string,
+    aboutHeader: PropTypes.object,
+    aboutHeaderIcon: PropTypes.string,
+    contacHeader: PropTypes.object,
+    contactHeaderIcon: PropTypes.string,
 }
 
 export default Modal
