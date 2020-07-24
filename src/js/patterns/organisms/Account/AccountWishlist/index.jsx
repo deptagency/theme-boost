@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
-import app from '@frontastic/catwalk/src/js/app/app'
 import ProductTeaser from 'Molecules/ProductTeaser'
 import EmptyWishlist from './emptyWishlist'
 
@@ -9,7 +8,7 @@ import { animated, useTransition } from 'react-spring'
 import useComponentSize from '@rehooks/component-size'
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 
-const AccountWishlist = ({ wishlist }) => {
+const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage }) => {
     const [ wishlistChanging, setWishlistChanging ] = useState(false)
     const [ wishlistItems, setWishlistItems ] = useState([])
     const wishlistContainerRef = useRef(null)
@@ -56,7 +55,7 @@ const AccountWishlist = ({ wishlist }) => {
             {!wishlist.isComplete() && <div className='relative h-screen'><DefaultLoader /></div>}
 
             {wishlist.isComplete() && wishlistItems.length === 0 &&
-                <EmptyWishlist />}
+                <EmptyWishlist returnToHomePage={returnToHomePage} />}
 
             {wishlist.isComplete() && wishlistItems.length > 0 &&
                 wishlistContainerTransition.map(({ item, key, props: containerProps }) => {
@@ -73,9 +72,7 @@ const AccountWishlist = ({ wishlist }) => {
                                                     showCloseIcon
                                                     handleRemoveFromWishlist={() => {
                                                         setWishlistChanging(true)
-                                                        app.getLoader('wishlist').removeLineItem(wishlist.data.wishlistId, {
-                                                            lineItemId: item.lineItemId,
-                                                        })
+                                                        handleRemoveFromWishlist(item.lineItemId)
                                                     }}
                                                 />
                                             </div>
@@ -94,6 +91,8 @@ const AccountWishlist = ({ wishlist }) => {
 
 AccountWishlist.propTypes = {
     wishlist: PropTypes.object.isRequired,
+    handleRemoveFromWishlist: PropTypes.func.isRequired,
+    returnToHomePage: PropTypes.func.isRequired,
 }
 
 export default AccountWishlist

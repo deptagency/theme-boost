@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-
 import app from '@frontastic/catwalk/src/js/app/app'
+
 import AccountWishlist from 'Organisms/Account/AccountWishlist'
 
 const AccountWishlistsTastic = () => {
@@ -17,7 +17,17 @@ const AccountWishlistsTastic = () => {
     }
 
     return (
-        <AccountWishlist wishlist={wishlist} />
+        <AccountWishlist
+            wishlist={wishlist}
+            handleRemoveFromWishlist={(itemId) => {
+                app.getLoader('wishlist').removeLineItem(wishlist.data.wishlistId, {
+                    lineItemId: itemId,
+                })
+            }}
+            returnToHomePage={() => {
+                app.getRouter().history.replace('/')
+            }}
+        />
     )
 }
 
