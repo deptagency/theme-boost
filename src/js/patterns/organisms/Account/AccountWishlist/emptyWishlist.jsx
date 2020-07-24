@@ -1,14 +1,24 @@
 import React from 'react'
 import app from 'frontastic-catwalk/src/js/app/app'
+import { useSpring, animated } from 'react-spring'
 
 import { FormattedMessage } from 'react-intl'
 import Button from 'Atoms/button'
 import { ReactComponent as IconEmotionSad } from 'Icons/tailwind-icons/icon-emotion-sad.svg'
 
 const EmptyWishlist = () => {
+    const fading = useSpring({
+        from: {
+            opacity: 0,
+        },
+        to: {
+            opacity: 1,
+        },
+    })
+
     return (
-        <div className='z-50 pt-2 min-h-354px '>
-            <div className='flex flex-col text-center w-64 mx-auto mt-10 mb-32'>
+        <animated.div style={fading} className='z-50 pt-2 min-h-354px '>
+            <div className='flex flex-col text-center w-64 mx-auto mt-16'>
                 <div className='mx-auto mb-3'>
                     <IconEmotionSad className='w-8 h-8 text-gray-800 fill-current' />
                 </div>
@@ -26,8 +36,7 @@ const EmptyWishlist = () => {
                     <FormattedMessage id='wishlist.keepBrowsing' />
                 </Button>
             </div>
-            <div className='border-b-4 border-gray-100'/>
-        </div>
+        </animated.div>
     )
 }
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import app from '@frontastic/catwalk/src/js/app/app'
 import ProductTeaser from 'Molecules/ProductTeaser'
+import EmptyWishlist from './emptyWishlist'
 
 import { animated, useTransition } from 'react-spring'
 
@@ -49,6 +50,12 @@ const AccountWishlist = ({ wishlist }) => {
                 opacity: 0,
             },
         })
+
+    if (wishlistItems.length === 0) {
+        return (
+            <EmptyWishlist />
+        )
+    }
 
     return (
         <>
