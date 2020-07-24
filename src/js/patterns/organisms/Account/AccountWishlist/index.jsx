@@ -1,18 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
-import app from '@frontastic/catwalk/src/js/app/app'
 import ProductTeaser from 'Molecules/ProductTeaser'
 import EmptyWishlist from './emptyWishlist'
+import Error from './error'
 
 import { animated, useTransition } from 'react-spring'
 
 import useComponentSize from '@rehooks/component-size'
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 
-const AccountWishlist = ({ wishlist }) => {
-    console.log('WISHLIST', wishlist)
+const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage }) => {
     const [ wishlistChanging, setWishlistChanging ] = useState(false)
-    const [wishlistItems, setWishlistItems] = useState([])
+    const [ wishlistItems, setWishlistItems ] = useState([])
     const wishlistContainerRef = useRef(null)
     const itemRef = useRef(null)
     const { height: wishlistHeight } = useComponentSize(wishlistContainerRef)
@@ -52,60 +51,62 @@ const AccountWishlist = ({ wishlist }) => {
             },
         })
 
-    if (wishlistItems.length === 0) {
-        return (
-            <EmptyWishlist />
-        )
-    }
-
     return (
         <>
-            {!wishlist.isComplete() && <div className='relative h-screen'><DefaultLoader /></div>}
+            {!wishlist.isComplete() && wishlist.loading &&
+                <div className='relative h-screen'><DefaultLoader /></div>}
 
-            {wishlist.isComplete() && wishlistContainerTransition.map(({ item, key, props: containerProps }) => {
-                return (
-                    <div className='border-b-4 border-gray-100 mb-4'>
-                        {item && <animated.div className='z-50 pt-2 min-h-354px'>
-                            <div className='text-center my-2'>
-                                <div className='font-bold text-2xl'>
-                                    My wishlist
+            {wishlist.error &&
+                <Error returnToHomePage={returnToHomePage} />}
+
+            {wishlist.isComplete() && wishlistItems.length === 0 &&
+                <EmptyWishlist returnToHomePage={returnToHomePage} />}
+
+            {wishlist.isComplete() && wishlistItems.length > 0 &&
+                wishlistContainerTransition.map(({ item, key, props: containerProps }) => {
+                    return (
+                        <div className='border-b-4 border-gray-100 mb-4'>
+                            {item && <animated.div className='z-50 pt-2 min-h-354px'>
+                                <div className='text-center my-2'>
+                                    <div className='font-bold text-2xl'>
+                                        My wishlist
+                                    </div>
+                                    <div className='text-sm text-gray-500'>
+                                        4 products
+                                    </div>
                                 </div>
-                                <div className='text-sm text-gray-500'>
-                                    4 products
+                                <div ref={wishlistContainerRef} className='grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+                                    {wishlistItemsTransitions.map(({ item, key, props }) => {
+                                        return (
+                                            <animated.div key={key} style={{ ...props }}>
+                                                <div ref={itemRef}>
+                                                    <ProductTeaser
+                                                        product={item}
+                                                        showHeartIcon={false}
+                                                        showCloseIcon
+                                                        handleRemoveFromWishlist={() => {
+                                                            setWishlistChanging(true)
+                                                            handleRemoveFromWishlist(item.lineItemId)
+                                                        }}
+                                                    />
+                                                </div>
+                                            </animated.div>
+                                        )
+                                    })}
                                 </div>
-                            </div>
-                            
-                            <div ref={wishlistContainerRef} className='grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-                                {wishlistItemsTransitions.map(({ item, key, props }) => {
-                                    return (
-                                        <animated.div key={key} style={{ ...props }}>
-                                            <div ref={itemRef}>
-                                                <ProductTeaser
-                                                    product={item}
-                                                    showHeartIcon={false}
-                                                    showCloseIcon
-                                                    handleRemoveFromWishlist={() => {
-                                                        setWishlistChanging(true)
-                                                        app.getLoader('wishlist').removeLineItem(wishlist.data.wishlistId, {
-                                                            lineItemId: item.lineItemId,
-                                                        })
-                                                    }}
-                                                />
-                                            </div>
-                                        </animated.div>
-                                    )
-                                })}
-                            </div>
-                        </animated.div>}
-                    </div>
-                )
-            })}
+                            </animated.div>}
+                        </div>
+                    )
+                })
+            }
         </>
     )
 }
 
 AccountWishlist.propTypes = {
     wishlist: PropTypes.object.isRequired,
+    handleRemoveFromWishlist: PropTypes.func.isRequired,
+    returnToHomePage: PropTypes.func.isRequired,
 }
 
 export default AccountWishlist

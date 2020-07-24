@@ -1,12 +1,12 @@
 import React from 'react'
-import app from 'frontastic-catwalk/src/js/app/app'
+import PropTypes from 'prop-types'
+import { FormattedMessage } from 'react-intl'
 import { useSpring, animated } from 'react-spring'
 
-import { FormattedMessage } from 'react-intl'
 import Button from 'Atoms/button'
 import { ReactComponent as IconEmotionSad } from 'Icons/tailwind-icons/icon-emotion-sad.svg'
 
-const EmptyWishlist = () => {
+const EmptyWishlist = ({ returnToHomePage }) => {
     const fading = useSpring({
         from: {
             opacity: 0,
@@ -30,16 +30,19 @@ const EmptyWishlist = () => {
                     </div>
                     <Button
                         variant='btn btn-indigo mt-6 mr-2'
-                        onClick={() => {
-                            app.getRouter().history.replace('/')
-                        }}
+                        onClick={returnToHomePage}
                     >
                         <FormattedMessage id='wishlist.keepBrowsing' />
                     </Button>
                 </div>
+                
             </div>
         </animated.div>
     )
+}
+
+EmptyWishlist.propTypes = {
+    returnToHomePage: PropTypes.func.isRequired,
 }
 
 export default EmptyWishlist
