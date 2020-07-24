@@ -10,6 +10,7 @@ import useComponentSize from '@rehooks/component-size'
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 
 const AccountWishlist = ({ wishlist }) => {
+    console.log('WISHLIST', wishlist)
     const [ wishlistChanging, setWishlistChanging ] = useState(false)
     const [wishlistItems, setWishlistItems] = useState([])
     const wishlistContainerRef = useRef(null)
@@ -63,12 +64,21 @@ const AccountWishlist = ({ wishlist }) => {
 
             {wishlist.isComplete() && wishlistContainerTransition.map(({ item, key, props: containerProps }) => {
                 return (
-                    <>
-                        {item && <animated.div style={containerProps} className='z-50 pt-2'>
+                    <div className='border-b-4 border-gray-100 mb-4'>
+                        {item && <animated.div className='z-50 pt-2 min-h-354px'>
+                            <div className='text-center my-2'>
+                                <div className='font-bold text-2xl'>
+                                    My wishlist
+                                </div>
+                                <div className='text-sm text-gray-500'>
+                                    4 products
+                                </div>
+                            </div>
+                            
                             <div ref={wishlistContainerRef} className='grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
                                 {wishlistItemsTransitions.map(({ item, key, props }) => {
                                     return (
-                                        <animated.div key={key} style={{ ...props, minHeight: '354px' }}>
+                                        <animated.div key={key} style={{ ...props }}>
                                             <div ref={itemRef}>
                                                 <ProductTeaser
                                                     product={item}
@@ -87,7 +97,7 @@ const AccountWishlist = ({ wishlist }) => {
                                 })}
                             </div>
                         </animated.div>}
-                    </>
+                    </div>
                 )
             })}
         </>
