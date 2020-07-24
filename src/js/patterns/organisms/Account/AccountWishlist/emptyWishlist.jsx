@@ -17,7 +17,7 @@ const EmptyWishlist = ({ returnToHomePage }) => {
     })
 
     return (
-        <animated.div style={fading} className='z-50 pt-2 mt-8'>
+        <animated.div style={fading} className='z-50 pt-2 mt-10'>
             <div className='border-b-4 border-gray-100 mb-4 min-h-354px'>
                 <div className='flex flex-col text-center w-64 mx-auto pt-16'>
                     <div className='mx-auto mb-3'>
@@ -35,7 +35,6 @@ const EmptyWishlist = ({ returnToHomePage }) => {
                         <FormattedMessage id='wishlist.keepBrowsing' />
                     </Button>
                 </div>
-                
             </div>
         </animated.div>
     )

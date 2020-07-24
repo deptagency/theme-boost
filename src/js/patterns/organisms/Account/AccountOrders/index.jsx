@@ -13,7 +13,6 @@ import { ReactComponent as CloseIcon } from 'Icons/tailwind-icons/icon-close-bla
 const AccountOrders = ({ openPanel, onClose, orders }) => {
     const [selectedOrder, setSelectedOrder] = useState(null)
     const { usePanel } = useSlidePanel()
-    console.log('ORDERS', orders)
 
     return (
         <PanelBlockResponsive
