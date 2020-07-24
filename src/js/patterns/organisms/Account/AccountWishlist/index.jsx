@@ -97,7 +97,7 @@ const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage 
                                 </div>
                             </div>
                         </animated.div>}
-                        <div className='border-t-4 border-gray-100 h-10' />
+                        {item && <div className='border-t-4 border-gray-100 h-10' />}
                     </>
                 })
             }
