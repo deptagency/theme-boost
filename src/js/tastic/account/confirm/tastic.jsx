@@ -17,14 +17,14 @@ class AccountConfirmTastic extends Component {
     }
 
     componentDidMount () {
-        if (!this.props.token) {
+        if (!this.props.confirmationToken) {
             return
         }
 
         app.api.request(
             'POST',
             'Frontastic.AccountApi.Api.confirm',
-            { token: this.props.token, ownErrorHandler: true },
+            { confirmationToken: this.props.confirmationToken, ownErrorHandler: true },
             {},
             (json) => {
                 app.getLoader('context').notifyUser(
@@ -56,7 +56,7 @@ class AccountConfirmTastic extends Component {
 }
 
 AccountConfirmTastic.propTypes = {
-    token: PropTypes.string,
+    confirmationToken: PropTypes.string,
 }
 
 AccountConfirmTastic.defaultProps = {
@@ -66,7 +66,7 @@ export default connect(
     (globalState, props) => {
         return {
             ...props,
-            token: globalState.app.route.get('token', null),
+            confirmationToken: globalState.app.route.get('confirmationToken', null),
         }
     }
 )(AccountConfirmTastic)
