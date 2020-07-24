@@ -58,7 +58,7 @@ const ProductTeaser = ({
                     {wishlisted && <WishlistHeartFull />}
                 </div>}
                 {showCloseIcon && <div
-                    className='absolute right-0 z-1 row-start-1 row-end-2 col-start-1 col-end-2 justify-self-end mr-5 mt-4 cursor-pointer'
+                    className='absolute right-0 z-10 row-start-1 row-end-2 col-start-1 col-end-2 justify-self-end mr-5 cursor-pointer'
                     onClick={handleRemoveFromWishlist}
                 >
                     <CloseIcon className='fill-current text-gray-800 text-xl' />
