@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import ProductTeaser from 'Molecules/ProductTeaser'
 import EmptyWishlist from './emptyWishlist'
+import Error from './error'
 
 import { animated, useTransition } from 'react-spring'
 
@@ -52,7 +53,11 @@ const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage 
 
     return (
         <>
-            {!wishlist.isComplete() && <div className='relative h-screen'><DefaultLoader /></div>}
+            {!wishlist.isComplete() && wishlist.loading &&
+                <div className='relative h-screen'><DefaultLoader /></div>}
+
+            {wishlist.error &&
+                <Error returnToHomePage={returnToHomePage} />}
 
             {wishlist.isComplete() && wishlistItems.length === 0 &&
                 <EmptyWishlist returnToHomePage={returnToHomePage} />}
