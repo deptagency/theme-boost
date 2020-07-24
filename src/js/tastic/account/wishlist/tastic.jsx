@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 
 import app from '@frontastic/catwalk/src/js/app/app'
 import ProductTeaser from 'Molecules/ProductTeaser'
+import EmptyWishlist from 'Molecules/ProductTeaser/emptyWishlist'
 
 import { animated, useTransition } from 'react-spring'
 
@@ -11,7 +12,7 @@ import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 
 const AccountWishlistsTastic = () => {
     const [ wishlistChanging, setWishlistChanging ] = useState(false)
-    const [wishlistItems, setWishlistItems] = useState([])
+    const [ wishlistItems, setWishlistItems ] = useState([])
     const wishlistContainerRef = useRef(null)
     const itemRef = useRef(null)
     const { height: wishlistHeight } = useComponentSize(wishlistContainerRef)
@@ -59,6 +60,12 @@ const AccountWishlistsTastic = () => {
         },
     })
 
+    if ( wishlistItems.length === 0) {
+        return (
+            <EmptyWishlist />
+        )
+    }
+
     return (
         <>
             {!wishlist.isComplete() && <div className='relative h-screen'><DefaultLoader /></div>}
@@ -66,7 +73,7 @@ const AccountWishlistsTastic = () => {
             {wishlist.isComplete() && wishlistContainerTransition.map(({ item, key, props: containerProps }) => {
                 return (
                     <>
-                        {item && <animated.div style={containerProps} className='z-50 pt-2'>
+                        {item && <animated.div style={containerProps} className='z-50 pt-2 mb-6'>
                             <div ref={wishlistContainerRef} className='grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
                                 {wishlistItemsTransitions.map(({ item, key, props }) => {
                                     return (
@@ -87,8 +94,10 @@ const AccountWishlistsTastic = () => {
                                         </animated.div>
                                     )
                                 })}
+                                
                             </div>
                         </animated.div>}
+                        <div className='border-b-4 border-gray-100'/>
                     </>
                 )
             })}
