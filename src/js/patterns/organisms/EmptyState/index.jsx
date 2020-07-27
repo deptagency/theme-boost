@@ -16,7 +16,7 @@ function EmptyState ({ icon: iconSrc, iconColor, title, subtitle, action, action
             */}
             {iconSrc && getIconComponent(iconSrc, iconColor)}
 
-            <div className='mt-4 text-center text-gray-800'>
+            <div className='mt-4 text-center text-neutral-800'>
                 <h1 className='text-2xl font-bold'>{title}</h1>
                 <p className='mt-2 text-sm font-bold'>{subtitle}</p>
                 <p className='mt-3 text-sm'>{children}</p>

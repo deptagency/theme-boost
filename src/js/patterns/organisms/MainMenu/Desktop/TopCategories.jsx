@@ -19,8 +19,8 @@ const TopCategories = ({ topCategories, currentTopCategory, handleClick }) => {
                         key={item.tree.nodeId}
                         node={item.tree}
                         className={classnames({
-                            'mr-4 font-bold text-gray-500 text-sm': true,
-                            'text-gray-800 border-b-2 border-gray-800': i === currentTopCategory,
+                            'mr-4 font-bold text-neutral-500 text-sm': true,
+                            'text-neutral-800 border-b-2 border-neutral-800': i === currentTopCategory,
                         })}
                         onClick={(e) => { return handleClick(e, i) }}
                     >

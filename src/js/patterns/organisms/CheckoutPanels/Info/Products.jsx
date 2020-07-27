@@ -8,7 +8,7 @@ import Product from './Product'
 const Products = ({ products }) => {
     return (
         <>
-            <div className='mb-4 text-xs text-gray-500 font-bold leading-tight uppercase'>
+            <div className='mb-4 text-xs text-neutral-500 font-bold leading-tight uppercase'>
                 <FormattedMessage id={'checkout.yourOrder'} />
             </div>
 

@@ -30,7 +30,7 @@ export const orderConfirmed = () => {
                 }
                 action={action('action click')}
                 actionLabel={<FormattedMessage id='checkout.continueShopping' />}
-                icon={<IconCheckmarkCircle className='w-20 h-20 inline-block text-teal-500 fill-current' />}
+                icon={<IconCheckmarkCircle className='w-20 h-20 inline-block text-secondary-main fill-current' />}
                 >
                 <FormattedMessage id='checkout.orderConfirmation' />
                 <span className='font-bold ml-1'>bla@bla.com</span>
@@ -42,7 +42,7 @@ export const orderConfirmed = () => {
 export const error = () => {
     return (
         <EmptyState
-            icon={<IconEmotionSad className='w-20 h-20 inline-block text-gray-400 fill-current' />}
+            icon={<IconEmotionSad className='w-20 h-20 inline-block text-neutral-400 fill-current' />}
             title={<FormattedMessage id='checkout.wentWrong' />}
             subtitle={<FormattedMessage id='checkout.beenCharged' />}
             action={action('try again click')}
@@ -68,7 +68,7 @@ export const smile = () => {
     return (
         <EmptyState
             icon={icons.EMOTION_HAPPY}
-            iconColor='text-yellow-500'
+            iconColor='text-system-warning'
             title={'Everyday you should smile at least twice!'}
         />
     )
@@ -78,7 +78,7 @@ export const WithAMenu = () => {
     return (
         <EmptyState
             icon={icons.EMOTION_HAPPY}
-            iconColor='text-indigo-200'
+            iconColor='text-primary-light'
             title={
                 <>
                     {' '}
@@ -88,13 +88,13 @@ export const WithAMenu = () => {
             }
             >
             <div className='flex flex-col text-center justify-center w-64 mx-auto my-5 md:pb-56'>
-                <div className='text-sm text-gray-600 mb-12'>
+                <div className='text-sm text-neutral-600 mb-12'>
                     <FormattedMessage id='account.latestDetails' />
                 </div>
                 <div className='flex-auto md:shadow-lg'>
                     <MenuItem className='profileMenuItem'>
                         <div className='flex'>
-                            <CartIcon className='mr-2 text-2xl text-gray-500 fill-current' />
+                            <CartIcon className='mr-2 text-2xl text-neutral-500 fill-current' />
                             <div>
                                 <FormattedMessage id='account.placedOrders' />
                             </div>
@@ -103,7 +103,7 @@ export const WithAMenu = () => {
                     </MenuItem>
                     <MenuItem>
                         <div className='flex'>
-                            <HomeIcon className='mr-2 text-2xl text-gray-500 fill-current' />
+                            <HomeIcon className='mr-2 text-2xl text-neutral-500 fill-current' />
                             <div>
                                 <FormattedMessage id='account.addresses' />
                             </div>
@@ -114,8 +114,8 @@ export const WithAMenu = () => {
                         <div className='flex'>
                             <UserIcon
                                 className={classnames({
-                                    'mr-2 text-2xl text-gray-500 fill-current': true,
-                                    'text-indigo-500': true,
+                                    'mr-2 text-2xl text-neutral-500 fill-current': true,
+                                    'text-primary-main': true,
                                 })}
                             />
                             <div>
@@ -126,7 +126,7 @@ export const WithAMenu = () => {
                     </MenuItem>
                     <MenuItem onClick={action('logout')}>
                         <div className='flex'>
-                            <UserIcon className='mr-2 text-2xl text-gray-500 fill-current' />
+                            <UserIcon className='mr-2 text-2xl text-neutral-500 fill-current' />
                             <FormattedMessage id='account.logout' />
                         </div>
                     </MenuItem>

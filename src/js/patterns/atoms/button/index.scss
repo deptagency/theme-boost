@@ -2,14 +2,23 @@
     @apply font-bold py-2 px-4 rounded;
 
     &:disabled {
-        @apply bg-gray-400;
+        @apply bg-neutral-400;
 
         &:hover {
-            @apply bg-gray-400;
+            @apply bg-neutral-400;
         }
     }
 }
 
+.btn-primary {
+    @apply bg-primary-main text-white;
+
+    &:hover {
+        @apply bg-primary-dark;
+    }
+}
+
+// Below classes should be themed as well
 .btn-blue {
     @apply bg-blue-500 text-white;
 
@@ -73,7 +82,7 @@
 }
 
 .btn-elevated {
-    @apply btn bg-white text-gray-800 border border-gray-400 shadow;
+    @apply btn bg-background-primary text-gray-800 border border-gray-400 shadow;
 
     &:hover {
         @apply bg-gray-100;

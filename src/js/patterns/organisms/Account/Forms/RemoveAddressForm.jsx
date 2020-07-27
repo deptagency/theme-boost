@@ -10,7 +10,7 @@ const RemoveAddressForm = ({ address, countries, onRemoveAddressClicked, showLoa
 
     return (
         <>
-            <div className='text-base text-gray-800 leading-normal'>
+            <div className='text-base text-neutral-800 leading-normal'>
                 <p>{address.streetName}</p>
                 <p>{address.city}</p>
                 <p>{address.postalCode}</p>
@@ -21,7 +21,7 @@ const RemoveAddressForm = ({ address, countries, onRemoveAddressClicked, showLoa
                 <ButtonWithLoader
                     showLoader={showLoader}
                     onClick={onRemoveAddressClicked}
-                    variant='btn btn-indigo w-full'
+                    variant='btn btn-primary w-full'
                 >
                     <FormattedMessage id='account.delete' />
                 </ButtonWithLoader>

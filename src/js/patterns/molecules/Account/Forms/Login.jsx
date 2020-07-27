@@ -18,7 +18,7 @@ const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin,
 
     return (
         <div className='flex flex-col items-center'>
-            <div className='mt-0 md:mt-8 flex flex-col items-center bg-white w-full md:w-160'>
+            <div className='mt-0 md:mt-8 flex flex-col items-center bg-background-primary w-full md:w-160'>
                 <div className='px-4 my-8 w-full sm:w-100'>
                     <div className='mb-8 text-2xl sm:text-3xl text-center font-bold leading-none'>
                         <FormattedMessage id='account.login.login' />
@@ -26,7 +26,7 @@ const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin,
 
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className='mb-4'>
-                            <label className='text-sm text-gray-700 leading-tight' htmlFor='login-email'>
+                            <label className='text-sm text-neutral-700 leading-tight' htmlFor='login-email'>
                                 <FormattedMessage id='account.form.emailLabel' />
                             </label>
                             <input
@@ -47,7 +47,7 @@ const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin,
                         </div>
 
                         <div className='mb-5'>
-                            <label className='text-sm text-gray-700 leading-tight' htmlFor='login-password'>
+                            <label className='text-sm text-neutral-700 leading-tight' htmlFor='login-password'>
                                 <FormattedMessage id='account.form.passwordLabel' />
                             </label>
                             <input
@@ -63,13 +63,13 @@ const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin,
                         <ButtonWithLoader
                             showLoader={showLoader}
                             type='submit'
-                            variant='btn btn-indigo w-full h-10'
+                            variant='btn btn-primary w-full h-10'
                         >
                             <FormattedMessage id='account.login.login' />
                         </ButtonWithLoader>
 
                         <div
-                            className='cursor-pointer mt-4 text-sm text-center text-gray-800 leading-tight'
+                            className='cursor-pointer mt-4 text-sm text-center text-neutral-800 leading-tight'
                             onClick={showForgottenPasswordForm}
                         >
                             <FormattedMessage id='account.login.forgotPassword' />
@@ -77,10 +77,10 @@ const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin,
                     </form>
                 </div>
 
-                <div className='-mx-4 w-full h-1 bg-gray-100 md:none' />
+                <div className='-mx-4 w-full h-1 bg-neutral-100 md:none' />
 
                 <div className='px-4 my-5 w-full md:w-100 text-center'>
-                    <div className='mb-5 text-lg text-center text-gray-500 font-bold'>
+                    <div className='mb-5 text-lg text-center text-neutral-500 font-bold'>
                         <FormattedMessage id='account.login.newToCalwalk' />
                     </div>
 

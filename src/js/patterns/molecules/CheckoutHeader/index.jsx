@@ -14,11 +14,14 @@ const CheckoutHeader = ({ logo }) => {
             <div
                 className='self-center h-6 w-full max-w-124px ml-4'
                 ref={ref}
-                style={{ backgroundImage: `url(${backgroundImageUrl})` }}
+                style={{
+                    backgroundImage: `url(${backgroundImageUrl})`,
+                    backgroundRepeat: 'no-repeat',
+                }}
             />
-            <div className='self-center flex w-11/12 justify-end mr-4 text-xs text-gray-800'>
+            <div className='self-center flex w-11/12 justify-end mr-4 text-xs text-neutral-800'>
                 <FormattedMessage id='cart.checkout' />
-                <IconLockClosed className='text-sm ml-1 fill-current text-gray-800' />
+                <IconLockClosed className='text-sm ml-1 fill-current text-neutral-800' />
             </div>
         </MarginBreakout>
     )

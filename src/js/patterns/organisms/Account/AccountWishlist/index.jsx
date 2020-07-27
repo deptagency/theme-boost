@@ -70,7 +70,7 @@ const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage 
                                     <div className='font-bold text-2xl'>
                                         <FormattedMessage id='wishlist.myWishlist' />
                                     </div>
-                                    <div className='text-sm text-gray-500'>
+                                    <div className='text-sm text-neutral-500'>
                                         {wishlistItems.length === 1 ?
                                             <FormattedMessage id='wishlist.product' /> :
                                             <FormattedMessage id='wishlist.products' values={{ count: wishlistItems.length }} />}
@@ -97,7 +97,7 @@ const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage 
                                 </div>
                             </div>
                         </animated.div>}
-                        {item && <div className='border-t-4 border-gray-100 h-10' />}
+                        {item && <div className='border-t-4 border-neutral-100 h-10' />}
                     </>
                 })
             }

@@ -36,28 +36,28 @@ const AccountLinks = ({
         <>
             <div className='absolute bottom-0 left-0 right-0 text-base'>
                 {!loggedIn && <div
-                    className='flex border-t-4 border-gray-200 px-5 pt-6'
+                    className='flex border-t-4 border-neutral-200 px-5 pt-6'
                     onClick={() => {
                         closeMobileMenu()
                         app.getRouter().push('Frontastic.Frontend.Master.Account.index')
                     }}
                 >
-                    <MyProfile className='mr-2 w-4 h-4 text-gray-500 fill-current self-center' />
-                    <div className='text-base text-gray-800 self-center'>
+                    <MyProfile className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
+                    <div className='text-base text-neutral-800 self-center'>
                         <FormattedMessage id='account.login.login' /> | <FormattedMessage id='account.register.createAccount' />
                     </div>
                 </div>}
 
                 {loggedIn && <div
-                    className='flex justify-between border-b-4 border-t-4 border-gray-200 px-5 py-2'
+                    className='flex justify-between border-b-4 border-t-4 border-neutral-200 px-5 py-2'
                     onClick={() => {
                         closeMobileMenu()
                         app.getRouter().push('Frontastic.Frontend.Master.Account.profile')
                     }}
                 >
                     <div className='flex'>
-                        <MyProfile className='mr-2 w-4 h-4 text-gray-500 fill-current self-center' />
-                        <div className='text-base font-bold text-gray-800 self-center'>
+                        <MyProfile className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
+                        <div className='text-base font-bold text-neutral-800 self-center'>
                             <FormattedMessage id='header.myAccount' />
                         </div>
                     </div>
@@ -66,23 +66,23 @@ const AccountLinks = ({
                     </div>
                 </div>}
 
-                <div className='flex px-5 pt-4 text-gray-800'>
+                <div className='flex px-5 pt-4 text-neutral-800'>
                     {IconHeader && (
-                        <IconHeader className='mr-2 w-4 h-4 text-gray-500 fill-current self-center' />
+                        <IconHeader className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
                     )}
                     {infoHeader}
                 </div>
 
-                <div className='flex px-5 pt-4 text-gray-800'>
+                <div className='flex px-5 pt-4 text-neutral-800'>
                     {IconContact && (
-                        <IconContact className='mr-2 w-4 h-4 text-gray-500 fill-current self-center' />
+                        <IconContact className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
                     )}
                     {contacHeader}
                 </div>
 
-                <div className='flex px-5 pt-4 pb-5 text-gray-800'>
+                <div className='flex px-5 pt-4 pb-5 text-neutral-800'>
                     {IconAbout && (
-                        <IconAbout className='mr-2 w-4 h-4 text-gray-500 fill-current self-center' />
+                        <IconAbout className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
                     )}
                     {aboutHeader}
                 </div>

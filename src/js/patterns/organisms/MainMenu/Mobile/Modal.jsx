@@ -35,7 +35,7 @@ const Modal = ({
     return (
         <div
             className={classnames({
-                'fixed inset-0 bg-white overflow-hidden z-20': true,
+                'fixed inset-0 bg-background-primary overflow-hidden z-20': true,
                 'lg:hidden ease-out-expo duration-20': true,
                 'translate-right': isOpen,
                 'translate-left': !isOpen,

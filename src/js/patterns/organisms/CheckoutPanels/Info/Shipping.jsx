@@ -11,23 +11,23 @@ const Shipping = ({ address, countries, onClick }) => {
     return (
         <>
             <div className='mb-3 flex items-center justify-between'>
-                <span className='text-xs text-gray-500 font-bold leading-tight uppercase'>
+                <span className='text-xs text-neutral-500 font-bold leading-tight uppercase'>
                     <FormattedMessage id={'checkout.shippingInformation'} />
                 </span>
 
-                <span className='text-sm text-indigo-500 leading-tight cursor-pointer flex items-center' onClick={onClick}>
+                <span className='text-sm text-primary-main leading-tight cursor-pointer flex items-center' onClick={onClick}>
                     <FormattedMessage id={'checkout.edit'} /> <EditIcon className='inline fill-current text-sm ml-2' />
                 </span>
             </div>
 
-            <div className='text-md text-gray-800 leading-tight'>
+            <div className='text-md text-neutral-800 leading-tight'>
                 <p className='font-bold'>{address.firstName} {address.lastName}</p>
                 <p>{address.streetName}</p>
                 <p>{address.city}</p>
                 <p>{address.postalCode}</p>
                 <p>{country.name}</p>
 
-                <div className='my-4 h-px bg-gray-200' />
+                <div className='my-4 h-px bg-neutral-200' />
 
                 <p>{address.phone}</p>
                 <p>{address.email}</p>

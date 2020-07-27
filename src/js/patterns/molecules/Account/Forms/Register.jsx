@@ -25,7 +25,7 @@ const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
     return (
         <div>
             <div className='flex items-center justify-center py-4'>
-                <span className='mr-8 text-base text-gray-500 leading-tight font-bold'>
+                <span className='mr-8 text-base text-neutral-500 leading-tight font-bold'>
                     <FormattedMessage id='account.register.alreadyRegistered' />
                 </span>
                 <Button
@@ -36,19 +36,19 @@ const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
                 </Button>
             </div>
 
-            <div className='mx-auto py-5 sm:py-10 w-full md:w-160 bg-white'>
+            <div className='mx-auto py-5 sm:py-10 w-full md:w-160 bg-background-primary'>
                 <div className='px-4 mx-auto w-full sm:w-100'>
-                    <div className='mb-1 text-center text-sm text-gray-500 leading-tight'>
+                    <div className='mb-1 text-center text-sm text-neutral-500 leading-tight'>
                         <FormattedMessage id='account.login.newToCalwalk' />
                     </div>
 
-                    <div className='mb-6 text-center text-2xl sm:text-3xl text-gray-800 leading-none font-bold'>
+                    <div className='mb-6 text-center text-2xl sm:text-3xl text-neutral-800 leading-none font-bold'>
                         <FormattedMessage id='account.signUp' />
                     </div>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className='mb-4'>
-                            <label className='text-sm text-gray-700 leading-tight' htmlFor='signup-firstname'>
+                            <label className='text-sm text-neutral-700 leading-tight' htmlFor='signup-firstname'>
                                 <FormattedMessage id='account.register.firstName' />
                             </label>
                             <input
@@ -62,7 +62,7 @@ const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
                         </div>
 
                         <div className='mb-4'>
-                            <label className='text-sm text-gray-700 leading-tight' htmlFor='signup-lastname'>
+                            <label className='text-sm text-neutral-700 leading-tight' htmlFor='signup-lastname'>
                                 <FormattedMessage id='account.register.lastName' />
                             </label>
                             <input
@@ -76,7 +76,7 @@ const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
                         </div>
 
                         <div className='mb-4'>
-                            <label className='text-sm text-gray-700 leading-tight' htmlFor='signup-email'>
+                            <label className='text-sm text-neutral-700 leading-tight' htmlFor='signup-email'>
                                 <FormattedMessage id='account.form.emailLabel' />
                             </label>
                             <input
@@ -97,7 +97,7 @@ const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
                         </div>
 
                         <div className='mb-5'>
-                            <label className='text-sm text-gray-700 leading-tight' htmlFor='login-password'>
+                            <label className='text-sm text-neutral-700 leading-tight' htmlFor='login-password'>
                                 <FormattedMessage id='account.form.passwordLabel' />
                             </label>
                             <input
@@ -108,19 +108,19 @@ const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
                                 ref={register({ required: requiredField })}
                             />
 
-                            <div className='mt-2 text-xs text-gray-600 leading-tight'>
+                            <div className='mt-2 text-xs text-neutral-600 leading-tight'>
                                 <FormattedMessage id='account.form.minimumLength' />
                             </div>
                             <ErrorMessage errors={errors} name='password' />
                         </div>
 
-                        <div className='my-5 h-2px bg-gray-100' />
+                        <div className='my-5 h-2px bg-neutral-100' />
 
-                        <ButtonWithLoader showLoader={showLoader} variant='btn btn-indigo w-full h-10' type='submit'>
+                        <ButtonWithLoader showLoader={showLoader} variant='btn btn-primary w-full h-10' type='submit'>
                             <FormattedMessage id='account.register.joinCatwalk' />
                         </ButtonWithLoader>
 
-                        <div className='mt-5 text-xs text-gray-600 leading-tight'>
+                        <div className='mt-5 text-xs text-neutral-600 leading-tight'>
                             <FormattedMessage id='account.register.tcConfirm' />
                         </div>
                     </form>

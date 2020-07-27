@@ -12,10 +12,10 @@ const Step = ({ current = false, completed = false, onSelect }) => {
             >
             <div className={classnames({
                 'rounded-full border-2 mx-1 h-5 w-5 cursor-pointer z-10': true,
-                'border-teal-500': current || completed,
-                'bg-gray-300': !current && !completed,
-                'bg-white': current,
-                'flex justify-center items-center border-teal-500 bg-teal-500': completed,
+                'border-secondary-main': current || completed,
+                'bg-neutral-300': !current && !completed,
+                'bg-background-primary': current,
+                'flex justify-center items-center border-secondary-main bg-secondary-main': completed,
             })}>
                 {completed && <TealTick />}
             </div>

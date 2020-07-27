@@ -9,7 +9,7 @@
     }
 
     .badge-count {
-        @apply bg-indigo-600 text-white w-4 h-4 rounded-full flex justify-center absolute;
+        @apply bg-primary-medium text-white w-4 h-4 rounded-full flex justify-center absolute;
 
         right: -6px;
         top: 8px;

@@ -18,7 +18,7 @@ const AccountMenu = ({ selectedMenuItem, welcome, children, handleLogout, openPa
     const { usePanel } = useSlidePanel()
 
     return (
-        <div className='m-auto md:grid grid-cols-2 grid-rows-1 grid-cols-1fr-2fr md:w-11/12 md:mt-4 text-gray-800'>
+        <div className='m-auto md:grid grid-cols-2 grid-rows-1 grid-cols-1fr-2fr md:w-11/12 md:mt-4 text-neutral-800'>
 
             <div className='md:hidden'>
                 {welcome}
@@ -34,8 +34,8 @@ const AccountMenu = ({ selectedMenuItem, welcome, children, handleLogout, openPa
                 >
                     <div className='flex'>
                         <CartIcon className={classnames({
-                            'mr-2 text-2xl text-gray-500 fill-current': true,
-                            'text-indigo-500': selectedMenuItem === MENU_ITEMS.ORDERS,
+                            'mr-2 text-2xl text-neutral-500 fill-current': true,
+                            'text-primary-main': selectedMenuItem === MENU_ITEMS.ORDERS,
                         })} />
                         <FormattedMessage id='account.placedOrders' />
                     </div>
@@ -50,8 +50,8 @@ const AccountMenu = ({ selectedMenuItem, welcome, children, handleLogout, openPa
                 >
                     <div className='flex'>
                         <HomeIcon className={classnames({
-                            'mr-2 text-2xl text-gray-500 fill-current': true,
-                            'text-indigo-500': selectedMenuItem === MENU_ITEMS.ADDRESSES,
+                            'mr-2 text-2xl text-neutral-500 fill-current': true,
+                            'text-primary-main': selectedMenuItem === MENU_ITEMS.ADDRESSES,
                         })} />
                         <div>
                             <FormattedMessage id='account.addresses' />
@@ -68,8 +68,8 @@ const AccountMenu = ({ selectedMenuItem, welcome, children, handleLogout, openPa
                 >
                     <div className='flex'>
                         <UserIcon className={classnames({
-                            'mr-2 text-2xl text-gray-500 fill-current': true,
-                            'text-indigo-500': selectedMenuItem === MENU_ITEMS.ACCOUNT_DETAILS,
+                            'mr-2 text-2xl text-neutral-500 fill-current': true,
+                            'text-primary-main': selectedMenuItem === MENU_ITEMS.ACCOUNT_DETAILS,
                         })} />
                         <div>
                             <FormattedMessage id='account.accountDetails' />
@@ -79,7 +79,7 @@ const AccountMenu = ({ selectedMenuItem, welcome, children, handleLogout, openPa
                 </MenuItem>
                 <MenuItem onClick={handleLogout}>
                     <div className='flex'>
-                        <UserIcon className='mr-2 text-2xl text-gray-500 fill-current' />
+                        <UserIcon className='mr-2 text-2xl text-neutral-500 fill-current' />
                         <FormattedMessage id='account.logout' />
                     </div>
                 </MenuItem>

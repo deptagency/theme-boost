@@ -22,7 +22,7 @@ const PersonalDetailsForm = ({ intl, firstName, lastName, onSubmit, showLoader }
     return (
         <form onSubmit={handleSubmit(onNewDetailsSubmit)} className='flex-col pt-6 m-auto w-3/4 md:w-11/12 md:p-0 md:pb-2`'>
             <div className='mb-4'>
-                <div className='text-sm text-gray-600'><FormattedMessage id='checkout.form.firstName' /></div>
+                <div className='text-sm text-neutral-600'><FormattedMessage id='checkout.form.firstName' /></div>
                 <input
                     name='firstName'
                     type='text'
@@ -32,7 +32,7 @@ const PersonalDetailsForm = ({ intl, firstName, lastName, onSubmit, showLoader }
                 <ErrorMessage errors={errors} name='firstName' />
             </div>
             <div className='mb-4'>
-                <div className='text-sm text-gray-600'><FormattedMessage id='checkout.form.lastName' /></div>
+                <div className='text-sm text-neutral-600'><FormattedMessage id='checkout.form.lastName' /></div>
                 <input
                     name='lastName'
                     type='text'
@@ -45,7 +45,7 @@ const PersonalDetailsForm = ({ intl, firstName, lastName, onSubmit, showLoader }
                 <ButtonWithLoader
                     showLoader={showLoader}
                     type='submit'
-                    variant='btn btn-indigo w-full'
+                    variant='btn btn-primary w-full'
                 >
                     <FormattedMessage id='account.save' />
                 </ButtonWithLoader>

@@ -72,7 +72,7 @@ const Desktop = ({
                     className='relative col-span-2'
                     onMouseLeave={() => { setIsExpanded(false) }}
                 >
-                    <MarginBreakout variant='border-0.5px border-gray-300' />
+                    <MarginBreakout variant='border-0.5px border-neutral-300' />
 
                     <DesktopMenu
                         currentTree={currentTree}

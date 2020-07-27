@@ -20,7 +20,7 @@ const ForgottenPassword = ({ intl, showLoader, handleRequestPasswordReset, showL
         <div className='m-8'>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='mb-4'>
-                    <label className='text-sm text-gray-700 leading-tight' htmlFor='login-email'>
+                    <label className='text-sm text-neutral-700 leading-tight' htmlFor='login-email'>
                         <FormattedMessage id='account.form.emailLabel' />
                     </label>
                     <input
@@ -40,11 +40,11 @@ const ForgottenPassword = ({ intl, showLoader, handleRequestPasswordReset, showL
                     <ErrorMessage errors={errors} name='email' />
                 </div>
 
-                <ButtonWithLoader showLoader={showLoader} type='submit' variant='btn btn-indigo w-full h-10'>
+                <ButtonWithLoader showLoader={showLoader} type='submit' variant='btn btn-primary w-full h-10'>
                     <FormattedMessage id='account.requestResetPassword' />
                 </ButtonWithLoader>
 
-                <Button onClick={showLoginForm} variant='btn btn-indigo w-full h-10 mt-5'>
+                <Button onClick={showLoginForm} variant='btn btn-primary w-full h-10 mt-5'>
                     <FormattedMessage id='account.login.login' />
                 </Button>
             </form>

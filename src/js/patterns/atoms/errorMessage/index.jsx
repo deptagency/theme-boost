@@ -11,9 +11,9 @@ const ErrorMessage = ({ errors, name, as = 'div' }) => {
         <div style={{ animation: errors[name] ? slideDown : 'none' }}>
             {errors[name] &&
                 <div style={{ animation: slideDown }}>
-                    <div className='arrow-up-red-700' />
+                    <div className='arrow-up-system-error' />
                     <Message
-                        className='error-message-text-red-700'
+                        className='error-message-text-system-error'
                         errors={errors}
                         name={name}
                         as={as}

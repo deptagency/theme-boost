@@ -9,7 +9,7 @@ const PanelBlockResponsive = ({ title = '', isOpen, onClose, children }) => {
                 overlayVariant='md:hidden'
                 isOpen={isOpen}
                 title={
-                    <div className='text-2xl text-gray-800 font-bold self-center'>
+                    <div className='text-2xl text-neutral-800 font-bold self-center'>
                         {title}
                     </div>
                 }

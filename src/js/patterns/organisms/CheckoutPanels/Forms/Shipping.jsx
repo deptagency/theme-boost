@@ -25,12 +25,12 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
 
     return (
         <form onChange={onChange}>
-            <div className='mb-4 text-xs text-gray-500 font-bold leading-tight uppercase'>
+            <div className='mb-4 text-xs text-neutral-500 font-bold leading-tight uppercase'>
                 <FormattedMessage id={'checkout.shippingTo'} />
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='shipping-firstName'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-firstName'>
                     <FormattedMessage id={'checkout.form.firstName'} /> *
                 </label>
                 <input id='shipping-firstName' name='firstName' type='text'
@@ -44,7 +44,7 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='shipping-lastName'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-lastName'>
                     <FormattedMessage id={'checkout.form.lastName'} /> *
                 </label>
                 <input id='shipping-lastName' name='lastName' type='text'
@@ -58,7 +58,7 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='shipping-phone'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-phone'>
                     <FormattedMessage id={'checkout.form.phone'} />
                 </label>
                 <input id='shipping-phone' name='phone' className='form-input mt-2' type='text'
@@ -67,7 +67,7 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
             </div>
 
             <div>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='shipping-email'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-email'>
                     <FormattedMessage id={'checkout.form.email'} /> *
                 </label>
                 <input id='shipping-email' name='email'
@@ -87,14 +87,14 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
                 <ErrorMessage errors={errors} name='email' />
             </div>
 
-            <div className='-mx-4 my-6 border-b-4 md:border-b-0 border-gray-100' />
+            <div className='-mx-4 my-6 border-b-4 md:border-b-0 border-neutral-100' />
 
-            <div className='mb-4 text-xs text-gray-500 font-bold leading-tight uppercase'>
+            <div className='mb-4 text-xs text-neutral-500 font-bold leading-tight uppercase'>
                 <FormattedMessage id={'checkout.shippingAddress'} />
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='shipping-streetName'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-streetName'>
                     <FormattedMessage id={'checkout.form.address'} /> *
                 </label>
                 <input id='shipping-streetName' name='streetName'
@@ -108,7 +108,7 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='shipping-city'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-city'>
                     <FormattedMessage id={'checkout.form.city'} /> *
                 </label>
                 <input id='shipping-city' name='city'
@@ -122,7 +122,7 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='shipping-postalCode'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-postalCode'>
                     <FormattedMessage id={'checkout.form.zipCode'} /> *
                 </label>
                 <input id='shipping-postalCode' name='postalCode'
@@ -136,12 +136,12 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
             </div>
 
             <div>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='shipping-country'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-country'>
                     <FormattedMessage id={'checkout.form.country'} /> *
                 </label>
                 <select id='shipping-country' name='country'
                     className={classnames({
-                        'form-input mt-2 bg-white': true,
+                        'form-input mt-2 bg-background-primary': true,
                         'border border-red-600': errors.country,
                     })}
                     ref={register({ required: requiredField })}

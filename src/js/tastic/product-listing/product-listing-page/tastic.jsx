@@ -33,7 +33,7 @@ function ProductListingPageTastic ({ data, node }) {
             </div>
             <div className='w-full md:w-3/4'>
                 <div className='flex flex-col'>
-                    <div className='h-24 border-b border-gray-300 '>{/* Filters go here */}</div>
+                    <div className='h-24 border-b border-neutral-300 '>{/* Filters go here */}</div>
 
                     <div>
                         <ProductListing

@@ -15,7 +15,7 @@ Modal.setAppElement(document.getElementById('app'))
 const SlideLeft = ({ isOpen, onClose, title = '', overlayVariant = '', children }) => {
     return (
         <SlidingPane
-            overlayClassName={`boost-slide-left-panel top-3.3 bg-white ${overlayVariant} `}
+            overlayClassName={`boost-slide-left-panel top-3.3 bg-background-primary ${overlayVariant} `}
             from='left'
             width='100%'
             isOpen={isOpen}
@@ -23,7 +23,7 @@ const SlideLeft = ({ isOpen, onClose, title = '', overlayVariant = '', children 
             >
             <div className='flex align-center'>
                 <IconLeft
-                    className='text-3xl text-gray-800 font-bold cursor-pointer m-4'
+                    className='text-3xl text-neutral-800 font-bold cursor-pointer m-4'
                     onClick={onClose}
                 />
                 {title}

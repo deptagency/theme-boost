@@ -5,7 +5,7 @@ import List from 'Molecules/List'
 
 const MetaNav = ({ title, links }) => {
     return (
-        <div className='px-4 flex items-center h-12 text-gray-500 bg-gray-800'>
+        <div className='px-4 flex items-center h-12 text-neutral-500 bg-neutral-800'>
             {title && (
                 <div className='text-xs text-white leading-tight font-bold'>
                     {title}

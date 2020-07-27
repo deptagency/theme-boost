@@ -19,11 +19,11 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
 
             <div>
                 <div className='text-md font-bold leading-tight'>{name}</div>
-                {designer && <div className='text-sm text-gray-600 leading-tight'>{designer}</div>}
-                {color && <div className='mt-3 text-sm text-gray-600 leading-tight'>
+                {designer && <div className='text-sm text-neutral-600 leading-tight'>{designer}</div>}
+                {color && <div className='mt-3 text-sm text-neutral-600 leading-tight'>
                     <FormattedMessage id='colorProduct' /> {color}
                 </div>}
-                {size && <div className='text-sm text-gray-600 leading-tight'>
+                {size && <div className='text-sm text-neutral-600 leading-tight'>
                     <FormattedMessage id='sizeProduct' /> {size}
                 </div>}
 
@@ -43,7 +43,7 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
                 </div>
 
                 <div className='mt-3'>
-                    <Price variant='text-sm text-gray-700 font-bold leading-tight' value={price} />
+                    <Price variant='text-sm text-neutral-700 font-bold leading-tight' value={price} />
                 </div>
             </div>
 
@@ -54,7 +54,7 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
                 }}>
                     <CartBin className='inline-block mx-1' />
 
-                    <div className='mx-1 text-sm text-gray-800 leading-tight'>
+                    <div className='mx-1 text-sm text-neutral-800 leading-tight'>
                         <FormattedMessage id='cart.remove' />
                     </div>
                 </button>

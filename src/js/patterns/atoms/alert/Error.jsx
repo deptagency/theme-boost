@@ -4,7 +4,7 @@ import { ReactComponent as IconCheckMarkCircle } from 'Icons/tailwind-icons/icon
 
 const Error = ({ message }) => {
     return (
-        <div className='flex items-center bg-red-700 text-white text-sm px-4 py-3'>
+        <div className='flex items-center bg-system-error text-white text-sm px-4 py-3'>
             <IconCheckMarkCircle className='w-5 h-5 mr-2 inline-block text-white fill-current ' />
             <p>{message}</p>
         </div>

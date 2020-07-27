@@ -10,8 +10,8 @@ const ListOrders = ({ orders, selectOrder }) => {
 
     return (
         <div className='md:shadow-lg'>
-            <div className='border-b-4 border-gray-100' />
-            <div className='text-gray-800'>
+            <div className='border-b-4 border-neutral-100' />
+            <div className='text-neutral-800'>
                 {orders.map((order, index) => {
                     var lineItemSum = 0
                     order.lineItems.map(lineItem => {
@@ -36,34 +36,34 @@ const ListOrders = ({ orders, selectOrder }) => {
                                 </div>
                                 <div className='text-sm mb-5'>
                                     <div>
-                                        <span className='text-gray-600'><FormattedMessage id='account.trackingNumber' /></span>
+                                        <span className='text-neutral-600'><FormattedMessage id='account.trackingNumber' /></span>
                                         <span className='font-bold'> {order.cartId}</span>
                                     </div>
                                     <div>
-                                        <span className='text-gray-600'><FormattedMessage id='account.quantity' /></span>
+                                        <span className='text-neutral-600'><FormattedMessage id='account.quantity' /></span>
                                         <span className='font-bold'>
                                             {lineItemSum}
                                         </span>
                                     </div>
                                     <div>
-                                        <span className='text-gray-600'><FormattedMessage id='account.totalAmountOrder' /> </span>
+                                        <span className='text-neutral-600'><FormattedMessage id='account.totalAmountOrder' /> </span>
                                         <Price variant='font-bold' value={lineItemPrice} />
                                     </div>
                                 </div>
                                 <button
-                                    className='text-sm text-indigo-500 leading-tight flex items-center my-4'
+                                    className='text-sm text-primary-main leading-tight flex items-center my-4'
                                     onClick={() => { selectOrder(order) }}
                                 >
                                     <FormattedMessage id='account.viewOrder' />
                                     <FileIcon className='inline fill-current text-sm ml-2' />
                                 </button>
                             </div>
-                            {(index + 1 < orders.length) && <div className='border-b-4 border-gray-100' />}
+                            {(index + 1 < orders.length) && <div className='border-b-4 border-neutral-100' />}
                         </div>
                     )
                 })}
             </div>
-            <div className='border-b-4 border-gray-100' />
+            <div className='border-b-4 border-neutral-100' />
         </div>
     )
 }

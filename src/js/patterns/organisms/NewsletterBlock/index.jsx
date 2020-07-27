@@ -8,7 +8,7 @@ const NewsletterBlock = ({ intl }) => {
     const placeholder = intl.formatMessage({ id: 'myEmail' })
 
     return (
-        <div className='bg-gray-800 rounded mx-5'>
+        <div className='bg-neutral-800 rounded mx-5'>
             <div className='px-6 py-10 mx-auto w-full sm:w-11/12 md:w-8/12'>
                 <p className='mb-1 text-sm text-center text-white leading-tight' />
                 <p className='text-2xl lg:text-3xl text-center text-white font-bold leading-none'>
@@ -25,13 +25,13 @@ const NewsletterBlock = ({ intl }) => {
                     </div>
 
                     <div className='w-full sm:max-w-124px'>
-                        <Button variant='btn btn-indigo w-full h-10'>
+                        <Button variant='btn btn-primary w-full h-10'>
                             <FormattedMessage id='submit' />
                         </Button>
                     </div>
                 </div>
 
-                <p className='px-4 sm:px-24 text-xs text-center text-gray-500 leading-tight'>
+                <p className='px-4 sm:px-24 text-xs text-center text-neutral-500 leading-tight'>
                     <FormattedMessage id='submitAgree' />
                 </p>
             </div>

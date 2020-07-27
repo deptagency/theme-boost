@@ -21,11 +21,11 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
     }
 
     return (
-        <form onSubmit={handleSubmit(onFormSubmit)}>
+        <form className='w-11/12 m-auto' onSubmit={handleSubmit(onFormSubmit)}>
             <input type='hidden' name='addressId' ref={register()} />
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='address-firstName'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-firstName'>
                     <FormattedMessage id={'checkout.form.firstName'} /> *
                 </label>
                 <input id='address-firstName' name='firstName' type='text'
@@ -39,7 +39,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='address-lastName'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-lastName'>
                     <FormattedMessage id={'checkout.form.lastName'} /> *
                 </label>
                 <input id='address-lastName' name='lastName' type='text'
@@ -53,12 +53,12 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='address-country'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-country'>
                     <FormattedMessage id={'checkout.form.country'} /> *
                 </label>
                 <select id='address-country' name='country'
                     className={classnames({
-                        'form-input mt-2 bg-white': true,
+                        'form-input mt-2 bg-background-primary': true,
                         'border border-red-600': errors.country,
                     })}
                     ref={register({ required: requiredField })}
@@ -72,7 +72,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='address-streetName'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-streetName'>
                     <FormattedMessage id={'checkout.form.address'} /> *
                 </label>
                 <input id='address-streetName' name='streetName'
@@ -95,7 +95,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='address-city'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-city'>
                     <FormattedMessage id={'checkout.form.city'} /> *
                 </label>
                 <input id='address-city' name='city'
@@ -109,7 +109,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='address-postalCode'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-postalCode'>
                     <FormattedMessage id={'checkout.form.zipCode'} /> *
                 </label>
                 <input id='address-postalCode' name='postalCode'
@@ -123,7 +123,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='address-phone'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-phone'>
                     <FormattedMessage id={'checkout.form.phone'} />
                 </label>
                 <input id='address-phone' name='phone' className='form-input mt-2' type='text'
@@ -131,18 +131,18 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
                 />
             </div>
 
-            <div className='mb-2 bg-gray-200 px-4 py-4 flex items-center'>
+            <div className='mb-2 bg-neutral-200 px-4 py-4 flex items-center'>
                 <input id='shipping-default' type='checkbox' className='mr-2' name='isDefaultShippingAddress' ref={register()} />
 
-                <label className='text-sm text-gray-800 leading-tight' htmlFor='shipping-default'>
+                <label className='text-sm text-neutral-800 leading-tight' htmlFor='shipping-default'>
                     <FormattedMessage id='account.address.standardShipping' />
                 </label>
             </div>
 
-            <div className='bg-gray-200 px-4 py-4 flex items-center'>
+            <div className='bg-neutral-200 px-4 py-4 flex items-center'>
                 <input id='billing-default' type='checkbox' className='mr-2' name='isDefaultBillingAddress' ref={register()} />
 
-                <label className='text-sm text-gray-800 leading-tight' htmlFor='billing-default'>
+                <label className='text-sm text-neutral-800 leading-tight' htmlFor='billing-default'>
                     <FormattedMessage id='account.address.standardBilling' />
                 </label>
             </div>
@@ -151,7 +151,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
                 <ButtonWithLoader
                     showLoader={showLoader}
                     type='submit'
-                    variant='btn btn-indigo w-full'
+                    variant='btn btn-primary w-full'
                 >
                     <FormattedMessage id='account.save' />
                 </ButtonWithLoader>

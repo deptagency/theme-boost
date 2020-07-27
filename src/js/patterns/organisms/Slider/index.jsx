@@ -22,7 +22,7 @@ const ProductSlider = ({ products, title = '', description = '', handleAddToWish
     return (
         <MarginBreakout onChange={setSliderIndent}>
             {title && (
-                <p className='text-center font-hairline text-gray-500'>
+                <p className='text-center font-hairline text-neutral-500'>
                     <Translatable value={title} />
                 </p>
             )}
