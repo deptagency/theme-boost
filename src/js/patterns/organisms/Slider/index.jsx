@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 
 import TinySlider from 'Templates/Slider'
@@ -40,9 +39,6 @@ const ProductSlider = ({ products, title = '', description = '', handleAddToWish
                                 <div key={i}>
                                     <ProductTeaser
                                         product={product}
-                                        itemClassName={classnames({
-                                            'mr-6': (i + 1 < products.length),
-                                        })}
                                         wishlisted={product.wishlisted}
                                         handleAddToWishlist={() => { handleAddToWishlist && handleAddToWishlist(product) }}
                                         handleRemoveFromWishlist={() => { handleRemoveFromWishlist && handleRemoveFromWishlist(product) }}

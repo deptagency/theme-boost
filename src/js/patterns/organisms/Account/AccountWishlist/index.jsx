@@ -7,6 +7,7 @@ import { FormattedMessage } from 'react-intl'
 import { animated, useTransition } from 'react-spring'
 import useComponentSize from '@rehooks/component-size'
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
+import usePhotoScale from './usePhotoScale'
 
 const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage }) => {
     const [ wishlistChanging, setWishlistChanging ] = useState(false)
@@ -14,6 +15,7 @@ const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage 
     const wishlistContainerRef = useRef(null)
     const itemRef = useRef(null)
     const { height: wishlistHeight } = useComponentSize(wishlistContainerRef)
+    const { scale } = usePhotoScale()
 
     useEffect(() => {
         if (wishlist.data && wishlist.data.lineItems) {
@@ -76,13 +78,14 @@ const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage 
                                             <FormattedMessage id='wishlist.products' values={{ count: wishlistItems.length }} />}
                                     </div>
                                 </div>
-                                <div className='grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+                                <div className='grid gap-2 grid-cols-1 xsm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between'>
                                     {wishlistItemsTransitions.map(({ item, key, props }) => {
                                             return (
                                                 <animated.div key={key} style={{ ...props, minHeight: '354px' }}>
                                                     <div ref={itemRef}>
                                                         <ProductTeaser
                                                             product={item}
+                                                            scale={scale}
                                                             showHeartIcon={false}
                                                             showCloseIcon
                                                             handleRemoveFromWishlist={() => {

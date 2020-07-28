@@ -117,8 +117,16 @@ module.exports = {
                 'fix-488px': '488px',
                 'fix-560px': '560px',
 
-            },
+            }
         },
+        // The breakpoints have to match with boost/src/js/config/breakpoints.jsx
+        screens: {
+            'xsm': '420px',
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+        }
     },
     plugins: [
         plugin(function({ addUtilities }) {

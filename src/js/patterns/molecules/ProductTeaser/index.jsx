@@ -17,37 +17,48 @@ const ProductTeaser = ({
     wishlisted = false,
     showHeartIcon = true,
     showCloseIcon = false,
+    scale = 1.3,
 }) => {
     const variant = variantProp || variants[0]
     const { price, discountedPrice, images } = variant
 
+    // accomodatining photos from commerce tools
+    const fixedHeight = `calc(240px * ${scale})`
+    const fixedWidth = `calc(180px * ${scale})`
+
     return (
-        <div className='h-full'>
+        <>
             <div
+                style={{
+                    minHeight: fixedHeight,
+                    minWidth: fixedWidth,
+                }}
                 className={classnames(
-                    'relative grid grid-cols-1 grid-rows-1 h-fix-240px mx-2',
+                    'relative mx-2',
                     itemVariant
                 )}
-            >
+                >
                 <Link
-                    className='absolute w-full'
+                    className='flex justify-center w-full h-full'
                     itemProp='url'
                     path={_url || '#'}
                 >
                     {images[0] ? <div
                         className='rounded'
                         style={{
+                            position: 'absolute',
                             pointerEvents: 'none',
                             backgroundImage: `url(${images[0]})`,
-                            backgroundSize: 'cover',
+                            backgroundSize: 'contain',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center',
-                            minHeight: '240px',
+                            height: fixedHeight,
+                            width: fixedWidth,
                         }}
-                    /> : <NoImage className='h-full w-fix-250px' />}
+                        /> : <NoImage className='h-full w-fix-250px' />}
                 </Link>
                 {showHeartIcon && <div
-                    className='absolute right-0 z-10 row-start-1 row-end-2 col-start-1 col-end-2 justify-self-end m-4 cursor-pointer'
+                    className='absolute right-0 z-20 m-4 cursor-pointer'
                     onClick={() => {
                         !wishlisted && handleAddToWishlist()
                         wishlisted && handleRemoveFromWishlist()
@@ -57,17 +68,19 @@ const ProductTeaser = ({
                     {wishlisted && <WishlistHeartFull />}
                 </div>}
                 {showCloseIcon && <div
-                    className='absolute right-0 z-10 row-start-1 row-end-2 col-start-1 col-end-2 justify-self-end m-4 cursor-pointer'
+                    className='absolute right-0 z-20 m-4 cursor-pointer'
                     onClick={handleRemoveFromWishlist}
                 >
                     <CloseIcon className='fill-current text-neutral-800 text-xl' />
                 </div>}
             </div>
-            <div className='p-4'>
+            <div className='p-4' style={{
+                width: fixedWidth,
+            }}>
                 <div className='font-bold'>{name}</div>
                 <Price variant='text-lg text-neutral-600 py-1' value={discountedPrice || price} />
             </div>
-        </div>
+        </>
     )
 }
 
@@ -79,6 +92,7 @@ ProductTeaser.propTypes = {
     wishlisted: PropTypes.bool,
     showHeartIcon: PropTypes.bool,
     showCloseIcon: PropTypes.bool,
+    scale: PropTypes.number,
 }
 
 export default ProductTeaser
