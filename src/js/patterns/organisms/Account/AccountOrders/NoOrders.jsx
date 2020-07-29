@@ -9,11 +9,11 @@ import { ReactComponent as IconEmotionSad } from 'Icons/tailwind-icons/icon-emot
 const NoOrders = () => {
     return (
         <div className='md:shadow-lg md:order-2 md:ml-5'>
-            <div className='border-b-4 border-neutral-100' />
+            <div className='border-b-4 border-neutral-200' />
 
             <div className='flex flex-col text-center w-64 mx-auto my-10 md:pb-56'>
                 <div className='mx-auto mb-3'>
-                    <IconEmotionSad className='w-8 h-8 text-neutral-800 fill-current' />
+                    <IconEmotionSad className='w-8 h-8 text-neutral-900 fill-current' />
                 </div>
                 <div>
                     <div className='font-bold text-2xl mb-2'>

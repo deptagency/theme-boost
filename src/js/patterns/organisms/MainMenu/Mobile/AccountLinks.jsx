@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
 import app from '@frontastic/catwalk/src/js/app/app'
 
-import { ReactComponent as ArrowRight } from 'Icons/tailwind-icons/icon-cheveron-right.svg'
+import { ReactComponent as ArrowRight } from 'Icons/tailwind-icons/icon-chevron-right.svg'
 import { ReactComponent as MyProfile } from 'Icons/tailwind-icons/icon-user.svg'
 import { ReactComponent as HelpIcon } from 'Icons/tailwind-icons/icon-help.svg'
 import { ReactComponent as ChatIcon } from 'Icons/tailwind-icons/icon-chat.svg'
@@ -42,47 +42,47 @@ const AccountLinks = ({
                         app.getRouter().push('Frontastic.Frontend.Master.Account.index')
                     }}
                 >
-                    <MyProfile className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
-                    <div className='text-base text-neutral-800 self-center'>
+                    <MyProfile className='mr-2 w-4 h-4 text-neutral-600 self-center' />
+                    <div className='text-base text-neutral-900 self-center'>
                         <FormattedMessage id='account.login.login' /> | <FormattedMessage id='account.register.createAccount' />
                     </div>
                 </div>}
 
                 {loggedIn && <div
-                    className='flex justify-between border-b-4 border-t-4 border-neutral-200 px-5 py-2'
+                    className='flex justify-between border-b-4 border-t-4 border-neutral-200 p-4'
                     onClick={() => {
                         closeMobileMenu()
                         app.getRouter().push('Frontastic.Frontend.Master.Account.profile')
                     }}
                 >
                     <div className='flex'>
-                        <MyProfile className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
-                        <div className='text-base font-bold text-neutral-800 self-center'>
+                        <MyProfile className='mr-2 w-4 h-4 text-neutral-600 self-center' />
+                        <div className='text-base font-bold text-neutral-900 self-center'>
                             <FormattedMessage id='header.myAccount' />
                         </div>
                     </div>
                     <div>
-                        <ArrowRight className='self-center cursor-pointer text-4xl -mr-3' />
+                        <ArrowRight className='self-center cursor-pointer text-l' />
                     </div>
                 </div>}
 
-                <div className='flex px-5 pt-4 text-neutral-800'>
+                <div className='flex px-5 pt-4 text-neutral-900'>
                     {IconHeader && (
-                        <IconHeader className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
+                        <IconHeader className='mr-2 w-4 h-4 text-neutral-600 self-center' />
                     )}
                     {infoHeader}
                 </div>
 
-                <div className='flex px-5 pt-4 text-neutral-800'>
+                <div className='flex px-5 pt-4 text-neutral-900'>
                     {IconContact && (
-                        <IconContact className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
+                        <IconContact className='mr-2 w-4 h-4 text-neutral-600 self-center' />
                     )}
                     {contacHeader}
                 </div>
 
-                <div className='flex px-5 pt-4 pb-5 text-neutral-800'>
+                <div className='flex px-5 pt-4 pb-5 text-neutral-900'>
                     {IconAbout && (
-                        <IconAbout className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
+                        <IconAbout className='mr-2 w-4 h-4 text-neutral-600 self-center' />
                     )}
                     {aboutHeader}
                 </div>

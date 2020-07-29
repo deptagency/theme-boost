@@ -7,8 +7,8 @@ const SelectedOrder = ({ order }) => {
     const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
     return (
-        <div className='text-neutral-800 md:shadow-lg md:-ml-4'>
-            <div className='border-b-4 border-neutral-100 mt-4 md:mt-0' />
+        <div className='text-neutral-900 md:shadow-lg md:-ml-4'>
+            <div className='border-b-4 border-neutral-200 mt-4 md:mt-0' />
             <div className='text-sm m-6'>
                 <div>
                     <span className='text-neutral-600 mr-1'>
@@ -27,7 +27,7 @@ const SelectedOrder = ({ order }) => {
                     </span>
                 </div>
             </div>
-            <div className='border-b-4 border-neutral-100' />
+            <div className='border-b-4 border-neutral-200' />
 
             <div className='ml-4 mt-6 text-neutral-600 font-bold text-sm'>
                 <FormattedMessage id='order.yourOrderCaps' />
@@ -63,14 +63,14 @@ const SelectedOrder = ({ order }) => {
                     </div>
                 )
             })}
-            <div className='border-b-4 border-neutral-100' />
+            <div className='border-b-4 border-neutral-200' />
 
             <div className='m-4'>
                 <div className='mt-6 text-neutral-600 font-bold text-sm'>
                     <FormattedMessage id='order.shippingInformationCaps' />
                 </div>
                 <div className='my-3'>
-                    <div className='text-neutral-800 font-bold'>
+                    <div className='text-neutral-900 font-bold'>
                         {order.shippingAddress.firstName} {order.shippingAddress.lastName}
                     </div>
                     <div>
@@ -96,14 +96,14 @@ const SelectedOrder = ({ order }) => {
                     </div>
                 </div>
             </div>
-            <div className='border-b-4 border-neutral-100' />
+            <div className='border-b-4 border-neutral-200' />
 
             <div className='m-4'>
                 <div className='mt-6 text-neutral-600 font-bold text-sm'>
                     <FormattedMessage id='order.billingInformationCaps' />
                 </div>
                 <div className='my-3'>
-                    <div className='text-neutral-800 font-bold'>
+                    <div className='text-neutral-900 font-bold'>
                         {order.billingAddress.firstName} {order.billingAddress.lastName}
                     </div>
                     <div>
@@ -131,14 +131,14 @@ const SelectedOrder = ({ order }) => {
                     </div>
                 </div>
             </div>
-            <div className='border-b-4 border-neutral-100' />
+            <div className='border-b-4 border-neutral-200' />
 
             <div className='my-5 mx-4 mb-12'>
                 <div className='mt-3 font-bold flex justify-between'>
                     <span className=''><FormattedMessage id='account.totalAmountOrder' /></span>
                     <Price value={order.sum} />
                 </div>
-                <div className='text-sm text-neutral-500'>
+                <div className='text-sm text-neutral-600'>
                     <FormattedMessage id='order.includesVAT' />
                 </div>
             </div>

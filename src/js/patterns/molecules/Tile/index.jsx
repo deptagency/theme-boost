@@ -36,15 +36,17 @@ const Tile = ({
 
     return (
         <Component
-            className='grid grid-cols-1 grid-rows-1 max-h-288px lg:max-h-456px lg:h-full overflow-hidden'
-            reference={
-                reference || {
-                    type: null,
-                    target: null,
-                }
-            }
+            className='grid grid-cols-1 grid-rows-1 overflow-hidden max-h-288px lg:max-h-456px lg:h-full mx-5 rounded'
+            reference={reference || {
+                type: null,
+                target: null,
+            }}
             >
-            <MoleculesHero className='row-start-1 row-end-2 col-start-1 col-end-2' media={image} caption={caption} />
+            <MoleculesHero
+                className='row-start-1 row-end-2 col-start-1 col-end-2'
+                media={image}
+                caption={caption}
+            />
             <div
                 className={classnames({
                     'row-start-1 row-end-2 col-start-1 col-end-2 tile-image-gradient': true,
@@ -56,27 +58,24 @@ const Tile = ({
                     ...justifyContent,
                 })}
             >
-                {topic && (
-                    <p
-                        className={classnames({
-                            'text-white text-sm md:text-lg mb-2': true,
-                            ...selfAlign,
-                        })}
-                    >
-                        <Translatable value={topic} />
-                    </p>
-                )}
 
-                {title && (
-                    <h1
-                        className={classnames({
+                {topic && <p
+                    className={classnames({
+                        'text-white text-sm md:text-lg mb-2': true,
+                        ...selfAlign,
+                    })}
+                >
+                    <Translatable value={topic} />
+                </p>}
+
+                {title && <h1
+                    className={classnames({
                             'text-3xl text-white md:text-5xl font-bold mb-2 leading-tight': true,
                             ...selfAlign,
                         })}
                     >
-                        <Translatable value={title} />
-                    </h1>
-                )}
+                    <Translatable value={title} />
+                    </h1>}
 
                 {buttonLabel && reference && <Reference
                     reference={reference || {

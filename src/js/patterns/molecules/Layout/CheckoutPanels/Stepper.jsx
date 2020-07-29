@@ -36,8 +36,8 @@ const Stepper = forwardRef(({ steps, current, setCurrent }, ts) => {
                                 <div key={i}>
                                     <div className={classnames({
                                         'mt-2 text-xs': true,
-                                        'text-neutral-500': i !== current,
-                                        'font-bold text-neutral-800': i === current,
+                                        'text-neutral-600': i !== current,
+                                        'font-bold text-neutral-900': i === current,
                                     })}>
                                         {name}
                                     </div>

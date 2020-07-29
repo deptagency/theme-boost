@@ -6,7 +6,7 @@ export default function Badge ({ count, children, displayZeroCount, onClick }) {
         <div className='badge-wrapper ml-6' onClick={onClick}>
             {children}
             {(displayZeroCount || count !== 0) && (
-                <span className='badge-count text-xs'>
+                <span className='badge-count text-xs mt-2'>
                     {count}
                 </span>
             )}

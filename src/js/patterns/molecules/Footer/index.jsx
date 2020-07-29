@@ -17,7 +17,7 @@ const Footer = ({
 
 }) => {
     return (
-        <MarginBreakout variant='bg-neutral-700 text-neutral-200'>
+        <MarginBreakout variant='bg-neutral-800 text-neutral-200'>
             <div className='hidden lg:flex mx-auto py-10 justify-between lg:w-9/12 xl:w-7/12'>
                 <LinkList
                     header={<Translatable value={infoHeader} />}

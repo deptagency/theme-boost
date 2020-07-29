@@ -10,7 +10,7 @@ export const checkoutError = () => {
     return (
         <div className='text-center mt-10 md:mt-20'>
             <IconEmotionSad className='w-20 h-20 inline-block text-neutral-400 fill-current ' />
-            <div className='text-center text-neutral-800 mt-4'>
+            <div className='text-center text-neutral-900 mt-4'>
                 <p className='text-2xl font-bold'>
                     Something went wrong during payment
                 </p>

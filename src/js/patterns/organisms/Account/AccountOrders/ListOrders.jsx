@@ -10,8 +10,8 @@ const ListOrders = ({ orders, selectOrder }) => {
 
     return (
         <div className='md:shadow-lg'>
-            <div className='border-b-4 border-neutral-100' />
-            <div className='text-neutral-800'>
+            <div className='border-b-4 border-neutral-200' />
+            <div className='text-neutral-900'>
                 {orders.map((order, index) => {
                     var lineItemSum = 0
                     order.lineItems.map(lineItem => {
@@ -58,12 +58,12 @@ const ListOrders = ({ orders, selectOrder }) => {
                                     <FileIcon className='inline fill-current text-sm ml-2' />
                                 </button>
                             </div>
-                            {(index + 1 < orders.length) && <div className='border-b-4 border-neutral-100' />}
+                            {(index + 1 < orders.length) && <div className='border-b-4 border-neutral-200' />}
                         </div>
                     )
                 })}
             </div>
-            <div className='border-b-4 border-neutral-100' />
+            <div className='border-b-4 border-neutral-200' />
         </div>
     )
 }

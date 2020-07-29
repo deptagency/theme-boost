@@ -16,7 +16,7 @@ const PaymentMethod = ({ defaultValues = {}, onSubmit }) => {
 
     return (
         <form onChange={onChange}>
-            <div className='mb-4 text-xs text-neutral-500 font-bold leading-tight uppercase'>
+            <div className='mb-4 text-xs text-neutral-600 font-bold leading-tight uppercase'>
                 <FormattedMessage id={'checkout.paymentMethod'} />
             </div>
 

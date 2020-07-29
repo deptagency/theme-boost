@@ -94,7 +94,7 @@ export const WithAMenu = () => {
                 <div className='flex-auto md:shadow-lg'>
                     <MenuItem className='profileMenuItem'>
                         <div className='flex'>
-                            <CartIcon className='mr-2 text-2xl text-neutral-500 fill-current' />
+                            <CartIcon className='mr-2 text-2xl text-neutral-600 fill-current' />
                             <div>
                                 <FormattedMessage id='account.placedOrders' />
                             </div>
@@ -103,7 +103,7 @@ export const WithAMenu = () => {
                     </MenuItem>
                     <MenuItem>
                         <div className='flex'>
-                            <HomeIcon className='mr-2 text-2xl text-neutral-500 fill-current' />
+                            <HomeIcon className='mr-2 text-2xl text-neutral-600 fill-current' />
                             <div>
                                 <FormattedMessage id='account.addresses' />
                             </div>
@@ -114,7 +114,7 @@ export const WithAMenu = () => {
                         <div className='flex'>
                             <UserIcon
                                 className={classnames({
-                                    'mr-2 text-2xl text-neutral-500 fill-current': true,
+                                    'mr-2 text-2xl text-neutral-600 fill-current': true,
                                     'text-primary-main': true,
                                 })}
                             />
@@ -126,7 +126,7 @@ export const WithAMenu = () => {
                     </MenuItem>
                     <MenuItem onClick={action('logout')}>
                         <div className='flex'>
-                            <UserIcon className='mr-2 text-2xl text-neutral-500 fill-current' />
+                            <UserIcon className='mr-2 text-2xl text-neutral-600 fill-current' />
                             <FormattedMessage id='account.logout' />
                         </div>
                     </MenuItem>

@@ -21,7 +21,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
     }
 
     return (
-        <form className='w-11/12 m-auto' onSubmit={handleSubmit(onFormSubmit)}>
+        <form className='w-11/12 m-auto mt-2' onSubmit={handleSubmit(onFormSubmit)}>
             <input type='hidden' name='addressId' ref={register()} />
 
             <div className='mb-4'>
@@ -134,7 +134,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
             <div className='mb-2 bg-neutral-200 px-4 py-4 flex items-center rounded'>
                 <input id='shipping-default' type='checkbox' className='mr-2' name='isDefaultShippingAddress' ref={register()} />
 
-                <label className='text-sm text-neutral-800 leading-tight' htmlFor='shipping-default'>
+                <label className='text-sm text-neutral-900 leading-tight' htmlFor='shipping-default'>
                     <FormattedMessage id='account.address.standardShipping' />
                 </label>
             </div>
@@ -142,7 +142,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
             <div className='bg-neutral-200 px-4 py-4 flex items-center rounded'>
                 <input id='billing-default' type='checkbox' className='mr-2' name='isDefaultBillingAddress' ref={register()} />
 
-                <label className='text-sm text-neutral-800 leading-tight' htmlFor='billing-default'>
+                <label className='text-sm text-neutral-900 leading-tight' htmlFor='billing-default'>
                     <FormattedMessage id='account.address.standardBilling' />
                 </label>
             </div>

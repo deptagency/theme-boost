@@ -9,8 +9,8 @@ const RemoveAddressForm = ({ address, countries, onRemoveAddressClicked, showLoa
     const country = _.find(countries, c => { return c.code === address.country })
 
     return (
-        <>
-            <div className='text-base text-neutral-800 leading-normal'>
+        <div className='m-6'>
+            <div className='text-base text-neutral-900 leading-normal'>
                 <p>{address.streetName}</p>
                 <p>{address.city}</p>
                 <p>{address.postalCode}</p>
@@ -26,7 +26,7 @@ const RemoveAddressForm = ({ address, countries, onRemoveAddressClicked, showLoa
                     <FormattedMessage id='account.delete' />
                 </ButtonWithLoader>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -6,7 +6,7 @@ const ContactInfo = ({ header, phoneNumber, email }) => {
     return (
         <div className='flex flex-col text-sm'>
             <div className='mb-4 font-bold leading-tight text-neutral-100'>
-                <ChatIcon className='mr-3 w-4 h-4 inline-block text-neutral-500 fill-current' />
+                <ChatIcon className='mr-3 w-4 h-4 inline-block text-neutral-200 fill-current' />
                 {header}
             </div>
 

@@ -11,7 +11,7 @@ const Shipping = ({ address, countries, onClick }) => {
     return (
         <>
             <div className='mb-3 flex items-center justify-between'>
-                <span className='text-xs text-neutral-500 font-bold leading-tight uppercase'>
+                <span className='text-xs text-neutral-600 font-bold leading-tight uppercase'>
                     <FormattedMessage id={'checkout.shippingInformation'} />
                 </span>
 
@@ -20,7 +20,7 @@ const Shipping = ({ address, countries, onClick }) => {
                 </span>
             </div>
 
-            <div className='text-md text-neutral-800 leading-tight'>
+            <div className='text-md text-neutral-900 leading-tight'>
                 <p className='font-bold'>{address.firstName} {address.lastName}</p>
                 <p>{address.streetName}</p>
                 <p>{address.city}</p>

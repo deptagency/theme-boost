@@ -69,7 +69,7 @@ const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin,
                         </ButtonWithLoader>
 
                         <div
-                            className='cursor-pointer mt-4 text-sm text-center text-neutral-800 leading-tight'
+                            className='cursor-pointer mt-4 text-sm text-center text-neutral-900 leading-tight'
                             onClick={showForgottenPasswordForm}
                         >
                             <FormattedMessage id='account.login.forgotPassword' />
@@ -80,7 +80,7 @@ const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin,
                 <div className='-mx-4 w-full h-1 bg-neutral-100 md:none' />
 
                 <div className='px-4 my-5 w-full md:w-100 text-center'>
-                    <div className='mb-5 text-lg text-center text-neutral-500 font-bold'>
+                    <div className='mb-5 text-lg text-center text-neutral-600 font-bold'>
                         <FormattedMessage id='account.login.newToCalwalk' />
                     </div>
 

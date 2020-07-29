@@ -45,7 +45,7 @@ export const CartLikeLayout = () => {
                 </div>
                 }
             rightColumn={
-                <div className='shadow rounded bg-neutral-500 h-fix-240px' />
+                <div className='shadow rounded bg-neutral-600 h-fix-240px' />
             }
         />
     )

@@ -15,7 +15,7 @@ function paymentMethodsFromData (methods) {
         const Icon = paymentIcons[method.playmentIcon]
 
         return {
-            item: <Icon className='mx-2 w-10 h-10 inline-block text-white fill-current' />,
+            item: <Icon className='mx-2 w-10 h-10 inline-block text-neutral-100 fill-current' />,
         }
     })
 }

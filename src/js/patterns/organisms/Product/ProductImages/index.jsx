@@ -4,12 +4,13 @@ import Slider from 'Molecules/Slider'
 
 const ProductImages = ({ images }) => {
     return (
-        <div className='max-h-736px mt-4 md:mt-6'>
+        <div className='mt-4 md:mt-6 bg-white rounded'>
             <Slider options={{ items: 1, loop: true, responsive: {} }}>
                 {images.map((image, i) => {
                     return (
                         <div
                             key={i}
+                            className='bg-white rounded'
                             style={{
                                 backgroundImage: `url(${image})`,
                                 backgroundSize: 'contain',
@@ -17,7 +18,7 @@ const ProductImages = ({ images }) => {
                                 backgroundPosition: 'center',
                                 width: '100%',
                                 minWidth: '288px',
-                                minHeight: '399px',
+                                minHeight: '23.74rem',
                             }}
                         />
                     )

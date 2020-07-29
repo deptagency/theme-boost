@@ -5,17 +5,14 @@ module.exports = {
         primary: {
             main: colors.indigo['500'],
             light: colors.indigo['200'],
-            // medium: colors.indigo['600'],
             dark: colors.indigo['800'],
         },
         secondary: {
             main: colors.teal['500'],
             light: colors.teal['200'],
-            // medium: colors.teal['600'],
             dark: colors.teal['800'],
         },
         neutral: {
-            main: colors.white,
             100: colors.gray['100'],
             200: colors.gray['200'],
             300: colors.gray['300'],
@@ -37,6 +34,7 @@ module.exports = {
     },
     borderRadius: {},
     baseFontSize: '16px',
+    boxShadow: {},
     fontColor: colors.gray['800'],
     fontSize: {},
     smallDeg: '0deg',

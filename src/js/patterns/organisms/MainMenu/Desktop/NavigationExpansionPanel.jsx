@@ -30,7 +30,7 @@ const NavigationExpansionPanel = ({ item, expanded = false, handleClick }) => {
                                 onClick={(e) => { return handleClick(e, child) }}
                             >
                                 <div
-                                    className='pb-4 font-bold text-sm text-neutral-800 hover:text-indigo-700'
+                                    className='pb-4 font-bold text-sm text-neutral-900 hover:text-indigo-700'
                                     style={{ animation: `fadeIn 2s` }}
                                 >
                                     {child.name}
@@ -50,7 +50,7 @@ const NavigationExpansionPanel = ({ item, expanded = false, handleClick }) => {
                                     <NodeLink
                                         node={grandchild}
                                         key={grandchild.nodeId}
-                                        className='pt-1 block text-neutral-800 font-normal text-sm hover:text-indigo-700 mb-4'
+                                        className='pt-1 block text-neutral-900 font-normal text-sm hover:text-indigo-700 mb-4'
                                         style={{ animation: `fadeIn 2s` }}
                                         onClick={(e) => { return handleClick(e, grandchild) }}
                                     >

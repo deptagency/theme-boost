@@ -25,7 +25,7 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
 
     return (
         <form onChange={onChange}>
-            <div className='mb-4 text-xs text-neutral-500 font-bold leading-tight uppercase'>
+            <div className='mb-4 text-xs text-neutral-600 font-bold leading-tight uppercase'>
                 <FormattedMessage id={'checkout.shippingTo'} />
             </div>
 
@@ -89,7 +89,7 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
 
             <div className='-mx-4 my-6 border-b-4 md:border-b-0 border-neutral-100' />
 
-            <div className='mb-4 text-xs text-neutral-500 font-bold leading-tight uppercase'>
+            <div className='mb-4 text-xs text-neutral-600 font-bold leading-tight uppercase'>
                 <FormattedMessage id={'checkout.shippingAddress'} />
             </div>
 

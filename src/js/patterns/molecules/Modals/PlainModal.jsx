@@ -19,7 +19,7 @@ const PlainModal = ({ onClose, children, title = '', variant = '' }) => {
 
     return (
         <div className={variant}>
-            <div className='text-neutral-800 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'>
+            <div className='text-neutral-900 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'>
                 <div ref={node} className='relative w-auto my-6 mx-auto max-w-3xl'>
 
                     <div className='rounded-lg shadow-lg relative flex flex-col w-full bg-background-primary outline-none focus:outline-none'>
@@ -29,7 +29,7 @@ const PlainModal = ({ onClose, children, title = '', variant = '' }) => {
                                 className='p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none'
                                 onClick={onClose}
                             >
-                                <CloseIcon className='fill-current text-neutral-800' />
+                                <CloseIcon className='fill-current text-neutral-900' />
                             </button>
                         </div>
 

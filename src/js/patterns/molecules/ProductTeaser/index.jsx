@@ -34,7 +34,7 @@ const ProductTeaser = ({
                     minWidth: fixedWidth,
                 }}
                 className={classnames(
-                    'relative mx-2 bg-white rounded',
+                    'relative mr-4 bg-white rounded',
                     itemVariant
                 )}
                 >
@@ -56,7 +56,7 @@ const ProductTeaser = ({
                         /> : <NoImage className='h-full w-fix-250px' />}
                 </Link>
                 {showHeartIcon && <div
-                    className='absolute top-0 right-0 z-20 m-4 cursor-pointer'
+                    className='absolute top-0 right-0 z-10 m-4 cursor-pointer'
                     onClick={() => {
                         !wishlisted && handleAddToWishlist()
                         wishlisted && handleRemoveFromWishlist()
@@ -66,17 +66,17 @@ const ProductTeaser = ({
                     {wishlisted && <WishlistHeartFull />}
                 </div>}
                 {showCloseIcon && <div
-                    className='absolute top-0 right-0 z-20 m-4 cursor-pointer'
+                    className='absolute top-0 right-0 z-10 m-4 cursor-pointer'
                     onClick={handleRemoveFromWishlist}
                 >
-                    <CloseIcon className='fill-current text-neutral-800 text-xl' />
+                    <CloseIcon className='fill-current text-neutral-900 text-xl' />
                 </div>}
             </div>
             <div className='p-4' style={{
                 width: fixedWidth,
             }}>
                 <div className='font-bold'>{name}</div>
-                <Price variant='text-lg text-neutral-600 py-1' value={discountedPrice || price} />
+                <Price variant='text-lg text-neutral-700 py-1' value={discountedPrice || price} />
             </div>
         </>
     )

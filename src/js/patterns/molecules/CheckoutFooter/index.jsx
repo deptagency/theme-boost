@@ -13,13 +13,13 @@ const CheckoutFooter = ({ links, title }) => {
             <div className='h-15 bg-neutral-200 p-4'>
                 <div className='flex items-center h-full'>
                     <button
-                        className='flex items-center text-sm text-neutral-800'
+                        className='flex items-center text-sm text-neutral-900'
                         onClick={(event) => {
                             event.preventDefault()
                             app.getRouter().replace('Frontastic.Frontend.Master.Checkout.cart')
                         }}
                     >
-                        <IconArrowLeft className='mr-2 text-base fill-current text-neutral-800' />
+                        <IconArrowLeft className='mr-2 text-base fill-current text-neutral-900' />
                         <FormattedMessage id='checkout.backToCart' />
                     </button>
                 </div>

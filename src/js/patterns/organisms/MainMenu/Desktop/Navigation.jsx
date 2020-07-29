@@ -14,8 +14,8 @@ const DesktopMenu = ({ currentTree, handleClick, onHoverItem }) => {
                         key={item.nodeId}
                         node={item}
                         className={classnames({
-                            'mr-8 border-b-2px border-transparent font-bold text-neutral-800 text-sm': true,
-                            'hover:border-b-2px hover:border-neutral-800': true,
+                            'mr-8 border-b-2px border-transparent font-bold text-neutral-900 text-sm': true,
+                            'hover:border-b-2px hover:border-neutral-900': true,
                             'text-primary-main': item.name === 'SALE',
                         })}
                         onClick={(e) => { return handleClick(e, item) }}

@@ -19,9 +19,9 @@ const CheckoutHeader = ({ logo }) => {
                     backgroundRepeat: 'no-repeat',
                 }}
             />
-            <div className='self-center flex w-11/12 justify-end mr-4 text-xs text-neutral-800'>
+            <div className='self-center flex w-11/12 justify-end mr-4 text-xs text-neutral-900'>
                 <FormattedMessage id='cart.checkout' />
-                <IconLockClosed className='text-sm ml-1 fill-current text-neutral-800' />
+                <IconLockClosed className='text-sm ml-1 fill-current text-neutral-900' />
             </div>
         </MarginBreakout>
     )

@@ -13,7 +13,7 @@ export function ProductListing ({ products, onAddToWishlist, showPercent, showSt
 
     return (
         <>
-            <p className='text-neutral-500 text-xs text-center my-4'>{products.length || 0} Products found</p>
+            <p className='text-neutral-600 text-xs text-center my-4'>{products.length || 0} Products found</p>
             <div className='flex flex-wrap p-4 -mx-2'>
                 {products.slice(0, itemsPerPage).map((product) => {
                     return (
@@ -27,13 +27,13 @@ export function ProductListing ({ products, onAddToWishlist, showPercent, showSt
                     )
                 })}
             </div>
-            <p className='text-neutral-500 text-xs text-center my-4'>{products.length || 0} Products found</p>
+            <p className='text-neutral-600 text-xs text-center my-4'>{products.length || 0} Products found</p>
 
             {itemsPerPage < products.length && (
                 <div className='flex justify-center'>
                     <button
                         onClick={handleLoadMore}
-                        className='border border-solid border-neutral-800 rounded leading-tight p-2'
+                        className='border border-solid border-neutral-900 rounded leading-tight p-2'
                     >
                         Load more
                     </button>

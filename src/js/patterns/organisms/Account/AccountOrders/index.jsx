@@ -38,7 +38,7 @@ const AccountOrders = ({ openPanel, onClose, orders }) => {
                             className='justify-self-end p-4 cursor-pointer'
                             onClick={() => { setSelectedOrder(null) }}
                         >
-                            <CloseIcon className='fill-current text-neutral-800' />
+                            <CloseIcon className='fill-current text-neutral-900' />
                         </div>}
                     </div>
                 }

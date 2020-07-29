@@ -9,7 +9,7 @@ const PaymentMethod = ({ payments, onClick }) => {
     return (
         <>
             <div className='mb-3 flex items-center justify-between'>
-                <span className='text-xs text-neutral-500 font-bold leading-tight uppercase'>
+                <span className='text-xs text-neutral-600 font-bold leading-tight uppercase'>
                     <FormattedMessage id={'checkout.paymentMethod'} />
                 </span>
 
@@ -18,7 +18,7 @@ const PaymentMethod = ({ payments, onClick }) => {
                 </span>
             </div>
 
-            <div className='text-md text-neutral-800 leading-tight'>
+            <div className='text-md text-neutral-900 leading-tight'>
                 {payments.map((payment, index) => {
                     return (
                         <span key={index} className={classnames({ 'mt-8': index > 0 })}>

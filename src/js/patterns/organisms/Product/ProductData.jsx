@@ -15,8 +15,8 @@ import IconButton from 'Atoms/button/IconButton'
 import ColorSelector from './selectors/ColorSelector'
 import SizeSelector from './selectors/SizeSelector'
 
-import { ReactComponent as IconHeartBorder } from 'Icons/tailwind-icons/icon-heart-border.svg'
-import { ReactComponent as IconHeartFullBorder } from 'Icons/tailwind-icons/icon-heart-full-border.svg'
+import { ReactComponent as IconHeart } from 'Icons/tailwind-icons/icon-heart.svg'
+import { ReactComponent as IconHeartFull } from 'Icons/tailwind-icons/icon-heart-full.svg'
 import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.svg'
 import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
 
@@ -32,7 +32,7 @@ const ProductData = ({ name, variants, selectedVariant, onChange, handleAddToCar
         <div className='mt-4 md:mt-6'>
             <div className='text-xl font-bold text-neutral-900'>{name}</div>
             <Price
-                variant='text-lg text-neutral-600 py-1'
+                variant='text-lg text-neutral-700 py-1'
                 value={selectedVariant.price}
                 currency={selectedVariant.currency}
             />
@@ -55,7 +55,7 @@ const ProductData = ({ name, variants, selectedVariant, onChange, handleAddToCar
             <div className='flex pb-6'>
                 <Button
                     variant={classnames({
-                        'btn bg-primary-main text-white w-full pt-2 h-10 lg:mr-4': true,
+                        'btn bg-primary-main text-white w-full mr-2 h-10': true,
                         'cursor-default': loading,
                     })}
                     onClick={() => {
@@ -68,8 +68,8 @@ const ProductData = ({ name, variants, selectedVariant, onChange, handleAddToCar
                     {loading ? <LoaderButton /> : <FormattedMessage id='inCartProduct' />}
                 </Button>
                 <IconButton
-                    variant='text-icon-size ml-2 lg:block lg:ml-0'
-                    icon={wishlisted ? <IconHeartFullBorder /> : <IconHeartBorder />}
+                    variant='flex justify-center text-neutral-900 border border-neutral-900 w-10 rounded outline-none focus:outline-none'
+                    icon={wishlisted ? <IconHeartFull /> : <IconHeart />}
                     onClick={() => {
                         !wishlisted && handleAddToWishlist()
                         wishlisted && handleRemoveFromWishlist()
@@ -79,12 +79,12 @@ const ProductData = ({ name, variants, selectedVariant, onChange, handleAddToCar
 
             <div className='flex flex-col md:flex-row md:border-b border-neutral-300'>
                 <div className='flex p-4 border-b md:border-b-0 lg:border-b-0 border-neutral-300'>
-                    <IconRocket className='text-xl mr-3' />
+                    <IconRocket className='text-xl mr-3 fill-current text-primary-main' />
                     <FormattedMessage id='product.delivery24hs' />
                 </div>
 
                 <div className='flex p-4'>
-                    <IconRefresh className='text-xl mr-3' />
+                    <IconRefresh className='text-xl mr-3 fill-current text-primary-main' />
                     <FormattedMessage id='product.freeReturns' />
                 </div>
                 <MarginBreakout variant='border-b-4 border-neutral-100 md:hidden' />

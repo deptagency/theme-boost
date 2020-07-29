@@ -24,8 +24,8 @@ const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
 
     return (
         <div>
-            <div className='flex items-center justify-center py-4'>
-                <span className='mr-8 text-base text-neutral-500 leading-tight font-bold'>
+            <div className='flex items-center justify-center py-4 bg-neutral-200'>
+                <span className='mr-8 text-base text-neutral-600 leading-tight font-bold'>
                     <FormattedMessage id='account.register.alreadyRegistered' />
                 </span>
                 <Button
@@ -38,11 +38,11 @@ const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
 
             <div className='mx-auto py-5 sm:py-10 w-full md:w-160 bg-background-primary'>
                 <div className='px-4 mx-auto w-full sm:w-100'>
-                    <div className='mb-1 text-center text-sm text-neutral-500 leading-tight'>
+                    <div className='mb-1 text-center text-sm text-neutral-600 leading-tight'>
                         <FormattedMessage id='account.login.newToCalwalk' />
                     </div>
 
-                    <div className='mb-6 text-center text-2xl sm:text-3xl text-neutral-800 leading-none font-bold'>
+                    <div className='mb-6 text-center text-2xl sm:text-3xl text-neutral-900 leading-none font-bold'>
                         <FormattedMessage id='account.signUp' />
                     </div>
 

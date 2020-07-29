@@ -74,10 +74,10 @@
 }
 
 .btn-outline-black {
-    @apply border-gray-800;
+    @apply border-neutral-900;
 
     &:hover {
-        @apply bg-gray-400 text-white;
+        @apply bg-neutral-400 text-white;
     }
 }
 

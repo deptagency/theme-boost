@@ -87,7 +87,7 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                             />
 
                             <div className='mt-4 p-4 bg-neutral-200 rounded'>
-                                <div className='text-sm text-neutral-800 flex items-center'>
+                                <div className='text-sm text-neutral-900 flex items-center'>
                                     <Checkbox
                                         className='text-xl'
                                         label={billingDetailsLabel}

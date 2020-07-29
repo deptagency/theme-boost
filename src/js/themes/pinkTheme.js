@@ -5,15 +5,14 @@ module.exports = {
         primary: {
             main: colors.pink['600'],
             light: colors.pink['200'],
-            dark: colors.pink['700'],
+            dark: colors.pink['900'],
         },
         secondary: {
             main: colors.gray['600'],
             light: colors.gray['400'],
-            dark: colors.gray['800'],
+            dark: colors.gray['900'],
         },
         neutral: {
-            main: colors.gray['700'],
             100: colors.pink['100'],
             200: colors.pink['200'],
             300: colors.pink['300'],
@@ -41,7 +40,8 @@ module.exports = {
         lg: '1.5rem',
         full: '9999px',
     },
-    baseFontSize: '20px',
+    baseFontSize: '18px',
+    boxShadow: {},
     fontColor: colors.pink['900'],
     fontSize: {},
     smallDeg: '0deg',

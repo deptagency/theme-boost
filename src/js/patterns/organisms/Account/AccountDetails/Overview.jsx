@@ -8,7 +8,7 @@ import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 const AccountDetailsOverview = ({ firstName, lastName, email, openAccountDetailsForm, openChangePasswordForm }) => {
     return (
         <div className='md:shadow-lg'>
-            <div className='border-b-4 border-neutral-100' />
+            <div className='border-b-4 border-neutral-200' />
 
             <div className='md:pb-4 mx-12'>
                 <div className='mt-6 mb-6 sm:ml-24 md:ml-5'>
@@ -33,7 +33,7 @@ const AccountDetailsOverview = ({ firstName, lastName, email, openAccountDetails
                     </button>
                 </div>
             </div>
-            <div className='border-b-4 border-neutral-100' />
+            <div className='border-b-4 border-neutral-200' />
             <div className='text-center my-6'>
                 <Button
                     variant='btn-outline btn-outline-black'

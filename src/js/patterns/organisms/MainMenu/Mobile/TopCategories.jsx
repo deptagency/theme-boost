@@ -56,7 +56,7 @@ const TopCategories = ({
                                     }}
                                     className={classnames({
                                         'font-bold hover:text-neutral-400 cursor-pointer': true,
-                                        'border-b-4 border-neutral-800': i === currentTopCategory,
+                                        'border-b-4 border-neutral-900': i === currentTopCategory,
                                     })}
                                 >
                                     {item.name}

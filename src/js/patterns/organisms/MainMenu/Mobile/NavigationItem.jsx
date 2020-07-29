@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import NodeLink from '@frontastic/catwalk/src/js/app/nodeLink.jsx'
 import Navigation from './Navigation'
 
-import { ReactComponent as ArrowRight } from 'Icons/tailwind-icons/icon-cheveron-right.svg'
+import { ReactComponent as ArrowRight } from 'Icons/tailwind-icons/icon-chevron-right.svg'
 
 import { categoryTreeType } from '../types'
 
@@ -32,7 +32,7 @@ const NavigationItem = ({ item, level, navPath, onClick }) => {
                 node={item}
                 onClick={handleOpenPage}
                 className={classnames({
-                    'text-neutral-800 hover:text-neutral-500 pl-px py-5': true,
+                    'text-neutral-900 hover:text-neutral-600 pl-px py-5': true,
                     'font-bold': level === 0,
                     'text-primary-main': item.name === 'SALE',
                 })}
@@ -42,7 +42,7 @@ const NavigationItem = ({ item, level, navPath, onClick }) => {
 
             {hasSubLevel(item) && <>
                 <ArrowRight
-                    className='self-center cursor-pointer text-4xl -mr-3'
+                    className='self-center cursor-pointer text-l'
                     onClick={() => { return onClick(item, level) }}
                 />
                 <Navigation

@@ -1,7 +1,7 @@
 const plugin = require('tailwindcss/plugin')
-const { colors, borderRadius, smallDeg, baseFontSize,fontSize, fontColor } = require('./src/js/themes/defaultTheme')
-// const { colors, borderRadius, smallDeg, baseFontSize,fontSize, fontColor } = require('./src/js/themes/pinkTheme')
-// const { colors, borderRadius, smallDeg, baseFontSize,fontSize, fontColor } = require('./src/js/themes/greenTheme')
+const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/defaultTheme')
+// const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/pinkTheme')
+// const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/darkGreenTheme')
 
 module.exports = {
     theme: {
@@ -9,10 +9,8 @@ module.exports = {
             /* PART OF THEME */
             colors,
             borderRadius,
-            fontSize: {
-                'icon-size': '2.5rem',
-                ... fontSize
-            },
+            fontSize,
+            boxShadow,
             /* END OF PART THEME */
             borderWidth: {
                 '0.5px': '0.5px',
@@ -173,7 +171,17 @@ module.exports = {
                     fontSize: baseFontSize
                 },
                 '.font-color': {
-                    color: fontColor
+                    color: fontColor,
+                },
+                '.stroke-font-color': {
+                    stroke: fontColor,
+                },
+                '.fill-font-color': {
+                    stroke: fontColor,
+                },
+                '.button-loader-color-themed': {
+                    border: '3px solid',
+                    borderColor: `${colors.primary.main} transparent ${colors.primary.main} transparent`
                 }
                 /* END OF PART OF THEME */
             }

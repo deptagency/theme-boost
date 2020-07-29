@@ -54,7 +54,7 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
                 }}>
                     <CartBin className='inline-block mx-1' />
 
-                    <div className='mx-1 text-sm text-neutral-800 leading-tight'>
+                    <div className='mx-1 text-sm text-neutral-900 leading-tight'>
                         <FormattedMessage id='cart.remove' />
                     </div>
                 </button>

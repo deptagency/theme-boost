@@ -11,7 +11,7 @@ const AddressCard = ({ address, countries, onEditClicked, onDeleteClicked }) => 
     const country = _.find(countries, c => { return c.code === address.country })
 
     return (
-        <div className='text-base text-neutral-800 leading-tight'>
+        <div className='text-base text-neutral-900 leading-tight'>
             <p className='font-bold'>{address.firstName} {address.lastName}</p>
             <p>{address.streetName}</p>
             <p>{address.city}</p>
