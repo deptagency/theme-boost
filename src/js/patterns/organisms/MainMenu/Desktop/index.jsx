@@ -44,7 +44,7 @@ const Desktop = ({
             <div className='grid grid-cols-2 w-full max-w-1240px m-center'>
                 <div className='flex ml-5 xl:ml-5'>
                     <a
-                        className='self-center h-8 w-3/12'
+                        className='self-center h-8 w-3/12 mt-3'
                         ref={ref}
                         href={window.location.origin}
                     >

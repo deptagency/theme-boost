@@ -131,7 +131,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
                 />
             </div>
 
-            <div className='mb-2 bg-neutral-200 px-4 py-4 flex items-center'>
+            <div className='mb-2 bg-neutral-200 px-4 py-4 flex items-center rounded'>
                 <input id='shipping-default' type='checkbox' className='mr-2' name='isDefaultShippingAddress' ref={register()} />
 
                 <label className='text-sm text-neutral-800 leading-tight' htmlFor='shipping-default'>
@@ -139,7 +139,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
                 </label>
             </div>
 
-            <div className='bg-neutral-200 px-4 py-4 flex items-center'>
+            <div className='bg-neutral-200 px-4 py-4 flex items-center rounded'>
                 <input id='billing-default' type='checkbox' className='mr-2' name='isDefaultBillingAddress' ref={register()} />
 
                 <label className='text-sm text-neutral-800 leading-tight' htmlFor='billing-default'>

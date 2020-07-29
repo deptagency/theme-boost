@@ -36,7 +36,7 @@ const ProductSlider = ({ products, title = '', description = '', handleAddToWish
                     <TinySlider>
                         {products && products.map((product, i) => {
                             return (
-                                <div key={i}>
+                                <div key={i} className='pr-2'>
                                     <ProductTeaser
                                         product={product}
                                         wishlisted={product.wishlisted}

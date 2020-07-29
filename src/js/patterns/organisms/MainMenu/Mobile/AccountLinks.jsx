@@ -36,7 +36,7 @@ const AccountLinks = ({
         <>
             <div className='absolute bottom-0 left-0 right-0 text-base'>
                 {!loggedIn && <div
-                    className='flex border-t-4 border-neutral-200 px-5 pt-6'
+                    className='flex border-t-4 border-neutral-200 px-5 pt-6 bg-background-primary'
                     onClick={() => {
                         closeMobileMenu()
                         app.getRouter().push('Frontastic.Frontend.Master.Account.index')

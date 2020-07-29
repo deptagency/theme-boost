@@ -3,19 +3,17 @@ const { colors } = require('tailwindcss/defaultTheme')
 module.exports = {
     colors: {
         primary: {
-            main: colors.indigo['500'],
-            light: colors.indigo['200'],
-            // medium: colors.indigo['600'],
-            dark: colors.indigo['800'],
+            main: colors.green['600'],
+            light: colors.green['200'],
+            dark: colors.green['700'],
         },
         secondary: {
-            main: colors.teal['500'],
-            light: colors.teal['200'],
-            // medium: colors.teal['600'],
-            dark: colors.teal['800'],
+            main: colors.blue['600'],
+            light: colors.blue['100'],
+            dark: colors.blue['700'],
         },
         neutral: {
-            main: colors.white,
+            main: colors.gray['900'],
             100: colors.gray['100'],
             200: colors.gray['200'],
             300: colors.gray['300'],
@@ -29,15 +27,22 @@ module.exports = {
         system: {
             error: colors.red['700'],
             warning: colors.yellow['500'],
-            green: colors.green['600'],
+            green: colors.teal['600'],
         },
         background: {
-            primary: colors.white,
+            primary: colors.gray['900'],
         },
     },
-    borderRadius: {},
-    baseFontSize: '16px',
-    fontColor: colors.gray['800'],
+    borderRadius: {
+        none: '0',
+        sm: '0.1rem',
+        default: '0',
+        md: '0.35rem',
+        lg: '0.25rem',
+        full: '9999px',
+    },
+    baseFontSize: '20px',
+    fontColor: colors.green['100'],
     fontSize: {},
     smallDeg: '0deg',
 }

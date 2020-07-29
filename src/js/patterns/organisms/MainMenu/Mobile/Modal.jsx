@@ -54,7 +54,7 @@ const Modal = ({
                 />
 
                 <Scrollbars
-                    style={{ height: 'calc(100vh - 308px)' }}
+                    style={{ height: 'calc(100vh - 18.5rem)' }}
                     autoHide
                     // hiding horizontal scrollbar
                     hideTracksWhenNotNeeded

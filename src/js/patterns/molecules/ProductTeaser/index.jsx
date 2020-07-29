@@ -34,7 +34,7 @@ const ProductTeaser = ({
                     minWidth: fixedWidth,
                 }}
                 className={classnames(
-                    'relative mx-2',
+                    'relative mx-2 bg-white rounded',
                     itemVariant
                 )}
                 >

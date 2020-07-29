@@ -1,8 +1,7 @@
 const plugin = require('tailwindcss/plugin')
-const { colors, borderRadius, smallDeg, fontSize } = require('./src/js/themes/defaultTheme')
-// const { colors, borderRadius, smallDeg, fontSize } = require('./src/js/themes/dynamicTheme')
-// const { colors, borderRadius, smallDeg, fontSize } = require('./src/js/themes/calmingTheme')
-
+// const { colors, borderRadius, smallDeg, baseFontSize,fontSize, fontColor } = require('./src/js/themes/defaultTheme')
+const { colors, borderRadius, smallDeg, baseFontSize,fontSize, fontColor } = require('./src/js/themes/pinkTheme')
+// const { colors, borderRadius, smallDeg, baseFontSize,fontSize, fontColor } = require('./src/js/themes/greenTheme')
 
 module.exports = {
     theme: {
@@ -67,6 +66,7 @@ module.exports = {
             minHeight: {
                 '354px': '354px',
                 '400px': '400px',
+                'inherit': 'inherit'
             },
             spacing: {
                 '2px': '2px',
@@ -169,6 +169,12 @@ module.exports = {
                 '.rotate-sm': {
                     transform: `rotate(${smallDeg})`,
                 },
+                '.base-font-size': {
+                    fontSize: baseFontSize
+                },
+                '.font-color': {
+                    color: fontColor
+                }
                 /* END OF PART OF THEME */
             }
 

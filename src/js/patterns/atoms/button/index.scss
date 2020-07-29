@@ -36,7 +36,7 @@
 }
 
 .btn-gray {
-    @apply bg-gray-400 text-gray-800;
+    @apply bg-gray-400;
 
     &:hover {
         @apply bg-indigo-700 text-white;
@@ -82,7 +82,7 @@
 }
 
 .btn-elevated {
-    @apply btn bg-background-primary text-gray-800 border border-gray-400 shadow;
+    @apply btn bg-background-primary border border-gray-400 shadow;
 
     &:hover {
         @apply bg-gray-100;
