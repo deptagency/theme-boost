@@ -39,15 +39,13 @@ const ProductTeaser = ({
                 )}
                 >
                 <Link
-                    className='flex justify-center w-full h-full'
+                    className='flex justify-center w-full min-h-inherit'
                     itemProp='url'
                     path={_url || '#'}
                 >
                     {images[0] ? <div
-                        className='rounded'
+                        className='absolute rounded pointer-events-none'
                         style={{
-                            position: 'absolute',
-                            pointerEvents: 'none',
                             backgroundImage: `url(${images[0]})`,
                             backgroundSize: 'contain',
                             backgroundRepeat: 'no-repeat',
@@ -58,7 +56,7 @@ const ProductTeaser = ({
                         /> : <NoImage className='h-full w-fix-250px' />}
                 </Link>
                 {showHeartIcon && <div
-                    className='absolute right-0 z-20 m-4 cursor-pointer'
+                    className='absolute top-0 right-0 z-20 m-4 cursor-pointer'
                     onClick={() => {
                         !wishlisted && handleAddToWishlist()
                         wishlisted && handleRemoveFromWishlist()
@@ -68,7 +66,7 @@ const ProductTeaser = ({
                     {wishlisted && <WishlistHeartFull />}
                 </div>}
                 {showCloseIcon && <div
-                    className='absolute right-0 z-20 m-4 cursor-pointer'
+                    className='absolute top-0 right-0 z-20 m-4 cursor-pointer'
                     onClick={handleRemoveFromWishlist}
                 >
                     <CloseIcon className='fill-current text-neutral-800 text-xl' />
