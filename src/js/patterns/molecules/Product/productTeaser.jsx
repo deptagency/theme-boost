@@ -42,7 +42,7 @@ function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice
             itemType='http://schema.org/Product'
             >
             <Link itemProp='url' className='z-10 hover:no-underline hover:text-neutral-900' to={product._url || ''}>
-                <div className='relative pb-3/2 mb-2'>
+                <div className='relative pb-3/2 mb-2 bg-white rounded'>
                     <figure className='absolute flex items-center h-full w-full object-cover'>
                         <RemoteImage
                             url={variant.images[0]}

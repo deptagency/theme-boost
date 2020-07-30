@@ -1,6 +1,6 @@
 const plugin = require('tailwindcss/plugin')
-const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/defaultTheme')
-// const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/pinkTheme')
+// const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/defaultTheme')
+const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/pinkTheme')
 // const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/darkGreenTheme')
 
 module.exports = {
@@ -129,6 +129,25 @@ module.exports = {
     plugins: [
         plugin(function({ addUtilities }) {
             const utilities = {
+                /* PART OF THEME */
+                '.base-font-size': {
+                    fontSize: baseFontSize
+                },
+                '.font-color': {
+                    color: fontColor,
+                },
+                '.stroke-font-color': {
+                    stroke: fontColor,
+                },
+                '.fill-font-color': {
+                    stroke: fontColor,
+                },
+                '.button-loader-color-themed': {
+                    border: '3px solid',
+                    borderColor: `${colors.primary.main} transparent ${colors.primary.main} transparent`
+                },
+                /* END OF PART OF THEME */
+
                 '.bg-transparent-50': {
                     backgroundColor: 'rgba(253, 250, 250, 0.5)'
                 },
@@ -163,24 +182,6 @@ module.exports = {
                 '.self-baseline': {
                     alignSelf: 'baseline',
                 },
-                /* PART OF THEME */
-                '.base-font-size': {
-                    fontSize: baseFontSize
-                },
-                '.font-color': {
-                    color: fontColor,
-                },
-                '.stroke-font-color': {
-                    stroke: fontColor,
-                },
-                '.fill-font-color': {
-                    stroke: fontColor,
-                },
-                '.button-loader-color-themed': {
-                    border: '3px solid',
-                    borderColor: `${colors.primary.main} transparent ${colors.primary.main} transparent`
-                }
-                /* END OF PART OF THEME */
             }
 
             addUtilities(utilities)
