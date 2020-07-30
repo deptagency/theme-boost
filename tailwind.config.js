@@ -164,9 +164,6 @@ module.exports = {
                     alignSelf: 'baseline',
                 },
                 /* PART OF THEME */
-                '.rotate-sm': {
-                    transform: `rotate(${smallDeg})`,
-                },
                 '.base-font-size': {
                     fontSize: baseFontSize
                 },

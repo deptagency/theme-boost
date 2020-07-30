@@ -44,5 +44,4 @@ module.exports = {
     boxShadow: {},
     fontColor: colors.pink['900'],
     fontSize: {},
-    smallDeg: '0deg',
 }

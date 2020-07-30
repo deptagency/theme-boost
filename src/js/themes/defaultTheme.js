@@ -37,5 +37,4 @@ module.exports = {
     boxShadow: {},
     fontColor: colors.gray['800'],
     fontSize: {},
-    smallDeg: '0deg',
 }
