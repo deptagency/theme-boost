@@ -13,19 +13,19 @@ const sliderSettings = {
     nav: false,
     responsive: {
         420: {
-            items: 2.4,
+            items: 1.8,
         },
         660: {
-            items: 3.4,
+            items: 2.4,
         },
         935: {
-            items: 4.5,
+            items: 3.9,
         },
         1200: {
-            items: 5.5,
+            items: 4.8,
         },
         1400: {
-            items: 6.5,
+            items: 5.8,
         },
     },
 }

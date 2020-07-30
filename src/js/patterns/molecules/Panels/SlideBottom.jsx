@@ -15,20 +15,20 @@ Modal.setAppElement(document.getElementById('app'))
 const SlideBottom = ({ isOpen, onClose, title = '', overlayVariant = '', children }) => {
     return (
         <SlidingPane
-            overlayClassName={`boost-slide-bottom-panel bg-white ${overlayVariant} `}
+            overlayClassName={`boost-slide-bottom-panel bg-background-primary ${overlayVariant} `}
             from='bottom'
             width='100%'
             isOpen={isOpen}
-            title={<div className='self-center text-2xl text-gray-800 font-bold mx-6 my-4'>{title}</div>}
+            title={<div className='self-center text-2xl text-neutral-800 font-bold mx-6 my-4'>{title}</div>}
             >
-            <div className='flex align-center justify-between text-gray-800 m-5'>
+            <div className='flex align-center justify-between text-neutral-800 m-5'>
                 <div className='flex items-center text-2xl font-bold'>{title}</div>
                 <PanelClose
-                    className='text-2xl text-gray-800 font-bold cursor-pointer'
+                    className='text-2xl text-neutral-800 font-bold cursor-pointer'
                     onClick={onClose}
                 />
             </div>
-            <div className='border-b-4 border-gray-100' />
+            <div className='border-b-4 border-neutral-100' />
             <Scrollbars style={{ height: 'calc(100vh - 116px)' }}>
                 {children}
             </Scrollbars>

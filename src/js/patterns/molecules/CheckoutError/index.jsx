@@ -8,9 +8,9 @@ import { ReactComponent as IconEmotionSad } from 'Icons/tailwind-icons/icon-emot
 const CheckoutError = ({ onClick }) => {
     return (
         <div className='my-10 md:mt-20 w-64 mx-auto text-center'>
-            <IconEmotionSad className='w-20 h-20 inline-block text-gray-400 fill-current' />
+            <IconEmotionSad className='w-20 h-20 inline-block text-neutral-400 fill-current' />
 
-            <div className='mt-4 text-center text-gray-800'>
+            <div className='mt-4 text-center text-neutral-800'>
                 <p className='text-2xl font-bold'>
                     <FormattedMessage id='checkout.wentWrong' />
                 </p>

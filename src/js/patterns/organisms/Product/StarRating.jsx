@@ -12,7 +12,7 @@ const StarRating = () => {
             <IconStar />
             <IconStar />
             <IconStar />
-            <div className='text-sm text-gray-700 pl-2'>
+            <div className='text-sm text-neutral-700 pl-2'>
                 <FormattedMessage id='product.reviewsWithCount' values={{ count: 23 }} />
             </div>
         </div>

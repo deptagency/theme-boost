@@ -12,7 +12,7 @@ export default {
 export const accountDetails = () => {
     return (
         <>
-            <div className='m-auto md:flex md:w-11/12 text-gray-800'>
+            <div className='m-auto md:flex md:w-11/12 text-neutral-800'>
                 <div className='flex-auto md:order-2 md:mt-10 md:w-7/12 md:ml-4 lg:ml-5'>
                     <div className='font-bold text-2xl my-5 md:ml-6 flex'>
                         <button>
@@ -22,26 +22,26 @@ export const accountDetails = () => {
                     </div>
 
                     <div className='flex flex-col md:shadow-lg md:ml-0'>
-                        <div className='border-b-4 border-gray-100' />
+                        <div className='border-b-4 border-neutral-100' />
                         <div className='md:pb-10 mx-6'>
                             <div className='mt-6 mb-6 sm:ml-24 md:ml-5'>
                                 <div className='mb-4'>
-                                    <div className='text-sm text-gray-600'>First name </div>
+                                    <div className='text-sm text-neutral-600'>First name </div>
                                     <div>Alexandra</div>
                                 </div>
                                 <div className='mb-4'>
-                                    <div className='text-sm text-gray-600'>Last name </div>
+                                    <div className='text-sm text-neutral-600'>Last name </div>
                                     <div>Jones </div>
                                 </div>
                                 <div className='mb-4'>
-                                    <div className='text-sm text-gray-600'> Email Address </div>
+                                    <div className='text-sm text-neutral-600'> Email Address </div>
                                     <div>alexandra.jones@gmail.com </div>
                                 </div>
-                                <div className='text-sm text-indigo-500 leading-tight cursor-pointer flex items-center'>
+                                <div className='text-sm text-primary-main leading-tight cursor-pointer flex items-center'>
                                     Edit<EditIcon className='inline fill-current text-sm ml-2' />
                                 </div>
                             </div>
-                            <div className='border-b-4 border-gray-100' />
+                            <div className='border-b-4 border-neutral-100' />
                             <div className='text-center mt-6'>
                                 <Button variant='btn-outline btn-outline-black'>
                                     Change password
@@ -58,19 +58,19 @@ export const accountDetails = () => {
 export const editDetails = () => {
     return (
         <>
-            <div className='m-auto md:flex md:w-11/12 text-gray-800'>
+            <div className='m-auto md:flex md:w-11/12 text-neutral-800'>
                 <div className='flex-auto md:order-2 md:mt-10 md:w-7/12 md:ml-4 lg:ml-5'>
                     <div className='font-bold text-2xl my-5 mx-6 flex justify-between'>
                         Edit Details
                         <button>
-                            <CloseIcon className='fill-current text-gray-800' />
+                            <CloseIcon className='fill-current text-neutral-800' />
                         </button>
                     </div>
-                    <div className='border-b-4 border-gray-100' />
+                    <div className='border-b-4 border-neutral-100' />
 
                     <form className='flex-col mx-6 mt-6 sm:mx-auto sm:w-7/12 lg:w-3/6'>
                         <div className='mb-4'>
-                            <div className='text-sm text-gray-600'>First name </div>
+                            <div className='text-sm text-neutral-600'>First name </div>
                             <input
                                 id='login-firstname'
                                 name='firstName'
@@ -79,7 +79,7 @@ export const editDetails = () => {
                             />
                         </div>
                         <div className='mb-4'>
-                            <div className='text-sm text-gray-600'>Last name </div>
+                            <div className='text-sm text-neutral-600'>Last name </div>
                             <input
                                 id='login-lastname'
                                 name='lastName'
@@ -88,7 +88,7 @@ export const editDetails = () => {
                             />
                         </div>
                         <div className='mb-4'>
-                            <div className='text-sm text-gray-600'>Email address </div>
+                            <div className='text-sm text-neutral-600'>Email address </div>
                             <input
                                 id='signup-email'
                                 name='email'
@@ -97,7 +97,7 @@ export const editDetails = () => {
                             />
                         </div>
                         <div className='mb-4'>
-                            <div className='text-sm text-gray-600'>Repeat email address </div>
+                            <div className='text-sm text-neutral-600'>Repeat email address </div>
                             <input
                                 id='signup-email'
                                 name='email'
@@ -106,7 +106,7 @@ export const editDetails = () => {
                             />
                         </div>
                         <div className='text-center mt-6'>
-                            <Button variant='btn btn-indigo w-full'>
+                            <Button variant='btn btn-primary w-full'>
                                 Save
                             </Button>
                         </div>
@@ -120,19 +120,19 @@ export const editDetails = () => {
 export const changePassword = () => {
     return (
         <div>
-            <div className='m-auto md:flex md:w-11/12 text-gray-800'>
+            <div className='m-auto md:flex md:w-11/12 text-neutral-800'>
                 <div className='flex-auto md:order-2 md:mt-10 md:w-7/12 md:ml-4 lg:ml-5'>
                     <div className='font-bold text-2xl my-5 mx-6 flex justify-between'>
                         Change Password
                         <button>
-                            <CloseIcon className='fill-current text-gray-800' />
+                            <CloseIcon className='fill-current text-neutral-800' />
                         </button>
                     </div>
-                    <div className='border-b-4 border-gray-100' />
+                    <div className='border-b-4 border-neutral-100' />
 
                     <form className='flex-col mx-6 mt-6 sm:mx-auto sm:w-7/12'>
 
-                        <div className='text-gray-600 text-sm'>
+                        <div className='text-neutral-600 text-sm'>
                             <span>In order to </span>
                             <span className='font-bold'> protect your account, </span>
                             <span> your password must contain:</span>
@@ -147,7 +147,7 @@ export const changePassword = () => {
 
                         <div className='mt-6 mb-4'>
                             <div className='mb-4'>
-                                <div className='text-sm text-gray-600'>Password </div>
+                                <div className='text-sm text-neutral-600'>Password </div>
                                 <input
                                     id='login-password'
                                     name='password'
@@ -156,7 +156,7 @@ export const changePassword = () => {
                                 />
                             </div>
                             <div className='mb-4'>
-                                <div className='text-sm text-gray-600'>New password </div>
+                                <div className='text-sm text-neutral-600'>New password </div>
                                 <input
                                     id='login-password'
                                     name='password'
@@ -165,7 +165,7 @@ export const changePassword = () => {
                                 />
                             </div>
                             <div className='mb-4'>
-                                <div className='text-sm text-gray-600'>Confirm new password </div>
+                                <div className='text-sm text-neutral-600'>Confirm new password </div>
                                 <input
                                     id='login-password'
                                     name='password'
@@ -174,7 +174,7 @@ export const changePassword = () => {
                                 />
                             </div>
                             <div className='text-center mt-6'>
-                                <Button variant='btn btn-indigo w-full'>
+                                <Button variant='btn btn-primary w-full'>
                                     Change password
                                 </Button>
                             </div>
@@ -189,21 +189,21 @@ export const changePassword = () => {
 export const modalChangePassword = () => {
     return (
         <div>
-            <div className='text-gray-800 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'>
+            <div className='text-neutral-800 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'>
                 <div className='relative w-auto my-6 mx-auto max-w-3xl'>
-                    <div className='rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none'>
-                        <div className='flex items-start justify-between p-5 border-b-4 border-gray-100 rounded-t'>
+                    <div className='rounded-lg shadow-lg relative flex flex-col w-full bg-background-primary outline-none focus:outline-none'>
+                        <div className='flex items-start justify-between p-5 border-b-4 border-neutral-100 rounded-t'>
                             <h3 className='text-3xl font-semibold'>
                                 Change password
                             </h3>
                             <button className='p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none'>
-                                <CloseIcon className='fill-current text-gray-800' />
+                                <CloseIcon className='fill-current text-neutral-800' />
                             </button>
                         </div>
 
-                        <div className='text-gray-600 text-sm relative p-6 flex-auto leading-relaxed'>
+                        <div className='text-neutral-600 text-sm relative p-6 flex-auto leading-relaxed'>
                             <form className='flex-col mx-6'>
-                                <div className='text-gray-600 text-sm'>
+                                <div className='text-neutral-600 text-sm'>
                                     <span>In order to </span>
                                     <span className='font-bold'> protect your account, </span>
                                     <span> your password must contain:</span>
@@ -218,7 +218,7 @@ export const modalChangePassword = () => {
 
                                 <div className='mt-6 mb-4'>
                                     <div className='mb-4'>
-                                        <div className='text-sm text-gray-600'>Password </div>
+                                        <div className='text-sm text-neutral-600'>Password </div>
                                         <input
                                             id='login-password'
                                             name='password'
@@ -227,7 +227,7 @@ export const modalChangePassword = () => {
                                     />
                                     </div>
                                     <div className='mb-4'>
-                                        <div className='text-sm text-gray-600'>New password </div>
+                                        <div className='text-sm text-neutral-600'>New password </div>
                                         <input
                                             id='login-password'
                                             name='password'
@@ -236,7 +236,7 @@ export const modalChangePassword = () => {
                                     />
                                     </div>
                                     <div className='mb-4'>
-                                        <div className='text-sm text-gray-600'>Confirm new password </div>
+                                        <div className='text-sm text-neutral-600'>Confirm new password </div>
                                         <input
                                             id='login-password'
                                             name='password'
@@ -246,7 +246,7 @@ export const modalChangePassword = () => {
                                     </div>
                                     <div className='text-center mt-6'>
                                         <Button
-                                            variant='btn btn-indigo w-full'
+                                            variant='btn btn-primary w-full'
                                             type='button'
                                             style={{ transition: 'all .15s ease' }}
                                         >

@@ -1,13 +1,12 @@
 import React, { useRef, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 
 import TinySlider from 'Templates/Slider'
 import ProductTeaser from 'Molecules/ProductTeaser'
 import MarginBreakout from 'Molecules/Layout/MarginBreakout'
 
-const ProductSlider = ({ products, title = '', description = '' }) => {
+const ProductSlider = ({ products, title = '', description = '', handleAddToWishlist, handleRemoveFromWishlist }) => {
     const productSliderWrapperRef = useRef(null)
     const [sliderIndent, setSliderIndent] = useState(0)
 
@@ -22,7 +21,7 @@ const ProductSlider = ({ products, title = '', description = '' }) => {
     return (
         <MarginBreakout onChange={setSliderIndent}>
             {title && (
-                <p className='text-center font-hairline text-gray-500'>
+                <p className='text-center font-hairline text-neutral-500'>
                     <Translatable value={title} />
                 </p>
             )}
@@ -35,14 +34,14 @@ const ProductSlider = ({ products, title = '', description = '' }) => {
             <div className='mt-8 select-none'>
                 <div ref={productSliderWrapperRef}>
                     <TinySlider>
-                        {products.map((product, i) => {
+                        {products && products.map((product, i) => {
                             return (
-                                <div key={i}>
+                                <div key={i} className='pr-2 outline-none'>
                                     <ProductTeaser
                                         product={product}
-                                        itemClassName={classnames({
-                                            'mr-6': (i + 1 < products.length),
-                                        })}
+                                        wishlisted={product.wishlisted}
+                                        handleAddToWishlist={() => { handleAddToWishlist && handleAddToWishlist(product) }}
+                                        handleRemoveFromWishlist={() => { handleRemoveFromWishlist && handleRemoveFromWishlist(product) }}
                                     />
                                 </div>
                             )
@@ -65,6 +64,8 @@ ProductSlider.propTypes = {
         PropTypes.string,
         PropTypes.object,
     ]),
+    handleAddToWishlist: PropTypes.func,
+    handleRemoveFromWishlist: PropTypes.func,
 }
 
 export default ProductSlider

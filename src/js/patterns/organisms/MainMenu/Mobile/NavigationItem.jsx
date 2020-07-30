@@ -27,14 +27,14 @@ const NavigationItem = ({ item, level, navPath, onClick }) => {
     }
 
     return (
-        <li className='flex justify-between border-b'>
+        <li className='flex justify-between border-t border-neutral-300'>
             <NodeLink
                 node={item}
                 onClick={handleOpenPage}
                 className={classnames({
-                    'text-gray-800 hover:text-gray-500 pl-px py-5': true,
+                    'text-neutral-800 hover:text-neutral-500 pl-px py-5': true,
                     'font-bold': level === 0,
-                    'text-indigo-500': item.name === 'SALE',
+                    'text-primary-main': item.name === 'SALE',
                 })}
             >
                 {item.name}

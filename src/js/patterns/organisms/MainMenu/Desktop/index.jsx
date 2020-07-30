@@ -20,6 +20,10 @@ const Desktop = ({
     navPath,
     onSelectNavItem,
     cartItemsCount,
+    wishListLineItemsCount,
+    goToCartPage,
+    goToWishlistPage,
+    goToProfilePage,
 }) => {
     const [isExpanded, setIsExpanded] = useState(false)
     const [hoveredMenuItem, setHoveredMenuItem] = useState(undefined)
@@ -46,7 +50,6 @@ const Desktop = ({
                                 <a className='self-center w-32 mr-3' ref={ref} href={window.location.origin}>
                                     <img src={logoUrl} alt={logo.media.name} />
                                 </a>
-
                                 <TopCategories
                                     topCategories={topCategories}
                                     currentTopCategory={currentTopCategory}
@@ -56,11 +59,16 @@ const Desktop = ({
                                     }}
                                 />
                             </div>
-                            <Widgets cartItemsCount={cartItemsCount} />
+                            <Widgets
+                                cartItemsCount={cartItemsCount}
+                                goToCartPage={goToCartPage}
+                                wishListLineItemsCount={wishListLineItemsCount}
+                                goToWishlistPage={goToWishlistPage}
+                                goToProfilePage={goToProfilePage}
+                            />
                         </div>
                     </div>
-
-                    <div className='border-t border-solid border-gray-200'>
+                    <div className='border-t border-solid border-neutral-200'>
                         <div className='o-wrapper'>
                             <div
                                 className='relative col-span-2'
@@ -100,10 +108,15 @@ Desktop.propTypes = {
     handleSelectTopCategory: PropTypes.func.isRequired,
     onSelectNavItem: PropTypes.func.isRequired,
     cartItemsCount: PropTypes.number,
+    goToCartPage: PropTypes.func,
+    wishListLineItemsCount: PropTypes.number,
+    goToWishlistPage: PropTypes.func,
+    goToProfilePage: PropTypes.func,
 }
 
 Desktop.defaultProps = {
     cardItemsCount: 0,
+    wishListLineItemsCount: 0,
 }
 
 export default Desktop

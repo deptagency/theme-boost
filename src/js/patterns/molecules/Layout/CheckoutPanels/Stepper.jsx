@@ -5,7 +5,7 @@ import Step from './Step'
 import { stepObject } from './stepObject'
 
 const Stepper = forwardRef(({ steps, current, setCurrent }, ts) => {
-    const Divider = () => { return (<span className='border-2 h-0 my-2 z-0' />) }
+    const Divider = () => { return (<span className='border-2 border-neutral-300 h-0 my-2 z-0' />) }
 
     return (
         <div className='max-w-960px mx-auto md:mt-4'>
@@ -36,8 +36,8 @@ const Stepper = forwardRef(({ steps, current, setCurrent }, ts) => {
                                 <div key={i}>
                                     <div className={classnames({
                                         'mt-2 text-xs': true,
-                                        'text-gray-500': i !== current,
-                                        'font-bold text-gray-800': i === current,
+                                        'text-neutral-500': i !== current,
+                                        'font-bold text-neutral-800': i === current,
                                     })}>
                                         {name}
                                     </div>

@@ -55,8 +55,8 @@ const TopCategories = ({
                                         return handleSelectTopCategory(i)
                                     }}
                                     className={classnames({
-                                        'font-bold hover:text-gray-400 cursor-pointer': true,
-                                        'border-b-4 border-gray-800': i === currentTopCategory,
+                                        'font-bold hover:text-neutral-400 cursor-pointer': true,
+                                        'border-b-4 border-neutral-800': i === currentTopCategory,
                                     })}
                                 >
                                     {item.name}

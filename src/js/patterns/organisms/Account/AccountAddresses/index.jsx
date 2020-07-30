@@ -43,7 +43,7 @@ const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddA
                 onClose={onClose}
                 >
                 <div className='md:shadow-lg'>
-                    <div className='border-b-4 border-gray-100' />
+                    <div className='border-b-4 border-neutral-100' />
 
                     <div className='text-center my-6'>
                         <Button
@@ -57,7 +57,7 @@ const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddA
                         </Button>
                     </div>
 
-                    <div className='border-b-4 border-gray-100' />
+                    <div className='border-b-4 border-neutral-100' />
 
                     {addresses.map((address, index) => {
                         return (
@@ -79,7 +79,7 @@ const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddA
                                     />
                                 </div>
 
-                                <div className='border-b-4 border-gray-100' />
+                                <div className='border-b-4 border-neutral-100' />
                             </div>
                         )
                     })}

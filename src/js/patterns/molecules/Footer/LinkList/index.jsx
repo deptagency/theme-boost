@@ -18,9 +18,9 @@ const LinkList = ({ header, headerIcon, links }) => {
 
     return (
         <div className='flex flex-col'>
-            <div className='mb-4 flex items-center text-sm font-bold leading-tight text-gray-100'>
+            <div className='mb-4 flex items-center text-sm font-bold leading-tight text-neutral-100'>
                 {Icon && (
-                    <Icon className='mr-2 w-4 h-4 inline-block text-gray-500 fill-current' />
+                    <Icon className='mr-2 w-4 h-4 inline-block text-neutral-500 fill-current' />
                 )}
 
                 {header}
@@ -29,7 +29,7 @@ const LinkList = ({ header, headerIcon, links }) => {
             <List
                 links={links}
                 variant='flex flex-col ml-6'
-                itemVariant='mb-2 text-sm leading-tight text-gray-200'
+                itemVariant='mb-2 text-sm leading-tight text-neutral-200'
             />
         </div>
     )

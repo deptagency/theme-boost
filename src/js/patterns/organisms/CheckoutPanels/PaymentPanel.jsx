@@ -38,7 +38,7 @@ const PaymentPanel = ({ app, intl, data, goToNextPanel, isLoading = false }) => 
                 variant='md:my-4 md:px-4 max-w-960px mx-auto'
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
-                        <div className='px-4 py-5 md:px-6 border-b-4 md:border-b-0 border-t-4 md:border-t-0 border-gray-100'>
+                        <div className='px-4 py-5 md:px-6 border-b-4 md:border-b-0 border-t-4 md:border-t-0 border-neutral-100'>
                             <PaymentMethodForm
                                 defaultValues={payment}
                                 onSubmit={payment => { return setPayment(payment) }}

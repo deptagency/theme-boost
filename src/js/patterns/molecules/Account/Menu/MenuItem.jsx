@@ -6,7 +6,7 @@ const MenuItem = ({ onClick, children = () => {}, selected = false }) => {
     return (
         <div
             className={classnames({
-                'flex mx-auto w-5/6 sm:w-8/12 md:w-5/6 md:mt-5 justify-between border-b pb-4 mb-6 focus:outline-none cursor-pointer': true,
+                'flex mx-auto w-5/6 sm:w-8/12 md:w-5/6 md:mt-5 justify-between border-b border-neutral-300 pb-4 mb-6 focus:outline-none cursor-pointer': true,
                 'font-bold': selected,
             })}
             onClick={onClick}

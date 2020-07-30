@@ -3,42 +3,94 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import Link from '@frontastic/catwalk/src/js/app/link'
+import { ReactComponent as CloseIcon } from 'Icons/tailwind-icons/icon-close-black.svg'
 import { ReactComponent as WishlistHeart } from 'Icons/wishlist-heart.svg'
+import { ReactComponent as WishlistHeartFull } from 'Icons/tailwind-icons/icon-heart-full.svg'
 import { ReactComponent as NoImage } from 'Icons/no-image.svg'
 import Price from 'Atoms/price'
 
-const ProductTeaser = ({ product: { variants, name, _url }, itemVariant = '' }) => {
-    const variant = variants[0]
+const ProductTeaser = ({
+    product: { variants, variant: variantProp, name, _url },
+    itemVariant = '',
+    handleAddToWishlist,
+    handleRemoveFromWishlist,
+    wishlisted = false,
+    showHeartIcon = true,
+    showCloseIcon = false,
+    scale = 1.3,
+}) => {
+    const variant = variantProp || variants[0]
     const { price, discountedPrice, images } = variant
 
+    // accomodatining photos from commerce tools
+    const fixedHeight = `calc(240px * ${scale})`
+    const fixedWidth = `calc(180px * ${scale})`
+
     return (
-        <div className='h-full'>
+        <>
             <div
+                style={{
+                    minHeight: fixedHeight,
+                    minWidth: fixedWidth,
+                }}
                 className={classnames(
-                    'grid grid-cols-1 grid-rows-1 h-fix-240px',
+                    'relative mx-2 bg-white rounded',
                     itemVariant
                 )}
-            >
-                <Link
-                    className='row-start-1 row-end-2 col-start-1 col-end-2 justify-self-center'
-                    itemProp='url'
-                    path={_url || ''}
                 >
-                    {images[0] ? <img src={images[0]} height={240} className='h-full' alt={name} /> : <NoImage className='h-full w-fix-250px' />}
+                <Link
+                    className='flex justify-center w-full min-h-inherit'
+                    itemProp='url'
+                    path={_url || '#'}
+                >
+                    {images[0] ? <div
+                        className='absolute rounded pointer-events-none'
+                        style={{
+                            backgroundImage: `url(${images[0]})`,
+                            backgroundSize: 'contain',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                            height: fixedHeight,
+                            width: fixedWidth,
+                        }}
+                        /> : <NoImage className='h-full w-fix-250px' />}
                 </Link>
-                <WishlistHeart className='row-start-1 row-end-2 col-start-1 col-end-2 justify-self-end m-3' />
+                {showHeartIcon && <div
+                    className='absolute top-0 right-0 z-20 m-4 cursor-pointer'
+                    onClick={() => {
+                        !wishlisted && handleAddToWishlist()
+                        wishlisted && handleRemoveFromWishlist()
+                    }}
+                >
+                    {!wishlisted && <WishlistHeart />}
+                    {wishlisted && <WishlistHeartFull />}
+                </div>}
+                {showCloseIcon && <div
+                    className='absolute top-0 right-0 z-20 m-4 cursor-pointer'
+                    onClick={handleRemoveFromWishlist}
+                >
+                    <CloseIcon className='fill-current text-neutral-800 text-xl' />
+                </div>}
             </div>
-            <div className='p-4'>
+            <div className='p-4' style={{
+                width: fixedWidth,
+            }}>
                 <div className='font-bold'>{name}</div>
-                <Price variant='text-lg text-gray-600 py-1' value={discountedPrice || price} />
+                <Price variant='text-lg text-neutral-600 py-1' value={discountedPrice || price} />
             </div>
-        </div>
+        </>
     )
 }
 
 ProductTeaser.propTypes = {
     product: PropTypes.object.isRequired,
     itemVariant: PropTypes.string,
+    handleAddToWishlist: PropTypes.func,
+    handleRemoveFromWishlist: PropTypes.func,
+    wishlisted: PropTypes.bool,
+    showHeartIcon: PropTypes.bool,
+    showCloseIcon: PropTypes.bool,
+    scale: PropTypes.number,
 }
 
 export default ProductTeaser

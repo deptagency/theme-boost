@@ -11,7 +11,7 @@ const AddressCard = ({ address, countries, onEditClicked, onDeleteClicked }) => 
     const country = _.find(countries, c => { return c.code === address.country })
 
     return (
-        <div className='text-base text-gray-800 leading-tight'>
+        <div className='text-base text-neutral-800 leading-tight'>
             <p className='font-bold'>{address.firstName} {address.lastName}</p>
             <p>{address.streetName}</p>
             <p>{address.city}</p>
@@ -22,26 +22,26 @@ const AddressCard = ({ address, countries, onEditClicked, onDeleteClicked }) => 
             <p>{address.email}</p>
 
             {address.isDefaultShippingAddress &&
-                <div className='mt-5 text-gray-700'>
-                    <CheckCircleIcon className='inline text-teal-500 fill-current mr-2' />
+                <div className='mt-5 text-neutral-700'>
+                    <CheckCircleIcon className='inline text-secondary-main fill-current mr-2' />
                     <FormattedMessage id='account.address.standardShipping' />
                 </div>
             }
 
             {address.isDefaultBillingAddress &&
-                <div className='text-gray-700'>
-                    <CheckCircleIcon className='inline text-teal-500 fill-current mr-2' />
+                <div className='text-neutral-700'>
+                    <CheckCircleIcon className='inline text-secondary-main fill-current mr-2' />
                     <FormattedMessage id='account.address.standardBilling' />
                 </div>
             }
 
             <div className='flex justify-end'>
-                <div className='text-sm text-indigo-500 leading-normal cursor-pointer' onClick={onEditClicked}>
+                <div className='text-sm text-primary-main leading-normal cursor-pointer' onClick={onEditClicked}>
                     <FormattedMessage id='account.edit' />
                     <EditIcon className='inline fill-current ml-2' />
                 </div>
 
-                <div className='ml-3 text-sm text-indigo-500 leading-normal cursor-pointer' onClick={onDeleteClicked}>
+                <div className='ml-3 text-sm text-primary-main leading-normal cursor-pointer' onClick={onDeleteClicked}>
                     <FormattedMessage id='account.delete' />
                     <TrashIcon className='inline fill-current ml-2' />
                 </div>

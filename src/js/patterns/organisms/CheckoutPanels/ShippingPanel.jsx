@@ -74,7 +74,7 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                 variant='md:my-4 md:px-4 max-w-960px mx-auto'
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
-                        <div className='px-4 py-5 md:px-6 border-t-4 md:border-t-0 border-gray-100'>
+                        <div className='px-4 py-5 md:px-6 border-t-4 md:border-t-0 border-neutral-100'>
                             <ShippingForm
                                 intl={intl}
                                 countries={countries}
@@ -86,8 +86,8 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                                 }}
                             />
 
-                            <div className='mt-4 p-4 bg-gray-200 rounded'>
-                                <div className='text-sm text-gray-800 flex items-center'>
+                            <div className='mt-4 p-4 bg-neutral-200 rounded'>
+                                <div className='text-sm text-neutral-800 flex items-center'>
                                     <Checkbox
                                         className='text-xl'
                                         label={billingDetailsLabel}
@@ -102,7 +102,7 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                         </div>
 
                         {!isBillingSameAsShipping &&
-                            <div className='px-4 py-5 md:px-6 border-t-4 border-gray-100'>
+                            <div className='px-4 py-5 md:px-6 border-t-4 border-neutral-100'>
                                 <BillingForm intl={intl}
                                     countries={countries}
                                     defaultValues={data.billingAddress}
@@ -114,7 +114,7 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                 }
 
                 rightColumn={
-                    <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-gray-100'>
+                    <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100'>
                         <Summary
                             sum={data.sum}
                             isLoading={isLoading}

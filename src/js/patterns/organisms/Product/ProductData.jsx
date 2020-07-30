@@ -16,10 +16,11 @@ import ColorSelector from './selectors/ColorSelector'
 import SizeSelector from './selectors/SizeSelector'
 
 import { ReactComponent as IconHeartBorder } from 'Icons/tailwind-icons/icon-heart-border.svg'
+import { ReactComponent as IconHeartFullBorder } from 'Icons/tailwind-icons/icon-heart-full-border.svg'
 import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.svg'
 import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
 
-const ProductData = ({ name, variants, selectedVariant, onChange, addToCart }) => {
+const ProductData = ({ name, variants, selectedVariant, onChange, handleAddToCart, handleAddToWishlist, handleRemoveFromWishlist, wishlisted = false }) => {
     /* preventing showing LoaderButton on initial page load */
     const [showLoader, setShowLoader] = useState(false)
     const isLoading = useSelector((globalState) => {
@@ -29,9 +30,9 @@ const ProductData = ({ name, variants, selectedVariant, onChange, addToCart }) =
 
     return (
         <div className='mt-4 md:mt-6'>
-            <div className='text-xl font-bold text-gray-900'>{name}</div>
+            <div className='text-xl font-bold text-neutral-900'>{name}</div>
             <Price
-                variant='text-lg text-gray-600 py-1'
+                variant='text-lg text-neutral-600 py-1'
                 value={selectedVariant.price}
                 currency={selectedVariant.currency}
             />
@@ -54,23 +55,30 @@ const ProductData = ({ name, variants, selectedVariant, onChange, addToCart }) =
             <div className='flex pb-6'>
                 <Button
                     variant={classnames({
-                        'btn bg-indigo-500 text-white w-full pt-2 h-10 lg:mr-4': true,
+                        'btn bg-primary-main text-white w-full pt-2 h-10 lg:mr-4': true,
                         'cursor-default': loading,
                     })}
                     onClick={() => {
                         setShowLoader(true)
-                        addToCart(selectedVariant)
+                        handleAddToCart(selectedVariant)
                             .then(() => { return setShowLoader(false) })
                     }}
                     disabled={loading}
                 >
                     {loading ? <LoaderButton /> : <FormattedMessage id='inCartProduct' />}
                 </Button>
-                <IconButton variant='text-icon-size hidden lg:block' icon={<IconHeartBorder />} />
+                <IconButton
+                    variant='text-icon-size ml-2 lg:block lg:ml-0'
+                    icon={wishlisted ? <IconHeartFullBorder /> : <IconHeartBorder />}
+                    onClick={() => {
+                        !wishlisted && handleAddToWishlist()
+                        wishlisted && handleRemoveFromWishlist()
+                    }}
+                />
             </div>
 
-            <div className='flex flex-col md:flex-row md:border-b border-gray-300'>
-                <div className='flex p-4 border-b md:border-b-0 lg:border-b-0 border-gray-300'>
+            <div className='flex flex-col md:flex-row md:border-b border-neutral-300'>
+                <div className='flex p-4 border-b md:border-b-0 lg:border-b-0 border-neutral-300'>
                     <IconRocket className='text-xl mr-3' />
                     <FormattedMessage id='product.delivery24hs' />
                 </div>
@@ -79,7 +87,7 @@ const ProductData = ({ name, variants, selectedVariant, onChange, addToCart }) =
                     <IconRefresh className='text-xl mr-3' />
                     <FormattedMessage id='product.freeReturns' />
                 </div>
-                <MarginBreakout variant='border-b-4 border-gray-100 md:hidden' />
+                <MarginBreakout variant='border-b-4 border-neutral-100 md:hidden' />
             </div>
         </div>
     )
@@ -90,8 +98,10 @@ ProductData.propTypes = {
     variants: PropTypes.array.isRequired,
     selectedVariant: PropTypes.object.isRequired,
     onChange: PropTypes.func.isRequired,
-    addToCart: PropTypes.func.isRequired,
-
+    handleAddToCart: PropTypes.func.isRequired,
+    handleAddToWishlist: PropTypes.func.isRequired,
+    handleRemoveFromWishlist: PropTypes.func.isRequired,
+    wishlisted: PropTypes.bool,
 }
 
 export default ProductData

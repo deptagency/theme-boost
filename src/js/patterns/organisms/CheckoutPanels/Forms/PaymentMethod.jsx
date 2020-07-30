@@ -16,11 +16,11 @@ const PaymentMethod = ({ defaultValues = {}, onSubmit }) => {
 
     return (
         <form onChange={onChange}>
-            <div className='mb-4 text-xs text-gray-500 font-bold leading-tight uppercase'>
+            <div className='mb-4 text-xs text-neutral-500 font-bold leading-tight uppercase'>
                 <FormattedMessage id={'checkout.paymentMethod'} />
             </div>
 
-            <div className='px-4 py-3 border border-gray-400 rounded flex items-center'>
+            <div className='px-4 py-3 border border-neutral-400 rounded flex items-center'>
                 <input type='radio' name='payment' value='invoice' id='invoice' className='mr-2'
                     ref={register()}
                 />

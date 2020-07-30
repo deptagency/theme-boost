@@ -10,15 +10,15 @@ import Button from 'Atoms/button'
 const MiniSummary = ({ sum, label, onClick, isLoading }) => {
     return (
         <div className='p-4 grid grid-cols-2 grid-rows-2'>
-            <div className='text-md text-gray-800 font-bold leading-tight'>
+            <div className='text-md text-neutral-800 font-bold leading-tight'>
                 <FormattedMessage id='cart.myCart' />
             </div>
 
-            <Price variant='text-md text-right sm:text-left text-gray-800 leading-normal' value={sum} />
+            <Price variant='text-md text-right sm:text-left text-neutral-800 leading-normal' value={sum} />
 
             <div className='col-start-1 col-end-3 sm:row-start-1 sm:row-end-3 sm:col-start-2'>
                 <div className='flex items-center'>
-                    <Button variant='btn btn-indigo w-full h-10' onClick={onClick} disabled={isLoading}>
+                    <Button variant='btn btn-primary w-full h-10' onClick={onClick} disabled={isLoading}>
                         {isLoading ? <LoaderButton /> : label}
                     </Button>
                 </div>

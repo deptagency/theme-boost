@@ -9,7 +9,7 @@ const Navigation = ({ items, onSelectItem, navPath, level = 0, isActive = false 
     return (
         <div
             className={classnames({
-                'absolute top-0 w-full bg-white': true,
+                'absolute top-0 w-full bg-background-primary': true,
                 'left-full': level !== 0,
                 'left-0': level === 0,
                 'opacity-0 invisible': !isActive,

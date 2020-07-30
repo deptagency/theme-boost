@@ -17,12 +17,12 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
 
     return (
         <form onChange={onChange}>
-            <div className='mb-4 text-xs text-gray-500 font-bold leading-tight uppercase'>
+            <div className='mb-4 text-xs text-neutral-500 font-bold leading-tight uppercase'>
                 <FormattedMessage id={'checkout.billingDetails'} />
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-firstName'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-firstName'>
                     <FormattedMessage id={'checkout.form.firstName'} /> *
                 </label>
                 <input id='billing-firstName' name='firstName' type='text'
@@ -36,7 +36,7 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-lastName'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-lastName'>
                     <FormattedMessage id={'checkout.form.lastName'} /> *
                 </label>
                 <input id='billing-lastName' name='lastName' type='text'
@@ -50,7 +50,7 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-phone'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-phone'>
                     <FormattedMessage id={'checkout.form.phone'} />
                 </label>
                 <input id='billing-phone' name='phone' type='text' className='form-input mt-2'
@@ -59,7 +59,7 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-streetName'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-streetName'>
                     <FormattedMessage id={'checkout.form.address'} /> *
                 </label>
                 <input id='billing-streetName' name='streetName' type='text'
@@ -73,7 +73,7 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-city'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-city'>
                     <FormattedMessage id={'checkout.form.city'} /> *
                 </label>
                 <input id='billing-city' name='city' type='text'
@@ -87,7 +87,7 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
             </div>
 
             <div className='mb-4'>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-postalCode'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-postalCode'>
                     <FormattedMessage id={'checkout.form.zipCode'} /> *
                 </label>
                 <input id='billing-postalCode' name='postalCode' type='text'
@@ -101,12 +101,12 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
             </div>
 
             <div>
-                <label className='text-sm text-gray-700 leading-tight' htmlFor='billing-country'>
+                <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-country'>
                     <FormattedMessage id={'checkout.form.country'} /> *
                 </label>
                 <select id='billing-country' name='country'
                     className={classnames({
-                        'form-input mt-2 bg-white': true,
+                        'form-input mt-2 bg-background-primary': true,
                         'border border-red-600': errors.country,
                     })}
                     ref={register({ required: requiredField })}

@@ -1,8 +1,19 @@
 const plugin = require('tailwindcss/plugin')
+const { colors, borderRadius, smallDeg, baseFontSize,fontSize, fontColor } = require('./src/js/themes/defaultTheme')
+// const { colors, borderRadius, smallDeg, baseFontSize,fontSize, fontColor } = require('./src/js/themes/pinkTheme')
+// const { colors, borderRadius, smallDeg, baseFontSize,fontSize, fontColor } = require('./src/js/themes/greenTheme')
 
 module.exports = {
     theme: {
         extend: {
+            /* PART OF THEME */
+            colors,
+            borderRadius,
+            fontSize: {
+                'icon-size': '2.5rem',
+                ... fontSize
+            },
+            /* END OF PART THEME */
             borderWidth: {
                 '0.5px': '0.5px',
                 '2px': '2px',
@@ -10,9 +21,6 @@ module.exports = {
             },
             flex: {
                 '0-0-05': '0 0 50%',
-            },
-            fontSize: {
-                'icon-size': '2.5rem',
             },
             gridColumnEnd: {
                 'span-2': 'span 2',
@@ -56,7 +64,9 @@ module.exports = {
                 '3/4': '75%',
             },
             minHeight: {
+                '354px': '354px',
                 '400px': '400px',
+                'inherit': 'inherit'
             },
             spacing: {
                 '2px': '2px',
@@ -107,8 +117,16 @@ module.exports = {
                 'fix-488px': '488px',
                 'fix-560px': '560px',
 
-            },
+            }
         },
+        // The breakpoints have to match with boost/src/js/config/breakpoints.jsx
+        screens: {
+            'xsm': '420px',
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+        }
     },
     plugins: [
         plugin(function({ addUtilities }) {
@@ -119,8 +137,8 @@ module.exports = {
                 '.border-bottom-solid': {
                     borderBottomStyle: 'solid',
                 },
-                '.border-bottom-red-700': {
-                    borderBottomColor: '#c53030',
+                '.border-bottom-system-error' : {
+                    borderBottomColor: colors.system.error,
                 },
                 '.border-x-transparent': {
                     borderLeftColor: 'transparent',
@@ -131,6 +149,9 @@ module.exports = {
                 },
                 '.justify-self-end': {
                     justifySelf: 'end',
+                },
+                '.justify-items-center': {
+                    justifyItems: 'center',
                 },
                 '.translate-right': {
                     transform: 'translateX(0)',
@@ -144,6 +165,17 @@ module.exports = {
                 '.self-baseline': {
                     alignSelf: 'baseline',
                 },
+                /* PART OF THEME */
+                '.rotate-sm': {
+                    transform: `rotate(${smallDeg})`,
+                },
+                '.base-font-size': {
+                    fontSize: baseFontSize
+                },
+                '.font-color': {
+                    color: fontColor
+                }
+                /* END OF PART OF THEME */
             }
 
             addUtilities(utilities)

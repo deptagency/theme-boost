@@ -8,14 +8,14 @@ const WelcomeOverview = ({ firstName, variant = '' }) => {
         <div className={`flex-auto md:shadow-lg md:order-2 md:ml-5 ${variant}`}>
             <div className='flex flex-col text-center justify-center w-64 mx-auto my-5 md:pb-56'>
                 <div className='mx-auto mb-5'>
-                    <HappyIcon className='w-20 h-20 text-indigo-200 fill-current' />
+                    <HappyIcon className='w-20 h-20 text-primary-light fill-current' />
                 </div>
                 <div>
                     <div className='font-bold text-2xl mb-2'>
                         <FormattedMessage id='account.welcome' />
                         { firstName }
                     </div>
-                    <div className='text-sm text-gray-600'>
+                    <div className='text-sm text-neutral-600'>
                         <FormattedMessage id='account.latestDetails' />
                     </div>
                 </div>

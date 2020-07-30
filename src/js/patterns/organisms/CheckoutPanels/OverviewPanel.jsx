@@ -25,13 +25,13 @@ const OverviewPanel = ({ app, intl, data, countries, goToPanelIndex, isLoading =
                 variant='md:my-4 md:px-4 max-w-960px mx-auto'
                 leftColumn={
                     <div className='md:shadow-md md:rounded'>
-                        <div className='sm:hidden px-4 py-3 md:px-6 border-b-4 border-gray-100 border-t-4 md:border-t-0'>
+                        <div className='sm:hidden px-4 py-3 md:px-6 border-b-4 border-neutral-100 border-t-4 md:border-t-0'>
                             <OrderButton label={buttonLabel} onClick={placeOrderClicked} />
                         </div>
-                        <div className='px-4 py-5 md:px-6 border-b-4 border-gray-100'>
+                        <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
                             <Products products={data.lineItems} />
                         </div>
-                        <div className='px-4 py-5 md:px-6 border-b-4 border-gray-100'>
+                        <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
                             {data.shippingAddress &&
                                 <Shipping
                                     address={data.shippingAddress}
@@ -40,7 +40,7 @@ const OverviewPanel = ({ app, intl, data, countries, goToPanelIndex, isLoading =
                                 />
                             }
                         </div>
-                        <div className='px-4 py-5 md:px-6 border-b-4 border-gray-100'>
+                        <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
                             {data.billingAddress &&
                                 <Billing
                                     address={data.billingAddress}
@@ -49,7 +49,7 @@ const OverviewPanel = ({ app, intl, data, countries, goToPanelIndex, isLoading =
                                 />
                             }
                         </div>
-                        <div className='px-4 py-5 md:px-6 border-b-4 md:border-b-0 border-gray-100'>
+                        <div className='px-4 py-5 md:px-6 border-b-4 md:border-b-0 border-neutral-100'>
                             <PaymentMethod payments={data.payments} onClick={() => { goToPanelIndex(1) }} />
                         </div>
                     </div>

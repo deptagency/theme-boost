@@ -10,7 +10,7 @@ export const CartLikeLayout = () => {
         <StickyRightColumn
             variant='max-w-960px m-auto my-5 px-5'
             leftColumn={
-                <div className='shadow rounded bg-gray-200'>
+                <div className='shadow rounded bg-neutral-200'>
                     <p className='m-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <p className='mx-2 my-8'>Aliquam tortor ante, ultrices vel suscipit nec, tincidunt faucibus est.</p>
                     <p className='mx-2 my-8'><ul>
@@ -45,7 +45,7 @@ export const CartLikeLayout = () => {
                 </div>
                 }
             rightColumn={
-                <div className='shadow rounded bg-gray-500 h-fix-240px' />
+                <div className='shadow rounded bg-neutral-500 h-fix-240px' />
             }
         />
     )

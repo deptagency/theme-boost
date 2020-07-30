@@ -14,35 +14,35 @@ const Summary = ({ sum, subtotal = '', disabled = false, isLoading = false, onCl
             <div className='mb-4 grid grid-cols-2 col-gap-6 row-gap-2'>
                 {subtotal ?
                     <Fragment>
-                        <p className='text-md text-gray-800 leading-normal'>
+                        <p className='text-md text-neutral-800 leading-normal'>
                             <FormattedMessage id='cart.subtotal' />
                         </p>
-                        <p className='text-md text-right text-gray-800 leading-normal'>
+                        <p className='text-md text-right text-neutral-800 leading-normal'>
                             <Price value={sum} />
                         </p>
                     </Fragment>
                 : null}
-                <p className='text-md text-gray-800 leading-normal'>
+                <p className='text-md text-neutral-800 leading-normal'>
                     <FormattedMessage id='cart.shippingCosts' />
                 </p>
-                <p className='text-md text-right text-gray-800 uppercase leading-normal'>
+                <p className='text-md text-right text-neutral-800 uppercase leading-normal'>
                     <FormattedMessage id='cart.gratis' />
                 </p>
 
-                <span className='mb-3 block w-full h-px bg-gray-300 col-start-auto col-end-span-2' />
+                <span className='mb-3 block w-full h-px bg-neutral-300 col-start-auto col-end-span-2' />
 
-                <p className='mb-1 text-md text-gray-800 leading-none font-bold'>
+                <p className='mb-1 text-md text-neutral-800 leading-none font-bold'>
                     <FormattedMessage id='cart.totalAmount' />
                 </p>
 
-                <p className='text-md text-right text-gray-800 leading-none font-bold'>
+                <p className='text-md text-right text-neutral-800 leading-none font-bold'>
                     <Price value={sum} />
                 </p>
             </div>
 
             <Button
                 variant={classnames({
-                    'btn btn-indigo w-full h-10': true,
+                    'btn btn-primary w-full h-10': true,
                     'cursor-default': isLoading || disabled,
                 })}
                 onClick={onClick}
@@ -52,7 +52,7 @@ const Summary = ({ sum, subtotal = '', disabled = false, isLoading = false, onCl
             </Button>
 
             {showVouchers &&
-            <p className='mt-4 text-xs text-gray-800 text-center'>
+            <p className='mt-4 text-xs text-neutral-800 text-center'>
                 <FormattedMessage id='cart.enterVouchers' />
             </p>
             }

@@ -13,7 +13,6 @@ import { ReactComponent as CloseIcon } from 'Icons/tailwind-icons/icon-close-bla
 const AccountOrders = ({ openPanel, onClose, orders }) => {
     const [selectedOrder, setSelectedOrder] = useState(null)
     const { usePanel } = useSlidePanel()
-    console.log('ORDERS', orders)
 
     return (
         <PanelBlockResponsive
@@ -39,7 +38,7 @@ const AccountOrders = ({ openPanel, onClose, orders }) => {
                             className='justify-self-end p-4 cursor-pointer'
                             onClick={() => { setSelectedOrder(null) }}
                         >
-                            <CloseIcon className='fill-current text-gray-800' />
+                            <CloseIcon className='fill-current text-neutral-800' />
                         </div>}
                     </div>
                 }

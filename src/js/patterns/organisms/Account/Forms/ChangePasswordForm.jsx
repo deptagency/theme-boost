@@ -19,7 +19,7 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
 
     return (
         <form onSubmit={handleSubmit(onNewPasswordSubmit)} className={`flex-col pt-6 m-auto w-3/4 md:w-11/12 md:p-0`}>
-            <div className='text-sm text-gray-600'>
+            <div className='text-sm text-neutral-600'>
                 <span><FormattedMessage id='account.inOrder' /></span><span className='font-bold'> <FormattedMessage id='account.protect' /> </span><span><FormattedMessage id='account.passwordContain' /></span>
                 <ul className='list-disc m-4'>
                     <li><FormattedMessage id='account.characters' /></li>
@@ -28,7 +28,7 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
 
             <div className='mt-6 mb-4'>
                 <div className='mb-4'>
-                    <div className='text-sm text-gray-600'><FormattedMessage id='account.login.password' /></div>
+                    <div className='text-sm text-neutral-600'><FormattedMessage id='account.login.password' /></div>
                     <input
                         name='oldPassword'
                         type='password'
@@ -38,7 +38,7 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
                     <ErrorMessage errors={errors} name='oldPassword' />
                 </div>
                 <div className='mb-4'>
-                    <div className='text-sm text-gray-600'><FormattedMessage id='account.password.new' /></div>
+                    <div className='text-sm text-neutral-600'><FormattedMessage id='account.password.new' /></div>
 
                     <input
                         name='newPassword'
@@ -56,7 +56,7 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
                     <ErrorMessage errors={errors} name='newPassword' />
                 </div>
                 <div className='mb-4'>
-                    <div className='text-sm text-gray-600'><FormattedMessage id='account.password.confirmNew' /></div>
+                    <div className='text-sm text-neutral-600'><FormattedMessage id='account.password.confirmNew' /></div>
 
                     <input
                         name='confirmNewPassword'
@@ -74,7 +74,7 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
                     <ButtonWithLoader
                         showLoader={showLoader}
                         type='submit'
-                        variant='btn btn-indigo w-full'
+                        variant='btn btn-primary w-full'
                     >
                         <FormattedMessage id='account.changePassword' />
                     </ButtonWithLoader>

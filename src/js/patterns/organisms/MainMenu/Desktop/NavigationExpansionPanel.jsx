@@ -13,14 +13,14 @@ const NavigationExpansionPanel = ({ item, expanded = false, handleClick }) => {
     return (
         <div
             className={classnames({
-                'absolute bg-white border-t w-full p-5 z-20': true,
+                'absolute bg-background-primary border-t w-full p-5 z-20': true,
                 'transition-transform duration-300 delay-200 ease-out origin-top': true,
                 'transform scale-y-100': expanded,
                 'transform scale-y-0': !expanded,
             })}
             style={{ animation: `fadeIn 1s` }}
             >
-            <ul className='flex bg-white min-h-400px w-9/12 m-auto'>
+            <ul className='flex bg-background-primary min-h-400px w-9/12 m-auto'>
                 {expandChildren && item.children.map((child) => {
                     return (
                         <div className='w-1/4' key={child.nodeId}>
@@ -30,7 +30,7 @@ const NavigationExpansionPanel = ({ item, expanded = false, handleClick }) => {
                                 onClick={(e) => { return handleClick(e, child) }}
                             >
                                 <div
-                                    className='pb-4 font-bold text-sm text-gray-800 hover:text-indigo-700'
+                                    className='pb-4 font-bold text-sm text-neutral-800 hover:text-indigo-700'
                                     style={{ animation: `fadeIn 2s` }}
                                 >
                                     {child.name}
@@ -50,7 +50,7 @@ const NavigationExpansionPanel = ({ item, expanded = false, handleClick }) => {
                                     <NodeLink
                                         node={grandchild}
                                         key={grandchild.nodeId}
-                                        className='pt-1 block text-gray-800 font-normal text-sm hover:text-indigo-700 mb-4'
+                                        className='pt-1 block text-neutral-800 font-normal text-sm hover:text-indigo-700 mb-4'
                                         style={{ animation: `fadeIn 2s` }}
                                         onClick={(e) => { return handleClick(e, grandchild) }}
                                     >

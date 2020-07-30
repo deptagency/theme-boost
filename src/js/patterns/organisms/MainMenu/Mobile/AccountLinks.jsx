@@ -4,46 +4,101 @@ import { useSelector } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
 import app from '@frontastic/catwalk/src/js/app/app'
 
+import { ReactComponent as ArrowRight } from 'Icons/tailwind-icons/icon-cheveron-right.svg'
 import { ReactComponent as MyProfile } from 'Icons/tailwind-icons/icon-user.svg'
+import { ReactComponent as HelpIcon } from 'Icons/tailwind-icons/icon-help.svg'
+import { ReactComponent as ChatIcon } from 'Icons/tailwind-icons/icon-chat.svg'
+import { ReactComponent as AnnouncementIcon } from 'Icons/tailwind-icons/icon-announcement.svg'
 
-const AccountLinks = ({ closeMobileMenu }) => {
+const AccountLinks = ({
+    closeMobileMenu,
+    infoHeader,
+    infoHeaderIcon,
+    aboutHeader,
+    aboutHeaderIcon,
+    contacHeader,
+    contactHeaderIcon,
+}) => {
     const loggedIn = useSelector((state) => {
         return state.app.context.session.loggedIn
     })
+    const iconMap = {
+        help: HelpIcon,
+        chat: ChatIcon,
+        announcement: AnnouncementIcon,
+    }
+
+    const IconHeader = infoHeaderIcon ? iconMap[infoHeaderIcon] : null
+    const IconAbout = aboutHeaderIcon ? iconMap[aboutHeaderIcon] : null
+    const IconContact = contactHeaderIcon ? iconMap[contactHeaderIcon] : null
 
     return (
         <>
-            {!loggedIn && <div
-                className='absolute bottom-0 left-0 right-0 flex border-b-4 border-t-4 border-gray-200 text-base px-5 pt-6 pb-5'
-                onClick={() => {
-                    closeMobileMenu()
-                    app.getRouter().push('Frontastic.Frontend.Master.Account.index')
-                }}
+            <div className='absolute bottom-0 left-0 right-0 text-base'>
+                {!loggedIn && <div
+                    className='flex border-t-4 border-neutral-200 px-5 pt-6 bg-background-primary'
+                    onClick={() => {
+                        closeMobileMenu()
+                        app.getRouter().push('Frontastic.Frontend.Master.Account.index')
+                    }}
                 >
-                <MyProfile className='self-center text-2xl text-gray-500 fill-current mr-4' />
-                <div className='text-base text-gray-800 self-center'>
-                    <FormattedMessage id='account.login.login' /> | <FormattedMessage id='account.register.createAccount' />
-                </div>
-            </div>}
+                    <MyProfile className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
+                    <div className='text-base text-neutral-800 self-center'>
+                        <FormattedMessage id='account.login.login' /> | <FormattedMessage id='account.register.createAccount' />
+                    </div>
+                </div>}
 
-            {loggedIn && <div
-                className='absolute bottom-0 left-0 right-0  flex border-b-4 border-t-4 border-gray-200 text-base px-5 pt-6 pb-5'
-                onClick={() => {
-                    closeMobileMenu()
-                    app.getRouter().push('Frontastic.Frontend.Master.Account.profile')
-                }}
+                {loggedIn && <div
+                    className='flex justify-between border-b-4 border-t-4 border-neutral-200 px-5 py-2'
+                    onClick={() => {
+                        closeMobileMenu()
+                        app.getRouter().push('Frontastic.Frontend.Master.Account.profile')
+                    }}
                 >
-                <MyProfile className='self-center text-2xl text-gray-500 fill-current mr-4' />
-                <div className='text-base font-bold text-gray-800 self-center'>
-                    <FormattedMessage id='header.myAccount' />
+                    <div className='flex'>
+                        <MyProfile className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
+                        <div className='text-base font-bold text-neutral-800 self-center'>
+                            <FormattedMessage id='header.myAccount' />
+                        </div>
+                    </div>
+                    <div>
+                        <ArrowRight className='self-center cursor-pointer text-4xl -mr-3' />
+                    </div>
+                </div>}
+
+                <div className='flex px-5 pt-4 text-neutral-800'>
+                    {IconHeader && (
+                        <IconHeader className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
+                    )}
+                    {infoHeader}
                 </div>
-            </div>}
+
+                <div className='flex px-5 pt-4 text-neutral-800'>
+                    {IconContact && (
+                        <IconContact className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
+                    )}
+                    {contacHeader}
+                </div>
+
+                <div className='flex px-5 pt-4 pb-5 text-neutral-800'>
+                    {IconAbout && (
+                        <IconAbout className='mr-2 w-4 h-4 text-neutral-500 fill-current self-center' />
+                    )}
+                    {aboutHeader}
+                </div>
+            </div>
         </>
     )
 }
 
 AccountLinks.propTypes = {
     closeMobileMenu: PropTypes.func.isRequired,
+    infoHeader: PropTypes.object,
+    infoHeaderIcon: PropTypes.string,
+    aboutHeader: PropTypes.object,
+    aboutHeaderIcon: PropTypes.string,
+    contacHeader: PropTypes.object,
+    contactHeaderIcon: PropTypes.string,
 }
 
 export default AccountLinks

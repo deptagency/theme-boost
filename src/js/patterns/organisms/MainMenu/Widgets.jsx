@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import app from '@frontastic/catwalk/src/js/app/app'
 import classnames from 'classnames'
 
 import IconButton from 'Atoms/button/IconButton'
@@ -11,7 +10,14 @@ import { ReactComponent as WishlistIcon } from 'Icons/tailwind-icons/icon-heart.
 import { ReactComponent as SearchIcon } from 'Icons/tailwind-icons/icon-search.svg'
 import { ReactComponent as MyProfile } from 'Icons/tailwind-icons/icon-user.svg'
 
-const Widgets = ({ cartItemsCount, variant = '' }) => {
+const Widgets = ({
+    variant = '',
+    cartItemsCount,
+    goToCartPage,
+    wishListLineItemsCount,
+    goToWishlistPage,
+    goToProfilePage,
+}) => {
     return (
         <div
             className={classnames({
@@ -27,15 +33,23 @@ const Widgets = ({ cartItemsCount, variant = '' }) => {
             <IconButton
                 variant='hidden lg:block ml-6 outline-none focus:outline-none'
                 icon={<MyProfile />}
-                onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }}
+                onClick={goToProfilePage}
             />
 
-            <IconButton
-                variant='ml-6 outline-none focus:outline-none'
-                icon={<WishlistIcon />}
-            />
+            <Badge
+                count={wishListLineItemsCount}
+                onClick={goToWishlistPage}
+            >
+                <IconButton
+                    variant='outline-none focus:outline-none'
+                    icon={<WishlistIcon />}
+                />
+            </Badge>
 
-            <Badge count={cartItemsCount} onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}>
+            <Badge
+                count={cartItemsCount}
+                onClick={goToCartPage}
+            >
                 <IconButton
                     variant='outline-none focus:outline-none'
                     icon={<CartIcon />}
@@ -48,10 +62,15 @@ const Widgets = ({ cartItemsCount, variant = '' }) => {
 Widgets.propTypes = {
     variant: PropTypes.string,
     cartItemsCount: PropTypes.number,
+    wishListLineItemsCount: PropTypes.number,
+    goToCartPage: PropTypes.func,
+    goToWishlistPage: PropTypes.func,
+    goToProfilePage: PropTypes.func,
 }
 
 Widgets.defaultProps = {
     cartItemsCount: 0,
+    wishListLineItemsCount: 0,
 }
 
 export default Widgets

@@ -78,22 +78,19 @@ const Tile = ({
                     </h1>
                 )}
 
-                {buttonLabel && reference && (
-                    <Reference
-                        reference={
-                            reference || {
-                                type: null,
-                                target: null,
-                            }
-                        }
-                        className={classnames({
-                            'bg-indigo-500 text-base font-semibold hover:bg-indigo-700 text-white py-3 px-4 rounded': true,
-                            ...selfAlign,
-                        })}
-                    >
-                        <Translatable value={buttonLabel} />
-                    </Reference>
-                )}
+                {buttonLabel && reference && <Reference
+                    reference={reference || {
+                        type: null,
+                        target: null,
+                    }}
+                    className={classnames({
+                        'bg-primary-main text-base font-semibold hover:bg-indigo-700 text-white py-3 px-4 rounded': true,
+                        ...selfAlign,
+                    })}
+
+                >
+                    <Translatable value={buttonLabel} />
+                </Reference>}
             </div>
         </Component>
     )

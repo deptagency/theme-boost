@@ -8,9 +8,9 @@ import { ReactComponent as IconCheckmarkCircle } from 'Icons/tailwind-icons/icon
 const CheckoutSuccess = ({ id, email, onClick }) => {
     return (
         <div className='my-10 md:mt-20 w-64 mx-auto text-center'>
-            <IconCheckmarkCircle className='w-20 h-20 inline-block text-teal-500 fill-current' />
+            <IconCheckmarkCircle className='w-20 h-20 inline-block text-secondary-main fill-current' />
 
-            <div className='mt-4 text-center text-gray-800'>
+            <div className='mt-4 text-center text-neutral-800'>
                 <p className='text-2xl font-bold'>
                     <FormattedMessage id='checkout.orderConfirmed' />
                 </p>
