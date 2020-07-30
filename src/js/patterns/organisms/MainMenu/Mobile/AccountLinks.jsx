@@ -42,7 +42,7 @@ const AccountLinks = ({
                         app.getRouter().push('Frontastic.Frontend.Master.Account.index')
                     }}
                 >
-                    <MyProfile className='mr-2 w-4 h-4 text-neutral-600 self-center' />
+                    <MyProfile className='mr-2 w-4 h-4 text-neutral-600 self-center fill-current' />
                     <div className='text-base text-neutral-900 self-center'>
                         <FormattedMessage id='account.login.login' /> | <FormattedMessage id='account.register.createAccount' />
                     </div>
@@ -56,7 +56,7 @@ const AccountLinks = ({
                     }}
                 >
                     <div className='flex'>
-                        <MyProfile className='mr-2 w-4 h-4 text-neutral-600 self-center' />
+                        <MyProfile className='mr-2 w-4 h-4 text-neutral-600 self-center  fill-current' />
                         <div className='text-base font-bold text-neutral-900 self-center'>
                             <FormattedMessage id='header.myAccount' />
                         </div>
@@ -68,21 +68,21 @@ const AccountLinks = ({
 
                 <div className='flex px-5 pt-4 text-neutral-900'>
                     {IconHeader && (
-                        <IconHeader className='mr-2 w-4 h-4 text-neutral-600 self-center' />
+                        <IconHeader className='mr-2 w-4 h-4 text-neutral-600 self-center fill-current' />
                     )}
                     {infoHeader}
                 </div>
 
                 <div className='flex px-5 pt-4 text-neutral-900'>
                     {IconContact && (
-                        <IconContact className='mr-2 w-4 h-4 text-neutral-600 self-center' />
+                        <IconContact className='mr-2 w-4 h-4 text-neutral-600 self-center fill-current' />
                     )}
                     {contacHeader}
                 </div>
 
                 <div className='flex px-5 pt-4 pb-5 text-neutral-900'>
                     {IconAbout && (
-                        <IconAbout className='mr-2 w-4 h-4 text-neutral-600 self-center' />
+                        <IconAbout className='mr-2 w-4 h-4 text-neutral-600 self-center fill-current' />
                     )}
                     {aboutHeader}
                 </div>

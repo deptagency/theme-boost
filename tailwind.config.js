@@ -1,6 +1,6 @@
 const plugin = require('tailwindcss/plugin')
-// const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/defaultTheme')
-const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/pinkTheme')
+const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/defaultTheme')
+// const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/pinkTheme')
 // const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/darkGreenTheme')
 
 module.exports = {
