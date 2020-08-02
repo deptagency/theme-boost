@@ -6,7 +6,7 @@ import EmptyState, { icons } from 'Organisms/EmptyState'
 
 const CheckoutSuccess = ({ id, email, onClick }) => {
     return (
-        <EmptyState 
+        <EmptyState
             icon={icons.CHECKMARK_CIRCLE}
             iconColor='text-neutral-900'
             title={<FormattedMessage id='checkout.orderConfirmed' />}
@@ -17,10 +17,10 @@ const CheckoutSuccess = ({ id, email, onClick }) => {
             }
             action={(e) => {
                 e.preventDefault()
-                onClick()   
+                onClick()
             }}
             actionLabel={<FormattedMessage id='checkout.tryAgain' />}
-        >
+            >
             <FormattedMessage id='checkout.orderConfirmation' />
             <span className='font-bold ml-1'>{email}</span>
         </EmptyState>

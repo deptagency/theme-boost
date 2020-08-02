@@ -5,7 +5,7 @@ import EmptyState, { icons } from 'Organisms/EmptyState'
 
 const EmptyCart = () => {
     return (
-        <EmptyState 
+        <EmptyState
             icon={icons.EMOTION_SAD}
             iconColor='text-neutral-900'
             title={<FormattedMessage id='cart.emptyCart.text' />}

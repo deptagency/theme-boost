@@ -10,7 +10,7 @@ const EmptyWishlist = ({ returnToHomePage }) => {
 
     return (
         <animated.div style={fading} className='z-50 pt-2 mt-10'>
-            <EmptyState 
+            <EmptyState
                 icon={icons.EMOTION_SAD}
                 iconColor='text-neutral-900'
                 title={<FormattedMessage id='wishlist.emptyWishlist' />}

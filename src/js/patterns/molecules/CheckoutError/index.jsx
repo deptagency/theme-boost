@@ -6,14 +6,14 @@ import EmptyState, { icons } from 'Organisms/EmptyState'
 
 const CheckoutError = ({ onClick }) => {
     return (
-        <EmptyState 
+        <EmptyState
             icon={icons.EMOTION_SAD}
             iconColor='text-neutral-900'
             title={<FormattedMessage id='checkout.wentWrong' />}
             subtitle={<FormattedMessage id='checkout.beenCharged' />}
             action={(e) => {
                 e.preventDefault()
-                onClick()   
+                onClick()
             }}
             actionLabel={<FormattedMessage id='checkout.tryAgain' />}
         />

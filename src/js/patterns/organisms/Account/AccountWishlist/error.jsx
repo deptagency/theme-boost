@@ -10,7 +10,7 @@ const Error = ({ returnToHomePage }) => {
 
     return (
         <animated.div style={fading} className='z-50 pt-2 mt-10'>
-            <EmptyState 
+            <EmptyState
                 icon={icons.EMOTION_SAD}
                 iconColor='text-red-800'
                 title={<FormattedMessage id='wishlist.errorMessage' />}

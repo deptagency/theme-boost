@@ -7,11 +7,11 @@ import EmptyState, { icons } from 'Organisms/EmptyState'
 
 const NoOrders = () => {
     return (
-        <EmptyState 
+        <EmptyState
             icon={icons.EMOTION_SAD}
             iconColor='text-neutral-900'
             title={<FormattedMessage id='order.noOrders' />}
-            action={() => app.getRouter().history.replace('/') }
+            action={() => { return app.getRouter().history.replace('/') }}
             actionLabel={<FormattedMessage id='checkout.continueShopping' />}
         />
     )
