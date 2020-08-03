@@ -8,7 +8,7 @@ import { topCategoryType } from '../types'
 
 const TopCategories = ({ topCategories, currentTopCategory, handleClick }) => {
     return (
-        <div className='flex py-4'>
+        <div className='flex items-center'>
             {topCategories.map((item, i) => {
                 if (!item.tree) {
                     return null
@@ -19,10 +19,12 @@ const TopCategories = ({ topCategories, currentTopCategory, handleClick }) => {
                         key={item.tree.nodeId}
                         node={item.tree}
                         className={classnames({
-                            'mr-4 font-bold text-neutral-600 text-sm': true,
+                            'mr-4 font-bold text-neutral-600 text-sm py-2': true,
                             'text-neutral-900 border-b-2 border-neutral-900': i === currentTopCategory,
                         })}
-                        onClick={(e) => { return handleClick(e, i) }}
+                        onClick={(e) => {
+                            return handleClick(e, i)
+                        }}
                     >
                         {item.name}
                     </NodeLink>
