@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.0.0-rc.5` (2020-08-11)
+
+* fix: Do not hide SSR overlay
+
 ## `1.0.0-rc.4` (2020-08-05)
 
 * Themable Boost theme
@@ -21,4 +25,3 @@
 * Adds stickers and wishlist button
 * Adds a product teaser component
 * Refactor Horizontal Spacer to use more human-understandable size descriptions, but leave ability to have just space in px
-
