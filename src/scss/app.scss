@@ -13,11 +13,6 @@
 @import "../js/patterns/atoms/input/index.scss";
 @import "../js/patterns/atoms/select/index.scss";
 
-// Remove "Server Side Rendering Failed" overlay
-#frssrw {
-    @apply hidden
-}
-
 // hiding broken loader for now
 .u-fade {
     // Hiding loader from Catwalk, as we're using the custom one
