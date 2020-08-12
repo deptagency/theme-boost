@@ -18,10 +18,17 @@ function EmptyState ({ icon: iconSrc, iconColor, title, subtitle, action, action
 
             <div className='mt-4 text-center text-neutral-900'>
                 <h1 className='text-2xl font-bold'>{title}</h1>
-                <p className='mt-2 text-sm font-bold'>{subtitle}</p>
-                <p className='mt-3 text-sm'>{children}</p>
+
+                {subtitle && (
+                    <p className='mt-2 text-sm font-bold'>{subtitle}</p>
+                )}
+
+                {children && (
+                    <p className='mt-3 text-sm'>{children}</p>
+                )}
+
                 {action && actionLabel && (
-                    <Button variant='btn-outline btn-outline-black mt-6' onClick={action}>
+                    <Button variant='mt-6 w-64 btn btn-primary' onClick={action}>
                         {actionLabel}
                     </Button>
                 )}
