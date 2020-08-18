@@ -22,19 +22,19 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
                     {name}
                 </div>
 
-                {designer && 
+                {designer &&
                     <div className='text-sm text-neutral-600 leading-tight'>
                         {designer}
                     </div>
                 }
 
-                {color && 
+                {color &&
                     <div className='mt-3 text-sm text-neutral-600 leading-tight'>
                         <FormattedMessage id='colorProduct' /> {color}
                     </div>
                 }
 
-                {size && 
+                {size &&
                     <div className='text-sm text-neutral-600 leading-tight'>
                         <FormattedMessage id='sizeProduct' /> {size}
                     </div>
