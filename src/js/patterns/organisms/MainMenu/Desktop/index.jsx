@@ -47,7 +47,7 @@ const Desktop = ({
                     <div className='o-wrapper'>
                         <div className='flex justify-between h-16'>
                             <div className='inline-flex'>
-                                <a className='self-center w-32 mr-3' ref={ref} href={window.location.origin}>
+                                <a className='self-center w-32 mr-6' ref={ref} href={window.location.origin}>
                                     <img src={logoUrl} alt={logo.media.name} />
                                 </a>
                                 <TopCategories
