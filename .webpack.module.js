@@ -1,6 +1,14 @@
 const merge = require('webpack-merge')
 const path = require('path')
+const paths = require('@frontastic/catwalk/config/paths')
 const autoprefixer = require('autoprefixer')
+
+global.layout = {}
+try {
+    global.layout = require(paths.appSrc + "/js/settings.js")
+} catch (e) {
+    console.warn("Could not load project specific theming: " + e)
+}
 
 module.exports = (config, PRODUCTION, SERVER) => {
     // Add some custom local aliases
