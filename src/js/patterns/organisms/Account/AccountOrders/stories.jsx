@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from 'Atoms/button'
 import { FormattedMessage } from 'react-intl'
 import { ReactComponent as LeftIcon } from 'Icons/tailwind-icons/icon-cheveron-left.svg'
 

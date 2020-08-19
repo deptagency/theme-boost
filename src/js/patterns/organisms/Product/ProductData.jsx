@@ -68,7 +68,7 @@ const ProductData = ({ name, variants, selectedVariant, onChange, handleAddToCar
                     {loading ? <LoaderButton /> : <FormattedMessage id='inCartProduct' />}
                 </Button>
                 <IconButton
-                    variant='flex justify-center text-neutral-900 border border-neutral-900 w-10 rounded outline-none focus:outline-none'
+                    variant='flex items-center justify-center text-neutral-900 border border-neutral-900 w-10 rounded outline-none focus:outline-none'
                     icon={wishlisted ? <IconHeartFull /> : <IconHeart />}
                     onClick={() => {
                         !wishlisted && handleAddToWishlist()

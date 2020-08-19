@@ -18,14 +18,27 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
             </div>
 
             <div>
-                <div className='text-md font-bold leading-tight'>{name}</div>
-                {designer && <div className='text-sm text-neutral-600 leading-tight'>{designer}</div>}
-                {color && <div className='mt-3 text-sm text-neutral-600 leading-tight'>
-                    <FormattedMessage id='colorProduct' /> {color}
-                </div>}
-                {size && <div className='text-sm text-neutral-600 leading-tight'>
-                    <FormattedMessage id='sizeProduct' /> {size}
-                </div>}
+                <div className='text-md font-bold leading-tight'>
+                    {name}
+                </div>
+
+                {designer &&
+                    <div className='text-sm text-neutral-600 leading-tight'>
+                        {designer}
+                    </div>
+                }
+
+                {color &&
+                    <div className='mt-3 text-sm text-neutral-600 leading-tight'>
+                        <FormattedMessage id='colorProduct' /> {color}
+                    </div>
+                }
+
+                {size &&
+                    <div className='text-sm text-neutral-600 leading-tight'>
+                        <FormattedMessage id='sizeProduct' /> {size}
+                    </div>
+                }
 
                 <div className='mt-3 w-24'>
                     <Select
@@ -48,7 +61,7 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
             </div>
 
             <div>
-                <button className='flex sm:flex-row-reverse sm:ml-auto items-center justify-center'
+                <button className='flex sm:flex-row-reverse sm:ml-auto items-center justify-center focus:outline-none'
                     onClick={() => {
                     app.getLoader('cart').removeLineItem({ lineItemId: itemId })
                 }}>

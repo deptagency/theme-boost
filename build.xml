@@ -18,9 +18,5 @@
     -->
     <import file="${frontastic_basedir}/paas/integration/main.xml" />
 
-    <!--
-        Custom modules
-    -->
-    <import file="${basedir}/src/ant/react_bootstrap.xml" />
     <import file="${basedir}/src/ant/react.xml" />
 </project>
