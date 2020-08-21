@@ -1,39 +1,46 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import TinySlider from 'tiny-slider-react'
+import ControlButton from './ControlButton'
 
 const sliderSettings = {
     loop: false,
     lazyload: true,
     lazyloadSelector: '.tns-lazy',
     mouseDrag: true,
+    items: 2,
     controls: false,
-    items: 1.5,
     center: true,
     nav: false,
     responsive: {
         420: {
-            items: 1.8,
+            items: 2,
         },
         660: {
-            items: 2.4,
+            items: 3,
         },
         935: {
-            items: 3.9,
-        },
-        1200: {
-            items: 4.8,
-        },
-        1400: {
-            items: 5.8,
+            items: 4,
         },
     },
 }
 const Slider = ({ children, options }) => {
+    let sliderRef = useRef()
+
+    const handleSliderMove = (dir) => sliderRef.current.slider.goTo(dir)
     return (
-        <TinySlider settings={{ ...sliderSettings, ...options }}>
-            {children}
-        </TinySlider>
+        <>
+            <div className='absolute flex w-full h-full z-10 items-center'>
+                <ControlButton onClick={() => handleSliderMove('prev')} />
+                <ControlButton
+                    className='absolute transform rotate-180 right-0'
+                    onClick={() => handleSliderMove('next')}
+                />
+            </div>
+            <TinySlider settings={{ ...sliderSettings, ...options }} ref={sliderRef}>
+                {children}
+            </TinySlider>
+        </>
     )
 }
 
