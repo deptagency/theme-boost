@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function FullPageWidthWrapper({ children, onChange = () => {}, className = '' }) {
+export default function FullPageWidthWrapper({ children, className = '' }) {
     return (
         <div
             className={className}
