@@ -3,13 +3,13 @@ import { ReactComponent as IconArrowLeft } from 'Icons/tailwind-icons/icon-arrow
 import { FormattedMessage } from 'react-intl'
 import PropTypes from 'prop-types'
 import Translatable from '@frontastic/catwalk/src/js/component/translatable'
-import MarginBreakout from 'Molecules/Layout/MarginBreakout'
+import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
 import MetaNav from '../Footer/MetaNav'
 import app from 'frontastic-catwalk/src/js/app/app'
 
 const CheckoutFooter = ({ links, title }) => {
     return (
-        <MarginBreakout>
+        <FullPageWidthWrapper>
             <div className='h-15 bg-neutral-200 p-4'>
                 <div className='flex items-center h-full'>
                     <button
@@ -24,11 +24,8 @@ const CheckoutFooter = ({ links, title }) => {
                     </button>
                 </div>
             </div>
-            <MetaNav
-                title={<Translatable value={title} />}
-                links={links}
-            />
-        </MarginBreakout>
+            <MetaNav title={<Translatable value={title} />} links={links} />
+        </FullPageWidthWrapper>
     )
 }
 

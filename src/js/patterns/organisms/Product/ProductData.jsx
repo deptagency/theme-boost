@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
 import classnames from 'classnames'
 
-import MarginBreakout from 'Molecules/Layout/MarginBreakout'
+import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
 import LoaderButton from 'Molecules/Loaders/LoaderButton'
 import StarRating from './StarRating'
 
@@ -20,7 +20,16 @@ import { ReactComponent as IconHeartFull } from 'Icons/tailwind-icons/icon-heart
 import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.svg'
 import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
 
-const ProductData = ({ name, variants, selectedVariant, onChange, handleAddToCart, handleAddToWishlist, handleRemoveFromWishlist, wishlisted = false }) => {
+const ProductData = ({
+    name,
+    variants,
+    selectedVariant,
+    onChange,
+    handleAddToCart,
+    handleAddToWishlist,
+    handleRemoveFromWishlist,
+    wishlisted = false,
+}) => {
     /* preventing showing LoaderButton on initial page load */
     const [showLoader, setShowLoader] = useState(false)
     const isLoading = useSelector((globalState) => {
@@ -38,19 +47,13 @@ const ProductData = ({ name, variants, selectedVariant, onChange, handleAddToCar
             />
 
             <StarRating />
-            {selectedVariant.attributes.color &&
-            <ColorSelector
-                value={selectedVariant.attributes.color}
-                variants={variants}
-                onChange={onChange}
-            />}
+            {selectedVariant.attributes.color && (
+                <ColorSelector value={selectedVariant.attributes.color} variants={variants} onChange={onChange} />
+            )}
 
-            {selectedVariant.attributes.size &&
-            <SizeSelector
-                value={selectedVariant.attributes.size}
-                variants={variants}
-                onChange={onChange}
-            />}
+            {selectedVariant.attributes.size && (
+                <SizeSelector value={selectedVariant.attributes.size} variants={variants} onChange={onChange} />
+            )}
 
             <div className='flex pb-6'>
                 <Button
@@ -60,8 +63,9 @@ const ProductData = ({ name, variants, selectedVariant, onChange, handleAddToCar
                     })}
                     onClick={() => {
                         setShowLoader(true)
-                        handleAddToCart(selectedVariant)
-                            .then(() => { return setShowLoader(false) })
+                        handleAddToCart(selectedVariant).then(() => {
+                            return setShowLoader(false)
+                        })
                     }}
                     disabled={loading}
                 >
@@ -87,7 +91,7 @@ const ProductData = ({ name, variants, selectedVariant, onChange, handleAddToCar
                     <IconRefresh className='text-xl mr-3 fill-current text-primary-main' />
                     <FormattedMessage id='product.freeReturns' />
                 </div>
-                <MarginBreakout variant='border-b-4 border-neutral-100 md:hidden' />
+                <FullPageWidthWrapper className='border-b-4 border-neutral-100 md:hidden' />
             </div>
         </div>
     )

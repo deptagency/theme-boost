@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 
 import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
-import MarginBreakout from 'Molecules/Layout/MarginBreakout'
+import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
 
 import Modal from './Modal'
 import Widgets from '../Widgets'
@@ -43,7 +43,7 @@ const Mobile = ({
 
     return (
         <>
-            <MarginBreakout variant='lg:hidden shadow-md'>
+            <FullPageWidthWrapper className='lg:hidden shadow-md'>
                 <div className='grid grid-cols-2 h-12 max-w-1240px m-center px-5'>
                     <div className='flex'>
                         <MenuOpen
@@ -64,7 +64,7 @@ const Mobile = ({
                         goToProfilePage={goToProfilePage}
                     />
                 </div>
-            </MarginBreakout>
+            </FullPageWidthWrapper>
 
             <Modal
                 isOpen={isOpen}
