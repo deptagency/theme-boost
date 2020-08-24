@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function FullPageWidthWrapper({ children, className = '' }) {
+export default function FullPageWidthWrapper ({ children, className = '' }) {
     return (
         <div
             className={className}
@@ -13,7 +13,7 @@ export default function FullPageWidthWrapper({ children, className = '' }) {
                 marginLeft: '-50vw',
                 marginRight: '-50vw',
             }}
-        >
+            >
             {children}
         </div>
     )
