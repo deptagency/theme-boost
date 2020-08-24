@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import Link from '@frontastic/catwalk/src/js/app/link'
+import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
+
 import { ReactComponent as CloseIcon } from 'Icons/tailwind-icons/icon-close-black.svg'
 import { ReactComponent as WishlistHeart } from 'Icons/wishlist-heart.svg'
 import { ReactComponent as WishlistHeartFull } from 'Icons/tailwind-icons/icon-heart-full.svg'
@@ -43,17 +45,13 @@ const ProductTeaser = ({
                     itemProp='url'
                     path={_url || '#'}
                 >
-                    {images[0] ? <div
-                        className='absolute rounded pointer-events-none'
-                        style={{
-                            backgroundImage: `url(${images[0]})`,
-                            backgroundSize: 'contain',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'center',
-                            height: fixedHeight,
-                            width: fixedWidth,
-                        }}
-                        /> : <NoImage className='h-full w-fix-250px' />}
+                    <RemoteImage
+                        url={images[0]}
+                        alt={name}
+                        cropRatio='3:4'
+                        itemProp='image'
+                        options={{ crop: 'fill', background: 'transparent' }}
+                    />
                 </Link>
                 {showHeartIcon && <div
                     className='absolute top-0 right-0 z-10 m-4 cursor-pointer'
