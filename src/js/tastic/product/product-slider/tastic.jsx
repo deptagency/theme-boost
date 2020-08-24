@@ -13,12 +13,12 @@ function ProductSliderTastic ({ data: {
     productCount,
 },
 }) {
-    const products = stream.items.slice(0, productCount)
-    const { wishlistedProducts, wishlistId, loading } = useWishlistFlaggedProducts(products)
-
-    if (loading || !stream) {
+    if (!stream) {
         return null
     }
+
+    const products = stream.items ? stream.items.slice(0, productCount) : []
+    const { wishlistedProducts, wishlistId, loading } = useWishlistFlaggedProducts(products)
 
     return (
         <ProductSlider

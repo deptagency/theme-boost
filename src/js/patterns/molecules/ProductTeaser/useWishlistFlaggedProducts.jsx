@@ -7,7 +7,12 @@ const useWishlistFlaggedProducts = (products) => {
         }
     })
 
-    if (!wishlist.isComplete()) { return { loading: true } }
+    if (!wishlist.isComplete()) {
+        return {
+            wishlistedProducts: products,
+            loading: true,
+        }
+    }
 
     products.map((product) => {
         const wishlisted = wishlist.data.lineItems.find((item) => {
