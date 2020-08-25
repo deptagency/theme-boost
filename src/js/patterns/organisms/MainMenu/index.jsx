@@ -49,6 +49,8 @@ const MainMenu = ({
         return null
     }
 
+    // @TODO: Do not render both DOM trees, but render the correct one
+    // depending on the device information from redux.
     return (
         <>
             <Mobile

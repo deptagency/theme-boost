@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 
-import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
+import MediaImage from '@frontastic/catwalk/src/js/mediaImage'
 import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
 
 import Modal from './Modal'
@@ -35,7 +35,6 @@ const Mobile = ({
     const [level, setLevel] = useLevel(0)
 
     const ref = useRef(null)
-    const logoUrl = useBackgroundImageUrl(ref, logo)
 
     if (!topCategories) {
         return null
@@ -53,7 +52,7 @@ const Mobile = ({
                             }}
                         />
                         <a className='self-center max-w-124px w-full ml-3' ref={ref} href={window.location.origin}>
-                            <img src={logoUrl} alt={logo.media.name} />
+                            <MediaImage media={logo} />
                         </a>
                     </div>
                     <Widgets

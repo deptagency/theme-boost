@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 
-import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
+import MediaImage from '@frontastic/catwalk/src/js/mediaImage'
 import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
 import TopCategories from './TopCategories'
 import DesktopMenu from './Navigation'
@@ -27,7 +27,6 @@ const Desktop = ({
     const [hoveredMenuItem, setHoveredMenuItem] = useState(undefined)
 
     const ref = useRef(null)
-    const logoUrl = useBackgroundImageUrl(ref, logo)
 
     const currentTree = topCategories[currentTopCategory].tree
 
@@ -43,7 +42,7 @@ const Desktop = ({
             <div className='flex justify-between h-16 o-wrapper'>
                 <div className='inline-flex'>
                     <a className='self-center w-32 mr-3' ref={ref} href={window.location.origin}>
-                        <img src={logoUrl} alt={logo.media.name} />
+                        <MediaImage media={logo} />
                     </a>
                     <TopCategories
                         topCategories={topCategories}
