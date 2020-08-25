@@ -13,12 +13,13 @@ function ProductSliderTastic ({ data: {
     productCount,
 },
 }) {
+    const products = (stream || {}).items ? stream.items.slice(0, productCount) : []
+    // eslint-disable-next-line no-unused-vars
+    const { wishlistedProducts, wishlistId, loading } = useWishlistFlaggedProducts(products)
+
     if (!stream) {
         return null
     }
-
-    const products = stream.items ? stream.items.slice(0, productCount) : []
-    const { wishlistedProducts, wishlistId, loading } = useWishlistFlaggedProducts(products)
 
     return (
         <ProductSlider
