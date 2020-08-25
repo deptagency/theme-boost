@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="React">
+<project name="Boost Theme React">
     <target name="boost-theme:package" extensionOf="-package:before~hook">
         <tool-exists executable="yarn" />
 
