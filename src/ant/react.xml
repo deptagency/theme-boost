@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="React">
-    <target name="react:start">
-        <tool-exists executable="yarn" />
-
-        <exec executable="yarn" failonerror="true" dir="${basedir}">
-            <arg value="start" />
-        </exec>
-    </target>
-
-    <target name="react:test" unless="${production}" extensionOf="-test-unit:main~hook">
-        <tool-exists executable="yarn" />
-
-        <exec executable="yarn" failonerror="true" dir="${basedir}">
-            <env key="CI" value="true" />
-
-            <arg value="run" />
-            <arg value="test" />
-        </exec>
-    </target>
-
-    <target name="react:check" unless="${production}" extensionOf="-test-static:main~hook">
-        <tool-exists executable="yarn" />
-
-        <exec executable="yarn" failonerror="${test_static_checkstyle_fail_on_violation}" dir="${basedir}">
-            <env key="CI" value="true" />
-
-            <arg value="run" />
-            <arg value="check" />
-        </exec>
-    </target>
-
-    <target name="react:package" extensionOf="-package:before~hook">
+    <target name="boost-theme:package" extensionOf="-package:before~hook">
         <tool-exists executable="yarn" />
 
         <exec executable="yarn" failonerror="true" dir="${basedir}">
