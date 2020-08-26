@@ -30,7 +30,7 @@ export const orderConfirmed = () => {
                 }
                 action={action('action click')}
                 actionLabel={<FormattedMessage id='checkout.continueShopping' />}
-                icon={<IconCheckmarkCircle className='w-20 h-20 inline-block text-secondary-main fill-current' />}
+                icon={<IconCheckmarkCircle className='w-20 h-20 inline-block text-primary-500 fill-current' />}
                 >
                 <FormattedMessage id='checkout.orderConfirmation' />
                 <span className='font-bold ml-1'>bla@bla.com</span>
