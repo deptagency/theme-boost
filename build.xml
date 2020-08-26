@@ -19,5 +19,7 @@
     <import file="${frontastic_basedir}/paas/integration/main.xml" />
     <import file="${frontastic_basedir}/paas/integration/react.xml" />
 
-    <import file="${basedir}/src/ant/react.xml" />
+    <!-- DISABLED TEMPORARILY DUE TO ERRORS
+        <import file="${basedir}/src/ant/react.xml" />
+    -->
 </project>
