@@ -13,7 +13,7 @@ const Step = ({ current = false, completed = false, onSelect }) => {
             <div className={classnames({
                 'rounded-full border-2 mx-1 h-5 w-5 cursor-pointer z-10': true,
                 'bg-neutral-300 border-neutral-300': !current && !completed,
-                'bg-background-primary border-primary-main': current,
+                'bg-background-primary border-primary-500': current,
                 'bg-secondary-main border-secondary-main': completed,
             })}>
                 {completed && <CheckoutTick />}

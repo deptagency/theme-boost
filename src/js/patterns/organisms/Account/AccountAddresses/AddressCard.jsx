@@ -36,12 +36,12 @@ const AddressCard = ({ address, countries, onEditClicked, onDeleteClicked }) => 
             }
 
             <div className='flex justify-end'>
-                <div className='text-sm text-primary-main leading-normal cursor-pointer' onClick={onEditClicked}>
+                <div className='text-sm text-primary-500 leading-normal cursor-pointer' onClick={onEditClicked}>
                     <FormattedMessage id='account.edit' />
                     <EditIcon className='inline fill-current ml-2' />
                 </div>
 
-                <div className='ml-3 text-sm text-primary-main leading-normal cursor-pointer' onClick={onDeleteClicked}>
+                <div className='ml-3 text-sm text-primary-500 leading-normal cursor-pointer' onClick={onDeleteClicked}>
                     <FormattedMessage id='account.delete' />
                     <TrashIcon className='inline fill-current ml-2' />
                 </div>

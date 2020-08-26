@@ -16,7 +16,7 @@ const DesktopMenu = ({ currentTree, handleClick, onHoverItem }) => {
                         className={classnames({
                             'mr-8 border-b-2px border-transparent font-bold text-neutral-900 text-sm': true,
                             'hover:border-b-2px hover:border-neutral-900': true,
-                            'text-primary-main': item.name === 'SALE',
+                            'text-primary-500': item.name === 'SALE',
                         })}
                         onClick={(e) => { return handleClick(e, item) }}
                         onMouseEnter={() => { return onHoverItem(item) }}

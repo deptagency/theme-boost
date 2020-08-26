@@ -78,7 +78,7 @@ export const WithAMenu = () => {
     return (
         <EmptyState
             icon={icons.EMOTION_HAPPY}
-            iconColor='text-primary-light'
+            iconColor='text-primary-200'
             title={
                 <>
                     {' '}
@@ -115,7 +115,7 @@ export const WithAMenu = () => {
                             <UserIcon
                                 className={classnames({
                                     'mr-2 text-2xl text-neutral-600 fill-current': true,
-                                    'text-primary-main': true,
+                                    'text-primary-500': true,
                                 })}
                             />
                             <div>
