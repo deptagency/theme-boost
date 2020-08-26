@@ -1,26 +1,29 @@
+import asyncComponent from '@frontastic/catwalk/src/js/component/asyncComponent'
+
 import MarkdownTastic from './content/markdown/tastic'
 import ShowcaseTextTastic from './content/showcase-text/tastic'
 import NewsletterBlockTastic from './forms/newsletter-block/tastic'
 import TileTastic from './content/tile/tastic'
 import MainMenuTastic from './header/main-menu/tastic'
-import CartTastic from './cart/tastic'
-import CheckoutTastic from './checkout/tastic'
-import CheckoutSuccessTastic from './checkout-success/tastic'
-import CheckoutHeaderTastic from './checkout-header/tastic'
-import CheckoutFooterTastic from './checkout-footer/tastic'
 import ProductSlider from './product/product-slider/tastic'
 import ProductDetailsTastic from './product/product-details/tastic'
 import ProductListingPageTastic from './product-listing/product-listing-page/tastic'
 import HorizontalSpacerTastic from './helpers/horizontal-spacer/tastic'
 import FeatureServiceTastic from './content/feature-service/tastic'
 import Footer from './footer/tastic'
-import AccountAccessTastic from './account/access/tastic'
-import AccountConfirmTastic from './account/confirm/tastic'
-import AccountProfileTastic from './account/profile/tastic'
-import ResetPasswordTastic from './account/reset-password/tastic'
-import AccountOrdersTastic from './account/orders/tastic'
-import AccountAddressesTastic from './account/addresses/tastic'
-import AccountWishlistsTastic from './account/wishlist/tastic'
+
+const CartTastic = asyncComponent({ import: () => import('./cart/tastic'), height: {} })
+const CheckoutTastic = asyncComponent({ import: () => import('./checkout/tastic'), height: {} })
+const CheckoutSuccessTastic = asyncComponent({ import: () => import('./checkout-success/tastic'), height: {} })
+const CheckoutHeaderTastic = asyncComponent({ import: () => import('./checkout-header/tastic'), height: {} })
+const CheckoutFooterTastic = asyncComponent({ import: () => import('./checkout-footer/tastic'), height: {} })
+const AccountAccessTastic = asyncComponent({ import: () => import('./account/access/tastic'), height: {} })
+const AccountConfirmTastic = asyncComponent({ import: () => import('./account/confirm/tastic'), height: {} })
+const AccountProfileTastic = asyncComponent({ import: () => import('./account/profile/tastic'), height: {} })
+const ResetPasswordTastic = asyncComponent({ import: () => import('./account/reset-password/tastic'), height: {} })
+const AccountOrdersTastic = asyncComponent({ import: () => import('./account/orders/tastic'), height: {} })
+const AccountAddressesTastic = asyncComponent({ import: () => import('./account/addresses/tastic'), height: {} })
+const AccountWishlistsTastic = asyncComponent({ import: () => import('./account/wishlist/tastic'), height: {} })
 
 export default (() => {
     return {
