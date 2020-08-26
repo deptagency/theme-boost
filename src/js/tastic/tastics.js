@@ -12,6 +12,7 @@ import HorizontalSpacerTastic from './helpers/horizontal-spacer/tastic'
 import FeatureServiceTastic from './content/feature-service/tastic'
 import Footer from './footer/tastic'
 
+/* eslint-disable arrow-body-style */
 const CartTastic = asyncComponent({ import: () => import('./cart/tastic'), height: {} })
 const CheckoutTastic = asyncComponent({ import: () => import('./checkout/tastic'), height: {} })
 const CheckoutSuccessTastic = asyncComponent({ import: () => import('./checkout-success/tastic'), height: {} })
