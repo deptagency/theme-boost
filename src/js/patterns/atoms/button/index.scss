@@ -11,10 +11,10 @@
 }
 
 .btn-primary {
-    @apply bg-primary-main text-white;
+    @apply bg-primary-500 text-white;
 
     &:hover {
-        @apply bg-primary-dark;
+        @apply bg-primary-800;
     }
 }
 

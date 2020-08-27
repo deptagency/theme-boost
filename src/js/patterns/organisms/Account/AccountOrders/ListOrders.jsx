@@ -51,7 +51,7 @@ const ListOrders = ({ orders, selectOrder }) => {
                                     </div>
                                 </div>
                                 <button
-                                    className='text-sm text-primary-main leading-tight flex items-center my-4'
+                                    className='text-sm text-primary-500 leading-tight flex items-center my-4'
                                     onClick={() => { selectOrder(order) }}
                                 >
                                     <FormattedMessage id='account.viewOrder' />

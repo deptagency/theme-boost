@@ -8,9 +8,9 @@ import { ReactComponent as PayPalIcon } from 'Icons/paypal.svg'
 const Payments = () => {
     return (
         <section className='flex'>
-            <MastercardIcon className='mr-3 w-9 h-6 text-primary-main fill-current' />
-            <VisaIcon className='mr-3 w-9 h-6 text-primary-main fill-current' />
-            <PayPalIcon className='w-9 h-6 text-primary-main fill-current' />
+            <MastercardIcon className='mr-3 w-9 h-6 text-primary-500 fill-current' />
+            <VisaIcon className='mr-3 w-9 h-6 text-primary-500 fill-current' />
+            <PayPalIcon className='w-9 h-6 text-primary-500 fill-current' />
         </section>
     )
 }

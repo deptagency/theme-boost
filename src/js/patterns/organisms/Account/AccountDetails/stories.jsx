@@ -37,7 +37,7 @@ export const accountDetails = () => {
                                     <div className='text-sm text-neutral-600'> Email Address </div>
                                     <div>alexandra.jones@gmail.com </div>
                                 </div>
-                                <div className='text-sm text-primary-main leading-tight cursor-pointer flex items-center'>
+                                <div className='text-sm text-primary-500 leading-tight cursor-pointer flex items-center'>
                                     Edit<EditIcon className='inline fill-current text-sm ml-2' />
                                 </div>
                             </div>
