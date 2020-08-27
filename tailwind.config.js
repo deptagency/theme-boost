@@ -1,7 +1,6 @@
+const paths = require('@frontastic/catwalk/config/paths')
 const plugin = require('tailwindcss/plugin')
 const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/defaultTheme')
-// const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/pinkTheme')
-// const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/darkGreenTheme')
 
 module.exports = {
     theme: {
@@ -190,5 +189,15 @@ module.exports = {
     variants: {
         borderWidth: ['responsive', 'hover', 'focus'],
         textColor: ['active'],
+    },
+    purge: {
+        content: [
+            paths.appSrc + '/**/*.tsx',
+            paths.appSrc + '/**/*.jsx',
+            paths.appSrc + '/**/*.scss',
+            __dirname + '/src/**/*.tsx',
+            __dirname + '/src/**/*.jsx',
+            __dirname + '/src/**/*.scss',
+        ],
     },
 }

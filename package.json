@@ -27,7 +27,7 @@
         "react-spring": "^8.0.27",
         "react-toastify": "^6.0.8",
         "redux": "^4.0.5",
-        "tailwindcss": "^1.2.0",
+        "tailwindcss": "^1.7.0",
         "tiny-slider-react": "^0.4.0",
         "whatwg-fetch": "3.0.0"
     },
