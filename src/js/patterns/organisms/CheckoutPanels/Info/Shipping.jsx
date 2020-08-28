@@ -6,7 +6,9 @@ import _ from 'lodash'
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 
 const Shipping = ({ address, countries, onClick }) => {
-    const country = _.find(countries, c => { return c.code === address.country })
+    const country = _.find(countries, (c) => {
+        return c.code === address.country
+    })
 
     return (
         <>
@@ -15,13 +17,18 @@ const Shipping = ({ address, countries, onClick }) => {
                     <FormattedMessage id={'checkout.shippingInformation'} />
                 </span>
 
-                <span className='text-sm text-primary-main leading-tight cursor-pointer flex items-center' onClick={onClick}>
+                <span
+                    className='text-sm text-primary-500 leading-tight cursor-pointer flex items-center'
+                    onClick={onClick}
+                >
                     <FormattedMessage id={'checkout.edit'} /> <EditIcon className='inline fill-current text-sm ml-2' />
                 </span>
             </div>
 
             <div className='text-md text-neutral-900 leading-tight'>
-                <p className='font-bold'>{address.firstName} {address.lastName}</p>
+                <p className='font-bold'>
+                    {address.firstName} {address.lastName}
+                </p>
                 <p>{address.streetName}</p>
                 <p>{address.city}</p>
                 <p>{address.postalCode}</p>

@@ -58,7 +58,7 @@ const ProductData = ({
             <div className='flex pb-6'>
                 <Button
                     variant={classnames({
-                        'btn bg-primary-main text-white w-full mr-2 h-10': true,
+                        'btn bg-primary-500 text-white w-full mr-2 h-10': true,
                         'cursor-default': loading,
                     })}
                     onClick={() => {
@@ -83,12 +83,12 @@ const ProductData = ({
 
             <div className='flex flex-col md:flex-row md:border-b border-neutral-300'>
                 <div className='flex p-4 border-b md:border-b-0 lg:border-b-0 border-neutral-300'>
-                    <IconRocket className='text-xl mr-3 fill-current text-primary-main' />
+                    <IconRocket className='text-xl mr-3 fill-current text-primary-500' />
                     <FormattedMessage id='product.delivery24hs' />
                 </div>
 
                 <div className='flex p-4'>
-                    <IconRefresh className='text-xl mr-3 fill-current text-primary-main' />
+                    <IconRefresh className='text-xl mr-3 fill-current text-primary-500' />
                     <FormattedMessage id='product.freeReturns' />
                 </div>
                 <FullPageWidthWrapper className='border-b-4 border-neutral-100 md:hidden' />

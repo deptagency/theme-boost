@@ -25,7 +25,7 @@ const AccountDetailsOverview = ({ firstName, lastName, email, openAccountDetails
                         <div>{email} </div>
                     </div>
                     <button
-                        className='text-sm text-primary-main leading-tight flex items-center'
+                        className='text-sm text-primary-500 leading-tight flex items-center'
                         onClick={openAccountDetailsForm}
                     >
                         <FormattedMessage id='account.edit' />

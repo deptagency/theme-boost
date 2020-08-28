@@ -34,7 +34,7 @@ const NavigationItem = ({ item, level, navPath, onClick }) => {
                 className={classnames({
                     'text-neutral-900 hover:text-neutral-600 pl-px py-5': true,
                     'font-bold': level === 0,
-                    'text-primary-main': item.name === 'SALE',
+                    'text-primary-500': item.name === 'SALE',
                 })}
             >
                 {item.name}
