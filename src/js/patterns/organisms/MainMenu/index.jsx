@@ -6,6 +6,7 @@ import Mobile from './Mobile'
 import Desktop from './Desktop'
 import { topCategoryType } from './types'
 import { useCurrentTopCategory, useNavPath } from './mainMenuState'
+import { useDeviceType } from '@frontastic/catwalk/src/js/helper/hooks/useDeviceType.js'
 
 const MainMenu = ({
     topCategories,
@@ -20,6 +21,7 @@ const MainMenu = ({
     contactHeaderIcon }) => {
     const [currentTopCategory, setCurrentTopCategory] = useCurrentTopCategory(0)
     const [navPath, setNavPath] = useNavPath([])
+    const deviceType = useDeviceType();
 
     const handleSelectTopCategory = (categoryId) => {
         setNavPath([])
@@ -49,10 +51,9 @@ const MainMenu = ({
         return null
     }
 
-    // @TODO: Do not render both DOM trees, but render the correct one
-    // depending on the device information from redux.
-    return (
-        <>
+    // For performance reasons we hide the mobile navigation on desktop and vice versa.
+    if (!deviceType === 'desktop') {
+        return (
             <Mobile
                 topCategories={topCategories}
                 logo={logo}
@@ -72,20 +73,23 @@ const MainMenu = ({
                 contacHeader={contacHeader}
                 contactHeaderIcon={contactHeaderIcon}
             />
-            <Desktop
-                topCategories={topCategories}
-                logo={logo}
-                currentTopCategory={currentTopCategory}
-                handleSelectTopCategory={handleSelectTopCategory}
-                navPath={navPath}
-                onSelectNavItem={handleSelectNavItem}
-                cartItemsCount={cartItemsCount}
-                wishListLineItemsCount={wishListLineItemsCount}
-                goToCartPage={goToCartPage}
-                goToWishlistPage={goToWishlistPage}
-                goToProfilePage={goToProfilePage}
-            />
-        </>
+        )
+    }
+
+    return (
+        <Desktop
+            topCategories={topCategories}
+            logo={logo}
+            currentTopCategory={currentTopCategory}
+            handleSelectTopCategory={handleSelectTopCategory}
+            navPath={navPath}
+            onSelectNavItem={handleSelectNavItem}
+            cartItemsCount={cartItemsCount}
+            wishListLineItemsCount={wishListLineItemsCount}
+            goToCartPage={goToCartPage}
+            goToWishlistPage={goToWishlistPage}
+            goToProfilePage={goToProfilePage}
+        />
     )
 }
 
