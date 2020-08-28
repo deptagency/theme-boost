@@ -1,12 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
-import _ from 'lodash'
 
 import ButtonWithLoader from 'Atoms/button/WithLoader'
 
 const RemoveAddressForm = ({ address, countries, onRemoveAddressClicked, showLoader }) => {
-    const country = _.find(countries, c => { return c.code === address.country })
+    let country = null
+    for (let c of countries) {
+        if (c.code === address.country) {
+            country = c
+        }
+    }
 
     return (
         <div className='m-6'>

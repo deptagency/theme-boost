@@ -1,16 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
-import _ from 'lodash'
 
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 import { ReactComponent as TrashIcon } from 'Icons/tailwind-icons/icon-trash.svg'
 import { ReactComponent as CheckCircleIcon } from 'Icons/tailwind-icons/icon-check-circle.svg'
 
 const AddressCard = ({ address, countries, onEditClicked, onDeleteClicked }) => {
-    const country = _.find(countries, (c) => {
-        return c.code === address.country
-    })
+    let country = null
+    for (let c of countries) {
+        if (c.code === address.country) {
+            country = c
+        }
+    }
 
     return (
         <div className='text-base text-neutral-900 leading-tight'>

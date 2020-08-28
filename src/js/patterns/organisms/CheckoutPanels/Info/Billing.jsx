@@ -1,12 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
-import _ from 'lodash'
 
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 
 const Billing = ({ address, countries, onClick }) => {
-    const country = _.find(countries, c => { return c.code === address.country })
+    let country = null
+    for (let c of countries) {
+        if (c.code === address.country) {
+            country = c
+        }
+    }
 
     return (
         <>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import _ from 'lodash'
+import shortid from 'shortid'
 
 const Checkbox = ({ value = false, className = '', label = '', onClick = () => {} }) => {
-    const [ id ] = useState(() => { return _.uniqueId('checkbox-') })
+    const [ id ] = useState(() => { return 'checkbox-' + shortid.generate() })
 
     return (
         <>
