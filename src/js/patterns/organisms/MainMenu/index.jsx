@@ -20,7 +20,7 @@ const MainMenu = ({
     contactHeaderIcon }) => {
     const [currentTopCategory, setCurrentTopCategory] = useCurrentTopCategory(0)
     const [navPath, setNavPath] = useNavPath([])
-    const deviceType = useDeviceType();
+    const deviceType = useDeviceType()
 
     const handleSelectTopCategory = (categoryId) => {
         setNavPath([])
