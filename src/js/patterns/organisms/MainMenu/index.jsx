@@ -51,7 +51,7 @@ const MainMenu = ({
     }
 
     // For performance reasons we hide the mobile navigation on desktop and vice versa.
-    if (!deviceType === 'desktop') {
+    if (deviceType === 'mobile') {
         return (
             <Mobile
                 topCategories={topCategories}

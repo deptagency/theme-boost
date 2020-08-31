@@ -38,7 +38,7 @@ const Desktop = ({
     }
 
     return (
-        <FullPageWidthWrapper className='hidden lg:block'>
+        <FullPageWidthWrapper className='lg:block'>
             <div className='flex justify-between h-16 o-wrapper'>
                 <div className='inline-flex'>
                     <a className='self-center w-32 mr-3' ref={ref} href={window.location.origin}>

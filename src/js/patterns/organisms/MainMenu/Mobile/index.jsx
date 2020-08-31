@@ -42,7 +42,7 @@ const Mobile = ({
 
     return (
         <>
-            <FullPageWidthWrapper className='lg:hidden shadow-md'>
+            <FullPageWidthWrapper className='shadow-md'>
                 <div className='grid grid-cols-2 h-12 max-w-1240px m-center px-5'>
                     <div className='flex'>
                         <MenuOpen
