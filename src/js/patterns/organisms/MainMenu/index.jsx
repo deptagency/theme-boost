@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import get from 'lodash/get'
 import Mobile from './Mobile'
 import Desktop from './Desktop'
 import { topCategoryType } from './types'
@@ -33,8 +32,8 @@ const MainMenu = ({
     }
 
     const { cartItemsCount, wishListLineItemsCount } = useSelector((state) => {
-        const cartLineItems = get(state, 'cart.cart.data.lineItems', [])
-        const wishListLineItems = get(state, 'wishlist.wishlist.data.lineItems', [])
+        const cartLineItems = state.cart?.cart?.data?.lineItems || []
+        const wishListLineItems = state.wishlist?.wishlist?.data?.lineItems || []
         return {
             cartItemsCount: cartLineItems.reduce(
                 (accumulator, currentValue) => {
