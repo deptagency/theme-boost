@@ -49,7 +49,7 @@ function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice
                             alt={product.name}
                             cropRatio='1:1'
                             itemProp='image'
-                            options={{ crop: 'fill', background: 'transparent' }}
+                            options={{ crop: 'pad', background: 'transparent' }}
                         />
                     </figure>
 

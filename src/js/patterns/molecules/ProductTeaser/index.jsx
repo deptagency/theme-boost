@@ -49,7 +49,7 @@ const ProductTeaser = ({
                         alt={name}
                         cropRatio='3:4'
                         itemProp='image'
-                        options={{ crop: 'fill', background: 'transparent' }}
+                        options={{ crop: 'pad', background: 'transparent' }}
                     />
                 </Link>
                 {showHeartIcon && <div
