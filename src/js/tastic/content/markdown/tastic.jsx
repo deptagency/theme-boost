@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import Markdown from '@frontastic/catwalk/src/js/component/markdown'
 
 const MarkdownTastic = ({ data }) => {
@@ -22,4 +23,4 @@ MarkdownTastic.propTypes = {
 MarkdownTastic.defaultProps = {
 }
 
-export default MarkdownTastic
+export default tastify({ translate: true })(MarkdownTastic)
