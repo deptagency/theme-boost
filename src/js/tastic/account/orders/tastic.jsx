@@ -12,7 +12,7 @@ import MENU_ITEMS from 'Molecules/Account/Menu/MENU_ITEMS'
 
 const AccountOrdersTastic = ({ data: { stream }, context, route }) => {
     const [ openPanel, setOpenPanel ] = useState(true)
-    const { session: { loggedIn, account: { firstName, lastName, email } } } = context
+    const { session: { loggedIn, account: { firstName } } } = context
 
     if (!loggedIn && route.route !== 'Frontastic.Frontend.Master.Account.index') {
         app.getRouter().push('Frontastic.Frontend.Master.Account.index')
