@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
+
 import FeatureService from 'Organisms/FeatureService'
 
 class FeatureServiceTastic extends Component {
@@ -13,4 +15,4 @@ FeatureServiceTastic.propTypes = {
 
 FeatureServiceTastic.defaultProps = {}
 
-export default FeatureServiceTastic
+export default tastify({ translate: true })(FeatureServiceTastic)

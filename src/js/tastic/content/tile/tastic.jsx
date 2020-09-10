@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import Tile from 'Molecules/Tile'
 
-const TileTastic = ({ data, tastic, context }) => {
+const TileTastic = ({ data }) => {
     return (
         <Tile
             image={data.image}
@@ -20,15 +21,6 @@ const TileTastic = ({ data, tastic, context }) => {
 
 TileTastic.propTypes = {
     data: PropTypes.object.isRequired,
-    tastic: PropTypes.object.isRequired,
-    context: PropTypes.object.isRequired,
 }
 
-export default connect(
-    (globalState, props) => {
-        return {
-            ...props,
-            context: globalState.app.context,
-        }
-    }
-)(TileTastic)
+export default tastify({ translate: true })(TileTastic)

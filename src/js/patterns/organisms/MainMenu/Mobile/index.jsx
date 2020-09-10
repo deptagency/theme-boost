@@ -28,7 +28,7 @@ const Mobile = ({
     infoHeaderIcon,
     aboutHeader,
     aboutHeaderIcon,
-    contacHeader,
+    contactHeader,
     contactHeaderIcon,
 }) => {
     const [isOpen, setIsOpen] = useState(false)
@@ -75,7 +75,7 @@ const Mobile = ({
                 infoHeaderIcon={infoHeaderIcon}
                 aboutHeader={aboutHeader}
                 aboutHeaderIcon={aboutHeaderIcon}
-                contacHeader={contacHeader}
+                contactHeader={contactHeader}
                 contactHeaderIcon={contactHeaderIcon}
                 handleSelectTopCategory={(categoryId) => {
                     setLevel(0)
@@ -109,11 +109,11 @@ Mobile.propTypes = {
     wishListLineItemsCount: PropTypes.number,
     goToWishlistPage: PropTypes.func,
     goToProfilePage: PropTypes.func,
-    infoHeader: PropTypes.object,
+    infoHeader: PropTypes.string,
     infoHeaderIcon: PropTypes.string,
-    aboutHeader: PropTypes.object,
+    aboutHeader: PropTypes.string,
     aboutHeaderIcon: PropTypes.string,
-    contacHeader: PropTypes.object,
+    contactHeader: PropTypes.string,
     contactHeaderIcon: PropTypes.string,
 }
 

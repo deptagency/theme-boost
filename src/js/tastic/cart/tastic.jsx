@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import Entity from 'frontastic-catwalk/src/js/app/entity'
 
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
@@ -22,8 +23,4 @@ CartTastic.propTypes = {
     cart: PropTypes.instanceOf(Entity).isRequired,
 }
 
-export default connect((globalState) => {
-    return {
-        cart: globalState.cart.cart,
-    }
-})(CartTastic)
+export default tastify({ translate: true, connect: { cart: true } })(CartTastic)

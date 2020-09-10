@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import AtomsButton from '@frontastic/catwalk/src/js/patterns/atoms/buttons/button'
 import AtomsHeading from '@frontastic/catwalk/src/js/patterns/atoms/headings/heading'
 import Notifications from '@frontastic/catwalk/src/js/component/notifications'
@@ -93,11 +94,11 @@ ResetPasswordTastic.propTypes = {
 ResetPasswordTastic.defaultProps = {
 }
 
-export default connect(
+export default tastify({ translate: true })(connect(
     (globalState, props) => {
         return {
             ...props,
             confirmationToken: globalState.app.route.get('confirmationToken', null),
         }
     }
-)(ResetPasswordTastic)
+)(ResetPasswordTastic))

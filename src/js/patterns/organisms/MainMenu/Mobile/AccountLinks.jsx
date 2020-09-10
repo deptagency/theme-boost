@@ -16,7 +16,7 @@ const AccountLinks = ({
     infoHeaderIcon,
     aboutHeader,
     aboutHeaderIcon,
-    contacHeader,
+    contactHeader,
     contactHeaderIcon,
 }) => {
     const loggedIn = useSelector((state) => {
@@ -77,7 +77,7 @@ const AccountLinks = ({
                     {IconContact && (
                         <IconContact className='mr-2 w-4 h-4 text-neutral-600 self-center fill-current' />
                     )}
-                    {contacHeader}
+                    {contactHeader}
                 </div>
 
                 <div className='flex px-5 pt-4 pb-5 text-neutral-900'>
@@ -93,11 +93,11 @@ const AccountLinks = ({
 
 AccountLinks.propTypes = {
     closeMobileMenu: PropTypes.func.isRequired,
-    infoHeader: PropTypes.object,
+    infoHeader: PropTypes.string,
     infoHeaderIcon: PropTypes.string,
-    aboutHeader: PropTypes.object,
+    aboutHeader: PropTypes.string,
     aboutHeaderIcon: PropTypes.string,
-    contacHeader: PropTypes.object,
+    contactHeader: PropTypes.string,
     contactHeaderIcon: PropTypes.string,
 }
 

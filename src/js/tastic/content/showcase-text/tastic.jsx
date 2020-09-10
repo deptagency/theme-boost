@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
+
 class ShowcaseTextTastic extends Component {
     render () {
         return (
@@ -16,4 +18,4 @@ ShowcaseTextTastic.propTypes = {
 
 ShowcaseTextTastic.defaultProps = {}
 
-export default ShowcaseTextTastic
+export default tastify({ translate: true })(ShowcaseTextTastic)

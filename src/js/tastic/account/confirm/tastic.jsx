@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 import Message from '@frontastic/catwalk/src/js/app/message'
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
@@ -62,11 +63,11 @@ AccountConfirmTastic.propTypes = {
 AccountConfirmTastic.defaultProps = {
 }
 
-export default connect(
+export default tastify({ translate: true })(connect(
     (globalState, props) => {
         return {
             ...props,
             confirmationToken: globalState.app.route.get('confirmationToken', null),
         }
     }
-)(AccountConfirmTastic)
+)(AccountConfirmTastic))

@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Scrollbars from 'react-custom-scrollbars'
-import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 
 import TopCategories from './TopCategories'
 import Navigation from './Navigation'
@@ -27,7 +26,7 @@ const Modal = ({
     infoHeaderIcon,
     aboutHeader,
     aboutHeaderIcon,
-    contacHeader,
+    contactHeader,
     contactHeaderIcon,
 }) => {
     const currentTree = topCategories[currentTopCategory].tree
@@ -74,11 +73,11 @@ const Modal = ({
                 </Scrollbars>
                 <AccountLinks
                     closeMobileMenu={onClose}
-                    infoHeader={<Translatable value={infoHeader} />}
+                    infoHeader={infoHeader}
                     infoHeaderIcon={infoHeaderIcon}
-                    aboutHeader={<Translatable value={aboutHeader} />}
+                    aboutHeader={aboutHeader}
                     aboutHeaderIcon={aboutHeaderIcon}
-                    contacHeader={<Translatable value={contacHeader} />}
+                    contactHeader={contactHeader}
                     contactHeaderIcon={contactHeaderIcon}
                 />
             </div>
@@ -96,11 +95,11 @@ Modal.propTypes = {
     handleGoBack: PropTypes.func.isRequired,
     navPath: PropTypes.arrayOf(categoryTreeType),
     onClose: PropTypes.func.isRequired,
-    infoHeader: PropTypes.object,
+    infoHeader: PropTypes.string,
     infoHeaderIcon: PropTypes.string,
-    aboutHeader: PropTypes.object,
+    aboutHeader: PropTypes.string,
     aboutHeaderIcon: PropTypes.string,
-    contacHeader: PropTypes.object,
+    contactHeader: PropTypes.string,
     contactHeaderIcon: PropTypes.string,
 }
 

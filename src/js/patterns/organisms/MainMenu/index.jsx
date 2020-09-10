@@ -16,7 +16,7 @@ const MainMenu = ({
     infoHeaderIcon,
     aboutHeader,
     aboutHeaderIcon,
-    contacHeader,
+    contactHeader,
     contactHeaderIcon }) => {
     const [currentTopCategory, setCurrentTopCategory] = useCurrentTopCategory(0)
     const [navPath, setNavPath] = useNavPath([])
@@ -69,7 +69,7 @@ const MainMenu = ({
                 infoHeaderIcon={infoHeaderIcon}
                 aboutHeader={aboutHeader}
                 aboutHeaderIcon={aboutHeaderIcon}
-                contacHeader={contacHeader}
+                contactHeader={contactHeader}
                 contactHeaderIcon={contactHeaderIcon}
             />
         )
@@ -98,11 +98,11 @@ MainMenu.propTypes = {
     goToCartPage: PropTypes.func,
     goToWishlistPage: PropTypes.func,
     goToProfilePage: PropTypes.func,
-    infoHeader: PropTypes.object,
+    infoHeader: PropTypes.string,
     aboutHeaderIcon: PropTypes.string,
-    aboutHeader: PropTypes.object,
+    aboutHeader: PropTypes.string,
     infoHeaderIcon: PropTypes.string,
-    contacHeader: PropTypes.object,
+    contactHeader: PropTypes.string,
     contactHeaderIcon: PropTypes.string,
 }
 

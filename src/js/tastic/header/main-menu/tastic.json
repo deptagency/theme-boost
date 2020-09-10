@@ -99,7 +99,7 @@
             "fields": [
                 {
                     "label": "Header",
-                    "field": "contacHeader",
+                    "field": "contactHeader",
                     "type": "string"
                 },
                 {

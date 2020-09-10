@@ -1,14 +1,12 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import PropTypes from 'prop-types'
+
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 
 import AccountAccess from 'Molecules/Account/Forms/AccountAccess'
 
-const AccountAccessTastic = () => {
-    const context = useSelector((state) => {
-        return state.app.context
-    })
-
+const AccountAccessTastic = ({ context }) => {
     if (context.session.loggedIn) {
         app.getRouter().push('Frontastic.Frontend.Master.Account.profile')
     }
@@ -22,4 +20,8 @@ const AccountAccessTastic = () => {
     )
 }
 
-export default AccountAccessTastic
+AccountAccessTastic.propTypes = {
+    context: PropTypes.object.isRequired,
+}
+
+export default tastify({ translate: true, connect: { context: true } })(AccountAccessTastic)

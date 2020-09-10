@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { useSelector } from 'react-redux'
+
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 
 import AccountMenu from 'Molecules/Account/Menu'
@@ -9,14 +10,9 @@ import AccountOrders from 'Organisms/Account/AccountOrders'
 
 import MENU_ITEMS from 'Molecules/Account/Menu/MENU_ITEMS'
 
-const AccountOrdersTastic = ({ data: { stream } }) => {
+const AccountOrdersTastic = ({ data: { stream }, context }) => {
     const [ openPanel, setOpenPanel ] = useState(true)
-
-    const { session: { loggedIn, account: { firstName } } } = useSelector((state) => {
-        return {
-            session: state.app.context.session,
-        }
-    })
+    const { session: { loggedIn, account: { firstName } } } = context.session
 
     if (!loggedIn) {
         app.getRouter().push('Frontastic.Frontend.Master.Account.index')
@@ -40,6 +36,7 @@ const AccountOrdersTastic = ({ data: { stream } }) => {
 
 AccountOrdersTastic.propTypes = {
     data: PropTypes.object.isRequired,
+    context: PropTypes.object.isRequired,
 }
 
-export default AccountOrdersTastic
+export default tastify({ translate: true, connect: { context: true } })(AccountOrdersTastic)

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 import app from '@frontastic/catwalk/src/js/app/app'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
-import withTranslatedTasticData from '@frontastic/catwalk/src/js/component/withTranslatedTasticData'
 
 import ProductListing from 'Organisms/Product/ProductListing'
 // import Filters from '../../patterns/organisms/filters/filters'
@@ -57,4 +56,4 @@ ProductListingPageTastic.propTypes = {
 
 ProductListingPageTastic.defaultProps = {}
 
-export default withTranslatedTasticData(tastify({ connect: { node: true } })(ProductListingPageTastic))
+export default tastify({ translate: true, connect: { node: true } })(ProductListingPageTastic)
