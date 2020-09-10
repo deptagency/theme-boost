@@ -10,11 +10,11 @@ import AccountOrders from 'Organisms/Account/AccountOrders'
 
 import MENU_ITEMS from 'Molecules/Account/Menu/MENU_ITEMS'
 
-const AccountOrdersTastic = ({ data: { stream }, context }) => {
+const AccountOrdersTastic = ({ data: { stream }, context, route }) => {
     const [ openPanel, setOpenPanel ] = useState(true)
-    const { session: { loggedIn, account: { firstName } } } = context.session
+    const { session: { loggedIn, account: { firstName, lastName, email } } } = context
 
-    if (!loggedIn) {
+    if (!loggedIn && route.route !== 'Frontastic.Frontend.Master.Account.index') {
         app.getRouter().push('Frontastic.Frontend.Master.Account.index')
     }
 
@@ -37,6 +37,13 @@ const AccountOrdersTastic = ({ data: { stream }, context }) => {
 AccountOrdersTastic.propTypes = {
     data: PropTypes.object.isRequired,
     context: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
 }
 
-export default tastify({ translate: true, connect: { context: true } })(AccountOrdersTastic)
+export default tastify({
+    translate: true,
+    connect: {
+        context: true,
+        route: true,
+    },
+})(AccountOrdersTastic)

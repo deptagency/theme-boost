@@ -10,12 +10,11 @@ import AccountDetails from 'Organisms/Account/AccountDetails'
 
 import MENU_ITEMS from 'Molecules/Account/Menu/MENU_ITEMS'
 
-const AccountProfileTastic = ({ context }) => {
+const AccountProfileTastic = ({ context, route }) => {
     const [ openPanel, setOpenPanel ] = useState(true)
+    const { session: { loggedIn, account: { firstName, lastName, email } } } = context
 
-    const { session: { loggedIn, account: { firstName, lastName, email } } } = context.session
-
-    if (!loggedIn) {
+    if (!loggedIn && route.route !== 'Frontastic.Frontend.Master.Account.index') {
         app.getRouter().push('Frontastic.Frontend.Master.Account.index')
     }
 
@@ -41,6 +40,13 @@ const AccountProfileTastic = ({ context }) => {
 
 AccountProfileTastic.propTypes = {
     context: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
 }
 
-export default tastify({ translate: true, connect: { context: true } })(AccountProfileTastic)
+export default tastify({
+    translate: true,
+    connect: {
+        context: true,
+        route: true,
+    },
+})(AccountProfileTastic)

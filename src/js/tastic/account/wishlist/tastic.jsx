@@ -6,10 +6,10 @@ import app from '@frontastic/catwalk/src/js/app/app'
 
 import AccountWishlist from 'Organisms/Account/AccountWishlist'
 
-const AccountWishlistsTastic = ({ context, wishlist }) => {
+const AccountWishlistsTastic = ({ context, route, wishlist }) => {
     const { session: { loggedIn } } = context
 
-    if (!loggedIn) {
+    if (!loggedIn && route.route !== 'Frontastic.Frontend.Master.Account.index') {
         app.getRouter().push('Frontastic.Frontend.Master.Account.index')
     }
 
@@ -30,7 +30,14 @@ const AccountWishlistsTastic = ({ context, wishlist }) => {
 
 AccountWishlistsTastic.propTypes = {
     context: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
     wishlist: PropTypes.object.isRequired,
 }
 
-export default tastify({ translate: true, connect: { context: true, wishlist: true } })(AccountWishlistsTastic)
+export default tastify({
+    translate: true,
+    connect: {
+        context: true,
+        route: true,
+    },
+})(AccountWishlistsTastic)
