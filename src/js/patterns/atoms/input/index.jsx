@@ -6,6 +6,7 @@ const Input = ({ id, type, name, placeholder, className, checked, disabled, requ
     onChange, value, min, max, step, ref }) => {
     return (
         <input
+            aria-label={placeholder || name}
             id={id}
             type={type}
             name={name}

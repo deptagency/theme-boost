@@ -28,8 +28,9 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
 
             <div className='mt-6 mb-4'>
                 <div className='mb-4'>
-                    <div className='text-sm text-neutral-600'><FormattedMessage id='account.login.password' /></div>
+                    <label htmlFor='oldPassword' className='text-sm text-neutral-600'><FormattedMessage id='account.login.password' /></label>
                     <input
+                        id='old-password'
                         name='oldPassword'
                         type='password'
                         className='form-input mt-2'
@@ -38,9 +39,10 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
                     <ErrorMessage errors={errors} name='oldPassword' />
                 </div>
                 <div className='mb-4'>
-                    <div className='text-sm text-neutral-600'><FormattedMessage id='account.password.new' /></div>
+                    <label htmlFor='newPassword' className='text-sm text-neutral-600'><FormattedMessage id='account.password.new' /></label>
 
                     <input
+                        id='newPassword'
                         name='newPassword'
                         type='password'
                         className='form-input mt-2'
@@ -56,9 +58,10 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
                     <ErrorMessage errors={errors} name='newPassword' />
                 </div>
                 <div className='mb-4'>
-                    <div className='text-sm text-neutral-600'><FormattedMessage id='account.password.confirmNew' /></div>
+                    <label htmlFor='confirmNewPassword' className='text-sm text-neutral-600'><FormattedMessage id='account.password.confirmNew' /></label>
 
                     <input
+                        id='confirmNewPassword'
                         name='confirmNewPassword'
                         type='password'
                         className='form-input mt-2'

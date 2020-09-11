@@ -21,7 +21,7 @@ const PaymentMethod = ({ defaultValues = {}, onSubmit }) => {
             </div>
 
             <div className='px-4 py-3 border border-neutral-400 rounded flex items-center'>
-                <input type='radio' name='payment' value='invoice' id='invoice' className='mr-2'
+                <input type='radio' aria-label='payment' name='payment' value='invoice' id='invoice' className='mr-2'
                     ref={register()}
                 />
                 <label className='text-sm leading-tight' htmlFor='invoice'>

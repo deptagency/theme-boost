@@ -70,7 +70,7 @@ export const editDetails = () => {
 
                     <form className='flex-col mx-6 mt-6 sm:mx-auto sm:w-7/12 lg:w-3/6'>
                         <div className='mb-4'>
-                            <div className='text-sm text-neutral-600'>First name </div>
+                            <label htmlFor='login-firstname' className='text-sm text-neutral-600'>First name </label>
                             <input
                                 id='login-firstname'
                                 name='firstName'
@@ -79,7 +79,7 @@ export const editDetails = () => {
                             />
                         </div>
                         <div className='mb-4'>
-                            <div className='text-sm text-neutral-600'>Last name </div>
+                            <label htmlFor='login-lastname' className='text-sm text-neutral-600'>Last name </label>
                             <input
                                 id='login-lastname'
                                 name='lastName'
@@ -88,7 +88,7 @@ export const editDetails = () => {
                             />
                         </div>
                         <div className='mb-4'>
-                            <div className='text-sm text-neutral-600'>Email address </div>
+                            <label htmlFor='signup-email' className='text-sm text-neutral-600'>Email address </label>
                             <input
                                 id='signup-email'
                                 name='email'
@@ -97,7 +97,7 @@ export const editDetails = () => {
                             />
                         </div>
                         <div className='mb-4'>
-                            <div className='text-sm text-neutral-600'>Repeat email address </div>
+                            <label htmlFor='signup-email' className='text-sm text-neutral-600'>Repeat email address </label>
                             <input
                                 id='signup-email'
                                 name='email'
@@ -147,7 +147,7 @@ export const changePassword = () => {
 
                         <div className='mt-6 mb-4'>
                             <div className='mb-4'>
-                                <div className='text-sm text-neutral-600'>Password </div>
+                                <label htmlFor='login-password' className='text-sm text-neutral-600'>Password </label>
                                 <input
                                     id='login-password'
                                     name='password'
@@ -156,7 +156,7 @@ export const changePassword = () => {
                                 />
                             </div>
                             <div className='mb-4'>
-                                <div className='text-sm text-neutral-600'>New password </div>
+                                <label htmlFor='login-password' className='text-sm text-neutral-600'>New password </label>
                                 <input
                                     id='login-password'
                                     name='password'
@@ -165,7 +165,7 @@ export const changePassword = () => {
                                 />
                             </div>
                             <div className='mb-4'>
-                                <div className='text-sm text-neutral-600'>Confirm new password </div>
+                                <label htmlFor='login-password' className='text-sm text-neutral-600'>Confirm new password </label>
                                 <input
                                     id='login-password'
                                     name='password'
@@ -218,7 +218,7 @@ export const modalChangePassword = () => {
 
                                 <div className='mt-6 mb-4'>
                                     <div className='mb-4'>
-                                        <div className='text-sm text-neutral-600'>Password </div>
+                                        <label htmlFor='login-password' className='text-sm text-neutral-600'>Password </label>
                                         <input
                                             id='login-password'
                                             name='password'
@@ -227,7 +227,7 @@ export const modalChangePassword = () => {
                                     />
                                     </div>
                                     <div className='mb-4'>
-                                        <div className='text-sm text-neutral-600'>New password </div>
+                                        <label htmlFor='login-password' className='text-sm text-neutral-600'>New password </label>
                                         <input
                                             id='login-password'
                                             name='password'
@@ -236,7 +236,7 @@ export const modalChangePassword = () => {
                                     />
                                     </div>
                                     <div className='mb-4'>
-                                        <div className='text-sm text-neutral-600'>Confirm new password </div>
+                                        <label htmlFor='login-password' className='text-sm text-neutral-600'>Confirm new password </label>
                                         <input
                                             id='login-password'
                                             name='password'

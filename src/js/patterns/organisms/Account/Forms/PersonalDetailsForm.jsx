@@ -22,8 +22,9 @@ const PersonalDetailsForm = ({ intl, firstName, lastName, onSubmit, showLoader }
     return (
         <form onSubmit={handleSubmit(onNewDetailsSubmit)} className='flex-col pt-6 m-auto w-3/4 md:w-11/12 md:p-0 md:pb-2`'>
             <div className='mb-4'>
-                <div className='text-sm text-neutral-600'><FormattedMessage id='checkout.form.firstName' /></div>
+                <label htmlFor='firstName' className='text-sm text-neutral-600'><FormattedMessage id='checkout.form.firstName' /></label>
                 <input
+                    id='firstName'
                     name='firstName'
                     type='text'
                     className='form-input mt-2'
@@ -32,8 +33,9 @@ const PersonalDetailsForm = ({ intl, firstName, lastName, onSubmit, showLoader }
                 <ErrorMessage errors={errors} name='firstName' />
             </div>
             <div className='mb-4'>
-                <div className='text-sm text-neutral-600'><FormattedMessage id='checkout.form.lastName' /></div>
+                <label htmlFor='lastName' className='text-sm text-neutral-600'><FormattedMessage id='checkout.form.lastName' /></label>
                 <input
+                    id='lastName'
                     name='lastName'
                     type='text'
                     className='form-input mt-2'
