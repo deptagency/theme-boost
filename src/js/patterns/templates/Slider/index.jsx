@@ -30,16 +30,17 @@ const Slider = ({ children, options }) => {
     const handleSliderMove = (dir) => { return sliderRef.current.slider.goTo(dir) }
     return (
         <>
-            <div className='absolute flex w-full h-full z-10 items-center'>
-                <ControlButton onClick={() => { return handleSliderMove('prev') }} />
-                <ControlButton
-                    className='absolute transform rotate-180 right-0'
-                    onClick={() => { return handleSliderMove('next') }}
-                />
-            </div>
             <TinySlider settings={{ ...sliderSettings, ...options }} ref={sliderRef}>
                 {children}
             </TinySlider>
+            <ControlButton
+                className="absolute left-0 middle"
+                onClick={() => { return handleSliderMove('prev') }}
+            />
+            <ControlButton
+                className="absolute transform rotate-180 right-0"
+                onClick={() => { return handleSliderMove('next') }}
+            />
         </>
     )
 }

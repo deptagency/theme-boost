@@ -5,6 +5,7 @@ export default function ControlButton ({ onClick, className }) {
     return (
         <button
             onClick={onClick}
+            style={{ top: 'calc(50% - 20px)' }}
             className={`bg-white w-8 h-10 flex items-center justify-center rounded-r-lg ${className}`}
             >
             <svg width='18' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'>
