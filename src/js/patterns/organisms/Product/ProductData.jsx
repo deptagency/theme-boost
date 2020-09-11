@@ -60,7 +60,7 @@ const ProductData = ({
                 <Button
                     name={intl.formatMessage({ id: 'inCartProduct' })}
                     variant={classnames({
-                        'btn bg-primary-500 text-white w-full mr-2 h-10': true,
+                        'btn bg-primary-600 text-white w-full mr-2 h-10': true,
                         'cursor-default': loading,
                     })}
                     onClick={() => {

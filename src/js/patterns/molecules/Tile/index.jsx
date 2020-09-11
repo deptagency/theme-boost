@@ -86,7 +86,7 @@ const Tile = ({
                             }
                         }
                         className={classnames({
-                            'bg-primary-500 text-base font-semibold hover:bg-indigo-700 text-white py-3 px-4 rounded': true,
+                            'bg-primary-600 text-base font-semibold hover:bg-indigo-700 text-white py-3 px-4 rounded': true,
                             ...selfAlign,
                         })}
                     >
