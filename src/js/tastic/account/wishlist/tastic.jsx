@@ -23,8 +23,6 @@ const AccountWishlistsTastic = ({ wishlist }) => {
 }
 
 AccountWishlistsTastic.propTypes = {
-    context: PropTypes.object.isRequired,
-    route: PropTypes.object.isRequired,
     wishlist: PropTypes.object.isRequired,
 }
 
