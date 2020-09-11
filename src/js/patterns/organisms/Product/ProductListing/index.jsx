@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
 import ProductTeaser from 'Molecules/Product/productTeaser'
 
-export function ProductListing ({ products, onAddToWishlist, showPercent, showStrikePrice }) {
+const ProductListing = ({ products, intl, onAddToWishlist, showPercent, showStrikePrice }) => {
     const [itemsPerPage, setItemsPerPage] = useState(6)
 
     const handleLoadMore = () => {
@@ -35,7 +36,7 @@ export function ProductListing ({ products, onAddToWishlist, showPercent, showSt
                         onClick={handleLoadMore}
                         className='border border-solid border-neutral-900 rounded leading-tight p-2'
                     >
-                        Load more
+                        <FormattedMessage id='product.list.loadMore' />
                     </button>
                 </div>
             )}
@@ -45,9 +46,12 @@ export function ProductListing ({ products, onAddToWishlist, showPercent, showSt
 
 ProductListing.propTypes = {
     products: PropTypes.array.isRequired,
+    intl: intlShape.isRequired,
     onAddToWishlist: PropTypes.func,
     showPercent: PropTypes.bool,
     showStrikePrice: PropTypes.bool,
 }
 
 ProductListing.defaultProps = {}
+
+export default injectIntl(ProductListing)

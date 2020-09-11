@@ -43,6 +43,7 @@ const PersonalDetailsForm = ({ intl, firstName, lastName, onSubmit, showLoader }
             </div>
             <div className='text-center mt-6'>
                 <ButtonWithLoader
+                    name={intl.formatMessage({ id: 'account.save' })}
                     showLoader={showLoader}
                     type='submit'
                     variant='btn btn-primary w-full'

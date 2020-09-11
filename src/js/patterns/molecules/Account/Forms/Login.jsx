@@ -61,6 +61,7 @@ const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin,
                         </div>
 
                         <ButtonWithLoader
+                            name={intl.formatMessage({ id: 'account.login.login' })}
                             showLoader={showLoader}
                             type='submit'
                             variant='btn btn-primary w-full h-10'
@@ -85,6 +86,7 @@ const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin,
                     </div>
 
                     <Button
+                        name={intl.formatMessage({ id: 'account.register.createAccount' })}
                         variant='btn-outline btn-outline-black w-64 h-10'
                         onClick={showRegisterForm}
                     >

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
 import Button from 'Atoms/button'
 
@@ -16,7 +16,7 @@ import RemoveAddressForm from '../Forms/RemoveAddressForm'
 import EmptyList from './EmptyList'
 import AddressCard from './AddressCard'
 
-const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddAddress, handleUpdateAddress, handleRemoveAddress }) => {
+const AccountAddresses = ({ intl, openPanel, onClose, addresses, countries, handleAddAddress, handleUpdateAddress, handleRemoveAddress }) => {
     const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false)
     const [showCreateAddressModal, setShowCreateAddressModal] = useState(false)
     const [showEditAddressPanel, setShowEditAddressPanel] = useState(false)
@@ -47,6 +47,7 @@ const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddA
 
                     <div className='text-center my-6'>
                         <Button
+                            name={intl.formatMessage({ id: 'account.address.newAddress' })}
                             variant='btn-outline btn-outline-black'
                             onClick={() => {
                                 showPanel && setShowCreateAddressPanel(true)
@@ -156,6 +157,7 @@ const AccountAddresses = ({ openPanel, onClose, addresses, countries, handleAddA
 }
 
 AccountAddresses.propTypes = {
+    intl: intlShape.isRequired,
     openPanel: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
     addresses: PropTypes.array.isRequired,
@@ -165,4 +167,4 @@ AccountAddresses.propTypes = {
     handleRemoveAddress: PropTypes.func.isRequired,
 }
 
-export default AccountAddresses
+export default injectIntl(AccountAddresses)

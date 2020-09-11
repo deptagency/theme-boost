@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import classnames from 'classnames'
 
 import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
@@ -21,6 +21,7 @@ import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.s
 import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
 
 const ProductData = ({
+    intl,
     name,
     variants,
     selectedVariant,
@@ -57,6 +58,7 @@ const ProductData = ({
 
             <div className='flex pb-6'>
                 <Button
+                    name={intl.formatMessage({ id: 'inCartProduct' })}
                     variant={classnames({
                         'btn bg-primary-500 text-white w-full mr-2 h-10': true,
                         'cursor-default': loading,
@@ -98,6 +100,7 @@ const ProductData = ({
 }
 
 ProductData.propTypes = {
+    intl: intlShape.isRequired,
     name: PropTypes.string.isRequired,
     variants: PropTypes.array.isRequired,
     selectedVariant: PropTypes.object.isRequired,
@@ -108,4 +111,4 @@ ProductData.propTypes = {
     wishlisted: PropTypes.bool,
 }
 
-export default ProductData
+export default injectIntl(ProductData)

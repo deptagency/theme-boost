@@ -40,11 +40,18 @@ const ForgottenPassword = ({ intl, showLoader, handleRequestPasswordReset, showL
                     <ErrorMessage errors={errors} name='email' />
                 </div>
 
-                <ButtonWithLoader showLoader={showLoader} type='submit' variant='btn btn-primary w-full h-10'>
+                <ButtonWithLoader
+                    name={intl.formatMessage({ id: 'account.requestResetPassword' })}
+                    showLoader={showLoader}
+                    type='submit'
+                    variant='btn btn-primary w-full h-10'>
                     <FormattedMessage id='account.requestResetPassword' />
                 </ButtonWithLoader>
 
-                <Button onClick={showLoginForm} variant='btn btn-primary w-full h-10 mt-5'>
+                <Button
+                    name={intl.formatMessage({ id: 'account.login.login' })}
+                    onClick={showLoginForm}
+                    variant='btn btn-primary w-full h-10 mt-5'>
                     <FormattedMessage id='account.login.login' />
                 </Button>
             </form>

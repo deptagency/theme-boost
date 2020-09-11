@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { FormattedMessage, injectIntl } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import { useForm } from 'react-hook-form'
 
 import ErrorMessage from 'Atoms/errorMessage'
@@ -149,6 +149,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
 
             <div className='text-center mt-6'>
                 <ButtonWithLoader
+                    name={intl.formatMessage({ id: 'account.save' })}
                     showLoader={showLoader}
                     type='submit'
                     variant='btn btn-primary w-full'
@@ -161,7 +162,7 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
 }
 
 AddressForm.propTypes = {
-    intl: PropTypes.object.isRequired,
+    intl: intlShape.isRequired,
     countries: PropTypes.array.isRequired,
     defaultValues: PropTypes.object,
     onSubmit: PropTypes.func.isRequired,

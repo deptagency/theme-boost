@@ -21,7 +21,9 @@ const NewsletterBlock = ({ intl }) => {
                     </div>
 
                     <div className='w-full sm:max-w-124px'>
-                        <Button variant='btn btn-primary w-full h-10'>
+                        <Button
+                            name={intl.formatMessage({ id: 'submit' })}
+                            variant='btn btn-primary w-full h-10'>
                             <FormattedMessage id='submit' />
                         </Button>
                     </div>

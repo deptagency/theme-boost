@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export default function ControlButton ({ name, onClick, className }) {
     return (
         <button
-            name={name}
+            aria-label={name}
             onClick={onClick}
             style={{ top: 'calc(50% - 20px)' }}
             className={`bg-white w-8 h-10 flex items-center justify-center rounded-r-lg ${className}`}

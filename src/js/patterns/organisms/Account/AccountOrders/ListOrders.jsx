@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import Price from 'Atoms/price'
 
 import { ReactComponent as FileIcon } from 'Icons/tailwind-icons/icon-file.svg'
 
-const ListOrders = ({ orders, selectOrder }) => {
+const ListOrders = ({ intl, orders, selectOrder }) => {
     const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
     return (
@@ -69,8 +69,9 @@ const ListOrders = ({ orders, selectOrder }) => {
 }
 
 ListOrders.propTypes = {
+    intl: intlShape.isRequired,
     orders: PropTypes.array.isRequired,
     selectOrder: PropTypes.func.isRequired,
 }
 
-export default ListOrders
+export default injectIntl(ListOrders)

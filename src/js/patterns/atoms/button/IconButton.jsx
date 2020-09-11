@@ -4,12 +4,14 @@ import classnames from 'classnames'
 
 const IconButton = ({
     icon,
+    name,
     onClick = () => {},
     children,
     variant = 'text-2xl',
 }) => {
     return (
         <button
+            aria-label={name}
             onClick={onClick}
             className={classnames({
                 [variant]: true,
@@ -23,6 +25,7 @@ const IconButton = ({
 
 IconButton.propTypes = {
     icon: PropTypes.node.isRequired,
+    name: PropTypes.string.isRequired,
     onClick: PropTypes.func,
     children: PropTypes.any,
     variant: PropTypes.string,

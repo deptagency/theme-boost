@@ -5,6 +5,7 @@ import Button from 'Atoms/button'
 import LoaderButton from 'Molecules/Loaders/LoaderButton'
 
 const ButtonWithLoader = ({
+    name,
     showLoader = false,
     onClick = () => {},
     variant = '',
@@ -16,6 +17,7 @@ const ButtonWithLoader = ({
             {showLoader ?
                 <LoaderButton /> :
                 <Button
+                    name={name}
                     variant={variant}
                     onClick={onClick}
                     style={{ transition: 'all .15s ease' }}
@@ -28,6 +30,7 @@ const ButtonWithLoader = ({
 }
 
 ButtonWithLoader.propTypes = {
+    name: PropTypes.string.isRequired,
     onClick: PropTypes.func,
     showLoader: PropTypes.bool,
     variant: PropTypes.string,

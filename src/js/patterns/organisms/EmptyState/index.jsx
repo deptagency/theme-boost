@@ -28,7 +28,7 @@ function EmptyState ({ icon: iconSrc, iconColor, title, subtitle, action, action
                 )}
 
                 {action && actionLabel && (
-                    <Button variant='mt-6 w-64 btn btn-primary' onClick={action}>
+                    <Button name={actionLabel} variant='mt-6 w-64 btn btn-primary' onClick={action}>
                         {actionLabel}
                     </Button>
                 )}

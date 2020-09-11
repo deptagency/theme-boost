@@ -18,7 +18,7 @@ const MiniSummary = ({ sum, label, onClick, isLoading }) => {
 
             <div className='col-start-1 col-end-3 sm:row-start-1 sm:row-end-3 sm:col-start-2'>
                 <div className='flex items-center'>
-                    <Button variant='btn btn-primary w-full h-10' onClick={onClick} disabled={isLoading}>
+                    <Button name={label} variant='btn btn-primary w-full h-10' onClick={onClick} disabled={isLoading}>
                         {isLoading ? <LoaderButton /> : label}
                     </Button>
                 </div>

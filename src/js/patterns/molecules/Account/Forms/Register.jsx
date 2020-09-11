@@ -29,6 +29,7 @@ const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
                     <FormattedMessage id='account.register.alreadyRegistered' />
                 </span>
                 <Button
+                    name={intl.formatMessage({ id: 'account.login.login' })}
                     variant='btn-outline btn-outline-black min-w-24 h-10'
                     onClick={showLoginForm}
                 >
@@ -116,7 +117,11 @@ const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
 
                         <div className='my-5 h-2px bg-neutral-100' />
 
-                        <ButtonWithLoader showLoader={showLoader} variant='btn btn-primary w-full h-10' type='submit'>
+                        <ButtonWithLoader
+                            name={intl.formatMessage({ id: 'account.register.joinCatwalk' })}
+                            showLoader={showLoader}
+                            variant='btn btn-primary w-full h-10'
+                            type='submit'>
                             <FormattedMessage id='account.register.joinCatwalk' />
                         </ButtonWithLoader>
 

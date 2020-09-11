@@ -1,17 +1,18 @@
 import React from 'react'
 import { ReactComponent as IconArrowLeft } from 'Icons/tailwind-icons/icon-arrow-left.svg'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import PropTypes from 'prop-types'
 import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
 import MetaNav from '../Footer/MetaNav'
 import app from 'frontastic-catwalk/src/js/app/app'
 
-const CheckoutFooter = ({ links, title }) => {
+const CheckoutFooter = ({ intl, links, title }) => {
     return (
         <FullPageWidthWrapper>
             <div className='h-15 bg-neutral-200 p-4'>
                 <div className='flex items-center h-full'>
                     <button
+                        aria-label={intl.formatMessage({ id: 'checkout.backToCart' })}
                         className='flex items-center text-sm text-neutral-900'
                         onClick={(event) => {
                             event.preventDefault()
@@ -29,8 +30,9 @@ const CheckoutFooter = ({ links, title }) => {
 }
 
 CheckoutFooter.propTypes = {
-    title: PropTypes.object,
+    intl: intlShape.isRequired,
+    title: PropTypes.string,
     links: PropTypes.array,
 }
 
-export default CheckoutFooter
+export default injectIntl(CheckoutFooter)

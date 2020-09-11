@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { ReactComponent as CloseIcon } from 'Icons/tailwind-icons/icon-close-black.svg'
+import { injectIntl, intlShape } from 'react-intl'
 
-const PlainModal = ({ onClose, children, title = '', variant = '' }) => {
+const PlainModal = ({ onClose, children, intl, title = '', variant = '' }) => {
     const node = useRef()
 
     useEffect(() => {
@@ -26,6 +27,7 @@ const PlainModal = ({ onClose, children, title = '', variant = '' }) => {
                         <div className='flex items-start justify-between p-5 border-b-4 border-neutral-100 rounded-t'>
                             {title}
                             <button
+                                aria-label={intl.formatMessage({ id: 'header.closeView' })}
                                 className='p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none'
                                 onClick={onClose}
                             >
@@ -51,8 +53,9 @@ const PlainModal = ({ onClose, children, title = '', variant = '' }) => {
 PlainModal.propTypes = {
     onClose: PropTypes.func.isRequired,
     children: PropTypes.any.isRequired,
+    intl: intlShape.isRequired,
     title: PropTypes.any,
     variant: PropTypes.string,
 }
 
-export default PlainModal
+export default injectIntl(PlainModal)

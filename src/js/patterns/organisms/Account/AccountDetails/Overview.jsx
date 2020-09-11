@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
 import Button from 'Atoms/button'
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 
-const AccountDetailsOverview = ({ firstName, lastName, email, openAccountDetailsForm, openChangePasswordForm }) => {
+const AccountDetailsOverview = ({ intl, firstName, lastName, email, openAccountDetailsForm, openChangePasswordForm }) => {
     return (
         <div className='md:shadow-lg'>
             <div className='border-b-4 border-neutral-200' />
@@ -25,6 +25,7 @@ const AccountDetailsOverview = ({ firstName, lastName, email, openAccountDetails
                         <div>{email} </div>
                     </div>
                     <button
+                        aria-label={intl.formatMessage({ id: 'account.edit' })}
                         className='text-sm text-primary-500 leading-tight flex items-center'
                         onClick={openAccountDetailsForm}
                     >
@@ -36,6 +37,7 @@ const AccountDetailsOverview = ({ firstName, lastName, email, openAccountDetails
             <div className='border-b-4 border-neutral-200' />
             <div className='text-center my-6'>
                 <Button
+                    name={intl.formatMessage({ id: 'account.changePassword' })}
                     variant='btn-outline btn-outline-black'
                     onClick={openChangePasswordForm}
                 >
@@ -47,6 +49,7 @@ const AccountDetailsOverview = ({ firstName, lastName, email, openAccountDetails
 }
 
 AccountDetailsOverview.propTypes = {
+    intl: intlShape.isRequired,
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
@@ -54,4 +57,4 @@ AccountDetailsOverview.propTypes = {
     openChangePasswordForm: PropTypes.func.isRequired,
 }
 
-export default AccountDetailsOverview
+export default injectIntl(AccountDetailsOverview)

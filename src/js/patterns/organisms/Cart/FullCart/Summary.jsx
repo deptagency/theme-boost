@@ -41,6 +41,7 @@ const Summary = ({ sum, subtotal = '', disabled = false, isLoading = false, onCl
             </div>
 
             <Button
+                name={label}
                 variant={classnames({
                     'btn btn-primary w-full h-10': true,
                     'cursor-default': isLoading || disabled,

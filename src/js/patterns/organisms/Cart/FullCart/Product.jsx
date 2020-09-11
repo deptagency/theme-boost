@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import app from 'frontastic-catwalk/src/js/app/app'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
@@ -8,7 +8,7 @@ import Price from 'Atoms/price'
 import Select from 'Atoms/select'
 import { ReactComponent as CartBin } from 'Icons/cart-bin.svg'
 
-const Product = ({ itemId, image, name, designer, count, price, color, size }) => {
+const Product = ({ intl, itemId, image, name, designer, count, price, color, size }) => {
     const productCounter = Array.from(Array(10).keys()).map(i => { return i + 1 })
 
     return (
@@ -62,6 +62,7 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
 
             <div>
                 <button className='flex sm:flex-row-reverse sm:ml-auto items-center justify-center focus:outline-none'
+                    aria-label={intl.formatMessage({ id: 'cart.remove' })}
                     onClick={() => {
                     app.getLoader('cart').removeLineItem({ lineItemId: itemId })
                 }}>
@@ -77,6 +78,7 @@ const Product = ({ itemId, image, name, designer, count, price, color, size }) =
 }
 
 Product.propTypes = {
+    intl: intlShape.isRequired,
     itemId: PropTypes.string.isRequired,
     image: PropTypes.string,
     name: PropTypes.string.isRequired,
@@ -87,4 +89,4 @@ Product.propTypes = {
     size: PropTypes.string,
 }
 
-export default ComponentInjector.return('Product', Product)
+export default injectIntl(ComponentInjector.return('Product', Product))
