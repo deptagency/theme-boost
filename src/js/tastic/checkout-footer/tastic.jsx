@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import CheckoutFooter from 'Molecules/CheckoutFooter'
 
 const CheckoutFooterTastic = ({ data: { title, links } }) => {
@@ -14,4 +16,4 @@ CheckoutFooterTastic.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
-export default CheckoutFooterTastic
+export default tastify({ translate: true })(CheckoutFooterTastic)

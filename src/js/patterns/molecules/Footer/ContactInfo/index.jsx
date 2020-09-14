@@ -23,9 +23,9 @@ const ContactInfo = ({ header, phoneNumber, email }) => {
 }
 
 ContactInfo.propTypes = {
-    header: PropTypes.object,
-    phoneNumber: PropTypes.object,
-    email: PropTypes.object,
+    header: PropTypes.string,
+    phoneNumber: PropTypes.string,
+    email: PropTypes.string,
 }
 
 export default ContactInfo

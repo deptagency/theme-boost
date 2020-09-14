@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function ControlButton ({ onClick, className }) {
+export default function ControlButton ({ name, onClick, className }) {
     return (
         <button
+            name={name}
             onClick={onClick}
+            style={{ top: 'calc(50% - 20px)' }}
             className={`bg-white w-8 h-10 flex items-center justify-center rounded-r-lg ${className}`}
             >
             <svg width='18' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -18,6 +20,11 @@ export default function ControlButton ({ onClick, className }) {
 }
 
 ControlButton.propTypes = {
-    onClick: PropTypes.func,
+    name: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
     className: PropTypes.string,
+}
+
+ControlButton.defaultProps = {
+    className: '',
 }

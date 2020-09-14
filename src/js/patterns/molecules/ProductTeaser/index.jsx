@@ -23,17 +23,9 @@ const ProductTeaser = ({
     const variant = variantProp || variants[0]
     const { price, discountedPrice, images } = variant
 
-    // accomodatining photos from commerce tools
-    const fixedHeight = `calc(240px * ${scale})`
-    const fixedWidth = `calc(180px * ${scale})`
-
     return (
         <>
             <div
-                style={{
-                    minHeight: fixedHeight,
-                    minWidth: fixedWidth,
-                }}
                 className={classnames(
                     'relative mr-4 bg-white rounded',
                     itemVariant
@@ -69,9 +61,7 @@ const ProductTeaser = ({
                     <CloseIcon className='fill-current text-neutral-900 text-xl' />
                 </div>}
             </div>
-            <div className='p-4' style={{
-                width: fixedWidth,
-            }}>
+            <div className='p-4'>
                 <div className='font-bold'>{name}</div>
                 <Price variant='text-lg text-neutral-700 py-1' value={discountedPrice || price} />
             </div>

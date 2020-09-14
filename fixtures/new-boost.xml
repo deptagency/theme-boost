@@ -454,7 +454,7 @@ return (object) [
                   ),
                 ),
               ),
-              'contacHeader' => 
+              'contactHeader' => 
               array (
                 'en_GB@EUR' => 'Contact us',
               ),

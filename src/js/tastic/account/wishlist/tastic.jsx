@@ -1,21 +1,12 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import PropTypes from 'prop-types'
+
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 
 import AccountWishlist from 'Organisms/Account/AccountWishlist'
 
-const AccountWishlistsTastic = () => {
-    const { session: { loggedIn }, wishlist } = useSelector((state) => {
-        return {
-            session: state.app.context.session,
-            wishlist: state.wishlist.wishlist,
-        }
-    })
-
-    if (!loggedIn) {
-        app.getRouter().push('Frontastic.Frontend.Master.Account.index')
-    }
-
+const AccountWishlistsTastic = ({ wishlist }) => {
     return (
         <AccountWishlist
             wishlist={wishlist}
@@ -31,4 +22,13 @@ const AccountWishlistsTastic = () => {
     )
 }
 
-export default AccountWishlistsTastic
+AccountWishlistsTastic.propTypes = {
+    wishlist: PropTypes.object.isRequired,
+}
+
+export default tastify({
+    translate: true,
+    connect: {
+        wishlist: true,
+    },
+})(AccountWishlistsTastic)

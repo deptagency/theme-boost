@@ -1,6 +1,8 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
+import { injectIntl } from 'react-intl'
 import TinySlider from 'tiny-slider-react'
+
 import ControlButton from './ControlButton'
 
 const sliderSettings = {
@@ -24,22 +26,25 @@ const sliderSettings = {
         },
     },
 }
-const Slider = ({ children, options }) => {
+const Slider = ({ intl, children, options }) => {
     let sliderRef = useRef()
 
     const handleSliderMove = (dir) => { return sliderRef.current.slider.goTo(dir) }
     return (
         <>
-            <div className='absolute flex w-full h-full z-10 items-center'>
-                <ControlButton onClick={() => { return handleSliderMove('prev') }} />
-                <ControlButton
-                    className='absolute transform rotate-180 right-0'
-                    onClick={() => { return handleSliderMove('next') }}
-                />
-            </div>
             <TinySlider settings={{ ...sliderSettings, ...options }} ref={sliderRef}>
                 {children}
             </TinySlider>
+            <ControlButton
+                name={intl.formatMessage({ id: 'slider.previous' })}
+                className='absolute left-0 middle'
+                onClick={() => { return handleSliderMove('prev') }}
+            />
+            <ControlButton
+                name={intl.formatMessage({ id: 'slider.next' })}
+                className='absolute transform rotate-180 right-0'
+                onClick={() => { return handleSliderMove('next') }}
+            />
         </>
     )
 }
@@ -49,8 +54,9 @@ Slider.defaultProps = {
 }
 
 Slider.propTypes = {
+    intl: PropTypes.object.isRequired,
     children: PropTypes.node.isRequired,
     options: PropTypes.object,
 }
 
-export default Slider
+export default injectIntl(Slider)

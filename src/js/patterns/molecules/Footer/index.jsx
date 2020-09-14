@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 
 import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
 import ContactInfo from './ContactInfo'
@@ -17,7 +16,7 @@ const Footer = ({
     aboutHeader,
     aboutHeaderIcon,
     aboutLinks,
-    contacHeader,
+    contactHeader,
     phoneNumber,
     phoneNumberSubline,
     email,
@@ -27,18 +26,18 @@ const Footer = ({
     return (
         <FullPageWidthWrapper className='bg-neutral-800 text-neutral-200'>
             <div className='hidden lg:flex mx-auto py-10 justify-between lg:w-9/12 xl:w-7/12'>
-                <LinkList header={<Translatable value={infoHeader} />} headerIcon={infoHeaderIcon} links={infoLinks} />
+                <LinkList header={infoHeader} headerIcon={infoHeaderIcon} links={infoLinks} />
 
                 <ContactInfo
-                    header={<Translatable value={contacHeader} />}
-                    phoneNumber={<Translatable value={phoneNumber} />}
-                    phoneNumberSubline={<Translatable value={phoneNumberSubline} />}
-                    email={<Translatable value={email} />}
-                    emailOverline={<Translatable value={emailOverline} />}
+                    header={contactHeader}
+                    phoneNumber={phoneNumber}
+                    phoneNumberSubline={phoneNumberSubline}
+                    email={email}
+                    emailOverline={emailOverline}
                 />
 
                 <LinkList
-                    header={<Translatable value={aboutHeader} />}
+                    header={aboutHeader}
                     headerIcon={aboutHeaderIcon}
                     links={aboutLinks}
                 />
@@ -46,24 +45,24 @@ const Footer = ({
                 <PaymentMethods methods={paymentMethods} />
             </div>
 
-            <MetaNav title={<Translatable value={title} />} links={links} />
+            <MetaNav title={title} links={links} />
         </FullPageWidthWrapper>
     )
 }
 
 Footer.propTypes = {
-    title: PropTypes.object,
+    title: PropTypes.string,
     links: PropTypes.array,
-    infoHeader: PropTypes.object,
+    infoHeader: PropTypes.string,
     infoHeaderIcon: PropTypes.string,
     infoLinks: PropTypes.array,
-    aboutHeader: PropTypes.object,
+    aboutHeader: PropTypes.string,
     aboutHeaderIcon: PropTypes.string,
     aboutLinks: PropTypes.array,
-    contacHeader: PropTypes.object,
-    phoneNumber: PropTypes.object,
+    contactHeader: PropTypes.string,
+    phoneNumber: PropTypes.string,
     phoneNumberSubline: PropTypes.string,
-    email: PropTypes.object,
+    email: PropTypes.string,
     emailOverline: PropTypes.string,
     paymentMethods: PropTypes.array,
 }

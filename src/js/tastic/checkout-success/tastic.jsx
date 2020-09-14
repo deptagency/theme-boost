@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 import Entity from '@frontastic/catwalk/src/js/app/entity'
-import emptyEntity from '@frontastic/catwalk/src/js/helper/emptyEntity'
 
 import CheckoutSuccess from 'Molecules/CheckoutSuccess'
 import CheckoutError from 'Molecules/CheckoutError'
@@ -31,16 +31,4 @@ CheckoutSuccessTastic.propTypes = {
     order: PropTypes.instanceOf(Entity).isRequired,
 }
 
-export default connect((globalState) => {
-    let order = null
-
-    if (globalState.app.route.has('order')) {
-        order = globalState.cart.orders[globalState.app.route.get('order')] || null
-    } else {
-        order = globalState.cart.lastOrder
-    }
-
-    return {
-        order: order || emptyEntity,
-    }
-})(CheckoutSuccessTastic)
+export default tastify({ translate: true, connect: { order: true } })(CheckoutSuccessTastic)

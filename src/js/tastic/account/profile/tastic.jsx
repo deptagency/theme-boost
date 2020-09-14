@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import PropTypes from 'prop-types'
+
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 
 import AccountMenu from 'Molecules/Account/Menu'
@@ -8,16 +10,11 @@ import AccountDetails from 'Organisms/Account/AccountDetails'
 
 import MENU_ITEMS from 'Molecules/Account/Menu/MENU_ITEMS'
 
-const AccountProfileTastic = () => {
+const AccountProfileTastic = ({ context, route }) => {
     const [ openPanel, setOpenPanel ] = useState(true)
+    const { session: { loggedIn, account: { firstName, lastName, email } } } = context
 
-    const { session: { loggedIn, account: { firstName, lastName, email } } } = useSelector((state) => {
-        return {
-            session: state.app.context.session,
-        }
-    })
-
-    if (!loggedIn) {
+    if (!loggedIn && route.route !== 'Frontastic.Frontend.Master.Account.index') {
         app.getRouter().push('Frontastic.Frontend.Master.Account.index')
     }
 
@@ -41,4 +38,15 @@ const AccountProfileTastic = () => {
     )
 }
 
-export default AccountProfileTastic
+AccountProfileTastic.propTypes = {
+    context: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
+}
+
+export default tastify({
+    translate: true,
+    connect: {
+        context: true,
+        route: true,
+    },
+})(AccountProfileTastic)

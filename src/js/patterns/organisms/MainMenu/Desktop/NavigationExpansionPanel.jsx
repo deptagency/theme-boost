@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import NodeLink from '@frontastic/catwalk/src/js/app/nodeLink.jsx'
-import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 import Image from '@frontastic/catwalk/src/js/image'
 import { categoryTreeType } from '../types'
 
@@ -40,7 +39,7 @@ const NavigationExpansionPanel = ({ item, expanded = false, handleClick }) => {
                                             style={{ animation: `fadeIn 2s` }}
                                             forceWidth={176}
                                             media={child.configuration.displayMedia.media}
-                                            alt={<Translatable value={child.configuration.displayMedia.media.title}
+                                            alt={child.configuration.displayMedia.media.title}
                                         />}
                                     />}
                                 </div>

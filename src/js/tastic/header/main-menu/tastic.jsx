@@ -18,7 +18,7 @@ const MainMenuTastic = ({ data }) => {
             infoHeaderIcon={data.infoHeaderIcon}
             aboutHeader={data.aboutHeader}
             aboutHeaderIcon={data.aboutHeaderIcon}
-            contacHeader={data.contacHeader}
+            contactHeader={data.contactHeader}
             contactHeaderIcon={data.contactHeaderIcon}
         />
     )

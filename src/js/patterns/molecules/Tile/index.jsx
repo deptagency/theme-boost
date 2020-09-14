@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 import Reference from '@frontastic/catwalk/src/js/component/reference'
 import MoleculesHero from '@frontastic/catwalk/src/js/patterns/molecules/heros/hero'
 
@@ -63,7 +62,7 @@ const Tile = ({
                             ...selfAlign,
                         })}
                     >
-                        <Translatable value={topic} />
+                        {topic}
                     </p>
                 )}
 
@@ -74,7 +73,7 @@ const Tile = ({
                             ...selfAlign,
                         })}
                     >
-                        <Translatable value={title} />
+                        {title}
                     </h1>
                 )}
 
@@ -91,7 +90,7 @@ const Tile = ({
                             ...selfAlign,
                         })}
                     >
-                        <Translatable value={buttonLabel} />
+                        {buttonLabel}
                     </Reference>
                 )}
             </div>
@@ -101,14 +100,18 @@ const Tile = ({
 
 Tile.propTypes = {
     image: PropTypes.object.isRequired,
-    topic: PropTypes.object.isRequired,
-    title: PropTypes.object.isRequired,
+    topic: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     verticalPosition: PropTypes.string.isRequired,
     horizontalPosition: PropTypes.string.isRequired,
-    buttonLabel: PropTypes.object.isRequired,
+    buttonLabel: PropTypes.string.isRequired,
     reference: PropTypes.object.isRequired,
     isClickable: PropTypes.bool.isRequired,
-    caption: PropTypes.object.isRequired,
+    caption: PropTypes.string,
+}
+
+Tile.defaultProps = {
+    caption: null,
 }
 
 export default Tile

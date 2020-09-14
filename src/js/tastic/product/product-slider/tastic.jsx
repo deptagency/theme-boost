@@ -42,4 +42,4 @@ ProductSliderTastic.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
-export default tastify()(ProductSliderTastic)
+export default tastify({ translate: true })(ProductSliderTastic)
