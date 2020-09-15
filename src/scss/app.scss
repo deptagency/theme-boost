@@ -1,28 +1,33 @@
-@import "backstage/settings";
+// This is just what's left of the folder 'backstage'
+// still needs to evaluated and cleaned up, together
+// with the catwalk styles (which often are dupes),
+// but for now that's everything that is still in use.
+@import 'shame';
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @import 'layout';
 @import 'animation';
 @import './elements/markdown';
 
-@import "../js//patterns/atoms/badge/index.scss";
-@import "../js/patterns/atoms/button/index.scss";
-@import "../js/patterns/atoms/input/index.scss";
-@import "../js/patterns/atoms/select/index.scss";
+@import '../js//patterns/atoms/badge/index.scss';
+@import '../js/patterns/atoms/button/index.scss';
+@import '../js/patterns/atoms/input/index.scss';
+@import '../js/patterns/atoms/select/index.scss';
 
 // hiding broken loader for now
 .u-fade {
     // Hiding loader from Catwalk, as we're using the custom one
-    @apply hidden
+    @apply hidden;
 }
 
-.s-node, .s-preview {
-    @apply grid grid-rows-auto-1fr-auto min-h-full
+.s-node,
+.s-preview {
+    @apply grid grid-rows-auto-1fr-auto min-h-full;
 }
 
 .c-page-foot {
-    @apply row-start-3 row-end-4
+    @apply row-start-3 row-end-4;
 }
