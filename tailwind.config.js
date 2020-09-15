@@ -192,6 +192,9 @@ module.exports = {
     },
     purge: {
         content: [
+            paths.catwalk + '/src/**/*.tsx',
+            paths.catwalk + '/src/**/*.jsx',
+            paths.catwalk + '/src/**/*.scss',
             paths.appSrc + '/**/*.tsx',
             paths.appSrc + '/**/*.jsx',
             paths.appSrc + '/**/*.scss',

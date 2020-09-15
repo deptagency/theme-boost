@@ -1,3 +1,36 @@
+// settings.typography
+//
+// Base font family.
+$base-font: 'Helvetica Neue' !default;
+$ff-base: #{$base-font}, -apple-system, BlinkMacSystemFont, “Roboto”, “Droid Sans”, “Helvetica Neue”, Helvetica, Arial,
+    sans-serif !default;
+
+// settings.breakpoints
+$breakpoints: (
+    hand: 480em / 16,
+    lap: 740em / 16,
+    desk: 1270em / 18,
+) !default;
+
+// elements.page
+*,
+*::after,
+*.before {
+    font-family: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+:root {
+    height: 100%;
+    font-family: $ff-base;
+    line-height: 1.33;
+    font-weight: 400;
+
+    @apply bg-background-primary base-font-size font-color;
+}
+
+// objects/objects.wrapper
 /*  If a page doesn't fill out the whole horizontal viewport,
  *  the o-page-wrapper is basically the wrapper that holds the
  *  grid(s). It makes sure that the page is centered for example,
