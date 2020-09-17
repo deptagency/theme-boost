@@ -1,0 +1,116 @@
+.o-grid {
+    display: grid;
+    column-gap: 20px;
+    margin: 0 10px;
+    grid-template-columns: [content-start] repeat(12, minmax(0, 1fr)) [content-end];
+
+    @media (min-width: map-get($breakpoints, lap)) {
+        margin: 0 20px;
+    }
+    @media (min-width: map-get($breakpoints, desk)) {
+        max-width: 1240px;
+        margin: 0 auto;
+    }
+    &.o-grid--debug > *:nth-child(odd) {
+        background-color: rgba(203, 0, 114, 0.65);
+    }
+    &.o-grid--debug > *:nth-child(even) {
+        background-color: rgba(95, 31, 156, 0.65);
+    }
+    &.o-grid--debug .full {
+    }
+
+    .o-grid {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   #CELL
+========================================================================== */
+
+.o-cell {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / -1;
+}
+.o-cell--12,
+.o-cell--1\/1 {
+    grid-column: 1 / -1;
+}
+.o-cell--6,
+.o-cell--1\/2 {
+    grid-column: 1 / -1;
+    //@include mq($from: lap) {
+    //    grid-column: 1 / -1;
+    //}
+    @media (min-width: map-get($breakpoints, lap)) {
+        grid-column: span 6;
+    }
+}
+.o-cell--4,
+.o-cell--1\/3 {
+    grid-column: 1 / -1;
+    @media (min-width: map-get($breakpoints, lap)) {
+        grid-column: span 6;
+    }
+    @media (min-width: map-get($breakpoints, desk)) {
+        grid-column: span 4;
+    }
+}
+.o-cell--8,
+.o-cell--2\/3 {
+    grid-column: 1 / -1;
+    @media (min-width: map-get($breakpoints, lap)) {
+        grid-column: span 6;
+    }
+    @media (min-width: map-get($breakpoints, desk)) {
+        grid-column: span 8;
+    }
+}
+.o-cell--3,
+.o-cell--1\/4 {
+    grid-column: 1 / -1;
+
+    @media (min-width: map-get($breakpoints, lap)) {
+        grid-column: span 6;
+    }
+    @media (min-width: map-get($breakpoints, desk)) {
+        grid-column: span 3;
+    }
+}
+.o-cell--2,
+.o-cell--1\/6 {
+    grid-column: span 6;
+    //@include mq($from: lap) {
+    //    grid-column: span 4;
+    //}
+    @media (min-width: map-get($breakpoints, lap)) {
+        grid-column: span 2;
+    }
+}
+.o-cell--1,
+.o-cell--1\/12 {
+    grid-column: span 1;
+}
+.o-cell--full {
+    width: 100vw;
+    background: red;
+}
+
+.o-cell--hidden-hand {
+    @media (min-width: map-get($breakpoints, lap)) {
+        display: none;
+    }
+}
+.o-cell--hidden-lap {
+    @media (min-width: map-get($breakpoints, lap)) and (max-width: map-get($breakpoints, desk)) {
+        display: none;
+    }
+}
+.o-cell--hidden-desk {
+    @media (min-width: map-get($breakpoints, desk)) {
+        display: none;
+    }
+}
