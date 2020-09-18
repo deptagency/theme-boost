@@ -59,6 +59,6 @@ export function CategoryNavigationTree ({ navTree, title, currentPage }) {
 
 CategoryNavigationTree.propTypes = {
     navTree: PropTypes.object.isRequired,
-    title: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
+    title: PropTypes.string,
     currentPage: PropTypes.object.isRequired,
 }
