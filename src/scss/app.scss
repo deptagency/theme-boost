@@ -31,3 +31,11 @@
 .c-page-foot {
     @apply row-start-3 row-end-4;
 }
+
+// Ensure even small images span their box
+//
+// This can happen if we deicde to deliver small images during server side
+// rendering without known the device size.
+img {
+    width: 100%
+}
