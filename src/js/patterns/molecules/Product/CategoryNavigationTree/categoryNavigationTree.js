@@ -52,7 +52,7 @@ export function CategoryNavigationTree ({ navTree, title, currentPage }) {
     return (
         <div className='text-sm text-neutral-900'>
             {title && <h4 className='font-bold mb-3'>{title}</h4>}
-            {renderTree(navTree.children)}
+            {navTree && renderTree(navTree.children)}
         </div>
     )
 }
