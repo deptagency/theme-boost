@@ -1,48 +1,143 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import { compose } from 'redux'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 import app from '@frontastic/catwalk/src/js/app/app'
+import Entity from '@frontastic/catwalk/src/js/app/entity'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
+import UrlHandler from '@frontastic/catwalk/src/js/app/urlHandler'
+import facetConnector from '@frontastic/catwalk/src/js/app/connector/facet'
+import categoryConnector from '@frontastic/catwalk/src/js/app/connector/category'
+import urlHandlerConnector from '@frontastic/catwalk/src/js/app/connector/urlHandler'
 
 import ProductListing from 'Organisms/Product/ProductListing'
-// import Filters from '../../patterns/organisms/filters/filters'
 import CategoryNavigationTree from 'Molecules/Product/CategoryNavigationTree'
 
-// Ideally this is 3 tastics using the layout facilities
-// in backstage, but that's currently not possible, so
-// that's the reason this tastic exists. *marcel
-function ProductListingPageTastic ({ data, node }) {
-    let productList = data.stream.items
-    if (!productList) {
+function ProductListingPageTastic ({ data, node, urlHandler, route, tastic }) {
+    if (!data.stream.items) {
         return null
+    }
+
+    if (!urlHandler) {
+        return null
+    }
+
+    const parameters = urlHandler.parameterReader(tastic.configuration.stream).getParameters();
+
+    var sortState = {}
+
+    if (parameters) {
+        sortState = {
+            attributeId: parameters.sortAttributeId,
+            order: parameters.sortOrder,
+        }
     }
 
     const handleAddToWishlist = (product, variant) => {
         app.getLoader('wishlist').add(product, variant, 1, null)
     }
 
-    // const handleLoadMore = () => {
-    //    // This is only temporary and shall soon be replaced by async product loading
-    // }
+    const handleLoadNextPage = () => {
+        const parameters = urlHandler.deriveParameters((urlState) => {
+            var stream = urlState.getStream(tastic.configuration.stream)
+
+            stream.setOffset(0);
+
+            if (data.stream.count + 24 > data.stream.total) {
+                stream.setLimit(data.stream.total)
+            } else {
+                stream.setLimit(data.stream.count + 24)
+            }
+            
+        })
+        
+        app.getRouter().push(route.route, parameters)
+    }
+
+    const hanleSortChange = (sort) => {
+        const parameters = urlHandler.deriveParameters((urlState) => {
+            var stream = urlState.getStream(tastic.configuration.stream)
+
+            stream.setOffset(0);
+            stream.setLimit(24);
+
+            stream.setSortOrder(sort.attributeId, sort.order);
+        })
+
+        app.getRouter().push(route.route, parameters)
+    }
+
+    const handleFacetsChanged = (facets) => {
+        const parameters = urlHandler.deriveParameters((urlState) => {
+            var stream = urlState.getStream(tastic.configuration.stream)
+
+            stream.setOffset(0);
+            stream.setLimit(24);
+
+            facets.forEach(facet => {
+                if (facet.selected) {
+                    if (facet.type === 'range') {
+                        stream.setFilter(facet.handle, {
+                            min: facet.value.min,
+                            max: facet.value.max, 
+                        })
+                    }
+
+                    if (facet.type === 'term') {
+                        var newTerms = facet.terms.filter(facet => facet.selected === true).map(facet => facet.value)
+
+                        if (newTerms) {
+                            stream.setFilter(facet.handle, { terms: newTerms })
+                        }
+                    }
+                } else {
+                    stream.removeFilter(facet.handle)
+                }
+            })
+        })
+        
+        app.getRouter().push(route.route, parameters)
+    }
+
+    data.showFacets = true
+    data.showSidebar = true
+    data.showIninityScroll = false
 
     return (
-        <div className='flex flex-row mx-5'>
-            <div className='hidden md:block md:w-1/4 pt-4 pl-4'>
-                <CategoryNavigationTree title={data.sidebarHeader} navTree={data.tree} currentPage={node} />
-            </div>
-            <div className='w-full md:w-3/4'>
+        <div className='flex flex-row'>
+            {data.showSidebar && (
+                <div className='hidden md:block md:w-1/4 pt-4 pl-4'>
+                    <CategoryNavigationTree title={data.sidebarHeader} navTree={data.tree} currentPage={node} />
+                </div>
+            )}
+            <div className={classnames({
+                    'w-full': true,
+                    'md:w-3/4': data.showSidebar
+                })}>
                 <div className='flex flex-col'>
-                    <div className='h-24 border-b border-neutral-300 '>{/* Filters go here */}</div>
-
-                    <div>
-                        <ProductListing
-                            products={productList}
-                            onAddToWishlist={handleAddToWishlist}
-                            showPercent={data.showPercent}
-                            showStrikePrice={data.showStrikePrice}
-                        />
-                        {/* onLoadMoore={handleLoadMore} */}
+                    <div className='md:hidden mt-10 text-sm text-center text-gray-900'>
+                        {data.sidebarHeader}
                     </div>
+
+                    <div className='md:hidden text-2xl font-bold text-center text-gray-900'>
+                        {node.name}
+                    </div>
+
+                    <ProductListing
+                        data={data}
+                        sortState={sortState}
+                        onLoadNextPage={handleLoadNextPage}
+                        onSortChange={hanleSortChange}
+                        onFacetsChanged={handleFacetsChanged}
+                        onAddToWishlist={handleAddToWishlist}
+                        isFullWidth={!data.showSidebar}
+                        showFacets={data.showFacets}
+                        showIninityScroll={data.showIninityScroll}
+                        showPercent={data.showPercent}
+                        showStrikePrice={data.showStrikePrice}
+                    />
                 </div>
             </div>
         </div>
@@ -52,8 +147,22 @@ function ProductListingPageTastic ({ data, node }) {
 ProductListingPageTastic.propTypes = {
     data: PropTypes.object.isRequired,
     node: PropTypes.object.isRequired,
+
+    tastic: PropTypes.object.isRequired,
+    route: PropTypes.object.isRequired,
+    urlHandler: PropTypes.instanceOf(UrlHandler),
 }
 
-ProductListingPageTastic.defaultProps = {}
+export default tastify({ translate: true, connect: { node: true, tastic: true, route: true, urlHandler: true } })(compose(
+    connect(facetConnector),
+    connect(categoryConnector),
+    connect(urlHandlerConnector),
+    connect((globalState) => {
+        let streamParameters = globalState.app.route.parameters.s || {}
 
-export default tastify({ translate: true, connect: { node: true } })(ProductListingPageTastic)
+        return {
+            route: globalState.app.route,
+            streamParameters: streamParameters,
+        }
+    }),
+)(ProductListingPageTastic))
