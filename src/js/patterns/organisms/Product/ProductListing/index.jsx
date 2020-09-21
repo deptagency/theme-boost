@@ -22,10 +22,10 @@ const ProductListing = ({ data, sortState, onFacetsChanged, onLoadNextPage, onSo
         if (inView) {
             onLoadNextPage()
         }
-    }, [ inView ])
+    }, [inView, onLoadNextPage])
 
     const onFacetChange = (newFacet, index) => {
-        data.stream.facets[index] = {...newFacet}
+        data.stream.facets[index] = { ...newFacet }
 
         onFacetsChanged(data.stream.facets)
     }

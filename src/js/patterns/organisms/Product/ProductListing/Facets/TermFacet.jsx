@@ -10,7 +10,7 @@ const TermFacet = ({ facet, onChange }) => {
     const onTermClicked = (term) => {
         term.selected = !term.selected
 
-        facet.selected = facet.terms.some(term => term.selected === true)
+        facet.selected = facet.terms.some(term => { return term.selected === true })
 
         useForceUpdate({})
 

@@ -28,7 +28,6 @@ RangeSlider.propTypes = {
     min: PropTypes.number,
     max: PropTypes.number,
     onChange: PropTypes.func,
-    onAfterChange: PropTypes.func,
 }
 
 export default RangeSlider

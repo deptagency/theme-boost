@@ -15,10 +15,10 @@ import { ReactComponent as IconChevronDown } from 'Icons/tailwind-icons/icon-che
 const FacetPopup = ({ intl, initialFacet, onChange }) => {
     const [, useForceUpdate] = useState()
 
-    const [facet, setFacet] = useState({...initialFacet})
+    const [facet, setFacet] = useState({ ...initialFacet })
 
     const onOpenPopup = () => {
-        setFacet({...initialFacet})
+        setFacet({ ...initialFacet })
 
         useForceUpdate({})
     }
@@ -37,7 +37,7 @@ const FacetPopup = ({ intl, initialFacet, onChange }) => {
         useForceUpdate({})
 
         if (onChange) {
-            onChange({...facet})
+            onChange({ ...facet })
         }
     }
 
@@ -49,7 +49,7 @@ const FacetPopup = ({ intl, initialFacet, onChange }) => {
         useForceUpdate({})
 
         if (onChange) {
-            onChange({...facet})
+            onChange({ ...facet })
         }
     }
 
@@ -81,7 +81,7 @@ const FacetPopup = ({ intl, initialFacet, onChange }) => {
             position='bottom left'
             onOpen={onOpenPopup}
             contentStyle={{ padding: '0px', border: 'none', width: '247px', marginTop: '5px', height: facet.type === 'term' ? '416px' : '238px', 'overflowY': 'hidden' }}
-        >
+            >
             {close => {
                 return (
                     <div className='z-10 pt-4 flex flex-col relative shadow'>

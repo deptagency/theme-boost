@@ -53,7 +53,7 @@ const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
             modal
             nested
             contentStyle={{ padding: '0px', border: 'none', width: '100vw', height: '100vh', backgroundColor: '#e2e8f0' }}
-        >
+            >
             {close => {
                 return (
                     <>

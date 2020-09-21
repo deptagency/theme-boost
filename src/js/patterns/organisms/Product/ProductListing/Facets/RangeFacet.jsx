@@ -17,7 +17,7 @@ const RangeFacet = ({ facet, onChange }) => {
         setTmpMin(facet.value.min ? Math.round(parseFloat(facet.value.min) / 100) : min)
         setTmpMax(facet.value.max ? Math.round(parseFloat(facet.value.max) / 100) : max)
         setValue([tmpMin, tmpMax])
-    }, [ facet ])
+    }, [facet, max, min, tmpMax, tmpMin])
 
     const onRangeChange = (v) => {
         setValue(v)

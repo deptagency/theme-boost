@@ -62,22 +62,22 @@ class FacetService {
         }
 
         if (facet.type === 'term') {
-            return facet.terms.some(term => term.selected === true)
+            return facet.terms.some(term => { return term.selected === true })
         }
 
         return false
     }
 
     numberOfSelectedFacet (facet) {
-        return facet.terms.filter(term => term.selected === true).length
+        return facet.terms.filter(term => { return term.selected === true }).length
     }
 
     anySelectedFacets (facets) {
-        return facets.some(facet => this.isFacetSelected(facet))
+        return facets.some(facet => { return this.isFacetSelected(facet) })
     }
 
     numberOfSelectedFacets (facets) {
-        return facets.filter(facet => this.isFacetSelected(facet)).length
+        return facets.filter(facet => { return this.isFacetSelected(facet) }).length
     }
 
     clearFacet (facet) {
@@ -89,12 +89,12 @@ class FacetService {
         }
 
         if (facet.type === 'term') {
-            facet.terms.forEach(term => term.selected = false)
+            facet.terms.forEach(term => { return term.selected = false })
         }
     }
 
     clearFacets (facets) {
-        facets.forEach(facet => this.clearFacet(facet))
+        facets.forEach(facet => { return this.clearFacet(facet) })
     }
 }
 
