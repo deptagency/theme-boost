@@ -15,6 +15,18 @@
                     "default": null
                 },
                 {
+                    "label": "Show facets",
+                    "field": "showFacets",
+                    "type": "boolean",
+                    "default": true
+                },
+                {
+                    "label": "Use infinity scroll",
+                    "field": "showInfinityScroll",
+                    "type": "boolean",
+                    "default": true
+                },
+                {
                     "label": "Show percentual reducement",
                     "field": "showPercent",
                     "type": "boolean",
