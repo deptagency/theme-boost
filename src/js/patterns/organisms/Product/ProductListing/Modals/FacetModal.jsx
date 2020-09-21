@@ -46,7 +46,7 @@ const FacetModal = ({ intl, facet, onChange }) => {
                         </span>
 
                         {facet.selected && (
-                            <span className='w-32 truncate text-sm text-gray-600 text-right leading-normal'>
+                            <span className='w-40 truncate text-sm text-gray-600 text-right leading-normal'>
                                 {facet.type === 'range' && (
                                     <>
                                         {(facet.value.min / 100).toFixed(2)} €  -  {(facet.value.max / 100).toFixed(2)} €

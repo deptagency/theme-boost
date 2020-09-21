@@ -4,14 +4,13 @@ import PropTypes from 'prop-types'
 import { Range } from 'rc-slider'
 import 'rc-slider/assets/index.css'
 
-const RangeSlider = ({ value, min, max, onChange, onAfterChange }) => {
+const RangeSlider = ({ value, min, max, onChange }) => {
     return (
         <Range
             value={value}
             min={min}
             max={max}
             onChange={onChange}
-            onAfterChange={onAfterChange}
             railStyle={{
                 backgroundColor: '#CBD5E0', height: '5px',
             }}

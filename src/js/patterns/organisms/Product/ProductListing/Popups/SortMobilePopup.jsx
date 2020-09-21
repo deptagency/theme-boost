@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 import Popup from 'reactjs-popup'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
 import sortValues from './SortValues'
 import FacetService from './../FacetService'
@@ -12,9 +12,25 @@ import { ReactComponent as IconCheck } from 'Icons/check.svg'
 import { ReactComponent as IconChevronUp } from 'Icons/tailwind-icons/icon-chevron-up.svg'
 import { ReactComponent as IconChevronDown } from 'Icons/tailwind-icons/icon-cheveron-down.svg'
 
-const SortMobilePopup = ({ sortState, onChange }) => {
+const SortMobilePopup = ({ intl, sortState, onChange }) => {
     const isSortEqual = (a, b) => {
         return FacetService.isSortEqual(a, b)
+    }
+
+    const isSortSelected = () => {
+        return !FacetService.isSortEqual(sortState, {})
+    }
+
+    const getSortLabel = () => {
+        let labelId = ''
+
+        sortValues.forEach(sort => {
+            if (FacetService.isSortEqual(sortState, sort.value)) {
+                labelId = sort.name
+            }
+        })
+
+        return intl.formatMessage({ id: labelId })
     }
 
     const onSortChange = (newSort, closeCallback) => {
@@ -30,6 +46,11 @@ const SortMobilePopup = ({ sortState, onChange }) => {
                     <div className='w-1/2 h-10 cursor-pointer select-none flex items-center justify-center border-r'>
                         <span className='text-sm text-gray-900'>
                             <FormattedMessage id='filters.sort' />
+                            {isSortSelected() && (
+                                <span className='ml-1 text-gray-600'>
+                                    ({getSortLabel()})
+                                </span>
+                            )}
                         </span>
                         {open ? <IconChevronUp className='ml-2 inline-block' /> : <IconChevronDown className='ml-2 inline-block' /> }
                     </div>
@@ -54,7 +75,7 @@ const SortMobilePopup = ({ sortState, onChange }) => {
                                     onClick={() => { onSortChange(sort.value, close) }}
                                 >
                                     {isSortEqual(sort.value, sortState) && <IconCheck className='mr-2 inline-block fill-current' /> }
-                                    {sort.name}
+                                    {intl.formatMessage({ id: sort.name })}
                                 </div>
                             )
                         })}
@@ -66,8 +87,9 @@ const SortMobilePopup = ({ sortState, onChange }) => {
 }
 
 SortMobilePopup.propTypes = {
+    intl: intlShape.isRequired,
     sortState: PropTypes.object.isRequired,
     onChange: PropTypes.func,
 }
 
-export default SortMobilePopup
+export default injectIntl(SortMobilePopup)

@@ -20,14 +20,12 @@ const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
         return FacetService.numberOfSelectedFacets(data.stream.facets)
     }
 
-    const onClearAllClicked = (closeCallback) => {
+    const onClearAllClicked = () => {
         FacetService.clearFacets(data.stream.facets)
 
         useForceUpdate({})
 
         onFacetsChanged(data.stream.facets)
-
-        closeCallback()
     }
 
     const onFacetChanged = () => {
@@ -68,8 +66,8 @@ const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
                                 <button
                                     aria-label={intl.formatMessage({ id: 'filters.clearAll' })}
                                     className='ml-auto px-6 h-full text-center text-base text-gray-900 leading-tight border border-gray-900 rounded'
-                                    onClick={() => { onClearAllClicked(close) }}
-                                                >
+                                    onClick={onClearAllClicked}
+                                >
                                     <FormattedMessage id='filters.clearAll' />
                                 </button>
                             )}
@@ -81,13 +79,15 @@ const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
 
                         <div className='px-4 pt-2 bg-white'>
                             {data.stream.facets.map((facet, index) => {
-                                return (
-                                    <FacetModal
-                                        key={index}
-                                        facet={facet}
-                                        onChange={onFacetChanged}
-                                    />
-                                )
+                                if (!(facet.type === 'term' && facet.terms.length == 0)) {
+                                    return (
+                                        <FacetModal
+                                            key={index}
+                                            facet={facet}
+                                            onChange={onFacetChanged}
+                                        />
+                                    )
+                                }
                             })}
                         </div>
 

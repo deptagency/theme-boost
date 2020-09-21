@@ -35,13 +35,13 @@ class FacetService {
 
     getFacetLabelValue (facet) {
         if (facet.selected) {
-            if (facet.type === 'term') {
+            if (facet.type === 'term' && this.numberOfSelectedFacet(facet) > 0) {
                 return `${this.numberOfSelectedFacet(facet)}`
             }
 
             if (facet.type === 'range') {
-                // return `${(facet.value.min / 100).toFixed(2)} - ${(facet.value.max / 100).toFixed(2)}`
                 return '1'
+                // return `${(facet.value.min / 100).toFixed(2)} - ${(facet.value.max / 100).toFixed(2)}`
             }
         }
 
@@ -62,22 +62,22 @@ class FacetService {
         }
 
         if (facet.type === 'term') {
-            return facet.terms.some(term => { return term.selected === true })
+            return facet.terms.some(term => term.selected === true)
         }
 
         return false
     }
 
     numberOfSelectedFacet (facet) {
-        return facet.terms.filter(term => { return term.selected === true }).length
+        return facet.terms.filter(term => term.selected === true).length
     }
 
     anySelectedFacets (facets) {
-        return facets.some(facet => { return this.isFacetSelected(facet) })
+        return facets.some(facet => this.isFacetSelected(facet))
     }
 
     numberOfSelectedFacets (facets) {
-        return facets.filter(facet => { return this.isFacetSelected(facet) }).length
+        return facets.filter(facet => this.isFacetSelected(facet)).length
     }
 
     clearFacet (facet) {
@@ -89,12 +89,12 @@ class FacetService {
         }
 
         if (facet.type === 'term') {
-            facet.terms.forEach(term => { return term.selected = false })
+            facet.terms.forEach(term => term.selected = false)
         }
     }
 
     clearFacets (facets) {
-        facets.forEach(facet => { return this.clearFacet(facet) })
+        facets.forEach(facet => this.clearFacet(facet))
     }
 }
 

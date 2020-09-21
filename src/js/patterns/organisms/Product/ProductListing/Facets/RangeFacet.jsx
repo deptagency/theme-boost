@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import RangeSlider from 'Atoms/rangeSlider'
@@ -13,22 +13,26 @@ const RangeFacet = ({ facet, onChange }) => {
     const [tmpMax, setTmpMax] = useState(facet.value.max ? Math.round(parseFloat(facet.value.max) / 100) : max)
     const [value, setValue] = useState([tmpMin, tmpMax])
 
+    useEffect(() => {
+        setTmpMin(facet.value.min ? Math.round(parseFloat(facet.value.min) / 100) : min)
+        setTmpMax(facet.value.max ? Math.round(parseFloat(facet.value.max) / 100) : max)
+        setValue([tmpMin, tmpMax])
+    }, [ facet ])
+
     const onRangeChange = (v) => {
         setValue(v)
 
         setTmpMin(v[0])
         setTmpMax(v[1])
-    }
 
-    const onAfterChange = () => {
-        if (value[0] === facet.min && value[1] === facet.max) {
+        if (v[0] === facet.min && v[1] === facet.max) {
             facet.selected = false
         } else {
             facet.selected = true
         }
 
-        facet.value.min = value[0] * 100
-        facet.value.max = value[1] * 100
+        facet.value.min = v[0] * 100
+        facet.value.max = v[1] * 100
 
         useForceUpdate({})
 
@@ -45,7 +49,6 @@ const RangeFacet = ({ facet, onChange }) => {
                     min={min}
                     max={max}
                     onChange={onRangeChange}
-                    onAfterChange={onAfterChange}
                 />
             </div>
 

@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
 import Popup from 'reactjs-popup'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
 import sortValues from './SortValues'
 import FacetService from './../FacetService'
@@ -12,9 +12,25 @@ import { ReactComponent as IconCheck } from 'Icons/check.svg'
 import { ReactComponent as IconChevronUp } from 'Icons/tailwind-icons/icon-chevron-up.svg'
 import { ReactComponent as IconChevronDown } from 'Icons/tailwind-icons/icon-cheveron-down.svg'
 
-const SortDesktopPopup = ({ sortState, onChange }) => {
+const SortDesktopPopup = ({ intl, sortState, onChange }) => {
     const isSortEqual = (a, b) => {
         return FacetService.isSortEqual(a, b)
+    }
+
+    const isSortSelected = () => {
+        return !FacetService.isSortEqual(sortState, {})
+    }
+
+    const getSortLabel = () => {
+        let labelId = ''
+
+        sortValues.forEach(sort => {
+            if (FacetService.isSortEqual(sortState, sort.value)) {
+                labelId = sort.name
+            }
+        })
+
+        return intl.formatMessage({ id: labelId })
     }
 
     const onSortChange = (newSort, closeCallback) => {
@@ -28,13 +44,20 @@ const SortDesktopPopup = ({ sortState, onChange }) => {
             trigger={open => {
                 return (
                     <div className={classnames({
-                            'mr-2 w-32 h-8 px-2 border rounded flex items-center justify-between cursor-pointer select-none': true,
+                            'mr-2 w-48 h-8 px-2 border rounded flex items-center justify-between cursor-pointer select-none': true,
                             'bg-gray-300': open,
                             'bg-white': !open,
+                            'text-gray-600 border-gray-300': !isSortSelected(),
+                            'text-gray-900 border-gray-700': isSortSelected(),
                         })}
                     >
-                        <span className='text-sm text-gray-900'>
+                        <span className='text-sm'>
                             <FormattedMessage id='filters.sort' />
+                            {isSortSelected() && (
+                                <span className='ml-1 text-gray-600'>
+                                    ({getSortLabel()})
+                                </span>
+                            )}
                         </span>
                         {open ? <IconChevronUp className='ml-2 inline-block' /> : <IconChevronDown className='ml-2 inline-block' /> }
                     </div>
@@ -59,7 +82,7 @@ const SortDesktopPopup = ({ sortState, onChange }) => {
                                     onClick={() => { onSortChange(sort.value, close) }}
                                 >
                                     {isSortEqual(sort.value, sortState) && <IconCheck className='mr-2 inline-block fill-current' /> }
-                                    {sort.name}
+                                    {intl.formatMessage({ id: sort.name })}
                                 </div>
                             )
                         })}
@@ -71,8 +94,9 @@ const SortDesktopPopup = ({ sortState, onChange }) => {
 }
 
 SortDesktopPopup.propTypes = {
+    intl: intlShape.isRequired,
     sortState: PropTypes.object.isRequired,
     onChange: PropTypes.func,
 }
 
-export default SortDesktopPopup
+export default injectIntl(SortDesktopPopup)

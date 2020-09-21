@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
@@ -14,8 +14,6 @@ import SortDesktopPopup from './Popups/SortDesktopPopup'
 import FiltersWizard from './Modals/FiltersWizard'
 
 const ProductListing = ({ data, sortState, onFacetsChanged, onLoadNextPage, onSortChange, onAddToWishlist, showPercent, isFullWidth, showStrikePrice, showFacets, showInfinityScroll }) => {
-    const [, useForceUpdate] = useState()
-
     const { ref, inView } = useInView({
         threshold: [0.25, 0.5, 0.75],
     })
@@ -26,8 +24,8 @@ const ProductListing = ({ data, sortState, onFacetsChanged, onLoadNextPage, onSo
         }
     }, [ inView ])
 
-    const onFacetChange = () => {
-        useForceUpdate({})
+    const onFacetChange = (newFacet, index) => {
+        data.stream.facets[index] = {...newFacet}
 
         onFacetsChanged(data.stream.facets)
     }
@@ -42,19 +40,25 @@ const ProductListing = ({ data, sortState, onFacetsChanged, onLoadNextPage, onSo
                         <FiltersWizard data={data} onFacetsChanged={onFacetsChanged} />
                     </div>
 
-                    <div className='hidden md:block mt-10 border-b pb-6'>
+                    <div className='hidden md:block mt-4 border-b pb-6'>
                         <div className='flex flex-wrap'>
-                            <SortDesktopPopup sortState={sortState} onChange={onSortChange} />
+                            <div className='mt-4'>
+                                <SortDesktopPopup sortState={sortState} onChange={onSortChange} />
+                            </div>
 
                             {data.stream.facets.map((facet, index) => {
-                                return (
-                                    <FacetPopup
-                                        key={index}
-                                        facet={facet}
-                                        onChange={onFacetChange}
-                                        onClear={onFacetChange}
-                                    />
-                                )
+                                if (!(facet.type === 'term' && facet.terms.length == 0)) {
+                                    return (
+                                        <div className='mt-4'>
+                                            <FacetPopup
+                                                key={index}
+                                                initialFacet={facet}
+                                                onChange={(newFacet) => { onFacetChange(newFacet, index) }}
+                                                onClear={(newFacet) => { onFacetChange(newFacet, index) }}
+                                            />
+                                        </div>
+                                    )
+                                }
                             })}
                         </div>
                     </div>
