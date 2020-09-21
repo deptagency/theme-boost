@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 import FacetService from './../FacetService'
@@ -7,24 +7,15 @@ import { ReactComponent as IconCheck } from 'Icons/check.svg'
 const TermFacet = ({ facet, onChange }) => {
     const [, useForceUpdate] = useState()
 
-    //const [f, setF] = useState({...facet})
-
-/*
-    useEffect(() => {
-        //console.log(facet)
-        setF(facet)
-    }, [ facet ])
-    */
-
     const onTermClicked = (term) => {
         term.selected = !term.selected
 
-        facet.selected = facet.terms.some(term => term.selected === true)
+        facet.selected = facet.terms.some(term => { return term.selected === true })
 
         useForceUpdate({})
 
         if (onChange) {
-            onChange(f)
+            onChange(facet)
         }
     }
 
@@ -32,16 +23,15 @@ const TermFacet = ({ facet, onChange }) => {
         <div className='flex flex-col'>
             {facet.terms.map((term, index) => {
                 return (
-                    <div 
+                    <div
                         key={index}
                         onClick={() => { onTermClicked(term) }}
                         className='w-full h-10 mb-2 px-3 py-2 flex items-center cursor-pointer border border-gray-300 rounded box-border select-none'
                     >
                         {FacetService.isColorFacet(facet) && (
-                            <span 
-                                style={FacetService.getColorStyle(term.value)} 
-                                className='w-4 h-4 mr-2 rounded-full border border-gray-300'>
-                            </span>
+                            <span
+                                style={FacetService.getColorStyle(term.value)}
+                                className='w-4 h-4 mr-2 rounded-full border border-gray-300' />
                         )}
 
                         <span className='text-sm text-gray-900 leading-normal'>
@@ -49,7 +39,7 @@ const TermFacet = ({ facet, onChange }) => {
                         </span>
 
                         {term.selected && (
-                            <IconCheck className='ml-auto inline-block text-indigo-500 fill-current' /> 
+                            <IconCheck className='ml-auto inline-block text-indigo-500 fill-current' />
                         )}
                     </div>
                 )

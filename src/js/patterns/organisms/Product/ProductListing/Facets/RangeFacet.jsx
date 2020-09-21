@@ -12,7 +12,7 @@ const RangeFacet = ({ facet, onChange }) => {
     const [tmpMin, setTmpMin] = useState(facet.value.min ? Math.round(parseFloat(facet.value.min) / 100) : min)
     const [tmpMax, setTmpMax] = useState(facet.value.max ? Math.round(parseFloat(facet.value.max) / 100) : max)
     const [value, setValue] = useState([tmpMin, tmpMax])
-    
+
     const onRangeChange = (v) => {
         setValue(v)
 
@@ -52,7 +52,7 @@ const RangeFacet = ({ facet, onChange }) => {
             <div className='my-8 w-full flex justify-between'>
                 <span className='text-gray-600 absolute left-0 ml-6 mt-2 select-none'>€</span>
 
-                <input 
+                <input
                     name='min'
                     type='number'
                     value={tmpMin}
@@ -66,12 +66,12 @@ const RangeFacet = ({ facet, onChange }) => {
                             onRangeChange([parseFloat(tmpMin), value[1]])
                         }
                     }}
-                    style={{ height: "36px" }}
+                    style={{ height: '36px' }}
                     className='w-20 px-3 py-2 border border-gray-400 rounded-md box-border text-sm text-right leading-normal'
                 />
 
                 <span className='text-gray-600 absolute right-0 mr-20 mt-2 select-none'>€</span>
-                <input 
+                <input
                     name='max'
                     type='number'
                     value={tmpMax}
@@ -85,7 +85,7 @@ const RangeFacet = ({ facet, onChange }) => {
                             onRangeChange([value[0], parseFloat(tmpMax)])
                         }
                     }}
-                    style={{ height: "36px" }}
+                    style={{ height: '36px' }}
                     className='w-20 px-3 py-2 border border-gray-400 rounded-md box-border text-sm text-right leading-normal'
                 />
             </div>

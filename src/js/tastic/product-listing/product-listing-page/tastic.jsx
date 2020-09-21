@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import app from '@frontastic/catwalk/src/js/app/app'
-import Entity from '@frontastic/catwalk/src/js/app/entity'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import UrlHandler from '@frontastic/catwalk/src/js/app/urlHandler'
 import facetConnector from '@frontastic/catwalk/src/js/app/connector/facet'
@@ -15,7 +14,7 @@ import urlHandlerConnector from '@frontastic/catwalk/src/js/app/connector/urlHan
 import ProductListing from 'Organisms/Product/ProductListing'
 import CategoryNavigationTree from 'Molecules/Product/CategoryNavigationTree'
 
-function ProductListingPageTastic ({ data, node, urlHandler, route, tastic }) {
+function ProductListingPageTastic ({ data, node, route, tastic, urlHandler }) {
     if (!data.stream.items) {
         return null
     }
@@ -24,7 +23,7 @@ function ProductListingPageTastic ({ data, node, urlHandler, route, tastic }) {
         return null
     }
 
-    const parameters = urlHandler.parameterReader(tastic.configuration.stream).getParameters();
+    const parameters = urlHandler.parameterReader(tastic.configuration.stream).getParameters()
 
     var sortState = {}
 
@@ -43,16 +42,15 @@ function ProductListingPageTastic ({ data, node, urlHandler, route, tastic }) {
         const parameters = urlHandler.deriveParameters((urlState) => {
             var stream = urlState.getStream(tastic.configuration.stream)
 
-            stream.setOffset(0);
+            stream.setOffset(0)
 
             if (data.stream.count + 24 > data.stream.total) {
                 stream.setLimit(data.stream.total)
             } else {
                 stream.setLimit(data.stream.count + 24)
             }
-            
         })
-        
+
         app.getRouter().push(route.route, parameters)
     }
 
@@ -60,10 +58,10 @@ function ProductListingPageTastic ({ data, node, urlHandler, route, tastic }) {
         const parameters = urlHandler.deriveParameters((urlState) => {
             var stream = urlState.getStream(tastic.configuration.stream)
 
-            stream.setOffset(0);
-            stream.setLimit(24);
+            stream.setOffset(0)
+            stream.setLimit(24)
 
-            stream.setSortOrder(sort.attributeId, sort.order);
+            stream.setSortOrder(sort.attributeId, sort.order)
         })
 
         app.getRouter().push(route.route, parameters)
@@ -73,23 +71,25 @@ function ProductListingPageTastic ({ data, node, urlHandler, route, tastic }) {
         const parameters = urlHandler.deriveParameters((urlState) => {
             var stream = urlState.getStream(tastic.configuration.stream)
 
-            stream.setOffset(0);
-            stream.setLimit(24);
+            stream.setOffset(0)
+            stream.setLimit(24)
 
             facets.forEach(facet => {
                 if (facet.selected) {
                     if (facet.type === 'range') {
                         stream.setFilter(facet.handle, {
                             min: facet.value.min,
-                            max: facet.value.max, 
+                            max: facet.value.max,
                         })
                     }
 
                     if (facet.type === 'term') {
-                        var newTerms = facet.terms.filter(facet => facet.selected === true).map(facet => facet.value)
+                        var newTerms = facet.terms.filter(facet => { return facet.selected === true }).map(facet => { return facet.value })
 
                         if (newTerms) {
-                            stream.setFilter(facet.handle, { terms: newTerms })
+                            stream.setFilter(facet.handle, {
+                                terms: newTerms,
+                            })
                         }
                     }
                 } else {
@@ -97,13 +97,9 @@ function ProductListingPageTastic ({ data, node, urlHandler, route, tastic }) {
                 }
             })
         })
-        
+
         app.getRouter().push(route.route, parameters)
     }
-
-    data.showFacets = true
-    data.showSidebar = true
-    data.showIninityScroll = false
 
     return (
         <div className='flex flex-row'>
@@ -114,7 +110,7 @@ function ProductListingPageTastic ({ data, node, urlHandler, route, tastic }) {
             )}
             <div className={classnames({
                     'w-full': true,
-                    'md:w-3/4': data.showSidebar
+                    'md:w-3/4': data.showSidebar,
                 })}>
                 <div className='flex flex-col'>
                     <div className='md:hidden mt-10 text-sm text-center text-gray-900'>
@@ -134,7 +130,7 @@ function ProductListingPageTastic ({ data, node, urlHandler, route, tastic }) {
                         onAddToWishlist={handleAddToWishlist}
                         isFullWidth={!data.showSidebar}
                         showFacets={data.showFacets}
-                        showIninityScroll={data.showIninityScroll}
+                        showInfinityScroll={data.showInfinityScroll}
                         showPercent={data.showPercent}
                         showStrikePrice={data.showStrikePrice}
                     />

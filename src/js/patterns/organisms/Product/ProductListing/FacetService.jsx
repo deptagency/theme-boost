@@ -1,9 +1,9 @@
 
 class FacetService {
-    getColorStyle(name) {
+    getColorStyle (name) {
         const colorStyle = {
             'White': { backgroundColor: '#FFFFF' },
-            'Multicolored': { backgroundImage: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)'},
+            'Multicolored': { backgroundImage: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)' },
             'Beige': { backgroundColor: '#F5F5DC' },
             'Grey': { backgroundColor: '#808080' },
             'Blue': { backgroundColor: '#213EDA' },
@@ -15,32 +15,32 @@ class FacetService {
             'Gold': { backgroundColor: '#FFD700' },
             'Oliv': { backgroundColor: '#808000' },
             'Silver': { backgroundColor: '#C0C0C0' },
-            'Brown': { backgroundColor: '#A52A2A' }
+            'Brown': { backgroundColor: '#A52A2A' },
         }
 
         return colorStyle[name]
     }
 
-    isColorMulticolored(name) {
+    isColorMulticolored (name) {
         return name === 'Multicolored'
     }
 
-    isSortEqual(firstSort, secondSort) {
+    isSortEqual (firstSort, secondSort) {
         return firstSort.attributeId === secondSort.attributeId && firstSort.order === secondSort.order
     }
 
-    getFacetName(facet) {
+    getFacetName (facet) {
         return facet.key.replace('variants.', '').replace('attributes.', '')
     }
 
-    getFacetLabelValue(facet) {
+    getFacetLabelValue (facet) {
         if (facet.selected) {
             if (facet.type === 'term') {
                 return `${this.numberOfSelectedFacet(facet)}`
-            } 
+            }
 
             if (facet.type === 'range') {
-                //return `${(facet.value.min / 100).toFixed(2)} - ${(facet.value.max / 100).toFixed(2)}`
+                // return `${(facet.value.min / 100).toFixed(2)} - ${(facet.value.max / 100).toFixed(2)}`
                 return '1'
             }
         }
@@ -48,39 +48,39 @@ class FacetService {
         return ''
     }
 
-    isColorFacet(facet) {
+    isColorFacet (facet) {
         return facet.key === 'variants.attributes.color'
     }
 
-    isPriceFacet(facet) {
+    isPriceFacet (facet) {
         return facet.key === 'variants.attributes.price'
     }
 
-    isFacetSelected(facet) {        
+    isFacetSelected (facet) {
         if (facet.type === 'range') {
             return !((facet.value.min === facet.min && facet.value.max === facet.max) || (facet.value.min === 0 && facet.value.max === 0))
         }
 
         if (facet.type === 'term') {
-            return facet.terms.some(term => term.selected === true)
+            return facet.terms.some(term => { return term.selected === true })
         }
 
         return false
     }
 
-    numberOfSelectedFacet(facet) {
-        return facet.terms.filter(term => term.selected === true).length
+    numberOfSelectedFacet (facet) {
+        return facet.terms.filter(term => { return term.selected === true }).length
     }
 
-    anySelectedFacets(facets) {
-        return facets.some(facet => this.isFacetSelected(facet))
+    anySelectedFacets (facets) {
+        return facets.some(facet => { return this.isFacetSelected(facet) })
     }
 
-    numberOfSelectedFacets(facets) {
-        return facets.filter(facet => this.isFacetSelected(facet)).length
+    numberOfSelectedFacets (facets) {
+        return facets.filter(facet => { return this.isFacetSelected(facet) }).length
     }
 
-    clearFacet(facet) {
+    clearFacet (facet) {
         facet.selected = false
 
         if (facet.type === 'range') {
@@ -89,12 +89,12 @@ class FacetService {
         }
 
         if (facet.type === 'term') {
-            facet.terms.forEach(term => term.selected = false)
+            facet.terms.forEach(term => { return term.selected = false })
         }
     }
 
-    clearFacets(facets) {
-        facets.forEach(facet => this.clearFacet(facet))
+    clearFacets (facets) {
+        facets.forEach(facet => { return this.clearFacet(facet) })
     }
 }
 

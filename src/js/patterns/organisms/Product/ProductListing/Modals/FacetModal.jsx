@@ -38,87 +38,92 @@ const FacetModal = ({ intl, facet, onChange }) => {
 
     return (
         <Popup
-            trigger={open => (
-                <div className='py-3 flex items-center border-b border-gray-300'>
-                    <span className='mr-auto text-base text-gray-900 capitalize leading-normal'>
-                        {getFacetName()}
-                    </span>
-
-                    {facet.selected && (
-                        <span className='w-32 truncate text-sm text-gray-600 text-right leading-normal'>
-                            {facet.type === 'range' && (
-                                <>
-                                    {(facet.value.min / 100).toFixed(2)} €  -  {(facet.value.max / 100).toFixed(2)} €
-                                </>
-                            )}
-                            {facet.type === 'term' && (
-                                <>
-                                    {facet.terms.filter(term => term.selected).map((term, index) => {
-                                        return (
-                                            <span key={index}>
-                                                {index > 0 ? ', ': ''} {term.name}
-                                            </span>
-                                        )
-                                    })}
-                                </>
-                            )}                                
+            trigger={open => {
+                return (
+                    <div className='py-3 flex items-center border-b border-gray-300'>
+                        <span className='mr-auto text-base text-gray-900 capitalize leading-normal'>
+                            {getFacetName()}
                         </span>
-                    )}
-
-                    <IconChevronRight className='ml-4 w-4 h-4 inline-block' />
-                </div>
-            )}
-            modal
-            nested
-            contentStyle={{ padding: "0px", border: "none", width: "100vw", height: "100vh", backgroundColor: '#E5E5E5' }}
-        >
-            {close => (
-                <>
-                    <div className='h-8 mb-1 px-4 py-3 flex items-center shadow bg-white box-content'>
-                        <button 
-                            aria-label={intl.formatMessage({ id: 'filters.filters' })}
-                            className='h-8 text-base text-gray-900 font-bold leading-tight'
-                            onClick={close}
-                        >
-                            <IconChevronLeft className='w-6 h-6 mr-1 inline-block' />
-
-                            <FormattedMessage id='filters.filters' />
-                        </button>
 
                         {facet.selected && (
-                            <button 
-                                aria-label={intl.formatMessage({ id: 'filters.clear' })}
-                                className='ml-auto px-6 h-full text-center text-base text-gray-900 leading-tight border border-gray-900 rounded'
-                                onClick={onClearClicked}
+                            <span className='w-32 truncate text-sm text-gray-600 text-right leading-normal'>
+                                {facet.type === 'range' && (
+                                    <>
+                                        {(facet.value.min / 100).toFixed(2)} €  -  {(facet.value.max / 100).toFixed(2)} €
+                                    </>
+                                )}
+
+                                {facet.type === 'term' && (
+                                    <>
+                                        {facet.terms.filter(term => { return term.selected }).map((term, index) => {
+                                            return (
+                                                <span key={index}>
+                                                    {index > 0 ? ', ' : ''} {term.name}
+                                                </span>
+                                            )
+                                        })}
+                                    </>
+                                )}
+                            </span>
+                        )}
+
+                        <IconChevronRight className='ml-4 w-4 h-4 inline-block' />
+                    </div>
+                )
+            }}
+            modal
+            nested
+            contentStyle={{ padding: '0px', border: 'none', width: '100vw', height: '100vh', backgroundColor: '#E5E5E5' }}
+            >
+            {close => {
+                return (
+                    <>
+                        <div className='h-8 mb-1 px-4 py-3 flex items-center shadow bg-white box-content'>
+                            <button
+                                aria-label={intl.formatMessage({ id: 'filters.filters' })}
+                                className='h-8 text-base text-gray-900 font-bold leading-tight'
+                                onClick={close}
                             >
-                                <FormattedMessage id='filters.clear' />
+                                <IconChevronLeft className='w-6 h-6 mr-1 inline-block' />
+
+                                <FormattedMessage id='filters.filters' />
                             </button>
-                        )}
-                    </div>
 
-                    <div className='px-4 pt-2 bg-white'>
-                        {facet.type === 'term' && (
-                            <div className='overflow-y-scroll' style={{ height: 'calc(100vh - 105px)'}}>
-                                <TermFacet facet={facet} onChange={onFacetChanged} />
-                            </div>
-                        )}
+                            {facet.selected && (
+                                <button
+                                    aria-label={intl.formatMessage({ id: 'filters.clear' })}
+                                    className='ml-auto px-6 h-full text-center text-base text-gray-900 leading-tight border border-gray-900 rounded'
+                                    onClick={onClearClicked}
+                                >
+                                    <FormattedMessage id='filters.clear' />
+                                </button>
+                            )}
+                        </div>
 
-                        {facet.type === 'range' && (
-                            <RangeFacet facet={facet} onChange={onFacetChanged} />
-                        )}
-                    </div>
+                        <div className='px-4 pt-2 bg-white'>
+                            {facet.type === 'term' && (
+                                <div className='overflow-y-scroll' style={{ height: 'calc(100vh - 105px)' }}>
+                                    <TermFacet facet={facet} onChange={onFacetChanged} />
+                                </div>
+                            )}
 
-                    <div className='fixed bottom-0 w-full h-10 bg-gray-900'>
-                        <button 
-                            aria-label={intl.formatMessage({ id: 'filters.apply' })}
-                            className='w-full h-full text-base text-white font-bold leading-normal' 
-                            onClick={() => { onApplyClicked(close) }}
-                        >
-                            <FormattedMessage id='filters.apply' />
-                        </button>
-                    </div>
-                </>
-            )}
+                            {facet.type === 'range' && (
+                                <RangeFacet facet={facet} onChange={onFacetChanged} />
+                            )}
+                        </div>
+
+                        <div className='fixed bottom-0 w-full h-10 bg-gray-900'>
+                            <button
+                                aria-label={intl.formatMessage({ id: 'filters.apply' })}
+                                className='w-full h-full text-base text-white font-bold leading-normal'
+                                onClick={() => { onApplyClicked(close) }}
+                            >
+                                <FormattedMessage id='filters.apply' />
+                            </button>
+                        </div>
+                    </>
+                )
+            }}
         </Popup>
     )
 }

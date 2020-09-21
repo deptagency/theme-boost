@@ -21,14 +21,8 @@
                     "default": true
                 },
                 {
-                    "label": "Show sidebar",
-                    "field": "showSidebar",
-                    "type": "boolean",
-                    "default": true
-                },
-                {
-                    "label": "Show infinity scroll",
-                    "field": "showIninityScroll",
+                    "label": "Use infinity scroll",
+                    "field": "showInfinityScroll",
                     "type": "boolean",
                     "default": true
                 },
