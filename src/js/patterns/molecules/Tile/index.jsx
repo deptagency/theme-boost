@@ -32,6 +32,7 @@ const Tile = ({
     }
 
     const Component = isClickable ? Reference : 'div'
+    const ButtonComponent = isClickable ? 'div' : Reference
 
     return (
         <Component
@@ -78,7 +79,7 @@ const Tile = ({
                 )}
 
                 {buttonLabel && reference && (
-                    <Reference
+                    <ButtonComponent
                         reference={
                             reference || {
                                 type: null,
@@ -91,7 +92,7 @@ const Tile = ({
                         })}
                     >
                         {buttonLabel}
-                    </Reference>
+                    </ButtonComponent>
                 )}
             </div>
         </Component>
