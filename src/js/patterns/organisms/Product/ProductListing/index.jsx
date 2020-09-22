@@ -46,21 +46,17 @@ const ProductListing = ({ data, sortState, onFacetsChanged, onLoadNextPage, onSo
                                 <SortDesktopPopup sortState={sortState} onChange={onSortChange} />
                             </div>
 
-                            {data.stream.facets.map((facet, index) => {
-                                if (!(facet.type === 'term' && facet.terms.length === 0)) {
-                                    return (
-                                        <div className='mt-4'>
-                                            <FacetPopup
-                                                key={index}
-                                                initialFacet={facet}
-                                                onChange={(newFacet) => { onFacetChange(newFacet, index) }}
-                                                onClear={(newFacet) => { onFacetChange(newFacet, index) }}
-                                            />
-                                        </div>
-                                    )
-                                } else {
-                                    return null
-                                }
+                            {data.stream.facets.filter(facet => { return facet.type === 'term' && facet.terms.length === 0 }).map((facet, index) => {
+                                return (
+                                    <div className='mt-4'>
+                                        <FacetPopup
+                                            key={index}
+                                            initialFacet={facet}
+                                            onChange={(newFacet) => { onFacetChange(newFacet, index) }}
+                                            onClear={(newFacet) => { onFacetChange(newFacet, index) }}
+                                        />
+                                    </div>
+                                )
                             })}
                         </div>
                     </div>

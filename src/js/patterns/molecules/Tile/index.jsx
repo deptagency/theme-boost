@@ -105,7 +105,7 @@ Tile.propTypes = {
     verticalPosition: PropTypes.string.isRequired,
     horizontalPosition: PropTypes.string.isRequired,
     buttonLabel: PropTypes.string.isRequired,
-    reference: PropTypes.object.isRequired,
+    reference: PropTypes.object,
     isClickable: PropTypes.bool.isRequired,
     caption: PropTypes.string,
 }
