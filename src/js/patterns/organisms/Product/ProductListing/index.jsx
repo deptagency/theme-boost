@@ -47,7 +47,7 @@ const ProductListing = ({ data, sortState, onFacetsChanged, onLoadNextPage, onSo
                             </div>
 
                             {data.stream.facets.map((facet, index) => {
-                                if (!(facet.type === 'term' && facet.terms.length == 0)) {
+                                if (!(facet.type === 'term' && facet.terms.length === 0)) {
                                     return (
                                         <div className='mt-4'>
                                             <FacetPopup
@@ -58,6 +58,8 @@ const ProductListing = ({ data, sortState, onFacetsChanged, onLoadNextPage, onSo
                                             />
                                         </div>
                                     )
+                                } else {
+                                    return null
                                 }
                             })}
                         </div>

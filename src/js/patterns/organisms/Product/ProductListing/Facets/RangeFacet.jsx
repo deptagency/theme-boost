@@ -4,8 +4,6 @@ import PropTypes from 'prop-types'
 import RangeSlider from 'Atoms/rangeSlider'
 
 const RangeFacet = ({ facet, onChange }) => {
-    const [, useForceUpdate] = useState()
-
     const min = Math.round(facet.min / 100)
     const max = Math.round(facet.max / 100)
 
@@ -33,8 +31,6 @@ const RangeFacet = ({ facet, onChange }) => {
 
         facet.value.min = v[0] * 100
         facet.value.max = v[1] * 100
-
-        useForceUpdate({})
 
         if (onChange) {
             onChange(facet)
