@@ -1,18 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import FacetService from './../FacetService'
 import { ReactComponent as IconCheck } from 'Icons/check.svg'
 
 const TermFacet = ({ facet, onChange }) => {
-    const [, useForceUpdate] = useState()
-
     const onTermClicked = (term) => {
         term.selected = !term.selected
 
         facet.selected = facet.terms.some(term => { return term.selected === true })
-
-        useForceUpdate({})
 
         if (onChange) {
             onChange(facet)

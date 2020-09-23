@@ -89,7 +89,7 @@ class FacetService {
         }
 
         if (facet.type === 'term') {
-            facet.terms.forEach(term => { return term.selected = false })
+            facet.terms.forEach(term => { term.selected = false })
         }
     }
 

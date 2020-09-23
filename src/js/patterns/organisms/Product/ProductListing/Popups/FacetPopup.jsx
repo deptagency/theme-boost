@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
@@ -13,14 +13,10 @@ import { ReactComponent as IconChevronUp } from 'Icons/tailwind-icons/icon-chevr
 import { ReactComponent as IconChevronDown } from 'Icons/tailwind-icons/icon-cheveron-down.svg'
 
 const FacetPopup = ({ intl, initialFacet, onChange }) => {
-    const [, useForceUpdate] = useState()
-
     const [facet, setFacet] = useState({ ...initialFacet })
 
     const onOpenPopup = () => {
         setFacet({ ...initialFacet })
-
-        useForceUpdate({})
     }
 
     const getFacetName = () => {
@@ -34,8 +30,6 @@ const FacetPopup = ({ intl, initialFacet, onChange }) => {
     const onApplyClick = (closeCallback) => {
         closeCallback()
 
-        useForceUpdate({})
-
         if (onChange) {
             onChange({ ...facet })
         }
@@ -45,8 +39,6 @@ const FacetPopup = ({ intl, initialFacet, onChange }) => {
         FacetService.clearFacet(facet)
 
         closeCallback()
-
-        useForceUpdate({})
 
         if (onChange) {
             onChange({ ...facet })

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import Popup from 'reactjs-popup'
@@ -12,25 +12,18 @@ import { ReactComponent as IconChevronLeft } from 'Icons/tailwind-icons/icon-che
 import { ReactComponent as IconChevronRight } from 'Icons/tailwind-icons/icon-cheveron-right.svg'
 
 const FacetModal = ({ intl, facet, onChange }) => {
-    const [, useForceUpdate] = useState()
-
     const getFacetName = () => {
         return FacetService.getFacetName(facet)
     }
 
     const onClearClicked = () => {
         FacetService.clearFacet(facet)
-
-        useForceUpdate({})
     }
 
     const onFacetChanged = () => {
-        useForceUpdate({})
     }
 
     const onApplyClicked = (closeCallback) => {
-        useForceUpdate({})
-
         onChange(facet)
 
         closeCallback()

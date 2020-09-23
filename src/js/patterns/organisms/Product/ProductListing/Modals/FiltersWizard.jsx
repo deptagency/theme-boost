@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import Popup from 'reactjs-popup'
@@ -10,8 +10,6 @@ import FacetService from './../FacetService'
 import { ReactComponent as IconX } from 'Icons/tailwind-icons/icon-x.svg'
 
 const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
-    const [, useForceUpdate] = useState()
-
     const anySelectedFacets = () => {
         return FacetService.anySelectedFacets(data.stream.facets)
     }
@@ -23,14 +21,10 @@ const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
     const onClearAllClicked = () => {
         FacetService.clearFacets(data.stream.facets)
 
-        useForceUpdate({})
-
         onFacetsChanged(data.stream.facets)
     }
 
     const onFacetChanged = () => {
-        useForceUpdate({})
-
         onFacetsChanged(data.stream.facets)
     }
 
@@ -78,16 +72,14 @@ const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
                         </div>
 
                         <div className='px-4 pt-2 bg-white'>
-                            {data.stream.facets.map((facet, index) => {
-                                if (!(facet.type === 'term' && facet.terms.length == 0)) {
-                                    return (
-                                        <FacetModal
-                                            key={index}
-                                            facet={facet}
-                                            onChange={onFacetChanged}
-                                        />
-                                    )
-                                }
+                            {data.stream.facets.filter(facet => { return facet.type === 'term' && facet.terms.length === 0 }).map((facet, index) => {
+                                return (
+                                    <FacetModal
+                                        key={index}
+                                        facet={facet}
+                                        onChange={onFacetChanged}
+                                    />
+                                )
                             })}
                         </div>
 
