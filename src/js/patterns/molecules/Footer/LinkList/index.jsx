@@ -18,13 +18,13 @@ const LinkList = ({ header, headerIcon, links }) => {
 
     return (
         <div className='flex flex-col'>
-            <div className='mb-4 flex items-center text-sm font-bold leading-tight text-neutral-100'>
-                {Icon && (
-                    <Icon className='mr-2 w-4 h-4 inline-block text-neutral-200 fill-current' />
-                )}
+            {header && (
+                <div className='mb-4 flex items-center text-sm font-bold leading-tight text-neutral-100'>
+                    {Icon && <Icon className='mr-2 w-4 h-4 inline-block text-neutral-200 fill-current' />}
 
-                {header}
-            </div>
+                    {header}
+                </div>
+            )}
 
             <List
                 links={links}

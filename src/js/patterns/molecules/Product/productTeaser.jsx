@@ -10,7 +10,7 @@ import Sticker from 'Atoms/sticker'
 import Price from 'Atoms/price'
 import WishlistButton from 'Atoms/button/wishlistButton'
 
-function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice }) {
+function ProductTeaser ({ product, classNames, onAddToWishlist, showPercent, showStrikePrice }) {
     const wishlist = useSelector((state) => {
         return state.wishlist.wishlist
     })
@@ -37,7 +37,7 @@ function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice
 
     return (
         <article
-            className='w-1/2 lg:w-1/3 overflow-hidden px-2 pb-5 text-neutral-900'
+            className={`overflow-hidden px-2 pb-5 text-neutral-900 ${classNames}`}
             itemScope
             itemType='http://schema.org/Product'
             >
@@ -59,7 +59,7 @@ function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice
                         </Sticker>
                     )}
                     <WishlistButton
-                        className='absolute right-0 top-0 mt-3 mr-3 z-20 text-lg'
+                        className='absolute right-0 top-0 mt-3 mr-3 text-lg'
                         onClick={toggleWishlist}
                         active={!!isWishlisted()}
                     />
@@ -84,6 +84,7 @@ function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice
 }
 
 ProductTeaser.propTypes = {
+    classNames: PropTypes.string,
     product: PropTypes.object.isRequired,
     showPercent: PropTypes.bool,
     showStrikePrice: PropTypes.bool,

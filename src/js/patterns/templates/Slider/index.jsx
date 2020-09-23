@@ -15,6 +15,9 @@ const sliderSettings = {
     center: true,
     nav: false,
     responsive: {
+        300: {
+            items: 1,
+        },
         420: {
             items: 2,
         },
