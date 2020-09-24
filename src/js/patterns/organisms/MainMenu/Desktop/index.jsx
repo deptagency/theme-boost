@@ -38,6 +38,7 @@ const Desktop = ({
         }
     }
 
+    /* eslint-disable arrow-body-style */
     const handleSearchToggle = () => setIsSearch(!isSearch)
 
     return (

@@ -38,6 +38,7 @@ const Mobile = ({
 
     const ref = useRef(null)
 
+    /* eslint-disable arrow-body-style */
     const handleSearchToggle = () => setIsSearch(!isSearch)
 
     if (!topCategories) {
