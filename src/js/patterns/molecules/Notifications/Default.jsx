@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
+
 import AlertSuccess from 'Atoms/alert/Success'
 import AlertError from 'Atoms/alert/Error'
 
@@ -12,13 +14,18 @@ const DefaultNotifications = ({ notifications }) => {
     const notify = (lastNotification) => {
         return toast(
             <>
-                {lastNotification.type === 'success' && <AlertSuccess key={lastNotification.notificationId} message={lastNotification.message} />}
-                {lastNotification.type === 'error' && <AlertError key={lastNotification.notificationId} message={lastNotification.message} />}
-            </>
-            , {
+                {lastNotification.type === 'success' && (
+                    <AlertSuccess key={lastNotification.notificationId} message={lastNotification.message} />
+                )}
+                {lastNotification.type === 'error' && (
+                    <AlertError key={lastNotification.notificationId} message={lastNotification.message} />
+                )}
+            </>,
+            {
                 className: 'notification-default',
                 toastId: lastNotification.notificationId,
-            })
+            }
+        )
     }
 
     useEffect(() => {
@@ -49,4 +56,4 @@ DefaultNotifications.propTypes = {
     notifications: PropTypes.object.isRequired,
 }
 
-export default DefaultNotifications
+export default tastify({ connect: { notifications: true } })(DefaultNotifications)
