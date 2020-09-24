@@ -46,7 +46,7 @@ const ProductListing = ({ data, sortState, onFacetsChanged, onLoadNextPage, onSo
                                 <SortDesktopPopup sortState={sortState} onChange={onSortChange} />
                             </div>
 
-                            {data.stream.facets.filter(facet => { return facet.type === 'term' && facet.terms.length === 0 }).map((facet, index) => {
+                            {data.stream.facets.filter(facet => { return !(facet.type === 'term' && facet.terms.length === 0) }).map((facet, index) => {
                                 return (
                                     <div className='mt-4'>
                                         <FacetPopup
