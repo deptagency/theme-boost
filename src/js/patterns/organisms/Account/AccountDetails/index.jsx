@@ -6,14 +6,16 @@ import { FormattedMessage } from 'react-intl'
 import useMdBreakpoint from 'Molecules/Layout/Breakpoints/useMdBreakpoint'
 import PanelModalResponsive from 'Molecules/Layout/PanelModalResponsive'
 import PanelBlockResponsive from 'Molecules/Layout/PanelBlockResponsive'
-import DefaultNotifications from 'Molecules/Notifications/Default'
 import PersonalDetailsForm from '../Forms/PersonalDetailsForm'
 import ChangePasswordForm from '../Forms/ChangePasswordForm'
 import AccountDetailsOverview from './Overview'
 
 const AccountDetails = ({
-    firstName, lastName, email,
-    openPanel, onClose,
+    firstName,
+    lastName,
+    email,
+    openPanel,
+    onClose,
     handlePasswordChange,
     handleUpdateUserDetails,
 }) => {
@@ -38,7 +40,7 @@ const AccountDetails = ({
                 title={<FormattedMessage id='account.accountDetails' />}
                 isOpen={openPanel}
                 onClose={onClose}
-                >
+            >
                 <AccountDetailsOverview
                     firstName={firstName}
                     lastName={lastName}
@@ -57,10 +59,14 @@ const AccountDetails = ({
             <PanelModalResponsive
                 title={<FormattedMessage id='account.editDetails' />}
                 openPanel={showEditDetailsPanel}
-                closePanel={() => { return setShowEditDetailsPanel(false) }}
+                closePanel={() => {
+                    return setShowEditDetailsPanel(false)
+                }}
                 openModal={showEditDetailsModal}
-                closeModal={() => { return setShowEditDetailsModal(false) }}
-                >
+                closeModal={() => {
+                    return setShowEditDetailsModal(false)
+                }}
+            >
                 <PersonalDetailsForm
                     firstName={firstName}
                     lastName={lastName}
@@ -75,10 +81,14 @@ const AccountDetails = ({
             <PanelModalResponsive
                 title={<FormattedMessage id='account.changePassword' />}
                 openPanel={showChangePasswordPanel}
-                closePanel={() => { return setShowChangePasswordPanel(false) }}
+                closePanel={() => {
+                    return setShowChangePasswordPanel(false)
+                }}
                 openModal={showChangePasswordModal}
-                closeModal={() => { return setShowChangePasswordModal(false) }}
-                >
+                closeModal={() => {
+                    return setShowChangePasswordModal(false)
+                }}
+            >
                 <ChangePasswordForm
                     showLoader={showLoader}
                     onSubmit={(oldPassword, newPassword) => {
@@ -87,8 +97,6 @@ const AccountDetails = ({
                     }}
                 />
             </PanelModalResponsive>
-
-            <DefaultNotifications notifications={notifications} />
         </>
     )
 }
