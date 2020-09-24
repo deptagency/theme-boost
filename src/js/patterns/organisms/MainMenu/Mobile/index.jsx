@@ -5,12 +5,13 @@ import MediaImage from '@frontastic/catwalk/src/js/mediaImage'
 import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
 
 import Modal from './Modal'
-import Widgets from '../Widgets'
+import IconNavigation from '../IconNavigation'
 
 import { ReactComponent as MenuOpen } from 'Icons/tailwind-icons/icon-menu-open.svg'
 
 import { categoryTreeType, topCategoryType } from '../types'
 import { useLevel } from '../mainMenuState'
+import SearchForm from '../SearchForm'
 
 const Mobile = ({
     topCategories,
@@ -32,9 +33,12 @@ const Mobile = ({
     contactHeaderIcon,
 }) => {
     const [isOpen, setIsOpen] = useState(false)
+    const [isSearch, setIsSearch] = useState(false)
     const [level, setLevel] = useLevel(0)
 
     const ref = useRef(null)
+
+    const handleSearchToggle = () => setIsSearch(!isSearch)
 
     if (!topCategories) {
         return null
@@ -55,14 +59,20 @@ const Mobile = ({
                             <MediaImage media={logo} />
                         </a>
                     </div>
-                    <Widgets
+                    <IconNavigation
                         cartItemsCount={cartItemsCount}
                         goToCartPage={goToCartPage}
                         wishListLineItemsCount={wishListLineItemsCount}
                         goToWishlistPage={goToWishlistPage}
                         goToProfilePage={goToProfilePage}
+                        onSearchToggle={handleSearchToggle}
                     />
                 </div>
+                {isSearch && (
+                    <div className='px-5 py-2'>
+                        <SearchForm onCancelSearch={handleSearchToggle} />
+                    </div>
+                )}
             </FullPageWidthWrapper>
 
             <Modal
