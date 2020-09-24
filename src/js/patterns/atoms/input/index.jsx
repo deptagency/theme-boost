@@ -2,8 +2,24 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 
-const Input = ({ id, type, name, placeholder, className, checked, disabled, required, hidden,
-    onChange, value, min, max, step, ref }) => {
+const Input = ({
+    id,
+    type,
+    name,
+    placeholder,
+    className,
+    checked,
+    disabled,
+    required,
+    hidden,
+    onChange,
+    value,
+    min,
+    max,
+    step,
+    ref,
+    autoFocus,
+}) => {
     return (
         <input
             aria-label={placeholder || name}
@@ -22,6 +38,7 @@ const Input = ({ id, type, name, placeholder, className, checked, disabled, requ
             max={max}
             step={step}
             ref={ref}
+            autoFocus={autoFocus}
         />
     )
 }
@@ -42,6 +59,7 @@ Input.propTypes = {
     max: PropTypes.number,
     step: PropTypes.number,
     ref: PropTypes.func,
+    autoFocus: PropTypes.bool,
 }
 
 Input.defaultProps = {
@@ -59,6 +77,7 @@ Input.defaultProps = {
     max: undefined,
     step: undefined,
     ref: undefined,
+    autoFocus: false,
 }
 
 export default ComponentInjector.return('Input', Input)
