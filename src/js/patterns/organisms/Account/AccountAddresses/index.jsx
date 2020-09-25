@@ -49,7 +49,7 @@ const AccountAddresses = ({
                 title={<FormattedMessage id='account.accountDetails' />}
                 isOpen={openPanel}
                 onClose={onClose}
-            >
+                >
                 <div className='md:shadow-lg'>
                     <div className='border-b-4 border-neutral-200' />
 
@@ -107,7 +107,7 @@ const AccountAddresses = ({
                 closeModal={() => {
                     return setShowCreateAddressModal(false)
                 }}
-            >
+                >
                 <AddressForm
                     countries={countries}
                     showLoader={showLoader}
@@ -130,7 +130,7 @@ const AccountAddresses = ({
                     closeModal={() => {
                         return setShowEditAddressModal(false)
                     }}
-                >
+                    >
                     <AddressForm
                         countries={countries}
                         defaultValues={activeAddress}
@@ -155,7 +155,7 @@ const AccountAddresses = ({
                     closeModal={() => {
                         return setShowDeleteAddressModal(false)
                     }}
-                >
+                    >
                     <RemoveAddressForm
                         countries={countries}
                         address={activeAddress}
