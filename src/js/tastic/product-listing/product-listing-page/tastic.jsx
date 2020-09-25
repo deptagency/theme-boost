@@ -14,7 +14,7 @@ import urlHandlerConnector from '@frontastic/catwalk/src/js/app/connector/urlHan
 import ProductListing from 'Organisms/Product/ProductListing'
 import CategoryNavigationTree from 'Molecules/Product/CategoryNavigationTree'
 
-function ProductListingPageTastic ({ data, node, route, tastic, urlHandler }) {
+function ProductListingPageTastic({ data, node, route, tastic, urlHandler }) {
     if (!urlHandler) {
         return null
     }
@@ -70,7 +70,7 @@ function ProductListingPageTastic ({ data, node, route, tastic, urlHandler }) {
             stream.setOffset(0)
             stream.setLimit(24)
 
-            facets.forEach(facet => {
+            facets.forEach((facet) => {
                 if (facet.selected) {
                     if (facet.type === 'range') {
                         stream.setFilter(facet.handle, {
@@ -80,7 +80,13 @@ function ProductListingPageTastic ({ data, node, route, tastic, urlHandler }) {
                     }
 
                     if (facet.type === 'term') {
-                        var newTerms = facet.terms.filter(facet => { return facet.selected === true }).map(facet => { return facet.value })
+                        var newTerms = facet.terms
+                            .filter((facet) => {
+                                return facet.selected === true
+                            })
+                            .map((facet) => {
+                                return facet.value
+                            })
 
                         if (newTerms) {
                             stream.setFilter(facet.handle, {
@@ -104,19 +110,13 @@ function ProductListingPageTastic ({ data, node, route, tastic, urlHandler }) {
                     <CategoryNavigationTree title={data.sidebarHeader} navTree={data.tree} currentPage={node} />
                 </div>
             )}
-            <div className={classnames({
+            <div
+                className={classnames({
                     'w-full': true,
                     'md:w-3/4': data.showSidebar,
-                })}>
+                })}
+            >
                 <div className='flex flex-col'>
-                    <div className='md:hidden mt-10 text-sm text-center text-gray-900'>
-                        {data.sidebarHeader}
-                    </div>
-
-                    <div className='md:hidden text-2xl font-bold text-center text-gray-900'>
-                        {node.name}
-                    </div>
-
                     <ProductListing
                         data={data}
                         sortState={sortState}
@@ -145,16 +145,18 @@ ProductListingPageTastic.propTypes = {
     urlHandler: PropTypes.instanceOf(UrlHandler),
 }
 
-export default tastify({ translate: true, connect: { node: true, tastic: true, route: true, urlHandler: true } })(compose(
-    connect(facetConnector),
-    connect(categoryConnector),
-    connect(urlHandlerConnector),
-    connect((globalState) => {
-        let streamParameters = globalState.app.route.parameters.s || {}
+export default tastify({ translate: true, connect: { node: true, tastic: true, route: true, urlHandler: true } })(
+    compose(
+        connect(facetConnector),
+        connect(categoryConnector),
+        connect(urlHandlerConnector),
+        connect((globalState) => {
+            let streamParameters = globalState.app.route.parameters.s || {}
 
-        return {
-            route: globalState.app.route,
-            streamParameters: streamParameters,
-        }
-    }),
-)(ProductListingPageTastic))
+            return {
+                route: globalState.app.route,
+                streamParameters: streamParameters,
+            }
+        })
+    )(ProductListingPageTastic)
+)
