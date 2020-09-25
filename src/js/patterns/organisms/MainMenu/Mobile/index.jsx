@@ -49,7 +49,8 @@ const Mobile = ({
         <>
             <FullPageWidthWrapper className='shadow-md'>
                 <div className='grid grid-cols-2 h-12 max-w-1240px m-center px-5'>
-                    <div className='flex'>
+                    <div className='flex h-12'>
+                        {/* extra h-12 is dirty but for some reason it wouldn't budge */}
                         <MenuOpen
                             className='self-center cursor-pointer text-2xl'
                             onClick={() => {
