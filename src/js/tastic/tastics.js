@@ -1,5 +1,7 @@
 import asyncComponent from '@frontastic/catwalk/src/js/component/asyncComponent'
 
+import '../injections'
+
 import MarkdownTastic from './content/markdown/tastic'
 import ShowcaseTextTastic from './content/showcase-text/tastic'
 import NewsletterBlockTastic from './forms/newsletter-block/tastic'

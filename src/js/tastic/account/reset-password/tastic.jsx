@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import AtomsButton from '@frontastic/catwalk/src/js/patterns/atoms/buttons/button'
 import AtomsHeading from '@frontastic/catwalk/src/js/patterns/atoms/headings/heading'
-import Notifications from '@frontastic/catwalk/src/js/component/notifications'
 
 import app from '@frontastic/catwalk/src/js/app/app'
 
@@ -24,7 +23,6 @@ class ResetPasswordTastic extends Component {
         return (<div className='o-layout'>
             <div className='o-layout__item u-1/1'>
                 <AtomsHeading type='alpha'>Reset Password</AtomsHeading>
-                <Notifications />
                 <form className='c-form'>
                     <div className='c-form__item'>
                         <label htmlFor='profile_password_new' className='c-form__label c-form__label--required'>Neues Password</label>

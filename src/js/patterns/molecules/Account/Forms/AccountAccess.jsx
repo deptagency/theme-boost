@@ -6,8 +6,6 @@ import Login from './Login'
 import ForgottenPassword from './ForgottenPassword'
 import './style.scss'
 
-import DefaultNotifications from 'Molecules/Notifications/Default'
-
 const FORM_TYPE = {
     LOGIN: 'LOGIN',
     REGISTER: 'REGISTER',
@@ -29,39 +27,51 @@ const AccountAccess = ({ handleRegister, handleLogin, handleRequestPasswordReset
 
     return (
         <>
-            {(form === FORM_TYPE.LOGIN) && <div style={{ animation: showEasy }}>
-                <Login
-                    showLoader={showLoader}
-                    showRegisterForm={() => { setFrom(FORM_TYPE.REGISTER) }}
-                    showForgottenPasswordForm={() => { setFrom(FORM_TYPE.FORGOTTEN_PASSWORD) }}
-                    handleLogin={(email, password) => {
-                        setShowLoader(true)
-                        handleLogin(email, password)
-                    }}
-                />
-            </div>}
-            {(form === FORM_TYPE.REGISTER) && <div style={{ animation: showEasy }}>
-                <Register
-                    showLoader={showLoader}
-                    showLoginForm={() => { setFrom(FORM_TYPE.LOGIN) }}
-                    handleRegister={(data) => {
-                        setShowLoader(true)
-                        handleRegister(data)
-                    }}
-                />
-            </div>}
-            {(form === FORM_TYPE.FORGOTTEN_PASSWORD) && <div style={{ animation: showEasy }}>
-                <ForgottenPassword
-                    showLoader={showLoader}
-                    showLoginForm={() => { setFrom(FORM_TYPE.LOGIN) }}
-                    handleRequestPasswordReset={(email) => {
-                        setShowLoader(true)
-                        handleRequestPasswordReset(email)
-                    }}
-                />
-            </div>}
-
-            <DefaultNotifications notifications={notifications} />
+            {form === FORM_TYPE.LOGIN && (
+                <div style={{ animation: showEasy }}>
+                    <Login
+                        showLoader={showLoader}
+                        showRegisterForm={() => {
+                            setFrom(FORM_TYPE.REGISTER)
+                        }}
+                        showForgottenPasswordForm={() => {
+                            setFrom(FORM_TYPE.FORGOTTEN_PASSWORD)
+                        }}
+                        handleLogin={(email, password) => {
+                            setShowLoader(true)
+                            handleLogin(email, password)
+                        }}
+                    />
+                </div>
+            )}
+            {form === FORM_TYPE.REGISTER && (
+                <div style={{ animation: showEasy }}>
+                    <Register
+                        showLoader={showLoader}
+                        showLoginForm={() => {
+                            setFrom(FORM_TYPE.LOGIN)
+                        }}
+                        handleRegister={(data) => {
+                            setShowLoader(true)
+                            handleRegister(data)
+                        }}
+                    />
+                </div>
+            )}
+            {form === FORM_TYPE.FORGOTTEN_PASSWORD && (
+                <div style={{ animation: showEasy }}>
+                    <ForgottenPassword
+                        showLoader={showLoader}
+                        showLoginForm={() => {
+                            setFrom(FORM_TYPE.LOGIN)
+                        }}
+                        handleRequestPasswordReset={(email) => {
+                            setShowLoader(true)
+                            handleRequestPasswordReset(email)
+                        }}
+                    />
+                </div>
+            )}
         </>
     )
 }
