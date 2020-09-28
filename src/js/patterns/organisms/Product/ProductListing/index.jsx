@@ -13,7 +13,19 @@ import SortDesktopPopup from './Popups/SortDesktopPopup'
 
 import FiltersWizard from './Modals/FiltersWizard'
 
-const ProductListing = ({ data, sortState, onFacetsChanged, onLoadNextPage, onSortChange, onAddToWishlist, showPercent, isFullWidth, showStrikePrice, showFacets, showInfinityScroll }) => {
+const ProductListing = ({
+    data,
+    sortState,
+    onFacetsChanged,
+    onLoadNextPage,
+    onSortChange,
+    onAddToWishlist,
+    showPercent,
+    isFullWidth,
+    showStrikePrice,
+    showFacets,
+    showInfinityScroll,
+}) => {
     const { ref, inView } = useInView({
         threshold: [0.25, 0.5, 0.75],
     })
@@ -46,24 +58,32 @@ const ProductListing = ({ data, sortState, onFacetsChanged, onLoadNextPage, onSo
                                 <SortDesktopPopup sortState={sortState} onChange={onSortChange} />
                             </div>
 
-                            {data.stream.facets.filter(facet => { return facet.type === 'term' && facet.terms.length === 0 }).map((facet, index) => {
-                                return (
-                                    <div className='mt-4'>
-                                        <FacetPopup
-                                            key={index}
-                                            initialFacet={facet}
-                                            onChange={(newFacet) => { onFacetChange(newFacet, index) }}
-                                            onClear={(newFacet) => { onFacetChange(newFacet, index) }}
-                                        />
-                                    </div>
-                                )
-                            })}
+                            {data.stream.facets
+                                .filter((facet) => {
+                                    return !(facet.type === 'term' && facet.terms.length === 0)
+                                })
+                                .map((facet, index) => {
+                                    return (
+                                        <div className='mt-4'>
+                                            <FacetPopup
+                                                key={index}
+                                                initialFacet={facet}
+                                                onChange={(newFacet) => {
+                                                    onFacetChange(newFacet, index)
+                                                }}
+                                                onClear={(newFacet) => {
+                                                    onFacetChange(newFacet, index)
+                                                }}
+                                            />
+                                        </div>
+                                    )
+                                })}
                         </div>
                     </div>
                 </>
             )}
 
-            <p className='mt-4 text-xs text-neutral-700 text-center'>
+            <p className='mt-4 text-xs text-neutral-500 text-center'>
                 {data.stream.total || 0} <FormattedMessage id='filters.productsFound' />
             </p>
 
@@ -87,9 +107,7 @@ const ProductListing = ({ data, sortState, onFacetsChanged, onLoadNextPage, onSo
                 </div>
             )}
 
-            {showInfinityScroll && data.stream.count < data.stream.total && (
-                <div ref={ref} className='w-full h-1' />
-            )}
+            {showInfinityScroll && data.stream.count < data.stream.total && <div ref={ref} className='w-full h-1' />}
 
             {!showInfinityScroll && data.stream.count < data.stream.total && (
                 <div className='flex justify-center'>

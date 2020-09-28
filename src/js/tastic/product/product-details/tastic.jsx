@@ -6,9 +6,8 @@ import productConnector from '@frontastic/catwalk/src/js/tastic/product/connecto
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 import ProductDetails from 'Organisms/Product/ProductDetails'
-import DefaultNotifications from 'Molecules/Notifications/Default'
 
-const ProductDetailsTastic = ({ product, wishlist, notifications }) => {
+const ProductDetailsTastic = ({ product, wishlist }) => {
     if (!product || !wishlist.isComplete()) {
         return null
     }
@@ -29,13 +28,13 @@ const ProductDetailsTastic = ({ product, wishlist, notifications }) => {
                     app.getLoader('wishlist').add(product, product.variants[0], 1, null)
                 }}
                 handleRemoveFromWishlist={() => {
-                    !!wishlistItem && app.getLoader('wishlist').removeLineItem(wishlist.data.wishlistId, {
-                        lineItemId: wishlistItem.lineItemId,
-                    })
+                    !!wishlistItem &&
+                        app.getLoader('wishlist').removeLineItem(wishlist.data.wishlistId, {
+                            lineItemId: wishlistItem.lineItemId,
+                        })
                 }}
                 wishlisted={!!wishlistItem}
             />
-            <DefaultNotifications notifications={notifications} />
         </>
     )
 }
@@ -43,9 +42,10 @@ const ProductDetailsTastic = ({ product, wishlist, notifications }) => {
 ProductDetailsTastic.propTypes = {
     product: PropTypes.object,
     wishlist: PropTypes.object,
-    notifications: PropTypes.object,
 }
 
 ProductDetailsTastic.defaultProps = {}
 
-export default tastify({ translate: true, connect: { wishlist: true, notifications: true } })(connect(productConnector)(ProductDetailsTastic))
+export default tastify({ translate: true, connect: { wishlist: true } })(
+    connect(productConnector)(ProductDetailsTastic)
+)

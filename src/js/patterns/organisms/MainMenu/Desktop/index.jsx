@@ -6,7 +6,7 @@ import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
 import TopCategories from './TopCategories'
 import DesktopMenu from './Navigation'
 import NavigationExpansionPanel from './NavigationExpansionPanel'
-import Widgets from '../Widgets'
+import IconNavigation from '../IconNavigation'
 
 import { categoryTreeType, topCategoryType } from '../types'
 
@@ -24,6 +24,7 @@ const Desktop = ({
     goToProfilePage,
 }) => {
     const [isExpanded, setIsExpanded] = useState(false)
+    const [isSearch, setIsSearch] = useState(false)
     const [hoveredMenuItem, setHoveredMenuItem] = useState(undefined)
 
     const ref = useRef(null)
@@ -36,6 +37,9 @@ const Desktop = ({
             return onSelectNavItem(item)
         }
     }
+
+    /* eslint-disable arrow-body-style */
+    const handleSearchToggle = () => setIsSearch(!isSearch)
 
     return (
         <FullPageWidthWrapper className='lg:block'>
@@ -53,12 +57,14 @@ const Desktop = ({
                         }}
                     />
                 </div>
-                <Widgets
+                <IconNavigation
                     cartItemsCount={cartItemsCount}
                     goToCartPage={goToCartPage}
                     wishListLineItemsCount={wishListLineItemsCount}
                     goToWishlistPage={goToWishlistPage}
                     goToProfilePage={goToProfilePage}
+                    showSearch={isSearch}
+                    onSearchToggle={handleSearchToggle}
                 />
             </div>
 

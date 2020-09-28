@@ -72,7 +72,7 @@ const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
                         </div>
 
                         <div className='px-4 pt-2 bg-white'>
-                            {data.stream.facets.filter(facet => { return facet.type === 'term' && facet.terms.length === 0 }).map((facet, index) => {
+                            {data.stream.facets.filter(facet => { return !(facet.type === 'term' && facet.terms.length === 0) }).map((facet, index) => {
                                 return (
                                     <FacetModal
                                         key={index}

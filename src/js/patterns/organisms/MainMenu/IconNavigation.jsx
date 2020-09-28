@@ -11,7 +11,9 @@ import { ReactComponent as WishlistIcon } from 'Icons/tailwind-icons/icon-heart.
 import { ReactComponent as SearchIcon } from 'Icons/tailwind-icons/icon-search.svg'
 import { ReactComponent as MyProfile } from 'Icons/tailwind-icons/icon-user.svg'
 
-const Widgets = ({
+import SearchForm from './SearchForm'
+
+const IconNavigation = ({
     intl,
     variant = '',
     cartItemsCount,
@@ -19,19 +21,26 @@ const Widgets = ({
     wishListLineItemsCount,
     goToWishlistPage,
     goToProfilePage,
+    onSearchToggle,
+    showSearch = false,
 }) => {
     return (
         <div
             className={classnames({
-                'flex justify-end text-2xl': true,
+                'flex justify-end text-2xl items-center': true,
                 [variant]: true,
             })}
             >
-            <IconButton
-                name={intl.formatMessage({ id: 'header.search' })}
-                variant='outline-none focus:outline-none'
-                icon={<SearchIcon />}
-            />
+            {showSearch ? (
+                <SearchForm inputClassName='text-base' onCancelSearch={onSearchToggle} />
+            ) : (
+                <IconButton
+                    name={intl.formatMessage({ id: 'header.search' })}
+                    variant='outline-none focus:outline-none'
+                    icon={<SearchIcon />}
+                    onClick={onSearchToggle}
+                />
+            )}
 
             <IconButton
                 name={intl.formatMessage({ id: 'header.myAccount' })}
@@ -40,10 +49,7 @@ const Widgets = ({
                 onClick={goToProfilePage}
             />
 
-            <Badge
-                count={wishListLineItemsCount}
-                onClick={goToWishlistPage}
-            >
+            <Badge count={wishListLineItemsCount} onClick={goToWishlistPage}>
                 <IconButton
                     name={intl.formatMessage({ id: 'header.wishlist' })}
                     variant='outline-none focus:outline-none'
@@ -51,10 +57,7 @@ const Widgets = ({
                 />
             </Badge>
 
-            <Badge
-                count={cartItemsCount}
-                onClick={goToCartPage}
-            >
+            <Badge count={cartItemsCount} onClick={goToCartPage}>
                 <IconButton
                     name={intl.formatMessage({ id: 'header.cart' })}
                     variant='outline-none focus:outline-none'
@@ -65,7 +68,7 @@ const Widgets = ({
     )
 }
 
-Widgets.propTypes = {
+IconNavigation.propTypes = {
     intl: intlShape.isRequired,
     variant: PropTypes.string,
     cartItemsCount: PropTypes.number,
@@ -73,11 +76,13 @@ Widgets.propTypes = {
     goToCartPage: PropTypes.func,
     goToWishlistPage: PropTypes.func,
     goToProfilePage: PropTypes.func,
+    onSearchToggle: PropTypes.func,
+    showSearch: PropTypes.bool.isRequired,
 }
 
-Widgets.defaultProps = {
+IconNavigation.defaultProps = {
     cartItemsCount: 0,
     wishListLineItemsCount: 0,
 }
 
-export default injectIntl(Widgets)
+export default injectIntl(IconNavigation)

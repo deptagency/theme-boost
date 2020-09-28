@@ -8,7 +8,6 @@ import Button from 'Atoms/button'
 import useMdBreakpoint from 'Molecules/Layout/Breakpoints/useMdBreakpoint'
 import PanelModalResponsive from 'Molecules/Layout/PanelModalResponsive'
 import PanelBlockResponsive from 'Molecules/Layout/PanelBlockResponsive'
-import DefaultNotifications from 'Molecules/Notifications/Default'
 
 import AddressForm from '../Forms/AddressForm'
 import RemoveAddressForm from '../Forms/RemoveAddressForm'
@@ -16,7 +15,16 @@ import RemoveAddressForm from '../Forms/RemoveAddressForm'
 import EmptyList from './EmptyList'
 import AddressCard from './AddressCard'
 
-const AccountAddresses = ({ intl, openPanel, onClose, addresses, countries, handleAddAddress, handleUpdateAddress, handleRemoveAddress }) => {
+const AccountAddresses = ({
+    intl,
+    openPanel,
+    onClose,
+    addresses,
+    countries,
+    handleAddAddress,
+    handleUpdateAddress,
+    handleRemoveAddress,
+}) => {
     const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false)
     const [showCreateAddressModal, setShowCreateAddressModal] = useState(false)
     const [showEditAddressPanel, setShowEditAddressPanel] = useState(false)
@@ -85,18 +93,20 @@ const AccountAddresses = ({ intl, openPanel, onClose, addresses, countries, hand
                         )
                     })}
 
-                    {addresses.length === 0 &&
-                        <EmptyList />
-                    }
+                    {addresses.length === 0 && <EmptyList />}
                 </div>
             </PanelBlockResponsive>
 
             <PanelModalResponsive
                 title={<FormattedMessage id='account.address.newAddress' />}
                 openPanel={showCreateAddressPanel}
-                closePanel={() => { return setShowCreateAddressPanel(false) }}
+                closePanel={() => {
+                    return setShowCreateAddressPanel(false)
+                }}
                 openModal={showCreateAddressModal}
-                closeModal={() => { return setShowCreateAddressModal(false) }}
+                closeModal={() => {
+                    return setShowCreateAddressModal(false)
+                }}
                 >
                 <AddressForm
                     countries={countries}
@@ -109,13 +119,17 @@ const AccountAddresses = ({ intl, openPanel, onClose, addresses, countries, hand
                 />
             </PanelModalResponsive>
 
-            {activeAddress &&
+            {activeAddress && (
                 <PanelModalResponsive
                     title={<FormattedMessage id='account.address.editAddress' />}
                     openPanel={showEditAddressPanel}
-                    closePanel={() => { return setShowEditAddressPanel(false) }}
+                    closePanel={() => {
+                        return setShowEditAddressPanel(false)
+                    }}
                     openModal={showEditAddressModal}
-                    closeModal={() => { return setShowEditAddressModal(false) }}
+                    closeModal={() => {
+                        return setShowEditAddressModal(false)
+                    }}
                     >
                     <AddressForm
                         countries={countries}
@@ -128,15 +142,19 @@ const AccountAddresses = ({ intl, openPanel, onClose, addresses, countries, hand
                         }}
                     />
                 </PanelModalResponsive>
-            }
+            )}
 
-            {activeAddress &&
+            {activeAddress && (
                 <PanelModalResponsive
                     title={<FormattedMessage id='account.address.removeAddress' />}
                     openPanel={showDeleteAddressPanel}
-                    closePanel={() => { return setShowDeleteAddressPanel(false) }}
+                    closePanel={() => {
+                        return setShowDeleteAddressPanel(false)
+                    }}
                     openModal={showDeleteAddressModal}
-                    closeModal={() => { return setShowDeleteAddressModal(false) }}
+                    closeModal={() => {
+                        return setShowDeleteAddressModal(false)
+                    }}
                     >
                     <RemoveAddressForm
                         countries={countries}
@@ -149,9 +167,7 @@ const AccountAddresses = ({ intl, openPanel, onClose, addresses, countries, hand
                         }}
                     />
                 </PanelModalResponsive>
-            }
-
-            <DefaultNotifications notifications={notifications} />
+            )}
         </>
     )
 }
