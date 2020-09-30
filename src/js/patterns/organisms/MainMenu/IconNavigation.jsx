@@ -77,7 +77,7 @@ IconNavigation.propTypes = {
     goToWishlistPage: PropTypes.func,
     goToProfilePage: PropTypes.func,
     onSearchToggle: PropTypes.func,
-    showSearch: PropTypes.bool.isRequired,
+    showSearch: PropTypes.bool,
 }
 
 IconNavigation.defaultProps = {

@@ -12,6 +12,7 @@ const ProductImages = ({ images }) => {
                     return (
                         <RemoteImage
                             key={i}
+                            alt=''
                             url={image}
                             cropRatio='4:3'
                             itemProp='image'

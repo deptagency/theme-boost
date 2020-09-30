@@ -74,6 +74,7 @@ const ProductData = ({
                     {loading ? <LoaderButton /> : <FormattedMessage id='inCartProduct' />}
                 </Button>
                 <IconButton
+                    name={intl.formatMessage({ id: 'wishlist.myWishlist' })}
                     variant='flex items-center justify-center text-neutral-900 border border-neutral-900 w-10 rounded outline-none focus:outline-none'
                     icon={wishlisted ? <IconHeartFull /> : <IconHeart />}
                     onClick={() => {

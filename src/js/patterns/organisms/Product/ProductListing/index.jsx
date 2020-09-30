@@ -64,9 +64,8 @@ const ProductListing = ({
                                 })
                                 .map((facet, index) => {
                                     return (
-                                        <div className='mt-4'>
+                                        <div className='mt-4' key={index}>
                                             <FacetPopup
-                                                key={index}
                                                 initialFacet={facet}
                                                 onChange={(newFacet) => {
                                                     onFacetChange(newFacet, index)
