@@ -1,6 +1,6 @@
 const paths = require('@frontastic/catwalk/config/paths')
 const plugin = require('tailwindcss/plugin')
-const { colors, borderRadius, baseFontSize,fontSize, fontColor, boxShadow } = require('./src/js/themes/defaultTheme')
+const { colors, borderRadius, baseFontSize, fontSize, fontColor, boxShadow } = require('./src/js/themes/defaultTheme')
 
 module.exports = {
     theme: {
@@ -35,7 +35,7 @@ module.exports = {
             },
             gridTemplateRows: {
                 'auto-1fr': 'auto 1fr',
-                'auto-1fr-auto': 'auto 1fr auto'
+                'auto-1fr-auto': 'auto 1fr auto',
             },
             height: {
                 'fix-120px': '120px',
@@ -44,7 +44,7 @@ module.exports = {
             },
             inset: {
                 full: '100%',
-                '3.3': '3.3rem'
+                '3.3': '3.3rem',
             },
             margin: {
                 center: '0 auto',
@@ -63,7 +63,7 @@ module.exports = {
             minHeight: {
                 '354px': '354px',
                 '400px': '400px',
-                'inherit': 'inherit'
+                inherit: 'inherit',
             },
             spacing: {
                 '2px': '2px',
@@ -73,6 +73,7 @@ module.exports = {
                 '3/2': '150%',
                 '1/3': '33.333333%',
                 '2/3': '66.666667%',
+                '4/3': '75%',
                 '1/4': '25%',
                 '2/4': '50%',
                 '3/4': '75%',
@@ -85,6 +86,8 @@ module.exports = {
                 '3/6': '50%',
                 '4/6': '66.666667%',
                 '5/6': '83.333333%',
+                '16/9': '56.25%',
+                '21/9': '42.85%',
                 '1/12': '8.333333%',
                 '2/12': '16.666667%',
                 '3/12': '25%',
@@ -113,24 +116,23 @@ module.exports = {
                 'fix-250px': '250px',
                 'fix-488px': '488px',
                 'fix-560px': '560px',
-
-            }
+            },
         },
         // The breakpoints have to match with boost/src/js/config/breakpoints.jsx
         screens: {
-            'xsm': '420px',
-            'sm': '640px',
-            'md': '768px',
-            'lg': '1024px',
-            'xl': '1280px',
-        }
+            xsm: '420px',
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+        },
     },
     plugins: [
         plugin(function({ addUtilities }) {
             const utilities = {
                 /* PART OF THEME */
                 '.base-font-size': {
-                    fontSize: baseFontSize
+                    fontSize: baseFontSize,
                 },
                 '.font-color': {
                     color: fontColor,
@@ -143,22 +145,22 @@ module.exports = {
                 },
                 '.button-loader-color-themed': {
                     border: '3px solid',
-                    borderColor: `${colors.primary.main} transparent ${colors.primary.main} transparent`
+                    borderColor: `${colors.primary.main} transparent ${colors.primary.main} transparent`,
                 },
                 /* END OF PART OF THEME */
 
                 '.bg-transparent-50': {
-                    backgroundColor: 'rgba(253, 250, 250, 0.5)'
+                    backgroundColor: 'rgba(253, 250, 250, 0.5)',
                 },
                 '.border-bottom-solid': {
                     borderBottomStyle: 'solid',
                 },
-                '.border-bottom-system-error' : {
+                '.border-bottom-system-error': {
                     borderBottomColor: colors.system.error,
                 },
                 '.border-x-transparent': {
                     borderLeftColor: 'transparent',
-                    borderRightColor: 'transparent'
+                    borderRightColor: 'transparent',
                 },
                 '.justify-self-center': {
                     justifySelf: 'center',
