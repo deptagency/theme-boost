@@ -7,6 +7,8 @@ import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBa
 import MoleculesHero from '@frontastic/catwalk/src/js/patterns/molecules/heros/hero'
 import MediaImage from '@frontastic/catwalk/src/js/mediaImage'
 
+import FullPageWidthWrapper from '../Layout/FullPageWidthWrapper'
+
 import useComponentSize from '@frontastic/catwalk/src/js/helper/hooks/useIsomorphicComponentSize'
 import MediaApi from '@frontastic/common/src/js/mediaApi'
 import Cloudinary from '@frontastic/common/src/js/mediaApi/cloudinary'
@@ -20,7 +22,7 @@ const OrderingEnum = {
 type FgPos = 'left-top' | 'top' | 'right-top' | 'left' | 'center' | 'right' | 'left-bottom' | 'bottom' | 'right-bottom'
 type FgSize = '50%' | '60%' | '70%' | '80%' | '90%' | '100%'
 type Aspect = '16/9' | '4/3' | '12/9'
-type FontSize = 'xl' | '2xl' | '3xl' | '4xl' | '5xl'
+type FontSize = 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl'
 type Align = 'left' | 'center' | 'right'
 type Theme = 'light' | 'dark'
 type CtaColor = 'primary' | 'secondary' | 'neutral'
@@ -48,6 +50,7 @@ export interface TileTasticData {
     aspect: Aspect
     theme: Theme
     ordering: Ordering
+    isFullWidth: boolean
 }
 
 const Tile = ({
@@ -72,9 +75,9 @@ const Tile = ({
     theme,
     ordering,
     fgIsFullWidth,
+    isFullWidth,
 }: TileTasticData) => {
-    const Component = isClickable ? Reference : 'div'
-    const ButtonComponent = isClickable ? 'div' : Reference
+    const DivOrReference = isClickable && reference ? Reference : 'div'
 
     // this could've gone easily as values into the schema,
     // but I prefer the schema not having knowledge of
@@ -99,22 +102,37 @@ const Tile = ({
         light: 'text-black',
         dark: 'text-white',
     }
+    const fontSizeCss: { [key in FontSize]: string } = {
+        base: 'text-base',
+        lg: 'text-lg',
+        xl: 'text-lg md:text-xl',
+        '2xl': 'text-lg md:text-2xl',
+        '3xl': 'text-xl md:text-3xl',
+        '4xl': 'text-2xl md:text-4xl',
+        '5xl': 'text-2xl md:text-5xl',
+    }
 
     // Just a little DRY. The copy doesn't
     // technically need that, but this way
     // we have all the elements in one place
     const renderImage = () => <FgImage image={fgImage} />
-    const renderCta = () => <Cta label={ctaLabel} reference={reference} color={ctaColor} isButton={ctaIsButton} />
+    // only render Cta when the whole tile is not clickable. Nested a tags are a big No-No!
+    const renderCta = () =>
+        !isClickable && <Cta label={ctaLabel} reference={reference} color={ctaColor} isButton={ctaIsButton} />
     const renderCopy = () => (
         <>
             {headline && (
-                <h2 className={`${themeToTextColor[theme]} text-${headlineSize} ${isHeadlineBold ? 'font-bold' : ''}`}>
+                <h2
+                    className={`${themeToTextColor[theme]} ${fontSizeCss[headlineSize]} ${
+                        isHeadlineBold ? 'font-bold' : ''
+                    }`}
+                >
                     {headline}
                 </h2>
             )}
             {subhead && (
                 <h3
-                    className={`${themeToTextColor[theme]} text-${subheadSize} ${
+                    className={`${themeToTextColor[theme]} ${fontSizeCss[subheadSize]} ${
                         isSubheadBold ? 'font-bold' : ''
                     } leading-tight`}
                 >
@@ -124,17 +142,16 @@ const Tile = ({
         </>
     )
 
-    return (
-        <Component
-            className='relative'
+    // offloaded here because of conditional rendering
+    const content = (
+        <DivOrReference
+            className='relative block'
             style={{ backgroundColor: bgColor }}
-            reference={
-                reference || {
-                    type: null,
-                    target: null,
-                }
-            }
+            reference={reference || undefined}
         >
+            {/*
+             * Background / Aspect Ratio
+             */}
             <div className={`relative pb-${aspect}`}>
                 {bgImage && (
                     <MediaImage className='absolute h-full w-full object-cover object-center' media={bgImage} />
@@ -146,7 +163,7 @@ const Tile = ({
              */}
             <div className={`absolute flex top-0 left-0 ${fgPosCss[contentPos]} h-full w-full overflow-hidden`}>
                 <div
-                    className={`inline-block ${fgIsFullWidth ? 'w-full' : ''} p-8 flex flex-col ${
+                    className={`inline-block ${fgIsFullWidth ? 'w-full' : ''} p-3 md:p-8 flex flex-col ${
                         fgAlignToFlex[fgAlign]
                     } text-${fgAlign}`}
                     style={{ height: fgSize }}
@@ -159,8 +176,14 @@ const Tile = ({
                     {ordering !== OrderingEnum.CopyCtaImg && renderCta()}
                 </div>
             </div>
-        </Component>
+        </DivOrReference>
     )
+
+    if (isFullWidth) {
+        return <FullPageWidthWrapper>{content}</FullPageWidthWrapper>
+    }
+
+    return content
 }
 
 function Cta({ label, reference, color, isButton = false }) {
@@ -168,12 +191,7 @@ function Cta({ label, reference, color, isButton = false }) {
         <>
             {label && reference && (
                 <Reference
-                    reference={
-                        reference || {
-                            type: null,
-                            target: null,
-                        }
-                    }
+                    reference={reference}
                     className={`text-white ${
                         isButton ? 'bg' : 'text'
                     }-${color}-600 text-base font-semibold py-3 px-4 mt-6 rounded`}

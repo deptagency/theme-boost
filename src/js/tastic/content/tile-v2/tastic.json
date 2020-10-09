@@ -8,6 +8,12 @@
             "name": "Basics",
             "fields": [
                 {
+                    "label": "Full Viewport Width?",
+                    "field": "isFullWidth",
+                    "type": "boolean",
+                    "default": false
+                },
+                {
                     "label": "Theme",
                     "field": "theme",
                     "required": true,
@@ -204,6 +210,10 @@
                     "type": "enum",
                     "default": "xl",
                     "values": [
+                        {
+                            "name": "base",
+                            "value": "base"
+                        },
                         {
                             "name": "lg",
                             "value": "lg"
