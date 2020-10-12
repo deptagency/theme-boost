@@ -4,7 +4,6 @@ import classnames from 'classnames'
 import { useSelector } from 'react-redux'
 import Reference from '@frontastic/catwalk/src/js/component/reference'
 import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
-import MoleculesHero from '@frontastic/catwalk/src/js/patterns/molecules/heros/hero'
 import MediaImage from '@frontastic/catwalk/src/js/mediaImage'
 
 import FullPageWidthWrapper from '../Layout/FullPageWidthWrapper'
@@ -112,6 +111,12 @@ const Tile = ({
         '5xl': 'text-2xl md:text-5xl',
     }
 
+    const aspectCss: { [key in Aspect]: string } = {
+        '16/9': 'pb-16/9',
+        '4/3': 'pb-4/3',
+        '12/9': 'pb-12/9',
+    }
+
     // Just a little DRY. The copy doesn't
     // technically need that, but this way
     // we have all the elements in one place
@@ -152,7 +157,7 @@ const Tile = ({
             {/*
              * Background / Aspect Ratio
              */}
-            <div className={`relative pb-${aspect}`}>
+            <div className={`relative ${aspectCss[aspect]}`}>
                 {bgImage && (
                     <MediaImage className='absolute h-full w-full object-cover object-center' media={bgImage} />
                 )}
