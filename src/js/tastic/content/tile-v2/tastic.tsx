@@ -11,7 +11,6 @@ export interface Props {
 }
 
 export const TileTastic: FunctionComponent<Props> = ({ data, tastic }: Props) => {
-    console.log('TILE LOGGIN', data, tastic)
     return <Tile {...data} />
 }
 
