@@ -1,5 +1,12 @@
 # boost Changelog
 
+## `1.0.0-rc.8` (2020-10-12)
+
+* Badge pasitioning fix
+* Adds fullwidth render, fixes fully clickable tile
+* Horizontal spacer fix
+* Updates the tile with more features
+
 ## `1.0.0-rc.7` (2020-10-01)
 
 * Fixed js errors in various components
