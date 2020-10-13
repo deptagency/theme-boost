@@ -52,7 +52,7 @@ const IconNavigation = ({
             <Badge count={wishListLineItemsCount} onClick={goToWishlistPage}>
                 <IconButton
                     name={intl.formatMessage({ id: 'header.wishlist' })}
-                    variant='outline-none focus:outline-none'
+                    variant='ml-6 outline-none focus:outline-none'
                     icon={<WishlistIcon />}
                 />
             </Badge>
@@ -60,7 +60,7 @@ const IconNavigation = ({
             <Badge count={cartItemsCount} onClick={goToCartPage}>
                 <IconButton
                     name={intl.formatMessage({ id: 'header.cart' })}
-                    variant='outline-none focus:outline-none'
+                    variant='ml-6 outline-none focus:outline-none'
                     icon={<CartIcon />}
                 />
             </Badge>
@@ -77,7 +77,7 @@ IconNavigation.propTypes = {
     goToWishlistPage: PropTypes.func,
     goToProfilePage: PropTypes.func,
     onSearchToggle: PropTypes.func,
-    showSearch: PropTypes.bool.isRequired,
+    showSearch: PropTypes.bool,
 }
 
 IconNavigation.defaultProps = {

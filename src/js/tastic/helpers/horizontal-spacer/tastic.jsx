@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 
 const SIZE_MAP = {
-    xxs: '4px',
-    xs: '8px',
-    sm: '12px',
-    md: '16px',
-    lg: '20px',
-    xl: '24px',
+    xxs: '4',
+    xs: '8',
+    sm: '12',
+    md: '16',
+    lg: '20',
+    xl: '24',
 }
 
 const HorizontalSpacerTastic = ({ data }) => {

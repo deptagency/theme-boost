@@ -1,5 +1,26 @@
 # boost Changelog
 
+## `1.0.0-rc.8` (2020-10-12)
+
+* Badge pasitioning fix
+* Adds fullwidth render, fixes fully clickable tile
+* Horizontal spacer fix
+* Updates the tile with more features
+
+## `1.0.0-rc.7` (2020-10-01)
+
+* Fixed js errors in various components
+* fix: Removes header and adjust pagination color
+* feat: Adds a new notification component
+* fix: Adds missing autofocus prop to standard input
+* feat: Adds a search form component
+* fix: Ensure even small images span their box
+* fix: grid was missing
+* A11y: Provide labels for all input elements
+* A11y: Icrease contrast ratio for buttons
+* A11y: Added aria-label to all buttons without a clear label
+* A11y: CS & start providing translated labels to buttons
+
 ## `1.0.0-rc.7` (2020-09-15)
 
 **@TODO:** Please adapt these raw commit messages since last release into CHANGELOG entries – they will be added to the package changelog.
