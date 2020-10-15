@@ -5,12 +5,13 @@ import { useSelector } from 'react-redux'
 import Reference from '@frontastic/catwalk/src/js/component/reference'
 import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
 import MediaImage from '@frontastic/catwalk/src/js/mediaImage'
+import { Media } from '@frontastic/catwalk/src/js/types/frontend/media'
 
 import FullPageWidthWrapper from '../Layout/FullPageWidthWrapper'
 
-import useComponentSize from '@frontastic/catwalk/src/js/helper/hooks/useIsomorphicComponentSize'
-import MediaApi from '@frontastic/common/src/js/mediaApi'
-import Cloudinary from '@frontastic/common/src/js/mediaApi/cloudinary'
+import Cta from './components/CallToAction'
+import FgImage from './components/ForegroundImage'
+// types
 
 const OrderingEnum = {
     CopyCtaImg: 'copy-cta-img',
@@ -20,18 +21,18 @@ const OrderingEnum = {
 
 type FgPos = 'left-top' | 'top' | 'right-top' | 'left' | 'center' | 'right' | 'left-bottom' | 'bottom' | 'right-bottom'
 type FgSize = '50%' | '60%' | '70%' | '80%' | '90%' | '100%'
-type Aspect = '16/9' | '4/3' | '12/9'
+type Aspect = '16/9' | '4/3' | '21/9'
 type FontSize = 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl'
 type Align = 'left' | 'center' | 'right'
 type Theme = 'light' | 'dark'
-type CtaColor = 'primary' | 'secondary' | 'neutral'
+export type CtaColor = 'primary' | 'secondary' | 'neutral'
 type Ordering = typeof OrderingEnum[keyof typeof OrderingEnum]
 
 export interface TileTasticData {
     bgColor?: string
-    bgImage?: any // TODO
+    bgImage?: Media
     contentPos: FgPos
-    fgImage?: any // TODO
+    fgImage?: Media
     fgAlign: Align
     fgSize: FgSize
     fgIsFullWidth: boolean
@@ -114,13 +115,19 @@ const Tile = ({
     const aspectCss: { [key in Aspect]: string } = {
         '16/9': 'pb-16/9',
         '4/3': 'pb-4/3',
-        '12/9': 'pb-12/9',
+        '21/9': 'pb-21/9',
     }
 
     // Just a little DRY. The copy doesn't
-    // technically need that, but this way
-    // we have all the elements in one place
-    const renderImage = () => <FgImage image={fgImage} />
+    // technically need it's own render function,
+    // but this way we have all the elements in one place
+    const renderImage = () => (
+        <MediaImage
+            className={`w-${fgIsFullWidth ? 'full' : 'auto'} flex-1 bg-no-repeat bg-contain bg-center mt-6`}
+            options={{ crop: 'pad', background: 'transparent' }}
+            media={fgImage}
+        />
+    )
     // only render Cta when the whole tile is not clickable. Nested a tags are a big No-No!
     const renderCta = () =>
         !isClickable && <Cta label={ctaLabel} reference={reference} color={ctaColor} isButton={ctaIsButton} />
@@ -147,7 +154,7 @@ const Tile = ({
         </>
     )
 
-    // offloaded here because of conditional rendering
+    // main render offloaded to a function because of conditional rendering (fullwidth yes/no)
     const content = (
         <DivOrReference
             className='relative block'
@@ -189,48 +196,6 @@ const Tile = ({
     }
 
     return content
-}
-
-function Cta({ label, reference, color, isButton = false }) {
-    return (
-        <>
-            {label && reference && (
-                <Reference
-                    reference={reference}
-                    className={`text-white ${
-                        isButton ? 'bg' : 'text'
-                    }-${color}-600 text-base font-semibold py-3 px-4 mt-6 rounded`}
-                >
-                    {label}
-                </Reference>
-            )}
-        </>
-    )
-}
-
-function FgImage({ image }) {
-    const projectConf = useSelector((state) => {
-        return state.app.context.project.configuration
-    })
-    const fgImgRef = useRef(null)
-    const mediaApi = new Cloudinary(projectConf.media)
-    const fgImgUrl = (fgImage, fgImgRef) => {
-        const fgImgSize = useComponentSize(fgImgRef)
-        return mediaApi.getImageUrl(fgImage.media, null, fgImgSize.height, {})
-    }
-    return (
-        <>
-            {image && image.media && (
-                <figure
-                    className='flex-1 h-32 w-full bg-no-repeat bg-contain bg-center mt-6'
-                    ref={fgImgRef}
-                    style={{
-                        backgroundImage: `url(${fgImgUrl(image, fgImgRef)})`,
-                    }}
-                ></figure>
-            )}
-        </>
-    )
 }
 
 export default Tile
