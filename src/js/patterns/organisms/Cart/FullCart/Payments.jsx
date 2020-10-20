@@ -1,9 +1,8 @@
 import React from 'react'
-import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import { ReactComponent as VisaIcon } from 'Icons/visa.svg'
-import { ReactComponent as MastercardIcon } from 'Icons/mastercard.svg'
 import { ReactComponent as PayPalIcon } from 'Icons/paypal.svg'
+import { ReactComponent as MastercardIcon } from 'Icons/mastercard.svg'
 
 const Payments = () => {
     return (
@@ -15,4 +14,4 @@ const Payments = () => {
     )
 }
 
-export default ComponentInjector.return('Payments', Payments)
+export default Payments

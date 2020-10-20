@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import app from 'frontastic-catwalk/src/js/app/app'
-import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import Price from 'Atoms/price'
 import Select from 'Atoms/select'
@@ -22,23 +21,23 @@ const Product = ({ intl, itemId, image, name, designer, count, price, color, siz
                     {name}
                 </div>
 
-                {designer &&
+                {designer && (
                     <div className='text-sm text-neutral-600 leading-tight'>
                         {designer}
                     </div>
-                }
+                )}
 
-                {color &&
+                {color && (
                     <div className='mt-3 text-sm text-neutral-600 leading-tight'>
                         <FormattedMessage id='colorProduct' /> {color}
                     </div>
-                }
+                )}
 
-                {size &&
+                {size && (
                     <div className='text-sm text-neutral-600 leading-tight'>
                         <FormattedMessage id='sizeProduct' /> {size}
                     </div>
-                }
+                )}
 
                 <div className='mt-3 w-24'>
                     <Select
@@ -89,4 +88,4 @@ Product.propTypes = {
     size: PropTypes.string,
 }
 
-export default injectIntl(ComponentInjector.return('Product', Product))
+export default injectIntl(Product)
