@@ -6,21 +6,21 @@ import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
 
 const ProductImages = ({ images }) => {
     return (
-        <div className='mt-4 md:mt-6 bg-white rounded'>
-            <Slider options={{ items: 1, loop: true, responsive: {} }}>
-                {images.map((image, i) => {
-                    return (
+        <Slider options={{ items: 1, loop: false, responsive: {} }}>
+            {images.map((image, i) => {
+                return (
+                    <div className='relative bg-white' key={i}>
                         <RemoteImage
-                            key={i}
                             alt=''
                             url={image}
                             cropRatio='4:3'
                             itemProp='image'
-                            options={{ crop: 'pad', background: 'transparent' }} />
-                    )
-                })}
-            </Slider>
-        </div>
+                            options={{ crop: 'pad', background: 'transparent' }} 
+                        />
+                    </div>
+                )
+            })}
+        </Slider>
     )
 }
 

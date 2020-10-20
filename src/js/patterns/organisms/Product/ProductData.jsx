@@ -8,12 +8,12 @@ import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
 import LoaderButton from 'Molecules/Loaders/LoaderButton'
 import StarRating from './StarRating'
 
-import Button from 'Atoms/button'
 import Price from 'Atoms/price'
+import Button from 'Atoms/button'
 import IconButton from 'Atoms/button/IconButton'
 
-import ColorSelector from './selectors/ColorSelector'
-import SizeSelector from './selectors/SizeSelector'
+import ColorSelector from './Selectors/ColorSelector'
+import SizeSelector from './Selectors/SizeSelector'
 
 import { ReactComponent as IconHeart } from 'Icons/tailwind-icons/icon-heart.svg'
 import { ReactComponent as IconHeartFull } from 'Icons/tailwind-icons/icon-heart-full.svg'
@@ -39,8 +39,11 @@ const ProductData = ({
     let loading = showLoader && isLoading
 
     return (
-        <div className='mt-4 md:mt-6'>
-            <div className='text-xl font-bold text-neutral-900'>{name}</div>
+        <>
+            <div className='text-xl font-bold text-neutral-900'>
+                {name}
+            </div>
+
             <Price
                 variant='text-lg text-neutral-700 py-1'
                 value={selectedVariant.price}
@@ -48,6 +51,7 @@ const ProductData = ({
             />
 
             <StarRating />
+
             {selectedVariant.attributes.color && (
                 <ColorSelector value={selectedVariant.attributes.color} variants={variants} onChange={onChange} />
             )}
@@ -96,7 +100,7 @@ const ProductData = ({
                 </div>
                 <FullPageWidthWrapper className='border-b-4 border-neutral-100 md:hidden' />
             </div>
-        </div>
+        </>
     )
 }
 

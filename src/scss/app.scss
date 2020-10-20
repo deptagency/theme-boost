@@ -17,6 +17,25 @@
 @import '../js/patterns/atoms/input/index.scss';
 @import '../js/patterns/atoms/select/index.scss';
 
+@responsive {
+    .w-screen-none {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .w-screen {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+}
+
 // hiding broken loader for now
 .u-fade {
     // Hiding loader from Catwalk, as we're using the custom one
