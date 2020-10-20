@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import app from '@frontastic/catwalk/src/js/app/app'
 
+import Product from './Product'
 import Summary from './Summary'
 import MiniSummary from './MiniSummary'
 import Payments from './Payments'
-import ProductList from './ProductList'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
 const FullCart = ({ intl, items, sum, isLoading = false }) => {
@@ -32,7 +33,24 @@ const FullCart = ({ intl, items, sum, isLoading = false }) => {
                                 <FormattedMessage id='cart.myCart' />
                             </h1>
 
-                            <ProductList items={items} />
+                            <section>
+                                {items.map((item, index) => {
+                                    return (
+                                        <div key={index} className={classnames({ 'mt-8': index > 0 })}>
+                                            <Product
+                                                itemId={item.lineItemId}
+                                                name={item.name}
+                                                designer={item.variant.attributes.designer?.label}
+                                                image={item.variant.images[0]}
+                                                count={item.count}
+                                                price={item.price}
+                                                color={item.variant.attributes.color?.label}
+                                                size={item.variant.attributes?.size}
+                                            />
+                                        </div>
+                                    )
+                                })}
+                            </section>
                         </div>
 
                         <div className='px-4 py-5 border-b-4 border-neutral-100 md:border-0'>

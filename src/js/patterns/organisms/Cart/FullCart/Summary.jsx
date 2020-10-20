@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
-import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
 import LoaderButton from 'Molecules/Loaders/LoaderButton/index'
 import Price from 'Atoms/price'
@@ -71,4 +70,4 @@ Summary.propTypes = {
     isLoading: PropTypes.bool,
 }
 
-export default ComponentInjector.return('Summary', Summary)
+export default Summary
