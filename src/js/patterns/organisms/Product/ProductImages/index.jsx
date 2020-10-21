@@ -15,7 +15,7 @@ const ProductImages = ({ images }) => {
                             url={image}
                             cropRatio='4:3'
                             itemProp='image'
-                            options={{ crop: 'pad', background: 'transparent' }} 
+                            options={{ crop: 'pad', background: 'transparent' }}
                         />
                     </div>
                 )

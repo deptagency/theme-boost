@@ -10,11 +10,11 @@ const Cart = ({ data, isLoading = false }) => {
         const { lineItems, sum, currency } = data
 
         return (
-            <FullCart 
-                isLoading={isLoading} 
-                items={lineItems} 
-                sum={sum} 
-                currency={currency} 
+            <FullCart
+                isLoading={isLoading}
+                items={lineItems}
+                sum={sum}
+                currency={currency}
             />
         )
     } else {
