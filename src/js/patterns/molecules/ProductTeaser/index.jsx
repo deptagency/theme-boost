@@ -25,14 +25,9 @@ const ProductTeaser = ({
 
     return (
         <>
-            <div
-                className={classnames(
-                    'relative mr-4 bg-white rounded',
-                    itemVariant
-                )}
-                >
+            <div className={classnames('relative mr-4 bg-white rounded', itemVariant)}>
                 <Link
-                    className='flex justify-center w-full min-h-inherit'
+                    className='flex justify-center items-start w-full min-h-inherit'
                     itemProp='url'
                     path={_url || '#'}
                 >
@@ -44,22 +39,23 @@ const ProductTeaser = ({
                         options={{ crop: 'pad', background: 'transparent' }}
                     />
                 </Link>
-                {showHeartIcon && <div
-                    className='absolute top-0 right-0 z-10 m-4 cursor-pointer'
-                    onClick={() => {
-                        !wishlisted && handleAddToWishlist()
-                        wishlisted && handleRemoveFromWishlist()
-                    }}
-                >
-                    {!wishlisted && <WishlistHeart />}
-                    {wishlisted && <WishlistHeartFull />}
-                </div>}
-                {showCloseIcon && <div
-                    className='absolute top-0 right-0 z-10 m-4 cursor-pointer'
-                    onClick={handleRemoveFromWishlist}
-                >
-                    <CloseIcon className='fill-current text-neutral-900 text-xl' />
-                </div>}
+                {showHeartIcon && (
+                    <div
+                        className='absolute top-0 right-0 z-10 m-4 cursor-pointer'
+                        onClick={() => {
+                            !wishlisted && handleAddToWishlist()
+                            wishlisted && handleRemoveFromWishlist()
+                        }}
+                    >
+                        {!wishlisted && <WishlistHeart />}
+                        {wishlisted && <WishlistHeartFull />}
+                    </div>
+                )}
+                {showCloseIcon && (
+                    <div className='absolute top-0 right-0 z-10 m-4 cursor-pointer' onClick={handleRemoveFromWishlist}>
+                        <CloseIcon className='fill-current text-neutral-900 text-xl' />
+                    </div>
+                )}
             </div>
             <div className='p-4'>
                 <div className='font-bold'>{name}</div>
