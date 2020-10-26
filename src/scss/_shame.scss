@@ -27,7 +27,7 @@ $breakpoints: (
     line-height: 1.33;
     font-weight: 400;
 
-    @apply bg-background-primary base-font-size font-color;
+    @apply bg-background-primary font-family base-font-size font-color;
 }
 
 // objects/objects.wrapper

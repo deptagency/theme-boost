@@ -1,6 +1,6 @@
 const paths = require('@frontastic/catwalk/config/paths')
 const plugin = require('tailwindcss/plugin')
-const { colors, borderRadius, baseFontSize, fontSize, fontColor, boxShadow } = require('./src/js/themes/defaultTheme')
+const { colors, borderRadius, baseFontSize, fontSize, fontColor, fontFamily, boxShadow } = require('./src/js/themes/defaultTheme')
 
 module.exports = {
     theme: {
@@ -9,10 +9,10 @@ module.exports = {
             colors,
             borderRadius,
             fontSize,
+            fontFamily,
             boxShadow,
             /* END OF PART THEME */
             borderWidth: {
-                '0.5px': '0.5px',
                 '2px': '2px',
                 '3px': '3px',
             },
@@ -21,10 +21,6 @@ module.exports = {
             },
             gridColumnEnd: {
                 'span-2': 'span 2',
-                'span-3': 'span 3',
-            },
-            gridRowEnd: {
-                'span-3': 'span 3',
             },
             gridTemplateColumns: {
                 '1-340': '1fr 340px',
@@ -112,10 +108,7 @@ module.exports = {
                 'ease-out-expo': 'cubic-bezier(0.39, 0.58, 0.57, 1)',
             },
             width: {
-                '9': '2.25rem',
-                'fix-250px': '250px',
                 'fix-488px': '488px',
-                'fix-560px': '560px',
             },
         },
         // The breakpoints have to match with boost/src/js/config/breakpoints.jsx
@@ -131,6 +124,9 @@ module.exports = {
         plugin(function({ addUtilities }) {
             const utilities = {
                 /* PART OF THEME */
+                '.font-family': {
+                    fontFamily: fontFamily,
+                },
                 '.base-font-size': {
                     fontSize: baseFontSize,
                 },

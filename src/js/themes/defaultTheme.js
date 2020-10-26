@@ -62,4 +62,5 @@ module.exports = {
     boxShadow: getLayoutVariable('themeBoxShadow', {}),
     fontColor: getLayoutVariable('themeFontColor', colors.gray['800']),
     fontSize: getLayoutVariable('themeFontSize', {}),
+    fontFamily: getLayoutVariable('themeFontFamily', 'Helvetica Neue'),
 }
