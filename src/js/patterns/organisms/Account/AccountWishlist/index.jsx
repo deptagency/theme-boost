@@ -92,7 +92,7 @@ const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage 
                                                 )}
                                             </div>
                                         </div>
-                                        <div className='grid gap-2 grid-cols-1 xsm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between'>
+                                        <div className='grid gap-4 grid-cols-1 xsm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between'>
                                             {wishlistItemsTransitions.map(({ item, key, props }) => {
                                                 return (
                                                     <animated.div key={key} style={{ ...props, minHeight: '354px' }}>

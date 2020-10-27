@@ -3,14 +3,13 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
 
-import Sticker from 'Atoms/sticker'
 import Price from 'Atoms/price'
+import Sticker from 'Atoms/sticker'
 import WishlistButton from 'Atoms/button/wishlistButton'
 
-function ProductTeaser ({ product, classNames, onAddToWishlist, showPercent, showStrikePrice }) {
+function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice }) {
     const wishlist = useSelector((state) => {
         return state.wishlist.wishlist
     })
@@ -37,7 +36,7 @@ function ProductTeaser ({ product, classNames, onAddToWishlist, showPercent, sho
 
     return (
         <article
-            className={`overflow-hidden px-2 pb-5 text-neutral-900 ${classNames}`}
+            className={'text-neutral-900'}
             itemScope
             itemType='http://schema.org/Product'
             >
@@ -84,13 +83,10 @@ function ProductTeaser ({ product, classNames, onAddToWishlist, showPercent, sho
 }
 
 ProductTeaser.propTypes = {
-    classNames: PropTypes.string,
     product: PropTypes.object.isRequired,
     showPercent: PropTypes.bool,
     showStrikePrice: PropTypes.bool,
     onAddToWishlist: PropTypes.func,
 }
 
-ProductTeaser.defaultProps = {}
-
-export default ComponentInjector.return('ProductTeaser', ProductTeaser)
+export default ProductTeaser

@@ -25,7 +25,7 @@ const ProductTeaser = ({
 
     return (
         <>
-            <div className={classnames('relative mr-4 bg-white rounded', itemVariant)}>
+            <div className={classnames('relative bg-white rounded', itemVariant)}>
                 <Link
                     className='flex justify-center items-start w-full min-h-inherit'
                     itemProp='url'

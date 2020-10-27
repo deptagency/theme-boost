@@ -19,7 +19,7 @@ const ProductSlider = ({ products, title = '', description = '', handleAddToWish
                     {products &&
                         products.map((product, i) => {
                             return (
-                                <div key={i} className='pr-5 outline-none'>
+                                <div key={i} className='outline-none'>
                                     <ProductTeaser
                                         product={product}
                                         wishlisted={product.wishlisted}

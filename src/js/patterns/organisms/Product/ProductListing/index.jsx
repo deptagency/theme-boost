@@ -87,15 +87,15 @@ const ProductListing = ({
             </p>
 
             {data.stream.total > 0 && (
-                <div className='flex flex-wrap p-4 -mx-2'>
+                <div className={classnames({
+                        'grid gap-4 grid-cols-1 xsm:grid-cols-2 md:grid-cols-3': true,
+                        'lg:grid-cols-4': isFullWidth,
+                    })}
+                    >
                     {data.stream.items.map((product) => {
                         return (
                             <ProductTeaser
                                 key={product.productId}
-                                classNames={classnames({
-                                    'w-1/2 md:w-1/3 lg:w-1/4': isFullWidth,
-                                    'w-1/2 md:w-1/3': !isFullWidth,
-                                })}
                                 product={product}
                                 showPercent={showPercent}
                                 showStrikePrice={showStrikePrice}
