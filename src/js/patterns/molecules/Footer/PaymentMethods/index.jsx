@@ -10,7 +10,7 @@ import { ReactComponent as MastercardIcon } from 'Icons/mastercard.svg'
 // icon map - should mirror the options in the tastic schema
 const paymentIcons = { paypal: PayPalIcon, visa: VisaIcon, mastercard: MastercardIcon }
 
-function paymentMethodsFromData (methods) {
+function paymentMethodsFromData (methods = []) {
     return methods.map((method) => {
         const Icon = paymentIcons[method.playmentIcon]
 
