@@ -1,5 +1,15 @@
 # boost Changelog
 
+## `1.0.0-rc.9` (2020-10-27)
+
+* Product category, slider grid layout fix
+* Fixed base font
+* Fix: image stretching in slider on safari and flicker of noimage (tempfix)
+* Fixed product page layout
+* Refactored cart
+* Fix: bugfixes, types and cleanups for tile2
+* Fixes tile to not getting tw styles to get purged
+
 ## `1.0.0-rc.8` (2020-10-12)
 
 * Badge pasitioning fix

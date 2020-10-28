@@ -10,7 +10,7 @@ const sliderSettings = {
     lazyload: true,
     lazyloadSelector: '.tns-lazy',
     mouseDrag: true,
-    items: 2,
+    items: 1,
     controls: false,
     center: true,
     nav: false,
@@ -20,16 +20,19 @@ const sliderSettings = {
         },
         420: {
             items: 2,
+            gutter: 16,
         },
         660: {
             items: 3,
+            gutter: 16,
         },
         935: {
             items: 4,
+            gutter: 16,
         },
     },
 }
-const Slider = ({ intl, children, options }) => {
+const Slider = ({ intl, children, options = {} }) => {
     let sliderRef = useRef()
 
     const handleSliderMove = (dir) => { return sliderRef.current.slider.goTo(dir) }
@@ -50,10 +53,6 @@ const Slider = ({ intl, children, options }) => {
             />
         </>
     )
-}
-
-Slider.defaultProps = {
-    options: {},
 }
 
 Slider.propTypes = {
