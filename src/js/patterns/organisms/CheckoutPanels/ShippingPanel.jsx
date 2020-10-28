@@ -73,7 +73,7 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
             <StickyRightColumn
                 variant='md:my-4 md:px-4 max-w-960px mx-auto'
                 leftColumn={
-                    <div className='md:shadow-md md:rounded'>
+                    <div className='md:shadow-md md:rounded bg-white'>
                         <div className='px-4 py-5 md:px-6 border-t-4 md:border-t-0 border-neutral-100'>
                             <ShippingForm
                                 intl={intl}
@@ -114,7 +114,7 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                 }
 
                 rightColumn={
-                    <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100'>
+                    <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100 bg-white'>
                         <Summary
                             sum={data.sum}
                             isLoading={isLoading}
