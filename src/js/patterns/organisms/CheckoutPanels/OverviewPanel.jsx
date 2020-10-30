@@ -24,7 +24,7 @@ const OverviewPanel = ({ app, intl, data, countries, goToPanelIndex, isLoading =
             <StickyRightColumn
                 variant='md:my-4 md:px-4 max-w-960px mx-auto'
                 leftColumn={
-                    <div className='md:shadow-md md:rounded'>
+                    <div className='md:shadow-md md:rounded bg-white'>
                         <div className='sm:hidden px-4 py-3 md:px-6 border-b-4 border-neutral-100 border-t-4 md:border-t-0'>
                             <OrderButton label={buttonLabel} onClick={placeOrderClicked} />
                         </div>
@@ -56,7 +56,7 @@ const OverviewPanel = ({ app, intl, data, countries, goToPanelIndex, isLoading =
                 }
 
                 rightColumn={
-                    <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded'>
+                    <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded bg-white'>
                         <Summary
                             sum={data.sum}
                             isLoading={isLoading}

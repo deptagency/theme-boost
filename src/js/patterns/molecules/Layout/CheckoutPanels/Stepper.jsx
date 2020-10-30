@@ -9,7 +9,7 @@ const Stepper = forwardRef(({ steps, current, setCurrent }, ts) => {
 
     return (
         <div className='max-w-960px mx-auto md:mt-4'>
-            <div className='md:mx-4 md:shadow-md md:rounded'>
+            <div className='md:mx-4 md:shadow-md md:rounded bg-white'>
                 <div className='grid grid-rows-2 max-w-3/4 py-5 mx-auto h-20'>
                     <div className='grid grid-cols-1.25rem-1fr-1.25rem-1fr-1.25rem w-full m-auto px-4'>
                         {steps.map(({ name }, i) => {
