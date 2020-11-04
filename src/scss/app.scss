@@ -18,7 +18,7 @@
 @import '../js/patterns/atoms/select/index.scss';
 
 @responsive {
-    .w-screen-none {
+    .relative-width {
         width: 100%;
         left: 0;
         right: 0;
@@ -26,7 +26,7 @@
         margin-right: 0px;
     }
 
-    .w-screen {
+    .fixed-screen-width {
         width: 100vw;
         position: relative;
         left: 50%;

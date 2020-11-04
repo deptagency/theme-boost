@@ -9,7 +9,7 @@ const ProductDetails = ({ product, handleAddToCart, handleAddToWishlist, handleR
 
     return (
         <div className='grid grid-cols-1 sm:grid-cols-2 col-gap-8'>
-            <div className='mt-0 sm:mt-6 w-screen sm:w-screen-none'>
+            <div className='mt-0 sm:mt-6 fixed-screen-width sm:relative-width'>
                 <ProductImages images={selectedVariant.images} />
             </div>
 
