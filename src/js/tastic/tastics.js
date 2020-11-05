@@ -14,6 +14,10 @@ import ProductListingPageTastic from './product-listing/product-listing-page/tas
 import HorizontalSpacerTastic from './helpers/horizontal-spacer/tastic'
 import FeatureServiceTastic from './content/feature-service/tastic'
 import Footer from './footer/tastic'
+import ProductTitle from './product/product-details/title/tastic'
+import ProductPrice from './product/product-details/price/tastic'
+import ProductRating from './product/product-details/rating/tastic'
+import VariantSelector from './product/product-details/variant-selector/tastic'
 
 /* eslint-disable arrow-body-style */
 const CartTastic = asyncComponent({ import: () => import('./cart/tastic'), height: {} })
@@ -55,5 +59,9 @@ export default (() => {
         'frontastic/boost/account/orders': AccountOrdersTastic,
         'frontastic/boost/account/addresses': AccountAddressesTastic,
         'frontastic/boost/account/wishlists': AccountWishlistsTastic,
+        'frontastic/boost/product-details/title': ProductTitle,
+        'frontastic/boost/product-details/price': ProductPrice,
+        'frontastic/boost/product-details/rating': ProductRating,
+        'frontastic/boost/product-details/variant-selector': VariantSelector,
     }
 })()
