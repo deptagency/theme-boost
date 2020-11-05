@@ -1,0 +1,42 @@
+{
+    "tasticType": "frontastic/boost/product-details/variant-selector",
+    "name": "Product Variant Selector",
+    "category": "Product Details",
+    "icon": "list",
+    "schema": [
+        {
+            "name": "Product Configuration",
+            "fields": [
+                {
+                    "label": "Stream",
+                    "field": "stream",
+                    "type": "stream",
+                    "streamType": "product",
+                    "default": null
+                },
+                {
+                    "label": "Possible Variants",
+                    "field": "possibleVariants",
+                    "type": "group",
+                    "itemLabelField": "label",
+                    "min": 1,
+                    "fields": [
+                        {
+                            "label": "Label",
+                            "field": "label",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "label": "Attribute",
+                            "field": "attribute",
+                            "required": true,
+                            "type": "string",
+                            "translatable": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

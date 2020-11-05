@@ -1,11 +1,11 @@
 {
-    "tasticType": "frontastic/boost/product/product-details",
-    "name": "Product Details",
+    "tasticType": "frontastic/boost/product-details/rating",
+    "name": "Product Rating",
     "category": "Product Details",
-    "icon": "card_giftcard",
+    "icon": "star",
     "schema": [
         {
-            "name": "Main Configuration",
+            "name": "Product Configuration",
             "fields": [
                 {
                     "label": "Stream",
