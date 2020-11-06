@@ -5,6 +5,9 @@ import FacetService from './../FacetService'
 import { ReactComponent as IconCheck } from 'Icons/check.svg'
 
 const TermFacet = ({ facet, onChange }) => {
+    const [, updateState] = React.useState()
+    const forceUpdate = React.useCallback(() => updateState({}), [])
+
     const onTermClicked = (term) => {
         term.selected = !term.selected
 
@@ -13,6 +16,8 @@ const TermFacet = ({ facet, onChange }) => {
         if (onChange) {
             onChange(facet)
         }
+
+        forceUpdate()
     }
 
     return (

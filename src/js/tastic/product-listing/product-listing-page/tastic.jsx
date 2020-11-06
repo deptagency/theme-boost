@@ -14,9 +14,22 @@ import urlHandlerConnector from '@frontastic/catwalk/src/js/app/connector/urlHan
 import ProductListing from 'Organisms/Product/ProductListing'
 import CategoryNavigationTree from 'Molecules/Product/CategoryNavigationTree'
 
-function ProductListingPageTastic ({ data, node, route, tastic, urlHandler }) {
+function ProductListingPageTastic ({ data, node, route, tastic, wishlist, urlHandler }) {
     if (!urlHandler) {
         return null
+    }
+
+    if (wishlist.isComplete()) {
+        data.stream.items.map(product => {
+            const wishlisted = wishlist.data.lineItems.find((item) => {
+                return item.variant.sku === product.variants[0].sku
+            })
+
+            product.wishlisted = !!wishlisted
+            product.wishlistItemId = wishlisted ? wishlisted.lineItemId : null
+
+            return product
+        })
     }
 
     const parameters = urlHandler.parameterReader(tastic.configuration.stream).getParameters()
@@ -110,27 +123,26 @@ function ProductListingPageTastic ({ data, node, route, tastic, urlHandler }) {
                     <CategoryNavigationTree title={data.sidebarHeader} navTree={data.tree} currentPage={node} />
                 </div>
             )}
-            <div
-                className={classnames({
-                    'w-full': true,
+
+            <div className={classnames({
+                    'flex flex-col w-full': true,
                     'md:w-3/4': data.showSidebar,
                 })}
             >
-                <div className='flex flex-col'>
-                    <ProductListing
-                        data={data}
-                        sortState={sortState}
-                        onLoadNextPage={handleLoadNextPage}
-                        onSortChange={hanleSortChange}
-                        onFacetsChanged={handleFacetsChanged}
-                        onAddToWishlist={handleAddToWishlist}
-                        isFullWidth={!data.showSidebar}
-                        showFacets={data.showFacets}
-                        showInfinityScroll={data.showInfinityScroll}
-                        showPercent={data.showPercent}
-                        showStrikePrice={data.showStrikePrice}
-                    />
-                </div>
+                <ProductListing
+                    data={data}
+                    sortState={sortState}
+                    onLoadNextPage={handleLoadNextPage}
+                    onSortChange={hanleSortChange}
+                    onFacetsChanged={handleFacetsChanged}
+                    onAddToWishlist={handleAddToWishlist}
+                    isFullWidth={!data.showSidebar}
+                    showFacets={data.showFacets}
+                    showNextPage={data.showNextPage}
+                    showProductsCount={data.showProductsCount}
+                    showPercent={data.showPercent}
+                    showStrikePrice={data.showStrikePrice}
+                />
             </div>
         </div>
     )
@@ -142,10 +154,11 @@ ProductListingPageTastic.propTypes = {
 
     tastic: PropTypes.object.isRequired,
     route: PropTypes.object.isRequired,
+    wishlist: PropTypes.object.isRequired,
     urlHandler: PropTypes.instanceOf(UrlHandler),
 }
 
-export default tastify({ translate: true, connect: { node: true, tastic: true, route: true, urlHandler: true } })(
+export default tastify({ translate: true, connect: { node: true, tastic: true, route: true, wishlist: true, urlHandler: true } })(
     compose(
         connect(facetConnector),
         connect(categoryConnector),

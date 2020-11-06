@@ -22,9 +22,10 @@ const ProductListing = ({
     onAddToWishlist,
     showPercent,
     isFullWidth,
-    showStrikePrice,
     showFacets,
-    showInfinityScroll,
+    showProductsCount,
+    showNextPage,
+    showStrikePrice,
 }) => {
     const { ref, inView } = useInView({
         threshold: [0.25, 0.5, 0.75],
@@ -58,11 +59,8 @@ const ProductListing = ({
                                 <SortDesktopPopup sortState={sortState} onChange={onSortChange} />
                             </div>
 
-                            {data.stream.facets
-                                .filter((facet) => {
-                                    return !(facet.type === 'term' && facet.terms.length === 0)
-                                })
-                                .map((facet, index) => {
+                            {data.stream.facets.map((facet, index) => {
+                                if (!(facet.type === 'term' && facet.terms.length === 0)) {
                                     return (
                                         <div className='mt-4' key={index}>
                                             <FacetPopup
@@ -76,15 +74,18 @@ const ProductListing = ({
                                             />
                                         </div>
                                     )
-                                })}
+                                }
+                            })}
                         </div>
                     </div>
                 </>
             )}
 
-            <p className='mt-4 text-xs text-neutral-500 text-center'>
-                {data.stream.total || 0} <FormattedMessage id='filters.productsFound' />
-            </p>
+            {showProductsCount && (
+                <p className='mt-4 text-xs text-neutral-500 text-center'>
+                    {data.stream.total || 0} <FormattedMessage id='filters.productsFound' />
+                </p>
+            )}
 
             {data.stream.total > 0 && (
                 <div className={classnames({
@@ -106,9 +107,9 @@ const ProductListing = ({
                 </div>
             )}
 
-            {showInfinityScroll && data.stream.count < data.stream.total && <div ref={ref} className='w-full h-1' />}
+            {showNextPage === 'InfinityScroll' && data.stream.count < data.stream.total && <div ref={ref} className='w-full h-1' />}
 
-            {!showInfinityScroll && data.stream.count < data.stream.total && (
+            {showNextPage === 'LoadMore' && data.stream.count < data.stream.total && (
                 <div className='flex justify-center'>
                     <div
                         onClick={onLoadNextPage}
@@ -131,7 +132,8 @@ ProductListing.propTypes = {
     onAddToWishlist: PropTypes.func,
     isFullWidth: PropTypes.bool,
     showFacets: PropTypes.bool,
-    showInfinityScroll: PropTypes.bool,
+    showNextPage: PropTypes.string,
+    showProductsCount: PropTypes.bool,
     showPercent: PropTypes.bool,
     showStrikePrice: PropTypes.bool,
 }

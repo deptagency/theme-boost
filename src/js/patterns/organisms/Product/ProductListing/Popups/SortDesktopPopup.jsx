@@ -44,7 +44,7 @@ const SortDesktopPopup = ({ intl, sortState, onChange }) => {
             trigger={open => {
                 return (
                     <div className={classnames({
-                            'mr-2 w-48 h-8 px-2 border rounded flex items-center justify-between cursor-pointer select-none': true,
+                            'mr-2 h-8 px-2 border rounded flex items-center justify-between cursor-pointer select-none': true,
                             'bg-gray-300': open,
                             'bg-white': !open,
                             'text-gray-600 border-gray-300': !isSortSelected(),
