@@ -46,7 +46,7 @@ function ProductListingPageTastic ({ data, node, route, tastic, wishlist, urlHan
     const onChangeStreamParameters = (parameters) => {
         const newParams = {
             ...route.parameters,
-            ...parameters
+            ...parameters,
         }
 
         app.getRouter().push(route.route, newParams)
