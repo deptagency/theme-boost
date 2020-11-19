@@ -43,6 +43,15 @@ function ProductListingPageTastic ({ data, node, route, tastic, wishlist, urlHan
         }
     }
 
+    const onChangeStreamParameters = (parameters) => {
+        const newParams = {
+            ...route.parameters,
+            ...parameters
+        }
+
+        app.getRouter().push(route.route, newParams)
+    }
+
     const handleAddToWishlist = (product, variant) => {
         app.getLoader('wishlist').add(product, variant, 1, null)
     }
@@ -60,7 +69,7 @@ function ProductListingPageTastic ({ data, node, route, tastic, wishlist, urlHan
             }
         })
 
-        app.getRouter().push(route.route, parameters)
+        onChangeStreamParameters(parameters)
     }
 
     const hanleSortChange = (sort) => {
@@ -73,7 +82,7 @@ function ProductListingPageTastic ({ data, node, route, tastic, wishlist, urlHan
             stream.setSortOrder(sort.attributeId, sort.order)
         })
 
-        app.getRouter().push(route.route, parameters)
+        onChangeStreamParameters(parameters)
     }
 
     const handleFacetsChanged = (facets) => {
@@ -113,7 +122,7 @@ function ProductListingPageTastic ({ data, node, route, tastic, wishlist, urlHan
             })
         })
 
-        app.getRouter().push(route.route, parameters)
+        onChangeStreamParameters(parameters)
     }
 
     return (
