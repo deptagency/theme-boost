@@ -74,6 +74,8 @@ const ProductListing = ({
                                             />
                                         </div>
                                     )
+                                } else {
+                                    return false
                                 }
                             })}
                         </div>
