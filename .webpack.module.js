@@ -5,9 +5,9 @@ const autoprefixer = require('autoprefixer')
 
 global.layout = {}
 try {
-    global.layout = require(paths.appSrc + "/js/settings.js")
+    global.layout = require(paths.appSrc + '/js/settings.js')
 } catch (e) {
-    console.warn("Could not load project specific theming: " + e)
+    console.warn('Could not load project specific theming: ' + e)
 }
 
 module.exports = (config, PRODUCTION, SERVER) => {
@@ -20,8 +20,9 @@ module.exports = (config, PRODUCTION, SERVER) => {
                 Organisms: __dirname + '/src/js/patterns/organisms',
                 Templates: __dirname + '/src/js/patterns/templates',
                 Icons: __dirname + '/src/icons',
+                boost: __dirname + '/src',
             },
-        }
+        },
     })
 
     // Add tailwind configuration to SCSS compilation
