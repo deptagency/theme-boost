@@ -1,0 +1,26 @@
+{
+    "tasticType": "frontastic/boost/product-details/add-to-cart-button",
+    "name": "Add to Cart Button",
+    "category": "Product Details",
+    "icon": "call_to_action",
+    "schema": [
+        {
+            "name": "Configuration",
+            "fields": [
+                {
+                    "label": "Show Wishlist Button",
+                    "field": "isWishlistButton",
+                    "type": "boolean",
+                    "default": true
+                },
+                {
+                    "label": "Stream",
+                    "field": "stream",
+                    "type": "stream",
+                    "streamType": "product",
+                    "default": null
+                }
+            ]
+        }
+    ]
+}
