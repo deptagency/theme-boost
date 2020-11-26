@@ -56,5 +56,26 @@
 // This can happen if we deicde to deliver small images during server side
 // rendering without known the device size.
 img {
-    width: 100%
+    width: 100%;
+}
+
+.e-tastic__frontastic\/boost\/product-details\/title,
+.e-tastic__frontastic\/boost\/product-details\/price,
+.e-tastic__frontastic\/boost\/product-details\/rating,
+.e-tastic__frontastic\/boost\/product-details\/variant-selector,
+.e-tastic__frontastic\/boost\/product-details\/add-to-cart-button,
+.e-tastic__frontastic\/boost\/content\/feature-service,
+.e-tastic__frontastic\/boost\/content\/icon-list {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        margin-left: 32px;
+    }
+    @media screen and (min-width: 960px) {
+        max-width: 406px;
+        margin-left: auto;
+    }
+    @media screen and (min-width: 1024px) {
+        max-width: 426px;
+        margin: 0 auto;
+    }
 }
