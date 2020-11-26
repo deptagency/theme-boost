@@ -2,14 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 
-const Button = ({
-    type = 'button',
-    name,
-    variant = '',
-    disabled = false,
-    children,
-    onClick = () => {},
-}) => {
+const Button = ({ type = 'button', name, variant = '', disabled = false, children, onClick = () => {} }) => {
     return (
         <button type={type} aria-label={name} className={variant} disabled={disabled} onClick={onClick}>
             {children}
