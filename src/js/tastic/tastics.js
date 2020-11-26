@@ -17,7 +17,10 @@ import Footer from './footer/tastic'
 import ProductTitle from './product/product-details/title/tastic'
 import ProductPrice from './product/product-details/price/tastic'
 import ProductRating from './product/product-details/rating/tastic'
+import ProductImages from './product/product-details/product-images/tastic'
 import VariantSelector from './product/product-details/variant-selector/tastic'
+import AddToCartButton from './product/product-details/add-to-cart-button/tastic'
+import IconList from './content/icon-list/tastic'
 
 /* eslint-disable arrow-body-style */
 const CartTastic = asyncComponent({ import: () => import('./cart/tastic'), height: {} })
@@ -46,6 +49,7 @@ export default (() => {
         'frontastic/boost/product-listing/product-listing-page': ProductListingPageTastic,
         'frontastic/boost/helpers/horizontal-spacer': HorizontalSpacerTastic,
         'frontastic/boost/content/feature-service': FeatureServiceTastic,
+        'frontastic/boost/content/icon-list': IconList,
         'frontastic/boost/footer': Footer,
         'frontastic/boost/cart': CartTastic,
         'frontastic/boost/checkout': CheckoutTastic,
@@ -62,6 +66,8 @@ export default (() => {
         'frontastic/boost/product-details/title': ProductTitle,
         'frontastic/boost/product-details/price': ProductPrice,
         'frontastic/boost/product-details/rating': ProductRating,
+        'frontastic/boost/product-details/product-images': ProductImages,
         'frontastic/boost/product-details/variant-selector': VariantSelector,
+        'frontastic/boost/product-details/add-to-cart-button': AddToCartButton,
     }
 })()
