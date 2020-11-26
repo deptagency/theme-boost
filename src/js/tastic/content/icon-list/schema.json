@@ -1,0 +1,40 @@
+{
+    "tasticType": "frontastic/boost/content/icon-list",
+    "name": "Icon List",
+    "category": "Content",
+    "icon": "list",
+    "schema": [
+        {
+            "name": "Configuration",
+            "fields": [
+                {
+                    "label": "CSS Class",
+                    "field": "className",
+                    "type": "string",
+                    "default": ""
+                },
+                {
+                    "label": "List",
+                    "field": "listItems",
+                    "type": "group",
+                    "itemLabelField": "label",
+                    "min": 1,
+                    "fields": [
+                        {
+                            "label": "Label",
+                            "field": "label",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "label": "Icon",
+                            "field": "icon",
+                            "required": false,
+                            "type": "media"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
