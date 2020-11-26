@@ -9,7 +9,11 @@ import StarRating from '../../../../patterns/organisms/Product/StarRating'
 const rand = (min, max) => Math.round(Math.random() * (max - min) + min)
 
 function ProductRating() {
-    return <StarRating numStars={rand(0, 5)} numReviews={rand(0, 100)} />
+    return (
+        <div className='mb-6'>
+            <StarRating numStars={rand(0, 5)} numReviews={rand(0, 100)} />
+        </div>
+    )
 }
 
 export default tastify()(ProductRating)

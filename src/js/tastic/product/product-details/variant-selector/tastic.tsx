@@ -3,416 +3,123 @@ import { useSelector } from 'react-redux'
 
 import productConnector from '@frontastic/catwalk/src/js/tastic/product/connector'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
-import Translatable from '@frontastic/catwalk/src/js/component/translatable'
 import app from '@frontastic/catwalk/src/js/app/app'
 
-import SelectVariant from '../../../../patterns/atoms/select/SelectVariant'
-import DropdownList, { DropdownItem } from '../../../../patterns/molecules/DropdownList'
+import AttributeSelector from '../../../../patterns/molecules/Product/attributeSelector'
 
-const hasAttribute = (product, attr) => product.variants.find((v) => v.attributes.hasOwnProperty(attr))
+import { Product, Variant } from '@frontastic/common/src/js/types/product'
 
-//const availableValuesByAttribute = (product, attr) =>
-
-const realVariants = [
-    {
-        _type: 'Frontastic\\Common\\ProductApiBundle\\Domain\\Variant',
-        id: '1',
-        sku: 'A0E200000002B7C',
-        groupId: '84455',
-        price: 13800,
-        discountedPrice: null,
-        discounts: [],
-        currency: 'EUR',
-        attributes: {
-            baseId: '84455',
-            articleNumberManufacturer: 'DAPHINE PTPT 1201 M',
-            articleNumberMax: '84455',
-            matrixId: 'A0E200000002B7C',
-            designer: {
-                key: 'gabs',
-                label: 'Gabs',
-            },
-            madeInItaly: {
-                key: 'yes',
-                label: 'yes',
-            },
-            commonSize: {
-                key: 'oneSize',
-                label: 'one Size',
-            },
-            size: 'one size',
-            color: {
-                key: 'yellow',
-                label: 'Yellow',
-            },
-            colorFreeDefinition: 'yellow',
-            style: {
-                key: 'sporty',
-                label: 'sporty',
-            },
-            gender: {
-                key: 'women',
-                label: 'Damen',
-            },
-            season: 'A15',
-        },
-        images: ['https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/084455_1_medium.jpg'],
-        isOnStock: true,
-    },
-    {
-        _type: 'Frontastic\\Common\\ProductApiBundle\\Domain\\Variant',
-        id: '2',
-        sku: 'A0E200000002B7D',
-        groupId: '84455',
-        price: 13800,
-        discountedPrice: null,
-        discounts: [],
-        currency: 'EUR',
-        attributes: {
-            baseId: '84455',
-            articleNumberManufacturer: 'DAPHNE PTPT 1701 M',
-            articleNumberMax: '84456',
-            matrixId: 'A0E200000002B7D',
-            designer: {
-                key: 'gabs',
-                label: 'Gabs',
-            },
-            madeInItaly: {
-                key: 'yes',
-                label: 'yes',
-            },
-            commonSize: {
-                key: 'oneSize',
-                label: 'one Size',
-            },
-            size: 'one size',
-            color: {
-                key: 'brown',
-                label: 'Brown',
-            },
-            colorFreeDefinition: 'brown',
-            style: {
-                key: 'sporty',
-                label: 'sporty',
-            },
-            gender: {
-                key: 'women',
-                label: 'Damen',
-            },
-            season: 'A15',
-        },
-        images: ['https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/084455_1_medium.jpg'],
-        isOnStock: true,
-    },
-    {
-        _type: 'Frontastic\\Common\\ProductApiBundle\\Domain\\Variant',
-        id: '3',
-        sku: 'A0E200000002B7E',
-        groupId: '84455',
-        price: 13800,
-        discountedPrice: null,
-        discounts: [],
-        currency: 'EUR',
-        attributes: {
-            baseId: '84455',
-            articleNumberManufacturer: 'DAPHNE PTPT 2000 M',
-            articleNumberMax: '84457',
-            matrixId: 'A0E200000002B7E',
-            designer: {
-                key: 'gabs',
-                label: 'Gabs',
-            },
-            madeInItaly: {
-                key: 'yes',
-                label: 'yes',
-            },
-            commonSize: {
-                key: 'oneSize',
-                label: 'one Size',
-            },
-            size: 'one size',
-            color: {
-                key: 'black',
-                label: 'Black',
-            },
-            colorFreeDefinition: 'black',
-            style: {
-                key: 'sporty',
-                label: 'sporty',
-            },
-            gender: {
-                key: 'women',
-                label: 'Damen',
-            },
-            season: 'A15',
-        },
-        images: ['https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/084455_1_medium.jpg'],
-        isOnStock: true,
-    },
-    {
-        _type: 'Frontastic\\Common\\ProductApiBundle\\Domain\\Variant',
-        id: '4',
-        sku: 'A0E200000002B7F',
-        groupId: '84455',
-        price: 13800,
-        discountedPrice: null,
-        discounts: [],
-        currency: 'EUR',
-        attributes: {
-            baseId: '84455',
-            articleNumberManufacturer: 'DAPHNE PTPT 2023 M',
-            articleNumberMax: '84458',
-            matrixId: 'A0E200000002B7F',
-            designer: {
-                key: 'gabs',
-                label: 'Gabs',
-            },
-            madeInItaly: {
-                key: 'yes',
-                label: 'yes',
-            },
-            commonSize: {
-                key: 'oneSize',
-                label: 'one Size',
-            },
-            size: 'one size',
-            color: {
-                key: 'grey',
-                label: 'Grey',
-            },
-            colorFreeDefinition: 'grey',
-            style: {
-                key: 'sporty',
-                label: 'sporty',
-            },
-            gender: {
-                key: 'women',
-                label: 'Damen',
-            },
-            season: 'A15',
-        },
-        images: ['https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/084455_1_medium.jpg'],
-        isOnStock: true,
-    },
-    {
-        _type: 'Frontastic\\Common\\ProductApiBundle\\Domain\\Variant',
-        id: '5',
-        sku: 'A0E200000002B7G',
-        groupId: '84455',
-        price: 13800,
-        discountedPrice: null,
-        discounts: [],
-        currency: 'EUR',
-        attributes: {
-            baseId: '84455',
-            articleNumberManufacturer: 'DAPHNE PTPT 1901 M',
-            articleNumberMax: '84459',
-            matrixId: 'A0E200000002B7G',
-            designer: {
-                key: 'gabs',
-                label: 'Gabs',
-            },
-            madeInItaly: {
-                key: 'yes',
-                label: 'yes',
-            },
-            commonSize: {
-                key: 'oneSize',
-                label: 'one Size',
-            },
-            size: 'one size',
-            color: {
-                key: 'blue',
-                label: 'Blue',
-            },
-            colorFreeDefinition: 'blue',
-            style: {
-                key: 'sporty',
-                label: 'sporty',
-            },
-            gender: {
-                key: 'women',
-                label: 'Damen',
-            },
-            season: 'A15',
-        },
-        images: ['https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/084455_1_medium.jpg'],
-        isOnStock: true,
-    },
-    {
-        _type: 'Frontastic\\Common\\ProductApiBundle\\Domain\\Variant',
-        id: '6',
-        sku: 'A0E200000002B7H',
-        groupId: '84461',
-        price: 17800,
-        discountedPrice: null,
-        discounts: [],
-        currency: 'EUR',
-        attributes: {
-            baseId: '84461',
-            articleNumberManufacturer: 'DAPHNE OXOX 1201 XL',
-            articleNumberMax: '84460',
-            matrixId: 'A0E200000002B7H',
-            designer: {
-                key: 'gabs',
-                label: 'Gabs',
-            },
-            madeInItaly: {
-                key: 'yes',
-                label: 'yes',
-            },
-            commonSize: {
-                key: 'oneSize',
-                label: 'one Size',
-            },
-            size: 'one size',
-            color: {
-                key: 'yellow',
-                label: 'Yellow',
-            },
-            colorFreeDefinition: 'yellow',
-            style: {
-                key: 'sporty',
-                label: 'sporty',
-            },
-            gender: {
-                key: 'women',
-                label: 'Damen',
-            },
-            season: 'A15',
-        },
-        images: ['https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/084461_1_medium.jpg'],
-        isOnStock: true,
-    },
-]
-
-interface Variant {
-    sku: string
-    price: number
-    attributes: Attributes
-}
-// would be great to have something like io-ts for these things
-interface Attributes {
-    [key: string]: string | { label: string; key: string }
+import { parseVariants, getVariantFromSelectedAttributes } from './helpers'
+//
+//
+// TYPES
+interface RootState {
+    product: Product
+    variants: Variant[]
 }
 
-// step 1 - parse all variants and get all possible attribute values
-const allowed = ['size', 'color', 'length']
-// step 2 - filter attributes by whitelist, either from porject settings or overwrite via tastic
-function parseVariants(variants) {
-    // grab all attributes from current product
-    // and filter with whitelist (from project settings or tastic override)
-    const filteredAttrs = Object.keys(variants[0].attributes).filter((key) => allowed.includes(key))
-
-    // create an object with a key per whitelisted attribute
-    // and then all the possible attributes there are from all the variants
-    // checks also uniqueness
-    return filteredAttrs.reduce((acc, attr) => {
-        return {
-            ...acc,
-            [attr]: Array.from(new Set(variants.map((v) => v.attributes[attr]))),
-        }
-    }, {})
-}
-//const currentVariant = [2, 0, 0] // black, one size, sporty, A0E200000002B7E
-const currentVariant = { color: { key: 'yellow', label: 'Yellow' }, size: 'one size' }
-//const isVariantVailable = variants =>
-
-const getVariantFromSelectedAttributes = (variants, attributes, current) => {
-    return variants.filter((v) => {
-        const isMatch = (attr) => {
-            return JSON.stringify(v.attributes[attr]) === JSON.stringify(current[attr])
-        }
-        return Object.keys(attributes).every(isMatch)
-    })[0]
-    // filter returns an array and we grab the first result. Technbically, that's
-    // not necessary, but we had an isue during testing of duplicate variants, so the
-    // attribute selections would match for more than one product. According to product,
-    // this shouldn't happen, but we just want make sure here.
+export interface Props {
+    data: { stream: Product; isSingularSelectable: boolean; possibleAttributes: [{ label: string; attribute: string }] }
+    route: { route: string; parameters: { _variant: string } }
 }
 
-// function filteredAttributes(attributes, whitelist) {
-//     // iterate over whitelist and return only those
-// }
+// TYPEGUARD for attributes which technically can be anything according to:
+// https://frontastic.slack.com/archives/C013EQ3URUL/p1605178586442000?thread_ts=1605173728.433300&cid=C013EQ3URUL
+// This way we make sure the UI lets us know.
+// ** Currently not in use because attributes are typed any. ¯\_(ツ)_/¯
+//
+//function isValidAttrs(attrs: unknown[]): attrs is unknown[] {
+//    if (!Array.isArray(attrs)) {
+//        throw new Error('Product Attributes are not valid for this Tastic')
+//    }
+//    if (attrs.every((a) => typeof a === 'string')) {
+//        return true
+//    }
+//    if (attrs.every((a) => a.label !== 'undefined' && a.key !== undefined)) {
+//        return true
+//    }
+//    throw new Error('Product Attributes are not valid for this Tastic')
+//}
 
-// function getSKUFromAttributes(variants, currentSelectedAttributes) {
-//     const res = variants.filter(v => {
-
-//     })
-
-//     console.log(res)
-// }
-
-function allowedVariantAttributes(variant, allowed) {
-    // now iterate over our whitelist and return all those attributes
-    return Object.keys(variant.attributes)
-        .filter((attr) => allowed.includes(attr))
-        .reduce((attrs, curAttr) => {
-            return {
-                ...attrs,
-                [curAttr]: variant.attributes[curAttr],
-            }
-        }, {})
-}
-
-// how it works:
-// the state is just the attributes of the currently selected variant.
-// Those attributes get filtered (because there are many, mostly irrelevant)
-// via the allowed list, which comes either from the projects settings or
-// via override from the tastic.
+//
+//   (\ /)
+//  ( . .)
+//  c(")(")
+//
+// HOW IT WORKS:
+//
+// 1. We go through all available variants of the current product
+// and extract all possible attributes from there (Note: product variants
+// are unique combinations of attributes like size and color).
+// This is what the function `parseVariants` does.
+// A result is an object like this:
+//      {
+//       color: [{key: "black", label: "Black"}, {key: "yellow", label: "Yellow"}],
+//       size: ['s', 'm', 'l', 'xl']
+//      }
+// Attributes can be either a string or an Object, see the Attribute type above.
+//
+// 2. Now that we know which possible attributes there are (e.g., which sizes and colors),
+// we can use those to render the UI.
+//
+// 3. Once a user selects an attribute, the helper function `getVariantFromSelectedAttributes`
+// finds the variant based on the currently selected attributes and uses that to update the URL state.
+//
+//
 //
 
-function VariantSelector(props) {
+// MAIN COMPONENT
+function VariantSelector(props: Props) {
     const { data, route } = props
-    const { product, variant, ...rest } = useSelector((state) => productConnector(state, props))
-    console.log('INITAL DATA', product, variant, rest, route)
+    const { product, variant } = useSelector((state: RootState) => productConnector(state, props))
 
-    //const [currentAvailability, setcurrentAvailability] = useState()
-    const [possibleOptions, setPossibleOptions] = React.useState(null)
+    const allowedAttributes = data.possibleAttributes.map((attr) => attr.attribute)
+
+    const [availableAttributes, setAvailableAttributes] = React.useState(null)
     const [currentVariantAttrs, setCurrentVariantAttrs] = React.useState(null)
 
     React.useEffect(() => {
-        setCurrentVariantAttrs(allowedVariantAttributes(variant, allowed))
-        setPossibleOptions(parseVariants(product.variants))
-    }, [product, variant])
+        if (variant && product && allowedAttributes) {
+            // we need to parseVariants twice here, unfortunately. Once for
+            // the currently selected variant to get the currentlu selected and to deal with
+            // handling the selection of attributes later.
+            // And then once more to get every available attribute for rendering the UI
+            setCurrentVariantAttrs(parseVariants(variant, allowedAttributes))
+            setAvailableAttributes(parseVariants(product.variants, allowedAttributes))
+        }
+    }, [data.possibleAttributes])
 
-    const handleSelectAttribute = (attr, e) => {
+    const handleSelectAttribute = (attr: string, e: React.ChangeEvent<HTMLSelectElement>) => {
         const current = JSON.parse(e.target.value)
-        setCurrentVariantAttrs({ ...currentVariantAttrs, [attr]: current })
-        const currentVariant = getVariantFromSelectedAttributes(
-            product.variants,
-            setPossibleOptions,
-            currentVariantAttrs
-        )
-        console.log(currentVariant)
-        app.getRouter().replace(route.route, { ...route.parameters, _variant: 2 })
+        // Note: if the value is a primitive (string), JSON.parse turns that into a number,
+        // which then doesn't work anymore to find the proper variant, so we convert it to a string before
+        const currentVariant = getVariantFromSelectedAttributes(product.variants, availableAttributes, {
+            ...currentVariantAttrs,
+            [attr]: typeof current === 'number' ? current.toString() : current,
+        })
+        setCurrentVariantAttrs(currentVariant)
+        app.getRouter().replace(route.route, { ...route.parameters, _variant: currentVariant })
     }
 
-    if (!possibleOptions) return null
-    console.log('render', possibleOptions, currentVariantAttrs)
-    return Object.keys(possibleOptions).map((attr) => {
+    if (!availableAttributes || !product || !variant) return null
+
+    // It would make sense to iterate over the keys of only the available attributes,
+    // (availableAttributes) but then you'd have a harder time to get to the label.
+    // That's why there's the extra null check
+    return data.possibleAttributes.map(({ attribute: attr, label }) => {
+        if (!availableAttributes[attr]) return null
+
         return (
-            <div className='flex-col pt-4 md:pb-4'>
-                <div className='pb-2'>{attr}</div>
-                <div className='w-full mb-6 md:mb-0'>
-                    <DropdownList
-                        value={JSON.stringify(currentVariantAttrs[attr])}
-                        onChange={(e) => handleSelectAttribute(attr, e)}
-                    >
-                        {possibleOptions[attr].map((val, key) => {
-                            //console.log('select', val, key, allAttributes[lastSelected.attr])
-                            return (
-                                <DropdownItem
-                                    value={typeof val === 'string' ? val : JSON.stringify(val)}
-                                    label={typeof val === 'string' ? val : val.label}
-                                />
-                            )
-                        })}
-                    </DropdownList>
-                </div>
-            </div>
+            <AttributeSelector
+                key={attr}
+                label={label}
+                value={currentVariantAttrs[attr]}
+                options={availableAttributes[attr]}
+                isSingularSelectable={data.isSingularSelectable}
+                onChange={(e: React.ChangeEvent<HTMLSelectElement>) => handleSelectAttribute(attr, e)}
+            />
         )
     })
 }
 
-export default tastify({ connect: { route: true, urlHandler: true } })(VariantSelector)
+export default tastify({ translate: true, connect: { route: true, urlHandler: true } })(VariantSelector)

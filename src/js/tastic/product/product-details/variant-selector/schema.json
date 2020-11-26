@@ -15,8 +15,14 @@
                     "default": null
                 },
                 {
-                    "label": "Possible Variants",
-                    "field": "possibleVariants",
+                    "label": "IS selectable when only one option?",
+                    "field": "isSingularSelectable",
+                    "type": "boolean",
+                    "default": true
+                },
+                {
+                    "label": "Possible Attributes",
+                    "field": "possibleAttributes",
                     "type": "group",
                     "itemLabelField": "label",
                     "min": 1,

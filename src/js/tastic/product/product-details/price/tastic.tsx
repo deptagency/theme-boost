@@ -6,9 +6,18 @@ import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 
 import Price from '../../../../patterns/atoms/price'
 
+import { Variant } from '@frontastic/common/src/js/types/product'
+
 function ProductPrice(props) {
-    const { variant } = useSelector((state) => productConnector(state, props))
-    return <Price className='text-xl inline-block mb-3' value={variant.price} currency={variant.currency} />
+    const { variant } = useSelector((state: { variant: Variant }) => productConnector(state, props))
+    if (!variant) return null;
+    return (
+        <Price
+            className='text-xl text-gray-700 antialiased inline-block mb-4'
+            value={variant.price}
+            currency={variant.currency}
+        />
+    )
 }
 
 export default tastify()(ProductPrice)
