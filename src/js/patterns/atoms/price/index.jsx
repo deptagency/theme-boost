@@ -20,6 +20,7 @@ const Price = ({ value, className = '', variant = '', currency: variantCurrency 
 Price.propTypes = {
     value: PropTypes.number.isRequired,
     variant: PropTypes.string,
+    className: PropTypes.string,
     currency: PropTypes.string,
 }
 
