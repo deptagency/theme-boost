@@ -6,7 +6,7 @@ import classnames from 'classnames'
 
 import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
 import LoaderButton from 'Molecules/Loaders/LoaderButton'
-import StarRating from './StarRating'
+import StarRating from './StarRating.tsx'
 
 import Price from 'Atoms/price'
 import Button from 'Atoms/button'
@@ -40,9 +40,7 @@ const ProductData = ({
 
     return (
         <>
-            <div className='text-xl font-bold text-neutral-900'>
-                {name}
-            </div>
+            <div className='text-xl font-bold text-neutral-900'>{name}</div>
 
             <Price
                 variant='text-lg text-neutral-700 py-1'
