@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Button from 'Atoms/button'
 
-import { getIconComponent } from './Icons'
+import { getIconComponent } from './icons'
 
 function EmptyState ({ icon: iconSrc, iconColor, title, subtitle, action, actionLabel, children }) {
     return (
@@ -47,5 +47,5 @@ EmptyState.propTypes = {
     actionLabel: PropTypes.node,
 }
 
-export { icons } from './Icons'
+export { icons } from './icons'
 export default EmptyState
