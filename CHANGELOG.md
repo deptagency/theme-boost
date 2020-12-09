@@ -1,5 +1,31 @@
 # boost Changelog
 
+## `1.0.0-rc.10` (2020-12-09)
+
+* fix: Changed file extensions so the SVGR webpack plugin hits in
+* fix: turns starRating into tsx component
+* fix: attempt to TS errors
+* feat: custom types for boost.
+* fix: adds our path aliases to TS
+* fix: css updates to PDP tastics
+* fix: adds missing pdp tastic imports
+* fix: various small fixes for PDP tastics
+* fix: adds missing key prop to StarRating
+* feat: adds "boost" as lowercase import alias
+* fix: menu on mobile covered part of the pdp
+* fix: small width fix and reformats
+* feat: Header atom
+* feat: simple product images tastic
+* feat: generic icon list tastic (WiP)
+* feat: add to cart button
+* feat: attribute selector
+* feat: generic dropdown
+* fix: added missing comma
+* fixed filter bug in search page, filters now pass additional url parameters
+* fixed category listing bug
+* added relative width and fixed screen width responsive classes
+* added white background to checkout panels
+
 ## `1.0.0-rc.9` (2020-10-27)
 
 * Product category, slider grid layout fix
