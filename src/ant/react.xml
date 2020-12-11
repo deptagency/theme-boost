@@ -10,12 +10,14 @@
             <arg value="build-storybook" />
         </exec>
 
-        <exec executable="git" failonerror="false" dir="${basedir}">
-            <arg value="rm" />
-            <arg value="-r" />
-            <arg value="--force" />
-            <arg value="${basedir}/../../../landingpage/public/docs/boost/storybook/*" />
-        </exec>
+        <retry retrycount="3" retrydelay="1000">
+            <exec executable="git" failonerror="false" dir="${basedir}">
+                <arg value="rm" />
+                <arg value="-r" />
+                <arg value="--force" />
+                <arg value="${basedir}/../../../landingpage/public/docs/boost/storybook/*" />
+            </exec>
+        </retry>
 
         <copy todir="${basedir}/../../../landingpage/public/docs/boost/storybook/" >
             <fileset dir="${basedir}/storybook-static/" includes="**"/>
@@ -23,9 +25,11 @@
 
         <delete dir="${basedir}/storybook-static/" />
 
-        <exec executable="git" failonerror="true" dir="${basedir}">
-            <arg value="add" />
-            <arg value="${basedir}/../../../landingpage/public/docs/boost/storybook/*" />
-        </exec>
+        <retry retrycount="3" retrydelay="1000">
+            <exec executable="git" failonerror="true" dir="${basedir}">
+                <arg value="add" />
+                <arg value="${basedir}/../../../landingpage/public/docs/boost/storybook/*" />
+            </exec>
+        </retry>
     </target>
 </project>
