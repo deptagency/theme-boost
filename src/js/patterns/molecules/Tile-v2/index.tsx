@@ -123,7 +123,6 @@ const Tile = ({
     // It is only used if the tastic aspect ratio is set to "original" and
     // if there is a background image (bgImage) present
     const calculateAspectStyle = (aspect: Aspect, img: {media: Media} | undefined): AspectStyle => {
-        console.log('CALC', aspect, img)
         if (aspect === 'original' && img) {
             return {paddingBottom: `${(img.media.height / img.media.width) * 100}%`}
         }
