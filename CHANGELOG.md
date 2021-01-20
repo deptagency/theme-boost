@@ -1,5 +1,12 @@
 # boost Changelog
 
+## `1.0.0` (2021-01-20)
+
+* feat: Adds original aspect ratio to the tile
+* fix: Tastic crashed w/o translate:true
+* Removed header padding from content in mobile
+* fix: Upgraded @types/react consistently to 17.0.0
+
 ## `1.0.0-rc.10` (2020-12-09)
 
 * fix: Changed file extensions so the SVGR webpack plugin hits in

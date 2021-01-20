@@ -1,6 +1,6 @@
 {
     "name": "@frontastic/theme-boost",
-    "version": "1.0.0-rc.10",
+    "version": "1.0.0",
     "resolutions": {
         "unidragger": "2.2.3"
     },
