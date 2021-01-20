@@ -6,14 +6,14 @@ import app from '@frontastic/catwalk/src/js/app/app'
 
 import MainMenu from 'Organisms/MainMenu'
 
-const MainMenuTastic = ({ data }) => {
+const MainMenuTastic = ({data}) => {
     return (
         <MainMenu
             topCategories={data.topCategories}
             logo={data.logo}
-            goToCartPage={() => { app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}
-            goToWishlistPage={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.wishlists', { wishlist: null }) }}
-            goToProfilePage={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }}
+            goToCartPage={() => {app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart')}}
+            goToWishlistPage={() => {app.getRouter().push('Frontastic.Frontend.Master.Account.wishlists', {wishlist: null})}}
+            goToProfilePage={() => {app.getRouter().push('Frontastic.Frontend.Master.Account.profile')}}
             infoHeader={data.infoHeader}
             infoHeaderIcon={data.infoHeaderIcon}
             aboutHeader={data.aboutHeader}
@@ -28,4 +28,4 @@ MainMenuTastic.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
-export default tastify()(MainMenuTastic)
+export default tastify({translate: true})(MainMenuTastic)
