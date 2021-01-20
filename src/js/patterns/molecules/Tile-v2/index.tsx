@@ -1,16 +1,15 @@
-import React, { useRef } from 'react'
+import React, {useRef} from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { useSelector } from 'react-redux'
+import {useSelector} from 'react-redux'
 import Reference from '@frontastic/catwalk/src/js/component/reference'
 import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
 import MediaImage from '@frontastic/catwalk/src/js/mediaImage'
-import { Media } from '@frontastic/catwalk/src/js/types/frontend/media'
+import {Media} from '@frontastic/catwalk/src/js/types/frontend/media'
 
 import FullPageWidthWrapper from '../Layout/FullPageWidthWrapper'
 
 import Cta from './components/CallToAction'
-import FgImage from './components/ForegroundImage'
 // types
 
 const OrderingEnum = {
@@ -21,18 +20,19 @@ const OrderingEnum = {
 
 type FgPos = 'left-top' | 'top' | 'right-top' | 'left' | 'center' | 'right' | 'left-bottom' | 'bottom' | 'right-bottom'
 type FgSize = '50%' | '60%' | '70%' | '80%' | '90%' | '100%'
-type Aspect = '16/9' | '4/3' | '21/9'
+type Aspect = 'original' | '16/9' | '4/3' | '21/9'
 type FontSize = 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl'
 type Align = 'left' | 'center' | 'right'
 type Theme = 'light' | 'dark'
 export type CtaColor = 'primary' | 'secondary' | 'neutral'
 type Ordering = typeof OrderingEnum[keyof typeof OrderingEnum]
+type AspectStyle = {} | {paddingBottom: string}
 
 export interface TileTasticData {
     bgColor?: string
-    bgImage?: Media
+    bgImage?: {media: Media}
     contentPos: FgPos
-    fgImage?: Media
+    fgImage?: {media: Media}
     fgAlign: Align
     fgSize: FgSize
     fgIsFullWidth: boolean
@@ -82,7 +82,7 @@ const Tile = ({
     // this could've gone easily as values into the schema,
     // but I prefer the schema not having knowledge of
     // which centering mechanism (flex, grid, abs) we use here
-    const fgPosCss: { [key in FgPos]: string } = {
+    const fgPosCss: {[key in FgPos]: string} = {
         'left-top': 'justify-start items-start',
         top: 'justify-center items-start',
         'right-top': 'justify-end items-start',
@@ -93,16 +93,16 @@ const Tile = ({
         bottom: 'justify-center items-end',
         'right-bottom': 'justify-end items-end',
     }
-    const fgAlignToFlex: { [key in Align]: string } = {
+    const fgAlignToFlex: {[key in Align]: string} = {
         left: 'items-start',
         center: 'items-center',
         right: 'items-end',
     }
-    const themeToTextColor: { [key in Theme]: string } = {
+    const themeToTextColor: {[key in Theme]: string} = {
         light: 'text-black',
         dark: 'text-white',
     }
-    const fontSizeCss: { [key in FontSize]: string } = {
+    const fontSizeClass: {[key in FontSize]: string} = {
         base: 'text-base',
         lg: 'text-lg',
         xl: 'text-lg md:text-xl',
@@ -112,11 +112,24 @@ const Tile = ({
         '5xl': 'text-2xl md:text-5xl',
     }
 
-    const aspectCss: { [key in Aspect]: string } = {
+    const aspectClass: {[key in Aspect]: string} = {
+        'original': '',
         '16/9': 'pb-16/9',
         '4/3': 'pb-4/3',
         '21/9': 'pb-21/9',
     }
+
+    // this adds the aspect ration based on the original image aspect ratio
+    // It is only used if the tastic aspect ratio is set to "original" and
+    // if there is a background image (bgImage) present
+    const calculateAspectStyle = (aspect: Aspect, img: {media: Media} | undefined): AspectStyle => {
+        console.log('CALC', aspect, img)
+        if (aspect === 'original' && img) {
+            return {paddingBottom: `${(img.media.height / img.media.width) * 100}%`}
+        }
+        return {}
+    }
+
 
     // Just a little DRY. The copy doesn't
     // technically need it's own render function,
@@ -124,7 +137,7 @@ const Tile = ({
     const renderImage = () => (
         <MediaImage
             className={`w-${fgIsFullWidth ? 'full' : 'auto'} flex-1 bg-no-repeat bg-contain bg-center mt-6`}
-            options={{ crop: 'pad', background: 'transparent' }}
+            options={{crop: 'pad', background: 'transparent'}}
             media={fgImage}
         />
     )
@@ -135,18 +148,16 @@ const Tile = ({
         <>
             {headline && (
                 <h2
-                    className={`${themeToTextColor[theme]} ${fontSizeCss[headlineSize]} ${
-                        isHeadlineBold ? 'font-bold' : ''
-                    }`}
+                    className={`${themeToTextColor[theme]} ${fontSizeClass[headlineSize]} ${isHeadlineBold ? 'font-bold' : ''
+                        }`}
                 >
                     {headline}
                 </h2>
             )}
             {subhead && (
                 <h3
-                    className={`${themeToTextColor[theme]} ${fontSizeCss[subheadSize]} ${
-                        isSubheadBold ? 'font-bold' : ''
-                    } leading-tight`}
+                    className={`${themeToTextColor[theme]} ${fontSizeClass[subheadSize]} ${isSubheadBold ? 'font-bold' : ''
+                        } leading-tight`}
                 >
                     {subhead}
                 </h3>
@@ -154,17 +165,18 @@ const Tile = ({
         </>
     )
 
+
     // main render offloaded to a function because of conditional rendering (fullwidth yes/no)
     const content = (
         <DivOrReference
             className='relative block'
-            style={{ backgroundColor: bgColor }}
+            style={{backgroundColor: bgColor}}
             reference={reference || undefined}
         >
             {/*
              * Background / Aspect Ratio
              */}
-            <div className={`relative ${aspectCss[aspect]}`}>
+            <div className={`relative ${aspectClass[aspect]}`} style={{...calculateAspectStyle(aspect, bgImage)}}>
                 {bgImage && (
                     <MediaImage className='absolute h-full w-full object-cover object-center' media={bgImage} />
                 )}
@@ -175,10 +187,9 @@ const Tile = ({
              */}
             <div className={`absolute flex top-0 left-0 ${fgPosCss[contentPos]} h-full w-full overflow-hidden`}>
                 <div
-                    className={`inline-block ${fgIsFullWidth ? 'w-full' : ''} p-3 md:p-8 flex flex-col ${
-                        fgAlignToFlex[fgAlign]
-                    } text-${fgAlign}`}
-                    style={{ height: fgSize }}
+                    className={`inline-block ${fgIsFullWidth ? 'w-full' : ''} p-3 md:p-8 flex flex-col ${fgAlignToFlex[fgAlign]
+                        } text-${fgAlign}`}
+                    style={{height: fgSize}}
                 >
                     {/* rendering the 3 elements copy, img, cta based on the set order */}
                     {ordering === OrderingEnum.ImgCopyCta && renderImage()}

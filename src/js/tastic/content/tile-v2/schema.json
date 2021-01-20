@@ -45,6 +45,10 @@
                     "default": "16/9",
                     "values": [
                         {
+                            "value": "original",
+                            "name": "Original"
+                        },
+                        {
                             "value": "16/9",
                             "name": "16/9"
                         },
