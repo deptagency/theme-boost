@@ -14,12 +14,6 @@ const MainMenuTastic = ({ data }) => {
             goToCartPage={() => { app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart') }}
             goToWishlistPage={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.wishlists', { wishlist: null }) }}
             goToProfilePage={() => { app.getRouter().push('Frontastic.Frontend.Master.Account.profile') }}
-            infoHeader={data.infoHeader}
-            infoHeaderIcon={data.infoHeaderIcon}
-            aboutHeader={data.aboutHeader}
-            aboutHeaderIcon={data.aboutHeaderIcon}
-            contactHeader={data.contactHeader}
-            contactHeaderIcon={data.contactHeaderIcon}
         />
     )
 }

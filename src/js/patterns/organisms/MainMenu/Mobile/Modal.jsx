@@ -5,7 +5,6 @@ import Scrollbars from 'react-custom-scrollbars'
 
 import TopCategories from './TopCategories'
 import Navigation from './Navigation'
-import AccountLinks from './AccountLinks'
 
 import {
     categoryTreeType,
@@ -22,12 +21,6 @@ const Modal = ({
     handleGoBack,
     navPath,
     onClose,
-    infoHeader,
-    infoHeaderIcon,
-    aboutHeader,
-    aboutHeaderIcon,
-    contactHeader,
-    contactHeaderIcon,
 }) => {
     const currentTree = topCategories[currentTopCategory].tree
 
@@ -71,15 +64,6 @@ const Modal = ({
                         />}
                     </div>
                 </Scrollbars>
-                <AccountLinks
-                    closeMobileMenu={onClose}
-                    infoHeader={infoHeader}
-                    infoHeaderIcon={infoHeaderIcon}
-                    aboutHeader={aboutHeader}
-                    aboutHeaderIcon={aboutHeaderIcon}
-                    contactHeader={contactHeader}
-                    contactHeaderIcon={contactHeaderIcon}
-                />
             </div>
         </div>
     )
@@ -95,12 +79,6 @@ Modal.propTypes = {
     handleGoBack: PropTypes.func.isRequired,
     navPath: PropTypes.arrayOf(categoryTreeType),
     onClose: PropTypes.func.isRequired,
-    infoHeader: PropTypes.string,
-    infoHeaderIcon: PropTypes.string,
-    aboutHeader: PropTypes.string,
-    aboutHeaderIcon: PropTypes.string,
-    contactHeader: PropTypes.string,
-    contactHeaderIcon: PropTypes.string,
 }
 
 export default Modal

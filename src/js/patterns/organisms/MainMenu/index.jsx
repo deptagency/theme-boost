@@ -11,13 +11,7 @@ const MainMenu = ({
     topCategories,
     logo, goToCartPage,
     goToWishlistPage,
-    goToProfilePage,
-    infoHeader,
-    infoHeaderIcon,
-    aboutHeader,
-    aboutHeaderIcon,
-    contactHeader,
-    contactHeaderIcon }) => {
+    goToProfilePage }) => {
     const [currentTopCategory, setCurrentTopCategory] = useCurrentTopCategory(0)
     const [navPath, setNavPath] = useNavPath([])
     const deviceType = useDeviceType()
@@ -65,12 +59,6 @@ const MainMenu = ({
                 goToCartPage={goToCartPage}
                 goToWishlistPage={goToWishlistPage}
                 goToProfilePage={goToProfilePage}
-                infoHeader={infoHeader}
-                infoHeaderIcon={infoHeaderIcon}
-                aboutHeader={aboutHeader}
-                aboutHeaderIcon={aboutHeaderIcon}
-                contactHeader={contactHeader}
-                contactHeaderIcon={contactHeaderIcon}
             />
         )
     }
@@ -98,12 +86,6 @@ MainMenu.propTypes = {
     goToCartPage: PropTypes.func,
     goToWishlistPage: PropTypes.func,
     goToProfilePage: PropTypes.func,
-    infoHeader: PropTypes.string,
-    aboutHeaderIcon: PropTypes.string,
-    aboutHeader: PropTypes.string,
-    infoHeaderIcon: PropTypes.string,
-    contactHeader: PropTypes.string,
-    contactHeaderIcon: PropTypes.string,
 }
 
 export default MainMenu
