@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.0.1` (2021-01-27)
+
+* removed mobile header menu about us information
+
 ## `1.0.0` (2021-01-20)
 
 * feat: Adds original aspect ratio to the tile
