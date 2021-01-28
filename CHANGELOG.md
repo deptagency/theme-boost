@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.0.2` (2021-01-28)
+
+* removed shortid from checkbox component
+
 ## `1.0.1` (2021-01-27)
 
 * removed mobile header menu about us information
