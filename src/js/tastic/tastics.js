@@ -7,6 +7,7 @@ import ShowcaseTextTastic from './content/showcase-text/tastic'
 import NewsletterBlockTastic from './forms/newsletter-block/tastic'
 import TileTastic from './content/tile/tastic'
 import TileTasticV2 from './content/tile-v2/tastic'
+import SimpleTile from './content/simple-tile/tastic'
 import MainMenuTastic from './header/main-menu/tastic'
 import ProductSlider from './product/product-slider/tastic'
 import ProductDetailsTastic from './product/product-details/tastic'
@@ -43,6 +44,7 @@ export default (() => {
         'frontastic/boost/forms/newsletter-block': NewsletterBlockTastic,
         'frontastic/boost/content/tile': TileTastic,
         'frontastic/boost/content/tile-v2': TileTasticV2,
+        'frontastic/boost/content/simple-tile': SimpleTile,
         'frontastic/boost/header/main-menu': MainMenuTastic,
         'frontastic/boost/product/product-slider': ProductSlider,
         'frontastic/boost/product/product-details': ProductDetailsTastic,
