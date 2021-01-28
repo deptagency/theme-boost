@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import shortid from 'shortid'
+import { v4 as uuidv4 } from 'uuid'
 
 const Checkbox = ({ value = false, className = '', label = '', onClick = () => {} }) => {
-    const [ id ] = useState(() => { return 'checkbox-' + shortid.generate() })
+    const [ id ] = useState(() => { return 'checkbox-' + uuidv4() })
 
     return (
         <>
