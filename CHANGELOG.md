@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.0.3` (2021-01-29)
+
+* feat: adds simple-tile tastic
+
 ## `1.0.2` (2021-01-28)
 
 * removed shortid from checkbox component
