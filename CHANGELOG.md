@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.1.0` (2021-02-04)
+
+* feat: Adds PDP text panels
+
 ## `1.0.3` (2021-01-29)
 
 * feat: adds simple-tile tastic
