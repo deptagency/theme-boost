@@ -1,6 +1,14 @@
 const paths = require('@frontastic/catwalk/config/paths')
 const plugin = require('tailwindcss/plugin')
-const { colors, borderRadius, baseFontSize, fontSize, fontColor, fontFamily, boxShadow } = require('./src/js/themes/defaultTheme')
+const {
+    colors,
+    borderRadius,
+    baseFontSize,
+    fontSize,
+    fontColor,
+    fontFamily,
+    boxShadow,
+} = require('./src/js/themes/defaultTheme')
 
 module.exports = {
     theme: {
@@ -40,12 +48,13 @@ module.exports = {
             },
             inset: {
                 full: '100%',
-                '3.3': '3.3rem',
+                3.3: '3.3rem',
             },
             margin: {
                 center: '0 auto',
             },
             maxHeight: {
+                0: '0',
                 '316px': '316px',
                 '736px': '736px',
             },
@@ -63,8 +72,8 @@ module.exports = {
             },
             spacing: {
                 '2px': '2px',
-                '100': '25rem',
-                '160': '40rem',
+                100: '25rem',
+                160: '40rem',
                 '1/2': '50%',
                 '3/2': '150%',
                 '1/3': '33.333333%',
@@ -99,10 +108,11 @@ module.exports = {
             transitionProperty: {
                 visibility: 'visibility',
                 height: 'height',
+                'max-height': 'max-height',
             },
             transitionDuration: {
-                '20': '0.2s',
-                '30': '0.3s',
+                20: '0.2s',
+                30: '0.3s',
             },
             transitionTimingFunction: {
                 'ease-out-expo': 'cubic-bezier(0.39, 0.58, 0.57, 1)',
@@ -121,7 +131,7 @@ module.exports = {
         },
     },
     plugins: [
-        plugin(function({ addUtilities }) {
+        plugin(function ({ addUtilities }) {
             const utilities = {
                 /* PART OF THEME */
                 '.font-family': {

@@ -1,0 +1,34 @@
+import React, { useState } from 'react'
+import { ReactComponent as Chevron } from 'Icons/tailwind-icons/icon-cheveron-down.svg'
+import Markdown from '@frontastic/catwalk/src/js/component/markdown'
+
+function TextPanel({ title, body }) {
+    const [open, setOpen] = useState(false)
+    return (
+        body && (
+            <div className='pb-4 pt-5 border-t border-gray-300'>
+                <h3
+                    className='flex justify-between font-bold cursor-pointer text-gray-900 mb-2'
+                    onClick={() => setOpen(!open)}
+                >
+                    <span>{title || ''}</span>
+                    <i className='text-xl'>
+                        <Chevron
+                            className={`transition-transform duration-500 ease-in-out  ${
+                                open ? 'transform rotate-180' : ''
+                            }`}
+                        />
+                    </i>
+                </h3>
+                <Markdown
+                    className={`text-sm text-gray-700 overflow-hidden transition-max-height duration-300 ease-in ${
+                        open ? 'max-h-736px' : 'max-h-0'
+                    }`}
+                    text={body}
+                />
+            </div>
+        )
+    )
+}
+
+export default TextPanel

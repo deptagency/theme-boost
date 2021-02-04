@@ -1,0 +1,26 @@
+{
+    "tasticType": "frontastic/boost/product-details/markdown-panel",
+    "name": "Markdown Panel",
+    "category": "Product Details",
+    "icon": "wrap_text",
+    "schema": [
+        {
+            "name": "Content",
+            "fields": [
+                {
+                    "label": "Title",
+                    "field": "title",
+                    "type": "string",
+                    "translatable": true
+                },
+                {
+                    "label": "Content",
+                    "field": "text",
+                    "type": "markdown",
+                    "default": "* Enter\n* some\n* Markdown",
+                    "translatable": true
+                }
+            ]
+        }
+    ]
+}

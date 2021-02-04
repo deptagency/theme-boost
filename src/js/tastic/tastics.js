@@ -19,6 +19,8 @@ import ProductTitle from './product/product-details/title/tastic'
 import ProductPrice from './product/product-details/price/tastic'
 import ProductRating from './product/product-details/rating/tastic'
 import ProductImages from './product/product-details/product-images/tastic'
+import DescriptionPanel from './product/product-details/description-panel/tastic'
+import MarkdownPanel from './product/product-details/markdown-panel/tastic'
 import VariantSelector from './product/product-details/variant-selector/tastic'
 import AddToCartButton from './product/product-details/add-to-cart-button/tastic'
 import IconList from './content/icon-list/tastic'
@@ -71,5 +73,7 @@ export default (() => {
         'frontastic/boost/product-details/product-images': ProductImages,
         'frontastic/boost/product-details/variant-selector': VariantSelector,
         'frontastic/boost/product-details/add-to-cart-button': AddToCartButton,
+        'frontastic/boost/product-details/markdown-panel': MarkdownPanel,
+        'frontastic/boost/product-details/description-panel': DescriptionPanel,
     }
 })()
