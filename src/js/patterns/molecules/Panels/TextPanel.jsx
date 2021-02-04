@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import { ReactComponent as Chevron } from 'Icons/tailwind-icons/icon-cheveron-down.svg'
 import Markdown from '@frontastic/catwalk/src/js/component/markdown'
 
-function TextPanel({ title, body }) {
+function TextPanel ({ title, body }) {
     const [open, setOpen] = useState(false)
     return (
         body && (
@@ -14,7 +15,7 @@ function TextPanel({ title, body }) {
                     <span>{title || ''}</span>
                     <i className='text-xl'>
                         <Chevron
-                            className={`transition-transform duration-500 ease-in-out  ${
+                            className={`transition-transform duration-500 ease-in-out ${
                                 open ? 'transform rotate-180' : ''
                             }`}
                         />
@@ -29,6 +30,11 @@ function TextPanel({ title, body }) {
             </div>
         )
     )
+}
+
+TextPanel.propTypes = {
+    title: PropTypes.string,
+    body: PropTypes.string,
 }
 
 export default TextPanel
