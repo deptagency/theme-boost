@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as IconSelectDown } from 'Icons/tailwind-icons/icon-select-down.svg'
+import { ReactComponent as IconSelectDown } from '../../../../icons/tailwind-icons/icon-select-down.svg'
 
 export default function DropdownList({ children, onChange, value }) {
     return (

@@ -10,8 +10,8 @@ import productConnector from '@frontastic/catwalk/src/js/tastic/product/connecto
 import LoaderButton from '../../../../patterns/molecules/Loaders/LoaderButton'
 import Button from '../../../../patterns/atoms/button'
 import IconButton from '../../../../patterns/atoms/button/IconButton'
-import { ReactComponent as IconHeart } from 'Icons/tailwind-icons/icon-heart.svg'
-import { ReactComponent as IconHeartFull } from 'Icons/tailwind-icons/icon-heart-full.svg'
+import { ReactComponent as IconHeart } from '../../../../icons/tailwind-icons/icon-heart.svg'
+import { ReactComponent as IconHeartFull } from '../../../../icons/tailwind-icons/icon-heart-full.svg'
 
 import { Product, Variant } from '@frontastic/common/src/js/types/product'
 import { Wishlist } from '@frontastic/common/src/js/types/wishlist'
