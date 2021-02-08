@@ -1,5 +1,10 @@
 # boost Changelog
 
+## `1.1.1` (2021-02-08)
+
+* fix: Paths to used icons was wrong
+* Eslint fixes
+
 ## `1.1.0` (2021-02-04)
 
 * feat: Adds PDP text panels
