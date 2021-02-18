@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
+import Reference from '@frontastic/catwalk/src/js/component/reference'
 
 import { ReactComponent as MenuClosed } from 'Icons/tailwind-icons/icon-menu-closed.svg'
 import { ReactComponent as MenuBack } from 'Icons/tailwind-icons/icon-menu-back.svg'
@@ -46,6 +47,24 @@ const TopCategories = ({
                         topCategories.map((item, i) => {
                             if (!item.tree) {
                                 return null
+                            }
+
+                            if (!item.tree.depth) {
+                                return (
+                                    <Reference
+                                        onClick={() => {
+                                            onClose()
+                                        }}
+                                        key={item.reference.target}
+                                        reference={item.reference}
+                                        className={classnames({
+                                            'font-bold hover:text-neutral-400 cursor-pointer': true,
+                                            'border-b-4 border-neutral-900': i === currentTopCategory,
+                                        })}
+                                    >
+                                        {item.name}
+                                    </Reference>
+                                )
                             }
 
                             return (
