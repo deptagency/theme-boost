@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.1.2` (2021-02-18)
+
+* fix: Try to also optionally handle size as enum
+
 ## `1.1.1` (2021-02-08)
 
 * fix: Paths to used icons was wrong
