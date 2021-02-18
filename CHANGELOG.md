@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.1.4` (2021-02-18)
+
+* fix: If there is no tree consider top category a link
+
 ## `1.1.3` (2021-02-18)
 
 * fix: Also size & optionally label in order view
