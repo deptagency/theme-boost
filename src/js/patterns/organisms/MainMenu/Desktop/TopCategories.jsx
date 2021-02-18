@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import NodeLink from '@frontastic/catwalk/src/js/app/nodeLink'
+import Reference from '@frontastic/catwalk/src/js/component/reference'
 
 import { topCategoryType } from '../types'
 
@@ -12,6 +13,21 @@ const TopCategories = ({ topCategories, currentTopCategory, handleClick }) => {
             {topCategories.map((item, i) => {
                 if (!item.tree) {
                     return null
+                }
+
+                if (!item.tree.depth) {
+                    return (
+                        <Reference
+                            key={item.reference.target}
+                            reference={item.reference}
+                            className={classnames({
+                                'mr-4 font-bold text-neutral-600 text-sm py-2': true,
+                                'text-neutral-900 border-b-2 border-neutral-900': i === currentTopCategory,
+                            })}
+                        >
+                            {item.name}
+                        </Reference>
+                    )
                 }
 
                 return (
