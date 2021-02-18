@@ -43,14 +43,18 @@ const SelectedOrder = ({ order }) => {
                                 {item.name}
                             </div>
                             <div className='text-neutral-600 my-6'>
-                                <div>
+                                {item.variant.attributes?.color && <div>
                                     <span><FormattedMessage id='order.colorOrder' /></span>
-                                    <span>{item.variant.attributes.color.label}</span>
-                                </div>
-                                <div>
+                                    <span>{item.variant.attributes.color?.label || item.variant.attributes.color}</span>
+                                </div>}
+                                {item.variant.attributes?.commonSize && <div>
                                     <span><FormattedMessage id='order.sizeOrder' /></span>
-                                    <span>{item.variant.attributes.commonSize.label}</span>
-                                </div>
+                                    <span>{item.variant.attributes.commonSize?.label || item.variant.attributes.commonSize}</span>
+                                </div>}
+                                {item.variant.attributes?.size && <div>
+                                    <span><FormattedMessage id='order.sizeOrder' /></span>
+                                    <span>{item.variant.attributes.size?.label || item.variant.attributes.size}</span>
+                                </div>}
                                 <div>
                                     <span><FormattedMessage id='account.quantity' /></span>
                                     <span>{item.count}</span>
