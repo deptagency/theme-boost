@@ -21,8 +21,8 @@ const Products = ({ products }) => {
                             image={item.variant.images[0]}
                             count={item.count}
                             price={item.price}
-                            color={item.variant.attributes.color?.label}
-                            size={item.variant.attributes?.size}
+                            color={item.variant.attributes.color?.label || item.variant.attributes.color}
+                            size={item.variant.attributes.size?.label || item.variant.attributes.size}
                         />
                     </div>
                 )

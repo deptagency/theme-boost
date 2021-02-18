@@ -51,11 +51,11 @@ const ProductData = ({
             <StarRating />
 
             {selectedVariant.attributes.color && (
-                <ColorSelector value={selectedVariant.attributes.color} variants={variants} onChange={onChange} />
+                <ColorSelector value={selectedVariant.attributes.color?.label || selectedVariant.attributes.color} variants={variants} onChange={onChange} />
             )}
 
             {selectedVariant.attributes.size && (
-                <SizeSelector value={selectedVariant.attributes.size} variants={variants} onChange={onChange} />
+                <SizeSelector value={selectedVariant.attributes.size?.label || selectedVariant.attributes.size} variants={variants} onChange={onChange} />
             )}
 
             <div className='flex pb-6'>
