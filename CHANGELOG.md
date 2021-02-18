@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.1.3` (2021-02-18)
+
+* fix: Also size & optionally label in order view
+
 ## `1.1.2` (2021-02-18)
 
 * fix: Try to also optionally handle size as enum
