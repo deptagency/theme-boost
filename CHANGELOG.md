@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.1.5` (2021-02-18)
+
+* fix: Handle click on top category without subtree in mobile nav, too
+
 ## `1.1.4` (2021-02-18)
 
 * fix: If there is no tree consider top category a link
