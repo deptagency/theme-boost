@@ -11,7 +11,7 @@ import BillingForm from './Forms/Billing'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, isLoading = false }) => {
+const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextOverview' })
     const billingDetailsLabel = intl.formatMessage({ id: 'checkout.billingDetailsLabel' })
 
@@ -37,9 +37,9 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, isLoading = 
         }
     }
 
-    /*app.getLoader('cart').getShippingMethods().then(response => {
+    /* app.getLoader('cart').getShippingMethods().then(response => {
         console.log(response)
-    })*/
+    }) */
 
     const updateShippingInformation = () => {
         if (isValid()) {
@@ -151,6 +151,7 @@ ShippingPanel.propTypes = {
     data: PropTypes.object.isRequired,
     countries: PropTypes.array.isRequired,
     goToNextPanel: PropTypes.func.isRequired,
+    updateHeight: PropTypes.func.isRequired,
     isLoading: PropTypes.bool,
 }
 

@@ -21,16 +21,16 @@ const Discount = () => {
             <div className='text-md text-neutral-700 leading-none font-bold'>
                 <FormattedMessage id={'checkout.discount.message'} />
             </div>
-            <input 
-                type='text' 
-                className='form-input my-2' 
+            <input
+                type='text'
+                className='form-input my-2'
                 onChange={e => setDiscountCode(e.target.value)}
                 value={discountCode}
             />
-            <button 
-                className='btn-pill bg-primary-500 text-white focus:outline-none w-full' 
+            <button
+                className='btn-pill bg-primary-500 text-white focus:outline-none w-full'
                 onClick={redeemDiscount}
-            >
+                >
                 <FormattedMessage id={'checkout.discount.apply'} />
             </button>
         </>

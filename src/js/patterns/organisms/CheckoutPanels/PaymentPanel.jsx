@@ -146,7 +146,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
                 setPaymentDetailsValid(state.isValid)
                 setPaymentDetails(state.data)
             },
-            
+
             onSubmit: (state) => {
                 makePayment(state.data.paymentMethod, state.data.browserInfo)
             },
@@ -157,11 +157,11 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
 
         updateHeight()
 
-    //}, [paymentMethods, paymentMethodType, makePayment])
-    }, [paymentMethodType, paymentMethodType])
+    // }, [paymentMethods, paymentMethodType, makePayment])
+    }, [makePayment, paymentMethodType, paymentMethods, updateHeight])
 
     useEffect(() => {
-        if (/*!cart.cart.isComplete() ||*/ containerElement.current == null) {
+        if (/*! cart.cart.isComplete() || */ containerElement.current == null) {
             return
         }
 
@@ -181,7 +181,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
         } catch (error) {
             setPaymentError(error.message)
         }
-    }, [/*cart, */ data, handleAdyenResult])
+    }, [data, handleAdyenResult])
 
     return (
         <div>
@@ -196,16 +196,16 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
                             )}
 
                             {paymentError && (
-                                <div>Error during Adyen payment: {paymentError}</div>                 
+                                <div>Error during Adyen payment: {paymentError}</div>
                             )}
-        
+
                             {!paymentSuccess && !paymentError && (
                                 <>
                                     <div className='mb-4 text-xs text-neutral-600 font-bold leading-tight uppercase'>
                                         <FormattedMessage id={'checkout.paymentMethod'} />
                                     </div>
 
-                                {paymentMethods?.paymentMethods?.map((paymentMethod) => {
+                                    {paymentMethods?.paymentMethods?.map((paymentMethod) => {
                                         return (
                                             <div key={paymentMethod.type} className='mb-4'>
                                                 <button
@@ -213,7 +213,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
                                                         'btn-blue': paymentMethod.type !== paymentMethodType,
                                                         'btn-indigo': paymentMethod.type === paymentMethodType,
                                                     })}
-                                                    onClick={() => {   
+                                                    onClick={() => {
                                                         setPaymentMethodType(paymentMethod.type)
                                                     }}
                                                 >

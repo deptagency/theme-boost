@@ -10,7 +10,7 @@ const ShippingMethod = ({ availableShippingMethods, defaultValues = {}, onSubmit
         defaultValues: {
             shippingMethodId: defaultValues ? defaultValues.shippingMethodId : null,
         },
-    })    
+    })
 
     const onChange = () => {
         onSubmit(getValues())
@@ -40,7 +40,7 @@ const ShippingMethod = ({ availableShippingMethods, defaultValues = {}, onSubmit
                         />
                         <div className='flex flex-col w-full'>
                             <div className='text-md leading-tight capitalize'>
-                                {method.name} 
+                                {method.name}
                             </div>
                             {method.description && (
                                 <span className='text-xs text-neutral-600'>

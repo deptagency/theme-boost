@@ -20,7 +20,7 @@ const Summary = ({ sum, items, shippingMethod = null, taxed = null, discountCode
             return a + b.price * b.count
         }
     }, 0)
-    
+
     const productTotalPrice = items.reduce((a, b) => (a + b.totalPrice), 0)
 
     const allDiscounts = productTotalPrice - productPrice
@@ -49,7 +49,7 @@ const Summary = ({ sum, items, shippingMethod = null, taxed = null, discountCode
                             {shippingMethod.price ? <Price value={shippingMethod.price} /> : <FormattedMessage id='checkout.freeShipping' /> }
                         </p>
                     </>
-                : null}                
+                : null}
 
                 {discountCodes && discountCodes.length > 0 && (
                     <>
@@ -70,7 +70,7 @@ const Summary = ({ sum, items, shippingMethod = null, taxed = null, discountCode
                                         <button
                                             className='ml-auto w-5 h-5 bg-neutral-300 rounded-full focus:outline-none'
                                             aria-label={<FormattedMessage id='cart.removeDiscount' />}
-                                            onClick={() => onRemoveDiscount(discount.discountId) }
+                                            onClick={() => onRemoveDiscount(discount.discountId)}
                                         >
                                             <IconClose className='w-full h-full p-1 flex items-center justify-center text-white fill-current' />
                                         </button>
@@ -84,17 +84,17 @@ const Summary = ({ sum, items, shippingMethod = null, taxed = null, discountCode
                 <span className='mb-3 block w-full h-px bg-neutral-300 col-start-auto col-end-span-2' />
 
                 <p className='text-md text-neutral-900 leading-none font-bold'>
-                   <FormattedMessage id='cart.totalAmount' />
+                    <FormattedMessage id='cart.totalAmount' />
                 </p>
 
                 <p className='text-md text-right text-neutral-900 leading-none font-bold'>
-                   <Price value={sum} />
+                    <Price value={sum} />
                 </p>
 
                 <div className='text-sm text-neutral-600 col-start-auto col-end-span-2'>
                     (<FormattedMessage id='cart.totalAmount' /> {totalTaxes && <Price value={totalTaxes} />} <FormattedMessage id='cart.inclVat' />)
                 </div>
-           </div>
+            </div>
 
             {onClick && (
                 <Button

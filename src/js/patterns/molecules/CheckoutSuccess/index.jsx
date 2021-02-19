@@ -19,7 +19,7 @@ const CheckoutSuccess = ({ intl, email, onClick }) => {
                 onClick()
             }}
             actionLabel={actionLabel}
-        >
+            >
             <>
                 {orderConfirmation}
                 <span className='font-bold ml-1'>{email}</span>
@@ -30,7 +30,6 @@ const CheckoutSuccess = ({ intl, email, onClick }) => {
 
 CheckoutSuccess.propTypes = {
     intl: intlShape.isRequired,
-    id: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
 }

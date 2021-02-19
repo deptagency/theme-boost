@@ -32,15 +32,15 @@ const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelInd
 
         app.getLoader('cart')
             .updateCart({
-                shippingMethodName: data.shippingMethodId
+                shippingMethodName: data.shippingMethodId,
             })
     }
 
     const onNextClicked = () => {
-         if (shippingMethod) {
+        if (shippingMethod) {
             app.getLoader('cart')
                 .updateCart({
-                    shippingMethodName: shippingMethod.shippingMethodId
+                    shippingMethodName: shippingMethod.shippingMethodId,
                 })
                 .then(() => {
                     goToNextPanel()
@@ -58,7 +58,7 @@ const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelInd
                             <OrderButton label={buttonLabel} onClick={onNextClicked} />
                         </div>
 
-                        <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>                           
+                        <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
                             <ShippingMethodForm
                                 intl={intl}
                                 defaultValues={shippingMethod}

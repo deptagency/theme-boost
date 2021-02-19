@@ -24,7 +24,7 @@ const CheckoutPanels = ({ app, data, countries, isLoading = false }) => {
         },
         {
             name: <FormattedMessage id='checkout.payment' />,
-            component: PaymentPanel 
+            component: PaymentPanel,
         },
     ]
 
