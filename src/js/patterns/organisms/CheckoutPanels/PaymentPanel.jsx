@@ -12,7 +12,6 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.placeOrder' })
 
     const [paymentError, setPaymentError] = useState(null)
-    const [paymentSuccess, setPaymentSuccess] = useState(false)
     const [paymentMethods, setPaymentMethods] = useState(null)
     const [paymentMethodType, setPaymentMethodType] = useState(null)
     const [paymentDetailsValid, setPaymentDetailsValid] = useState(false)
@@ -88,8 +87,6 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
 
         switch (resultCode) {
         case 'Authorised':
-            setPaymentSuccess(true)
-
             app.getLoader('cart').checkout()
             break
         default:
@@ -146,7 +143,6 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
                 setPaymentDetailsValid(state.isValid)
                 setPaymentDetails(state.data)
             },
-
             onSubmit: (state) => {
                 makePayment(state.data.paymentMethod, state.data.browserInfo)
             },
@@ -156,9 +152,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
         adyenCheckout.create(paymentMethodType).mount(containerElement.current)
 
         updateHeight()
-
-    // }, [paymentMethods, paymentMethodType, makePayment])
-    }, [makePayment, paymentMethodType, paymentMethods, updateHeight])
+    }, [/*makePayment, */paymentMethodType, paymentMethods/*, updateHeight*/])
 
     useEffect(() => {
         if (/*! cart.cart.isComplete() || */ containerElement.current == null) {
@@ -182,7 +176,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
             setPaymentError(error.message)
         }
     }, [data, handleAdyenResult])
-
+   
     return (
         <div>
             <StickyRightColumn
@@ -190,16 +184,11 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
                 leftColumn={
                     <div className='md:shadow-md md:rounded bg-white'>
                         <div className='px-4 py-5 md:px-6 border-b-4 md:border-b-0 border-t-4 md:border-t-0 border-neutral-100'>
-
-                            {paymentSuccess && (
-                                <div>Adyen Payment was successful.</div>
-                            )}
-
                             {paymentError && (
-                                <div>Error during Adyen payment: {paymentError}</div>
+                                <div>Error: {paymentError}</div>
                             )}
 
-                            {!paymentSuccess && !paymentError && (
+                            {!paymentError && (
                                 <>
                                     <div className='mb-4 text-xs text-neutral-600 font-bold leading-tight uppercase'>
                                         <FormattedMessage id={'checkout.paymentMethod'} />
@@ -207,34 +196,33 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
 
                                     {paymentMethods?.paymentMethods?.map((paymentMethod) => {
                                         return (
-                                            <div key={paymentMethod.type} className='mb-4'>
-                                                <button
-                                                    className={classnames('btn', {
-                                                        'btn-blue': paymentMethod.type !== paymentMethodType,
-                                                        'btn-indigo': paymentMethod.type === paymentMethodType,
-                                                    })}
-                                                    onClick={() => {
-                                                        setPaymentMethodType(paymentMethod.type)
-                                                    }}
-                                                >
-                                                    {paymentMethod.name}
-                                                </button>
+                                            <div 
+                                                key={paymentMethod.type}
+                                                className={classnames('mb-4 h-10 btn w-full border border-neutral-400 rounded cursor-pointer', {
+                                                    'bg-primary-500 text-white': paymentMethod.type === paymentMethodType,
+                                                    'bg-white text-neutral-900': paymentMethod.type !== paymentMethodType,
+                                                })}
+                                                onClick={() => { setPaymentMethodType(paymentMethod.type) }}
+                                            >
+                                                {paymentMethod.name}
                                             </div>
                                         )
                                     })}
 
-                                    <div ref={containerElement} />
-                                    <span>
-                                        <button
-                                            className='btn btn-blue mt-4'
-                                            disabled={!paymentDetailsValid}
-                                            onClick={() => {
-                                                makePayment(paymentDetails.paymentMethod, paymentDetails.browserInfo)
-                                            }}
-                                        >
-                                            Pay
-                                        </button>
-                                    </span>
+                                    <div className='my-6' ref={containerElement} />
+
+                                    {paymentMethodType && (
+                                        <span className='flex'>
+                                            <button
+                                                name='Pay'
+                                                className='ml-auto mr-auto btn-pill bg-primary-500 text-white w-32 h-10 text-center focus:outline-none'
+                                                disabled={!paymentDetailsValid}
+                                                onClick={() => { makePayment(paymentDetails.paymentMethod, paymentDetails.browserInfo) }}
+                                            >
+                                                <FormattedMessage id={'checkout.pay'} />
+                                            </button>
+                                        </span>
+                                    )}
                                 </>
                             )}
                         </div>

@@ -37,9 +37,9 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
         }
     }
 
-    /* app.getLoader('cart').getShippingMethods().then(response => {
+    /*app.getLoader('cart').getShippingMethods().then(response => {
         console.log(response)
-    }) */
+    })*/
 
     const updateShippingInformation = () => {
         if (isValid()) {
