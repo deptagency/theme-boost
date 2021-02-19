@@ -152,7 +152,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
         adyenCheckout.create(paymentMethodType).mount(containerElement.current)
 
         updateHeight()
-    }, [/*makePayment, */paymentMethodType, paymentMethods/*, updateHeight*/])
+    }, [makePayment, paymentMethodType, paymentMethods, updateHeight])
 
     useEffect(() => {
         if (/*! cart.cart.isComplete() || */ containerElement.current == null) {
@@ -176,7 +176,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
             setPaymentError(error.message)
         }
     }, [data, handleAdyenResult])
-   
+
     return (
         <div>
             <StickyRightColumn
@@ -196,7 +196,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
 
                                     {paymentMethods?.paymentMethods?.map((paymentMethod) => {
                                         return (
-                                            <div 
+                                            <div
                                                 key={paymentMethod.type}
                                                 className={classnames('mb-4 h-10 btn w-full border border-neutral-400 rounded cursor-pointer', {
                                                     'bg-primary-500 text-white': paymentMethod.type === paymentMethodType,
