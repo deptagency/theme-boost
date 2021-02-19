@@ -1,27 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
+import { injectIntl, intlShape } from 'react-intl'
 
 import EmptyState, { icons } from 'Organisms/EmptyState'
 
-const CheckoutError = ({ onClick }) => {
+const CheckoutError = ({ intl, onClick }) => {
+    const title = intl.formatMessage({ id: 'checkout.wentWrong' })
+    const actionLabel = intl.formatMessage({ id: 'checkout.tryAgain' })
+
     return (
         <EmptyState
             icon={icons.EMOTION_SAD}
             iconColor='text-neutral-900'
-            title={<FormattedMessage id='checkout.wentWrong' />}
-            subtitle={<FormattedMessage id='checkout.beenCharged' />}
+            title={title}
             action={(e) => {
                 e.preventDefault()
                 onClick()
             }}
-            actionLabel={<FormattedMessage id='checkout.tryAgain' />}
+            actionLabel={actionLabel}
         />
     )
 }
 
 CheckoutError.propTypes = {
+    intl: intlShape.isRequired,
     onClick: PropTypes.func.isRequired,
 }
 
-export default CheckoutError
+export default injectIntl(CheckoutError)

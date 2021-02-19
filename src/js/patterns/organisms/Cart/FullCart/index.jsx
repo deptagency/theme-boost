@@ -10,7 +10,7 @@ import MiniSummary from './MiniSummary'
 import Payments from './Payments'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const FullCart = ({ intl, items, sum, isLoading = false }) => {
+const FullCart = ({ intl, items, sum, shippingMethod, discountCodes, taxed, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'cart.checkout' })
 
     return (
@@ -69,11 +69,15 @@ const FullCart = ({ intl, items, sum, isLoading = false }) => {
             rightColumn={
                 <div className='p-4 border-b-4 border-neutral-100 md:border-0 md:shadow-md md:rounded bg-white'>
                     <Summary
-                        isLoading={isLoading}
-                        sum={sum}
-                        label={buttonLabel}
-                        onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout') }}
-                    />
+                            isLoading={isLoading}
+                            items={items}
+                            sum={sum}
+                            shippingMethod={shippingMethod}
+                            taxed={taxed}
+                            discountCodes={discountCodes}
+                            label={buttonLabel}
+                            onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout') }}
+                        />
                 </div>
             }
         />
@@ -84,6 +88,9 @@ FullCart.propTypes = {
     intl: intlShape.isRequired,
     items: PropTypes.array.isRequired,
     sum: PropTypes.number.isRequired,
+    shippingMethod: PropTypes.object,
+    taxed: PropTypes.object,
+    discountCodes: PropTypes.array,
     isLoading: PropTypes.bool,
 }
 

@@ -4,14 +4,15 @@ import { injectIntl, intlShape } from 'react-intl'
 
 import Checkbox from 'Atoms/checkbox'
 
+import DiscountForm from './Forms/Discount'
 import ShippingForm from './Forms/Shipping'
 import BillingForm from './Forms/Billing'
 
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight, isLoading = false }) => {
-    const buttonLabel = intl.formatMessage({ id: 'checkout.nextPayment' })
+const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, isLoading = false }) => {
+    const buttonLabel = intl.formatMessage({ id: 'checkout.nextOverview' })
     const billingDetailsLabel = intl.formatMessage({ id: 'checkout.billingDetailsLabel' })
 
     const isSameAddress = () => {
@@ -35,6 +36,10 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                 billing.firstName && billing.lastName && billing.streetName && billing.postalCode && billing.country
         }
     }
+
+    /*app.getLoader('cart').getShippingMethods().then(response => {
+        console.log(response)
+    })*/
 
     const updateShippingInformation = () => {
         if (isValid()) {
@@ -114,16 +119,26 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                 }
 
                 rightColumn={
-                    <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100 bg-white'>
-                        <Summary
-                            sum={data.sum}
-                            isLoading={isLoading}
-                            label={buttonLabel}
-                            disabled={!isValid()}
-                            showVouchers={false}
-                            onClick={updateShippingInformation}
-                        />
-                    </div>
+                    <>
+                        <div className='mb-1 md:mb-4 px-4 py-6 md:py-4 md:shadow-md md:rounded bg-white'>
+                            <DiscountForm />
+                        </div>
+
+                        <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100 bg-white'>
+                            <Summary
+                                items={data.lineItems}
+                                sum={data.sum}
+                                shippingMethod={data.shippingMethod}
+                                taxed={data.taxed}
+                                discountCodes={data.discountCodes}
+                                isLoading={isLoading}
+                                label={buttonLabel}
+                                disabled={!isValid()}
+                                showVouchers={false}
+                                onClick={updateShippingInformation}
+                            />
+                        </div>
+                    </>
                 }
             />
         </div>
@@ -136,7 +151,6 @@ ShippingPanel.propTypes = {
     data: PropTypes.object.isRequired,
     countries: PropTypes.array.isRequired,
     goToNextPanel: PropTypes.func.isRequired,
-    updateHeight: PropTypes.func.isRequired,
     isLoading: PropTypes.bool,
 }
 

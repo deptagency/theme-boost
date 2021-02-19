@@ -45,7 +45,16 @@
 
 
 .btn-pill {
-    @apply btn rounded-full;
+    @apply btn;
+    @apply rounded-full;
+
+    &:disabled {
+        @apply bg-neutral-400;
+
+        &:hover {
+            @apply bg-neutral-400;
+        }
+    }
 }
 
 

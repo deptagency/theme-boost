@@ -19,11 +19,12 @@ const CheckoutPanels = ({ app, data, countries, isLoading = false }) => {
             component: ShippingPanel,
         },
         {
-            name: <FormattedMessage id='checkout.payment' />,
-            component: PaymentPanel },
-        {
             name: <FormattedMessage id='checkout.overview' />,
             component: OverviewPanel,
+        },
+        {
+            name: <FormattedMessage id='checkout.payment' />,
+            component: PaymentPanel 
         },
     ]
 
