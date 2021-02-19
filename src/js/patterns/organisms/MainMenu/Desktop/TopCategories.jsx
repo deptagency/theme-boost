@@ -11,11 +11,7 @@ const TopCategories = ({ topCategories, currentTopCategory, handleClick }) => {
     return (
         <div className='flex items-center'>
             {topCategories.map((item, i) => {
-                if (!item.tree) {
-                    return null
-                }
-
-                if (!item.tree.depth) {
+                if (!item.tree || !item.tree.depth) {
                     return (
                         <Reference
                             key={item.reference.target}

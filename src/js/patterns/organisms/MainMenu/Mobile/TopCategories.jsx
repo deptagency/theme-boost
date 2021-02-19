@@ -45,11 +45,7 @@ const TopCategories = ({
                     <>
                         {topCategories &&
                         topCategories.map((item, i) => {
-                            if (!item.tree) {
-                                return null
-                            }
-
-                            if (!item.tree.depth) {
+                            if (!item.tree || !item.tree.depth) {
                                 return (
                                     <Reference
                                         onClick={() => {
