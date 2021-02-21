@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { FormattedMessage } from 'react-intl'
 import { useForm } from 'react-hook-form'
+import { FormattedMessage } from 'react-intl'
 
+import { convertToCountryName } from './../countries'
 import ErrorMessage from 'Atoms/errorMessage'
 
 const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSubmit }) => {
@@ -147,8 +148,8 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
                     ref={register({ required: requiredField })}
                     >
                     <option value='' />
-                    {countries.map(country => {
-                        return (<option key={country.code} value={country.code}>{country.name}</option>)
+                    {countries.map((country, key) => {
+                        return (<option key={key} value={country}>{convertToCountryName(country)}</option>)
                     })}
                 </select>
 
@@ -160,9 +161,9 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
 
 Shipping.propTypes = {
     intl: PropTypes.object.isRequired,
-    countries: PropTypes.array.isRequired,
     defaultValues: PropTypes.object,
     defaultEmail: PropTypes.string,
+    countries: PropTypes.array.isRequired,
     onSubmit: PropTypes.func.isRequired,
 }
 

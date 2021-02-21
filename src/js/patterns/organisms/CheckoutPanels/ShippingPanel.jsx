@@ -37,10 +37,6 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
         }
     }
 
-    /* app.getLoader('cart').getShippingMethods().then(response => {
-        console.log(response)
-    }) */
-
     const updateShippingInformation = () => {
         if (isValid()) {
             app.getLoader('cart')
@@ -108,10 +104,13 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
 
                         {!isBillingSameAsShipping &&
                             <div className='px-4 py-5 md:px-6 border-t-4 border-neutral-100'>
-                                <BillingForm intl={intl}
+                                <BillingForm
+                                    intl={intl}
                                     countries={countries}
                                     defaultValues={data.billingAddress}
-                                    onSubmit={data => { return setBilling(data) }}
+                                    onSubmit={data => {
+                                        setBilling(data)
+                                    }}
                                 />
                             </div>
                         }
@@ -133,8 +132,8 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                                 discountCodes={data.discountCodes}
                                 isLoading={isLoading}
                                 label={buttonLabel}
-                                disabled={!isValid()}
                                 showVouchers={false}
+                                disabled={!isValid()}
                                 onClick={updateShippingInformation}
                             />
                         </div>

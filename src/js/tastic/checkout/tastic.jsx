@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
@@ -9,13 +9,36 @@ import CheckoutError from 'Molecules/CheckoutError'
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
-const CheckoutTastic = ({ cart, data }) => {
+const CheckoutTastic = ({ cart }) => {
+    const [countries, setCountries] = useState([])
+
+    useEffect(() => {
+        app.getLoader('cart').getShippingMethods().then(response => {
+            let c = []
+
+            /* eslint-disable no-unused-expressions */
+            response.shippingMethods?.forEach(method => {
+                /* eslint-disable no-unused-expressions */
+                method.rates?.forEach(rate => {
+                    /* eslint-disable no-unused-expressions */
+                    rate.locations?.forEach(location => {
+                        if (!c.includes(location.country)) {
+                            c.push(location.country)
+                        }
+                    })
+                })
+            })
+
+            setCountries(c)
+        })
+    }, [])
+
     if (!cart) {
         return <DefaultLoader />
     }
 
     if (cart.loading) {
-        if (!cart.data || !data.countries) {
+        if (!cart.data || !(countries.length > 0)) {
             return <DefaultLoader />
         } else {
             return (
@@ -23,18 +46,18 @@ const CheckoutTastic = ({ cart, data }) => {
                     isLoading
                     app={app}
                     data={cart.data}
-                    countries={data.countries}
+                    countries={countries}
                 />
             )
         }
     }
 
-    if (cart.isComplete() && data.countries) {
+    if (cart.isComplete() && countries.length > 0) {
         return (
             <CheckoutPanels
                 app={app}
                 data={cart.data}
-                countries={data.countries}
+                countries={countries}
             />
         )
     } else {
@@ -44,10 +67,7 @@ const CheckoutTastic = ({ cart, data }) => {
     }
 }
 
-CheckoutTastic.defaultProps = {}
-
 CheckoutTastic.propTypes = {
-    data: PropTypes.object.isRequired,
     cart: PropTypes.instanceOf(Entity),
 }
 

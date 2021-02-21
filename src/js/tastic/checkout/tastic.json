@@ -3,37 +3,5 @@
     "name": "Checkout",
     "icon": "menu",
     "category": "Checkout",
-    "schema": [
-        {
-            "name": "Shipping countries",
-            "fields": [
-                {
-                    "label": "Countries",
-                    "field": "countries",
-                    "type": "group",
-                    "itemLabelField": "name",
-                    "fields": [
-                        {
-                            "label": "Name",
-                            "field": "name",
-                            "translatable": false,
-                            "required": true,
-                            "type": "string"
-                        },
-                        {
-                            "label": "Code",
-                            "field": "code",
-                            "translatable": false,
-                            "required": true,
-                            "type": "string"
-                        }
-                    ],
-                    "default": [
-                        { "name": "Germany", "code": "DE" },
-                        { "name": "United States of America", "code": "US" }
-                    ]
-                }
-            ]
-        }
-    ]
+    "schema": []
 }

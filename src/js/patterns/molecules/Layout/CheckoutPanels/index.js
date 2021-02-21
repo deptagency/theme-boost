@@ -38,8 +38,8 @@ const CheckoutPanels = ({ app, data, countries, isLoading = false }) => {
             />
             <Panels
                 app={app}
-                countries={countries}
                 data={data}
+                countries={countries}
                 steps={steps}
                 current={current}
                 setCurrent={setCurrent}

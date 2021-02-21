@@ -2,16 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
+import { convertToCountryName } from './../countries'
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 
-const Billing = ({ address, countries, onClick }) => {
-    let country = null
-    for (let c of countries) {
-        if (c.code === address.country) {
-            country = c
-        }
-    }
-
+const Billing = ({ address, onClick }) => {
     return (
         <>
             <div className='mb-3 flex items-center justify-between'>
@@ -29,7 +23,7 @@ const Billing = ({ address, countries, onClick }) => {
                 <p>{address.streetName}</p>
                 <p>{address.city}</p>
                 <p>{address.postalCode}</p>
-                <p>{country.name}</p>
+                <p>{convertToCountryName(address.country)}</p>
 
                 <div className='my-4 h-px bg-neutral-200' />
 
@@ -42,7 +36,6 @@ const Billing = ({ address, countries, onClick }) => {
 
 Billing.propTypes = {
     address: PropTypes.object.isRequired,
-    countries: PropTypes.array.isRequired,
     onClick: PropTypes.func.isRequired,
 }
 

@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import { FormattedMessage } from 'react-intl'
 import { useForm } from 'react-hook-form'
+import { FormattedMessage } from 'react-intl'
 
+import { convertToCountryName } from './../countries'
 import ErrorMessage from 'Atoms/errorMessage'
 
 const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
@@ -112,8 +113,8 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
                     ref={register({ required: requiredField })}
                     >
                     <option value='' />
-                    {countries.map(country => {
-                        return (<option key={country.code} value={country.code}>{country.name}</option>)
+                    {countries.map((country, key) => {
+                        return (<option key={key} value={country}>{convertToCountryName(country)}</option>)
                     })}
                 </select>
                 <ErrorMessage errors={errors} name='country' />
@@ -124,8 +125,8 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
 
 Billing.propTypes = {
     intl: PropTypes.object.isRequired,
-    countries: PropTypes.array.isRequired,
     defaultValues: PropTypes.object,
+    countries: PropTypes.array.isRequired,
     onSubmit: PropTypes.func.isRequired,
 }
 
