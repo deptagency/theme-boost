@@ -153,7 +153,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
         adyenCheckout.create(paymentMethodType).mount(containerElement.current)
 
         updateHeight()
-    }, [makePayment, paymentMethodType, paymentMethods, updateHeight])
+    }, [paymentMethodType, paymentMethods, updateHeight])
 
     useEffect(() => {
         if (/*! cart.cart.isComplete() || */ containerElement.current == null) {
