@@ -152,7 +152,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
         adyenCheckout.create(paymentMethodType).mount(containerElement.current)
 
         updateHeight()
-    }, [makePayment, paymentMethodType, paymentMethods, updateHeight])
+    }, [/*makePayment, */paymentMethodType, paymentMethods, updateHeight])
 
     useEffect(() => {
         if (/*! cart.cart.isComplete() || */ containerElement.current == null) {
@@ -211,18 +211,16 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
 
                                     <div className='my-6' ref={containerElement} />
 
-                                    {paymentMethodType && (
-                                        <span className='flex'>
-                                            <button
-                                                name='Pay'
-                                                className='ml-auto mr-auto btn-pill bg-primary-500 text-white w-32 h-10 text-center focus:outline-none'
-                                                disabled={!paymentDetailsValid}
-                                                onClick={() => { makePayment(paymentDetails.paymentMethod, paymentDetails.browserInfo) }}
-                                            >
-                                                <FormattedMessage id={'checkout.pay'} />
-                                            </button>
-                                        </span>
-                                    )}
+                                    <span className='flex'>
+                                        <button
+                                            name='Pay'
+                                            className='ml-auto mr-auto btn-pill bg-primary-500 text-white w-32 h-10 text-center focus:outline-none'
+                                            disabled={!paymentDetailsValid}
+                                            onClick={() => { makePayment(paymentDetails.paymentMethod, paymentDetails.browserInfo) }}
+                                        >
+                                            <FormattedMessage id={'checkout.pay'} />
+                                        </button>
+                                    </span>
                                 </>
                             )}
                         </div>

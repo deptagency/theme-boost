@@ -52,14 +52,18 @@ const CheckoutTastic = ({ cart }) => {
         }
     }
 
-    if (cart.isComplete() && countries.length > 0) {
-        return (
-            <CheckoutPanels
-                app={app}
-                data={cart.data}
-                countries={countries}
-            />
-        )
+    if (cart.isComplete()) {
+        if (countries.length === 0) {
+            return <DefaultLoader />
+        } else {
+            return (
+                <CheckoutPanels
+                    app={app}
+                    data={cart.data}
+                    countries={countries}
+                />
+            )
+        }
     } else {
         return <CheckoutError onClick={() => {
             app.getRouter().replace('Frontastic.Frontend.Master.Checkout.checkout')
