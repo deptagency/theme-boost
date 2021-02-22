@@ -5,7 +5,7 @@ import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 import Entity from '@frontastic/catwalk/src/js/app/entity'
 
-import CheckoutError from 'Molecules/CheckoutError'
+// import CheckoutError from 'Molecules/CheckoutError'
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
@@ -33,7 +33,7 @@ const CheckoutTastic = ({ cart }) => {
         })
     }, [])
 
-    if (!cart) {
+    if (!cart || countries.length === 0) {
         return <DefaultLoader />
     }
 
@@ -52,23 +52,18 @@ const CheckoutTastic = ({ cart }) => {
         }
     }
 
-    if (cart.isComplete()) {
-        if (countries.length === 0) {
-            return <DefaultLoader />
-        } else {
-            return (
-                <CheckoutPanels
-                    app={app}
-                    data={cart.data}
-                    countries={countries}
-                />
-            )
-        }
-    } else {
-        return <CheckoutError onClick={() => {
+    return (
+        <CheckoutPanels
+            app={app}
+            data={cart.data}
+            countries={countries}
+        />
+    )
+
+    /* return <CheckoutError onClick={() => {
             app.getRouter().replace('Frontastic.Frontend.Master.Checkout.checkout')
         }} />
-    }
+    } */
 }
 
 CheckoutTastic.propTypes = {
