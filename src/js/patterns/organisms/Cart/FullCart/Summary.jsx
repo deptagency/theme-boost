@@ -21,10 +21,6 @@ const Summary = ({ sum, items, shippingMethod = null, taxed = null, discountCode
         }
     }, 0)
 
-    const productTotalPrice = items.reduce((a, b) => (a + b.totalPrice), 0)
-
-    const allDiscounts = productTotalPrice - productPrice
-
     const onRemoveDiscount = (discountId) => {
         app.getLoader('cart')
             .removeDiscount(discountId)
@@ -55,9 +51,6 @@ const Summary = ({ sum, items, shippingMethod = null, taxed = null, discountCode
                     <>
                         <p className='mt-2 text-md text-neutral-900 leading-none font-bold'>
                             <FormattedMessage id='cart.discounts' />
-                        </p>
-                        <p className='text-md text-right text-neutral-900 uppercase leading-normal'>
-                            <Price value={allDiscounts} />
                         </p>
 
                         {discountCodes.map((discount, i) => {
