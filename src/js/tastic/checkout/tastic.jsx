@@ -5,7 +5,6 @@ import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 import Entity from '@frontastic/catwalk/src/js/app/entity'
 
-// import CheckoutError from 'Molecules/CheckoutError'
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
@@ -45,6 +44,7 @@ const CheckoutTastic = ({ cart }) => {
                 <CheckoutPanels
                     isLoading
                     app={app}
+                    cart={cart}
                     data={cart.data}
                     countries={countries}
                 />
@@ -55,15 +55,11 @@ const CheckoutTastic = ({ cart }) => {
     return (
         <CheckoutPanels
             app={app}
+            cart={cart}
             data={cart.data}
             countries={countries}
         />
     )
-
-    /* return <CheckoutError onClick={() => {
-            app.getRouter().replace('Frontastic.Frontend.Master.Checkout.checkout')
-        }} />
-    } */
 }
 
 CheckoutTastic.propTypes = {

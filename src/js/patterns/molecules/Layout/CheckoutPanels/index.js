@@ -5,11 +5,13 @@ import { FormattedMessage } from 'react-intl'
 import Stepper from './Stepper'
 import Panels from './Panels'
 
+import Entity from '@frontastic/catwalk/src/js/app/entity'
+
 import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
 import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
-const CheckoutPanels = ({ app, data, countries, isLoading = false }) => {
+const CheckoutPanels = ({ app, data, cart, countries, isLoading = false }) => {
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
@@ -38,6 +40,7 @@ const CheckoutPanels = ({ app, data, countries, isLoading = false }) => {
             />
             <Panels
                 app={app}
+                cart={cart}
                 data={data}
                 countries={countries}
                 steps={steps}
@@ -53,6 +56,7 @@ const CheckoutPanels = ({ app, data, countries, isLoading = false }) => {
 CheckoutPanels.propTypes = {
     app: PropTypes.object.isRequired,
     data: PropTypes.object.isRequired,
+    cart: PropTypes.instanceOf(Entity),
     countries: PropTypes.array.isRequired,
     isLoading: PropTypes.bool,
 }

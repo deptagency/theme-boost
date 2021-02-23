@@ -2,10 +2,12 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { stepObject } from './stepObject'
 
+import Entity from '@frontastic/catwalk/src/js/app/entity'
+
 import TinySlider from 'tiny-slider-react'
 import './index.scss'
 
-const Panels = forwardRef(({ steps, current, setCurrent, app, data, countries, isLoading = false }, ts) => {
+const Panels = forwardRef(({ steps, current, setCurrent, app, data, cart, countries, isLoading = false }, ts) => {
     const goToPanel = (panel) => {
         ts.current.slider.goTo(panel)
         setCurrent(panel)
@@ -37,6 +39,7 @@ const Panels = forwardRef(({ steps, current, setCurrent, app, data, countries, i
                             key={i}
                             name={name}
                             app={app}
+                            cart={cart}
                             data={data}
                             countries={countries}
                             updateHeight={() => {
@@ -68,6 +71,7 @@ Panels.propTypes = {
     setCurrent: PropTypes.func.isRequired,
     data: PropTypes.object.isRequired,
     countries: PropTypes.array.isRequired,
+    cart: PropTypes.instanceOf(Entity),
     isLoading: PropTypes.bool,
 }
 

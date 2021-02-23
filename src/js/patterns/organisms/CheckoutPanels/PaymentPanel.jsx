@@ -8,9 +8,10 @@ import DiscountForm from './Forms/Discount'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
+import Entity from '@frontastic/catwalk/src/js/app/entity'
 import Message from '@frontastic/catwalk/src/js/app/message'
 
-const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
+const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.placeOrder' })
 
     const [paymentMethods, setPaymentMethods] = useState(null)
@@ -19,7 +20,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
     const [paymentDetails, setPaymentDetails] = useState(null)
     const containerElement = useRef(null)
 
-    const renderAdditionalDataComponent = (paymentId, action) => {
+    const renderAdditionalDataComponent = useCallback((paymentId, action) => { // eslint-disable-line react-hooks/exhaustive-deps
         const configuration = {
             ...paymentMethods.configuration,
             onAdditionalDetails: (state) => {
@@ -36,7 +37,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
                 })
                     .then((response) => {
                         if (!response.ok) {
-                            throw new Error('HTTP status code ' + response.status)
+                            throw response
                         }
                         return response.json()
                     })
@@ -51,7 +52,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
         // eslint-disable-next-line no-undef
         const adyenCheckout = new AdyenCheckout(configuration)
         adyenCheckout.createFromAction(action).mount(containerElement.current)
-    }
+    })
 
     const handleAdyenResult = useCallback((paymentId, action, resultCode) => { // eslint-disable-line react-hooks/exhaustive-deps
         if (action) {
@@ -88,12 +89,16 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
 
         switch (resultCode) {
         case 'Authorised':
-            app.getLoader('cart').checkout()
+            app.getLoader('cart')
+                .checkout()
+                .catch((error) => {
+                    app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+                })
             break
         default:
-            throw { message: 'Unknown payment result: ' + resultCode } // eslint-disable-line no-throw-literal
+            throw { message: 'Payment result: ' + resultCode } // eslint-disable-line no-throw-literal
         }
-    })
+    }, [app, renderAdditionalDataComponent])
 
     const makePayment = useCallback((paymentMethod, browserInfo = {}) => { // eslint-disable-line react-hooks/exhaustive-deps
         setPaymentDetailsValid(false)
@@ -108,14 +113,14 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
         })
             .then((response) => {
                 if (!response.ok) {
-                    throw new Error('HTTP status code ' + response.status)
+                    throw { message: 'HTTP status code ' + response.status } // eslint-disable-line no-throw-literal
                 }
                 return response.json()
             })
             .then((body) => {
                 handleAdyenResult(body.paymentId, body.action, body.resultCode)
             })
-            .catch((error) => {
+            .catch(error => {
                 app.getLoader('context').notifyUser(<Message {...error} />, 'error')
             })
     })
@@ -153,10 +158,10 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
         adyenCheckout.create(paymentMethodType).mount(containerElement.current)
 
         updateHeight()
-    }, [paymentMethodType, paymentMethods, updateHeight])
+    }, [paymentMethodType, paymentMethods, updateHeight]) // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
-        if (/*! cart.cart.isComplete() || */ containerElement.current == null) {
+        if (!cart.isComplete() || containerElement.current == null) {
             return
         }
 
@@ -171,12 +176,21 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
             return
         }
 
-        try {
-            handleAdyenResult(paymentId, payment.paymentDetails.adyenAction, payment.paymentDetails.adyenResultCode)
-        } catch (error) {
-            app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+        if (payment.paymentDetails.adyenResultCode === 'Authorised') {
+            app.getLoader('cart')
+                .checkout()
+                .catch((error) => {
+                    app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+                })
+        } else {
+            try {
+                handleAdyenResult(paymentId, payment.paymentDetails.adyenAction, payment.paymentDetails.adyenResultCode)
+            } catch (error) {
+                console.log('error:', error)
+                // app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+            }
         }
-    }, [app, data, handleAdyenResult])
+    }, [app, cart, data.payments, handleAdyenResult])
 
     return (
         <div>
@@ -193,7 +207,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
                                 return (
                                     <div
                                         key={paymentMethod.type}
-                                        className={classnames('mb-4 h-16 btn w-full border border-neutral-400 rounded cursor-pointer flex items-center', {
+                                        className={classnames('mb-4 h-10 btn w-full border border-neutral-400 rounded cursor-pointer flex items-center', {
                                             'bg-primary-500 text-white': paymentMethod.type === paymentMethodType,
                                             'bg-white text-neutral-900': paymentMethod.type !== paymentMethodType,
                                         })}
@@ -247,6 +261,7 @@ const PaymentPanel = ({ app, intl, data, updateHeight, isLoading = false }) => {
 
 PaymentPanel.propTypes = {
     app: PropTypes.object.isRequired,
+    cart: PropTypes.instanceOf(Entity),
     intl: intlShape.isRequired,
     data: PropTypes.object.isRequired,
     updateHeight: PropTypes.func.isRequired,

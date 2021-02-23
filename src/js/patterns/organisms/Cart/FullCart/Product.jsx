@@ -7,7 +7,7 @@ import Price from 'Atoms/price'
 import Select from 'Atoms/select'
 import { ReactComponent as CartBin } from 'Icons/cart-bin.svg'
 
-const Product = ({ intl, itemId, image, name, designer, count, price, color, size }) => {
+const Product = ({ intl, itemId, image, name, designer, count, price, discountedPrice, color, size }) => {
     const productCounter = Array.from(Array(10).keys()).map(i => { return i + 1 })
 
     return (
@@ -55,7 +55,7 @@ const Product = ({ intl, itemId, image, name, designer, count, price, color, siz
                 </div>
 
                 <div className='mt-3'>
-                    <Price variant='text-sm text-neutral-700 font-bold leading-tight' value={price} />
+                    <Price variant='text-sm text-neutral-700 font-bold leading-tight' value={discountedPrice || price} />
                 </div>
             </div>
 
@@ -83,6 +83,7 @@ Product.propTypes = {
     name: PropTypes.string.isRequired,
     designer: PropTypes.string,
     price: PropTypes.number.isRequired,
+    discountedPrice: PropTypes.number,
     count: PropTypes.number.isRequired,
     color: PropTypes.string,
     size: PropTypes.string,

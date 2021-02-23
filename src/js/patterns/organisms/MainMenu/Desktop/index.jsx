@@ -7,6 +7,7 @@ import TopCategories from './TopCategories'
 import DesktopMenu from './Navigation'
 import NavigationExpansionPanel from './NavigationExpansionPanel'
 import IconNavigation from '../IconNavigation'
+import LanguageSelector from './../../../molecules/LanguageSelector'
 
 import { categoryTreeType, topCategoryType } from '../types'
 
@@ -57,15 +58,18 @@ const Desktop = ({
                         }}
                     />
                 </div>
-                <IconNavigation
-                    cartItemsCount={cartItemsCount}
-                    goToCartPage={goToCartPage}
-                    wishListLineItemsCount={wishListLineItemsCount}
-                    goToWishlistPage={goToWishlistPage}
-                    goToProfilePage={goToProfilePage}
-                    showSearch={isSearch}
-                    onSearchToggle={handleSearchToggle}
-                />
+                <div className='flex'>
+                    <LanguageSelector className='mr-4 bg-background-primary' />
+                    <IconNavigation
+                        cartItemsCount={cartItemsCount}
+                        goToCartPage={goToCartPage}
+                        wishListLineItemsCount={wishListLineItemsCount}
+                        goToWishlistPage={goToWishlistPage}
+                        goToProfilePage={goToProfilePage}
+                        showSearch={isSearch}
+                        onSearchToggle={handleSearchToggle}
+                    />
+                </div>
             </div>
 
             <div className='border-t border-solid border-neutral-200'>

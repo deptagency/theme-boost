@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 
 import Price from 'Atoms/price'
 
-const Product = ({ image, name, designer, count, price, color, size }) => {
+const Product = ({ image, name, designer, count, price, discountedPrice, color, size }) => {
     return (
         <div className='grid grid-cols-120-1xfr col-gap-4'>
             <div>
@@ -26,7 +26,7 @@ const Product = ({ image, name, designer, count, price, color, size }) => {
                 </div>
 
                 <div className='mt-3'>
-                    <Price variant='text-sm text-neutral-700 font-bold leading-tight' value={price} />
+                    <Price variant='text-sm text-neutral-700 font-bold leading-tight' value={discountedPrice || price} />
                 </div>
             </div>
         </div>
@@ -38,6 +38,7 @@ Product.propTypes = {
     name: PropTypes.string.isRequired,
     designer: PropTypes.string,
     price: PropTypes.number.isRequired,
+    discountedPrice: PropTypes.number,
     count: PropTypes.number.isRequired,
     color: PropTypes.string,
     size: PropTypes.string,
