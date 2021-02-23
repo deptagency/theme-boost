@@ -1,5 +1,13 @@
 # boost Changelog
 
+## `1.2.0` (2021-02-23)
+
+* Adyen integration, discounts, taxes
+* Added language selector and fixed checkout issues
+* Fixed checkout error messages
+* Checkout counties are imported from commercetools
+* chore: Rename valid JSX code back to .jsx
+
 ## `1.1.5` (2021-02-18)
 
 * fix: Handle click on top category without subtree in mobile nav, too
