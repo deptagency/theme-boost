@@ -52,6 +52,7 @@ const Summary = ({ sum, items, shippingMethod = null, taxed = null, discountCode
                         <p className='mt-2 text-md text-neutral-900 leading-none font-bold'>
                             <FormattedMessage id='cart.discounts' />
                         </p>
+                        <p className='text-md text-right text-neutral-900 uppercase leading-normal' />
 
                         {discountCodes.map((discount, i) => {
                             return (

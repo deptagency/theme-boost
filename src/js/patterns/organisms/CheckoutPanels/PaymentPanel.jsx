@@ -89,6 +89,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
 
         switch (resultCode) {
         case 'Authorised':
+        case 'Received':
             app.getLoader('cart')
                 .checkout()
                 .catch((error) => {
@@ -98,7 +99,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
         default:
             throw { message: 'Payment result: ' + resultCode } // eslint-disable-line no-throw-literal
         }
-    }, [app, renderAdditionalDataComponent])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     const makePayment = useCallback((paymentMethod, browserInfo = {}) => { // eslint-disable-line react-hooks/exhaustive-deps
         setPaymentDetailsValid(false)
@@ -176,7 +177,8 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
             return
         }
 
-        if (payment.paymentDetails.adyenResultCode === 'Authorised') {
+        if (payment.paymentDetails.adyenResultCode === 'Authorised' || payment.paymentDetails.adyenResultCode === 'Received') {
+            console.log('render')
             app.getLoader('cart')
                 .checkout()
                 .catch((error) => {
@@ -190,7 +192,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
                 // app.getLoader('context').notifyUser(<Message {...error} />, 'error')
             }
         }
-    }, [app, cart, data.payments, handleAdyenResult])
+    }, [handleAdyenResult]) // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <div>
