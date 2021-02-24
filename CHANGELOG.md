@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.2.1` (2021-02-24)
+
+* Adyen creditcart 3d fingerprint authentication fix
+
 ## `1.2.0` (2021-02-23)
 
 * Adyen integration, discounts, taxes
