@@ -52,7 +52,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
         // eslint-disable-next-line no-undef
         const adyenCheckout = new AdyenCheckout(configuration)
         adyenCheckout.createFromAction(action).mount(containerElement.current)
-    })
+    }, [paymentMethods])
 
     const handleAdyenResult = useCallback((paymentId, action, resultCode) => { // eslint-disable-line react-hooks/exhaustive-deps
         if (action) {
@@ -99,7 +99,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
         default:
             throw { message: 'Payment result: ' + resultCode } // eslint-disable-line no-throw-literal
         }
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [ renderAdditionalDataComponent ]) // eslint-disable-line react-hooks/exhaustive-deps
 
     const makePayment = useCallback((paymentMethod, browserInfo = {}) => { // eslint-disable-line react-hooks/exhaustive-deps
         setPaymentDetailsValid(false)
@@ -122,6 +122,8 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
                 handleAdyenResult(body.paymentId, body.action, body.resultCode)
             })
             .catch(error => {
+                console.log('e:', error)
+
                 app.getLoader('context').notifyUser(<Message {...error} />, 'error')
             })
     })
