@@ -8,7 +8,7 @@ import Entity from '@frontastic/catwalk/src/js/app/entity'
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
-const CheckoutTastic = ({ cart }) => {
+const CheckoutTastic = ({ cart, data }) => {
     const [countries, setCountries] = useState([])
 
     useEffect(() => {
@@ -47,6 +47,9 @@ const CheckoutTastic = ({ cart }) => {
                     cart={cart}
                     data={cart.data}
                     countries={countries}
+                    termsPolicy={data.termsPolicy}
+                    privacyPolicy={data.privacyPolicy}
+                    cancelationPolicy={data.cancelationPolicy}
                 />
             )
         }
@@ -58,12 +61,16 @@ const CheckoutTastic = ({ cart }) => {
             cart={cart}
             data={cart.data}
             countries={countries}
+            termsPolicy={data.termsPolicy}
+            privacyPolicy={data.privacyPolicy}
+            cancelationPolicy={data.cancelationPolicy}
         />
     )
 }
 
 CheckoutTastic.propTypes = {
     cart: PropTypes.instanceOf(Entity),
+    data: PropTypes.object.isRequired,
 }
 
 export default tastify({ translate: true, connect: { cart: true } })(CheckoutTastic)

@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { injectIntl, intlShape } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
 import EmptyState, { icons } from 'Organisms/EmptyState'
 
-const CheckoutSuccess = ({ intl, email, onClick }) => {
+const CheckoutSuccess = ({ intl, id, email, onClick }) => {
     const title = intl.formatMessage({ id: 'checkout.orderConfirmed' })
-    const actionLabel = intl.formatMessage({ id: 'checkout.tryAgain' })
+    const actionLabel = intl.formatMessage({ id: 'checkout.backToShop' })
     const orderConfirmation = intl.formatMessage({ id: 'checkout.orderConfirmation' })
 
     return (
@@ -14,11 +14,17 @@ const CheckoutSuccess = ({ intl, email, onClick }) => {
             icon={icons.CHECKMARK_CIRCLE}
             iconColor='text-neutral-900'
             title={title}
+            subtitle={
+                <>
+                    <FormattedMessage id='checkout.yourOrderId' /> {id}
+                </>
+            }
             action={(e) => {
                 e.preventDefault()
                 onClick()
             }}
             actionLabel={actionLabel}
+
             >
             <>
                 {orderConfirmation}
@@ -30,6 +36,7 @@ const CheckoutSuccess = ({ intl, email, onClick }) => {
 
 CheckoutSuccess.propTypes = {
     intl: intlShape.isRequired,
+    id: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
 }

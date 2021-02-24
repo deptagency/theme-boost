@@ -14,7 +14,37 @@ import OrderButton from './Info/OrderButton'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelIndex, isLoading = false }) => {
+import Reference from '@frontastic/catwalk/src/js/component/reference'
+
+const TermsAndAgreements = ({ intl, termsPolicy, cancelationPolicy, privacyPolicy }) => {
+    const policyLabel1 = intl.formatMessage({ id: 'checkout.policy1' })
+    const policyLabel2 = intl.formatMessage({ id: 'checkout.policy2' })
+    const policyLabel3 = intl.formatMessage({ id: 'checkout.policy3' })
+    const policyLabel4 = intl.formatMessage({ id: 'checkout.policy4' })
+    const termsLabel = intl.formatMessage({ id: 'checkout.terms' })
+    const cancelationLabel = intl.formatMessage({ id: 'checkout.cancelation' })
+    const privacyLabel = intl.formatMessage({ id: 'checkout.privacy' })
+
+    return (
+        <>
+            {policyLabel1}
+            {termsPolicy ? <span style={{ color: '#3B82F6' }}><Reference reference={termsPolicy}>{termsLabel}</Reference></span> : { termsLabel }}
+            {policyLabel2}
+            {cancelationPolicy ? <span style={{ color: '#3B82F6' }}><Reference reference={cancelationPolicy}>{cancelationLabel}</Reference></span> : { cancelationLabel }}
+            {policyLabel3}
+            {privacyPolicy ? <span style={{ color: '#3B82F6' }}><Reference reference={privacyPolicy}>{privacyLabel}</Reference></span> : { privacyLabel }}
+            {policyLabel4}
+        </>
+    )
+}
+TermsAndAgreements.propTypes = {
+    intl: intlShape.isRequired,
+    termsPolicy: PropTypes.object,
+    privacyPolicy: PropTypes.object,
+    cancelationPolicy: PropTypes.object,
+}
+
+const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelIndex, termsPolicy, cancelationPolicy, privacyPolicy, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextPayment' })
 
     const availableShippingMethods = useSelector((state) => {
@@ -107,7 +137,7 @@ const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelInd
                                 discountCodes={data.discountCodes}
                                 isLoading={isLoading}
                                 label={buttonLabel}
-                                showVouchers={false}
+                                vouchersLabel={<TermsAndAgreements intl={intl} termsPolicy={termsPolicy} cancelationPolicy={cancelationPolicy} privacyPolicy={privacyPolicy} />}
                                 disabled={!isValid()}
                                 onClick={onNextClicked}
                             />
@@ -127,6 +157,9 @@ OverviewPanel.propTypes = {
     goToNextPanel: PropTypes.func.isRequired,
     goToPanelIndex: PropTypes.func.isRequired,
     isLoading: PropTypes.bool,
+    termsPolicy: PropTypes.object,
+    privacyPolicy: PropTypes.object,
+    cancelationPolicy: PropTypes.object,
 }
 
 export default injectIntl(OverviewPanel)

@@ -132,7 +132,6 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                                 discountCodes={data.discountCodes}
                                 isLoading={isLoading}
                                 label={buttonLabel}
-                                showVouchers={false}
                                 disabled={!isValid()}
                                 onClick={updateShippingInformation}
                             />

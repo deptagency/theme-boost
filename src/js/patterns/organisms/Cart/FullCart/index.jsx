@@ -12,6 +12,7 @@ import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
 const FullCart = ({ intl, items, sum, shippingMethod, discountCodes, taxed, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'cart.checkout' })
+    const vouchersLabel = intl.formatMessage({ id: 'cart.enterVouchers' })
 
     return (
         <StickyRightColumn
@@ -77,8 +78,9 @@ const FullCart = ({ intl, items, sum, shippingMethod, discountCodes, taxed, isLo
                         taxed={taxed}
                         discountCodes={discountCodes}
                         label={buttonLabel}
+                        vouchersLabel={vouchersLabel}
                         onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout') }}
-                        />
+                    />
                 </div>
             }
         />

@@ -11,7 +11,7 @@ import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
 import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
-const CheckoutPanels = ({ app, data, cart, countries, isLoading = false }) => {
+const CheckoutPanels = ({ app, data, cart, countries, termsPolicy, privacyPolicy, cancelationPolicy, isLoading = false }) => {
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
@@ -43,6 +43,9 @@ const CheckoutPanels = ({ app, data, cart, countries, isLoading = false }) => {
                 cart={cart}
                 data={data}
                 countries={countries}
+                termsPolicy={termsPolicy}
+                privacyPolicy={privacyPolicy}
+                cancelationPolicy={cancelationPolicy}
                 steps={steps}
                 current={current}
                 setCurrent={setCurrent}
@@ -59,6 +62,9 @@ CheckoutPanels.propTypes = {
     cart: PropTypes.instanceOf(Entity),
     countries: PropTypes.array.isRequired,
     isLoading: PropTypes.bool,
+    termsPolicy: PropTypes.object,
+    privacyPolicy: PropTypes.object,
+    cancelationPolicy: PropTypes.object,
 }
 
 export default CheckoutPanels

@@ -10,7 +10,7 @@ import LoaderButton from 'Molecules/Loaders/LoaderButton'
 
 import { ReactComponent as IconClose } from 'Icons/tailwind-icons/icon-close-white.svg'
 
-const Summary = ({ sum, items, shippingMethod = null, taxed = null, discountCodes = null, disabled = false, isLoading = false, onClick, label, showVouchers = true }) => {
+const Summary = ({ sum, items, shippingMethod = null, taxed = null, discountCodes = null, disabled = false, isLoading = false, onClick, label, vouchersLabel }) => {
     const totalTaxes = taxed?.taxPortions?.reduce((a, b) => (a + b.amount), 0)
 
     const productPrice = items.reduce((a, b) => {
@@ -104,9 +104,9 @@ const Summary = ({ sum, items, shippingMethod = null, taxed = null, discountCode
                 </Button>
             )}
 
-            {showVouchers && (
+            {vouchersLabel && (
                 <p className='mt-4 text-xs text-neutral-500 text-center'>
-                    <FormattedMessage id='cart.enterVouchers' />
+                    {vouchersLabel}
                 </p>
             )}
         </section>
@@ -120,9 +120,9 @@ Summary.propTypes = {
     taxed: PropTypes.object,
     discountCodes: PropTypes.array,
     onClick: PropTypes.func,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.string,
     disabled: PropTypes.bool,
-    showVouchers: PropTypes.bool,
+    vouchersLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     isLoading: PropTypes.bool,
 }
 

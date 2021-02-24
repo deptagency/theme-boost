@@ -28,7 +28,7 @@ const Discount = () => {
                 value={discountCode}
             />
             <button
-                className='btn-pill bg-primary-500 text-white focus:outline-none w-full'
+                className='btn-pill bg-neutral-500 text-white focus:outline-none w-full'
                 onClick={redeemDiscount}
                 >
                 <FormattedMessage id={'checkout.discount.apply'} />

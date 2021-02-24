@@ -3,8 +3,6 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
-import DiscountForm from './Forms/Discount'
-
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
@@ -12,8 +10,6 @@ import Entity from '@frontastic/catwalk/src/js/app/entity'
 import Message from '@frontastic/catwalk/src/js/app/message'
 
 const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }) => {
-    const buttonLabel = intl.formatMessage({ id: 'checkout.placeOrder' })
-
     const [paymentMethods, setPaymentMethods] = useState(null)
     const [paymentMethodType, setPaymentMethodType] = useState(null)
     const [paymentDetailsValid, setPaymentDetailsValid] = useState(false)
@@ -52,7 +48,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
         // eslint-disable-next-line no-undef
         const adyenCheckout = new AdyenCheckout(configuration)
         adyenCheckout.createFromAction(action).mount(containerElement.current)
-    }, [paymentMethods])
+    }, [ handleAdyenResult ]) // eslint-disable-line react-hooks/exhaustive-deps
 
     const handleAdyenResult = useCallback((paymentId, action, resultCode) => { // eslint-disable-line react-hooks/exhaustive-deps
         if (action) {
@@ -134,6 +130,17 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
                 return response.json()
             })
             .then((body) => {
+                const pm = []
+                const allowedPaymentMethods = ['scheme', 'directEbanking', 'klarna', 'paysafecard', 'giropay', 'klarna_account', 'klarna_paynow']
+
+                body.paymentMethods.forEach(method => {
+                    if (allowedPaymentMethods.some(item => item === method.type)) {
+                        pm.push(method)
+                    }
+                })
+
+                body.paymentMethods = pm
+
                 return setPaymentMethods(body)
             })
     }, [])
@@ -212,10 +219,12 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
                                     <div
                                         key={paymentMethod.type}
                                         className={classnames('mb-4 h-10 btn w-full border border-neutral-400 rounded cursor-pointer flex items-center', {
-                                            'bg-primary-500 text-white': paymentMethod.type === paymentMethodType,
+                                            'bg-neutral-500 text-white': paymentMethod.type === paymentMethodType,
                                             'bg-white text-neutral-900': paymentMethod.type !== paymentMethodType,
                                         })}
-                                        onClick={() => { setPaymentMethodType(paymentMethod.type) }}
+                                        onClick={() => {
+                                            setPaymentMethodType(paymentMethod.type)
+                                        }}
                                     >
                                         {paymentMethod.name}
                                     </div>
@@ -224,26 +233,26 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
 
                             <div className='my-6' ref={containerElement} />
 
-                            <span className='flex'>
-                                <button
-                                    name='Pay'
-                                    className='ml-auto mr-auto btn-pill bg-primary-500 text-white w-32 h-10 text-center focus:outline-none'
-                                    disabled={!paymentDetailsValid}
-                                    onClick={() => { makePayment(paymentDetails.paymentMethod, paymentDetails.browserInfo) }}
-                                >
-                                    <FormattedMessage id={'checkout.pay'} />
-                                </button>
-                            </span>
+                            {paymentMethodType === 'scheme' && (
+                                <span className='flex'>
+                                    <button
+                                        name='Pay'
+                                        className='ml-auto mr-auto btn-pill bg-primary-500 text-white w-32 h-10 text-center focus:outline-none'
+                                        disabled={!paymentDetailsValid}
+                                        onClick={() => {
+                                            makePayment(paymentDetails.paymentMethod, paymentDetails.browserInfo)
+                                        }}
+                                    >
+                                        <FormattedMessage id={'checkout.pay'} />
+                                    </button>
+                                </span>
+                            )}
                         </div>
                     </div>
                 }
 
                 rightColumn={
                     <>
-                        <div className='mb-1 md:mb-4 px-4 py-6 md:py-4 md:shadow-md md:rounded bg-white'>
-                            <DiscountForm />
-                        </div>
-
                         <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded bg-white'>
                             <Summary
                                 items={data.lineItems}
@@ -252,8 +261,6 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
                                 taxed={data.taxed}
                                 discountCodes={data.discountCodes}
                                 isLoading={isLoading}
-                                label={buttonLabel}
-                                showVouchers={false}
                             />
                         </div>
                     </>
