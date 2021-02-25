@@ -153,6 +153,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
         setPaymentDetailsValid(false)
         setPaymentDetails(null)
 
+        console.log('paymentMethods: ', paymentMethods)
         const configuration = {
             ...paymentMethods.configuration,
             onChange: (state) => {
