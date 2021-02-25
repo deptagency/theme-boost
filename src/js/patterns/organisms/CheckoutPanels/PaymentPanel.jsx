@@ -156,6 +156,8 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
         console.log('paymentMethods: ', paymentMethods)
         const configuration = {
             ...paymentMethods.configuration,
+            countryCode: 'DE',
+            merchantId: 'RLNBMJL5WNAD2',
             onChange: (state) => {
                 setPaymentDetailsValid(state.isValid)
                 setPaymentDetails(state.data)
@@ -164,6 +166,8 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
                 makePayment(state.data.paymentMethod, state.data.browserInfo)
             },
         }
+        console.log('configuration: ', configuration)
+
         // eslint-disable-next-line no-undef
         const adyenCheckout = new AdyenCheckout(configuration)
         adyenCheckout.create(paymentMethodType).mount(containerElement.current)
