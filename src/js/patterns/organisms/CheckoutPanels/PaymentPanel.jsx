@@ -131,7 +131,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
             })
             .then((body) => {
                 const pm = []
-                const allowedPaymentMethods = ['scheme', 'directEbanking', 'klarna', 'paysafecard', 'giropay', 'klarna_account', 'klarna_paynow']
+                const allowedPaymentMethods = ['paypal', 'scheme', 'directEbanking', 'klarna', 'paysafecard', 'giropay', 'klarna_account', 'klarna_paynow']
 
                 body.paymentMethods.forEach(method => {
                     if (allowedPaymentMethods.some(item => item === method.type)) {
