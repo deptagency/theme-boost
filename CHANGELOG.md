@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.2.4` (2021-02-25)
+
+* Refused payments show error message
+
 ## `1.2.2` (2021-02-25)
 
 * Added checkout translations
