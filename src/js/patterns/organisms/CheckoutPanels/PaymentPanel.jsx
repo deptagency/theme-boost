@@ -48,7 +48,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
         // eslint-disable-next-line no-undef
         const adyenCheckout = new AdyenCheckout(configuration)
         adyenCheckout.createFromAction(action).mount(containerElement.current)
-    }, [ handleAdyenResult ]) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [ handleAdyenResult, paymentMethods ]) // eslint-disable-line react-hooks/exhaustive-deps
 
     const handleAdyenResult = useCallback((paymentId, action, resultCode) => { // eslint-disable-line react-hooks/exhaustive-deps
         if (action) {
