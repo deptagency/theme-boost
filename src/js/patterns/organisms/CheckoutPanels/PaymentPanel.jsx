@@ -93,7 +93,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
                 })
             break
         default:
-            throw { message: 'Payment result: ' + resultCode } // eslint-disable-line no-throw-literal
+            throw { message: 'Payment result: ' + resultCode, resultCode: resultCode } // eslint-disable-line no-throw-literal
         }
     }, [ renderAdditionalDataComponent ]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -187,7 +187,6 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
         }
 
         if (payment.paymentDetails.adyenResultCode === 'Authorised' || payment.paymentDetails.adyenResultCode === 'Received') {
-            console.log('render')
             app.getLoader('cart')
                 .checkout()
                 .catch((error) => {
@@ -197,8 +196,11 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
             try {
                 handleAdyenResult(paymentId, payment.paymentDetails.adyenAction, payment.paymentDetails.adyenResultCode)
             } catch (error) {
-                console.log('error:', error)
-                // app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+                console.log('Payment result:', error)
+
+                if (error.resultCode && error.resultCode === 'Refused') {
+                    app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+                }
             }
         }
     }, [handleAdyenResult]) // eslint-disable-line react-hooks/exhaustive-deps
