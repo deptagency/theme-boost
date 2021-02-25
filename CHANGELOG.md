@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.2.2` (2021-02-25)
+
+* Added checkout translations
+
 ## `1.2.1` (2021-02-24)
 
 * Adyen creditcart 3d fingerprint authentication fix
