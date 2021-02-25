@@ -47,7 +47,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
         }
         // eslint-disable-next-line no-undef
         const adyenCheckout = new AdyenCheckout(configuration)
-        //adyenCheckout.createFromAction(action).mount(containerElement.current)
+        // adyenCheckout.createFromAction(action).mount(containerElement.current)
         adyenCheckout.create('dropin').mount(containerElement.current)
 
         updateHeight()
