@@ -16,43 +16,8 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
     const [paymentDetails, setPaymentDetails] = useState(null)
     const containerElement = useRef(null)
 
-    const renderAdditionalDataComponent = useCallback((paymentId, action) => { // eslint-disable-line react-hooks/exhaustive-deps
-        const configuration = {
-            ...paymentMethods.configuration,
-            onAdditionalDetails: (state, dropin) => {
-                console.log('onAdditionalDetails:', state, dropin)
-
-                fetch(`/api/payment/adyen/payment/${paymentId}/additionalDetails`, {
-                    method: 'POST',
-                    headers: {
-                        Accept: 'application/json',
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        details: state.data.details,
-                        paymentData: state.data.paymentData,
-                    }),
-                })
-                    .then((response) => {
-                        if (!response.ok) {
-                            throw response
-                        }
-                        return response.json()
-                    })
-                    .then((body) => {
-                        handleAdyenResult(body.paymentId, body.action, body.resultCode)
-                    })
-                    .catch((error) => {
-                        app.getLoader('context').notifyUser(<Message {...error} />, 'error')
-                    })
-            },
-        }
-        // eslint-disable-next-line no-undef
-        // const adyenCheckout = new AdyenCheckout(configuration)
-        // adyenCheckout.createFromAction(action).mount(containerElement.current)
-
-        updateHeight()
-    }, [handleAdyenResult, paymentMethods]) // eslint-disable-line react-hooks/exhaustive-deps
+    const adyenComponentRef = useRef(null)
+    const paymentIdRef = useRef(null)
 
     const handleAdyenResult = useCallback((paymentId, action, resultCode) => { // eslint-disable-line react-hooks/exhaustive-deps
         if (action) {
@@ -82,7 +47,8 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
             case 'voucher':
                 throw { message: 'Voucher action not yet supported' } // eslint-disable-line no-throw-literal
             default:
-                renderAdditionalDataComponent(paymentId, action)
+                paymentIdRef.current = paymentId
+                adyenComponentRef.current.handleAction(action)
                 return
             }
         }
@@ -99,7 +65,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
         default:
             throw { message: 'Payment result: ' + resultCode, resultCode: resultCode } // eslint-disable-line no-throw-literal
         }
-    }, [ renderAdditionalDataComponent ]) // eslint-disable-line react-hooks/exhaustive-deps
+    }) // eslint-disable-line react-hooks/exhaustive-deps
 
     const makePayment = useCallback((paymentMethod, browserInfo = {}) => { // eslint-disable-line react-hooks/exhaustive-deps
         setPaymentDetailsValid(false)
@@ -160,27 +126,47 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
         console.log('paymentMethods: ', paymentMethods)
         const configuration = {
             ...paymentMethods.configuration,
-            countryCode: 'DE',
-            merchantId: 'RLNBMJL5WNAD2',
             onChange: (state) => {
                 setPaymentDetailsValid(state.isValid)
                 setPaymentDetails(state.data)
             },
-            onAdditionalDetails: (state, dropin) => {
-                console.log('main method onAdditionalDetails', state, dropin)
-            },
             onSubmit: (state) => {
                 makePayment(state.data.paymentMethod, state.data.browserInfo)
             },
+            onAdditionalDetails: (state) => {
+                fetch(`/api/payment/adyen/payment/${paymentIdRef.current}/additionalDetails`, {
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        details: state.data.details,
+                        paymentData: state.data.paymentData,
+                    }),
+                })
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw response
+                        }
+                        return response.json()
+                    })
+                    .then((body) => {
+                        handleAdyenResult(body.paymentId, body.action, body.resultCode)
+                    })
+                    .catch((error) => {
+                        app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+                    })
+            },
         }
-        console.log('configuration: ', configuration)
 
         // eslint-disable-next-line no-undef
         const adyenCheckout = new AdyenCheckout(configuration)
-        adyenCheckout.create(paymentMethodType).mount(containerElement.current)
+        adyenComponentRef.current = adyenCheckout.create(paymentMethodType)
+        adyenComponentRef.current.mount(containerElement.current)
 
         updateHeight()
-    }, [paymentMethodType, paymentMethods]) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [paymentMethodType, paymentMethods, updateHeight]) // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
         if (!cart.isComplete() || containerElement.current == null) {
