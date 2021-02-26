@@ -19,7 +19,9 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
     const renderAdditionalDataComponent = useCallback((paymentId, action) => { // eslint-disable-line react-hooks/exhaustive-deps
         const configuration = {
             ...paymentMethods.configuration,
-            onAdditionalDetails: (state) => {
+            onAdditionalDetails: (state, dropin) => {
+                console.log('onAdditionalDetails:', state, dropin)
+
                 fetch(`/api/payment/adyen/payment/${paymentId}/additionalDetails`, {
                     method: 'POST',
                     headers: {
@@ -46,12 +48,11 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
             },
         }
         // eslint-disable-next-line no-undef
-        const adyenCheckout = new AdyenCheckout(configuration)
+        // const adyenCheckout = new AdyenCheckout(configuration)
         // adyenCheckout.createFromAction(action).mount(containerElement.current)
-        adyenCheckout.create('dropin').mount(containerElement.current)
 
         updateHeight()
-    }, [ handleAdyenResult, paymentMethods, updateHeight ]) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [handleAdyenResult, paymentMethods]) // eslint-disable-line react-hooks/exhaustive-deps
 
     const handleAdyenResult = useCallback((paymentId, action, resultCode) => { // eslint-disable-line react-hooks/exhaustive-deps
         if (action) {
@@ -165,6 +166,9 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
                 setPaymentDetailsValid(state.isValid)
                 setPaymentDetails(state.data)
             },
+            onAdditionalDetails: (state, dropin) => {
+                console.log('main method onAdditionalDetails', state, dropin)
+            },
             onSubmit: (state) => {
                 makePayment(state.data.paymentMethod, state.data.browserInfo)
             },
@@ -176,7 +180,7 @@ const PaymentPanel = ({ app, cart, intl, data, updateHeight, isLoading = false }
         adyenCheckout.create(paymentMethodType).mount(containerElement.current)
 
         updateHeight()
-    }, [paymentMethodType, paymentMethods, updateHeight]) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [paymentMethodType, paymentMethods]) // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
         if (!cart.isComplete() || containerElement.current == null) {
