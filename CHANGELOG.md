@@ -1,5 +1,15 @@
 # boost Changelog
 
+## `1.2.5` (2021-03-01)
+
+* Ddded error message in checkuot if products are out of stock
+* Product listing on load next page fix
+* fix: Reuse same adyen component for additional data
+* Disabled additional rendering for paypal
+* Paypal CSP rules
+* Upgraded adyen js/css files
+* Paypal render additional settings fix
+
 ## `1.2.4` (2021-02-25)
 
 * Refused payments show error message
