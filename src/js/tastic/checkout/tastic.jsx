@@ -8,8 +8,14 @@ import Entity from '@frontastic/catwalk/src/js/app/entity'
 import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
 import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 
-const CheckoutTastic = ({ cart, data }) => {
+import EmptyState, { icons } from 'Organisms/EmptyState'
+import { injectIntl, intlShape } from 'react-intl'
+
+const CheckoutTastic = ({ intl, cart, data }) => {
     const [countries, setCountries] = useState([])
+
+    const title = intl.formatMessage({ id: 'checkout.outOfStock' })
+    const actionLabel = intl.formatMessage({ id: 'checkout.backToCart' })
 
     useEffect(() => {
         app.getLoader('cart').getShippingMethods().then(response => {
@@ -34,6 +40,25 @@ const CheckoutTastic = ({ cart, data }) => {
 
     if (!cart || countries.length === 0) {
         return <DefaultLoader />
+    }
+
+    if (cart && cart.data && cart.data.lineItems && cart.data.lineItems.length > 0) {
+        const anyProductOutOfStock = cart.data.lineItems.some(product => product.variant.isOnStock === false)
+
+        if (anyProductOutOfStock) {
+            return (
+                <EmptyState
+                    icon={icons.EMOTION_SAD}
+                    iconColor='text-neutral-900'
+                    title={title}
+                    action={(e) => {
+                        e.preventDefault()
+                        app.getRouter().push('Frontastic.Frontend.Master.Checkout.cart')
+                    }}
+                    actionLabel={actionLabel}
+                />
+            )
+        }
     }
 
     if (cart.loading) {
@@ -69,8 +94,9 @@ const CheckoutTastic = ({ cart, data }) => {
 }
 
 CheckoutTastic.propTypes = {
+    intl: intlShape.isRequired,
     cart: PropTypes.instanceOf(Entity),
     data: PropTypes.object.isRequired,
 }
 
-export default tastify({ translate: true, connect: { cart: true } })(CheckoutTastic)
+export default injectIntl(tastify({ translate: true, connect: { cart: true } })(CheckoutTastic))
