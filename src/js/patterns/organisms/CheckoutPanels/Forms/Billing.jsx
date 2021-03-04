@@ -114,7 +114,7 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
                     >
                     <option value='' />
                     {countries.map((country, key) => {
-                        return (<option key={key} value={country}>{convertToCountryName(country)}</option>)
+                        return (<option key={key} value={country}>{convertToCountryName(intl, country)}</option>)
                     })}
                 </select>
                 <ErrorMessage errors={errors} name='country' />

@@ -1,29 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
 import { useForm } from 'react-hook-form'
+import { useSelector } from 'react-redux'
 
 import Price from 'Atoms/price'
 
-const ShippingMethod = ({ availableShippingMethods, defaultValues = {}, onSubmit }) => {
+const ShippingMethod = ({ shippingMethod, onSubmit }) => {
+    const availableShippingMethods = useSelector((state) => {
+        return state.cart && state.cart.availableShippingMethods && state.cart.availableShippingMethods.data
+    })
+
     const { register, getValues, setValue } = useForm({ mode: 'onChange',
-        defaultValues: {
+        /* defaultValues: {
             shippingMethodId: defaultValues ? defaultValues.shippingMethodId : null,
-        },
+        }, */
     })
 
     const onChange = () => {
         onSubmit(getValues())
     }
 
-    const onSelect = (method) => {
-        setValue('shippingMethodId', method.shippingMethodId)
+    const onSelect = (shippingMethod) => {
+        setValue('shippingMethodId', shippingMethod.shippingMethodId)
 
         onChange()
     }
 
-    const getShippingMethodPrice = (method) => {
-        return method.rates.reduce((a, b) => (a + b.price), 0)
+    const getShippingMethodPrice = (shippingMethod) => {
+        return shippingMethod.rates.reduce((a, b) => (a + b.price), 0)
     }
 
     return (
@@ -34,7 +40,13 @@ const ShippingMethod = ({ availableShippingMethods, defaultValues = {}, onSubmit
 
             {availableShippingMethods?.map((method, i) => {
                 return (
-                    <div key={i} className='mb-4 px-4 py-3 border border-neutral-400 rounded flex items-center h-20 cursor-pointer' onClick={() => { onSelect(method) }}>
+                    <div key={i}
+                        className={classnames({
+                            'px-4 py-3 border border-neutral-400 rounded flex items-center h-16 cursor-pointer': true,
+                            'mt-2': i > 0,
+                        })}
+                        onClick={() => { onSelect(method) }}
+                    >
                         <input type='radio' aria-label='Shipping method' name='shippingMethodId' value={method.shippingMethodId} id={method.name} className='mr-2'
                             ref={register()}
                         />
@@ -50,7 +62,7 @@ const ShippingMethod = ({ availableShippingMethods, defaultValues = {}, onSubmit
                         </div>
 
                         <span className='text-md ml-auto font-bold'>
-                            {getShippingMethodPrice(method) ? <Price value={getShippingMethodPrice(method)} /> : <span className='uppercase'><FormattedMessage id={'checkout.freeShipping'} /> </span> }
+                            {getShippingMethodPrice(method) ? <Price value={getShippingMethodPrice(method)} /> : <span className='uppercase'><FormattedMessage id={'checkout.freeShipping'} /></span> }
                         </span>
                     </div>
                 )
@@ -60,8 +72,7 @@ const ShippingMethod = ({ availableShippingMethods, defaultValues = {}, onSubmit
 }
 
 ShippingMethod.propTypes = {
-    defaultValues: PropTypes.object,
-    availableShippingMethods: PropTypes.array,
+    shippingMethod: PropTypes.object,
     onSubmit: PropTypes.func.isRequired,
 }
 

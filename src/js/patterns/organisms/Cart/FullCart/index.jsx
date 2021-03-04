@@ -72,12 +72,7 @@ const FullCart = ({ intl, items, sum, shippingMethod, discountCodes, taxed, isLo
                 <div className='p-4 border-b-4 border-neutral-100 md:border-0 md:shadow-md md:rounded bg-white'>
                     <Summary
                         isLoading={isLoading}
-                        items={items}
-                        sum={sum}
-                        shippingMethod={shippingMethod}
-                        taxed={taxed}
-                        discountCodes={discountCodes}
-                        label={buttonLabel}
+                        buttonLabel={buttonLabel}
                         vouchersLabel={vouchersLabel}
                         onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout') }}
                     />

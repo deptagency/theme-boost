@@ -11,7 +11,7 @@ import BillingForm from './Forms/Billing'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight, isLoading = false }) => {
+const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextOverview' })
     const billingDetailsLabel = intl.formatMessage({ id: 'checkout.billingDetailsLabel' })
 
@@ -70,10 +70,10 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
     }
 
     return (
-        <div>
-            <StickyRightColumn
-                variant='md:my-4 md:px-4 max-w-960px mx-auto'
-                leftColumn={
+        <StickyRightColumn
+            variant='md:my-4 md:px-4 max-w-960px mx-auto'
+            leftColumn={
+                <div>
                     <div className='md:shadow-md md:rounded bg-white'>
                         <div className='px-4 py-5 md:px-6 border-t-4 md:border-t-0 border-neutral-100 bg-white'>
                             <ShippingForm
@@ -82,10 +82,10 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                                 defaultEmail={data.email}
                                 defaultValues={data.shippingAddress}
                                 onSubmit={(data) => {
-                                    setEmail(data.email)
-                                    setShipping(data)
-                                }}
-                            />
+                                setEmail(data.email)
+                                setShipping(data)
+                            }}
+                        />
 
                             <div className='mt-4 p-4 bg-neutral-200 rounded'>
                                 <div className='text-sm text-neutral-900 flex items-center'>
@@ -94,52 +94,45 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, updateHeight
                                         label={billingDetailsLabel}
                                         value={isBillingSameAsShipping}
                                         onClick={() => {
-                                            updateHeight()
-                                            setBillingIsSameAsShipping(!isBillingSameAsShipping)
-                                        }}
-                                    />
+                                        setBillingIsSameAsShipping(!isBillingSameAsShipping)
+                                    }}
+                                />
                                 </div>
                             </div>
                         </div>
 
                         {!isBillingSameAsShipping &&
-                            <div className='px-4 py-5 md:px-6 border-t-4 border-neutral-100'>
-                                <BillingForm
-                                    intl={intl}
-                                    countries={countries}
-                                    defaultValues={data.billingAddress}
-                                    onSubmit={data => {
-                                        setBilling(data)
-                                    }}
-                                />
-                            </div>
-                        }
-                    </div>
-                }
-
-                rightColumn={
-                    <>
-                        <div className='mb-1 md:mb-4 px-4 py-6 md:py-4 md:shadow-md md:rounded bg-white'>
-                            <DiscountForm />
-                        </div>
-
-                        <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100 bg-white'>
-                            <Summary
-                                items={data.lineItems}
-                                sum={data.sum}
-                                shippingMethod={data.shippingMethod}
-                                taxed={data.taxed}
-                                discountCodes={data.discountCodes}
-                                isLoading={isLoading}
-                                label={buttonLabel}
-                                disabled={!isValid()}
-                                onClick={updateShippingInformation}
+                        <div className='px-4 py-5 md:px-6 border-t-4 border-neutral-100'>
+                            <BillingForm
+                                intl={intl}
+                                countries={countries}
+                                defaultValues={data.billingAddress}
+                                onSubmit={data => {
+                                    setBilling(data)
+                                }}
                             />
                         </div>
-                    </>
-                }
-            />
-        </div>
+                    }
+                    </div>
+                </div>
+            }
+
+            rightColumn={
+                <>
+                    <div className='mb-1 md:mb-4 px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100 bg-white'>
+                        <DiscountForm />
+                    </div>
+
+                    <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100 bg-white'>
+                        <Summary
+                            buttonLabel={buttonLabel}
+                            disabled={!isValid()}
+                            onClick={updateShippingInformation}
+                        />
+                    </div>
+                </>
+            }
+        />
     )
 }
 
@@ -149,7 +142,6 @@ ShippingPanel.propTypes = {
     data: PropTypes.object.isRequired,
     countries: PropTypes.array.isRequired,
     goToNextPanel: PropTypes.func.isRequired,
-    updateHeight: PropTypes.func.isRequired,
     isLoading: PropTypes.bool,
 }
 

@@ -35,7 +35,7 @@ const ProductListing = ({
         if (inView) {
             onLoadNextPage()
         }
-    }, [inView])
+    }, [inView, onLoadNextPage])
 
     const onFacetChange = (newFacet, index) => {
         data.stream.facets[index] = { ...newFacet }

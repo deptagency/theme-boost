@@ -11,11 +11,8 @@ import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
 import EmptyState, { icons } from 'Organisms/EmptyState'
 import { injectIntl, intlShape } from 'react-intl'
 
-const CheckoutTastic = ({ intl, cart, data }) => {
+const CheckoutTastic = ({ intl, cart, context, data }) => {
     const [countries, setCountries] = useState([])
-
-    const title = intl.formatMessage({ id: 'checkout.outOfStock' })
-    const actionLabel = intl.formatMessage({ id: 'checkout.backToCart' })
 
     useEffect(() => {
         app.getLoader('cart').getShippingMethods().then(response => {
@@ -36,16 +33,37 @@ const CheckoutTastic = ({ intl, cart, data }) => {
 
             setCountries(c)
         })
-    }, [])
+    }, [context.locale])
 
     if (!cart || countries.length === 0) {
         return <DefaultLoader />
     }
 
-    if (cart && cart.data && cart.data.lineItems && cart.data.lineItems.length > 0) {
+    if (cart && cart.loaded && cart.data && cart.data.lineItems.length === 0) {
+        const title = intl.formatMessage({ id: 'cart.emptyCart.text' })
+        const actionLabel = intl.formatMessage({ id: 'checkout.backToShop' })
+
+        return (
+            <EmptyState
+                icon={icons.EMOTION_SAD}
+                iconColor='text-neutral-900'
+                title={title}
+                action={(e) => {
+                    e.preventDefault()
+                    app.getRouter().history.replace('/')
+                }}
+                actionLabel={actionLabel}
+            />
+        )
+    }
+
+    if (cart && cart.loaded && cart.data && cart.data.lineItems && cart.data.lineItems.length > 0) {
         const anyProductOutOfStock = cart.data.lineItems.some(product => product.variant.isOnStock === false)
 
         if (anyProductOutOfStock) {
+            const title = intl.formatMessage({ id: 'checkout.outOfStock' })
+            const actionLabel = intl.formatMessage({ id: 'checkout.backToCart' })
+
             return (
                 <EmptyState
                     icon={icons.EMOTION_SAD}
@@ -72,9 +90,7 @@ const CheckoutTastic = ({ intl, cart, data }) => {
                     cart={cart}
                     data={cart.data}
                     countries={countries}
-                    termsPolicy={data.termsPolicy}
-                    privacyPolicy={data.privacyPolicy}
-                    cancelationPolicy={data.cancelationPolicy}
+                    policy={data.policy}
                 />
             )
         }
@@ -86,9 +102,7 @@ const CheckoutTastic = ({ intl, cart, data }) => {
             cart={cart}
             data={cart.data}
             countries={countries}
-            termsPolicy={data.termsPolicy}
-            privacyPolicy={data.privacyPolicy}
-            cancelationPolicy={data.cancelationPolicy}
+            policy={data.policy}
         />
     )
 }
@@ -96,7 +110,8 @@ const CheckoutTastic = ({ intl, cart, data }) => {
 CheckoutTastic.propTypes = {
     intl: intlShape.isRequired,
     cart: PropTypes.instanceOf(Entity),
+    context: PropTypes.object.isRequired,
     data: PropTypes.object.isRequired,
 }
 
-export default injectIntl(tastify({ translate: true, connect: { cart: true } })(CheckoutTastic))
+export default injectIntl(tastify({ translate: true, connect: { cart: true, context: true } })(CheckoutTastic))

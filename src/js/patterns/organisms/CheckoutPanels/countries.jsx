@@ -1,7 +1,13 @@
-import countryCodes from './countries.json'
+import PropTypes from 'prop-types'
+import { intlShape } from 'react-intl'
 
-const convertToCountryName = (code) => {
-    return countryCodes.find(country => country.alpha2 === code).name
+const convertToCountryName = (intl, code) => {
+    return intl.formatMessage({ id: 'country.' + code })
+}
+
+convertToCountryName.propTypes = {
+    intl: intlShape.isRequired,
+    code: PropTypes.string.isRequired,
 }
 
 export { convertToCountryName }

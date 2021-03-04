@@ -149,7 +149,7 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
                     >
                     <option value='' />
                     {countries.map((country, key) => {
-                        return (<option key={key} value={country}>{convertToCountryName(country)}</option>)
+                        return (<option key={key} value={country}>{convertToCountryName(intl, country)}</option>)
                     })}
                 </select>
 

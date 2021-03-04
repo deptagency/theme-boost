@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import { useSelector } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
-import app from '@frontastic/catwalk/src/js/app/app'
 
 import Price from 'Atoms/price'
 import Button from 'Atoms/button'
@@ -10,10 +10,17 @@ import LoaderButton from 'Molecules/Loaders/LoaderButton'
 
 import { ReactComponent as IconClose } from 'Icons/tailwind-icons/icon-close-white.svg'
 
-const Summary = ({ sum, items, shippingMethod = null, taxed = null, discountCodes = null, disabled = false, isLoading = false, onClick, label, vouchersLabel }) => {
+import app from '@frontastic/catwalk/src/js/app/app'
+import Markdown from '@frontastic/catwalk/src/js/component/markdown'
+
+const Summary = ({ disabled = false, isLoading = false, onClick, buttonLabel, vouchersLabel }) => {
+    const { sum, lineItems, taxed, shippingMethod, discountCodes } = useSelector((state) => {
+        return state.cart.cart.data || {}
+    })
+
     const totalTaxes = taxed?.taxPortions?.reduce((a, b) => (a + b.amount), 0)
 
-    const productPrice = items.reduce((a, b) => {
+    const productPrice = lineItems.reduce((a, b) => {
         if (b.discountedPrice) {
             return a + b.discountedPrice * b.count
         } else {
@@ -92,36 +99,31 @@ const Summary = ({ sum, items, shippingMethod = null, taxed = null, discountCode
 
             {onClick && (
                 <Button
-                    name={label}
+                    name={buttonLabel}
                     variant={classnames({
-                        'btn-pill bg-primary-500 text-white w-full h-10 focus:outline-none': true,
+                        'btn bg-primary-500 text-white w-full h-10 focus:outline-none': true,
                         'cursor-default': isLoading || disabled,
                     })}
                     onClick={onClick}
                     disabled={isLoading || disabled}
                 >
-                    {isLoading ? <LoaderButton /> : label}
+                    {isLoading ? <LoaderButton /> : buttonLabel}
                 </Button>
             )}
 
             {vouchersLabel && (
-                <p className='mt-4 text-xs text-neutral-500 text-center'>
-                    {vouchersLabel}
-                </p>
+                <div className='mt-4 text-xs text-neutral-600 text-center'>
+                    <Markdown text={vouchersLabel} />
+                </div>
             )}
         </section>
     )
 }
 
 Summary.propTypes = {
-    items: PropTypes.array,
-    sum: PropTypes.number.isRequired,
-    shippingMethod: PropTypes.object,
-    taxed: PropTypes.object,
-    discountCodes: PropTypes.array,
     onClick: PropTypes.func,
-    label: PropTypes.string,
     disabled: PropTypes.bool,
+    buttonLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     vouchersLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     isLoading: PropTypes.bool,
 }

@@ -11,7 +11,7 @@ import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
 import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
 import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
 
-const CheckoutPanels = ({ app, data, cart, countries, termsPolicy, privacyPolicy, cancelationPolicy, isLoading = false }) => {
+const CheckoutPanels = ({ app, data, cart, countries, policy, isLoading = false }) => {
     const [current, setCurrent] = useState(0)
     const ts = useRef(null)
 
@@ -31,7 +31,7 @@ const CheckoutPanels = ({ app, data, cart, countries, termsPolicy, privacyPolicy
     ]
 
     return (
-        <>
+        <div className='fixed-screen-width md:relative-width'>
             <Stepper
                 steps={steps}
                 current={current}
@@ -43,16 +43,14 @@ const CheckoutPanels = ({ app, data, cart, countries, termsPolicy, privacyPolicy
                 cart={cart}
                 data={data}
                 countries={countries}
-                termsPolicy={termsPolicy}
-                privacyPolicy={privacyPolicy}
-                cancelationPolicy={cancelationPolicy}
+                policy={policy}
                 steps={steps}
                 current={current}
                 setCurrent={setCurrent}
                 ref={ts}
                 isLoading={isLoading}
             />
-        </>
+        </div>
     )
 }
 
@@ -62,9 +60,7 @@ CheckoutPanels.propTypes = {
     cart: PropTypes.instanceOf(Entity),
     countries: PropTypes.array.isRequired,
     isLoading: PropTypes.bool,
-    termsPolicy: PropTypes.object,
-    privacyPolicy: PropTypes.object,
-    cancelationPolicy: PropTypes.object,
+    policy: PropTypes.string,
 }
 
 export default CheckoutPanels

@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
 import { convertToCountryName } from './../countries'
 import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
 
-const Billing = ({ address, onClick }) => {
+const Billing = ({ intl, address, onClick }) => {
     return (
         <>
             <div className='mb-3 flex items-center justify-between'>
@@ -23,9 +23,11 @@ const Billing = ({ address, onClick }) => {
                 <p>{address.streetName}</p>
                 <p>{address.city}</p>
                 <p>{address.postalCode}</p>
-                <p>{convertToCountryName(address.country)}</p>
+                <p>{convertToCountryName(intl, address.country)}</p>
 
-                <div className='my-4 h-px bg-neutral-200' />
+                {(address.phone || address.email) && (
+                    <div className='my-4 h-px bg-neutral-200' />
+                )}
 
                 <p>{address.phone}</p>
                 <p>{address.email}</p>
@@ -35,8 +37,9 @@ const Billing = ({ address, onClick }) => {
 }
 
 Billing.propTypes = {
+    intl: intlShape.isRequired,
     address: PropTypes.object.isRequired,
     onClick: PropTypes.func.isRequired,
 }
 
-export default Billing
+export default injectIntl(Billing)

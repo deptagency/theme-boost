@@ -8,19 +8,9 @@
             "name": "Terms and agreements",
             "fields": [
                 {
-                    "label": "Terms policy link",
-                    "field": "termsPolicy",
-                    "type": "reference"
-                },
-                {
-                    "label": "Cancelation policy link",
-                    "field": "cancelationPolicy",
-                    "type": "reference"
-                },
-                {
-                    "label": "Privacy policy link",
-                    "field": "privacyPolicy",
-                    "type": "reference"
+                    "label": "Policy text",
+                    "field": "policy",
+                    "type": "markdown"
                 }
             ]
         }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { useSelector } from 'react-redux'
 import { injectIntl, intlShape } from 'react-intl'
 
 import DiscountForm from './Forms/Discount'
@@ -14,50 +13,16 @@ import OrderButton from './Info/OrderButton'
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-import Reference from '@frontastic/catwalk/src/js/component/reference'
-
-const TermsAndAgreements = ({ intl, termsPolicy, cancelationPolicy, privacyPolicy }) => {
-    const policyLabel1 = intl.formatMessage({ id: 'checkout.policy1' })
-    const policyLabel2 = intl.formatMessage({ id: 'checkout.policy2' })
-    const policyLabel3 = intl.formatMessage({ id: 'checkout.policy3' })
-    const policyLabel4 = intl.formatMessage({ id: 'checkout.policy4' })
-    const termsLabel = intl.formatMessage({ id: 'checkout.terms' })
-    const cancelationLabel = intl.formatMessage({ id: 'checkout.cancelation' })
-    const privacyLabel = intl.formatMessage({ id: 'checkout.privacy' })
-
-    return (
-        <>
-            {policyLabel1}
-            {termsPolicy ? <span style={{ color: '#3B82F6' }}><Reference reference={termsPolicy}>{termsLabel}</Reference></span> : { termsLabel }}
-            {policyLabel2}
-            {cancelationPolicy ? <span style={{ color: '#3B82F6' }}><Reference reference={cancelationPolicy}>{cancelationLabel}</Reference></span> : { cancelationLabel }}
-            {policyLabel3}
-            {privacyPolicy ? <span style={{ color: '#3B82F6' }}><Reference reference={privacyPolicy}>{privacyLabel}</Reference></span> : { privacyLabel }}
-            {policyLabel4}
-        </>
-    )
-}
-TermsAndAgreements.propTypes = {
-    intl: intlShape.isRequired,
-    termsPolicy: PropTypes.object,
-    privacyPolicy: PropTypes.object,
-    cancelationPolicy: PropTypes.object,
-}
-
-const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelIndex, termsPolicy, cancelationPolicy, privacyPolicy, isLoading = false }) => {
+const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelIndex, policy, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextPayment' })
 
-    const availableShippingMethods = useSelector((state) => {
-        return state.cart && state.cart.availableShippingMethods && state.cart.availableShippingMethods.data
-    })
-
-    const [shippingMethod, setShippingMethod] = useState(data.shippingInfo ? data.shippingInfo : (availableShippingMethods.length === 1 ? availableShippingMethods[0] : null))
+    const [shippingMethod, setShippingMethod] = useState()
 
     const isValid = () => {
         return shippingMethod
     }
 
-    const onUpdateShipping = (data) => {
+    const onChangeShippingMethod = (data) => {
         setShippingMethod(data)
 
         app.getLoader('cart')
@@ -79,73 +44,69 @@ const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelInd
     }
 
     return (
-        <div>
-            <StickyRightColumn
-                variant='md:my-4 md:px-4 max-w-960px mx-auto'
-                leftColumn={
-                    <div className='md:shadow-md md:rounded bg-white'>
-                        <div className='sm:hidden px-4 py-3 md:px-6 border-b-4 border-neutral-100 border-t-4 md:border-t-0'>
-                            <OrderButton label={buttonLabel} onClick={onNextClicked} />
-                        </div>
-
-                        <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
-                            <ShippingMethodForm
-                                intl={intl}
-                                defaultValues={shippingMethod}
-                                availableShippingMethods={availableShippingMethods}
-                                onSubmit={(data) => { onUpdateShipping(data) }}
-                            />
-                        </div>
-
-                        <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
-                            <Products products={data.lineItems} />
-                        </div>
-
-                        <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
-                            {data.shippingAddress &&
-                                <Shipping
-                                    address={data.shippingAddress}
-                                    countries={countries}
-                                    onClick={() => { goToPanelIndex(0) }}
-                                />
-                            }
-                        </div>
-                        <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
-                            {data.billingAddress &&
-                                <Billing
-                                    address={data.billingAddress}
-                                    countries={countries}
-                                    onClick={() => { goToPanelIndex(0) }}
-                                />
-                            }
-                        </div>
+        <StickyRightColumn
+            variant='md:my-4 md:px-4 max-w-960px mx-auto'
+            leftColumn={
+                <div className='md:shadow-md md:rounded bg-white'>
+                    <div className='sm:hidden px-4 py-3 md:px-6 border-b-4 border-neutral-100 border-t-4 md:border-t-0'>
+                        <OrderButton
+                            label={buttonLabel}
+                            vouchersLabel={policy}
+                            disabled={!isValid()}
+                            onClick={onNextClicked}
+                        />
                     </div>
-                }
 
-                rightColumn={
-                    <>
-                        <div className='mb-1 md:mb-4 px-4 py-6 md:py-4 md:shadow-md md:rounded bg-white'>
-                            <DiscountForm />
-                        </div>
+                    <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
+                        <ShippingMethodForm
+                            shippingMethod={data.shippingMethod}
+                            onSubmit={(data) => { onChangeShippingMethod(data) }}
+                        />
+                    </div>
 
-                        <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded bg-white'>
-                            <Summary
-                                items={data.lineItems}
-                                sum={data.sum}
-                                shippingMethod={data.shippingMethod}
-                                taxed={data.taxed}
-                                discountCodes={data.discountCodes}
-                                isLoading={isLoading}
-                                label={buttonLabel}
-                                vouchersLabel={<TermsAndAgreements intl={intl} termsPolicy={termsPolicy} cancelationPolicy={cancelationPolicy} privacyPolicy={privacyPolicy} />}
-                                disabled={!isValid()}
-                                onClick={onNextClicked}
+                    <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
+                        <Products products={data.lineItems} />
+                    </div>
+
+                    <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
+                        {data.shippingAddress &&
+                            <Shipping
+                                address={data.shippingAddress}
+                                countries={countries}
+                                onClick={() => { goToPanelIndex(0) }}
                             />
-                        </div>
-                    </>
-                }
-            />
-        </div>
+                        }
+                    </div>
+
+                    <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
+                        {data.billingAddress &&
+                            <Billing
+                                address={data.billingAddress}
+                                countries={countries}
+                                onClick={() => { goToPanelIndex(0) }}
+                            />
+                        }
+                    </div>
+                </div>
+            }
+
+            rightColumn={
+                <>
+                    <div className='mb-1 md:mb-4 px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100 bg-white'>
+                        <DiscountForm />
+                    </div>
+
+                    <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100 bg-white'>
+                        <Summary
+                            buttonLabel={buttonLabel}
+                            vouchersLabel={policy}
+                            disabled={!isValid()}
+                            onClick={onNextClicked}
+                        />
+                    </div>
+                </>
+            }
+        />
     )
 }
 
@@ -157,9 +118,7 @@ OverviewPanel.propTypes = {
     goToNextPanel: PropTypes.func.isRequired,
     goToPanelIndex: PropTypes.func.isRequired,
     isLoading: PropTypes.bool,
-    termsPolicy: PropTypes.object,
-    privacyPolicy: PropTypes.object,
-    cancelationPolicy: PropTypes.object,
+    policy: PropTypes.string,
 }
 
 export default injectIntl(OverviewPanel)
