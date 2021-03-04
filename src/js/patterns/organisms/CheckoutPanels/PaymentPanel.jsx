@@ -117,7 +117,7 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
             })
             .then((body) => {
                 const pm = []
-                const allowedPaymentMethods = ['paypal', 'scheme', 'directEbanking', 'klarna', 'paysafecard', 'giropay', 'klarna_account', 'klarna_paynow']
+                const allowedPaymentMethods = ['scheme', 'directEbanking', 'klarna', 'paysafecard', 'giropay', 'klarna_account', 'klarna_paynow']
 
                 body.paymentMethods.forEach(method => {
                     if (allowedPaymentMethods.some(item => item === method.type)) {
@@ -141,7 +141,7 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
 
         const configuration = {
             ...paymentMethods.configuration,
-            showPayButton: false,
+            // showPayButton: true,
             onChange: (state) => {
                 setPaymentDetailsValid(state.isValid)
                 // setPaymentDetails(state.data)

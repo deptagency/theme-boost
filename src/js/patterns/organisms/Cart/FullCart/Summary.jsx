@@ -28,6 +28,12 @@ const Summary = ({ disabled = false, isLoading = false, onClick, buttonLabel, vo
         }
     }, 0)
 
+    const discountPrice = lineItems.reduce((a, b) => {
+        return a + b.count * b.discounts.reduce((x, y) => {
+            return x + y.discountedAmount
+        }, 0)
+    }, 0)
+
     const onRemoveDiscount = (discountId) => {
         app.getLoader('cart')
             .removeDiscount(discountId)
@@ -40,7 +46,7 @@ const Summary = ({ disabled = false, isLoading = false, onClick, buttonLabel, vo
                     <FormattedMessage id='cart.subtotal' />
                 </p>
                 <p className='text-md text-right text-neutral-900 uppercase leading-normal'>
-                    <Price value={productPrice} />
+                    <Price value={productPrice + discountPrice} />
                 </p>
 
                 {shippingMethod ?
@@ -59,7 +65,9 @@ const Summary = ({ disabled = false, isLoading = false, onClick, buttonLabel, vo
                         <p className='mt-2 text-md text-neutral-900 leading-none font-bold'>
                             <FormattedMessage id='cart.discounts' />
                         </p>
-                        <p className='text-md text-right text-neutral-900 uppercase leading-normal' />
+                        <p className='text-md text-right text-green-800 uppercase leading-normal'>
+                            <Price value={-discountPrice} />
+                        </p>
 
                         {discountCodes.map((discount, i) => {
                             return (

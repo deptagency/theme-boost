@@ -16,7 +16,7 @@ import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelIndex, policy, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextPayment' })
 
-    const [shippingMethod, setShippingMethod] = useState()
+    const [shippingMethod, setShippingMethod] = useState(data.shippingMethod ? data.shippingMethod : null)
 
     const isValid = () => {
         return shippingMethod

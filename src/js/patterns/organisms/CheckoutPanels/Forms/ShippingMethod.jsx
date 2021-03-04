@@ -13,9 +13,9 @@ const ShippingMethod = ({ shippingMethod, onSubmit }) => {
     })
 
     const { register, getValues, setValue } = useForm({ mode: 'onChange',
-        /* defaultValues: {
-            shippingMethodId: defaultValues ? defaultValues.shippingMethodId : null,
-        }, */
+        defaultValues: {
+            shippingMethodId: shippingMethod ? shippingMethod.shippingMethodId : null,
+        },
     })
 
     const onChange = () => {
