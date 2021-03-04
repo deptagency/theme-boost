@@ -12,7 +12,7 @@ const CheckoutSuccess = ({ intl, id, email, onClick }) => {
     return (
         <EmptyState
             icon={icons.CHECKMARK_CIRCLE}
-            iconColor='text-neutral-900'
+            iconColor='text-green-700'
             title={title}
             subtitle={
                 <>

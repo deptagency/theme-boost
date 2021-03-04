@@ -22,12 +22,6 @@ const ShippingMethod = ({ shippingMethod, onSubmit }) => {
         onSubmit(getValues())
     }
 
-    const onSelect = (shippingMethod) => {
-        setValue('shippingMethodId', shippingMethod.shippingMethodId)
-
-        onChange()
-    }
-
     const getShippingMethodPrice = (shippingMethod) => {
         return shippingMethod.rates.reduce((a, b) => (a + b.price), 0)
     }
@@ -45,7 +39,11 @@ const ShippingMethod = ({ shippingMethod, onSubmit }) => {
                             'px-4 py-3 border border-neutral-400 rounded flex items-center h-16 cursor-pointer': true,
                             'mt-2': i > 0,
                         })}
-                        onClick={() => { onSelect(method) }}
+                        onClick={() => {
+                            setValue('shippingMethodId', method.shippingMethodId)
+
+                            onChange()
+                        }}
                     >
                         <input type='radio' aria-label='Shipping method' name='shippingMethodId' value={method.shippingMethodId} id={method.name} className='mr-2'
                             ref={register()}

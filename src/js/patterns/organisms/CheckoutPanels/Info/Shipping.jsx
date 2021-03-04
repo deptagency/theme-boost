@@ -13,7 +13,7 @@ const Shipping = ({ intl, address, onClick }) => {
                     <FormattedMessage id={'checkout.shippingInformation'} />
                 </span>
 
-                <span className='text-sm text-primary-500 leading-tight cursor-pointer flex items-center' onClick={onClick}>
+                <span className='text-sm text-primary-500 leading-tight cursor-pointer flex' onClick={onClick}>
                     <FormattedMessage id={'checkout.edit'} /> <EditIcon className='inline fill-current text-sm ml-2' />
                 </span>
             </div>

@@ -33,7 +33,7 @@ const Discount = ({ intl }) => {
             />
             <button
                 name={buttonLabel}
-                className='btn-outline btn-outline-black focus:outline-none flex ml-auto h-10'
+                className='btn-outline btn-outline-black outline-none focus:outline-none flex ml-auto h-10'
                 onClick={redeemDiscount}
                 >
                 {buttonLabel}
