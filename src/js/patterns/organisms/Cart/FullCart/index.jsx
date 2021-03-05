@@ -15,8 +15,6 @@ const FullCart = ({ intl, items, sum, isLoading = false }) => {
     const vouchersLabel = intl.formatMessage({ id: 'cart.enterVouchers' })
 
     const productDiscountedPrice = (p) => {
-        console.log(p)
-
         return p.discountedPrice + p.count * p.discounts.reduce((a, b) => {
             return a + b.discountedAmount
         }, 0)

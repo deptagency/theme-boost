@@ -141,7 +141,7 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
 
         const configuration = {
             ...paymentMethods.configuration,
-            showPayButton: true,
+            showPayButton: false,
             onChange: (state) => {
                 setPaymentDetailsValid(state.isValid)
                 // setPaymentDetails(state.data)
