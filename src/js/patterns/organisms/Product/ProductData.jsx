@@ -44,7 +44,7 @@ const ProductData = ({
 
             <Price
                 variant='text-lg text-neutral-700 py-1'
-                value={selectedVariant.price}
+                value={selectedVariant.discountedPrice || selectedVariant.price}
                 currency={selectedVariant.currency}
             />
 

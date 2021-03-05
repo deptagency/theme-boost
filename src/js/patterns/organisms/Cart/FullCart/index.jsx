@@ -10,9 +10,17 @@ import MiniSummary from './MiniSummary'
 import Payments from './Payments'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 
-const FullCart = ({ intl, items, sum, shippingMethod, discountCodes, taxed, isLoading = false }) => {
+const FullCart = ({ intl, items, sum, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'cart.checkout' })
     const vouchersLabel = intl.formatMessage({ id: 'cart.enterVouchers' })
+
+    const productDiscountedPrice = (p) => {
+        console.log(p)
+
+        return p.discountedPrice + p.count * p.discounts.reduce((a, b) => {
+            return a + b.discountedAmount
+        }, 0)
+    }
 
     return (
         <StickyRightColumn
@@ -45,7 +53,7 @@ const FullCart = ({ intl, items, sum, shippingMethod, discountCodes, taxed, isLo
                                                 image={item.variant.images[0]}
                                                 count={item.count}
                                                 price={item.price}
-                                                discountedPrice={item.discountedPrice}
+                                                discountedPrice={productDiscountedPrice(item)}
                                                 color={item.variant.attributes.color?.label || item.variant.attributes.color}
                                                 size={item.variant.attributes.size?.label || item.variant.attributes.size}
                                             />
@@ -86,9 +94,6 @@ FullCart.propTypes = {
     intl: intlShape.isRequired,
     items: PropTypes.array.isRequired,
     sum: PropTypes.number.isRequired,
-    shippingMethod: PropTypes.object,
-    taxed: PropTypes.object,
-    discountCodes: PropTypes.array,
     isLoading: PropTypes.bool,
 }
 

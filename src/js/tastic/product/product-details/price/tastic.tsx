@@ -14,7 +14,7 @@ function ProductPrice(props) {
     return (
         <Price
             className='text-xl text-gray-700 antialiased inline-block mb-4'
-            value={variant.price}
+            value={variant.discountedPrice || variant.price}
             currency={variant.currency}
         />
     )

@@ -69,9 +69,9 @@ function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice
                     {variant.discountedPrice && showStrikePrice ? (
                         <p className='text-sm'>
                             <s>
-                                <Price variant='mr-1' value={variant.discountedPrice} />
+                                <Price variant='mr-1' value={variant.price} />
                             </s>
-                            <Price variant='text-red-600' value={variant.price} />
+                            <Price variant='text-red-600' value={variant.discountedPrice} />
                         </p>
                     ) : (
                         <Price variant='text-sm' value={variant.price} />

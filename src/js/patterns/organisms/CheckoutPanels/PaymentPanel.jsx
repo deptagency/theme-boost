@@ -141,7 +141,7 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
 
         const configuration = {
             ...paymentMethods.configuration,
-            // showPayButton: true,
+            showPayButton: true,
             onChange: (state) => {
                 setPaymentDetailsValid(state.isValid)
                 // setPaymentDetails(state.data)
@@ -237,7 +237,6 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
 
             rightColumn={
                 <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded bg-white'>
-                    {paymentDetailsValid}
                     <Summary
                         isLoading={isLoading}
                         buttonLabel={buttonLabel}
