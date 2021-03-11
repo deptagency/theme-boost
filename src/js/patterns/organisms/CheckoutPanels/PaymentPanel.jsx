@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react'
+import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import { injectIntl, intlShape } from 'react-intl'
 
-import PaymentMethod from './Forms/PaymentMethod'
+// import PaymentMethod from './Forms/PaymentMethod'
 
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
@@ -17,7 +18,7 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
     const [paymentMethods, setPaymentMethods] = useState(null)
     const [paymentMethodType, setPaymentMethodType] = useState(null)
     const [paymentDetailsValid, setPaymentDetailsValid] = useState(false)
-    // const [paymentDetails, setPaymentDetails] = useState(null)
+    const [paymentDetails, setPaymentDetails] = useState(null)
     const containerElement = useRef(null)
 
     const adyenComponentRef = useRef(null)
@@ -27,13 +28,13 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
         return state.app.context || {}
     })
 
-    const isValid = () => {
+    /* const isValid = () => {
         if (paymentMethodType === 'scheme') {
             return paymentDetailsValid
         } else {
             return paymentMethodType !== null
         }
-    }
+    } */
 
     const handleAdyenResult = useCallback((paymentId, action, resultCode) => { // eslint-disable-line react-hooks/exhaustive-deps
         if (action) {
@@ -116,8 +117,9 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
                 return response.json()
             })
             .then((body) => {
+                /*
                 const pm = []
-                const allowedPaymentMethods = ['scheme', 'directEbanking', 'klarna', 'paysafecard', 'giropay', 'klarna_account', 'klarna_paynow']
+                const allowedPaymentMethods = ['paypal', 'scheme', 'directEbanking', 'klarna', 'paysafecard', 'giropay', 'klarna_account', 'klarna_paynow']
 
                 body.paymentMethods.forEach(method => {
                     if (allowedPaymentMethods.some(item => item === method.type)) {
@@ -126,6 +128,7 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
                 })
 
                 body.paymentMethods = pm
+                */
 
                 return setPaymentMethods(body)
             })
@@ -137,14 +140,16 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
         }
 
         setPaymentDetailsValid(false)
-        // setPaymentDetails(null)
+        setPaymentDetails(null)
 
         const configuration = {
             ...paymentMethods.configuration,
-            showPayButton: false,
+            // showPayButton: false,
             onChange: (state) => {
                 setPaymentDetailsValid(state.isValid)
-                // setPaymentDetails(state.data)
+                setPaymentDetails(state.data)
+
+                console.log('state: ', state)
             },
             onSubmit: (state) => {
                 makePayment(state.data.paymentMethod, state.data.browserInfo)
@@ -217,20 +222,61 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
         }
     }, [handleAdyenResult]) // eslint-disable-line react-hooks/exhaustive-deps
 
+    /*
+    <PaymentMethod
+        paymentMethods={paymentMethods}
+        onSubmit={(paymentMethod) => {
+            setPaymentMethodType(paymentMethod.type)
+        }}
+    />
+
+    buttonLabel={buttonLabel}
+    disabled={!isValid()}
+    onClick={() => {
+        if (adyenComponentRef.current) {
+            adyenComponentRef.current.submit()
+        }
+    }}
+    */
     return (
         <StickyRightColumn
             variant='md:my-4 md:px-4 max-w-960px mx-auto'
             leftColumn={
                 <div className='md:shadow-md md:rounded bg-white'>
                     <div className='px-4 py-5 md:px-6 border-b-4 md:border-b-0 border-t-4 md:border-t-0 border-neutral-100'>
-                        <PaymentMethod
-                            paymentMethods={paymentMethods}
-                            onSubmit={(paymentMethod) => {
-                                setPaymentMethodType(paymentMethod.type)
-                            }}
-                        />
+                        {paymentMethods?.paymentMethods?.map((paymentMethod) => {
+                            return (
+                                <div
+                                    key={paymentMethod.type}
+                                    className={classnames('mb-4 h-10 btn w-full border border-neutral-400 rounded cursor-pointer flex items-center', {
+                                        'bg-neutral-500 text-white': paymentMethod.type === paymentMethodType,
+                                        'bg-white text-neutral-900': paymentMethod.type !== paymentMethodType,
+                                    })}
+                                    onClick={() => {
+                                        setPaymentMethodType(paymentMethod.type)
+                                    }}
+                                >
+                                    {paymentMethod.name}
+                                </div>
+                            )
+                        })}
 
                         <div className='mt-6' ref={containerElement} />
+
+                        {paymentMethodType === 'scheme' && (
+                            <span className='flex'>
+                                <button
+                                    name={buttonLabel}
+                                    className='ml-auto mr-auto btn-pill bg-primary-500 text-white w-32 h-10 text-center focus:outline-none'
+                                    disabled={!paymentDetailsValid}
+                                    onClick={() => {
+                                        makePayment(paymentDetails.paymentMethod, paymentDetails.browserInfo)
+                                    }}
+                                >
+                                    {buttonLabel}
+                                </button>
+                            </span>
+                        )}
                     </div>
                 </div>
             }
@@ -239,13 +285,6 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
                 <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded bg-white'>
                     <Summary
                         isLoading={isLoading}
-                        buttonLabel={buttonLabel}
-                        disabled={!isValid()}
-                        onClick={() => {
-                            if (adyenComponentRef.current) {
-                                adyenComponentRef.current.submit()
-                            }
-                        }}
                     />
                 </div>
             }
