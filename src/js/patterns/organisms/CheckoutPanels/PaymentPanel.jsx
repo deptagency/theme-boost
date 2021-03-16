@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react'
-import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import { injectIntl, intlShape } from 'react-intl'
 
-// import PaymentMethod from './Forms/PaymentMethod'
+import PaymentMethod from './Forms/PaymentMethod'
 
 import Summary from 'Organisms/Cart/FullCart/Summary'
 import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
@@ -12,7 +11,7 @@ import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
 import Entity from '@frontastic/catwalk/src/js/app/entity'
 import Message from '@frontastic/catwalk/src/js/app/message'
 
-const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
+const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.pay' })
 
     const [paymentMethods, setPaymentMethods] = useState(null)
@@ -80,7 +79,8 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
                 })
             break
         default:
-            throw { message: 'Payment result: ' + resultCode, resultCode: resultCode } // eslint-disable-line no-throw-literal
+            app.getLoader('context').notifyUser(<Message message={resultCode} />, 'error')
+            // throw { message: 'Payment result: ' + resultCode, resultCode: resultCode } // eslint-disable-line no-throw-literal
         }
     }) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -203,14 +203,19 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
             return
         }
 
-        if (payment.paymentDetails.adyenResultCode === 'Authorised' || payment.paymentDetails.adyenResultCode === 'Received') {
+        const resultCode = payment.paymentDetails.adyenResultCode
+        if (resultCode === 'Authorised' || resultCode === 'Received') {
             app.getLoader('cart')
                 .checkout()
                 .catch((error) => {
                     app.getLoader('context').notifyUser(<Message {...error} />, 'error')
                 })
         } else {
-            try {
+            goToPanelIndex(2)
+
+            app.getLoader('context').notifyUser(<Message message={resultCode} />, 'error')
+
+            /* try {
                 handleAdyenResult(paymentId, payment.paymentDetails.adyenAction, payment.paymentDetails.adyenResultCode)
             } catch (error) {
                 console.log('Payment result:', error)
@@ -218,18 +223,11 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
                 if (error.resultCode && error.resultCode === 'Refused') {
                     app.getLoader('context').notifyUser(<Message {...error} />, 'error')
                 }
-            }
+            } */
         }
-    }, [handleAdyenResult]) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [/* handleAdyenResult */]) // eslint-disable-line react-hooks/exhaustive-deps
 
     /*
-    <PaymentMethod
-        paymentMethods={paymentMethods}
-        onSubmit={(paymentMethod) => {
-            setPaymentMethodType(paymentMethod.type)
-        }}
-    />
-
     buttonLabel={buttonLabel}
     disabled={!isValid()}
     onClick={() => {
@@ -244,22 +242,12 @@ const PaymentPanel = ({ app, cart, intl, data, isLoading = false }) => {
             leftColumn={
                 <div className='md:shadow-md md:rounded bg-white'>
                     <div className='px-4 py-5 md:px-6 border-b-4 md:border-b-0 border-t-4 md:border-t-0 border-neutral-100'>
-                        {paymentMethods?.paymentMethods?.map((paymentMethod) => {
-                            return (
-                                <div
-                                    key={paymentMethod.type}
-                                    className={classnames('mb-4 h-10 btn w-full border border-neutral-400 rounded cursor-pointer flex items-center', {
-                                        'bg-neutral-500 text-white': paymentMethod.type === paymentMethodType,
-                                        'bg-white text-neutral-900': paymentMethod.type !== paymentMethodType,
-                                    })}
-                                    onClick={() => {
-                                        setPaymentMethodType(paymentMethod.type)
-                                    }}
-                                >
-                                    {paymentMethod.name}
-                                </div>
-                            )
-                        })}
+                        <PaymentMethod
+                            paymentMethods={paymentMethods}
+                            onSubmit={(paymentMethod) => {
+                                setPaymentMethodType(paymentMethod.type)
+                            }}
+                        />
 
                         <div className='mt-6' ref={containerElement} />
 
@@ -297,6 +285,7 @@ PaymentPanel.propTypes = {
     cart: PropTypes.instanceOf(Entity),
     intl: intlShape.isRequired,
     data: PropTypes.object.isRequired,
+    goToPanelIndex: PropTypes.func.isRequired,
     isLoading: PropTypes.bool,
 }
 

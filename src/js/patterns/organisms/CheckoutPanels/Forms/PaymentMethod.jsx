@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
 import { useForm } from 'react-hook-form'
 
-const PaymentMethod = ({ defaultValues = {}, paymentMethods, onSubmit }) => {
+const PaymentMethod = ({ paymentMethods, onSubmit }) => {
     const { register, getValues, setValue } = useForm({ mode: 'onChange',
         /* defaultValues: {
             payment: defaultValues ? defaultValues.paymentMethod : null,
@@ -24,7 +24,7 @@ const PaymentMethod = ({ defaultValues = {}, paymentMethods, onSubmit }) => {
 
             {paymentMethods?.paymentMethods?.map((paymentMethod, i) => {
                 return (
-                    <div key={paymentMethod.type}
+                    <div key={i}
                         className={classnames({
                             'px-4 py-3 border border-neutral-400 rounded flex items-center h-12 cursor-pointer': true,
                             'mt-2': i > 0,
@@ -35,7 +35,7 @@ const PaymentMethod = ({ defaultValues = {}, paymentMethods, onSubmit }) => {
                             onChange()
                         }}
                     >
-                        <input type='radio' aria-label='Payment method' name='type' value={paymentMethod.type} id={paymentMethod.type} className='mr-2'
+                        <input type='radio' aria-label='Payment method' name='type' value={paymentMethod.type} className='mr-2'
                             ref={register()}
                         />
                         {paymentMethod.name}
@@ -47,7 +47,6 @@ const PaymentMethod = ({ defaultValues = {}, paymentMethods, onSubmit }) => {
 }
 
 PaymentMethod.propTypes = {
-    defaultValues: PropTypes.object,
     paymentMethods: PropTypes.object,
     onSubmit: PropTypes.func.isRequired,
 }
