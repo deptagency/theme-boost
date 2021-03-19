@@ -211,7 +211,7 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
             //  }
             // }
         }
-    }, [/*handleAdyenResult*/]) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [/* handleAdyenResult */]) // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <StickyRightColumn
