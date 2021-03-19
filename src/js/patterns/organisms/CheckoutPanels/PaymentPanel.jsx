@@ -27,14 +27,6 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
         return state.app.context || {}
     })
 
-    /* const isValid = () => {
-        if (paymentMethodType === 'scheme') {
-            return paymentDetailsValid
-        } else {
-            return paymentMethodType !== null
-        }
-    } */
-
     const handleAdyenResult = useCallback((paymentId, action, resultCode) => { // eslint-disable-line react-hooks/exhaustive-deps
         if (action) {
             switch (action.type) {
@@ -105,8 +97,6 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
                 handleAdyenResult(body.paymentId, body.action, body.resultCode)
             })
             .catch(error => {
-                console.log(error)
-
                 app.getLoader('context').notifyUser(<Message {...error} />, 'error')
             })
     })
@@ -148,8 +138,6 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
             onChange: (state) => {
                 setPaymentDetailsValid(state.isValid)
                 setPaymentDetails(state.data)
-
-                console.log('state: ', state)
             },
             onSubmit: (state) => {
                 makePayment(state.data.paymentMethod, state.data.browserInfo)
@@ -215,27 +203,16 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
 
             app.getLoader('context').notifyUser(<Message message={resultCode} />, 'error')
 
-            /* try {
-                handleAdyenResult(paymentId, payment.paymentDetails.adyenAction, payment.paymentDetails.adyenResultCode)
-            } catch (error) {
-                console.log('Payment result:', error)
-
-                if (error.resultCode && error.resultCode === 'Refused') {
-                    app.getLoader('context').notifyUser(<Message {...error} />, 'error')
-                }
-            } */
+            // try {
+            //    handleAdyenResult(paymentId, payment.paymentDetails.adyenAction, payment.paymentDetails.adyenResultCode)
+            // } catch (error) {
+            //  if (error.resultCode && error.resultCode === 'Refused') {
+            //        app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+            //  }
+            // }
         }
-    }, [/* handleAdyenResult */]) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [app, cart, data.payments, goToPanelIndex]) // eslint-disable-line react-hooks/exhaustive-deps
 
-    /*
-    buttonLabel={buttonLabel}
-    disabled={!isValid()}
-    onClick={() => {
-        if (adyenComponentRef.current) {
-            adyenComponentRef.current.submit()
-        }
-    }}
-    */
     return (
         <StickyRightColumn
             variant='md:my-4 md:px-4 max-w-960px mx-auto'
@@ -252,7 +229,7 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
                         <div className='mt-6' ref={containerElement} />
 
                         {paymentMethodType === 'scheme' && (
-                            <span className='flex'>
+                            <span className='mt-4 flex'>
                                 <button
                                     name={buttonLabel}
                                     className='ml-auto mr-auto btn-pill bg-primary-500 text-white w-32 h-10 text-center focus:outline-none'

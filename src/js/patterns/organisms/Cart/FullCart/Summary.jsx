@@ -15,12 +15,12 @@ import Markdown from '@frontastic/catwalk/src/js/component/markdown'
 
 const Summary = ({ disabled = false, isLoading = false, onClick, buttonLabel, vouchersLabel }) => {
     const { sum, lineItems, taxed, shippingMethod, discountCodes } = useSelector((state) => {
-        return state.cart.cart.data || {}
+        return state.cart?.cart?.data || {}
     })
 
     const totalTaxes = taxed?.taxPortions?.reduce((a, b) => (a + b.amount), 0)
 
-    const productPrice = lineItems.reduce((a, b) => {
+    const productPrice = lineItems?.reduce((a, b) => {
         if (b.discountedPrice) {
             return a + b.discountedPrice * b.count
         } else {
@@ -28,7 +28,7 @@ const Summary = ({ disabled = false, isLoading = false, onClick, buttonLabel, vo
         }
     }, 0)
 
-    const discountPrice = lineItems.reduce((a, b) => {
+    const discountPrice = lineItems?.reduce((a, b) => {
         return a + b.count * b.discounts.reduce((x, y) => {
             return x + y.discountedAmount
         }, 0)
@@ -96,9 +96,11 @@ const Summary = ({ disabled = false, isLoading = false, onClick, buttonLabel, vo
                     <FormattedMessage id='cart.totalAmount' />
                 </p>
 
-                <p className='text-md text-right text-neutral-900 leading-none font-bold'>
-                    <Price value={sum} />
-                </p>
+                {sum && (
+                    <p className='text-md text-right text-neutral-900 leading-none font-bold'>
+                        <Price value={sum} />
+                    </p>
+                )}
 
                 <div className='text-sm text-neutral-600 col-start-auto col-end-span-2'>
                     (<FormattedMessage id='cart.totalAmount' /> {totalTaxes && <Price value={totalTaxes} />} <FormattedMessage id='cart.inclVat' />)

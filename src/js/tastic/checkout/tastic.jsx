@@ -79,6 +79,26 @@ const CheckoutTastic = ({ intl, cart, context, data }) => {
         }
     }
 
+    if (context.session.loggedIn && cart && cart.loaded && cart.data && (!cart.data.shippingAddress || !cart.data.shippingAddress.firstName)) {
+        cart.data.email = context.account.email
+
+        context.account.addresses?.forEach(address => {
+            if (address.isDefaultBillingAddress) {
+                cart.data.billingAddress = address
+            }
+
+            if (address.isDefaultShippingAddress) {
+                cart.data.shippingAddress = address
+            }
+        })
+
+        if (cart.data.billingAddress && !cart.data.shippingAddress) {
+            cart.data.shippingAddress = cart.data.billingAddress
+        } else if (cart.data.shippingAddress && !cart.data.billingAddress) {
+            cart.data.billingAddress = cart.data.shippingAddress
+        }
+    }
+
     if (cart.loading) {
         if (!cart.data || !(countries.length > 0)) {
             return <DefaultLoader />
@@ -114,4 +134,4 @@ CheckoutTastic.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
-export default injectIntl(tastify({ translate: true, connect: { cart: true, context: true } })(CheckoutTastic))
+export default tastify({ translate: true, connect: { cart: true, context: true } })(injectIntl(CheckoutTastic))
