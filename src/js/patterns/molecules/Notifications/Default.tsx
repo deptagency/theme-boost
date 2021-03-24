@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { ToastContainer, toast, Slide } from 'react-toastify'
 
-import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
+import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 
 import AlertSuccess from '../../atoms/alert/Success'
 import AlertError from '../../atoms/alert/Error'
@@ -39,4 +39,4 @@ function Notification({ message, type }: Props) {
     )
 }
 
-export default Notification
+export default tastify()(Notification)
