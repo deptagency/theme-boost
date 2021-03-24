@@ -39,4 +39,4 @@ function Notification({ message, type }: Props) {
     )
 }
 
-export default Notification
+export default ComponentInjector.return('AtomsNotification', Notification)
