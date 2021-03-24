@@ -1,5 +1,18 @@
 # boost Changelog
 
+## `1.2.6` (2021-03-24)
+
+
+* Notifications fixed
+* Fixes the types in boost theme ForegroundImage
+* Fill user billing and shipping information if user is loggedin in checkout
+* Added go to last step on error
+* Testing paypal
+* Disabled showPayButton
+* Show correct prices
+* Adyen checkout bugfixes
+* Checkout moved pay button to right column in last checkout step
+
 ## `1.2.5` (2021-03-01)
 
 * Ddded error message in checkuot if products are out of stock
