@@ -6,14 +6,23 @@ import MediaApi from '@frontastic/common/src/js/mediaApi'
 import Cloudinary from '@frontastic/common/src/js/mediaApi/cloudinary'
 
 import MediaImage from '@frontastic/catwalk/src/js/mediaImage'
+import {Project} from '@frontastic/common/src/js/types/replicator'
 
 interface Props {
     image: any
 }
 
+interface RootState {
+    app: {
+        context: {
+            project: Project
+        }
+    }
+}
+
 export default function FgImage({ image }: Props) {
     const projectConf = useSelector((state) => {
-        return state.app.context.project.configuration
+        return (state as RootState).app.context.project.configuration
     })
     const fgImgRef = useRef(null)
     const mediaApi = new Cloudinary(projectConf.media)
