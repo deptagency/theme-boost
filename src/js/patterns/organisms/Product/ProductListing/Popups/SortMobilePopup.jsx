@@ -59,7 +59,7 @@ const SortMobilePopup = ({ intl, sortState, onChange }) => {
             arrow={false}
             position='bottom left'
             contentStyle={{ padding: '12px', border: 'none', marginTop: '5px', width: '200px' }}
-        >
+            >
             {(close) => {
                 return (
                     <div className='flex flex-col'>

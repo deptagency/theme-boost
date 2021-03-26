@@ -10,7 +10,7 @@ const PanelBlockResponsive = ({ title = '', isOpen, onClose, children }) => {
                 isOpen={isOpen}
                 title={<div className='text-2xl text-neutral-900 font-bold self-center'>{title}</div>}
                 onClose={onClose}
-            >
+                >
                 {children}
             </SlideLeft>
             <div className='hidden md:grid'>

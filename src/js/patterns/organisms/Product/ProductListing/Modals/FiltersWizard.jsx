@@ -51,7 +51,7 @@ const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
                 height: '100vh',
                 backgroundColor: '#e2e8f0',
             }}
-        >
+            >
             {(close) => {
                 return (
                     <>

@@ -14,7 +14,7 @@ import urlHandlerConnector from '@frontastic/catwalk/src/js/app/connector/urlHan
 import ProductListing from '../../../patterns/organisms/Product/ProductListing'
 import CategoryNavigationTree from '../../../patterns/molecules/Product/CategoryNavigationTree'
 
-function ProductListingPageTastic({ data, node, route, tastic, wishlist, urlHandler }) {
+function ProductListingPageTastic ({ data, node, route, tastic, wishlist, urlHandler }) {
     if (!urlHandler) {
         return null
     }

@@ -19,7 +19,7 @@ const AccountOrders = ({ openPanel, onClose, orders }) => {
             title={!selectedOrder && <FormattedMessage id='account.placedOrders' />}
             isOpen={openPanel}
             onClose={onClose}
-        >
+            >
             {orders.length ? (
                 !selectedOrder && <ListOrders orders={orders} selectOrder={setSelectedOrder} />
             ) : (

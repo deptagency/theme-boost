@@ -40,7 +40,7 @@ const AccountDetails = ({
                 title={<FormattedMessage id='account.accountDetails' />}
                 isOpen={openPanel}
                 onClose={onClose}
-            >
+                >
                 <AccountDetailsOverview
                     firstName={firstName}
                     lastName={lastName}
@@ -66,7 +66,7 @@ const AccountDetails = ({
                 closeModal={() => {
                     return setShowEditDetailsModal(false)
                 }}
-            >
+                >
                 <PersonalDetailsForm
                     firstName={firstName}
                     lastName={lastName}
@@ -88,7 +88,7 @@ const AccountDetails = ({
                 closeModal={() => {
                     return setShowChangePasswordModal(false)
                 }}
-            >
+                >
                 <ChangePasswordForm
                     showLoader={showLoader}
                     onSubmit={(oldPassword, newPassword) => {

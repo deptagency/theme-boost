@@ -20,7 +20,7 @@ const SlideBottom = ({ isOpen, onClose, title = '', overlayVariant = '', childre
             width='100%'
             isOpen={isOpen}
             title={<div className='self-center text-2xl text-neutral-900 font-bold mx-6 my-4'>{title}</div>}
-        >
+            >
             <div className='flex align-center justify-between text-neutral-900 m-5'>
                 <div className='flex items-center text-2xl font-bold'>{title}</div>
                 <PanelClose className='text-xl font-color font-bold cursor-pointer' onClick={onClose} />

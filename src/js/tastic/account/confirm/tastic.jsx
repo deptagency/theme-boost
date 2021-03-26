@@ -9,7 +9,7 @@ import DefaultLoader from '../../../molecules/Loaders/DefaultLoader/index'
 
 /* Standard confirmation tasitc */
 class AccountConfirmTastic extends Component {
-    constructor(props) {
+    constructor (props) {
         super(props)
 
         this.state = {
@@ -17,7 +17,7 @@ class AccountConfirmTastic extends Component {
         }
     }
 
-    componentDidMount() {
+    componentDidMount () {
         if (!this.props.confirmationToken) {
             return
         }
@@ -45,7 +45,7 @@ class AccountConfirmTastic extends Component {
         )
     }
 
-    render() {
+    render () {
         return !this.state.confirm ? <DefaultLoader /> : null
     }
 }

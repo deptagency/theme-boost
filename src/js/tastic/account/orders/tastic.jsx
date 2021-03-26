@@ -31,7 +31,7 @@ const AccountOrdersTastic = ({ data: { stream }, context, route }) => {
             openPanel={() => {
                 setOpenPanel(true)
             }}
-        >
+            >
             <AccountOrders
                 orders={stream}
                 openPanel={openPanel}

@@ -81,7 +81,7 @@ const FacetPopup = ({ intl, initialFacet, onChange }) => {
                 height: facet.type === 'term' ? '416px' : '238px',
                 overflowY: 'hidden',
             }}
-        >
+            >
             {(close) => {
                 return (
                     <div className='z-10 pt-4 flex flex-col relative shadow'>

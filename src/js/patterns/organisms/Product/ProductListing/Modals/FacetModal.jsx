@@ -76,7 +76,7 @@ const FacetModal = ({ intl, facet, onChange }) => {
                 height: '100vh',
                 backgroundColor: '#E5E5E5',
             }}
-        >
+            >
             {(close) => {
                 return (
                     <>

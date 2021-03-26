@@ -5,7 +5,7 @@ import Button from '../../atoms/button'
 
 import { getIconComponent } from './icons'
 
-function EmptyState({ icon: iconSrc, iconColor, title, subtitle, action, actionLabel, children }) {
+function EmptyState ({ icon: iconSrc, iconColor, title, subtitle, action, actionLabel, children }) {
     return (
         <div className='my-10 md:mt-20 w-64 mx-auto text-center'>
             {/*

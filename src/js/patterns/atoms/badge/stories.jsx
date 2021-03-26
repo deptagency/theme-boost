@@ -17,7 +17,7 @@ export const cartIcon = () => {
             onClick={() => {
                 return null
             }}
-        >
+            >
             <IconButton icon={<CartIcon />} />
         </Badge>
     )
@@ -30,7 +30,7 @@ export const wishlistIcon = () => {
             onClick={() => {
                 return null
             }}
-        >
+            >
             <IconButton icon={<WishlistIcon />} />
         </Badge>
     )

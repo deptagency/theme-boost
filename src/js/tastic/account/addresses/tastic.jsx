@@ -31,7 +31,7 @@ const AccountAddressTastic = ({ data, context, route }) => {
             openPanel={() => {
                 setOpenPanel(true)
             }}
-        >
+            >
             <AccountAddresses
                 addresses={addresses}
                 openPanel={openPanel}

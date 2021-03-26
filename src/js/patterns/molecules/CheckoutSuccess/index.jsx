@@ -24,7 +24,7 @@ const CheckoutSuccess = ({ intl, id, email, onClick }) => {
                 onClick()
             }}
             actionLabel={actionLabel}
-        >
+            >
             <>
                 {orderConfirmation}
                 <span className='font-bold ml-1'>{email}</span>

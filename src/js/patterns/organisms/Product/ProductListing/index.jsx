@@ -95,7 +95,7 @@ const ProductListing = ({
                         'grid gap-4 grid-cols-1 xsm:grid-cols-2 md:grid-cols-3': true,
                         'lg:grid-cols-4': isFullWidth,
                     })}
-                >
+                    >
                     {data.stream.items.map((product) => {
                         return (
                             <ProductTeaser

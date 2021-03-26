@@ -16,7 +16,7 @@ const ButtonWithLoader = ({ name, showLoader = false, onClick = () => {}, varian
                     onClick={onClick}
                     style={{ transition: 'all .15s ease' }}
                     {...otherProps}
-                >
+                    >
                     {children}
                 </Button>
             )}

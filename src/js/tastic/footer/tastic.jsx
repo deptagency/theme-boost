@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import Footer from '../../patterns/molecules/Footer'
 
-function MetaNavTastic({
+function MetaNavTastic ({
     data: {
         title,
         links,

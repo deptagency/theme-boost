@@ -7,7 +7,7 @@ export default {
     title: 'Form',
 }
 
-function selectLabel(option) {
+function selectLabel (option) {
     return `Custom label ${option}`
 }
 

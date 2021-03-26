@@ -23,7 +23,7 @@ const PersonalDetailsForm = ({ intl, firstName, lastName, onSubmit, showLoader }
         <form
             onSubmit={handleSubmit(onNewDetailsSubmit)}
             className='flex-col pt-6 m-auto w-3/4 md:w-11/12 md:p-0 md:pb-2`'
-        >
+            >
             <div className='mb-4'>
                 <label htmlFor='firstName' className='text-sm text-neutral-600'>
                     <FormattedMessage id='checkout.form.firstName' />

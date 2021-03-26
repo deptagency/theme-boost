@@ -20,7 +20,7 @@ const SlideLeft = ({ isOpen, onClose, title = '', overlayVariant = '', children 
             width='100%'
             isOpen={isOpen}
             title={title}
-        >
+            >
             <div className='flex align-center'>
                 <IconLeft className='font-color font-bold cursor-pointer m-4' onClick={onClose} />
                 {title}

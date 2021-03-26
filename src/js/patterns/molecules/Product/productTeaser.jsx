@@ -9,7 +9,7 @@ import Price from '../../atoms/price'
 import Sticker from '../../atoms/sticker'
 import WishlistButton from '../../atoms/button/wishlistButton'
 
-function ProductTeaser({ product, onAddToWishlist, showStrikePrice }) {
+function ProductTeaser ({ product, onAddToWishlist, showStrikePrice }) {
     const wishlist = useSelector((state) => {
         return state.wishlist.wishlist
     })

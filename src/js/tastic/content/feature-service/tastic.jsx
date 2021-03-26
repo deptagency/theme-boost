@@ -5,7 +5,7 @@ import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import FeatureService from '../../../patterns/organisms/FeatureService'
 
 class FeatureServiceTastic extends Component {
-    render() {
+    render () {
         return <FeatureService />
     }
 }

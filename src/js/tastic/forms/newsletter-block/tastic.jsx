@@ -5,7 +5,7 @@ import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import NewsletterBlock from '../../../patterns/organisms/NewsletterBlock'
 
 class NewsletterBlockTastic extends Component {
-    render() {
+    render () {
         return <NewsletterBlock />
     }
 }

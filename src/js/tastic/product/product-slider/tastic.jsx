@@ -6,7 +6,7 @@ import app from '@frontastic/catwalk/src/js/app/app'
 import useWishlistFlaggedProducts from '../../../patterns/molecules/ProductTeaser/useWishlistFlaggedProducts'
 import ProductSlider from '../../../patterns/organisms/Slider'
 
-function ProductSliderTastic({ data: { title, description, stream, productCount } }) {
+function ProductSliderTastic ({ data: { title, description, stream, productCount } }) {
     const products = (stream || {}).items ? stream.items.slice(0, productCount) : []
     const { wishlistedProducts, wishlistId } = useWishlistFlaggedProducts(products)
 

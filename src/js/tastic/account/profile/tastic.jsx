@@ -31,7 +31,7 @@ const AccountProfileTastic = ({ context, route }) => {
             openPanel={() => {
                 setOpenPanel(true)
             }}
-        >
+            >
             <AccountDetails
                 firstName={firstName}
                 lastName={lastName}

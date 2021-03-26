@@ -30,7 +30,7 @@ const IconNavigation = ({
                 'flex justify-end text-2xl items-center': true,
                 [variant]: true,
             })}
-        >
+            >
             {showSearch ? (
                 <SearchForm inputClassName='text-base' onCancelSearch={onSearchToggle} />
             ) : (
