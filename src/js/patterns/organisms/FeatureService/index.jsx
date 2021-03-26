@@ -1,9 +1,9 @@
 import React from 'react'
 import ComponentInjector from '@frontastic/catwalk/src/js/app/injector'
 
-import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.svg'
-import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
-import { ReactComponent as IconLockClosed } from 'Icons/tailwind-icons/icon-lock-closed.svg'
+import { ReactComponent as IconRocket } from '../../../../icons/tailwind-icons/icon-rocket.svg'
+import { ReactComponent as IconRefresh } from '../../../../icons/tailwind-icons/icon-refresh.svg'
+import { ReactComponent as IconLockClosed } from '../../../../icons/tailwind-icons/icon-lock-closed.svg'
 
 const FeatureService = () => {
     return (

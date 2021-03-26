@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Button from 'Atoms/button'
+import Button from '../../../atoms/button'
 import Markdown from '@frontastic/catwalk/src/js/component/markdown'
 
 const OrderButton = ({ label, disabled = false, onClick, vouchersLabel }) => {

@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { injectIntl, intlShape } from 'react-intl'
 
-import IconButton from 'Atoms/button/IconButton'
-import Badge from 'Atoms/badge'
+import IconButton from '../../atoms/button/IconButton'
+import Badge from '../../atoms/badge'
 
-import { ReactComponent as CartIcon } from 'Icons/tailwind-icons/icon-cart.svg'
-import { ReactComponent as WishlistIcon } from 'Icons/tailwind-icons/icon-heart.svg'
-import { ReactComponent as SearchIcon } from 'Icons/tailwind-icons/icon-search.svg'
-import { ReactComponent as MyProfile } from 'Icons/tailwind-icons/icon-user.svg'
+import { ReactComponent as CartIcon } from '../../../icons/tailwind-icons/icon-cart.svg'
+import { ReactComponent as WishlistIcon } from '../../../icons/tailwind-icons/icon-heart.svg'
+import { ReactComponent as SearchIcon } from '../../../icons/tailwind-icons/icon-search.svg'
+import { ReactComponent as MyProfile } from '../../../icons/tailwind-icons/icon-user.svg'
 
 import SearchForm from './SearchForm'
 
@@ -30,7 +30,7 @@ const IconNavigation = ({
                 'flex justify-end text-2xl items-center': true,
                 [variant]: true,
             })}
-            >
+        >
             {showSearch ? (
                 <SearchForm inputClassName='text-base' onCancelSearch={onSearchToggle} />
             ) : (

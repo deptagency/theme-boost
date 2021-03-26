@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
 
-import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
+import { ReactComponent as EditIcon } from '../../../../../icons/tailwind-icons/icon-edit.svg'
 
 const PaymentMethod = ({ payments, onClick }) => {
     return (
@@ -13,7 +13,10 @@ const PaymentMethod = ({ payments, onClick }) => {
                     <FormattedMessage id={'checkout.paymentMethod'} />
                 </span>
 
-                <span className='text-sm text-primary-500 leading-tight cursor-pointer flex items-center' onClick={onClick}>
+                <span
+                    className='text-sm text-primary-500 leading-tight cursor-pointer flex items-center'
+                    onClick={onClick}
+                >
                     <FormattedMessage id={'checkout.edit'} /> <EditIcon className='inline fill-current text-sm ml-2' />
                 </span>
             </div>

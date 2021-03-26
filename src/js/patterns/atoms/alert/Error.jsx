@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as IconCheckMarkCircle } from 'Icons/tailwind-icons/icon-exclamation.svg'
+import { ReactComponent as IconCheckMarkCircle } from '../../../../icons/tailwind-icons/icon-exclamation.svg'
 
 const Error = ({ message }) => {
     return (

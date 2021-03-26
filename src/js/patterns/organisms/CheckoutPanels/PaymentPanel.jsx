@@ -5,8 +5,8 @@ import { injectIntl, intlShape } from 'react-intl'
 
 import PaymentMethod from './Forms/PaymentMethod'
 
-import Summary from 'Organisms/Cart/FullCart/Summary'
-import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
+import Summary from '../Cart/FullCart/Summary'
+import StickyRightColumn from '../../molecules/Layout/StickyRightColumn'
 
 import Entity from '@frontastic/catwalk/src/js/app/entity'
 import Message from '@frontastic/catwalk/src/js/app/message'
@@ -27,56 +27,58 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
         return state.app.context || {}
     })
 
-    const handleAdyenResult = useCallback((paymentId, action, resultCode) => { // eslint-disable-line react-hooks/exhaustive-deps
+    const handleAdyenResult = useCallback((paymentId, action, resultCode) => {
+        // eslint-disable-line react-hooks/exhaustive-deps
         if (action) {
             switch (action.type) {
-            case 'redirect':
-                switch (action.method) {
-                case 'GET':
-                    window.location = action.url
-                    return
-                case 'POST':
-                    const form = document.createElement('form')
-                    form.method = 'POST'
-                    form.action = action.url
-                    Object.entries(action.data).forEach(([key, value]) => {
-                        const input = document.createElement('input')
-                        input.type = 'hidden'
-                        input.name = key
-                        input.value = value
-                        form.appendChild(input)
-                    })
-                    document.body.appendChild(form)
-                    form.submit()
-                    return
+                case 'redirect':
+                    switch (action.method) {
+                        case 'GET':
+                            window.location = action.url
+                            return
+                        case 'POST':
+                            const form = document.createElement('form')
+                            form.method = 'POST'
+                            form.action = action.url
+                            Object.entries(action.data).forEach(([key, value]) => {
+                                const input = document.createElement('input')
+                                input.type = 'hidden'
+                                input.name = key
+                                input.value = value
+                                form.appendChild(input)
+                            })
+                            document.body.appendChild(form)
+                            form.submit()
+                            return
+                        default:
+                            throw { message: 'Unknown redirect method ' + action.method } // eslint-disable-line no-throw-literal
+                    }
+                case 'voucher':
+                    throw { message: 'Voucher action not yet supported' } // eslint-disable-line no-throw-literal
                 default:
-                    throw { message: 'Unknown redirect method ' + action.method } // eslint-disable-line no-throw-literal
-                }
-            case 'voucher':
-                throw { message: 'Voucher action not yet supported' } // eslint-disable-line no-throw-literal
-            default:
-                paymentIdRef.current = paymentId
-                adyenComponentRef.current.handleAction(action)
-                return
+                    paymentIdRef.current = paymentId
+                    adyenComponentRef.current.handleAction(action)
+                    return
             }
         }
 
         switch (resultCode) {
-        case 'Authorised':
-        case 'Received':
-            app.getLoader('cart')
-                .checkout()
-                .catch((error) => {
-                    app.getLoader('context').notifyUser(<Message {...error} />, 'error')
-                })
-            break
-        default:
-            app.getLoader('context').notifyUser(<Message message={resultCode} />, 'error')
+            case 'Authorised':
+            case 'Received':
+                app.getLoader('cart')
+                    .checkout()
+                    .catch((error) => {
+                        app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+                    })
+                break
+            default:
+                app.getLoader('context').notifyUser(<Message message={resultCode} />, 'error')
             // throw { message: 'Payment result: ' + resultCode, resultCode: resultCode } // eslint-disable-line no-throw-literal
         }
     }) // eslint-disable-line react-hooks/exhaustive-deps
 
-    const makePayment = useCallback((paymentMethod, browserInfo = {}) => { // eslint-disable-line react-hooks/exhaustive-deps
+    const makePayment = useCallback((paymentMethod, browserInfo = {}) => {
+        // eslint-disable-line react-hooks/exhaustive-deps
         setPaymentDetailsValid(false)
 
         fetch('/api/payment/adyen/payment', {
@@ -96,7 +98,7 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
             .then((body) => {
                 handleAdyenResult(body.paymentId, body.action, body.resultCode)
             })
-            .catch(error => {
+            .catch((error) => {
                 app.getLoader('context').notifyUser(<Message {...error} />, 'error')
             })
     })
@@ -175,43 +177,48 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
         adyenComponentRef.current.mount(containerElement.current)
     }, [paymentMethodType, paymentMethods]) // eslint-disable-line react-hooks/exhaustive-deps
 
-    useEffect(() => {
-        if (!cart.isComplete() || containerElement.current == null) {
-            return
-        }
+    useEffect(
+        () => {
+            if (!cart.isComplete() || containerElement.current == null) {
+                return
+            }
 
-        const urlParameters = new URLSearchParams(window.location.search)
-        const paymentId = urlParameters.get('adyenPaymentId')
-        if (paymentId === null) {
-            return
-        }
+            const urlParameters = new URLSearchParams(window.location.search)
+            const paymentId = urlParameters.get('adyenPaymentId')
+            if (paymentId === null) {
+                return
+            }
 
-        const payment = data.payments.find((payment) => payment.id === paymentId)
-        if (payment === undefined) {
-            return
-        }
+            const payment = data.payments.find((payment) => payment.id === paymentId)
+            if (payment === undefined) {
+                return
+            }
 
-        const resultCode = payment.paymentDetails.adyenResultCode
-        if (resultCode === 'Authorised' || resultCode === 'Received') {
-            app.getLoader('cart')
-                .checkout()
-                .catch((error) => {
-                    app.getLoader('context').notifyUser(<Message {...error} />, 'error')
-                })
-        } else {
-            goToPanelIndex(2)
+            const resultCode = payment.paymentDetails.adyenResultCode
+            if (resultCode === 'Authorised' || resultCode === 'Received') {
+                app.getLoader('cart')
+                    .checkout()
+                    .catch((error) => {
+                        app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+                    })
+            } else {
+                goToPanelIndex(2)
 
-            app.getLoader('context').notifyUser(<Message message={resultCode} />, 'error')
+                app.getLoader('context').notifyUser(<Message message={resultCode} />, 'error')
 
-            // try {
-            //    handleAdyenResult(paymentId, payment.paymentDetails.adyenAction, payment.paymentDetails.adyenResultCode)
-            // } catch (error) {
-            //  if (error.resultCode && error.resultCode === 'Refused') {
-            //        app.getLoader('context').notifyUser(<Message {...error} />, 'error')
-            //  }
-            // }
-        }
-    }, [/* handleAdyenResult */]) // eslint-disable-line react-hooks/exhaustive-deps
+                // try {
+                //    handleAdyenResult(paymentId, payment.paymentDetails.adyenAction, payment.paymentDetails.adyenResultCode)
+                // } catch (error) {
+                //  if (error.resultCode && error.resultCode === 'Refused') {
+                //        app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+                //  }
+                // }
+            }
+        },
+        [
+            /* handleAdyenResult */
+        ]
+    ) // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <StickyRightColumn
@@ -245,12 +252,9 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
                     </div>
                 </div>
             }
-
             rightColumn={
                 <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded bg-white'>
-                    <Summary
-                        isLoading={isLoading}
-                    />
+                    <Summary isLoading={isLoading} />
                 </div>
             }
         />

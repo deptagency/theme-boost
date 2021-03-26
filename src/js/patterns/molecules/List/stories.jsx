@@ -1,25 +1,17 @@
 import React from 'react'
 
-import List from 'Molecules/List'
+import List from '.'
 
 export default {
     title: 'List',
 }
 
 export const simple = () => {
-    const links = [
-        { item: 'Cookies' },
-        { item: 'Privacy policy' },
-        { item: 'T&C' },
-    ]
+    const links = [{ item: 'Cookies' }, { item: 'Privacy policy' }, { item: 'T&C' }]
 
     return (
         <div>
-            <List
-                links={links}
-                variant='flex flex-col'
-                itemVariant='mb-2 text-sm leading-tight text-black'
-            />
+            <List links={links} variant='flex flex-col' itemVariant='mb-2 text-sm leading-tight text-black' />
         </div>
     )
 }
@@ -39,11 +31,7 @@ export const reference = () => {
 
     return (
         <div>
-            <List
-                links={links}
-                variant='flex flex-col'
-                itemVariant='mb-2 text-sm leading-tight text-black'
-            />
+            <List links={links} variant='flex flex-col' itemVariant='mb-2 text-sm leading-tight text-black' />
         </div>
     )
 }

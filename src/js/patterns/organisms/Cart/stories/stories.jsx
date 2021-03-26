@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Cart from 'Organisms/Cart'
+import Cart from '../../../organisms/Cart'
 import CartData from './cart.json'
 
 export default {
@@ -8,8 +8,7 @@ export default {
 }
 
 export const empty = () => {
-    const cart = {
-    }
+    const cart = {}
 
     return (
         <div>

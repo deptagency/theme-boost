@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Button from 'Atoms/button'
+import Button from '../../atoms/button'
 
 import { getIconComponent } from './icons'
 
-function EmptyState ({ icon: iconSrc, iconColor, title, subtitle, action, actionLabel, children }) {
+function EmptyState({ icon: iconSrc, iconColor, title, subtitle, action, actionLabel, children }) {
     return (
         <div className='my-10 md:mt-20 w-64 mx-auto text-center'>
             {/*
@@ -19,13 +19,9 @@ function EmptyState ({ icon: iconSrc, iconColor, title, subtitle, action, action
             <div className='mt-4 text-center text-neutral-900'>
                 <h1 className='text-2xl font-bold'>{title}</h1>
 
-                {subtitle && (
-                    <p className='mt-2 text-sm font-bold'>{subtitle}</p>
-                )}
+                {subtitle && <p className='mt-2 text-sm font-bold'>{subtitle}</p>}
 
-                {children && (
-                    <p className='mt-3 text-sm'>{children}</p>
-                )}
+                {children && <p className='mt-3 text-sm'>{children}</p>}
 
                 {action && actionLabel && (
                     <Button name={actionLabel} variant='mt-6 w-64 btn btn-primary' onClick={action}>

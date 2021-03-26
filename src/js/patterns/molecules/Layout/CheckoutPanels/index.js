@@ -7,9 +7,9 @@ import Panels from './Panels'
 
 import Entity from '@frontastic/catwalk/src/js/app/entity'
 
-import OverviewPanel from 'Organisms/CheckoutPanels/OverviewPanel'
-import ShippingPanel from 'Organisms/CheckoutPanels/ShippingPanel'
-import PaymentPanel from 'Organisms/CheckoutPanels/PaymentPanel'
+import OverviewPanel from '../../../organisms/CheckoutPanels/OverviewPanel'
+import ShippingPanel from '../../../organisms/CheckoutPanels/ShippingPanel'
+import PaymentPanel from '../../../organisms/CheckoutPanels/PaymentPanel'
 
 const CheckoutPanels = ({ app, data, cart, countries, policy, isLoading = false }) => {
     const [current, setCurrent] = useState(0)
@@ -32,12 +32,7 @@ const CheckoutPanels = ({ app, data, cart, countries, policy, isLoading = false 
 
     return (
         <div className='fixed-screen-width md:relative-width'>
-            <Stepper
-                steps={steps}
-                current={current}
-                setCurrent={setCurrent}
-                ref={ts}
-            />
+            <Stepper steps={steps} current={current} setCurrent={setCurrent} ref={ts} />
             <Panels
                 app={app}
                 cart={cart}

@@ -7,7 +7,7 @@ import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import FacetModal from './FacetModal'
 import FacetService from './../FacetService'
 
-import { ReactComponent as IconX } from 'Icons/tailwind-icons/icon-x.svg'
+import { ReactComponent as IconX } from '../../../../../../icons/tailwind-icons/icon-x.svg'
 
 const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
     const anySelectedFacets = () => {
@@ -30,15 +30,13 @@ const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
 
     return (
         <Popup
-            trigger={open => {
+            trigger={(open) => {
                 return (
                     <div className='w-1/2 h-10 cursor-pointer select-none flex items-center justify-center'>
                         <span className='text-sm text-gray-900 leading-normal'>
                             <FormattedMessage id='filters.filter' />
                             {anySelectedFacets() && (
-                                <span className='ml-1 text-gray-600 select-none'>
-                                    ({numberOfSelectedFacets()})
-                                </span>
+                                <span className='ml-1 text-gray-600 select-none'>({numberOfSelectedFacets()})</span>
                             )}
                         </span>
                     </div>
@@ -46,9 +44,15 @@ const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
             }}
             modal
             nested
-            contentStyle={{ padding: '0px', border: 'none', width: '100vw', height: '100vh', backgroundColor: '#e2e8f0' }}
-            >
-            {close => {
+            contentStyle={{
+                padding: '0px',
+                border: 'none',
+                width: '100vw',
+                height: '100vh',
+                backgroundColor: '#e2e8f0',
+            }}
+        >
+            {(close) => {
                 return (
                     <>
                         <div className='h-8 mb-1 px-4 py-3 flex items-center shadow bg-white box-content'>
@@ -66,21 +70,13 @@ const FiltersWizard = ({ intl, data, onFacetsChanged }) => {
                                 </button>
                             )}
 
-                            {!anySelectedFacets() && (
-                                <IconX className='ml-auto w-8 h-8 inline-block' onClick={close} />
-                            )}
+                            {!anySelectedFacets() && <IconX className='ml-auto w-8 h-8 inline-block' onClick={close} />}
                         </div>
 
                         <div className='px-4 pt-2 bg-white'>
                             {data.stream.facets.map((facet, index) => {
                                 if (!(facet.type === 'term' && facet.terms.length === 0)) {
-                                    return (
-                                        <FacetModal
-                                            key={index}
-                                            facet={facet}
-                                            onChange={onFacetChanged}
-                                        />
-                                    )
+                                    return <FacetModal key={index} facet={facet} onChange={onFacetChanged} />
                                 } else {
                                     return false
                                 }

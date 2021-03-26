@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { FormattedMessage } from 'react-intl'
 
 import { convertToCountryName } from './../countries'
-import ErrorMessage from 'Atoms/errorMessage'
+import ErrorMessage from '../../../atoms/errorMessage'
 
 const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSubmit }) => {
     const validEmail = intl.formatMessage({ id: 'validation.email' })
@@ -34,7 +34,10 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-firstName'>
                     <FormattedMessage id={'checkout.form.firstName'} /> *
                 </label>
-                <input id='shipping-firstName' name='firstName' type='text'
+                <input
+                    id='shipping-firstName'
+                    name='firstName'
+                    type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.firstName,
@@ -48,7 +51,10 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-lastName'>
                     <FormattedMessage id={'checkout.form.lastName'} /> *
                 </label>
-                <input id='shipping-lastName' name='lastName' type='text'
+                <input
+                    id='shipping-lastName'
+                    name='lastName'
+                    type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.lastName,
@@ -62,16 +68,16 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-phone'>
                     <FormattedMessage id={'checkout.form.phone'} />
                 </label>
-                <input id='shipping-phone' name='phone' className='form-input mt-2' type='text'
-                    ref={register()}
-                />
+                <input id='shipping-phone' name='phone' className='form-input mt-2' type='text' ref={register()} />
             </div>
 
             <div>
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-email'>
                     <FormattedMessage id={'checkout.form.email'} /> *
                 </label>
-                <input id='shipping-email' name='email'
+                <input
+                    id='shipping-email'
+                    name='email'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.email,
@@ -98,7 +104,9 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-streetName'>
                     <FormattedMessage id={'checkout.form.address'} /> *
                 </label>
-                <input id='shipping-streetName' name='streetName'
+                <input
+                    id='shipping-streetName'
+                    name='streetName'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.streetName,
@@ -112,7 +120,9 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-city'>
                     <FormattedMessage id={'checkout.form.city'} /> *
                 </label>
-                <input id='shipping-city' name='city'
+                <input
+                    id='shipping-city'
+                    name='city'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.city,
@@ -126,7 +136,9 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-postalCode'>
                     <FormattedMessage id={'checkout.form.zipCode'} /> *
                 </label>
-                <input id='shipping-postalCode' name='postalCode'
+                <input
+                    id='shipping-postalCode'
+                    name='postalCode'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.postalCode,
@@ -140,16 +152,22 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-country'>
                     <FormattedMessage id={'checkout.form.country'} /> *
                 </label>
-                <select id='shipping-country' name='country'
+                <select
+                    id='shipping-country'
+                    name='country'
                     className={classnames({
                         'form-input mt-2 bg-background-primary': true,
                         'border border-red-600': errors.country,
                     })}
                     ref={register({ required: requiredField })}
-                    >
+                >
                     <option value='' />
                     {countries.map((country, key) => {
-                        return (<option key={key} value={country}>{convertToCountryName(intl, country)}</option>)
+                        return (
+                            <option key={key} value={country}>
+                                {convertToCountryName(intl, country)}
+                            </option>
+                        )
                     })}
                 </select>
 

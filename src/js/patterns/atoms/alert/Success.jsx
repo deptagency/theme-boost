@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as IconCheckMarkCircle } from 'Icons/tailwind-icons/icon-check-circle.svg'
+import { ReactComponent as IconCheckMarkCircle } from '../../../../icons/tailwind-icons/icon-check-circle.svg'
 
 const Success = ({ message }) => {
     return (

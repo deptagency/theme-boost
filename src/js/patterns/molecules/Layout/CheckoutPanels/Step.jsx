@@ -2,20 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-import { ReactComponent as CheckoutTick } from 'Icons/tailwind-icons/checkout-tick.svg'
+import { ReactComponent as CheckoutTick } from '../../../../../icons/tailwind-icons/checkout-tick.svg'
 
 const Step = ({ current = false, completed = false, onSelect }) => {
     return (
-        <div
-            className='flex flex-col items-center'
-            onClick={onSelect}
+        <div className='flex flex-col items-center' onClick={onSelect}>
+            <div
+                className={classnames({
+                    'rounded-full border-2 mx-1 h-5 w-5 cursor-pointer z-10': true,
+                    'bg-neutral-300 border-neutral-300': !current && !completed,
+                    'bg-background-primary border-primary-500': current,
+                    'bg-primary-600 border-primary-500': completed,
+                })}
             >
-            <div className={classnames({
-                'rounded-full border-2 mx-1 h-5 w-5 cursor-pointer z-10': true,
-                'bg-neutral-300 border-neutral-300': !current && !completed,
-                'bg-background-primary border-primary-500': current,
-                'bg-primary-600 border-primary-500': completed,
-            })}>
                 {completed && <CheckoutTick />}
             </div>
         </div>

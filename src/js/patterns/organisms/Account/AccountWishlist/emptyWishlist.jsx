@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 import { useSpring, animated } from 'react-spring'
 
-import EmptyState, { icons } from 'Organisms/EmptyState'
+import EmptyState, { icons } from '../../../organisms/EmptyState'
 
 const EmptyWishlist = ({ returnToHomePage }) => {
     const fading = useSpring({ opacity: 1, from: { opacity: 0 } })

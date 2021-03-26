@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { ReactComponent as VisaIcon } from 'Icons/visa.svg'
-import { ReactComponent as PayPalIcon } from 'Icons/paypal.svg'
-import { ReactComponent as MastercardIcon } from 'Icons/mastercard.svg'
+import { ReactComponent as VisaIcon } from '../../../../../icons/visa.svg'
+import { ReactComponent as PayPalIcon } from '../../../../../icons/paypal.svg'
+import { ReactComponent as MastercardIcon } from '../../../../../icons/mastercard.svg'
 
 const Payments = () => {
     return (

@@ -5,14 +5,15 @@ import { FormattedMessage } from 'react-intl'
 import { useForm } from 'react-hook-form'
 import { useSelector } from 'react-redux'
 
-import Price from 'Atoms/price'
+import Price from '../../../atoms/price'
 
 const ShippingMethod = ({ shippingMethod, onSubmit }) => {
     const availableShippingMethods = useSelector((state) => {
         return state.cart && state.cart.availableShippingMethods && state.cart.availableShippingMethods.data
     })
 
-    const { register, getValues, setValue } = useForm({ mode: 'onChange',
+    const { register, getValues, setValue } = useForm({
+        mode: 'onChange',
         defaultValues: {
             shippingMethodId: shippingMethod ? shippingMethod.shippingMethodId : null,
         },
@@ -23,7 +24,7 @@ const ShippingMethod = ({ shippingMethod, onSubmit }) => {
     }
 
     const getShippingMethodPrice = (shippingMethod) => {
-        return shippingMethod.rates.reduce((a, b) => (a + b.price), 0)
+        return shippingMethod.rates.reduce((a, b) => a + b.price, 0)
     }
 
     return (
@@ -34,7 +35,8 @@ const ShippingMethod = ({ shippingMethod, onSubmit }) => {
 
             {availableShippingMethods?.map((method, i) => {
                 return (
-                    <div key={i}
+                    <div
+                        key={i}
                         className={classnames({
                             'px-4 py-3 border border-neutral-400 rounded flex items-center h-16 cursor-pointer': true,
                             'mt-2': i > 0,
@@ -45,22 +47,30 @@ const ShippingMethod = ({ shippingMethod, onSubmit }) => {
                             onChange()
                         }}
                     >
-                        <input type='radio' aria-label='Shipping method' name='shippingMethodId' value={method.shippingMethodId} id={method.name} className='mr-2'
+                        <input
+                            type='radio'
+                            aria-label='Shipping method'
+                            name='shippingMethodId'
+                            value={method.shippingMethodId}
+                            id={method.name}
+                            className='mr-2'
                             ref={register()}
                         />
                         <div className='flex flex-col w-full'>
-                            <div className='text-md leading-tight capitalize'>
-                                {method.name}
-                            </div>
+                            <div className='text-md leading-tight capitalize'>{method.name}</div>
                             {method.description && (
-                                <span className='text-xs text-neutral-600'>
-                                    {method.description}
-                                </span>
+                                <span className='text-xs text-neutral-600'>{method.description}</span>
                             )}
                         </div>
 
                         <span className='text-md ml-auto font-bold'>
-                            {getShippingMethodPrice(method) ? <Price value={getShippingMethodPrice(method)} /> : <span className='uppercase'><FormattedMessage id={'checkout.freeShipping'} /></span> }
+                            {getShippingMethodPrice(method) ? (
+                                <Price value={getShippingMethodPrice(method)} />
+                            ) : (
+                                <span className='uppercase'>
+                                    <FormattedMessage id={'checkout.freeShipping'} />
+                                </span>
+                            )}
                         </span>
                     </div>
                 )

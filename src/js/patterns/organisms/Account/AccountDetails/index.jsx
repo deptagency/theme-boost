@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
 
-import useMdBreakpoint from 'Molecules/Layout/Breakpoints/useMdBreakpoint'
-import PanelModalResponsive from 'Molecules/Layout/PanelModalResponsive'
-import PanelBlockResponsive from 'Molecules/Layout/PanelBlockResponsive'
+import useMdBreakpoint from '../../../molecules/Layout/Breakpoints/useMdBreakpoint'
+import PanelModalResponsive from '../../../molecules/Layout/PanelModalResponsive'
+import PanelBlockResponsive from '../../../molecules/Layout/PanelBlockResponsive'
 import PersonalDetailsForm from '../Forms/PersonalDetailsForm'
 import ChangePasswordForm from '../Forms/ChangePasswordForm'
 import AccountDetailsOverview from './Overview'
@@ -40,7 +40,7 @@ const AccountDetails = ({
                 title={<FormattedMessage id='account.accountDetails' />}
                 isOpen={openPanel}
                 onClose={onClose}
-                >
+            >
                 <AccountDetailsOverview
                     firstName={firstName}
                     lastName={lastName}
@@ -66,7 +66,7 @@ const AccountDetails = ({
                 closeModal={() => {
                     return setShowEditDetailsModal(false)
                 }}
-                >
+            >
                 <PersonalDetailsForm
                     firstName={firstName}
                     lastName={lastName}
@@ -88,7 +88,7 @@ const AccountDetails = ({
                 closeModal={() => {
                     return setShowChangePasswordModal(false)
                 }}
-                >
+            >
                 <ChangePasswordForm
                     showLoader={showLoader}
                     onSubmit={(oldPassword, newPassword) => {

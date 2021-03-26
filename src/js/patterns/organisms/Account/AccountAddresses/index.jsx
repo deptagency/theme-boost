@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
-import Button from 'Atoms/button'
+import Button from '../../../atoms/button'
 
-import useMdBreakpoint from 'Molecules/Layout/Breakpoints/useMdBreakpoint'
-import PanelModalResponsive from 'Molecules/Layout/PanelModalResponsive'
-import PanelBlockResponsive from 'Molecules/Layout/PanelBlockResponsive'
+import useMdBreakpoint from '../../../molecules/Layout/Breakpoints/useMdBreakpoint'
+import PanelModalResponsive from '../../../molecules/Layout/PanelModalResponsive'
+import PanelBlockResponsive from '../../../molecules/Layout/PanelBlockResponsive'
 
 import AddressForm from '../Forms/AddressForm'
 import RemoveAddressForm from '../Forms/RemoveAddressForm'
@@ -49,7 +49,7 @@ const AccountAddresses = ({
                 title={<FormattedMessage id='account.accountDetails' />}
                 isOpen={openPanel}
                 onClose={onClose}
-                >
+            >
                 <div className='md:shadow-lg'>
                     <div className='border-b-4 border-neutral-200' />
 
@@ -107,7 +107,7 @@ const AccountAddresses = ({
                 closeModal={() => {
                     return setShowCreateAddressModal(false)
                 }}
-                >
+            >
                 <AddressForm
                     countries={countries}
                     showLoader={showLoader}
@@ -130,7 +130,7 @@ const AccountAddresses = ({
                     closeModal={() => {
                         return setShowEditAddressModal(false)
                     }}
-                    >
+                >
                     <AddressForm
                         countries={countries}
                         defaultValues={activeAddress}
@@ -155,7 +155,7 @@ const AccountAddresses = ({
                     closeModal={() => {
                         return setShowDeleteAddressModal(false)
                     }}
-                    >
+                >
                     <RemoveAddressForm
                         countries={countries}
                         address={activeAddress}

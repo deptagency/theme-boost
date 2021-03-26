@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Select from 'Atoms/select'
-import SelectVariant from 'Atoms/select/SelectVariant'
+import Select from '.'
+import SelectVariant from './SelectVariant'
 
 export default {
     title: 'Form',
 }
 
-function selectLabel (option) {
+function selectLabel(option) {
     return `Custom label ${option}`
 }
 
@@ -18,12 +18,7 @@ export const select = () => {
     return (
         <>
             <div className='p-2'>
-                <Select
-                    value='2'
-                    values={values}
-                    variant='form-select'
-                    onSelect={(i) => {}}
-                />
+                <Select value='2' values={values} variant='form-select' onSelect={(i) => {}} />
             </div>
 
             <div className='p-2'>
@@ -31,18 +26,15 @@ export const select = () => {
                     value='1'
                     values={values}
                     variant='form-select'
-                    formatLabel={(option) => { return selectLabel(option) }}
+                    formatLabel={(option) => {
+                        return selectLabel(option)
+                    }}
                     onSelect={(i) => {}}
                 />
             </div>
 
             <div className='p-2'>
-                <SelectVariant
-                    value='3'
-                    values={variantValues}
-                    variant='form-select'
-                    onSelect={(i) => {}}
-                />
+                <SelectVariant value='3' values={variantValues} variant='form-select' onSelect={(i) => {}} />
             </div>
         </>
     )

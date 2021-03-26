@@ -11,16 +11,16 @@ import facetConnector from '@frontastic/catwalk/src/js/app/connector/facet'
 import categoryConnector from '@frontastic/catwalk/src/js/app/connector/category'
 import urlHandlerConnector from '@frontastic/catwalk/src/js/app/connector/urlHandler'
 
-import ProductListing from 'Organisms/Product/ProductListing'
-import CategoryNavigationTree from 'Molecules/Product/CategoryNavigationTree'
+import ProductListing from '../../../patterns/organisms/Product/ProductListing'
+import CategoryNavigationTree from '../../../patterns/molecules/Product/CategoryNavigationTree'
 
-function ProductListingPageTastic ({ data, node, route, tastic, wishlist, urlHandler }) {
+function ProductListingPageTastic({ data, node, route, tastic, wishlist, urlHandler }) {
     if (!urlHandler) {
         return null
     }
 
     if (wishlist.isComplete()) {
-        data.stream.items.map(product => {
+        data.stream.items.map((product) => {
             const wishlisted = wishlist.data.lineItems.find((item) => {
                 return item.variant.sku === product.variants[0].sku
             })
@@ -133,7 +133,8 @@ function ProductListingPageTastic ({ data, node, route, tastic, wishlist, urlHan
                 </div>
             )}
 
-            <div className={classnames({
+            <div
+                className={classnames({
                     'flex flex-col w-full': true,
                     'md:w-3/4': data.showSidebar,
                 })}
@@ -167,7 +168,10 @@ ProductListingPageTastic.propTypes = {
     urlHandler: PropTypes.instanceOf(UrlHandler),
 }
 
-export default tastify({ translate: true, connect: { node: true, tastic: true, route: true, wishlist: true, urlHandler: true } })(
+export default tastify({
+    translate: true,
+    connect: { node: true, tastic: true, route: true, wishlist: true, urlHandler: true },
+})(
     compose(
         connect(facetConnector),
         connect(categoryConnector),

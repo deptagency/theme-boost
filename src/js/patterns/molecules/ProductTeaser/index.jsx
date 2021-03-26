@@ -5,10 +5,10 @@ import classnames from 'classnames'
 import Link from '@frontastic/catwalk/src/js/app/link'
 import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
 
-import { ReactComponent as CloseIcon } from 'Icons/tailwind-icons/icon-close-black.svg'
-import { ReactComponent as WishlistHeart } from 'Icons/wishlist-heart.svg'
-import { ReactComponent as WishlistHeartFull } from 'Icons/tailwind-icons/icon-heart-full.svg'
-import Price from 'Atoms/price'
+import { ReactComponent as CloseIcon } from '../../../../icons/tailwind-icons/icon-close-black.svg'
+import { ReactComponent as WishlistHeart } from '../../../../icons/wishlist-heart.svg'
+import { ReactComponent as WishlistHeartFull } from '../../../../icons/tailwind--icons/icon-heart-full.svg'
+import Price from '../../atoms/price'
 
 const ProductTeaser = ({
     product: { variants, variant: variantProp, name, _url },
@@ -18,7 +18,6 @@ const ProductTeaser = ({
     wishlisted = false,
     showHeartIcon = true,
     showCloseIcon = false,
-    scale = 1.3,
 }) => {
     const variant = variantProp || variants[0]
     const { price, discountedPrice, images } = variant
@@ -73,7 +72,6 @@ ProductTeaser.propTypes = {
     wishlisted: PropTypes.bool,
     showHeartIcon: PropTypes.bool,
     showCloseIcon: PropTypes.bool,
-    scale: PropTypes.number,
 }
 
 export default ProductTeaser

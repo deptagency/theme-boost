@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 import ComponentInjector from 'frontastic-catwalk/src/js/app/injector'
 
-import LoaderButton from 'Molecules/Loaders/LoaderButton/index'
-import Price from 'Atoms/price'
-import Button from 'Atoms/button'
+import LoaderButton from '../../../molecules/Loaders/LoaderButton/index'
+import Price from '../../../atoms/price'
+import Button from '../../../atoms/button'
 
 const MiniSummary = ({ sum, label, onClick, isLoading }) => {
     return (

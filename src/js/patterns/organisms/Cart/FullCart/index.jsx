@@ -8,16 +8,20 @@ import Product from './Product'
 import Summary from './Summary'
 import MiniSummary from './MiniSummary'
 import Payments from './Payments'
-import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
+import StickyRightColumn from '../../../molecules/Layout/StickyRightColumn'
 
 const FullCart = ({ intl, items, sum, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'cart.checkout' })
     const vouchersLabel = intl.formatMessage({ id: 'cart.enterVouchers' })
 
     const productDiscountedPrice = (p) => {
-        return p.discountedPrice + p.count * p.discounts.reduce((a, b) => {
-            return a + b.discountedAmount
-        }, 0)
+        return (
+            p.discountedPrice +
+            p.count *
+                p.discounts.reduce((a, b) => {
+                    return a + b.discountedAmount
+                }, 0)
+        )
     }
 
     return (
@@ -30,7 +34,9 @@ const FullCart = ({ intl, items, sum, isLoading = false }) => {
                             isLoading={isLoading}
                             sum={sum}
                             label={buttonLabel}
-                            onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout') }}
+                            onClick={() => {
+                                return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout')
+                            }}
                         />
                     </div>
 
@@ -52,8 +58,13 @@ const FullCart = ({ intl, items, sum, isLoading = false }) => {
                                                 count={item.count}
                                                 price={item.price}
                                                 discountedPrice={productDiscountedPrice(item)}
-                                                color={item.variant.attributes.color?.label || item.variant.attributes.color}
-                                                size={item.variant.attributes.size?.label || item.variant.attributes.size}
+                                                color={
+                                                    item.variant.attributes.color?.label ||
+                                                    item.variant.attributes.color
+                                                }
+                                                size={
+                                                    item.variant.attributes.size?.label || item.variant.attributes.size
+                                                }
                                             />
                                         </div>
                                     )
@@ -73,14 +84,15 @@ const FullCart = ({ intl, items, sum, isLoading = false }) => {
                     </div>
                 </div>
             }
-
             rightColumn={
                 <div className='p-4 border-b-4 border-neutral-100 md:border-0 md:shadow-md md:rounded bg-white'>
                     <Summary
                         isLoading={isLoading}
                         buttonLabel={buttonLabel}
                         vouchersLabel={vouchersLabel}
-                        onClick={() => { return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout') }}
+                        onClick={() => {
+                            return app.getRouter().push('Frontastic.Frontend.Master.Checkout.checkout')
+                        }}
                     />
                 </div>
             }

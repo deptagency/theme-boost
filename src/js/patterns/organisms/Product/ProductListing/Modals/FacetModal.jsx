@@ -8,8 +8,8 @@ import RangeFacet from './../Facets/RangeFacet'
 import TermFacet from './../Facets/TermFacet'
 import FacetService from './../FacetService'
 
-import { ReactComponent as IconChevronLeft } from 'Icons/tailwind-icons/icon-cheveron-left.svg'
-import { ReactComponent as IconChevronRight } from 'Icons/tailwind-icons/icon-cheveron-right.svg'
+import { ReactComponent as IconChevronLeft } from '../../../../../../icons/tailwind-icons/icon-cheveron-left.svg'
+import { ReactComponent as IconChevronRight } from '../../../../../../icons/tailwind-icons/icon-cheveron-right.svg'
 
 const FacetModal = ({ intl, facet, onChange }) => {
     const getFacetName = () => {
@@ -20,8 +20,7 @@ const FacetModal = ({ intl, facet, onChange }) => {
         FacetService.clearFacet(facet)
     }
 
-    const onFacetChanged = () => {
-    }
+    const onFacetChanged = () => {}
 
     const onApplyClicked = (closeCallback) => {
         onChange(facet)
@@ -31,7 +30,7 @@ const FacetModal = ({ intl, facet, onChange }) => {
 
     return (
         <Popup
-            trigger={open => {
+            trigger={(open) => {
                 return (
                     <div className='py-3 flex items-center border-b border-gray-300'>
                         <span className='mr-auto text-base text-gray-900 capitalize leading-normal'>
@@ -42,19 +41,23 @@ const FacetModal = ({ intl, facet, onChange }) => {
                             <span className='w-40 truncate text-sm text-gray-600 text-right leading-normal'>
                                 {facet.type === 'range' && (
                                     <>
-                                        {(facet.value.min / 100).toFixed(2)} €  -  {(facet.value.max / 100).toFixed(2)} €
+                                        {(facet.value.min / 100).toFixed(2)} € - {(facet.value.max / 100).toFixed(2)} €
                                     </>
                                 )}
 
                                 {facet.type === 'term' && (
                                     <>
-                                        {facet.terms.filter(term => { return term.selected }).map((term, index) => {
-                                            return (
-                                                <span key={index}>
-                                                    {index > 0 ? ', ' : ''} {term.name}
-                                                </span>
-                                            )
-                                        })}
+                                        {facet.terms
+                                            .filter((term) => {
+                                                return term.selected
+                                            })
+                                            .map((term, index) => {
+                                                return (
+                                                    <span key={index}>
+                                                        {index > 0 ? ', ' : ''} {term.name}
+                                                    </span>
+                                                )
+                                            })}
                                     </>
                                 )}
                             </span>
@@ -66,9 +69,15 @@ const FacetModal = ({ intl, facet, onChange }) => {
             }}
             modal
             nested
-            contentStyle={{ padding: '0px', border: 'none', width: '100vw', height: '100vh', backgroundColor: '#E5E5E5' }}
-            >
-            {close => {
+            contentStyle={{
+                padding: '0px',
+                border: 'none',
+                width: '100vw',
+                height: '100vh',
+                backgroundColor: '#E5E5E5',
+            }}
+        >
+            {(close) => {
                 return (
                     <>
                         <div className='h-8 mb-1 px-4 py-3 flex items-center shadow bg-white box-content'>
@@ -100,16 +109,16 @@ const FacetModal = ({ intl, facet, onChange }) => {
                                 </div>
                             )}
 
-                            {facet.type === 'range' && (
-                                <RangeFacet facet={facet} onChange={onFacetChanged} />
-                            )}
+                            {facet.type === 'range' && <RangeFacet facet={facet} onChange={onFacetChanged} />}
                         </div>
 
                         <div className='fixed bottom-0 w-full h-10 bg-gray-900'>
                             <button
                                 aria-label={intl.formatMessage({ id: 'filters.apply' })}
                                 className='w-full h-full text-base text-white font-bold leading-normal'
-                                onClick={() => { onApplyClicked(close) }}
+                                onClick={() => {
+                                    onApplyClicked(close)
+                                }}
                             >
                                 <FormattedMessage id='filters.apply' />
                             </button>

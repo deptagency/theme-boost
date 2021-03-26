@@ -1,6 +1,6 @@
 import React from 'react'
 
-import FeatureService from 'Organisms/FeatureService'
+import FeatureService from '../../organisms/FeatureService'
 
 export default {
     title: 'Feature service',

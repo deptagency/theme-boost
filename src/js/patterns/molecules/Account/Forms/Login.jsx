@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { useForm } from 'react-hook-form'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
-import Button from 'Atoms/button'
-import ButtonWithLoader from 'Atoms/button/WithLoader'
-import ErrorMessage from 'Atoms/errorMessage'
+import Button from '../../../atoms/button'
+import ButtonWithLoader from '../../../atoms/button/WithLoader'
+import ErrorMessage from '../../../atoms/errorMessage'
 
 const Login = ({ intl, showRegisterForm, showForgottenPasswordForm, handleLogin, showLoader }) => {
     const { register, handleSubmit, errors } = useForm()

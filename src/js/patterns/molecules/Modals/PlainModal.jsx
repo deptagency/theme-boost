@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as CloseIcon } from 'Icons/tailwind-icons/icon-close-black.svg'
+import { ReactComponent as CloseIcon } from '../../../../icons/tailwind-icons/icon-close-black.svg'
 import { injectIntl, intlShape } from 'react-intl'
 
 const PlainModal = ({ onClose, children, intl, title = '', variant = '' }) => {
@@ -22,7 +22,6 @@ const PlainModal = ({ onClose, children, intl, title = '', variant = '' }) => {
         <div className={variant}>
             <div className='text-neutral-900 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'>
                 <div ref={node} className='relative w-auto my-6 mx-auto max-w-3xl'>
-
                     <div className='rounded-lg shadow-lg relative flex flex-col w-full bg-background-primary outline-none focus:outline-none'>
                         <div className='flex items-start justify-between p-5 border-b-4 border-neutral-100 rounded-t'>
                             {title}
@@ -39,13 +38,9 @@ const PlainModal = ({ onClose, children, intl, title = '', variant = '' }) => {
                             {children}
                         </div>
                     </div>
-
                 </div>
             </div>
-            <div
-                onClick={onClose}
-                className='opacity-25 fixed inset-0 z-40 bg-black'
-            />
+            <div onClick={onClose} className='opacity-25 fixed inset-0 z-40 bg-black' />
         </div>
     )
 }

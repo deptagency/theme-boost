@@ -1,8 +1,9 @@
 import React from 'react'
-import { ReactComponent as IconArrowLeft } from 'Icons/tailwind-icons/icon-arrow-left.svg'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import PropTypes from 'prop-types'
-import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
+
+import FullPageWidthWrapper from '../Layout/FullPageWidthWrapper'
+import { ReactComponent as IconArrowLeft } from '../../../../icons/tailwind-icons/icon-arrow-left.svg'
 import MetaNav from '../Footer/MetaNav'
 import app from 'frontastic-catwalk/src/js/app/app'
 

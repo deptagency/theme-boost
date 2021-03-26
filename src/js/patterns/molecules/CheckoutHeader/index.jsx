@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
-import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
+import FullPageWidthWrapper from '../Layout/FullPageWidthWrapper'
 import useBackgroundImageUrl from '@frontastic/catwalk/src/js/helper/hooks/useBackgroundImageUrl'
-import { ReactComponent as IconLockClosed } from 'Icons/tailwind-icons/icon-lock-closed.svg'
+import { ReactComponent as IconLockClosed } from '../../../icons/tailwind-icons/icon-lock-closed.svg'
 
 const CheckoutHeader = ({ logo }) => {
     const ref = useRef(null)

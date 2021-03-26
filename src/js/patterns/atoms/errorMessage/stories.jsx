@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ErrorMessage from 'Atoms/errorMessage'
+import ErrorMessage from '.'
 
 export default {
     title: 'Form',

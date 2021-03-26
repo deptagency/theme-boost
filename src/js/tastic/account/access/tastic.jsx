@@ -4,11 +4,10 @@ import PropTypes from 'prop-types'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 
-import AccountAccess from 'Molecules/Account/Forms/AccountAccess'
+import AccountAccess from '../../../molecules/Account/Forms/AccountAccess'
 
 const AccountAccessTastic = ({ context, route }) => {
-    if (context.session.loggedIn &&
-        route.route !== 'Frontastic.Frontend.Master.Account.profile') {
+    if (context.session.loggedIn && route.route !== 'Frontastic.Frontend.Master.Account.profile') {
         app.getRouter().push('Frontastic.Frontend.Master.Account.profile')
     }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Tile from 'Molecules/Tile'
+import Tile from '.'
 import image from './stories/image'
 import topic from './stories/topic'
 import title from './stories/title'

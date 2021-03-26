@@ -4,21 +4,21 @@ import { useSelector } from 'react-redux'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import classnames from 'classnames'
 
-import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
-import LoaderButton from 'Molecules/Loaders/LoaderButton'
+import FullPageWidthWrapper from '../../molecules/Layout/FullPageWidthWrapper'
+import LoaderButton from '../../molecules/Loaders/LoaderButton'
 import StarRating from './StarRating.tsx'
 
-import Price from 'Atoms/price'
-import Button from 'Atoms/button'
-import IconButton from 'Atoms/button/IconButton'
+import Price from '../../atoms/price'
+import Button from '../../atoms/button'
+import IconButton from '../../atoms/button/IconButton'
 
 import ColorSelector from './Selectors/ColorSelector'
 import SizeSelector from './Selectors/SizeSelector'
 
-import { ReactComponent as IconHeart } from 'Icons/tailwind-icons/icon-heart.svg'
-import { ReactComponent as IconHeartFull } from 'Icons/tailwind-icons/icon-heart-full.svg'
-import { ReactComponent as IconRocket } from 'Icons/tailwind-icons/icon-rocket.svg'
-import { ReactComponent as IconRefresh } from 'Icons/tailwind-icons/icon-refresh.svg'
+import { ReactComponent as IconHeart } from '../../../icons/tailwind-icons/icon-heart.svg'
+import { ReactComponent as IconHeartFull } from '../../../icons/tailwind-icons/icon-heart-full.svg'
+import { ReactComponent as IconRocket } from '../../../icons/tailwind-icons/icon-rocket.svg'
+import { ReactComponent as IconRefresh } from '../../../icons/tailwind-icons/icon-refresh.svg'
 
 const ProductData = ({
     intl,
@@ -51,11 +51,19 @@ const ProductData = ({
             <StarRating />
 
             {selectedVariant.attributes.color && (
-                <ColorSelector value={selectedVariant.attributes.color?.label || selectedVariant.attributes.color} variants={variants} onChange={onChange} />
+                <ColorSelector
+                    value={selectedVariant.attributes.color?.label || selectedVariant.attributes.color}
+                    variants={variants}
+                    onChange={onChange}
+                />
             )}
 
             {selectedVariant.attributes.size && (
-                <SizeSelector value={selectedVariant.attributes.size?.label || selectedVariant.attributes.size} variants={variants} onChange={onChange} />
+                <SizeSelector
+                    value={selectedVariant.attributes.size?.label || selectedVariant.attributes.size}
+                    variants={variants}
+                    onChange={onChange}
+                />
             )}
 
             <div className='flex pb-6'>

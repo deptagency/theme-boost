@@ -2,16 +2,15 @@ import React, { Component } from 'react'
 
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 
-import FeatureService from 'Organisms/FeatureService'
+import FeatureService from '../../../patterns/organisms/FeatureService'
 
 class FeatureServiceTastic extends Component {
-    render () {
+    render() {
         return <FeatureService />
     }
 }
 
-FeatureServiceTastic.propTypes = {
-}
+FeatureServiceTastic.propTypes = {}
 
 FeatureServiceTastic.defaultProps = {}
 

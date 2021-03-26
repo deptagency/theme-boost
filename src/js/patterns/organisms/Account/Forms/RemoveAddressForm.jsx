@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
-import ButtonWithLoader from 'Atoms/button/WithLoader'
+import ButtonWithLoader from '../../../atoms/button/WithLoader'
 
 const RemoveAddressForm = ({ intl, address, countries, onRemoveAddressClicked, showLoader }) => {
     let country = null

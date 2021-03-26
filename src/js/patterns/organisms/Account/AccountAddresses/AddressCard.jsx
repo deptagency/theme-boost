@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
-import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
-import { ReactComponent as TrashIcon } from 'Icons/tailwind-icons/icon-trash.svg'
-import { ReactComponent as CheckCircleIcon } from 'Icons/tailwind-icons/icon-check-circle.svg'
+import { ReactComponent as EditIcon } from '../../../../../icons/tailwind-icons/icon-edit.svg'
+import { ReactComponent as TrashIcon } from '../../../../../icons/tailwind-icons/icon-trash.svg'
+import { ReactComponent as CheckCircleIcon } from '../../../../../icons/tailwind-icons/icon-check-circle.svg'
 
 const AddressCard = ({ address, countries, onEditClicked, onDeleteClicked }) => {
     let country = null

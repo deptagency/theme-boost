@@ -2,10 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
-import Button from 'Atoms/button'
-import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
+import Button from '../../../atoms/button'
+import { ReactComponent as EditIcon } from '../../../../icons/tailwind-icons/icon-edit.svg'
 
-const AccountDetailsOverview = ({ intl, firstName, lastName, email, openAccountDetailsForm, openChangePasswordForm }) => {
+const AccountDetailsOverview = ({
+    intl,
+    firstName,
+    lastName,
+    email,
+    openAccountDetailsForm,
+    openChangePasswordForm,
+}) => {
     return (
         <div className='md:shadow-lg'>
             <div className='border-b-4 border-neutral-200' />
@@ -13,15 +20,21 @@ const AccountDetailsOverview = ({ intl, firstName, lastName, email, openAccountD
             <div className='md:pb-4 mx-12'>
                 <div className='mt-6 mb-6 sm:ml-24 md:ml-5'>
                     <div className='mb-4'>
-                        <div className='text-sm text-neutral-600'><FormattedMessage id='checkout.form.firstName' /></div>
+                        <div className='text-sm text-neutral-600'>
+                            <FormattedMessage id='checkout.form.firstName' />
+                        </div>
                         <div>{firstName} </div>
                     </div>
                     <div className='mb-4'>
-                        <div className='text-sm text-neutral-600'><FormattedMessage id='checkout.form.lastName' /></div>
+                        <div className='text-sm text-neutral-600'>
+                            <FormattedMessage id='checkout.form.lastName' />
+                        </div>
                         <div>{lastName} </div>
                     </div>
                     <div className='mb-6'>
-                        <div className='text-sm text-neutral-600'><FormattedMessage id='checkout.form.email' /></div>
+                        <div className='text-sm text-neutral-600'>
+                            <FormattedMessage id='checkout.form.email' />
+                        </div>
                         <div>{email} </div>
                     </div>
                     <button

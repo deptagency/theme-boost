@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { FormattedMessage } from 'react-intl'
 
 import { convertToCountryName } from './../countries'
-import ErrorMessage from 'Atoms/errorMessage'
+import ErrorMessage from '../../../atoms/errorMessage'
 
 const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
     const requiredField = intl.formatMessage({ id: 'validation.required' })
@@ -26,7 +26,10 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-firstName'>
                     <FormattedMessage id={'checkout.form.firstName'} /> *
                 </label>
-                <input id='billing-firstName' name='firstName' type='text'
+                <input
+                    id='billing-firstName'
+                    name='firstName'
+                    type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.firstName,
@@ -40,7 +43,10 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-lastName'>
                     <FormattedMessage id={'checkout.form.lastName'} /> *
                 </label>
-                <input id='billing-lastName' name='lastName' type='text'
+                <input
+                    id='billing-lastName'
+                    name='lastName'
+                    type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.surname,
@@ -54,16 +60,17 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-phone'>
                     <FormattedMessage id={'checkout.form.phone'} />
                 </label>
-                <input id='billing-phone' name='phone' type='text' className='form-input mt-2'
-                    ref={register()}
-                />
+                <input id='billing-phone' name='phone' type='text' className='form-input mt-2' ref={register()} />
             </div>
 
             <div className='mb-4'>
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-streetName'>
                     <FormattedMessage id={'checkout.form.address'} /> *
                 </label>
-                <input id='billing-streetName' name='streetName' type='text'
+                <input
+                    id='billing-streetName'
+                    name='streetName'
+                    type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.streetName,
@@ -77,7 +84,10 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-city'>
                     <FormattedMessage id={'checkout.form.city'} /> *
                 </label>
-                <input id='billing-city' name='city' type='text'
+                <input
+                    id='billing-city'
+                    name='city'
+                    type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.city,
@@ -91,7 +101,10 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-postalCode'>
                     <FormattedMessage id={'checkout.form.zipCode'} /> *
                 </label>
-                <input id='billing-postalCode' name='postalCode' type='text'
+                <input
+                    id='billing-postalCode'
+                    name='postalCode'
+                    type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.postalCode,
@@ -105,16 +118,22 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-country'>
                     <FormattedMessage id={'checkout.form.country'} /> *
                 </label>
-                <select id='billing-country' name='country'
+                <select
+                    id='billing-country'
+                    name='country'
                     className={classnames({
                         'form-input mt-2 bg-background-primary': true,
                         'border border-red-600': errors.country,
                     })}
                     ref={register({ required: requiredField })}
-                    >
+                >
                     <option value='' />
                     {countries.map((country, key) => {
-                        return (<option key={key} value={country}>{convertToCountryName(intl, country)}</option>)
+                        return (
+                            <option key={key} value={country}>
+                                {convertToCountryName(intl, country)}
+                            </option>
+                        )
                     })}
                 </select>
                 <ErrorMessage errors={errors} name='country' />

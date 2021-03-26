@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
-import SelectVariant from 'Atoms/select/SelectVariant'
+import SelectVariant from '../../../atoms/select/SelectVariant'
 
 const ColorSelector = ({ variants, onChange }) => {
     return (
@@ -13,8 +13,12 @@ const ColorSelector = ({ variants, onChange }) => {
                 <SelectVariant
                     values={variants}
                     variant='form-select'
-                    formatLabel={(option) => { return option.attributes.color ? option.attributes.color.label : '' }}
-                    onSelect={(i) => { return onChange(i) }}
+                    formatLabel={(option) => {
+                        return option.attributes.color ? option.attributes.color.label : ''
+                    }}
+                    onSelect={(i) => {
+                        return onChange(i)
+                    }}
                 />
             </div>
         </div>

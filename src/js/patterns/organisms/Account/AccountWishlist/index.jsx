@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
-import ProductTeaser from 'Molecules/ProductTeaser'
+import ProductTeaser from '../../../molecules/ProductTeaser'
 import EmptyWishlist from './emptyWishlist'
 import Error from './error'
 import { FormattedMessage } from 'react-intl'
 import { animated, useTransition } from 'react-spring'
 import useComponentSize from '@frontastic/catwalk/src/js/helper//hooks/useIsomorphicComponentSize'
-import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
+import DefaultLoader from '../../../molecules/Loaders/DefaultLoader/index'
 import usePhotoScale from './usePhotoScale'
 
 const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage }) => {

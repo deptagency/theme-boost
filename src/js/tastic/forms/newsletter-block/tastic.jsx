@@ -2,16 +2,15 @@ import React, { Component } from 'react'
 
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 
-import NewsletterBlock from 'Organisms/NewsletterBlock'
+import NewsletterBlock from '../../../patterns/organisms/NewsletterBlock'
 
 class NewsletterBlockTastic extends Component {
-    render () {
+    render() {
         return <NewsletterBlock />
     }
 }
 
-NewsletterBlockTastic.propTypes = {
-}
+NewsletterBlockTastic.propTypes = {}
 
 NewsletterBlockTastic.defaultProps = {}
 

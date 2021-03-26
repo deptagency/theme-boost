@@ -4,9 +4,8 @@ import classnames from 'classnames'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import { useForm } from 'react-hook-form'
 
-import ErrorMessage from 'Atoms/errorMessage'
-
-import ButtonWithLoader from 'Atoms/button/WithLoader'
+import ErrorMessage from '../../../atoms/errorMessage'
+import ButtonWithLoader from '../../../atoms/button/WithLoader'
 
 const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader }) => {
     const requiredField = intl.formatMessage({ id: 'validation.required' })
@@ -28,7 +27,10 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-firstName'>
                     <FormattedMessage id={'checkout.form.firstName'} /> *
                 </label>
-                <input id='address-firstName' name='firstName' type='text'
+                <input
+                    id='address-firstName'
+                    name='firstName'
+                    type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.firstName,
@@ -42,7 +44,10 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-lastName'>
                     <FormattedMessage id={'checkout.form.lastName'} /> *
                 </label>
-                <input id='address-lastName' name='lastName' type='text'
+                <input
+                    id='address-lastName'
+                    name='lastName'
+                    type='text'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.lastName,
@@ -56,15 +61,21 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-country'>
                     <FormattedMessage id={'checkout.form.country'} /> *
                 </label>
-                <select id='address-country' name='country'
+                <select
+                    id='address-country'
+                    name='country'
                     className={classnames({
                         'form-input mt-2 bg-background-primary': true,
                         'border border-red-600': errors.country,
                     })}
                     ref={register({ required: requiredField })}
-                    >
-                    {countries.map(country => {
-                        return (<option key={country.code} value={country.code}>{country.name}</option>)
+                >
+                    {countries.map((country) => {
+                        return (
+                            <option key={country.code} value={country.code}>
+                                {country.name}
+                            </option>
+                        )
                     })}
                 </select>
 
@@ -75,7 +86,9 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-streetName'>
                     <FormattedMessage id={'checkout.form.address'} /> *
                 </label>
-                <input id='address-streetName' name='streetName'
+                <input
+                    id='address-streetName'
+                    name='streetName'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.streetName,
@@ -84,7 +97,9 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
                 />
                 <ErrorMessage errors={errors} name='streetName' />
 
-                <input id='address-streetNumber' name='streetNumber'
+                <input
+                    id='address-streetNumber'
+                    name='streetNumber'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.streetNumber,
@@ -98,7 +113,9 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-city'>
                     <FormattedMessage id={'checkout.form.city'} /> *
                 </label>
-                <input id='address-city' name='city'
+                <input
+                    id='address-city'
+                    name='city'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.city,
@@ -112,7 +129,9 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-postalCode'>
                     <FormattedMessage id={'checkout.form.zipCode'} /> *
                 </label>
-                <input id='address-postalCode' name='postalCode'
+                <input
+                    id='address-postalCode'
+                    name='postalCode'
                     className={classnames({
                         'form-input mt-2': true,
                         'border border-red-600': errors.postalCode,
@@ -126,13 +145,17 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
                 <label className='text-sm text-neutral-700 leading-tight' htmlFor='address-phone'>
                     <FormattedMessage id={'checkout.form.phone'} />
                 </label>
-                <input id='address-phone' name='phone' className='form-input mt-2' type='text'
-                    ref={register()}
-                />
+                <input id='address-phone' name='phone' className='form-input mt-2' type='text' ref={register()} />
             </div>
 
             <div className='mb-2 bg-neutral-200 px-4 py-4 flex items-center rounded'>
-                <input id='shipping-default' type='checkbox' className='mr-2' name='isDefaultShippingAddress' ref={register()} />
+                <input
+                    id='shipping-default'
+                    type='checkbox'
+                    className='mr-2'
+                    name='isDefaultShippingAddress'
+                    ref={register()}
+                />
 
                 <label className='text-sm text-neutral-900 leading-tight' htmlFor='shipping-default'>
                     <FormattedMessage id='account.address.standardShipping' />
@@ -140,7 +163,13 @@ const AddressForm = ({ intl, countries, defaultValues = {}, onSubmit, showLoader
             </div>
 
             <div className='bg-neutral-200 px-4 py-4 flex items-center rounded'>
-                <input id='billing-default' type='checkbox' className='mr-2' name='isDefaultBillingAddress' ref={register()} />
+                <input
+                    id='billing-default'
+                    type='checkbox'
+                    className='mr-2'
+                    name='isDefaultBillingAddress'
+                    ref={register()}
+                />
 
                 <label className='text-sm text-neutral-900 leading-tight' htmlFor='billing-default'>
                     <FormattedMessage id='account.address.standardBilling' />

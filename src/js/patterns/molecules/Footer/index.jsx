@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
+import FullPageWidthWrapper from '../Layout/FullPageWidthWrapper'
 import ContactInfo from './ContactInfo'
 import LinkList from './LinkList'
 import MetaNav from './MetaNav'
@@ -36,11 +36,7 @@ const Footer = ({
                     emailOverline={emailOverline}
                 />
 
-                <LinkList
-                    header={aboutHeader}
-                    headerIcon={aboutHeaderIcon}
-                    links={aboutLinks}
-                />
+                <LinkList header={aboutHeader} headerIcon={aboutHeaderIcon} links={aboutLinks} />
 
                 <PaymentMethods methods={paymentMethods} />
             </div>

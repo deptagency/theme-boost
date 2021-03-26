@@ -1,47 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import SlideBottom from 'Molecules/Panels/SlideBottom'
-import PlainModal from 'Molecules/Modals/PlainModal'
+import SlideBottom from '../Panels/SlideBottom'
+import PlainModal from '../Modals/PlainModal'
 
 import useMdBreakpoint from './Breakpoints/useMdBreakpoint'
 
-const PanelModalResponsive = ({
-    title,
-    children,
-    openPanel,
-    closePanel,
-    openModal,
-    closeModal,
-}) => {
+const PanelModalResponsive = ({ title, children, openPanel, closePanel, openModal, closeModal }) => {
     const { showPanel, showModal } = useMdBreakpoint()
 
     return (
         <div>
-            <SlideBottom
-                overlayVariant='md:hidden'
-                isOpen={openPanel && showPanel}
-                title={title}
-                onClose={closePanel}
-            >
+            <SlideBottom overlayVariant='md:hidden' isOpen={openPanel && showPanel} title={title} onClose={closePanel}>
                 {children}
             </SlideBottom>
 
-            {openModal && showModal &&
+            {openModal && showModal && (
                 <>
                     <PlainModal
                         variant='hidden md:flex'
                         onClose={closeModal}
-                        title={
-                            <h3 className='text-3xl font-semibold'>
-                                {title}
-                            </h3>
-                        }
+                        title={<h3 className='text-3xl font-semibold'>{title}</h3>}
                     >
                         {children}
                     </PlainModal>
                 </>
-            }
+            )}
         </div>
     )
 }

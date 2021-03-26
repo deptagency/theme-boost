@@ -1,6 +1,6 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import { ReactComponent as LeftIcon } from 'Icons/tailwind-icons/icon-cheveron-left.svg'
+import { ReactComponent as LeftIcon } from '../../../../../icons/tailwind-icons/icon-cheveron-left.svg'
 
 export default {
     title: 'Account orders',
@@ -24,17 +24,13 @@ export const accountOrders = () => {
                                 <span className='text-neutral-600 mr-1'>
                                     <FormattedMessage id='order.date' />
                                 </span>
-                                <span className='font-bold mb-4'>
-                                    30, August 2019
-                                </span>
+                                <span className='font-bold mb-4'>30, August 2019</span>
                             </div>
                             <div>
                                 <span className='text-neutral-600 mr-1'>
                                     <FormattedMessage id='order.paymentMethod' />
                                 </span>
-                                <span className='font-bold'>
-                                    Invoice
-                                </span>
+                                <span className='font-bold'>Invoice</span>
                             </div>
                         </div>
                         <div className='border-b-4 border-neutral-200' />
@@ -44,29 +40,34 @@ export const accountOrders = () => {
                         </div>
                         <div className='text-sm grid grid-cols-120-1xfr grid-rows-auto-1fr sm:grid-rows-1 col-gap-4 row-gap-3 my-6 mx-4'>
                             <div>
-                                <img src='https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/079997_1_large.jpg' alt='' />
+                                <img
+                                    src='https://s3-eu-west-1.amazonaws.com/commercetools-maximilian/products/079997_1_large.jpg'
+                                    alt=''
+                                />
                             </div>
                             <div className='text-sm mt-2'>
-                                <div className='font-bold mb-4' >
-                                    Balloon Sleeve Sweater
-                                </div>
+                                <div className='font-bold mb-4'>Balloon Sleeve Sweater</div>
                                 <div className='text-neutral-600 my-6'>
                                     <div>
-                                        <span><FormattedMessage id='order.colorOrder' /></span>
+                                        <span>
+                                            <FormattedMessage id='order.colorOrder' />
+                                        </span>
                                         <span>Yellow</span>
                                     </div>
                                     <div>
-                                        <span><FormattedMessage id='order.sizeOrder' /></span>
+                                        <span>
+                                            <FormattedMessage id='order.sizeOrder' />
+                                        </span>
                                         <span>EU 38</span>
                                     </div>
                                     <div>
-                                        <span><FormattedMessage id='account.quantity' /></span>
+                                        <span>
+                                            <FormattedMessage id='account.quantity' />
+                                        </span>
                                         <span>1</span>
                                     </div>
                                 </div>
-                                <div className='font-bold'>
-                                    39,90€
-                                </div>
+                                <div className='font-bold'>39,90€</div>
                             </div>
                         </div>
                         <div className='border-b-4 border-neutral-200' />
@@ -76,15 +77,11 @@ export const accountOrders = () => {
                                 <FormattedMessage id='order.shippingInformationCaps' />
                             </div>
                             <div className='my-3'>
-                                <div className='text-neutral-900 font-bold'>
-                                    Alexandra Jones
-                                </div>
+                                <div className='text-neutral-900 font-bold'>Alexandra Jones</div>
                                 <div>Praesidenten Str. 79</div>
                                 <div>Rheinland</div>
                                 <div>67727</div>
-                                <div className='mb-3'>
-                                    Germany
-                                </div>
+                                <div className='mb-3'>Germany</div>
                                 <div>
                                     <div className='border-b border-neutral-200' />
                                     <div className='my-3'>
@@ -101,15 +98,11 @@ export const accountOrders = () => {
                                 <FormattedMessage id='order.billingInformationCaps' />
                             </div>
                             <div className='my-3'>
-                                <div className='text-neutral-900 font-bold'>
-                                    Alexandra Jones
-                                </div>
+                                <div className='text-neutral-900 font-bold'>Alexandra Jones</div>
                                 <div>Praesidenten Str. 79</div>
                                 <div>Rheinland</div>
                                 <div>67727</div>
-                                <div className='mb-3'>
-                                    Germany
-                                </div>
+                                <div className='mb-3'>Germany</div>
                                 <div>
                                     <div className='border-b border-neutral-200' />
                                     <div className='my-3'>
@@ -123,7 +116,9 @@ export const accountOrders = () => {
 
                         <div className='my-5 mx-4 pb-8'>
                             <div className='mt-3 font-bold flex justify-between'>
-                                <span className=''><FormattedMessage id='account.totalAmountOrder' /></span>
+                                <span className=''>
+                                    <FormattedMessage id='account.totalAmountOrder' />
+                                </span>
                                 139,90€
                             </div>
                             <div className='text-sm text-neutral-600'>

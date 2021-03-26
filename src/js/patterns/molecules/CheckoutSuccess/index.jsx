@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
-import EmptyState, { icons } from 'Organisms/EmptyState'
+import EmptyState, { icons } from '../../organisms/EmptyState'
 
 const CheckoutSuccess = ({ intl, id, email, onClick }) => {
     const title = intl.formatMessage({ id: 'checkout.orderConfirmed' })
@@ -24,8 +24,7 @@ const CheckoutSuccess = ({ intl, id, email, onClick }) => {
                 onClick()
             }}
             actionLabel={actionLabel}
-
-            >
+        >
             <>
                 {orderConfirmation}
                 <span className='font-bold ml-1'>{email}</span>

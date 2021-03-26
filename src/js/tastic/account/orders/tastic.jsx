@@ -4,15 +4,20 @@ import PropTypes from 'prop-types'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 
-import AccountMenu from 'Molecules/Account/Menu'
-import WelcomeOverview from 'Organisms/Account/AccountOverview/welcomeOverview'
-import AccountOrders from 'Organisms/Account/AccountOrders'
+import AccountMenu from '../../../molecules/Account/Menu'
+import WelcomeOverview from '../../../organisms/Account/AccountOverview/welcomeOverview'
+import AccountOrders from '../../../organisms/Account/AccountOrders'
 
-import MENU_ITEMS from 'Molecules/Account/Menu/MENU_ITEMS'
+import MENU_ITEMS from '../../../molecules/Account/Menu/MENU_ITEMS'
 
 const AccountOrdersTastic = ({ data: { stream }, context, route }) => {
-    const [ openPanel, setOpenPanel ] = useState(true)
-    const { session: { loggedIn, account: { firstName } } } = context
+    const [openPanel, setOpenPanel] = useState(true)
+    const {
+        session: {
+            loggedIn,
+            account: { firstName },
+        },
+    } = context
 
     if (!loggedIn && route.route !== 'Frontastic.Frontend.Master.Account.index') {
         app.getRouter().push('Frontastic.Frontend.Master.Account.index')
@@ -23,12 +28,16 @@ const AccountOrdersTastic = ({ data: { stream }, context, route }) => {
             selectedMenuItem={MENU_ITEMS.ORDERS}
             welcome={<WelcomeOverview firstName={firstName} />}
             handleLogout={app.getLoader('context').logout}
-            openPanel={() => { setOpenPanel(true) }}
-            >
+            openPanel={() => {
+                setOpenPanel(true)
+            }}
+        >
             <AccountOrders
                 orders={stream}
                 openPanel={openPanel}
-                onClose={() => { setOpenPanel(false) }}
+                onClose={() => {
+                    setOpenPanel(false)
+                }}
             />
         </AccountMenu>
     )

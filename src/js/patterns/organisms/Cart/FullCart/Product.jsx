@@ -3,12 +3,14 @@ import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import app from 'frontastic-catwalk/src/js/app/app'
 
-import Price from 'Atoms/price'
-import Select from 'Atoms/select'
-import { ReactComponent as CartBin } from 'Icons/cart-bin.svg'
+import Price from '../../../../atoms/price'
+import Select from '../../../../atoms/select'
+import { ReactComponent as CartBin } from '../../../../../../icons/cart-bin.svg'
 
 const Product = ({ intl, itemId, image, name, designer, count, price, discountedPrice, color, size }) => {
-    const productCounter = Array.from(Array(10).keys()).map(i => { return i + 1 })
+    const productCounter = Array.from(Array(10).keys()).map((i) => {
+        return i + 1
+    })
 
     return (
         <div className='grid grid-cols-120-1xfr grid-rows-auto-1fr sm:grid-cols-120-2xfr sm:grid-rows-1 col-gap-4 row-gap-3'>
@@ -17,15 +19,9 @@ const Product = ({ intl, itemId, image, name, designer, count, price, discounted
             </div>
 
             <div>
-                <div className='text-md font-bold leading-tight'>
-                    {name}
-                </div>
+                <div className='text-md font-bold leading-tight'>{name}</div>
 
-                {designer && (
-                    <div className='text-sm text-neutral-600 leading-tight'>
-                        {designer}
-                    </div>
-                )}
+                {designer && <div className='text-sm text-neutral-600 leading-tight'>{designer}</div>}
 
                 {color && (
                     <div className='mt-3 text-sm text-neutral-600 leading-tight'>
@@ -44,7 +40,9 @@ const Product = ({ intl, itemId, image, name, designer, count, price, discounted
                         variant='form-select'
                         value={count}
                         values={productCounter}
-                        formatLabel={(option) => { return option }}
+                        formatLabel={(option) => {
+                            return option
+                        }}
                         onSelect={(i) => {
                             app.getLoader('cart').updateLineItem({
                                 lineItemId: itemId,
@@ -55,16 +53,21 @@ const Product = ({ intl, itemId, image, name, designer, count, price, discounted
                 </div>
 
                 <div className='mt-3'>
-                    <Price variant='text-sm text-neutral-700 font-bold leading-tight' value={discountedPrice || price} />
+                    <Price
+                        variant='text-sm text-neutral-700 font-bold leading-tight'
+                        value={discountedPrice || price}
+                    />
                 </div>
             </div>
 
             <div>
-                <button className='flex sm:flex-row-reverse sm:ml-auto items-center justify-center focus:outline-none'
+                <button
+                    className='flex sm:flex-row-reverse sm:ml-auto items-center justify-center focus:outline-none'
                     aria-label={intl.formatMessage({ id: 'cart.remove' })}
                     onClick={() => {
-                    app.getLoader('cart').removeLineItem({ lineItemId: itemId })
-                }}>
+                        app.getLoader('cart').removeLineItem({ lineItemId: itemId })
+                    }}
+                >
                     <CartBin className='inline-block mx-1' />
 
                     <div className='mx-1 text-sm text-neutral-900 leading-tight'>

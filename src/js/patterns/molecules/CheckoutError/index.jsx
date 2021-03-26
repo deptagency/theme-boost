@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { injectIntl, intlShape } from 'react-intl'
 
-import EmptyState, { icons } from 'Organisms/EmptyState'
+import EmptyState, { icons } from '../../organisms/EmptyState'
 
 const CheckoutError = ({ intl, onClick }) => {
     const title = intl.formatMessage({ id: 'checkout.wentWrong' })

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as IconArrowLeft } from 'Icons/tailwind-icons/icon-arrow-left.svg'
+import { ReactComponent as IconArrowLeft } from '../../../../icons/tailwind-icons/icon-arrow-left.svg'
 
 export default {
     title: 'Checkout Footer',

@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import productConnector from '@frontastic/catwalk/src/js/tastic/product/connector'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
-import ProductDetails from 'Organisms/Product/ProductDetails'
+import ProductDetails from '../../../patterns/organisms/Product/ProductDetails'
 
 const ProductDetailsTastic = ({ product, wishlist }) => {
     if (!product || !wishlist.isComplete()) {

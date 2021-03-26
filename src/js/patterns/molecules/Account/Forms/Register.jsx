@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import { useForm } from 'react-hook-form'
 
-import Button from 'Atoms/button'
-import ButtonWithLoader from 'Atoms/button/WithLoader'
-import ErrorMessage from 'Atoms/errorMessage'
+import Button from '../../../atoms/button'
+import ButtonWithLoader from '../../../atoms/button/WithLoader'
+import ErrorMessage from '../../../atoms/errorMessage'
 
 const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
     const { register, handleSubmit, errors } = useForm()
@@ -121,7 +121,8 @@ const Register = ({ intl, showLoginForm, handleRegister, showLoader }) => {
                             name={intl.formatMessage({ id: 'account.register.joinCatwalk' })}
                             showLoader={showLoader}
                             variant='btn btn-primary w-full h-10'
-                            type='submit'>
+                            type='submit'
+                        >
                             <FormattedMessage id='account.register.joinCatwalk' />
                         </ButtonWithLoader>
 

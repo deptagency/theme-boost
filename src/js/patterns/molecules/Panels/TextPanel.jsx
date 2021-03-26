@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as Chevron } from 'Icons/tailwind-icons/icon-cheveron-down.svg'
+import { ReactComponent as Chevron } from '../../../../icons/tailwind-icons/icon-cheveron-down.svg'
 import Markdown from '@frontastic/catwalk/src/js/component/markdown'
 
-function TextPanel ({ title, body }) {
+function TextPanel({ title, body }) {
     const [open, setOpen] = useState(false)
     return (
         body && (

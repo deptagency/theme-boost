@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { useForm } from 'react-hook-form'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
-import Button from 'Atoms/button'
-import ButtonWithLoader from 'Atoms/button/WithLoader'
-import ErrorMessage from 'Atoms/errorMessage'
+import Button from '../../../atoms/button'
+import ButtonWithLoader from '../../../atoms/button/WithLoader'
+import ErrorMessage from '../../../atoms/errorMessage'
 
 const ForgottenPassword = ({ intl, showLoader, handleRequestPasswordReset, showLoginForm }) => {
     const { register, handleSubmit, errors } = useForm()
@@ -44,14 +44,16 @@ const ForgottenPassword = ({ intl, showLoader, handleRequestPasswordReset, showL
                     name={intl.formatMessage({ id: 'account.requestResetPassword' })}
                     showLoader={showLoader}
                     type='submit'
-                    variant='btn btn-primary w-full h-10'>
+                    variant='btn btn-primary w-full h-10'
+                >
                     <FormattedMessage id='account.requestResetPassword' />
                 </ButtonWithLoader>
 
                 <Button
                     name={intl.formatMessage({ id: 'account.login.login' })}
                     onClick={showLoginForm}
-                    variant='btn btn-primary w-full h-10 mt-5'>
+                    variant='btn btn-primary w-full h-10 mt-5'
+                >
                     <FormattedMessage id='account.login.login' />
                 </Button>
             </form>

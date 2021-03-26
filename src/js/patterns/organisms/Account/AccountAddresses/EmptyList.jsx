@@ -1,7 +1,7 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import EmptyState, { icons } from 'Organisms/EmptyState'
+import EmptyState, { icons } from '../../../organisms/EmptyState'
 
 const EmptyList = () => {
     return (

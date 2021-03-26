@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Button from 'Atoms/button'
-import IconButton from 'Atoms/button/IconButton'
+import Button from '.'
+import IconButton from './IconButton'
 
-import { ReactComponent as CartIcon } from 'Icons/tailwind-icons/icon-cart.svg'
+import { ReactComponent as CartIcon } from '../../../../icons/tailwind-icons/icon-cart.svg'
 
 export default {
     title: 'Button',
@@ -15,7 +15,9 @@ export const simple = () => {
             <p>
                 <Button variant='btn btn-primary mr-2'>Start</Button>
                 <Button variant='btn btn-gray mr-2'>Start</Button>
-                <Button variant='btn btn-blue' disabled>Disabled</Button>
+                <Button variant='btn btn-blue' disabled>
+                    Disabled
+                </Button>
             </p>
         </div>
     )

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Badge from 'Atoms/badge'
-import IconButton from 'Atoms/button/IconButton'
+import Badge from '.'
+import IconButton from '../button/IconButton'
 
-import { ReactComponent as CartIcon } from 'Icons/tailwind-icons/icon-cart.svg'
-import { ReactComponent as WishlistIcon } from 'Icons/tailwind-icons/icon-heart.svg'
+import { ReactComponent as CartIcon } from '../../../tailwind-icons/icon-cart.svg'
+import { ReactComponent as WishlistIcon } from '../../../tailwind-icons/icon-heart.svg'
 
 export default {
     title: 'Badge',
@@ -12,7 +12,12 @@ export default {
 
 export const cartIcon = () => {
     return (
-        <Badge count={5} onClick={() => { return null }}>
+        <Badge
+            count={5}
+            onClick={() => {
+                return null
+            }}
+        >
             <IconButton icon={<CartIcon />} />
         </Badge>
     )
@@ -20,7 +25,12 @@ export const cartIcon = () => {
 
 export const wishlistIcon = () => {
     return (
-        <Badge count={5} onClick={() => { return null }}>
+        <Badge
+            count={5}
+            onClick={() => {
+                return null
+            }}
+        >
             <IconButton icon={<WishlistIcon />} />
         </Badge>
     )

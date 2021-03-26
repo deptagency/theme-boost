@@ -2,25 +2,27 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { injectIntl, intlShape } from 'react-intl'
 
-import Checkbox from 'Atoms/checkbox'
+import Checkbox from '../../atoms/checkbox'
 
 import DiscountForm from './Forms/Discount'
 import ShippingForm from './Forms/Shipping'
 import BillingForm from './Forms/Billing'
 
-import Summary from 'Organisms/Cart/FullCart/Summary'
-import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
+import Summary from '../Cart/FullCart/Summary'
+import StickyRightColumn from '../../molecules/Layout/StickyRightColumn'
 
 const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextOverview' })
     const billingDetailsLabel = intl.formatMessage({ id: 'checkout.billingDetailsLabel' })
 
     const isSameAddress = () => {
-        return shipping.firstName === billing.firstName &&
+        return (
+            shipping.firstName === billing.firstName &&
             shipping.lastName === billing.lastName &&
             shipping.streetName === billing.streetName &&
             shipping.postalCode === billing.postalCode &&
             shipping.country === billing.country
+        )
     }
 
     const [email, setEmail] = useState(data.email)
@@ -30,10 +32,28 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, isLoading = 
 
     const isValid = () => {
         if (isBillingSameAsShipping) {
-            return email && shipping.firstName && shipping.lastName && shipping.streetName && shipping.postalCode && shipping.country
+            return (
+                email &&
+                shipping.firstName &&
+                shipping.lastName &&
+                shipping.streetName &&
+                shipping.postalCode &&
+                shipping.country
+            )
         } else {
-            return email && shipping.firstName && shipping.lastName && shipping.streetName && shipping.postalCode && shipping.country &&
-                billing.firstName && billing.lastName && billing.streetName && billing.postalCode && billing.country
+            return (
+                email &&
+                shipping.firstName &&
+                shipping.lastName &&
+                shipping.streetName &&
+                shipping.postalCode &&
+                shipping.country &&
+                billing.firstName &&
+                billing.lastName &&
+                billing.streetName &&
+                billing.postalCode &&
+                billing.country
+            )
         }
     }
 
@@ -82,10 +102,10 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, isLoading = 
                                 defaultEmail={data.email}
                                 defaultValues={data.shippingAddress}
                                 onSubmit={(data) => {
-                                setEmail(data.email)
-                                setShipping(data)
-                            }}
-                        />
+                                    setEmail(data.email)
+                                    setShipping(data)
+                                }}
+                            />
 
                             <div className='mt-4 p-4 bg-neutral-200 rounded'>
                                 <div className='text-sm text-neutral-900 flex items-center'>
@@ -94,29 +114,28 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, isLoading = 
                                         label={billingDetailsLabel}
                                         value={isBillingSameAsShipping}
                                         onClick={() => {
-                                        setBillingIsSameAsShipping(!isBillingSameAsShipping)
-                                    }}
-                                />
+                                            setBillingIsSameAsShipping(!isBillingSameAsShipping)
+                                        }}
+                                    />
                                 </div>
                             </div>
                         </div>
 
-                        {!isBillingSameAsShipping &&
-                        <div className='px-4 py-5 md:px-6 border-t-4 border-neutral-100'>
-                            <BillingForm
-                                intl={intl}
-                                countries={countries}
-                                defaultValues={data.billingAddress}
-                                onSubmit={data => {
-                                    setBilling(data)
-                                }}
-                            />
-                        </div>
-                    }
+                        {!isBillingSameAsShipping && (
+                            <div className='px-4 py-5 md:px-6 border-t-4 border-neutral-100'>
+                                <BillingForm
+                                    intl={intl}
+                                    countries={countries}
+                                    defaultValues={data.billingAddress}
+                                    onSubmit={(data) => {
+                                        setBilling(data)
+                                    }}
+                                />
+                            </div>
+                        )}
                     </div>
                 </div>
             }
-
             rightColumn={
                 <>
                     <div className='mb-1 md:mb-4 px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100 bg-white'>
@@ -124,11 +143,7 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, isLoading = 
                     </div>
 
                     <div className='px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100 bg-white'>
-                        <Summary
-                            buttonLabel={buttonLabel}
-                            disabled={!isValid()}
-                            onClick={updateShippingInformation}
-                        />
+                        <Summary buttonLabel={buttonLabel} disabled={!isValid()} onClick={updateShippingInformation} />
                     </div>
                 </>
             }

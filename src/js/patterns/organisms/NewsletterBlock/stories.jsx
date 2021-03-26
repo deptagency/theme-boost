@@ -1,6 +1,6 @@
 import React from 'react'
 
-import NewsletterBlock from 'Organisms/NewsletterBlock'
+import NewsletterBlock from '../../organisms/NewsletterBlock'
 
 export default {
     title: 'Newsletter',

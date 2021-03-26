@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
-import SelectVariant from 'Atoms/select/SelectVariant'
+import SelectVariant from '../../../atoms/select/SelectVariant'
 
 const SizeSelector = ({ variants, onChange }) => {
     return (
@@ -13,7 +13,9 @@ const SizeSelector = ({ variants, onChange }) => {
                 <SelectVariant
                     values={variants}
                     variant='form-select'
-                    formatLabel={(option) => { return option.attributes.size?.label || option.attributes.size }}
+                    formatLabel={(option) => {
+                        return option.attributes.size?.label || option.attributes.size
+                    }}
                     onSelect={onChange}
                 />
             </div>

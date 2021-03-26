@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as IconSelectDown } from 'Icons/tailwind-icons/icon-select-down.svg'
+import { ReactComponent as IconSelectDown } from '../../../../icons/tailwind-icons/icon-select-down.svg'
 
 const SelectVariant = ({ values, value, variant, onSelect, formatLabel }) => {
     let listed = []
@@ -10,12 +10,16 @@ const SelectVariant = ({ values, value, variant, onSelect, formatLabel }) => {
             <select
                 value={value}
                 className={variant}
-                onChange={(e) => { return onSelect(e.target.options.selectedIndex) }}
+                onChange={(e) => {
+                    return onSelect(e.target.options.selectedIndex)
+                }}
             >
                 {values.map((v, i) => {
                     const label = formatLabel ? formatLabel(v) : v
 
-                    if (listed.includes(label)) { return null }
+                    if (listed.includes(label)) {
+                        return null
+                    }
 
                     listed.push(label)
                     return <option key={i}>{label}</option>

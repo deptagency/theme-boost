@@ -3,20 +3,13 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
 import FullCart from './FullCart'
-import EmptyState, { icons } from 'Organisms/EmptyState'
+import EmptyState, { icons } from '../../rganisms/EmptyState'
 
 const Cart = ({ data, isLoading = false }) => {
     if (data && data.lineItems && data.lineItems.length > 0) {
         const { lineItems, sum, currency } = data
 
-        return (
-            <FullCart
-                isLoading={isLoading}
-                items={lineItems}
-                sum={sum}
-                currency={currency}
-            />
-        )
+        return <FullCart isLoading={isLoading} items={lineItems} sum={sum} currency={currency} />
     } else {
         return (
             <EmptyState

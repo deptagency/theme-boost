@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import SlidingPane from 'react-sliding-pane'
 import Scrollbars from 'react-custom-scrollbars'
 
-import { ReactComponent as IconLeft } from 'Icons/tailwind-icons/icon-panel-left.svg'
+import { ReactComponent as IconLeft } from '../../../../icons/tailwind-icons/icon-panel-left.svg'
 
 import 'react-sliding-pane/dist/react-sliding-pane.css'
 import './leftStyle.scss'
@@ -20,19 +20,13 @@ const SlideLeft = ({ isOpen, onClose, title = '', overlayVariant = '', children 
             width='100%'
             isOpen={isOpen}
             title={title}
-            >
+        >
             <div className='flex align-center'>
-                <IconLeft
-                    className='font-color font-bold cursor-pointer m-4'
-                    onClick={onClose}
-                />
+                <IconLeft className='font-color font-bold cursor-pointer m-4' onClick={onClose} />
                 {title}
             </div>
-            <Scrollbars style={{ height: 'calc(100vh - 116px)' }}>
-                {children}
-            </Scrollbars>
+            <Scrollbars style={{ height: 'calc(100vh - 116px)' }}>{children}</Scrollbars>
         </SlidingPane>
-
     )
 }
 

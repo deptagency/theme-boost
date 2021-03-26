@@ -10,8 +10,8 @@ import Billing from './Info/Billing'
 import Products from './Info/Products'
 import OrderButton from './Info/OrderButton'
 
-import Summary from 'Organisms/Cart/FullCart/Summary'
-import StickyRightColumn from 'Molecules/Layout/StickyRightColumn'
+import Summary from '../Cart/FullCart/Summary'
+import StickyRightColumn from '../../molecules/Layout/StickyRightColumn'
 
 const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelIndex, policy, isLoading = false }) => {
     const buttonLabel = intl.formatMessage({ id: 'checkout.nextPayment' })
@@ -25,10 +25,9 @@ const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelInd
     const onChangeShippingMethod = (data) => {
         setShippingMethod(data)
 
-        app.getLoader('cart')
-            .updateCart({
-                shippingMethodName: data.shippingMethodId,
-            })
+        app.getLoader('cart').updateCart({
+            shippingMethodName: data.shippingMethodId,
+        })
     }
 
     const onNextClicked = () => {
@@ -60,7 +59,9 @@ const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelInd
                     <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
                         <ShippingMethodForm
                             shippingMethod={data.shippingMethod}
-                            onSubmit={(data) => { onChangeShippingMethod(data) }}
+                            onSubmit={(data) => {
+                                onChangeShippingMethod(data)
+                            }}
                         />
                     </div>
 
@@ -69,27 +70,30 @@ const OverviewPanel = ({ app, intl, data, countries, goToNextPanel, goToPanelInd
                     </div>
 
                     <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
-                        {data.shippingAddress &&
+                        {data.shippingAddress && (
                             <Shipping
                                 address={data.shippingAddress}
                                 countries={countries}
-                                onClick={() => { goToPanelIndex(0) }}
+                                onClick={() => {
+                                    goToPanelIndex(0)
+                                }}
                             />
-                        }
+                        )}
                     </div>
 
                     <div className='px-4 py-5 md:px-6 border-b-4 border-neutral-100'>
-                        {data.billingAddress &&
+                        {data.billingAddress && (
                             <Billing
                                 address={data.billingAddress}
                                 countries={countries}
-                                onClick={() => { goToPanelIndex(0) }}
+                                onClick={() => {
+                                    goToPanelIndex(0)
+                                }}
                             />
-                        }
+                        )}
                     </div>
                 </div>
             }
-
             rightColumn={
                 <>
                     <div className='mb-1 md:mb-4 px-4 py-6 md:py-4 md:shadow-md md:rounded border-t-4 md:border-t-0 border-neutral-100 bg-white'>

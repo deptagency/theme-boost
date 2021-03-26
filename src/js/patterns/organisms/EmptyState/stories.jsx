@@ -3,16 +3,15 @@ import { action } from '@storybook/addon-actions'
 import { FormattedMessage } from 'react-intl'
 import classnames from 'classnames'
 
-import MenuItem from 'Molecules/Account/Menu/MenuItem'
+import MenuItem from '../../molecules/Account/Menu/MenuItem'
+import EmptyState, { icons } from '.'
 
-import { ReactComponent as CartIcon } from 'Icons/tailwind-icons/icon-cart.svg'
-import { ReactComponent as RightIcon } from 'Icons/tailwind-icons/icon-chevron-right.svg'
-import { ReactComponent as HomeIcon } from 'Icons/tailwind-icons/icon-home.svg'
-import { ReactComponent as UserIcon } from 'Icons/tailwind-icons/icon-user.svg'
-// TODO: import statement not conform with Airbnb. Pls fix webpack config
-import EmptyState, { icons } from 'Organisms/EmptyState/index'
-import { ReactComponent as IconCheckmarkCircle } from 'Icons/tailwind-icons/icon-check-circle.svg'
-import { ReactComponent as IconEmotionSad } from 'Icons/tailwind-icons/icon-emotion-sad.svg'
+import { ReactComponent as CartIcon } from '../../../../icons/tailwind-icons/icon-cart.svg'
+import { ReactComponent as RightIcon } from '../../../../icons/tailwind-icons/icon-chevron-right.svg'
+import { ReactComponent as HomeIcon } from '../../../../icons/tailwind-icons/icon-home.svg'
+import { ReactComponent as UserIcon } from '../../../../icons/tailwind-icons/icon-user.svg'
+import { ReactComponent as IconCheckmarkCircle } from '../../../../icons/tailwind-icons/icon-check-circle.svg'
+import { ReactComponent as IconEmotionSad } from '../../../../icons/tailwind-icons/icon-emotion-sad.svg'
 
 export default {
     title: 'Empty State',
@@ -31,7 +30,7 @@ export const orderConfirmed = () => {
                 action={action('action click')}
                 actionLabel={<FormattedMessage id='checkout.continueShopping' />}
                 icon={<IconCheckmarkCircle className='w-20 h-20 inline-block text-primary-500 fill-current' />}
-                >
+            >
                 <FormattedMessage id='checkout.orderConfirmation' />
                 <span className='font-bold ml-1'>bla@bla.com</span>
             </EmptyState>
@@ -86,7 +85,7 @@ export const WithAMenu = () => {
                     Jane Appleseed
                 </>
             }
-            >
+        >
             <div className='flex flex-col text-center justify-center w-64 mx-auto my-5 md:pb-56'>
                 <div className='text-sm text-neutral-600 mb-12'>
                     <FormattedMessage id='account.latestDetails' />

@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 
 import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
 
-import Price from 'Atoms/price'
-import Sticker from 'Atoms/sticker'
-import WishlistButton from 'Atoms/button/wishlistButton'
+import Price from '../../atoms/price'
+import Sticker from '../../atoms/sticker'
+import WishlistButton from '../../atoms/button/wishlistButton'
 
-function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice }) {
+function ProductTeaser({ product, onAddToWishlist, showStrikePrice }) {
     const wishlist = useSelector((state) => {
         return state.wishlist.wishlist
     })
@@ -35,11 +35,7 @@ function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice
     }
 
     return (
-        <article
-            className={'text-neutral-900'}
-            itemScope
-            itemType='http://schema.org/Product'
-            >
+        <article className={'text-neutral-900'} itemScope itemType='http://schema.org/Product'>
             <Link itemProp='url' className='z-10 hover:no-underline hover:text-neutral-900' to={product._url || ''}>
                 <div className='relative pb-3/2 mb-2 bg-white rounded'>
                     <figure className='absolute flex items-center h-full w-full object-cover'>
@@ -84,7 +80,6 @@ function ProductTeaser ({ product, onAddToWishlist, showPercent, showStrikePrice
 
 ProductTeaser.propTypes = {
     product: PropTypes.object.isRequired,
-    showPercent: PropTypes.bool,
     showStrikePrice: PropTypes.bool,
     onAddToWishlist: PropTypes.func,
 }

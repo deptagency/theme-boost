@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import { useForm } from 'react-hook-form'
 
-import ButtonWithLoader from 'Atoms/button/WithLoader'
-import ErrorMessage from 'Atoms/errorMessage'
+import ButtonWithLoader from '../../../atoms/button/WithLoader'
+import ErrorMessage from '../../../atoms/errorMessage'
 
 const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
     const requiredField = intl.formatMessage({ id: 'validation.required' })
@@ -20,15 +20,28 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
     return (
         <form onSubmit={handleSubmit(onNewPasswordSubmit)} className={`flex-col pt-6 m-auto w-3/4 md:w-11/12 md:p-0`}>
             <div className='text-sm text-neutral-600'>
-                <span><FormattedMessage id='account.inOrder' /></span><span className='font-bold'> <FormattedMessage id='account.protect' /> </span><span><FormattedMessage id='account.passwordContain' /></span>
+                <span>
+                    <FormattedMessage id='account.inOrder' />
+                </span>
+                <span className='font-bold'>
+                    {' '}
+                    <FormattedMessage id='account.protect' />{' '}
+                </span>
+                <span>
+                    <FormattedMessage id='account.passwordContain' />
+                </span>
                 <ul className='list-disc m-4'>
-                    <li><FormattedMessage id='account.characters' /></li>
+                    <li>
+                        <FormattedMessage id='account.characters' />
+                    </li>
                 </ul>
             </div>
 
             <div className='mt-6 mb-4'>
                 <div className='mb-4'>
-                    <label htmlFor='oldPassword' className='text-sm text-neutral-600'><FormattedMessage id='account.login.password' /></label>
+                    <label htmlFor='oldPassword' className='text-sm text-neutral-600'>
+                        <FormattedMessage id='account.login.password' />
+                    </label>
                     <input
                         id='old-password'
                         name='oldPassword'
@@ -39,7 +52,9 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
                     <ErrorMessage errors={errors} name='oldPassword' />
                 </div>
                 <div className='mb-4'>
-                    <label htmlFor='newPassword' className='text-sm text-neutral-600'><FormattedMessage id='account.password.new' /></label>
+                    <label htmlFor='newPassword' className='text-sm text-neutral-600'>
+                        <FormattedMessage id='account.password.new' />
+                    </label>
 
                     <input
                         id='newPassword'
@@ -58,7 +73,9 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
                     <ErrorMessage errors={errors} name='newPassword' />
                 </div>
                 <div className='mb-4'>
-                    <label htmlFor='confirmNewPassword' className='text-sm text-neutral-600'><FormattedMessage id='account.password.confirmNew' /></label>
+                    <label htmlFor='confirmNewPassword' className='text-sm text-neutral-600'>
+                        <FormattedMessage id='account.password.confirmNew' />
+                    </label>
 
                     <input
                         id='confirmNewPassword'
@@ -67,7 +84,9 @@ const ChangePasswordForm = ({ intl, onSubmit, showLoader }) => {
                         className='form-input mt-2'
                         ref={register({
                             required: requiredField,
-                            validate: value => { return value === watch('newPassword') || passwordMatch },
+                            validate: (value) => {
+                                return value === watch('newPassword') || passwordMatch
+                            },
                         })}
                     />
 

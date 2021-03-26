@@ -1,14 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
-import CheckoutHeader from 'Molecules/CheckoutHeader'
+import CheckoutHeader from '../../molecules/CheckoutHeader'
 
 const CheckoutHeaderTastic = ({ data }) => {
-    return (
-        <CheckoutHeader
-            logo={data.logo}
-        />
-    )
+    return <CheckoutHeader logo={data.logo} />
 }
 CheckoutHeaderTastic.propTypes = {
     data: PropTypes.shape({

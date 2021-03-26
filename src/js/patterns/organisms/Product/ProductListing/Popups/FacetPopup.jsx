@@ -9,8 +9,8 @@ import RangeFacet from './../Facets/RangeFacet'
 import TermFacet from './../Facets/TermFacet'
 import FacetService from './../FacetService'
 
-import { ReactComponent as IconChevronUp } from 'Icons/tailwind-icons/icon-chevron-up.svg'
-import { ReactComponent as IconChevronDown } from 'Icons/tailwind-icons/icon-cheveron-down.svg'
+import { ReactComponent as IconChevronUp } from '../../../../../../icons/tailwind-icons/icon-chevron-up.svg'
+import { ReactComponent as IconChevronDown } from '../../../../../../icons/tailwind-icons/icon-cheveron-down.svg'
 
 const FacetPopup = ({ intl, initialFacet, onChange }) => {
     const [facet, setFacet] = useState({ ...initialFacet })
@@ -47,9 +47,10 @@ const FacetPopup = ({ intl, initialFacet, onChange }) => {
 
     return (
         <Popup
-            trigger={open => {
+            trigger={(open) => {
                 return (
-                    <div className={classnames({
+                    <div
+                        className={classnames({
                             'mr-2 w-32 h-8 px-2 border rounded flex items-center justify-between cursor-pointer select-none': true,
                             'bg-gray-300': open,
                             'bg-white': !open,
@@ -59,22 +60,29 @@ const FacetPopup = ({ intl, initialFacet, onChange }) => {
                     >
                         <span className='text-sm capitalize'>
                             {getFacetName()}
-                            {getFacetLabel() && (
-                                <span className='ml-1 text-gray-600'>
-                                    ({getFacetLabel()})
-                                </span>
-                            )}
+                            {getFacetLabel() && <span className='ml-1 text-gray-600'>({getFacetLabel()})</span>}
                         </span>
-                        {open ? <IconChevronUp className='ml-2 inline-block' /> : <IconChevronDown className='ml-2 inline-block' /> }
+                        {open ? (
+                            <IconChevronUp className='ml-2 inline-block' />
+                        ) : (
+                            <IconChevronDown className='ml-2 inline-block' />
+                        )}
                     </div>
                 )
             }}
             arrow={false}
             position='bottom left'
             onOpen={onOpenPopup}
-            contentStyle={{ padding: '0px', border: 'none', width: '247px', marginTop: '5px', height: facet.type === 'term' ? '416px' : '238px', 'overflowY': 'hidden' }}
-            >
-            {close => {
+            contentStyle={{
+                padding: '0px',
+                border: 'none',
+                width: '247px',
+                marginTop: '5px',
+                height: facet.type === 'term' ? '416px' : '238px',
+                overflowY: 'hidden',
+            }}
+        >
+            {(close) => {
                 return (
                     <div className='z-10 pt-4 flex flex-col relative shadow'>
                         {facet.type === 'term' && (
@@ -93,7 +101,9 @@ const FacetPopup = ({ intl, initialFacet, onChange }) => {
                             <button
                                 aria-label={intl.formatMessage({ id: 'filters.clear' })}
                                 className='text-gray-900 font-normal'
-                                onClick={() => { onClearClick(close) }}
+                                onClick={() => {
+                                    onClearClick(close)
+                                }}
                             >
                                 <FormattedMessage id='filters.clear' />
                             </button>
@@ -101,7 +111,9 @@ const FacetPopup = ({ intl, initialFacet, onChange }) => {
                             <button
                                 aria-label={intl.formatMessage({ id: 'filters.apply' })}
                                 className='btn btn-primary'
-                                onClick={() => { onApplyClick(close) }}
+                                onClick={() => {
+                                    onApplyClick(close)
+                                }}
                             >
                                 <FormattedMessage id='filters.apply' />
                             </button>

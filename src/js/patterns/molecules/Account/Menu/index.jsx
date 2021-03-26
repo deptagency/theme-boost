@@ -4,13 +4,13 @@ import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
 
 import MenuItem from './MenuItem'
-import MENU_ITEMS from 'Molecules/Account/Menu/MENU_ITEMS'
+import MENU_ITEMS from './MENU_ITEMS'
 
-import { ReactComponent as CartIcon } from 'Icons/tailwind-icons/icon-cart.svg'
-import { ReactComponent as RightIcon } from 'Icons/tailwind-icons/icon-chevron-right.svg'
-import { ReactComponent as HomeIcon } from 'Icons/tailwind-icons/icon-home.svg'
-import { ReactComponent as UserIcon } from 'Icons/tailwind-icons/icon-user.svg'
-import useSlidePanel from 'Molecules/Layout/Breakpoints/useSlidePanel'
+import { ReactComponent as CartIcon } from '../../../../../icons/tailwind-icons/icon-cart.svg'
+import { ReactComponent as RightIcon } from '../../../../../icons/tailwind-icons/icon-chevron-right.svg'
+import { ReactComponent as HomeIcon } from '../../../../../icons/tailwind-icons/icon-home.svg'
+import { ReactComponent as UserIcon } from '../../../../../icons/tailwind-icons/icon-user.svg'
+import useSlidePanel from '../../Layout/Breakpoints/useSlidePanel'
 
 import app from '@frontastic/catwalk/src/js/app/app'
 
@@ -19,40 +19,43 @@ const AccountMenu = ({ selectedMenuItem, welcome, children, handleLogout, openPa
 
     return (
         <div className='m-auto md:grid grid-cols-2 grid-rows-1 grid-cols-1fr-2fr md:w-11/12 md:mt-4 text-neutral-900'>
-
-            <div className='md:hidden'>
-                {welcome}
-            </div>
+            <div className='md:hidden'>{welcome}</div>
 
             <div className='flex-auto md:shadow-lg'>
                 <MenuItem
                     onClick={() => {
-                        (selectedMenuItem !== MENU_ITEMS.ORDERS) && app.getRouter().push('Frontastic.Frontend.Master.Account.orders')
-                         usePanel && openPanel()
+                        selectedMenuItem !== MENU_ITEMS.ORDERS &&
+                            app.getRouter().push('Frontastic.Frontend.Master.Account.orders')
+                        usePanel && openPanel()
                     }}
                     selected={selectedMenuItem === MENU_ITEMS.ORDERS}
                 >
                     <div className='flex'>
-                        <CartIcon className={classnames({
-                            'mr-2 text-2xl': true,
-                            'text-neutral-900': selectedMenuItem === MENU_ITEMS.ORDERS,
-                        })} />
+                        <CartIcon
+                            className={classnames({
+                                'mr-2 text-2xl': true,
+                                'text-neutral-900': selectedMenuItem === MENU_ITEMS.ORDERS,
+                            })}
+                        />
                         <FormattedMessage id='account.placedOrders' />
                     </div>
                     <RightIcon className='md:hidden' />
                 </MenuItem>
                 <MenuItem
                     onClick={() => {
-                        (selectedMenuItem !== MENU_ITEMS.ADDRESSES) && app.getRouter().push('Frontastic.Frontend.Master.Account.addresses')
+                        selectedMenuItem !== MENU_ITEMS.ADDRESSES &&
+                            app.getRouter().push('Frontastic.Frontend.Master.Account.addresses')
                         usePanel && openPanel()
                     }}
                     selected={selectedMenuItem === MENU_ITEMS.ADDRESSES}
                 >
                     <div className='flex'>
-                        <HomeIcon className={classnames({
-                            'mr-2 text-2xl fill-current': true,
-                            'text-neutral-900': selectedMenuItem === MENU_ITEMS.ADDRESSES,
-                        })} />
+                        <HomeIcon
+                            className={classnames({
+                                'mr-2 text-2xl fill-current': true,
+                                'text-neutral-900': selectedMenuItem === MENU_ITEMS.ADDRESSES,
+                            })}
+                        />
                         <div>
                             <FormattedMessage id='account.addresses' />
                         </div>
@@ -61,16 +64,19 @@ const AccountMenu = ({ selectedMenuItem, welcome, children, handleLogout, openPa
                 </MenuItem>
                 <MenuItem
                     onClick={() => {
-                        (selectedMenuItem !== MENU_ITEMS.ACCOUNT_DETAILS) && app.getRouter().push('Frontastic.Frontend.Master.Account.profile')
+                        selectedMenuItem !== MENU_ITEMS.ACCOUNT_DETAILS &&
+                            app.getRouter().push('Frontastic.Frontend.Master.Account.profile')
                         usePanel && openPanel()
                     }}
                     selected={selectedMenuItem === MENU_ITEMS.ACCOUNT_DETAILS}
                 >
                     <div className='flex'>
-                        <UserIcon className={classnames({
-                            'mr-2 text-2xl': true,
-                            'text-neutral-900': selectedMenuItem === MENU_ITEMS.ACCOUNT_DETAILS,
-                        })} />
+                        <UserIcon
+                            className={classnames({
+                                'mr-2 text-2xl': true,
+                                'text-neutral-900': selectedMenuItem === MENU_ITEMS.ACCOUNT_DETAILS,
+                            })}
+                        />
                         <div>
                             <FormattedMessage id='account.accountDetails' />
                         </div>
@@ -85,8 +91,9 @@ const AccountMenu = ({ selectedMenuItem, welcome, children, handleLogout, openPa
                 </MenuItem>
             </div>
 
-            {selectedMenuItem === MENU_ITEMS.NONE &&
-                <div className='hidden md:flex row-start-1 col-start-2'>{welcome}</div>}
+            {selectedMenuItem === MENU_ITEMS.NONE && (
+                <div className='hidden md:flex row-start-1 col-start-2'>{welcome}</div>
+            )}
 
             {children}
         </div>

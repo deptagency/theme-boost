@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import List from 'Molecules/List'
+import List from '../../List'
 
-import { ReactComponent as HelpIcon } from 'Icons/tailwind-icons/icon-help.svg'
-import { ReactComponent as ChatIcon } from 'Icons/tailwind-icons/icon-chat.svg'
-import { ReactComponent as AnnouncementIcon } from 'Icons/tailwind-icons/icon-announcement.svg'
+import { ReactComponent as HelpIcon } from '../../../../icons/tailwind-icons/icon-help.svg'
+import { ReactComponent as ChatIcon } from '../../../../icons/tailwind-icons/icon-chat.svg'
+import { ReactComponent as AnnouncementIcon } from '../../../../icons/tailwind-icons/icon-announcement.svg'
 
 const LinkList = ({ header, headerIcon, links }) => {
     const iconMap = {

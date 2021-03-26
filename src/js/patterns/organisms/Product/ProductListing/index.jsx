@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl'
 
 import { useInView } from 'react-intersection-observer'
 
-import ProductTeaser from 'Molecules/Product/productTeaser'
+import ProductTeaser from '../../../molecules/Product/productTeaser'
 
 import FacetPopup from './Popups/FacetPopup'
 import SortMobilePopup from './Popups/SortMobilePopup'
@@ -90,11 +90,12 @@ const ProductListing = ({
             )}
 
             {data.stream.total > 0 && (
-                <div className={classnames({
+                <div
+                    className={classnames({
                         'grid gap-4 grid-cols-1 xsm:grid-cols-2 md:grid-cols-3': true,
                         'lg:grid-cols-4': isFullWidth,
                     })}
-                    >
+                >
                     {data.stream.items.map((product) => {
                         return (
                             <ProductTeaser
@@ -109,7 +110,9 @@ const ProductListing = ({
                 </div>
             )}
 
-            {showNextPage === 'InfinityScroll' && data.stream.count < data.stream.total && <div ref={ref} className='w-full h-1' />}
+            {showNextPage === 'InfinityScroll' && data.stream.count < data.stream.total && (
+                <div ref={ref} className='w-full h-1' />
+            )}
 
             {showNextPage === 'LoadMore' && data.stream.count < data.stream.total && (
                 <div className='flex justify-center'>

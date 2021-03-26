@@ -2,12 +2,12 @@ import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 
 import MediaImage from '@frontastic/catwalk/src/js/mediaImage'
-import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
+import FullPageWidthWrapper from '../../../molecules/Layout/FullPageWidthWrapper'
 
 import Modal from './Modal'
 import IconNavigation from '../IconNavigation'
 
-import { ReactComponent as MenuOpen } from 'Icons/tailwind-icons/icon-menu-open.svg'
+import { ReactComponent as MenuOpen } from '../../../../../icons/tailwind-icons/icon-menu-open.svg'
 
 import { categoryTreeType, topCategoryType } from '../types'
 import { useLevel } from '../mainMenuState'

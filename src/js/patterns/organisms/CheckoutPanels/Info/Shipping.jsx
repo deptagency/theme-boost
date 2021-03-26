@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
 import { convertToCountryName } from './../countries'
-import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
+import { ReactComponent as EditIcon } from '../../../../../icons/tailwind-icons/icon-edit.svg'
 
 const Shipping = ({ intl, address, onClick }) => {
     return (
@@ -19,15 +19,15 @@ const Shipping = ({ intl, address, onClick }) => {
             </div>
 
             <div className='text-md text-neutral-900 leading-tight'>
-                <p className='font-bold'>{address.firstName} {address.lastName}</p>
+                <p className='font-bold'>
+                    {address.firstName} {address.lastName}
+                </p>
                 <p>{address.streetName}</p>
                 <p>{address.city}</p>
                 <p>{address.postalCode}</p>
                 <p>{convertToCountryName(intl, address.country)}</p>
 
-                {(address.phone || address.email) && (
-                    <div className='my-4 h-px bg-neutral-200' />
-                )}
+                {(address.phone || address.email) && <div className='my-4 h-px bg-neutral-200' />}
 
                 <p>{address.phone}</p>
                 <p>{address.email}</p>

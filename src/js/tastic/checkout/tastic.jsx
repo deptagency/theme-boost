@@ -5,34 +5,36 @@ import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 import Entity from '@frontastic/catwalk/src/js/app/entity'
 
-import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
-import CheckoutPanels from 'Molecules/Layout/CheckoutPanels'
+import DefaultLoader from '../../patterns/molecules/Loaders/DefaultLoader/index'
+import CheckoutPanels from '../../patterns/molecules/Layout/CheckoutPanels'
 
-import EmptyState, { icons } from 'Organisms/EmptyState'
+import EmptyState, { icons } from '../../patterns/organisms/EmptyState'
 import { injectIntl, intlShape } from 'react-intl'
 
 const CheckoutTastic = ({ intl, cart, context, data }) => {
     const [countries, setCountries] = useState([])
 
     useEffect(() => {
-        app.getLoader('cart').getShippingMethods().then(response => {
-            let c = []
+        app.getLoader('cart')
+            .getShippingMethods()
+            .then((response) => {
+                let c = []
 
-            /* eslint-disable no-unused-expressions */
-            response.shippingMethods?.forEach(method => {
                 /* eslint-disable no-unused-expressions */
-                method.rates?.forEach(rate => {
+                response.shippingMethods?.forEach((method) => {
                     /* eslint-disable no-unused-expressions */
-                    rate.locations?.forEach(location => {
-                        if (!c.includes(location.country)) {
-                            c.push(location.country)
-                        }
+                    method.rates?.forEach((rate) => {
+                        /* eslint-disable no-unused-expressions */
+                        rate.locations?.forEach((location) => {
+                            if (!c.includes(location.country)) {
+                                c.push(location.country)
+                            }
+                        })
                     })
                 })
-            })
 
-            setCountries(c)
-        })
+                setCountries(c)
+            })
     }, [context.locale])
 
     if (!cart || countries.length === 0) {
@@ -58,7 +60,7 @@ const CheckoutTastic = ({ intl, cart, context, data }) => {
     }
 
     if (cart && cart.loaded && cart.data && cart.data.lineItems && cart.data.lineItems.length > 0) {
-        const anyProductOutOfStock = cart.data.lineItems.some(product => product.variant.isOnStock === false)
+        const anyProductOutOfStock = cart.data.lineItems.some((product) => product.variant.isOnStock === false)
 
         if (anyProductOutOfStock) {
             const title = intl.formatMessage({ id: 'checkout.outOfStock' })
@@ -79,10 +81,16 @@ const CheckoutTastic = ({ intl, cart, context, data }) => {
         }
     }
 
-    if (context.session.loggedIn && cart && cart.loaded && cart.data && (!cart.data.shippingAddress || !cart.data.shippingAddress.firstName)) {
+    if (
+        context.session.loggedIn &&
+        cart &&
+        cart.loaded &&
+        cart.data &&
+        (!cart.data.shippingAddress || !cart.data.shippingAddress.firstName)
+    ) {
         cart.data.email = context.account.email
 
-        context.account.addresses?.forEach(address => {
+        context.account.addresses?.forEach((address) => {
             if (address.isDefaultBillingAddress) {
                 cart.data.billingAddress = address
             }
@@ -116,15 +124,7 @@ const CheckoutTastic = ({ intl, cart, context, data }) => {
         }
     }
 
-    return (
-        <CheckoutPanels
-            app={app}
-            cart={cart}
-            data={cart.data}
-            countries={countries}
-            policy={data.policy}
-        />
-    )
+    return <CheckoutPanels app={app} cart={cart} data={cart.data} countries={countries} policy={data.policy} />
 }
 
 CheckoutTastic.propTypes = {

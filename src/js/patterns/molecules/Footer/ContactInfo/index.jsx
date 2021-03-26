@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as ChatIcon } from 'Icons/tailwind-icons/icon-chat.svg'
+import { ReactComponent as ChatIcon } from '../../../../../icons/tailwind-icons/icon-chat.svg'
 
 const ContactInfo = ({ header, phoneNumber, email }) => {
     return (
@@ -13,12 +13,8 @@ const ContactInfo = ({ header, phoneNumber, email }) => {
             )}
 
             <ul className='flex flex-col ml-6 leading-tight text-neutral-200'>
-                <li className='mb-2'>
-                    {phoneNumber}
-                </li>
-                <li className='mb-2'>
-                    {email}
-                </li>
+                <li className='mb-2'>{phoneNumber}</li>
+                <li className='mb-2'>{email}</li>
             </ul>
         </div>
     )

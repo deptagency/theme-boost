@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import RangeSlider from 'Atoms/rangeSlider'
+import RangeSlider from '../../../../atoms/rangeSlider'
 
 const RangeFacet = ({ facet, onChange }) => {
     const min = Math.round(facet.min / 100)
@@ -40,12 +40,7 @@ const RangeFacet = ({ facet, onChange }) => {
     return (
         <div className='flex flex-col'>
             <div className='mt-8 w-full px-4'>
-                <RangeSlider
-                    value={value}
-                    min={min}
-                    max={max}
-                    onChange={onRangeChange}
-                />
+                <RangeSlider value={value} min={min} max={max} onChange={onRangeChange} />
             </div>
 
             <div className='my-8 w-full flex justify-between'>

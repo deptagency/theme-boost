@@ -3,19 +3,12 @@ import PropTypes from 'prop-types'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 
-import useWishlistFlaggedProducts from 'Molecules/ProductTeaser/useWishlistFlaggedProducts'
-import ProductSlider from 'Organisms/Slider'
+import useWishlistFlaggedProducts from '../../../patterns/molecules/ProductTeaser/useWishlistFlaggedProducts'
+import ProductSlider from '../../../patterns/organisms/Slider'
 
-function ProductSliderTastic ({ data: {
-    title,
-    description,
-    stream,
-    productCount,
-},
-}) {
+function ProductSliderTastic({ data: { title, description, stream, productCount } }) {
     const products = (stream || {}).items ? stream.items.slice(0, productCount) : []
-    // eslint-disable-next-line no-unused-vars
-    const { wishlistedProducts, wishlistId, loading } = useWishlistFlaggedProducts(products)
+    const { wishlistedProducts, wishlistId } = useWishlistFlaggedProducts(products)
 
     if (!stream) {
         return null
@@ -30,9 +23,10 @@ function ProductSliderTastic ({ data: {
                 app.getLoader('wishlist').add(product, product.variants[0], 1, null)
             }}
             handleRemoveFromWishlist={(product) => {
-                !!wishlistId && app.getLoader('wishlist').removeLineItem(wishlistId, {
-                    lineItemId: product.wishlistItemId,
-                })
+                !!wishlistId &&
+                    app.getLoader('wishlist').removeLineItem(wishlistId, {
+                        lineItemId: product.wishlistItemId,
+                    })
             }}
         />
     )

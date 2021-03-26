@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 
 import MediaImage from '@frontastic/catwalk/src/js/mediaImage'
-import FullPageWidthWrapper from 'Molecules/Layout/FullPageWidthWrapper'
+import FullPageWidthWrapper from '../../../molecules/Layout/FullPageWidthWrapper'
 import TopCategories from './TopCategories'
 import DesktopMenu from './Navigation'
 import NavigationExpansionPanel from './NavigationExpansionPanel'

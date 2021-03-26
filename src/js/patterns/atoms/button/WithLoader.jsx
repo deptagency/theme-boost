@@ -1,30 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Button from 'Atoms/button'
-import LoaderButton from 'Molecules/Loaders/LoaderButton'
+import Button from '.'
+import LoaderButton from '../../molecules/Loaders/LoaderButton'
 
-const ButtonWithLoader = ({
-    name,
-    showLoader = false,
-    onClick = () => {},
-    variant = '',
-    children,
-    ...otherProps
-}) => {
+const ButtonWithLoader = ({ name, showLoader = false, onClick = () => {}, variant = '', children, ...otherProps }) => {
     return (
         <>
-            {showLoader ?
-                <LoaderButton /> :
+            {showLoader ? (
+                <LoaderButton />
+            ) : (
                 <Button
                     name={name}
                     variant={variant}
                     onClick={onClick}
                     style={{ transition: 'all .15s ease' }}
                     {...otherProps}
-                    >
+                >
                     {children}
-                </Button>}
+                </Button>
+            )}
         </>
     )
 }

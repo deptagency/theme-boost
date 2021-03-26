@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
-import { ReactComponent as HappyIcon } from 'Icons/tailwind-icons/icon-emotion-happy.svg'
+import { ReactComponent as HappyIcon } from '../../../../../icons/tailwind-icons/icon-emotion-happy.svg'
 
 const WelcomeOverview = ({ firstName, variant = '' }) => {
     return (

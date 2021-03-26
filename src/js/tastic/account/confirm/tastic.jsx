@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 import Message from '@frontastic/catwalk/src/js/app/message'
-import DefaultLoader from 'Molecules/Loaders/DefaultLoader/index'
+import DefaultLoader from '../../../molecules/Loaders/DefaultLoader/index'
 
 /* Standard confirmation tasitc */
 class AccountConfirmTastic extends Component {
-    constructor (props) {
+    constructor(props) {
         super(props)
 
         this.state = {
@@ -17,7 +17,7 @@ class AccountConfirmTastic extends Component {
         }
     }
 
-    componentDidMount () {
+    componentDidMount() {
         if (!this.props.confirmationToken) {
             return
         }
@@ -29,10 +29,7 @@ class AccountConfirmTastic extends Component {
             {},
             (json) => {
                 app.getLoader('context').notifyUser(
-                    <Message
-                        code='account.message.confirmSuccess'
-                        message='Account confirmation successfull.'
-                    />,
+                    <Message code='account.message.confirmSuccess' message='Account confirmation successfull.' />,
                     'success'
                 )
                 app.getLoader('context').refresh()
@@ -40,10 +37,7 @@ class AccountConfirmTastic extends Component {
             },
             (json) => {
                 app.getLoader('context').notifyUser(
-                    <Message
-                        code='account.message.confirmError'
-                        message='Could not confirm account'
-                    />,
+                    <Message code='account.message.confirmError' message='Could not confirm account' />,
                     'error'
                 )
                 app.getRouter().history.replace('/')
@@ -51,7 +45,7 @@ class AccountConfirmTastic extends Component {
         )
     }
 
-    render () {
+    render() {
         return !this.state.confirm ? <DefaultLoader /> : null
     }
 }
@@ -60,14 +54,13 @@ AccountConfirmTastic.propTypes = {
     confirmationToken: PropTypes.string,
 }
 
-AccountConfirmTastic.defaultProps = {
-}
+AccountConfirmTastic.defaultProps = {}
 
-export default tastify({ translate: true })(connect(
-    (globalState, props) => {
+export default tastify({ translate: true })(
+    connect((globalState, props) => {
         return {
             ...props,
             confirmationToken: globalState.app.route.get('confirmationToken', null),
         }
-    }
-)(AccountConfirmTastic))
+    })(AccountConfirmTastic)
+)

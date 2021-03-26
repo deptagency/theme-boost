@@ -1,9 +1,9 @@
 import React from 'react'
-import Button from 'Atoms/button'
+import Button from '../../../atoms/button'
 
-import { ReactComponent as LeftIcon } from 'Icons/tailwind-icons/icon-cheveron-left.svg'
-import { ReactComponent as EditIcon } from 'Icons/tailwind-icons/icon-edit.svg'
-import { ReactComponent as CloseIcon } from 'Icons/tailwind-icons/icon-close-black.svg'
+import { ReactComponent as LeftIcon } from '../../../icons/tailwind-icons/icon-cheveron-left.svg'
+import { ReactComponent as EditIcon } from '../../../icons/tailwind-icons/icon-edit.svg'
+import { ReactComponent as CloseIcon } from '../../../icons/tailwind-icons/icon-close-black.svg'
 
 export default {
     title: 'Account details',
@@ -38,14 +38,13 @@ export const accountDetails = () => {
                                     <div>alexandra.jones@gmail.com </div>
                                 </div>
                                 <div className='text-sm text-primary-500 leading-tight cursor-pointer flex items-center'>
-                                    Edit<EditIcon className='inline fill-current text-sm ml-2' />
+                                    Edit
+                                    <EditIcon className='inline fill-current text-sm ml-2' />
                                 </div>
                             </div>
                             <div className='border-b-4 border-neutral-200' />
                             <div className='text-center mt-6'>
-                                <Button variant='btn-outline btn-outline-black'>
-                                    Change password
-                                </Button>
+                                <Button variant='btn-outline btn-outline-black'>Change password</Button>
                             </div>
                         </div>
                     </div>
@@ -70,45 +69,31 @@ export const editDetails = () => {
 
                     <form className='flex-col mx-6 mt-6 sm:mx-auto sm:w-7/12 lg:w-3/6'>
                         <div className='mb-4'>
-                            <label htmlFor='login-firstname' className='text-sm text-neutral-600'>First name </label>
-                            <input
-                                id='login-firstname'
-                                name='firstName'
-                                type='text'
-                                className='form-input mt-2'
-                            />
+                            <label htmlFor='login-firstname' className='text-sm text-neutral-600'>
+                                First name{' '}
+                            </label>
+                            <input id='login-firstname' name='firstName' type='text' className='form-input mt-2' />
                         </div>
                         <div className='mb-4'>
-                            <label htmlFor='login-lastname' className='text-sm text-neutral-600'>Last name </label>
-                            <input
-                                id='login-lastname'
-                                name='lastName'
-                                type='text'
-                                className='form-input mt-2'
-                            />
+                            <label htmlFor='login-lastname' className='text-sm text-neutral-600'>
+                                Last name{' '}
+                            </label>
+                            <input id='login-lastname' name='lastName' type='text' className='form-input mt-2' />
                         </div>
                         <div className='mb-4'>
-                            <label htmlFor='signup-email' className='text-sm text-neutral-600'>Email address </label>
-                            <input
-                                id='signup-email'
-                                name='email'
-                                type='text'
-                                className='form-input mt-2'
-                            />
+                            <label htmlFor='signup-email' className='text-sm text-neutral-600'>
+                                Email address{' '}
+                            </label>
+                            <input id='signup-email' name='email' type='text' className='form-input mt-2' />
                         </div>
                         <div className='mb-4'>
-                            <label htmlFor='signup-email' className='text-sm text-neutral-600'>Repeat email address </label>
-                            <input
-                                id='signup-email'
-                                name='email'
-                                type='text'
-                                className='form-input mt-2'
-                            />
+                            <label htmlFor='signup-email' className='text-sm text-neutral-600'>
+                                Repeat email address{' '}
+                            </label>
+                            <input id='signup-email' name='email' type='text' className='form-input mt-2' />
                         </div>
                         <div className='text-center mt-6'>
-                            <Button variant='btn btn-primary w-full'>
-                                Save
-                            </Button>
+                            <Button variant='btn btn-primary w-full'>Save</Button>
                         </div>
                     </form>
                 </div>
@@ -131,7 +116,6 @@ export const changePassword = () => {
                     <div className='border-b-4 border-neutral-200' />
 
                     <form className='flex-col mx-6 mt-6 sm:mx-auto sm:w-7/12'>
-
                         <div className='text-neutral-600 text-sm'>
                             <span>In order to </span>
                             <span className='font-bold'> protect your account, </span>
@@ -147,7 +131,9 @@ export const changePassword = () => {
 
                         <div className='mt-6 mb-4'>
                             <div className='mb-4'>
-                                <label htmlFor='login-password' className='text-sm text-neutral-600'>Password </label>
+                                <label htmlFor='login-password' className='text-sm text-neutral-600'>
+                                    Password{' '}
+                                </label>
                                 <input
                                     id='login-password'
                                     name='password'
@@ -156,7 +142,9 @@ export const changePassword = () => {
                                 />
                             </div>
                             <div className='mb-4'>
-                                <label htmlFor='login-password' className='text-sm text-neutral-600'>New password </label>
+                                <label htmlFor='login-password' className='text-sm text-neutral-600'>
+                                    New password{' '}
+                                </label>
                                 <input
                                     id='login-password'
                                     name='password'
@@ -165,7 +153,9 @@ export const changePassword = () => {
                                 />
                             </div>
                             <div className='mb-4'>
-                                <label htmlFor='login-password' className='text-sm text-neutral-600'>Confirm new password </label>
+                                <label htmlFor='login-password' className='text-sm text-neutral-600'>
+                                    Confirm new password{' '}
+                                </label>
                                 <input
                                     id='login-password'
                                     name='password'
@@ -174,9 +164,7 @@ export const changePassword = () => {
                                 />
                             </div>
                             <div className='text-center mt-6'>
-                                <Button variant='btn btn-primary w-full'>
-                                    Change password
-                                </Button>
+                                <Button variant='btn btn-primary w-full'>Change password</Button>
                             </div>
                         </div>
                     </form>
@@ -193,9 +181,7 @@ export const modalChangePassword = () => {
                 <div className='relative w-auto my-6 mx-auto max-w-3xl'>
                     <div className='rounded-lg shadow-lg relative flex flex-col w-full bg-background-primary outline-none focus:outline-none'>
                         <div className='flex items-start justify-between p-5 border-b-4 border-neutral-200 rounded-t'>
-                            <h3 className='text-3xl font-semibold'>
-                                Change password
-                            </h3>
+                            <h3 className='text-3xl font-semibold'>Change password</h3>
                             <button className='p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none'>
                                 <CloseIcon className='fill-current text-neutral-900' />
                             </button>
@@ -218,31 +204,37 @@ export const modalChangePassword = () => {
 
                                 <div className='mt-6 mb-4'>
                                     <div className='mb-4'>
-                                        <label htmlFor='login-password' className='text-sm text-neutral-600'>Password </label>
+                                        <label htmlFor='login-password' className='text-sm text-neutral-600'>
+                                            Password{' '}
+                                        </label>
                                         <input
                                             id='login-password'
                                             name='password'
                                             type='password'
                                             className='form-input mt-2'
-                                    />
+                                        />
                                     </div>
                                     <div className='mb-4'>
-                                        <label htmlFor='login-password' className='text-sm text-neutral-600'>New password </label>
+                                        <label htmlFor='login-password' className='text-sm text-neutral-600'>
+                                            New password{' '}
+                                        </label>
                                         <input
                                             id='login-password'
                                             name='password'
                                             type='password'
                                             className='form-input mt-2'
-                                    />
+                                        />
                                     </div>
                                     <div className='mb-4'>
-                                        <label htmlFor='login-password' className='text-sm text-neutral-600'>Confirm new password </label>
+                                        <label htmlFor='login-password' className='text-sm text-neutral-600'>
+                                            Confirm new password{' '}
+                                        </label>
                                         <input
                                             id='login-password'
                                             name='password'
                                             type='password'
                                             className='form-input mt-2'
-                                    />
+                                        />
                                     </div>
                                     <div className='text-center mt-6'>
                                         <Button

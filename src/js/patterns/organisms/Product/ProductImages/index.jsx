@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Slider from 'Molecules/Slider'
+import Slider from '../../../molecules/Slider'
 
 import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
 

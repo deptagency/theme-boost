@@ -4,11 +4,11 @@ import classnames from 'classnames'
 import { useSelector } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
 
-import Price from 'Atoms/price'
-import Button from 'Atoms/button'
-import LoaderButton from 'Molecules/Loaders/LoaderButton'
+import Price from '../../../atoms/price'
+import Button from '../../../atoms/button'
+import LoaderButton from '../../../molecules/Loaders/LoaderButton'
 
-import { ReactComponent as IconClose } from 'Icons/tailwind-icons/icon-close-white.svg'
+import { ReactComponent as IconClose } from '../../../../icons/tailwind-icons/icon-close-white.svg'
 
 import app from '@frontastic/catwalk/src/js/app/app'
 import Markdown from '@frontastic/catwalk/src/js/component/markdown'
@@ -18,7 +18,7 @@ const Summary = ({ disabled = false, isLoading = false, onClick, buttonLabel, vo
         return state.cart?.cart?.data || {}
     })
 
-    const totalTaxes = taxed?.taxPortions?.reduce((a, b) => (a + b.amount), 0)
+    const totalTaxes = taxed?.taxPortions?.reduce((a, b) => a + b.amount, 0)
 
     const productPrice = lineItems?.reduce((a, b) => {
         if (b.discountedPrice) {
@@ -29,14 +29,17 @@ const Summary = ({ disabled = false, isLoading = false, onClick, buttonLabel, vo
     }, 0)
 
     const discountPrice = lineItems?.reduce((a, b) => {
-        return a + b.count * b.discounts.reduce((x, y) => {
-            return x + y.discountedAmount
-        }, 0)
+        return (
+            a +
+            b.count *
+                b.discounts.reduce((x, y) => {
+                    return x + y.discountedAmount
+                }, 0)
+        )
     }, 0)
 
     const onRemoveDiscount = (discountId) => {
-        app.getLoader('cart')
-            .removeDiscount(discountId)
+        app.getLoader('cart').removeDiscount(discountId)
     }
 
     return (
@@ -49,16 +52,20 @@ const Summary = ({ disabled = false, isLoading = false, onClick, buttonLabel, vo
                     <Price value={productPrice + discountPrice} />
                 </p>
 
-                {shippingMethod ?
+                {shippingMethod ? (
                     <>
                         <p className='text-md text-neutral-900 leading-normal'>
                             <FormattedMessage id='cart.shippingCosts' />
                         </p>
                         <p className='text-md text-right text-neutral-900 uppercase leading-normal'>
-                            {shippingMethod.price ? <Price value={shippingMethod.price} /> : <FormattedMessage id='checkout.freeShipping' /> }
+                            {shippingMethod.price ? (
+                                <Price value={shippingMethod.price} />
+                            ) : (
+                                <FormattedMessage id='checkout.freeShipping' />
+                            )}
                         </p>
                     </>
-                : null}
+                ) : null}
 
                 {discountCodes && discountCodes.length > 0 && (
                     <>
@@ -72,9 +79,7 @@ const Summary = ({ disabled = false, isLoading = false, onClick, buttonLabel, vo
                         {discountCodes.map((discount, i) => {
                             return (
                                 <React.Fragment key={i}>
-                                    <p className='text-md text-neutral-900 leading-normal'>
-                                        {discount.code}
-                                    </p>
+                                    <p className='text-md text-neutral-900 leading-normal'>{discount.code}</p>
                                     <p className='text-md text-right text-neutral-900 uppercase leading-normal'>
                                         <button
                                             className='ml-auto w-5 h-5 bg-neutral-300 rounded-full focus:outline-none'
@@ -103,7 +108,8 @@ const Summary = ({ disabled = false, isLoading = false, onClick, buttonLabel, vo
                 )}
 
                 <div className='text-sm text-neutral-600 col-start-auto col-end-span-2'>
-                    (<FormattedMessage id='cart.totalAmount' /> {totalTaxes && <Price value={totalTaxes} />} <FormattedMessage id='cart.inclVat' />)
+                    (<FormattedMessage id='cart.totalAmount' /> {totalTaxes && <Price value={totalTaxes} />}{' '}
+                    <FormattedMessage id='cart.inclVat' />)
                 </div>
             </div>
 
