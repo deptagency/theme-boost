@@ -11,20 +11,6 @@ try {
 }
 
 module.exports = (config, PRODUCTION, SERVER) => {
-    // Add some custom local aliases
-    config = merge(config, {
-        resolve: {
-            alias: {
-                Atoms: __dirname + '/src/js/patterns/atoms',
-                Molecules: __dirname + '/src/js/patterns/molecules',
-                Organisms: __dirname + '/src/js/patterns/organisms',
-                Templates: __dirname + '/src/js/patterns/templates',
-                Icons: __dirname + '/src/icons',
-                boost: __dirname + '/src',
-            },
-        },
-    })
-
     // Add tailwind configuration to SCSS compilation
     for (let rule of config.module.rules) {
         if (rule.use && Array.isArray(rule.use)) {
