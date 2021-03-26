@@ -3,7 +3,9 @@ import BREAKPOINTS from '../../../../config/breakpoints'
 
 const UseMdBreakpoint = () => {
     const { showPanel, showModal } = useSelector((state) => {
-        const width = state.renderContext.viewportDimension ? state.renderContext.viewportDimension.width : window.innerWidth
+        const width = state.renderContext.viewportDimension
+            ? state.renderContext.viewportDimension.width
+            : window.innerWidth
 
         return {
             showPanel: width < BREAKPOINTS.md,

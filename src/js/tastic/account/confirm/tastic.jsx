@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 import Message from '@frontastic/catwalk/src/js/app/message'
-import DefaultLoader from '../../../molecules/Loaders/DefaultLoader/index'
+import DefaultLoader from '../../../patterns/molecules/Loaders/DefaultLoader/index'
 
 /* Standard confirmation tasitc */
 class AccountConfirmTastic extends Component {

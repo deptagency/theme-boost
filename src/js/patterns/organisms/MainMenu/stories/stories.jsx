@@ -35,6 +35,5 @@ export const MobileNavigationModal = () => {
             }}
             navPath={navPath}
         />
-
     )
 }

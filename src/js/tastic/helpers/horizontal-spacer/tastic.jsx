@@ -20,9 +20,10 @@ const HorizontalSpacerTastic = ({ data }) => {
         <div
             className='horisontal-spacer-tastic'
             style={{
-            width: '100%',
-            height: `${spaceInPx}px`,
-        }} />
+                width: '100%',
+                height: `${spaceInPx}px`,
+            }}
+        />
     )
 }
 

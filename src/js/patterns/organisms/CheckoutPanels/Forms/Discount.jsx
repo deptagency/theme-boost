@@ -28,7 +28,7 @@ const Discount = ({ intl }) => {
                 type='text'
                 className='form-input my-3'
                 placeholder={discountPlaceholder}
-                onChange={e => setDiscountCode(e.target.value)}
+                onChange={(e) => setDiscountCode(e.target.value)}
                 value={discountCode}
             />
             <button

@@ -1,18 +1,18 @@
 @keyframes slideDown {
-  0% {
-    transform: scaleY(0);
-    height: 0;
-  }
-  100% {
-    transform: scaleY(1);
-    height: 32px;
-  }
+    0% {
+        transform: scaleY(0);
+        height: 0;
+    }
+    100% {
+        transform: scaleY(1);
+        height: 32px;
+    }
 }
 
 .arrow-up-system-error {
-  @apply w-0 h-0 border-l-4 border-r-4 border-b-4 border-x-transparent border-bottom-solid border-bottom-system-error mt-1 ml-10
+    @apply w-0 h-0 border-l-4 border-r-4 border-b-4 border-x-transparent border-bottom-solid border-bottom-system-error mt-1 ml-10;
 }
 
 .error-message-text-system-error {
-  @apply text-sm text-white bg-system-error p-2 leading-tight rounded w-auto inline-block
+    @apply text-sm text-white bg-system-error p-2 leading-tight rounded w-auto inline-block;
 }

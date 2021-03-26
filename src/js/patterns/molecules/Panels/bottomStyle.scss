@@ -1,17 +1,17 @@
 .boost-slide-bottom-panel {
-  .slide-pane {
-    @apply shadow-none mt-0 h-full
-  }
-
-  .slide-pane__header {
-    @apply hidden
+    .slide-pane {
+        @apply shadow-none mt-0 h-full;
     }
 
-  .slide-pane__content {
-    @apply p-0 overflow-hidden bg-background-primary
-  }
+    .slide-pane__header {
+        @apply hidden;
+    }
+
+    .slide-pane__content {
+        @apply p-0 overflow-hidden bg-background-primary;
+    }
 }
 
 .slide-pane__overlay.ReactModal__Overlay--after-open {
-  @apply bg-transparent transition-none
-  }
+    @apply bg-transparent transition-none;
+}

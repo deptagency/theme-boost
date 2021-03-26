@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
 import FullCart from './FullCart'
-import EmptyState, { icons } from '../../rganisms/EmptyState'
+import EmptyState, { icons } from '../../organisms/EmptyState'
 
 const Cart = ({ data, isLoading = false }) => {
     if (data && data.lineItems && data.lineItems.length > 0) {

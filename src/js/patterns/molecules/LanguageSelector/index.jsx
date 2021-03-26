@@ -34,10 +34,8 @@ LanguageSelector.propTypes = {
     className: PropTypes.string,
 }
 
-export default connect(
-    (globalState, props) => {
-        return {
-            context: globalState.app.context,
-        }
+export default connect((globalState, props) => {
+    return {
+        context: globalState.app.context,
     }
-)(LanguageSelector)
+})(LanguageSelector)

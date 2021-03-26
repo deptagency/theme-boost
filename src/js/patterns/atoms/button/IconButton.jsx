@@ -2,13 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-const IconButton = ({
-    icon,
-    name,
-    onClick = () => {},
-    children,
-    variant = 'text-2xl',
-}) => {
+const IconButton = ({ icon, name, onClick = () => {}, children, variant = 'text-2xl' }) => {
     return (
         <button
             aria-label={name}

@@ -2,6 +2,6 @@
     @apply appearance-none w-full bg-background-primary border border-neutral-300 text-base text-neutral-900 font-bold py-2 pl-4 pr-8 rounded leading-tight bg-background-primary;
 
     &:focus {
-        @apply outline-none border-neutral-600
+        @apply outline-none border-neutral-600;
     }
 }

@@ -5,9 +5,7 @@ import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 
 class ShowcaseTextTastic extends Component {
     render () {
-        return (
-            <div className='border m-2 p-2'>{this.props.data.showcaseText}</div>
-        )
+        return <div className='border m-2 p-2'>{this.props.data.showcaseText}</div>
     }
 }
 

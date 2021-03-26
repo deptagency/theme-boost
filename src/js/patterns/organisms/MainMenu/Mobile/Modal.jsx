@@ -6,10 +6,7 @@ import Scrollbars from 'react-custom-scrollbars'
 import TopCategories from './TopCategories'
 import Navigation from './Navigation'
 
-import {
-    categoryTreeType,
-    topCategoryType,
-} from '../types'
+import { categoryTreeType, topCategoryType } from '../types'
 
 const Modal = ({
     isOpen,
@@ -50,18 +47,22 @@ const Modal = ({
                     autoHide
                     // hiding horizontal scrollbar
                     hideTracksWhenNotNeeded
-                    renderView={p => { return <div {...p} style={{ ...p.style, overflowX: 'hidden' }} /> }}
+                    renderView={(p) => {
+                        return <div {...p} style={{ ...p.style, overflowX: 'hidden' }} />
+                    }}
                 >
                     <div
                         className='w-full ease-out-expo duration-20'
                         style={{ transform: `translateX(${level * -100}%)` }}
                     >
-                        {currentTree && <Navigation
-                            items={currentTree.children}
-                            navPath={navPath}
-                            onSelectItem={handleSelectNavItem}
-                            isActive={isOpen}
-                        />}
+                        {currentTree && (
+                            <Navigation
+                                items={currentTree.children}
+                                navPath={navPath}
+                                onSelectItem={handleSelectNavItem}
+                                isActive={isOpen}
+                            />
+                        )}
                     </div>
                 </Scrollbars>
             </div>

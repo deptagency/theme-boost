@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 import List from '../../List'
 
-import { ReactComponent as PayPalIcon } from '../../../../icons/paypal.svg'
-import { ReactComponent as VisaIcon } from '../../../../icons/visa.svg'
-import { ReactComponent as MastercardIcon } from '../../../../icons/mastercard.svg'
+import { ReactComponent as PayPalIcon } from '../../../../../icons/paypal.svg'
+import { ReactComponent as VisaIcon } from '../../../../../icons/visa.svg'
+import { ReactComponent as MastercardIcon } from '../../../../../icons/mastercard.svg'
 
 // icon map - should mirror the options in the tastic schema
 const paymentIcons = { paypal: PayPalIcon, visa: VisaIcon, mastercard: MastercardIcon }

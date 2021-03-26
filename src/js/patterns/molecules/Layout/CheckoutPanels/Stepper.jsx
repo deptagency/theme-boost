@@ -5,7 +5,9 @@ import Step from './Step'
 import { stepObject } from './stepObject'
 
 const Stepper = forwardRef(({ steps, current, setCurrent }, ts) => {
-    const Divider = () => { return (<span className='border-2 border-neutral-300 h-0 my-2 z-0' />) }
+    const Divider = () => {
+        return <span className='border-2 border-neutral-300 h-0 my-2 z-0' />
+    }
 
     return (
         <div className='max-w-960px mx-auto md:mt-4'>
@@ -34,11 +36,13 @@ const Stepper = forwardRef(({ steps, current, setCurrent }, ts) => {
                         {steps.map(({ name }, i) => {
                             return (
                                 <div key={i}>
-                                    <div className={classnames({
-                                        'mt-2 text-xs': true,
-                                        'text-neutral-600': i !== current,
-                                        'font-bold text-neutral-900': i === current,
-                                    })}>
+                                    <div
+                                        className={classnames({
+                                            'mt-2 text-xs': true,
+                                            'text-neutral-600': i !== current,
+                                            'font-bold text-neutral-900': i === current,
+                                        })}
+                                    >
                                         {name}
                                     </div>
                                 </div>

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 import app from 'frontastic-catwalk/src/js/app/app'
 
-import Price from '../../../../atoms/price'
-import Select from '../../../../atoms/select'
-import { ReactComponent as CartBin } from '../../../../../../icons/cart-bin.svg'
+import Price from '../../../atoms/price'
+import Select from '../../../atoms/select'
+import { ReactComponent as CartBin } from '../../../../../icons/cart-bin.svg'
 
 const Product = ({ intl, itemId, image, name, designer, count, price, discountedPrice, color, size }) => {
     const productCounter = Array.from(Array(10).keys()).map((i) => {

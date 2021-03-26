@@ -35,7 +35,9 @@ const sliderSettings = {
 const Slider = ({ intl, children, options = {} }) => {
     let sliderRef = useRef()
 
-    const handleSliderMove = (dir) => { return sliderRef.current.slider.goTo(dir) }
+    const handleSliderMove = (dir) => {
+        return sliderRef.current.slider.goTo(dir)
+    }
     return (
         <>
             <TinySlider settings={{ ...sliderSettings, ...options }} ref={sliderRef}>
@@ -44,12 +46,16 @@ const Slider = ({ intl, children, options = {} }) => {
             <ControlButton
                 name={intl.formatMessage({ id: 'slider.previous' })}
                 className='absolute left-0 middle'
-                onClick={() => { return handleSliderMove('prev') }}
+                onClick={() => {
+                    return handleSliderMove('prev')
+                }}
             />
             <ControlButton
                 name={intl.formatMessage({ id: 'slider.next' })}
                 className='absolute transform rotate-180 right-0'
-                onClick={() => { return handleSliderMove('next') }}
+                onClick={() => {
+                    return handleSliderMove('next')
+                }}
             />
         </>
     )

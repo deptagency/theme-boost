@@ -7,11 +7,7 @@ import { topCategoryType } from './types'
 import { useCurrentTopCategory, useNavPath } from './mainMenuState'
 import { useDeviceType } from '@frontastic/catwalk/src/js/helper/hooks/useDeviceType.js'
 
-const MainMenu = ({
-    topCategories,
-    logo, goToCartPage,
-    goToWishlistPage,
-    goToProfilePage }) => {
+const MainMenu = ({ topCategories, logo, goToCartPage, goToWishlistPage, goToProfilePage }) => {
     const [currentTopCategory, setCurrentTopCategory] = useCurrentTopCategory(0)
     const [navPath, setNavPath] = useNavPath([])
     const deviceType = useDeviceType()
@@ -29,14 +25,12 @@ const MainMenu = ({
         const cartLineItems = state.cart?.cart?.data?.lineItems || []
         const wishListLineItems = state.wishlist?.wishlist?.data?.lineItems || []
         return {
-            cartItemsCount: cartLineItems.reduce(
-                (accumulator, currentValue) => {
-                    return accumulator + currentValue.count
-                }, 0),
-            wishListLineItemsCount: wishListLineItems.reduce(
-                (accumulator, currentValue) => {
-                    return accumulator + currentValue.count
-                }, 0),
+            cartItemsCount: cartLineItems.reduce((accumulator, currentValue) => {
+                return accumulator + currentValue.count
+            }, 0),
+            wishListLineItemsCount: wishListLineItems.reduce((accumulator, currentValue) => {
+                return accumulator + currentValue.count
+            }, 0),
         }
     })
 

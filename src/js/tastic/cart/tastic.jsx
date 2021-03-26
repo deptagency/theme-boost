@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import Entity from 'frontastic-catwalk/src/js/app/entity'
 
-import DefaultLoader from '../../molecules/Loaders/DefaultLoader/index'
-import Cart from '../../organisms/Cart'
+import DefaultLoader from '../../patterns/molecules/Loaders/DefaultLoader/index'
+import Cart from '../../patterns/organisms/Cart'
 
 const CartTastic = ({ cart }) => {
     if (cart.loading) {

@@ -1,9 +1,9 @@
 .checkout-panels-slider {
-  .tns-outer {
-    // @apply doesn't work for custom classes, as this is an edge case for checkout panels
-    @media (max-width: 768px) {
-      min-height: calc(100vh - 230px);
+    .tns-outer {
+        // @apply doesn't work for custom classes, as this is an edge case for checkout panels
+        @media (max-width: 768px) {
+            min-height: calc(100vh - 230px);
+        }
+        min-height: calc(100vh - 245px);
     }
-    min-height: calc(100vh - 245px);
-  }
 }

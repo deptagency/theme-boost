@@ -7,7 +7,7 @@ import RemoteImage from '@frontastic/catwalk/src/js/remoteImage'
 
 import { ReactComponent as CloseIcon } from '../../../../icons/tailwind-icons/icon-close-black.svg'
 import { ReactComponent as WishlistHeart } from '../../../../icons/wishlist-heart.svg'
-import { ReactComponent as WishlistHeartFull } from '../../../../icons/tailwind--icons/icon-heart-full.svg'
+import { ReactComponent as WishlistHeartFull } from '../../../../icons/tailwind-icons/icon-heart-full.svg'
 import Price from '../../atoms/price'
 
 const ProductTeaser = ({

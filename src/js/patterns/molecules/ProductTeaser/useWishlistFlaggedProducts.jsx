@@ -32,8 +32,6 @@ const useWishlistFlaggedProducts = (products) => {
     }
 }
 
-useWishlistFlaggedProducts.propTypes = {
-
-}
+useWishlistFlaggedProducts.propTypes = {}
 
 export default useWishlistFlaggedProducts

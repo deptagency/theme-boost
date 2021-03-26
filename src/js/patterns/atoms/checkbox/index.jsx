@@ -3,16 +3,13 @@ import PropTypes from 'prop-types'
 import { v4 as uuidv4 } from 'uuid'
 
 const Checkbox = ({ value = false, className = '', label = '', onClick = () => {} }) => {
-    const [ id ] = useState(() => { return 'checkbox-' + uuidv4() })
+    const [id] = useState(() => {
+        return 'checkbox-' + uuidv4()
+    })
 
     return (
         <>
-            <input id={id}
-                type='checkbox'
-                className={`mr-2 ${className}`}
-                defaultChecked={value}
-                onClick={onClick}
-            />
+            <input id={id} type='checkbox' className={`mr-2 ${className}`} defaultChecked={value} onClick={onClick} />
             <label htmlFor={id}>{label}</label>
         </>
     )

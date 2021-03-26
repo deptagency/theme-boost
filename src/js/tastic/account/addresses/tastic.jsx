@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import tastify from '@frontastic/catwalk/src/js/helper/tastify'
 import app from '@frontastic/catwalk/src/js/app/app'
 
-import AccountMenu from '../../../molecules/Account/Menu'
-import WelcomeOverview from '../../../organisms/Account/AccountOverview/welcomeOverview'
-import AccountAddresses from '../../../organisms/Account/AccountAddresses'
+import AccountMenu from '../../../patterns/molecules/Account/Menu'
+import WelcomeOverview from '../../../patterns/organisms/Account/AccountOverview/welcomeOverview'
+import AccountAddresses from '../../../patterns/organisms/Account/AccountAddresses'
 
-import MENU_ITEMS from '../../../molecules/Account/Menu/MENU_ITEMS'
+import MENU_ITEMS from '../../../patterns/molecules/Account/Menu/MENU_ITEMS'
 
 const AccountAddressTastic = ({ data, context, route }) => {
     const [openPanel, setOpenPanel] = useState(true)

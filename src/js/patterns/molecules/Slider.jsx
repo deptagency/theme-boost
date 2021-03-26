@@ -31,11 +31,7 @@ const sliderSettings = {
 }
 
 const Slider = ({ children, options = {} }) => {
-    return (
-        <TinySlider settings={{ ...sliderSettings, ...options }}>
-            {children}
-        </TinySlider>
-    )
+    return <TinySlider settings={{ ...sliderSettings, ...options }}>{children}</TinySlider>
 }
 
 Slider.defaultProps = {
