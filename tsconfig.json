@@ -7,15 +7,7 @@
         "esModuleInterop": true,
         "sourceMap": true,
         "jsx": "react",
-        "baseUrl": ".",
-        "paths": {
-            "boost": ["src/*"],
-            "Atoms": ["src/js/patterns/atoms/*"],
-            "Molecules": ["src/js/patterns/molecules/*"],
-            "Organisms": ["src/js/patterns/organisms/*"],
-            "Templates": ["src/js/patterns/templates/*"],
-            "Icons": ["src/icons/*"]
-        }
+        "baseUrl": "."
     },
     "include": ["src/js/**/*", "src/js/types/custom.d.ts"]
 }
