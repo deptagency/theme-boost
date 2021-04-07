@@ -191,8 +191,6 @@ const Tile = ({
                     style={{height: fgSize}}
                 >
                     {/* rendering the 3 elements copy, img, cta based on the set order */}
-                    Foo
-                        Bar
                     {ordering === OrderingEnum.ImgCopyCta && renderImage()}
                     {renderCopy()}
                     {ordering === OrderingEnum.CopyCtaImg && renderCta()}
