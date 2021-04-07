@@ -45,7 +45,6 @@ const NavigationExpansionPanel = ({ item, expanded = false, handleClick }) => {
                                                 alt={child.configuration.displayMedia.media.title}
                                             />
                                         )}
-                                        />}
                                     </div>
                                 </NodeLink>
                                 {child.children.map((grandchild) => {

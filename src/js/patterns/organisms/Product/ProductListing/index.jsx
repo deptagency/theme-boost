@@ -35,7 +35,7 @@ const ProductListing = ({
         if (inView) {
             onLoadNextPage()
         }
-    }, [inView, onLoadNextPage])
+    }, [inView]) // eslint-disable-line react-hooks/exhaustive-deps
 
     const onFacetChange = (newFacet, index) => {
         data.stream.facets[index] = { ...newFacet }
