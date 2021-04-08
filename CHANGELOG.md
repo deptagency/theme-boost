@@ -1,5 +1,11 @@
 # boost Changelog
 
+## `1.3.0` (2021-04-08)
+
+* fix: Removed aliases in Webpack and TypeScript configuration which caused various build issues
+* fix: Remove test text in tastic
+* chore(fcli): Add custom stream handler for cli testing
+
 ## `1.2.6` (2021-03-24)
 
 
