@@ -27,8 +27,7 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
         return state.app.context || {}
     })
 
-    const handleAdyenResult = useCallback((paymentId, action, resultCode) => {
-        // eslint-disable-line react-hooks/exhaustive-deps
+    const handleAdyenResult = useCallback((paymentId, action, resultCode) => { // eslint-disable-line react-hooks/exhaustive-deps
         if (action) {
             switch (action.type) {
             case 'redirect':
@@ -73,12 +72,10 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
             break
         default:
             app.getLoader('context').notifyUser(<Message message={resultCode} />, 'error')
-            // throw { message: 'Payment result: ' + resultCode, resultCode: resultCode } // eslint-disable-line no-throw-literal
         }
     }) // eslint-disable-line react-hooks/exhaustive-deps
 
-    const makePayment = useCallback((paymentMethod, browserInfo = {}) => {
-        // eslint-disable-line react-hooks/exhaustive-deps
+    const makePayment = useCallback((paymentMethod, browserInfo = {}) => { // eslint-disable-line react-hooks/exhaustive-deps
         setPaymentDetailsValid(false)
 
         fetch('/api/payment/adyen/payment', {
@@ -132,11 +129,12 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
         }
 
         setPaymentDetailsValid(false)
-        setPaymentDetails(null)
+        setPaymentDetails(null)        
 
         const configuration = {
             ...paymentMethods.configuration,
-            // showPayButton: false,
+            //showPayButton: false,
+            //shopperLocale: 'de_DE',
             onChange: (state) => {
                 setPaymentDetailsValid(state.isValid)
                 setPaymentDetails(state.data)
@@ -171,52 +169,43 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
             },
         }
 
+        console.log(configuration)
+
         // eslint-disable-next-line no-undef
         const adyenCheckout = new AdyenCheckout(configuration)
         adyenComponentRef.current = adyenCheckout.create(paymentMethodType)
         adyenComponentRef.current.mount(containerElement.current)
     }, [paymentMethodType, paymentMethods]) // eslint-disable-line react-hooks/exhaustive-deps
 
-    useEffect(
-        () => {
-            if (!cart.isComplete() || containerElement.current == null) {
-                return
-            }
+    useEffect(() => {
+        if (!cart.isComplete() || containerElement.current == null) {
+            return
+        }
 
-            const urlParameters = new URLSearchParams(window.location.search)
-            const paymentId = urlParameters.get('adyenPaymentId')
-            if (paymentId === null) {
-                return
-            }
+        const urlParameters = new URLSearchParams(window.location.search)
+        const paymentId = urlParameters.get('adyenPaymentId')
+        if (paymentId === null) {
+            return
+        }
 
-            const payment = data.payments.find((payment) => payment.id === paymentId)
-            if (payment === undefined) {
-                return
-            }
+        const payment = data.payments.find((payment) => payment.id === paymentId)
+        if (payment === undefined) {
+            return
+        }
 
-            const resultCode = payment.paymentDetails.adyenResultCode
-            if (resultCode === 'Authorised' || resultCode === 'Received') {
-                app.getLoader('cart')
-                    .checkout()
-                    .catch((error) => {
-                        app.getLoader('context').notifyUser(<Message {...error} />, 'error')
-                    })
-            } else {
-                goToPanelIndex(2)
+        const resultCode = payment.paymentDetails.adyenResultCode
+        if (resultCode === 'Authorised' || resultCode === 'Received') {
+            app.getLoader('cart')
+                .checkout()
+                .catch((error) => {
+                    app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+                })
+        } else {
+            goToPanelIndex(2)
 
-                app.getLoader('context').notifyUser(<Message message={resultCode} />, 'error')
-
-                // try {
-                //    handleAdyenResult(paymentId, payment.paymentDetails.adyenAction, payment.paymentDetails.adyenResultCode)
-                // } catch (error) {
-                //  if (error.resultCode && error.resultCode === 'Refused') {
-                //        app.getLoader('context').notifyUser(<Message {...error} />, 'error')
-                //  }
-                // }
-            }
-        },
-        [app, cart, data.payments, goToPanelIndex]
-    ) // eslint-disable-line react-hooks/exhaustive-deps
+            app.getLoader('context').notifyUser(<Message message={resultCode} />, 'error')
+        }
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <StickyRightColumn
