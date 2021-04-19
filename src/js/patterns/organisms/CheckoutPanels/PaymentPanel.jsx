@@ -30,48 +30,48 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
     const handleAdyenResult = useCallback((paymentId, action, resultCode) => { // eslint-disable-line react-hooks/exhaustive-deps
         if (action) {
             switch (action.type) {
-            case 'redirect':
-                switch (action.method) {
-                case 'GET':
-                    window.location = action.url
-                    return
-                case 'POST':
-                    const form = document.createElement('form')
-                    form.method = 'POST'
-                    form.action = action.url
-                    Object.entries(action.data).forEach(([key, value]) => {
-                        const input = document.createElement('input')
-                        input.type = 'hidden'
-                        input.name = key
-                        input.value = value
-                        form.appendChild(input)
-                    })
-                    document.body.appendChild(form)
-                    form.submit()
-                    return
+                case 'redirect':
+                    switch (action.method) {
+                        case 'GET':
+                            window.location = action.url
+                            return
+                        case 'POST':
+                            const form = document.createElement('form')
+                            form.method = 'POST'
+                            form.action = action.url
+                            Object.entries(action.data).forEach(([key, value]) => {
+                                const input = document.createElement('input')
+                                input.type = 'hidden'
+                                input.name = key
+                                input.value = value
+                                form.appendChild(input)
+                            })
+                            document.body.appendChild(form)
+                            form.submit()
+                            return
+                        default:
+                            throw { message: 'Unknown redirect method ' + action.method } // eslint-disable-line no-throw-literal
+                    }
+                case 'voucher':
+                    throw { message: 'Voucher action not yet supported' } // eslint-disable-line no-throw-literal
                 default:
-                    throw { message: 'Unknown redirect method ' + action.method } // eslint-disable-line no-throw-literal
-                }
-            case 'voucher':
-                throw { message: 'Voucher action not yet supported' } // eslint-disable-line no-throw-literal
-            default:
-                paymentIdRef.current = paymentId
-                adyenComponentRef.current.handleAction(action)
-                return
+                    paymentIdRef.current = paymentId
+                    adyenComponentRef.current.handleAction(action)
+                    return
             }
         }
 
         switch (resultCode) {
-        case 'Authorised':
-        case 'Received':
-            app.getLoader('cart')
-                .checkout()
-                .catch((error) => {
-                    app.getLoader('context').notifyUser(<Message {...error} />, 'error')
-                })
-            break
-        default:
-            app.getLoader('context').notifyUser(<Message message={resultCode} />, 'error')
+            case 'Authorised':
+            case 'Received':
+                app.getLoader('cart')
+                    .checkout()
+                    .catch((error) => {
+                        app.getLoader('context').notifyUser(<Message {...error} />, 'error')
+                    })
+                break
+            default:
+                app.getLoader('context').notifyUser(<Message message={resultCode} />, 'error')
         }
     }) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -129,12 +129,12 @@ const PaymentPanel = ({ app, cart, intl, data, goToPanelIndex, isLoading = false
         }
 
         setPaymentDetailsValid(false)
-        setPaymentDetails(null)        
+        setPaymentDetails(null)
 
         const configuration = {
             ...paymentMethods.configuration,
-            //showPayButton: false,
-            //shopperLocale: 'de_DE',
+            // showPayButton: false,
+            // shopperLocale: 'de_DE',
             onChange: (state) => {
                 setPaymentDetailsValid(state.isValid)
                 setPaymentDetails(state.data)
