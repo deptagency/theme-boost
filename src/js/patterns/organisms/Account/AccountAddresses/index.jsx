@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
+import app from '@frontastic/catwalk/src/js/app/app'
 import Button from '../../../atoms/button'
 
 import useMdBreakpoint from '../../../molecules/Layout/Breakpoints/useMdBreakpoint'
@@ -21,9 +22,6 @@ const AccountAddresses = ({
     onClose,
     addresses,
     countries,
-    handleAddAddress,
-    handleUpdateAddress,
-    handleRemoveAddress,
 }) => {
     const [showCreateAddressPanel, setShowCreateAddressPanel] = useState(false)
     const [showCreateAddressModal, setShowCreateAddressModal] = useState(false)
@@ -114,7 +112,12 @@ const AccountAddresses = ({
                     onSubmit={(address) => {
                         setShowLoader(true)
 
-                        handleAddAddress(address)
+                        app.getLoader('context').addAddress(address).then(() => {
+                            app.getLoader('context').refresh()
+
+                            setShowCreateAddressPanel(false)
+                            setShowCreateAddressModal(false)
+                        })
                     }}
                 />
             </PanelModalResponsive>
@@ -138,7 +141,12 @@ const AccountAddresses = ({
                         onSubmit={(address) => {
                             setShowLoader(true)
 
-                            handleUpdateAddress(address)
+                            app.getLoader('context').updateAddress(address).then(() => {
+                                app.getLoader('context').refresh()
+
+                                setShowEditAddressPanel(false)
+                                setShowEditAddressModal(false)
+                            })
                         }}
                     />
                 </PanelModalResponsive>
@@ -163,7 +171,12 @@ const AccountAddresses = ({
                         onRemoveAddressClicked={() => {
                             setShowLoader(true)
 
-                            handleRemoveAddress(activeAddress)
+                            app.getLoader('context').removeAddress(activeAddress).then(() => {
+                                app.getLoader('context').refresh()
+
+                                setShowDeleteAddressPanel(false)
+                                setShowDeleteAddressModal(false)
+                            })
                         }}
                     />
                 </PanelModalResponsive>
@@ -178,9 +191,6 @@ AccountAddresses.propTypes = {
     onClose: PropTypes.func.isRequired,
     addresses: PropTypes.array.isRequired,
     countries: PropTypes.array.isRequired,
-    handleAddAddress: PropTypes.func.isRequired,
-    handleUpdateAddress: PropTypes.func.isRequired,
-    handleRemoveAddress: PropTypes.func.isRequired,
 }
 
 export default injectIntl(AccountAddresses)
