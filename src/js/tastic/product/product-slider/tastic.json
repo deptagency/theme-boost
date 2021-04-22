@@ -5,7 +5,7 @@
     "category": "Boost Theme",
     "schema": [
         {
-            "name": "Stream Selection",
+            "name": "Data source",
             "fields": [
                 {
                     "label": "title",
@@ -20,7 +20,7 @@
                     "default": ""
                 },
                 {
-                    "label": "Stream",
+                    "label": "Data source filters",
                     "field": "stream",
                     "type": "stream",
                     "streamType": "product-list",

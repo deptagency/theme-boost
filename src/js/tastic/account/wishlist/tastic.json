@@ -5,10 +5,10 @@
     "icon": "menu",
     "schema": [
         {
-            "name": "Stream Selection",
+            "name": "Data source",
             "fields": [
                 {
-                    "label": "Stream",
+                    "label": "Data source filers",
                     "field": "stream",
                     "type": "stream",
                     "streamType": "account-wishlists",
