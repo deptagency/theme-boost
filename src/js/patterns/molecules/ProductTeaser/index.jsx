@@ -20,7 +20,7 @@ const ProductTeaser = ({
     showCloseIcon = false,
 }) => {
     const variant = variantProp || variants[0]
-    const { price, discountedPrice, images } = variant
+    const { price, discountedPrice, images, currency } = variant
 
     return (
         <>
@@ -58,7 +58,7 @@ const ProductTeaser = ({
             </div>
             <div className='p-4'>
                 <div className='font-bold'>{name}</div>
-                <Price variant='text-lg text-neutral-700 py-1' value={discountedPrice || price} />
+                <Price variant='text-lg text-neutral-700 py-1' value={discountedPrice || price} currency={currency} />
             </div>
         </>
     )
