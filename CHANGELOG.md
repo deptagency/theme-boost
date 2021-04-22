@@ -1,5 +1,15 @@
 # boost Changelog
 
+## `1.3.1` (2021-04-22)
+
+* product slider added currency
+* account typo fix
+* user state updated and modal closed after CRUD actions
+* yarn fix
+* chore(boost): fixed eslint errors
+* code refactoring
+* renames injections to injection
+
 ## `1.3.0` (2021-04-08)
 
 * fix: Removed aliases in Webpack and TypeScript configuration which caused various build issues
