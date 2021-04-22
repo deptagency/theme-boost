@@ -14,7 +14,7 @@
                     "default": ""
                 },
                 {
-                    "label": "Desctiprion",
+                    "label": "Description",
                     "field": "description",
                     "type": "string",
                     "default": ""
