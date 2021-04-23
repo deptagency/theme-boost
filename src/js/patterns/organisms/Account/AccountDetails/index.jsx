@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import { FormattedMessage } from 'react-intl'
 
+import app from '@frontastic/catwalk/src/js/app/app'
+
 import useMdBreakpoint from '../../../molecules/Layout/Breakpoints/useMdBreakpoint'
 import PanelModalResponsive from '../../../molecules/Layout/PanelModalResponsive'
 import PanelBlockResponsive from '../../../molecules/Layout/PanelBlockResponsive'
@@ -16,8 +18,6 @@ const AccountDetails = ({
     email,
     openPanel,
     onClose,
-    handlePasswordChange,
-    handleUpdateUserDetails,
 }) => {
     const [showEditDetailsPanel, setShowEditDetailsPanel] = useState(false)
     const [showEditDetailsModal, setShowEditDetailsModal] = useState(false)
@@ -73,7 +73,13 @@ const AccountDetails = ({
                     showLoader={showLoader}
                     onSubmit={(data) => {
                         setShowLoader(true)
-                        handleUpdateUserDetails(data)
+
+                        app.getLoader('context').updateUser(data).then(() => {
+                            app.getLoader('context').refresh()
+
+                            setShowEditDetailsPanel(false)
+                            setShowEditDetailsModal(false)
+                        })
                     }}
                 />
             </PanelModalResponsive>
@@ -93,7 +99,13 @@ const AccountDetails = ({
                     showLoader={showLoader}
                     onSubmit={(oldPassword, newPassword) => {
                         setShowLoader(true)
-                        handlePasswordChange(oldPassword, newPassword)
+
+                        app.getLoader('context').updatePassword(oldPassword, newPassword).then(() => {
+                            app.getLoader('context').refresh()
+
+                            setShowChangePasswordPanel(false)
+                            setShowChangePasswordModal(false)
+                        })
                     }}
                 />
             </PanelModalResponsive>
@@ -107,8 +119,6 @@ AccountDetails.propTypes = {
     email: PropTypes.string.isRequired,
     openPanel: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
-    handlePasswordChange: PropTypes.func.isRequired,
-    handleUpdateUserDetails: PropTypes.func.isRequired,
 }
 
 export default AccountDetails

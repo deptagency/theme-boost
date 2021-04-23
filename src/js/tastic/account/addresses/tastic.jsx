@@ -39,9 +39,6 @@ const AccountAddressTastic = ({ data, context, route }) => {
                 onClose={() => {
                     setOpenPanel(false)
                 }}
-                handleAddAddress={app.getLoader('context').addAddress}
-                handleUpdateAddress={app.getLoader('context').updateAddress}
-                handleRemoveAddress={app.getLoader('context').removeAddress}
             />
         </AccountMenu>
     )

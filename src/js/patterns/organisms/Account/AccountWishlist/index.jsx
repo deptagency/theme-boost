@@ -5,11 +5,14 @@ import EmptyWishlist from './emptyWishlist'
 import Error from './error'
 import { FormattedMessage } from 'react-intl'
 import { animated, useTransition } from 'react-spring'
+
+import app from '@frontastic/catwalk/src/js/app/app'
 import useComponentSize from '@frontastic/catwalk/src/js/helper//hooks/useIsomorphicComponentSize'
+
 import DefaultLoader from '../../../molecules/Loaders/DefaultLoader/index'
 import usePhotoScale from './usePhotoScale'
 
-const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage }) => {
+const AccountWishlist = ({ wishlist, returnToHomePage }) => {
     const [wishlistChanging, setWishlistChanging] = useState(false)
     const [wishlistItems, setWishlistItems] = useState([])
     const wishlistContainerRef = useRef(null)
@@ -104,7 +107,10 @@ const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage 
                                                                 showCloseIcon
                                                                 handleRemoveFromWishlist={() => {
                                                                     setWishlistChanging(true)
-                                                                    handleRemoveFromWishlist(item.lineItemId)
+
+                                                                    app.getLoader('wishlist').removeLineItem(wishlist.data.wishlistId, {
+                                                                        lineItemId: item.lineItemId,
+                                                                    })
                                                                 }}
                                                             />
                                                         </div>
@@ -125,7 +131,6 @@ const AccountWishlist = ({ wishlist, handleRemoveFromWishlist, returnToHomePage 
 
 AccountWishlist.propTypes = {
     wishlist: PropTypes.object.isRequired,
-    handleRemoveFromWishlist: PropTypes.func.isRequired,
     returnToHomePage: PropTypes.func.isRequired,
 }
 

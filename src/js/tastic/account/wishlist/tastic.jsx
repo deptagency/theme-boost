@@ -10,11 +10,6 @@ const AccountWishlistsTastic = ({ wishlist }) => {
     return (
         <AccountWishlist
             wishlist={wishlist}
-            handleRemoveFromWishlist={(itemId) => {
-                app.getLoader('wishlist').removeLineItem(wishlist.data.wishlistId, {
-                    lineItemId: itemId,
-                })
-            }}
             returnToHomePage={() => {
                 app.getRouter().history.replace('/')
             }}
@@ -26,9 +21,4 @@ AccountWishlistsTastic.propTypes = {
     wishlist: PropTypes.object.isRequired,
 }
 
-export default tastify({
-    translate: true,
-    connect: {
-        wishlist: true,
-    },
-})(AccountWishlistsTastic)
+export default tastify({ translate: true, connect: { wishlist: true } })(AccountWishlistsTastic)

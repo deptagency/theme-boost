@@ -40,8 +40,6 @@ const AccountProfileTastic = ({ context, route }) => {
                 onClose={() => {
                     setOpenPanel(false)
                 }}
-                handlePasswordChange={app.getLoader('context').updatePassword}
-                handleUpdateUserDetails={app.getLoader('context').updateUser}
             />
         </AccountMenu>
     )
