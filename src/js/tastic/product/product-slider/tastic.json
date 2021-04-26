@@ -27,7 +27,7 @@
                     "default": null
                 },
                 {
-                    "label": "# Products",
+                    "label": "Number of products",
                     "field": "productCount",
                     "type": "integer",
                     "default": 5
