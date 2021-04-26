@@ -56,19 +56,19 @@
             "name": "Sidebar",
             "fields": [
                 {
-                    "label": "Show Sidebar",
+                    "label": "Show sidebar",
                     "field": "showSidebar",
                     "type": "boolean",
                     "default": true
                 },
                 {
-                    "label": "Sidebar Header",
+                    "label": "Sidebar header",
                     "field": "sidebarHeader",
                     "translatable": true,
                     "type": "string"
                 },
                 {
-                    "label": "Navigation Tree",
+                    "label": "Navigation tree",
                     "field": "tree",
                     "type": "tree"
                 }
