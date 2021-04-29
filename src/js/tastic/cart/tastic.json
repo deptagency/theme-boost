@@ -5,7 +5,7 @@
     "category": "Cart",
     "schema": [
         {
-            "name": "Company Menu",
+            "name": "Company menu",
             "fields": []
         }
     ]

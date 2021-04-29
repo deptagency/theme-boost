@@ -1,7 +1,7 @@
 {
     "tasticType": "frontastic/boost/product-details/price",
     "name": "Product Price",
-    "category": "Product Details",
+    "category": "Product details",
     "icon": "local_offer",
     "schema": [
         {

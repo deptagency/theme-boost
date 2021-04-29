@@ -1,11 +1,11 @@
 {
     "tasticType": "frontastic/boost/checkout-footer",
-    "name": "Checkout Footer",
+    "name": "Checkout footer",
     "icon": "menu",
     "category": "Checkout",
     "schema": [
         {
-            "name": "Meta Navigation",
+            "name": "Meta navigation",
             "fields": [
                 {
                     "label": "Title",

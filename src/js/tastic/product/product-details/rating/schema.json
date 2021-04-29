@@ -1,7 +1,7 @@
 {
     "tasticType": "frontastic/boost/product-details/rating",
     "name": "Product Rating",
-    "category": "Product Details",
+    "category": "Product details",
     "icon": "star",
     "schema": [
         {

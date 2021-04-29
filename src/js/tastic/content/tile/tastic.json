@@ -40,7 +40,7 @@
             "helpText": "Choose the placement of the tastic",
             "fields": [
                 {
-                    "label": "Vertical Position",
+                    "label": "Vertical position",
                     "field": "verticalPosition",
                     "translatable": false,
                     "type": "enum",
@@ -62,7 +62,7 @@
                     ]
                 },
                 {
-                    "label": "Horizontal Position",
+                    "label": "Horizontal position",
                     "field": "horizontalPosition",
                     "translatable": false,
                     "type": "enum",

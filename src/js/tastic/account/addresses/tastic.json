@@ -1,6 +1,6 @@
 {
     "tasticType": "frontastic/boost/account/addresses",
-    "name": "Account Address",
+    "name": "Account address",
     "category": "Account",
     "icon": "menu",
     "schema": [

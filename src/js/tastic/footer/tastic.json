@@ -33,7 +33,7 @@
             ]
         },
         {
-            "name": "Help & Information Links",
+            "name": "Help and information Links",
             "fields": [
                 {
                     "label": "Header",
@@ -82,7 +82,7 @@
             ]
         },
         {
-            "name": "Contact Info",
+            "name": "Contact info",
             "fields": [
                 {
                     "label": "Header",
@@ -90,12 +90,12 @@
                     "type": "string"
                 },
                 {
-                    "label": "Phone Number",
+                    "label": "Phone number",
                     "field": "phoneNumber",
                     "type": "string"
                 },
                 {
-                    "label": "Phone Number Subline",
+                    "label": "Phone number subline",
                     "field": "phoneNumberSubline",
                     "type": "string"
                 },
@@ -105,17 +105,17 @@
                     "type": "string"
                 },
                 {
-                    "label": "E-Mail Overline",
+                    "label": "E-Mail overline",
                     "field": "emailOverline",
                     "type": "string"
                 }
             ]
         },
         {
-            "name": "About Links",
+            "name": "About links",
             "fields": [
                 {
-                    "label": "About Header",
+                    "label": "About header",
                     "field": "aboutHeader",
                     "type": "string"
                 },
@@ -161,10 +161,10 @@
             ]
         },
         {
-            "name": "Payment Methods",
+            "name": "Payment methods",
             "fields": [
                 {
-                    "label": "Payment Methods",
+                    "label": "Payment methods",
                     "field": "paymentMethods",
                     "type": "group",
                     "itemLabelField": "icon",

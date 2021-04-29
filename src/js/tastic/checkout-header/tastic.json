@@ -1,6 +1,6 @@
 {
     "tasticType": "frontastic/boost/checkout-header",
-    "name": "Checkout Header",
+    "name": "Checkout header",
     "icon": "menu",
     "category": "Checkout",
     "schema": [

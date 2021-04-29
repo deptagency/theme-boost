@@ -8,13 +8,13 @@
             "name": "Basics",
             "fields": [
                 {
-                    "label": "Full Viewport Width?",
+                    "label": "Full viewport width?",
                     "field": "isFullWidth",
                     "type": "boolean",
                     "default": false
                 },
                 {
-                    "label": "Content Full Width",
+                    "label": "Content full width",
                     "helpText": "Fills the whole width of the container. Good for wide images",
                     "field": "fgIsFullWidth",
                     "type": "boolean",
@@ -39,7 +39,7 @@
                     ]
                 },
                 {
-                    "label": "Aspect Ratio",
+                    "label": "Aspect ratio",
                     "field": "aspect",
                     "type": "enum",
                     "default": "16/9",
@@ -63,7 +63,7 @@
                     ]
                 },
                 {
-                    "label": "Content Order",
+                    "label": "Content order",
                     "field": "ordering",
                     "type": "enum",
                     "required": true,
@@ -84,7 +84,7 @@
                     ]
                 },
                 {
-                    "label": "Content Position",
+                    "label": "Content position",
                     "field": "contentPos",
                     "type": "enum",
                     "required": true,
@@ -92,7 +92,7 @@
                     "values": [
                         {
                             "value": "left-top",
-                            "name": "Left Top"
+                            "name": "Left top"
                         },
                         {
                             "value": "top",
@@ -100,7 +100,7 @@
                         },
                         {
                             "value": "right-top",
-                            "name": "Right Top"
+                            "name": "Right top"
                         },
                         {
                             "value": "left",
@@ -116,7 +116,7 @@
                         },
                         {
                             "value": "left-bottom",
-                            "name": "Left Bottom"
+                            "name": "Left bottom"
                         },
                         {
                             "value": "bottom",
@@ -124,12 +124,12 @@
                         },
                         {
                             "value": "right-bottom",
-                            "name": "Right Bottom"
+                            "name": "Right bottom"
                         }
                     ]
                 },
                 {
-                    "label": "Content Alignment",
+                    "label": "Content alignment",
                     "field": "fgAlign",
                     "type": "enum",
                     "required": true,
@@ -150,7 +150,7 @@
                     ]
                 },
                 {
-                    "label": "Content Height",
+                    "label": "Content height",
                     "field": "fgSize",
                     "type": "enum",
                     "required": true,
@@ -170,7 +170,7 @@
             "name": "Background",
             "fields": [
                 {
-                    "label": "Background Color",
+                    "label": "Background color",
                     "field": "bgColor",
                     "type": "string",
                     "default": "#ffffff"
@@ -184,7 +184,7 @@
         },
 
         {
-            "name": "Foreground Image",
+            "name": "Foreground image",
             "fields": [
                 {
                     "label": "Image",
@@ -203,13 +203,13 @@
                     "default": ""
                 },
                 {
-                    "label": "Bold Headline?",
+                    "label": "Bold headline?",
                     "field": "isHeadlineBold",
                     "type": "boolean",
                     "default": true
                 },
                 {
-                    "label": "Headline Size",
+                    "label": "Headline size",
                     "field": "headlineSize",
                     "type": "enum",
                     "default": "xl",
@@ -251,13 +251,13 @@
                     "default": ""
                 },
                 {
-                    "label": "Bold Subhead?",
+                    "label": "Bold subhead?",
                     "field": "isSubheadBold",
                     "type": "boolean",
                     "default": false
                 },
                 {
-                    "label": "Subhead Size",
+                    "label": "Subhead size",
                     "field": "subheadSize",
                     "type": "enum",
                     "default": "3xl",
@@ -301,7 +301,7 @@
                     "default": ""
                 },
                 {
-                    "label": "CTA Color",
+                    "label": "CTA color",
                     "field": "ctaColor",
                     "type": "enum",
                     "default": "primary",

@@ -25,7 +25,7 @@
                     ]
                 },
                 {
-                    "label": "Content Position",
+                    "label": "Content position",
                     "field": "contentPos",
                     "type": "enum",
                     "required": true,
@@ -70,7 +70,7 @@
                     ]
                 },
                 {
-                    "label": "Content Alignment",
+                    "label": "Content alignment",
                     "field": "fgAlign",
                     "type": "enum",
                     "required": true,
@@ -91,7 +91,7 @@
                     ]
                 },
                 {
-                    "label": "Content Height",
+                    "label": "Content height",
                     "field": "fgSize",
                     "type": "enum",
                     "required": true,
@@ -111,13 +111,13 @@
             "name": "Background",
             "fields": [
                 {
-                    "label": "Background Color",
+                    "label": "Background color",
                     "field": "bgColor",
                     "type": "string",
                     "default": "#ffffff"
                 },
                 {
-                    "label": "Background Image",
+                    "label": "Background image",
                     "field": "bgImage",
                     "type": "media"
                 }

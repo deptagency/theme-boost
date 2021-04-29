@@ -1,6 +1,6 @@
 {
     "tasticType": "frontastic/boost/account/access",
-    "name": "Account Access",
+    "name": "Account access",
     "category": "Account",
     "icon": "menu",
     "schema": []

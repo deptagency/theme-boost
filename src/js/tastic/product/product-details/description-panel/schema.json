@@ -1,7 +1,7 @@
 {
     "tasticType": "frontastic/boost/product-details/description-panel",
     "name": "Description Panel",
-    "category": "Product Details",
+    "category": "Product details",
     "icon": "wrap_text",
     "schema": [
         {

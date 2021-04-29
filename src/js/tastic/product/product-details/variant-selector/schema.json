@@ -1,11 +1,11 @@
 {
     "tasticType": "frontastic/boost/product-details/variant-selector",
-    "name": "Product Variant Selector",
-    "category": "Product Details",
+    "name": "Product variant selector",
+    "category": "Product details",
     "icon": "list",
     "schema": [
         {
-            "name": "Product Configuration",
+            "name": "Product configuration",
             "fields": [
                 {
                     "label": "Stream",

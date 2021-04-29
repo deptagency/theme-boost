@@ -1,6 +1,6 @@
 {
     "tasticType": "frontastic/boost/account/profile",
-    "name": "Account Profile",
+    "name": "Account profile",
     "category": "Account",
     "icon": "menu",
     "schema": []

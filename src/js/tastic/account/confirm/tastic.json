@@ -1,6 +1,6 @@
 {
     "tasticType": "frontastic/boost/account/confirm",
-    "name": "Account Confirm",
+    "name": "Account confirm",
     "category": "Account",
     "icon": "menu",
     "schema": []

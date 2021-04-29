@@ -1,7 +1,7 @@
 {
     "tasticType": "frontastic/boost/product-details/product-images",
     "name": "Product Images",
-    "category": "Product Details",
+    "category": "Product details",
     "icon": "photo",
     "schema": [
         {
