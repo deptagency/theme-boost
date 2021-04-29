@@ -176,7 +176,7 @@
                     "default": "#ffffff"
                 },
                 {
-                    "label": "Background Image",
+                    "label": "Background image",
                     "field": "bgImage",
                     "type": "media"
                 }

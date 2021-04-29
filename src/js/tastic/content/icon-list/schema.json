@@ -8,7 +8,7 @@
             "name": "Configuration",
             "fields": [
                 {
-                    "label": "CSS Class",
+                    "label": "Css class",
                     "field": "className",
                     "type": "string",
                     "default": ""

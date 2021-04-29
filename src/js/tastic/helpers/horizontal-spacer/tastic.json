@@ -15,11 +15,11 @@
                     "values": [
                         {
                             "value": "xxs",
-                            "name": "Extra Extra Small (4px)"
+                            "name": "Extra extra small (4px)"
                         },
                         {
                             "value": "xs",
-                            "name": "Extra Small (8px)"
+                            "name": "Extra small (8px)"
                         },
                         {
                             "value": "sm",
@@ -35,13 +35,13 @@
                         },
                         {
                             "value": "xl",
-                            "name": "Extra Large (24px)"
+                            "name": "Extra large (24px)"
                         }
                     ],
                     "default": "xl"
                 },
                 {
-                    "label": "Space in px (Overrides Size field)",
+                    "label": "Space in px (overrides size field)",
                     "field": "spaceInPx",
                     "type": "integer",
                     "default": ""

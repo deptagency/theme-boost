@@ -14,7 +14,7 @@
                     "default": true
                 },
                 {
-                    "label": "Stream",
+                    "label": "Data source filter",
                     "field": "stream",
                     "type": "stream",
                     "streamType": "product",

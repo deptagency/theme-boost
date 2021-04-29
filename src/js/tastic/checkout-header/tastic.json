@@ -8,10 +8,6 @@
             "name": "Logo",
             "fields": [
                 {
-                    "type": "description",
-                    "text": "Select a logo to overwrite the default 'Catwalk'."
-                },
-                {
                     "label": "Logo",
                     "field": "logo",
                     "type": "media",

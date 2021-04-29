@@ -8,7 +8,7 @@
             "name": "Shipping countries",
             "fields": [
                 {
-                    "label": "Countries",
+                    "label": "Country",
                     "field": "countries",
                     "type": "group",
                     "itemLabelField": "name",

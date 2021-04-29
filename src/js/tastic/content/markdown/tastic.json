@@ -11,7 +11,7 @@
                     "label": "Content",
                     "field": "text",
                     "type": "markdown",
-                    "default": "* Enter\n* some\n* Markdown",
+                    "default": "* Enter\n* some\n* markdown",
                     "translatable": true
                 },
                 {
@@ -32,7 +32,7 @@
                     "type": "enum",
                     "default": "none",
                     "values": [
-                        { "value": "none", "name": "No Padding" },
+                        { "value": "none", "name": "No padding" },
                         { "value": "small", "name": "Small" },
                         { "value": "middle", "name": "Middle" },
                         { "value": "large", "name": "Large" }

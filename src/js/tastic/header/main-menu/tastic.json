@@ -12,7 +12,7 @@
                     "text": "Choose a few top categories to be displayed on top of the navigation. Selecting a top category will allow the consumer to navigate to its tree."
                 },
                 {
-                    "label": "Top Categories",
+                    "label": "Top categories",
                     "field": "topCategories",
                     "type": "group",
                     "itemLabelField": "name",
@@ -25,7 +25,7 @@
                             "type": "string"
                         },
                         {
-                            "label": "Navigation Tree",
+                            "label": "Navigation tree",
                             "field": "tree",
                             "type": "tree"
                         },
@@ -51,10 +51,6 @@
         {
             "name": "Logo",
             "fields": [
-                {
-                    "type": "description",
-                    "text": "Select a logo to overwrite the default 'Catwalk'."
-                },
                 {
                     "label": "Logo",
                     "field": "logo",

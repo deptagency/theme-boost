@@ -5,7 +5,7 @@
     "category": "Footer",
     "schema": [
         {
-            "name": "Meta Navigation",
+            "name": "Meta navigation",
             "fields": [
                 {
                     "label": "Title",
@@ -33,7 +33,7 @@
             ]
         },
         {
-            "name": "Help and information Links",
+            "name": "Help and information links",
             "fields": [
                 {
                     "label": "Header",

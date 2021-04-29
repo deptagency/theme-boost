@@ -33,7 +33,7 @@
                     "values": [
                         {
                             "value": "left-top",
-                            "name": "Left Top"
+                            "name": "Left top"
                         },
                         {
                             "value": "top",
@@ -41,7 +41,7 @@
                         },
                         {
                             "value": "right-top",
-                            "name": "Right Top"
+                            "name": "Right top"
                         },
                         {
                             "value": "left",
@@ -57,7 +57,7 @@
                         },
                         {
                             "value": "left-bottom",
-                            "name": "Left Bottom"
+                            "name": "Left bottom"
                         },
                         {
                             "value": "bottom",
@@ -65,7 +65,7 @@
                         },
                         {
                             "value": "right-bottom",
-                            "name": "Right Bottom"
+                            "name": "Right bottom"
                         }
                     ]
                 },
