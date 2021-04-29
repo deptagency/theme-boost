@@ -8,7 +8,7 @@
             "name": "Configuration",
             "fields": [
                 {
-                    "label": "Data source filter",
+                    "label": "Data source filters",
                     "field": "stream",
                     "type": "stream",
                     "streamType": "product",

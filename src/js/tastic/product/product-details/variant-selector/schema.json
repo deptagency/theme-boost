@@ -8,7 +8,7 @@
             "name": "Product configuration",
             "fields": [
                 {
-                    "label": "Data source filter",
+                    "label": "Data source filters",
                     "field": "stream",
                     "type": "stream",
                     "streamType": "product",
@@ -21,7 +21,7 @@
                     "default": true
                 },
                 {
-                    "label": "Possible Attributes",
+                    "label": "Possible attributes",
                     "field": "possibleAttributes",
                     "type": "group",
                     "itemLabelField": "label",

@@ -17,7 +17,7 @@
                     "label": "Content",
                     "field": "text",
                     "type": "markdown",
-                    "default": "* Enter\n* some\n* Markdown",
+                    "default": "* Enter\n* some\n* markdown",
                     "translatable": true
                 }
             ]

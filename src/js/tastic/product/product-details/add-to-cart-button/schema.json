@@ -1,6 +1,6 @@
 {
     "tasticType": "frontastic/boost/product-details/add-to-cart-button",
-    "name": "Add to cart Button",
+    "name": "Add to cart button",
     "category": "Product details",
     "icon": "call_to_action",
     "schema": [
@@ -14,7 +14,7 @@
                     "default": true
                 },
                 {
-                    "label": "Data source filter",
+                    "label": "Data source filters",
                     "field": "stream",
                     "type": "stream",
                     "streamType": "product",
