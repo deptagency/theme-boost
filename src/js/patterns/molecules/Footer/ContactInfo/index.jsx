@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ReactComponent as ChatIcon } from '../../../../../icons/tailwind-icons/icon-chat.svg'
 
-const ContactInfo = ({ header, phoneNumber, email }) => {
+const ContactInfo = ({ header, phoneNumber, phoneNumberSubline, email, emailOverline }) => {
     return (
         <div className='flex flex-col text-sm'>
             {header && (
@@ -14,7 +14,9 @@ const ContactInfo = ({ header, phoneNumber, email }) => {
 
             <ul className='flex flex-col ml-6 leading-tight text-neutral-200'>
                 <li className='mb-2'>{phoneNumber}</li>
+                {phoneNumberSubline && (<li className='mb-2'>{phoneNumberSubline}</li>)}
                 <li className='mb-2'>{email}</li>
+                {emailOverline && (<li className='mb-2' style={{ textDecoration: 'overline' }}>{emailOverline}</li>)}
             </ul>
         </div>
     )
@@ -23,7 +25,9 @@ const ContactInfo = ({ header, phoneNumber, email }) => {
 ContactInfo.propTypes = {
     header: PropTypes.string,
     phoneNumber: PropTypes.string,
+    phoneNumberSubline: PropTypes.string,
     email: PropTypes.string,
+    emailOverline: PropTypes.string,
 }
 
 export default ContactInfo
