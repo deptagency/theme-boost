@@ -1,5 +1,541 @@
 # boost Changelog
 
+## `1.3.2` (2021-04-29)
+
+
+* misc: Tagged release 1.3.2 for boost
+* fix: update user context after address, user details, password changes
+* added contacts and fixed menu
+* footer list fix
+* misc: Tagged release 1.3.1 for boost
+* product slider added currency
+* account typo fix
+* user state updated and modal closed after CRUD actions
+* yarn fix
+* chore(boost): fixed eslint errors
+* code refactoring
+* renames injections to injection
+* misc: Tagged release 1.3.0 for boost
+* fix: remove test text in tastic
+* chore(fcli): add custom stream handler for cli testing
+* fixed bug
+* fix: Also remove aliases from tsconfig
+* removed temp test eslint
+* boost alias updates
+* misc: Tagged release 1.2.6 for boost
+* notifications fixed
+* fix: fixes the types in boost theme ForegroundImage
+* yarn fix
+* removed unecessary code
+* fill user billing and shipping information if user is loggedin in checkout
+* added go to last step on error
+* testing paypal
+* Copy changes
+* disabled showPayButton
+* show correct prices
+* adyen checkout bugfixes
+* checkout moved pay button to right column in last checkout step
+* refactored checkout
+* misc: Tagged release 1.2.5 for boost
+* added error message in checkuot if products are out of stock
+* product listing on load next page fix
+* fix: reuse same adyen component for additional data
+* disabled additional rendering for paypal
+* yarn fix
+* paypal fix, added paypal csp policy
+* upgraded adyen js/css files
+* paypal render additional settings fix
+* added more adyen csp rules for paypal
+* added csp policy for paypal and added paypal payment method
+* misc: Tagged release 1.2.4 for boost
+* refused payments show error message
+* misc: Tagged release 1.2.2 for boost
+* added checkout translations
+* misc: Tagged release 1.2.1 for boost
+* adyen creditcart 3d fingerprint authentication fix
+* misc: Tagged release 1.2.0 for boost
+* fixed adyen payment
+* removed discount price
+* added language selector and fixed checkout issues
+* adyen payment fix
+* added de language to english_demo
+* fixed checkout error messages
+* adyen fixes
+* checkout counties are imported from commercetools
+* fixed adyen payments
+* adyen checkout success path fix
+* fixed js issues
+* adyen integration, discounts, taxes
+* fix: Cleanup duplicate branching for basically the same reason
+* misc: Tagged release 1.1.5 for boost
+* fix: Handle click on top category without subtree in mobile nav, too
+* misc: Tagged release 1.1.4 for boost
+* fix: If there is no tree consider top category a link
+* misc: Tagged release 1.1.3 for boost
+* fix: Also size & optionally label in order view
+* misc: Tagged release 1.1.2 for boost
+* fix: Try to also optionally handle size as enum
+* misc: Tagged release 1.1.1 for boost
+* fix: paths to used icons was wrong
+* eslint fixes
+* misc: Tagged release 1.1.0 for boost
+* feat: adds PDP text panels
+* misc: Tagged release 1.0.3 for boost
+* feat: adds simple-tile tastic
+* misc: Tagged release 1.0.2 for boost
+* removed shortid from checkbox component
+* misc: Tagged release 1.0.1 for boost
+* removed mobile header menu about us information
+* fix: CS.
+* misc: Tagged release 1.0.0 for boost
+* fix: leftover console.log
+* feat: adds original aspect ratio to the tile
+* unrelated. tastic crashed w/o translate:true
+* unrelated. added TS eslint plugin
+* removed header padding from content in mobile
+* fix: Upgraded @types/react consistently to 17.0.0
+* fix: Wrap all commands modifying the git index into <retry>
+* misc: Tagged release 1.0.0-rc.10 for boost
+* fix: Changed file extensions so the SVGR webpack plugin hits in
+* fix: turns starRating into tsx component
+* locks @types/react version
+* fix: attempt to TS errors
+* fix: no comment :-/
+* fix: lint errors
+* feat: adds @react/types
+* feat: custom types for boost.
+* fix: adds our path aliases to TS
+* fix: css updates to PDP tastics
+* fix: adds missing pdp tastic imports
+* fix: various small fixes for PDP tastics
+* fix: adds missing key prop to StarRating
+* feat: adds "boost" as lowercase import alias
+* fix: menu on mobile covered part of the pdp
+* fix: small width fix and reformats
+* feat: Header atom
+* feat: simple product images tastic
+* feat: generic icon list tastic (WiP)
+* feat: add to cart button
+* feat: attribute selector
+* feat: generic dropdown
+* work in progress
+* work in progress
+* product-listing js warning fix
+* fix: added missing comma
+* fixed filter bug in search page, filters now pass additional url parameters
+* fixed category listing bug
+* added relative width and fixed screen width responsive classes
+* Merge branch 'master' into kore/kameleoon
+* added white background to checkout panels
+* Merge branch 'master' into kore/kameleoon
+* misc: Tagged release 1.0.0-rc.9 for boost
+* product category, slider grid layout fix
+* Revert "Revert "Merge branch 'kore/kameleoon' into m+p1m""
+* fixed base font
+* Revert "Merge branch 'kore/kameleoon' into m+p1m"
+* fix: image stretching in slider on safari and flicker of noimage (tempfix)
+* fixed eslint
+* Merge branch 'master' into phase1/main
+* fixed product page layout
+* refactored cart
+* Merge branch 'kore/kameleoon' into m+p1m
+* fix: bugfixes, types and cleanups for tile2
+* Merge branch 'master' into kore/kameleoon
+* fix: removes console.log
+* fixes tile to not getting tw styles to get purged
+* misc: Tagged release 1.0.0-rc.8 for boost
+* merge
+* badge pasitioning fix
+* adds fullwidth cond render, fixes fully clickable tile
+* horizontal spacer fix
+* updates the tile with more features
+* misc: Tagged release 1.0.0-rc.7 for boost
+* fixed js errors in various components
+* Merge branch 'master' into kore/kameleoon
+* Merge branch 'master' into kore/kameleoon
+* fix: FT-329
+* fix: lint
+* fix: removes header and adjust pagination color
+* fix: filename typo
+* fix: eslint
+* fix: turns the success notification green
+* feat: adds a new notification component
+* refactor: removes catewalk notification from pw reset
+* refactor: removes instances of notifications from subcomponents
+* refactor: connect notifications to the store
+* fix: temp deactivates eslint ruler for inline functions
+* lintfix
+* merge
+* fix: adds missing autofocus prop to standard input
+* feat: uses new searchform in desktop and mobile
+* refactor: renames widgets to IconNavigation
+* feat: adds a search form component
+* fixed filter bug
+* merge
+* Merge branch 'master' into kore/kameleoon
+* fixed Tile reference js bug
+* fixed Tile reference issue
+* fix: Use sensuible default values
+* category filters eslint fixes
+* added new breakpoint to product slider
+* bug fixes
+* refactor: removes boost storybook (for now) and rehooks
+* refactor: replaces rehooks with isomorphioc version
+* fix lint errors
+* category filters initial commit
+* fix: Use pure string prop type since everything is supposed to be translated
+* fix: Ensure even small images span their box
+* fix: grid was missing
+* Merge branch 'master' into kore/a11y
+* misc: Tagged release 1.0.0-rc.7 for boost
+* fix: also mind the catwalk styles when purging the CSS
+* Merge branch 'master' into kore/typescript-types
+* chore(a11y): Provide labels for all input elements
+* chore(a11y): Icrease contrast ratio for buttons
+* chore(a11y): Added aria-label to all buttons without a clear label
+* chore (a11y): CS & start providing translated labels to buttons
+* misc: Tagged release 1.0.0-rc.6 for boost
+* fix: Removed the fixed height & width solved already by RemoteImage
+* fix: Allow anonymous access to wishlist
+* fix: Position control buttons without overlay
+* removes old imports
+* refactor: boost theme css cleanup
+* fix: Pad remote images by default (no cropping)
+* fix: Use RemoteImage on PDP for optimized image delivery
+* fix: Added lodash dependency to backstage
+* feat: Implementd translations directly in `tastify`
+* Merge branch 'master' into hco/boost-hide-navigation-with-js
+* Merge branch 'master' into kore/lodash
+* feat: Got rid of lodash in boost theme
+* fix: added ts check to package.json for ci
+* adds copy of client tsconfig to boost theme
+* misc: removed unused server.js from theme
+* feat: Only render mobile navigation on mobile
+* Merge branch 'master' into kore/lodash
+* feat: Switched to lodash-es instead of plain lodash
+* feat: Configure tailwind CSS purging directly in boost theme
+* refactor: changes secondary colors to 200/500/800
+* refactor: changes primary colors to 200/500/800
+* refactor: updates theme colors to convention
+* fix: Temporarily disable packaging of Boost Theme to get a build.  #release
+* feat: Split some tastics into asyncComponent
+* Use image in navigation header and added TODO about DOM size
+* fix: Duplicate project name.
+* fix: Make Boost theme use global react.xml build targets.
+* fix: There is no caption…
+* fix: CS.
+* fix: use remote image for optimal image delivery
+* fix: removes unused onChange prop
+* fix: More resilient product stream handling in slider
+* refactor: removes old MarginBreakout
+* fix: slider cutoff, implements buttons via Sofia
+* renames imports of FullPageWidthWrapper
+* renames marginbreakout
+* fix: updates react-redux to fix ssr errors
+* fix: CS
+* Merge branch 'master' into kore/theme-from-config
+* fix: More occurrances of react_bootstrap.xml.
+* fix(boost-theme): header refactored, removed: Grid and Cell components
+* style fixes
+* feat: Read Boost Theme theme prperties from project.yml
+* product details page: add to watchlist icon position fixed
+* misc: Tagged release 1.0.0-rc.5 for boost
+* fix: Do not hide SSR overlay
+* misc: Tagged release 1.0.0-rc.4 for boost
+* fix: partly reimplementation of spaces fixes
+* eslint fix
+* initial commit
+* feat(boost-theme): themes adjustment and cleanup
+* feat(boost-theme): adapted for pictures with the white background
+* feat(boost-theme): added boilerplate theme file
+* feat(boost-theme): themable Boost theme
+* Merge branch 'master' into fix/layout-spacings
+* fix: removes more outside spacings
+* fix: removes resize event handlers from grid
+* fix(boost-theme): using the default theme
+* fix(boost-theme): product teaser - clickable
+* feat(boost-theme): theming - next phase
+* fix(boost-theme): custom hook and some photo scaling (solution for now, until we get more customized photos from commerce tools)
+* feat(boost-theme): added ability to change the basic theme of the Boost theme
+* fix(boost-theme): preventing extra border
+* fix(boost-theme): getting back the height transition + some refactor
+* Merge branch 'master' into wishlist-ui-brushups
+* feat(boost): adding products on wishlist brushed
+* fix(boost-theme): adjusting z-index so it doesn't overlap with mobile menu
+* Merge branch 'master' into wishlist-ui-brushups
+* feat(boost): brushups on wishlist, added borders
+* refactor(boost-theme): error handling on wishlist page
+* refactor(boost-theme): moving catwalk functions to the tastic level
+* refactor(boost-theme): small code consistency
+* change also resetPassword token to confirmationToken
+* feat(boost): added transition to the layout
+* Merge branch 'master' into wishlist-empty-state
+* feat(boost-theme): functionality for empty state
+* refactor(boost-theme): moving code from tastic to a organism component
+* refactor(boost-theme): resolving conflicts
+* Merge branch 'master' into boost-mobile-navigation-links-footer
+* feat(boost-theme): wishlist functionality and some refactorings
+* lint fix
+* cleans spacings in other components
+* cleans spacings in header components
+* adds a page wrapper and cleans up the grid a bit
+* feat(boost-theme): implemented footer links mobile
+* fixed empty state story bug
+* fix: coding style
+* feat(Nan): made component NoOrders
+* feat(Nan): Empty state for orders and addresses
+* fixed top menu icons
+* fix(boost-theme): css adjustments
+* fix(boost-theme): adding pointer
+* feat(boost-theme): account links on mobile menu
+* Merge branch 'sanja/scrollbars-swap'
+* refactor(account): swapped react-scrollbars-custom with react-custom-scrollbars for consistency across the Boost theme
+* fix: eslint warnings
+* fix: coding style
+* fix(account): height on the account menu for desktop
+* feat(boost-theme): disappearing notifications
+* removed unused api methods
+* feat(BOOST-219): order detail UI finished
+* addresses finished
+* initial commit
+* feat(account): layout for order preview
+* fix: coding style
+* Clean up - forgotten prop.
+* refactor(account): using AccountMenu on different pages
+* lint fixes
+* Adds a story with a menu
+* Merge branch 'master' into refactor/empty-state
+* Some cleanup and more functionality for EmptyState
+* refactor(account): using `ButtonWithLoader` component for code consistency
+* feat(account): user can't update email
+* feat(account): loaders and notifications in place
+* feat(account): user details form validation
+* feat(account): simple password requirement
+* feat(account): Changing password by user
+* Merge branch 'master' into refactor/empty-state
+* Merge branch 'master' into bugfix/storybook-translations
+* feat(account): responsive account ui
+* Merge branch 'master' into bugfix/breakpoints
+* work in progress
+* removes a forgotten console.log
+* removes IntlProvider which I just used for testing
+* fixes react-intl in storybook
+* prepares docs addon for 6.0 release and removes warning
+* upgrades storybook to latest version
+* upgrades storybook to latest version
+* CS
+* added temporarly logout button
+* Setting up basic password recovery.
+* connected with profile tastic and style improvemed
+* Merge branch 'master' into boost-221-account-overview-markup
+* added translation
+* BC: Rename confirmation token route parameter
+* Merge branch 'master' into boost-221-account-overview-markup
+* style brushups and added translations
+* made accound overview markup
+* Register and Login functionality.
+* Eslint fixes.
+* Merge remote-tracking branch 'origin/master' into account-login-signup-markup
+* added login signup markup
+* Checkout - error handling bug fix.
+* Added noImage for product slider.
+* Merge remote-tracking branch 'origin/master'
+* Fixing image size on the product page.
+* Translation - order id.
+* Error logic and refactor.
+* code refactoring
+* fixed errors constrast issue, js validation fixed
+* Merge remote-tracking branch 'origin/master' into Checkout-success-error-integration
+* added checkout success error components
+* Refactor.
+* Refactor.
+* Merge branch 'master' into sanja/add-to-cart-loader
+* LoaderButton on the product page.
+* Setting button loaders on checkout panels.
+* Classes tidy up.
+* Tagged release 1.0.0-rc.3 for boost
+* Moved boost theme webpack configurations to boost theme webpack plugin
+* Classes tidy up.
+* UI for form validation message.
+* Console error - fix.
+* Clean up and refactor.
+* Clean up.
+* Sticky footer.
+* Clean up.
+* Bug fix.
+* Clean up.
+* Loaders on cart and checkout pages.
+* Merge remote-tracking branch 'origin/checkout-api' into checkout-api
+* Clean up.
+* removed comments
+* Merge remote-tracking branch 'origin/master' into checkout-api
+* removed loaded, loading, error stuff
+* checkout api main functionality done
+* fixed transition delay of main menu
+* checkout form default values
+* fixed js validation errors
+* refactoring code
+* Merge remote-tracking branch 'origin/master' into checkout-api
+* theme-boost: fix failing tests because of eslint
+* Work in progress.
+* Work in progress.
+* Fixed mobile menu UI
+* added default countries
+* yarn fix
+* Merge branch 'boost-194-error-page'
+* imported fullCartLoader to checkout and cart
+* navigation and design fixes
+* Merge branch 'checkout-from-loaders' into boost-196-checkout-UI
+* Tagged release 1.0.0-rc.2
+* Translations and renamings.
+* added width
+* removed from newsletter component
+* added fixed width
+* made full cart loader in Storybook
+* Work in progress.
+* Tagged release 1.0.0-rc.1
+* Added loader
+* Merge branch 'master' into boost-188-thank-you-page
+* Merge branch 'master' into boost-194-error-page
+* added routing and translation
+* added routing
+* Adding translations
+* Merge remote-tracking branch 'origin/master'
+* Feature Service - small correction
+* Merge branch 'master' of https://github.com/FrontasticGmbH/frontastic
+* checkout footer breakpoint fixed
+* Merge remote-tracking branch 'origin/master'
+* Tailwind class typo fix
+* Merge branch 'master' into boost-189-footer-checkout
+* fixing height footer
+* Footer position adjusting.
+* renaming
+* Merge branch 'master' into boost-189-footer-checkout
+* fixed logo and storybook
+* Using `cart.isComplete()`
+* Merge remote-tracking branch 'origin/checkout-forms' into checkout-forms
+* fixed height issue
+* Translations and renamings.
+* fixed height glich
+* added MarginBreakout
+* added propTypes
+* adding MetaNav
+* js validation fixes
+* fixeed spacing and changed the Route
+* finished checkout
+* added footer checkout tastic and route to homepage
+* basic checkout form validation
+* testing
+* checkout error page made in storybook
+* Creating checkout header tastic
+* made header checkout tastic
+* styling adjustment
+* removes css breakpoints
+* refactoring done
+* payment and overview panels done
+* removed cart from checkout panels
+* initial shipping panel done
+* made Chekout Confirmation page in Storybook
+* first changes
+* Merge remote-tracking branch 'origin/master' into checkout-forms
+* initial
+* moving checkout footer to folder
+* Merge branch 'master' into boost-191-config.js-cleaning
+* added translations and button
+* yarn fix
+* added proptypes
+* creating checkout footer in storybook
+* changed color
+* changed classname on logo
+* made checkout header in storybook
+* CS
+* Fix merge problem
+* Merge branch 'master' into kirill/BOOST-177-product-details-page-tech-debt
+* Use correct new count when updating cart items
+* Make designer, color and size of product optional
+* fixed height in mobile main menu
+* Only show one product image
+* Show variant selector only when attributes are available
+* Added popup alert for the presentational purposes.
+* Go to next panel only if the current form is valid.
+* boost-theme: fix failing test (again)
+* boost-theme: fix failing test
+* merged master
+* Merge branch 'master' into boost-191-config.js-cleaning
+* cleaning up classes
+* Refactor all other comments from PR (excluding comment regarding horizontal spacer)
+* Refactor setSelectedVariantIndex property name to onChange
+* Make logo clickable
+* fixed cart
+* Merge branch 'master' into sanja/checkout-stepper-layout
+* Console warnings cleared.
+* Adjust styles for badge
+* Viewport dimension bug fixed.
+* Adjust styles
+* removed classes from tailwind.config.js
+* Fix eslint/prettier stuf
+* Add Badge to storybook
+* Finish with logic
+* Implement design for badge, add usage to the MainMenu component
+* Removed it from Stroybook as translations are not working.
+* Console warnings cleanup.
+* Checkout Stepper Layout
+* Merge branch 'master' into feature/product-listing
+* Various cleanups from PR Feedback + CSS updates
+* Renames sticker component file
+* Adds missing icon
+* Move testing, storybook, webpack packages to devDepencencies
+* Remove all unused dependencies, move all used dependencies from devDepencencies to normal dependencies
+* Merge branch 'master' into feature/product-listing
+* css, wishlist return value fix
+* rename, cleanup, fixes
+* rename, rework some of that tree logic
+* Added margins to the icons.
+* Putting back the margin.
+* Storybook brush up.
+* Code alignment.
+* Refactor.
+* Storybook listing.
+* Abstracting layout for cart and checkout page.
+* fixed cart summary
+* fixed cart validation errors
+* Padding fix on the FeatureService.
+* Padding fix on the FeatureService.
+* theme-boost: fix failing test
+* Tagged release 1.0.0-beta.91
+* Title of Sidebar/CategoryNavigation optional
+* Sidebar refactor - adds dynamic data - refactors to CategoryNavigation
+* Merge branch 'master' into 165-markdown-storybook
+* changes dummy text of filters
+* adds aspect ratio spacing to tailwind
+* sets proper category for listing page
+* adds tailwind icons
+* adds stickers and wishlist button
+* Adds a product teaser component
+* renames tastic, adds category
+* adds product listings
+* Refactor Horizontal Spacer to use more human-understandable size descriptions, but leave ability to have just space in px
+* added Markdown in Storybook
+* fixed body margins
+* added tailwind styling
+* remmoved shadow styles from tailwind.config
+* fixed body layout
+* CR fixes
+* Merge branch 'master' into cart-tastics-rework
+* Product page -adding divider.
+* JS fixes
+* CF fixes
+* boost 174 - margin header alignment
+* refactored cart story
+* js fixes
+* finished cart
+* fixed cart select product
+* Merge branch 'master' into cart-tastics-rework
+* cart refactoring
+* Removed old boost files. Added fixture file.
+* Merge remote-tracking branch 'origin/master' into cart-tastics-rework
+* initial commit
+
 ## `1.3.1` (2021-04-22)
 
 * product slider added currency
