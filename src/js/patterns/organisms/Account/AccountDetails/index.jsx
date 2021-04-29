@@ -75,8 +75,6 @@ const AccountDetails = ({
                         setShowLoader(true)
 
                         app.getLoader('context').updateUser(data).then(() => {
-                            app.getLoader('context').refresh()
-
                             setShowEditDetailsPanel(false)
                             setShowEditDetailsModal(false)
                         })
@@ -101,8 +99,6 @@ const AccountDetails = ({
                         setShowLoader(true)
 
                         app.getLoader('context').updatePassword(oldPassword, newPassword).then(() => {
-                            app.getLoader('context').refresh()
-
                             setShowChangePasswordPanel(false)
                             setShowChangePasswordModal(false)
                         })

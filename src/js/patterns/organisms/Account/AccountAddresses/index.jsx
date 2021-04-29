@@ -113,8 +113,6 @@ const AccountAddresses = ({
                         setShowLoader(true)
 
                         app.getLoader('context').addAddress(address).then(() => {
-                            app.getLoader('context').refresh()
-
                             setShowCreateAddressPanel(false)
                             setShowCreateAddressModal(false)
                         })
@@ -142,8 +140,6 @@ const AccountAddresses = ({
                             setShowLoader(true)
 
                             app.getLoader('context').updateAddress(address).then(() => {
-                                app.getLoader('context').refresh()
-
                                 setShowEditAddressPanel(false)
                                 setShowEditAddressModal(false)
                             })
@@ -172,8 +168,6 @@ const AccountAddresses = ({
                             setShowLoader(true)
 
                             app.getLoader('context').removeAddress(activeAddress).then(() => {
-                                app.getLoader('context').refresh()
-
                                 setShowDeleteAddressPanel(false)
                                 setShowDeleteAddressModal(false)
                             })
