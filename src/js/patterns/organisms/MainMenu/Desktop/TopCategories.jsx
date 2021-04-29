@@ -11,7 +11,11 @@ const TopCategories = ({ topCategories, currentTopCategory, handleClick }) => {
     return (
         <div className='flex items-center'>
             {topCategories.map((item, i) => {
-                if (!item.tree || !item.tree.depth) {
+                if (!item.tree) {
+                    return null
+                }
+
+                if (item.tree.children.length === 0) {
                     return (
                         <Reference
                             key={item.reference.target}
@@ -28,14 +32,14 @@ const TopCategories = ({ topCategories, currentTopCategory, handleClick }) => {
 
                 return (
                     <NodeLink
-                        key={item.tree.nodeId}
+                        key={i}
                         node={item.tree}
                         className={classnames({
                             'mr-4 font-bold text-neutral-600 text-sm py-2': true,
                             'text-neutral-900 border-b-2 border-neutral-900': i === currentTopCategory,
                         })}
                         onClick={(e) => {
-                            return handleClick(e, i)
+                            handleClick(e, i)
                         }}
                     >
                         {item.name}
