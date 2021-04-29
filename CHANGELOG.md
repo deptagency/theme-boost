@@ -1,5 +1,9 @@
 # boost Changelog
 
+## `1.3.3` (2021-04-29)
+
+* theme-boost changelog fix
+
 ## `1.3.2` (2021-04-29)
 
 * fix: update user context after address, user details, password changes
