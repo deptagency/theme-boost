@@ -7,8 +7,30 @@ import { topCategoryType } from './types'
 import { useCurrentTopCategory, useNavPath } from './mainMenuState'
 import { useDeviceType } from '@frontastic/catwalk/src/js/helper/hooks/useDeviceType.js'
 
+const findChildren = (children, currentNodeId) => {
+    return children.find((category) => {
+        return category.nodeId === currentNodeId || (category.children && findChildren(category.children, currentNodeId))
+    })
+}
+
+const getCurrentTopCategory = (topCategories, currentNodeId) => {
+    let index = topCategories.findIndex((category, i) => {
+        return category.tree.nodeId === currentNodeId || (category.tree.children && findChildren(category.tree.children, currentNodeId))
+    })
+
+    if (index === -1) {
+        return 0
+    } else {
+        return index
+    }
+}
+
 const MainMenu = ({ topCategories, logo, goToCartPage, goToWishlistPage, goToProfilePage }) => {
-    const [currentTopCategory, setCurrentTopCategory] = useCurrentTopCategory(0)
+    const currentNodeId = useSelector((state) => {
+        return state.app && state.app.route && state.app.route.parameters && state.app.route.parameters.nodeId
+    })
+
+    const [currentTopCategory, setCurrentTopCategory] = useCurrentTopCategory(getCurrentTopCategory(topCategories, currentNodeId))
     const [navPath, setNavPath] = useNavPath([])
     const deviceType = useDeviceType()
 
