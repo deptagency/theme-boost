@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import Popup from 'reactjs-popup'
@@ -12,7 +13,21 @@ import { ReactComponent as IconChevronLeft } from '../../../../../../icons/tailw
 import { ReactComponent as IconChevronRight } from '../../../../../../icons/tailwind-icons/icon-cheveron-right.svg'
 
 const FacetModal = ({ intl, facet, onChange }) => {
+    const locale = useSelector((globalState) => {
+        return globalState.app && globalState.app.context && globalState.app.context.locale
+    })
+
+    const facetsData = useSelector((globalState) => {
+        return globalState.facet && globalState.facet.facets && globalState.facet.facets.data
+    })
+
     const getFacetName = () => {
+        const c = facetsData.find((f) => { return f.attributeId === facet.key })
+
+        if (c && c.label) {
+            return c.label[locale]
+        }
+
         return FacetService.getFacetName(facet)
     }
 

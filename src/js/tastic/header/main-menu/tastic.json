@@ -20,7 +20,7 @@
                         {
                             "label": "Name",
                             "field": "name",
-                            "translatable": false,
+                            "translatable": true,
                             "required": true,
                             "type": "string"
                         },
