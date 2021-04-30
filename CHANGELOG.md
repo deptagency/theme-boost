@@ -1,5 +1,11 @@
 # boost Changelog
 
+## `1.3.4` (2021-04-30)
+
+
+* fixed top menu navigation
+* facets have translations, markdown panel applied with classes, top menu items are translatable
+
 ## `1.3.3` (2021-04-29)
 
 * theme-boost changelog fix
