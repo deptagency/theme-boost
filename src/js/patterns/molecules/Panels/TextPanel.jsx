@@ -22,8 +22,8 @@ function TextPanel ({ title, body }) {
                     </i>
                 </h3>
                 <Markdown
-                    className={`text-sm text-gray-700 overflow-hidden transition-max-height duration-300 ease-in ${
-                        open ? 'max-h-736px' : 'max-h-0'
+                    className={`markdown-text text-sm text-gray-700 overflow-hidden transition-max-height duration-300 ease-in ${
+                        open ? 'max-h-736px' : 'hidden'
                     }`}
                     text={body}
                 />

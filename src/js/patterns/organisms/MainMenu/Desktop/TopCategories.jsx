@@ -24,6 +24,9 @@ const TopCategories = ({ topCategories, currentTopCategory, handleClick }) => {
                                 'mr-4 font-bold text-neutral-600 text-sm py-2': true,
                                 'text-neutral-900 border-b-2 border-neutral-900': i === currentTopCategory,
                             })}
+                            onClick={(e) => {
+                                handleClick(e, i)
+                            }}
                         >
                             {item.name}
                         </Reference>

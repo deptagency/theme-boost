@@ -53,7 +53,7 @@ const Desktop = ({
                         topCategories={topCategories}
                         currentTopCategory={currentTopCategory}
                         handleClick={(e, i) => {
-                            e.preventDefault()
+                            // e.preventDefault()
                             handleSelectTopCategory(i)
                         }}
                     />

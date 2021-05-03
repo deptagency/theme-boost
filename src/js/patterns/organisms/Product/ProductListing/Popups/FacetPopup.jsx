@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
@@ -15,11 +16,25 @@ import { ReactComponent as IconChevronDown } from '../../../../../../icons/tailw
 const FacetPopup = ({ intl, initialFacet, onChange }) => {
     const [facet, setFacet] = useState({ ...initialFacet })
 
+    const locale = useSelector((globalState) => {
+        return globalState.app && globalState.app.context && globalState.app.context.locale
+    })
+
+    const facetsData = useSelector((globalState) => {
+        return globalState.facet && globalState.facet.facets && globalState.facet.facets.data
+    })
+
     const onOpenPopup = () => {
         setFacet({ ...initialFacet })
     }
 
     const getFacetName = () => {
+        const c = facetsData.find((f) => { return f.attributeId === initialFacet.key })
+
+        if (c && c.label) {
+            return c.label[locale]
+        }
+
         return FacetService.getFacetName(initialFacet)
     }
 
