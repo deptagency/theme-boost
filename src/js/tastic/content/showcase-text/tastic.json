@@ -1,11 +1,11 @@
 {
     "tasticType": "frontastic/boost/content/showcase-text",
-    "name": "Showcase Text",
+    "name": "Showcase text",
     "category": "Content",
     "icon": "menu",
     "schema": [
         {
-            "name": "Showcase Text",
+            "name": "Showcase text",
             "fields": [
                 {
                     "label": "Showcase text",

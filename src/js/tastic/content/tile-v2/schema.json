@@ -332,7 +332,7 @@
                     "default": false
                 },
                 {
-                    "label": "Is Button?",
+                    "label": "Is button?",
                     "field": "ctaIsButton",
                     "type": "boolean",
                     "default": false

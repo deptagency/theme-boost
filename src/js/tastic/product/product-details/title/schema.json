@@ -1,11 +1,11 @@
 {
     "tasticType": "frontastic/boost/product-details/title",
-    "name": "Product Title",
+    "name": "Product title",
     "category": "Product details",
     "icon": "title",
     "schema": [
         {
-            "name": "Product Configuration",
+            "name": "Product configuration",
             "fields": [
                 {
                     "label": "Data source filters",

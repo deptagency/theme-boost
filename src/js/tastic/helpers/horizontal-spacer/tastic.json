@@ -1,11 +1,11 @@
 {
     "tasticType": "frontastic/boost/helpers/horizontal-spacer",
-    "name": "Horizontal Spacer",
+    "name": "Horizontal spacer",
     "category": "Helpers",
     "icon": "photo_size_select_small",
     "schema": [
         {
-            "name": "Space Size",
+            "name": "Space size",
             "fields": [
                 {
                     "label": "Size",

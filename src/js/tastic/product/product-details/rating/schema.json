@@ -1,11 +1,11 @@
 {
     "tasticType": "frontastic/boost/product-details/rating",
-    "name": "Product Rating",
+    "name": "Product rating",
     "category": "Product details",
     "icon": "star",
     "schema": [
         {
-            "name": "Product Configuration",
+            "name": "Product configuration",
             "fields": [
                 {
                     "label": "Data source filters",

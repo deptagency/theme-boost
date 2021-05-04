@@ -1,6 +1,6 @@
 {
     "tasticType": "frontastic/boost/content/simple-tile",
-    "name": "Simple Tile",
+    "name": "Simple tile",
     "category": "Content",
     "icon": "image",
     "schema": [
@@ -135,13 +135,13 @@
                     "default": ""
                 },
                 {
-                    "label": "Bold Headline?",
+                    "label": "Bold headline?",
                     "field": "isHeadlineBold",
                     "type": "boolean",
                     "default": true
                 },
                 {
-                    "label": "Headline Size",
+                    "label": "Headline size",
                     "field": "headlineSize",
                     "type": "enum",
                     "default": "xl",
@@ -183,13 +183,13 @@
                     "default": ""
                 },
                 {
-                    "label": "Bold Subhead?",
+                    "label": "Bold subhead?",
                     "field": "isSubheadBold",
                     "type": "boolean",
                     "default": false
                 },
                 {
-                    "label": "Subhead Size",
+                    "label": "Subhead size",
                     "field": "subheadSize",
                     "type": "enum",
                     "default": "3xl",
@@ -264,7 +264,7 @@
                     "default": false
                 },
                 {
-                    "label": "Is Button?",
+                    "label": "Is button?",
                     "field": "ctaIsButton",
                     "type": "boolean",
                     "default": false
