@@ -88,9 +88,9 @@ const CheckoutTastic = ({ intl, cart, context, data }) => {
         cart.data &&
         (!cart.data.shippingAddress || !cart.data.shippingAddress.firstName)
     ) {
-        cart.data.email = context.account.email
+        cart.data.email = context.session.account.email
 
-        context.account.addresses?.forEach((address) => {
+        context.session.account.addresses?.forEach((address) => {
             if (address.isDefaultBillingAddress) {
                 cart.data.billingAddress = address
             }
