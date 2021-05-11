@@ -1,5 +1,11 @@
 # boost Changelog
 
+## `1.3.7` (2021-05-11)
+
+
+* fixed checkout user logged in bug
+* fixed changelog
+
 ## `1.3.6` (2021-05-07)
 
 
