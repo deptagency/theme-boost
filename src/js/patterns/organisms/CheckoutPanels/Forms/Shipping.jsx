@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import { useForm } from 'react-hook-form'
 import { FormattedMessage } from 'react-intl'
 
-import { convertToCountryName } from './../countries'
+import { convertToCountryName, convertToStateName, getCountryStates } from './../countries'
 import ErrorMessage from '../../../atoms/errorMessage'
 
 const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSubmit }) => {
@@ -22,6 +22,10 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
 
     const onChange = () => {
         onSubmit(getValues())
+    }
+
+    const getStates = () => {
+        return getCountryStates(getValues('country'))
     }
 
     return (
@@ -173,6 +177,27 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
 
                 <ErrorMessage errors={errors} name='country' />
             </div>
+
+            {getStates() && (
+                <div className='mt-4'>
+                    <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-stateOrProvince'>
+                        <FormattedMessage id={'checkout.form.stateOrProvince'} /> *
+                    </label>
+                    <select id='shipping-stateOrProvince' name='stateOrProvince'
+                        className={classnames({
+                            'form-input mt-2 bg-background-primary': true,
+                            'border border-red-600': errors.stateOrProvince,
+                        })}
+                        ref={register({ required: requiredField })}
+                        >
+                        <option value='' />
+                        {getStates().map((state, key) => {
+                            return (<option key={key} value={state}>{convertToStateName(intl, getValues('country'), state)}</option>)
+                        })}
+                    </select>
+                    <ErrorMessage errors={errors} name='stateOrProvince' />
+                </div>
+            )}
         </form>
     )
 }

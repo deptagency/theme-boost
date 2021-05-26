@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl'
 
-import { convertToCountryName } from './../countries'
+import { convertToCountryName, convertToStateName } from './../countries'
 import { ReactComponent as EditIcon } from '../../../../../icons/tailwind-icons/icon-edit.svg'
 
 const Shipping = ({ intl, address, onClick }) => {
@@ -26,6 +26,9 @@ const Shipping = ({ intl, address, onClick }) => {
                 <p>{address.city}</p>
                 <p>{address.postalCode}</p>
                 <p>{convertToCountryName(intl, address.country)}</p>
+                {address.stateOrProvince && (
+                    <p>{convertToStateName(intl, address.country, address.stateOrProvince)}</p>
+                )}
 
                 {(address.phone || address.email) && <div className='my-4 h-px bg-neutral-200' />}
 
