@@ -180,13 +180,13 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
 
             {getStates() && (
                 <div className='mt-4'>
-                    <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-stateOrProvince'>
+                    <label className='text-sm text-neutral-700 leading-tight' htmlFor='shipping-state'>
                         <FormattedMessage id={'checkout.form.stateOrProvince'} /> *
                     </label>
-                    <select id='shipping-stateOrProvince' name='stateOrProvince'
+                    <select id='shipping-state' name='state'
                         className={classnames({
                             'form-input mt-2 bg-background-primary': true,
-                            'border border-red-600': errors.stateOrProvince,
+                            'border border-red-600': errors.state,
                         })}
                         ref={register({ required: requiredField })}
                         >
@@ -195,7 +195,7 @@ const Shipping = ({ intl, countries, defaultEmail = '', defaultValues = {}, onSu
                             return (<option key={key} value={state}>{convertToStateName(intl, getValues('country'), state)}</option>)
                         })}
                     </select>
-                    <ErrorMessage errors={errors} name='stateOrProvince' />
+                    <ErrorMessage errors={errors} name='state' />
                 </div>
             )}
         </form>

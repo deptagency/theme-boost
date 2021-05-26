@@ -22,7 +22,7 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, isLoading = 
             shipping.streetName === billing.streetName &&
             shipping.postalCode === billing.postalCode &&
             shipping.country === billing.country &&
-            shipping.stateOrProvince === billing.stateOrProvince
+            shipping.state === billing.state
         )
     }
 
@@ -73,7 +73,7 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, isLoading = 
                         postalCode: shipping.postalCode,
                         city: shipping.city,
                         country: shipping.country,
-                        stateOrProvince: shipping.stateOrProvince,
+                        state: shipping.state,
                     },
                     billing: {
                         firstName: isBillingSameAsShipping ? shipping.firstName : billing.firstName,
@@ -83,7 +83,7 @@ const ShippingPanel = ({ app, intl, data, countries, goToNextPanel, isLoading = 
                         postalCode: isBillingSameAsShipping ? shipping.postalCode : billing.postalCode,
                         city: isBillingSameAsShipping ? shipping.city : billing.city,
                         country: isBillingSameAsShipping ? shipping.country : billing.country,
-                        stateOrProvince: isBillingSameAsShipping ? shipping.stateOrProvince : billing.stateOrProvince,
+                        state: isBillingSameAsShipping ? shipping.state : billing.state,
                     },
                 })
                 .then(() => {

@@ -145,13 +145,13 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
 
             {getStates() && (
                 <div className='mt-4'>
-                    <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-stateOrProvince'>
+                    <label className='text-sm text-neutral-700 leading-tight' htmlFor='billing-state'>
                         <FormattedMessage id={'checkout.form.stateOrProvince'} /> *
                     </label>
-                    <select id='billing-stateOrProvince' name='stateOrProvince'
+                    <select id='billing-state' name='state'
                         className={classnames({
                             'form-input mt-2 bg-background-primary': true,
-                            'border border-red-600': errors.stateOrProvince,
+                            'border border-red-600': errors.state,
                         })}
                         ref={register({ required: requiredField })}
                         >
@@ -160,7 +160,7 @@ const Billing = ({ intl, countries, defaultValues = {}, onSubmit }) => {
                             return (<option key={key} value={state}>{convertToStateName(intl, getValues('country'), state)}</option>)
                         })}
                     </select>
-                    <ErrorMessage errors={errors} name='stateOrProvince' />
+                    <ErrorMessage errors={errors} name='state' />
                 </div>
             )}
         </form>
