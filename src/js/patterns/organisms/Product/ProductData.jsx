@@ -65,7 +65,7 @@ const ProductData = ({
                     onChange={onChange}
                 />
             )}
-
+            
             <div className='flex pb-6'>
                 <Button
                     name={intl.formatMessage({ id: 'inCartProduct' })}
@@ -79,7 +79,7 @@ const ProductData = ({
                             return setShowLoader(false)
                         })
                     }}
-                    disabled={loading}
+                    disabled={loading || selectedVariant.isOnStock === false}
                 >
                     {loading ? <LoaderButton /> : <FormattedMessage id='inCartProduct' />}
                 </Button>
