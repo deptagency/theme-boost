@@ -65,7 +65,7 @@ const ProductData = ({
                     onChange={onChange}
                 />
             )}
-            
+
             <div className='flex pb-6'>
                 <Button
                     name={intl.formatMessage({ id: 'inCartProduct' })}
