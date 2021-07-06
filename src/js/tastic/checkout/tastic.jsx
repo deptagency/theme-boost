@@ -24,7 +24,7 @@ const CheckoutTastic = ({ intl, cart, context, data }) => {
         </Helmet>
     )
     /* eslint-enable */
-    
+
     useEffect(() => {
         app.getLoader('cart')
             .getShippingMethods()
