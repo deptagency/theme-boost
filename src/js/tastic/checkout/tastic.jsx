@@ -11,8 +11,17 @@ import CheckoutPanels from '../../patterns/molecules/Layout/CheckoutPanels'
 import EmptyState, { icons } from '../../patterns/organisms/EmptyState'
 import { injectIntl, intlShape } from 'react-intl'
 
+import { Helmet } from 'react-helmet'
+
 const CheckoutTastic = ({ intl, cart, context, data }) => {
     const [countries, setCountries] = useState([])
+
+    const HelmetHtml = () => (
+        <Helmet>
+            <link rel="stylesheet" href="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/3.21.1/adyen.css" integrity="sha384-KM3xJKzswGJ0xqiPCOHrWUtn0i0LHqEngauvYxSfy0eRtqcImL7ArxjV2HVgeRJ/" crossorigin="anonymous"></link>
+            <script src="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/3.21.1/adyen.js" integrity="sha384-qgB03MgLihAbvkTmWIkmZxFUxyAqJ4Ozk1My6beIRqit6+8e5HFg8ysln5y5FSw0" crossorigin="anonymous"></script>
+        </Helmet>
+    )
 
     useEffect(() => {
         app.getLoader('cart')
@@ -38,7 +47,13 @@ const CheckoutTastic = ({ intl, cart, context, data }) => {
     }, [context.locale])
 
     if (!cart || countries.length === 0) {
-        return <DefaultLoader />
+        return (
+            <>
+                <HelmetHtml />
+
+                <DefaultLoader />
+            </>
+        )
     }
 
     if (cart && cart.loaded && cart.data && cart.data.lineItems.length === 0) {
@@ -109,22 +124,38 @@ const CheckoutTastic = ({ intl, cart, context, data }) => {
 
     if (cart.loading) {
         if (!cart.data || !(countries.length > 0)) {
-            return <DefaultLoader />
+            return (
+                <>
+                    <HelmetHtml />
+
+                    <DefaultLoader />
+                </>
+            )
         } else {
             return (
-                <CheckoutPanels
-                    isLoading
-                    app={app}
-                    cart={cart}
-                    data={cart.data}
-                    countries={countries}
-                    policy={data.policy}
-                />
+                <>
+                    <HelmetHtml />
+
+                    <CheckoutPanels
+                        isLoading
+                        app={app}
+                        cart={cart}
+                        data={cart.data}
+                        countries={countries}
+                        policy={data.policy}
+                    />
+                </>
             )
         }
     }
 
-    return <CheckoutPanels app={app} cart={cart} data={cart.data} countries={countries} policy={data.policy} />
+    return (
+        <>
+            <HelmetHtml />
+
+            <CheckoutPanels app={app} cart={cart} data={cart.data} countries={countries} policy={data.policy} />
+        </>
+    )
 }
 
 CheckoutTastic.propTypes = {
