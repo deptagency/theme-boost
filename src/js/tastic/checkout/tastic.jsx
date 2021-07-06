@@ -16,13 +16,15 @@ import { Helmet } from 'react-helmet'
 const CheckoutTastic = ({ intl, cart, context, data }) => {
     const [countries, setCountries] = useState([])
 
+    /* eslint-disable */
     const HelmetHtml = () => (
         <Helmet>
             <link rel="stylesheet" href="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/3.21.1/adyen.css" integrity="sha384-KM3xJKzswGJ0xqiPCOHrWUtn0i0LHqEngauvYxSfy0eRtqcImL7ArxjV2HVgeRJ/" crossorigin="anonymous"></link>
             <script src="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/3.21.1/adyen.js" integrity="sha384-qgB03MgLihAbvkTmWIkmZxFUxyAqJ4Ozk1My6beIRqit6+8e5HFg8ysln5y5FSw0" crossorigin="anonymous"></script>
         </Helmet>
     )
-
+    /* eslint-enable */
+    
     useEffect(() => {
         app.getLoader('cart')
             .getShippingMethods()
