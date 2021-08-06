@@ -1,5 +1,17 @@
 # boost Changelog
 
+## `1.3.8` (2021-08-06)
+
+
+* fixed tailwind icons
+* removed traillin spaces in checkout tastic
+* disabled/enabled eslint for helmet code
+* adyen js/css loaded only in checkout
+* fixed js code
+* disabled add to cart if product is out of stock
+* checkout, renamed variable form stateOrProvince to state
+* introduced states and provinces
+
 ## `1.3.7` (2021-05-11)
 
 
