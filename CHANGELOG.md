@@ -1,5 +1,10 @@
 # boost Changelog
 
+## `1.3.9` (2021-08-25)
+
+
+* fix: added paths for typescript components overridden by Componentinjector for webpack alias
+
 ## `1.3.8` (2021-08-06)
 
 
