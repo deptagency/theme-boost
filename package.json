@@ -5,7 +5,7 @@
         "unidragger": "2.2.3"
     },
     "dependencies": {
-        "@frontastic/catwalk": "latest",
+        "@frontastic/catwalk": "git+https://github.com/deptagency/catwalk.git",
         "@types/react-dom": "^17.0.0",
         "classnames": "^2.2.6",
         "cloudinary-core": "^2.5.0",
